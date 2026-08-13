@@ -1,0 +1,728 @@
+% Korean Noether paper 15 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 9284--9903.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 47,476 bytes; SHA-256 DD8FD99E948DC0D16831B35E82C02483446867BEA949C9673D1E864366ABD49B.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{15. 이원형식의 정수 계수 불변식계의 유한성}
+
+\begin{center}
+\emph{Nachr. v. d. Ges. d. Wiss. zu Göttingen 1919, 138--156쪽}\\[5em]
+에미 뇌터 (괴팅겐)\\[0.8em]
+F. 클라인이 1919년 3월 27일 회의에 제출함.
+\end{center}
+
+이 글에서는 잘 알려진 유한성 정리를 확장하여 다음 정리를 증명한다.
+
+\emph{한 이원 기본형식계의 모든 정수 계수 다항불변식은 그 가운데 유한개에 관한 정수 계수 다항함수이다.}
+
+통상적인 용법과 같이 여기서 \glqq{}불변식\grqq{}은 언제나 한 기본형식 또는 기본형식계의 다항 유리불변식, 더 정확히는 모든 선형변환의 군이 유도하는 계수변환에 관한 불변식을 뜻한다.
+
+증명은 메르텐스--힐베르트의 유한성 증명을 정수성에 관하여 강화하는 데에 바탕을 둔다\srcfn{1)}{F. Mertens, Wiener Sitzungsberichte, 1889년 1월; D. Hilbert, \emph{Math. Ann.} 33 (1889) [1888년 3월 날짜]. 메르텐스의 Crelle 100권 논문에 이어 서로 독립적으로 나온 두 증명은 내용상 일치한다.}.
+
+이 유한성 증명은 다음과 같이 특징지을 수 있다. 기본형식들을 일차인수들로 분해한다. 더 정확히 말하면 각 기본형식에 일차형식들의 곱을 대응시킨다. 그러면 각 불변식 \(I\)는 이 일차형식들의 불변식, 곧 동차화한 근들의 함수로 넘어간다. 이 함수는 세 조건을 만족해야 한다. 1) 불변성 조건, 2) 가중치 조건, 3) 대칭성 조건이다. 조건 2), 3)은 \(I\)가 기본형식의 계수들에 관한 다항 유리함수가 되기 위하여 필요하다. 조건 1)은 \(I\)를 일차형식들의 행렬식에 관한 다항함수로 나타내어 만족시킨다. 조건 2)는 개별 행렬식 대신 그 행렬식들의 어떤 거듭제곱곱들을 새로운 인수로 삼아 만족시킨다. 이제 조건 3)은 \(I\)가 변수열들의 다항 대칭함수가 된다는 것뿐이며, 역으로 변수열들의 그러한 각 대칭함수는 기본형식들의 불변식이 된다. \emph{따라서 이 변수열들의 기본대칭함수들이 완전계를 이룬다.}
+
+이제 정수 계수 불변식만을 생각하자. 일차형식의 불변식에 관하여 \emph{이원 일차형식의 모든 정수 계수 불변식은 이 일차형식들의 행렬식에 관한 정수 계수 다항함수이다}라는 더 강한 정리를 증명하면 조건 1)은 위와 똑같이 충족된다. 이것이 실제로 옳다는 사실을 § 3에서 보인다. 그곳에서는 이 행렬식들 사이에 어떤 소수를 법으로 성립하는 모든 관계의 전체가 항등관계의 전체와 일치한다는 형태로 증명한다. 즉 이 관계들에 대응하는 모듈은 각 소수를 법으로 해도 소모듈로 남는다. 증명은 행렬식들 사이의 이차관계에 대응하는 이차형식들의 모듈에 관하여 잉여류들을 정규화하여 이루어진다. 이 이차형식들은 각 소수를 법으로 해도 모듈의 정수 계수 기저를 이룬다. 이전에는 정수성을 무시할 때에만 모듈 기저를 이룬다는 사실이 알려져 있었다.
+
+조건 2)를 충족하는 데에는 아무 수정도 필요 없다. 거듭제곱곱을 도입해도 수계수는 영향을 받지 않기 때문이다. 조건 3)은 이제 \(n_1!\cdots n_\mu!I\), 여기서 \(n_1,\ldots,n_\mu\)는 개별 기본형식들의 차수, 가 변수열들의 정수 계수 대칭함수가 된다는 뜻이고, 역으로 이 변수열들의 각 정수 계수 대칭함수는 정수 계수 불변식이 된다는 뜻이다. 그런데 쉽게 보일 수 있듯이, 변수열들의 이 정수 계수 대칭함수들은 정수 계수 기저를 가지며 여기에는 기본함수들만으로는 충분하지 않다. 힐베르트의 정수 계수 모듈 기저 정리를 적용하면 여기서 \(I\)들 자체에 대해서도 정수 계수 기저를 얻는다.
+
+§ 1에서는 조건 1), 2), 3)에 각각 대응하는 특수 유한성 정리들을 모은다. § 2에서는 이 정리들로 유한성 증명을 이끌어 낸다. 조건 3)에 대응하는 특수 유한성 정리들은 동시에 \emph{정수 계수 또는 대수적 정수 계수 치환들로 이루어진 유한군의 정수 계수 불변식의 유한성}을 주며, § 4에서 이를 간단히 설명한다.
+
+\begin{center}
+\textbf{§ 1. 특수 유한성 정리}
+\end{center}
+
+서론의 불변성, 가중치, 대칭성 조건을 만족시키는 데 사용할 다음 특수 유한성 정리들을 먼저 둔다.
+
+\textbf{I.} \emph{이원 일차형식계의 각 정수 계수 불변식은 이 일차형식들의 행렬식에 관한 정수 계수 다항함수이다.} 증명은 § 3에서 한다.
+
+\textbf{II.} \emph{음이 아닌 지수를 갖는 \(n\)개 변수의 거듭제곱곱들로 이루어진 계 \(\mathfrak S\)가 다음 성질을 가진다고 하자. \(f,g\in\mathfrak S\)이고 그 몫이 변수들에 관한 다항식이면 그 몫도 \(\mathfrak S\)에 속한다. 그러면 \(\mathfrak S\)에는 유한 곱셈기저 \(f_1,\ldots,f_k\)가 존재하여, 각 \(f\in\mathfrak S\)를 음이 아닌 지수 \(\lambda_1,\ldots,\lambda_k\)로}
+\[
+f=f_1^{\lambda_1}\cdots f_k^{\lambda_k}
+\]
+\emph{와 같이 나타낼 수 있다.}
+
+실제로 힐베르트의 모듈 기저 정리에 따라 \(\mathfrak S\)의 함수 가운데 \(x\)가 실제로 나타나는 유한개의 함수 \(f_1,\ldots,f_k\)가 존재하여, \(\mathfrak S\)의 상수가 아닌 각 \(f\)는 이들이 생성하는 모듈에 속한다.
+\[
+f\equiv0\pmod{(f_1,\ldots,f_k)}.
+\]
+따라서 각 \(f=x_1^{i_1}\cdots x_n^{i_n}\)에 대하여 \(f_\nu=x_1^{\nu_1}\cdots x_n^{\nu_n}\)인 적어도 하나의 \(f_\nu\)가 존재하여
+\[
+\nu_1\le i_1,\ldots,\nu_n\le i_n
+\]
+이다. 표현
+\[
+f=x_1^{i_1-\nu_1}\cdots x_n^{i_n-\nu_n}f_\nu=Af_\nu\srcfnmark{1)}
+\]
+\srcfntext{1)}{이 표현은 직접 증명할 수도 있고, 그러면 역으로 힐베르트의 정리도 다시 따라온다. P. Gordan, \emph{Neuer Beweis des Hilbertschen Satzes über homogene Funktionen}, Gött. Nachr. 1899를 보라. 이 표현을 직접 증명하고 여기서 정리 II도 이끌어 내는 또 다른 증명은 A. Ostrowski, \emph{Über die Existenz einer endlichen Basis bei gewissen Funktionensystemen}, Math. Ann. 78 (1916), § 2, 1 및 § 3, 2에 있다. § 2에서 쓰는 정리 II의 특수한 경우, 곧 지수들이 어떤 디오판토스 방정식계의 음이 아닌 모든 해를 두루 취하는 경우는 Gordan--Kerschensteiner, \emph{Vorlesungen über Invariantentheorie}, 1권, 199쪽에 이미 나온다.}
+에서 가정에 따라 \(A\in\mathfrak S\)이고, \(A\)의 변수 차수는 \(f\)보다 낮다. 따라서 이 논법을 유한번 반복하면 주장이 따라온다. \(f=1\)에도 표현이 성립하게 하려면 모든 지수 \(\lambda\)를 0으로 두면 된다.
+
+\textbf{III.} \emph{\(n\)개 변수열의 모든 정수 계수 다항 대칭함수는 그 가운데 유한개에 관한 정수 계수 다항함수이다.}
+
+\(\tau_1(x),\ldots,\tau_n(x)\)를 부정원 \(x_1,\ldots,x_n\)의 기본대칭함수들이라 하자. 그러면 각 지수 \(k\)에 대하여 항등식
+\[
+x_i^k=G_0^{(k)}(\tau)+x_iG_1^{(k)}(\tau)+\cdots+x_i^{n-1}G_{n-1}^{(k)}(\tau),
+\qquad i=1,2,\ldots,n
+\]
+이 성립한다. 여기서 \(G_0^{(k)},\ldots,G_{n-1}^{(k)}\)는 \(\tau(x)\)의 정수 계수 다항함수이다. 이제 \(x_i,y_i,\ldots,z_i\)를 \(i\)번째 열의 원소들이라 하자. 그러면 이 항등식과 \(y,\ldots,z\)에 대한 대응 항등식들에 따라 특수한 단일형 대칭함수
+\[
+\sum_{i=1}^n x_i^\alpha y_i^\beta\cdots z_i^\gamma
+\]
+는 유한개의 함수
+\[
+\sum_{i=1}^n x_i^a y_i^b\cdots z_i^c,
+\qquad
+0\le a<n,\quad0\le b<n,\quad\ldots,\quad0\le c<n
+\]
+와 기본대칭함수 \(\tau(x),\tau(y),\ldots,\tau(z)\)의 정수 계수 다항함수가 된다\srcfn{1)}{힐베르트는 앞의 논문에서 \(\tau(x),\ldots,\tau(z)\) 대신 거듭제곱합들을 기저에 넣는다. 그러면 기저도 단일형 함수들만으로 이루어지지만 표현의 정수성이 사라진다.}.
+
+이하에서는 나타나지 않는 가장 일반적인 \(n\)개 열의 대칭함수의 경우에도 같은 방법으로
+\[
+\begin{gathered}
+\sum x_{i_1}^{a_1}y_{i_1}^{b_1}\cdots z_{i_1}^{c_1}
+      x_{i_2}^{a_2}y_{i_2}^{b_2}\cdots z_{i_2}^{c_2}
+      \cdots
+      x_{i_n}^{a_n}y_{i_n}^{b_n}\cdots z_{i_n}^{c_n},\\
+0\le a_\lambda<n,\quad0\le b_\lambda<n,\quad\ldots,\quad0\le c_\lambda<n
+\end{gathered}
+\]
+여기서 \(i_1,i_2,\ldots,i_n\)은 모든 순열을 두루 취한다, 와 \(\tau(x),\tau(y),\ldots,\tau(z)\)가 함께 정수 계수 기저를 이룸을 알 수 있다.
+
+\textbf{IV.} \emph{\(F_1(x),\ldots,F_k(x)\)를 \(x_1,\ldots,x_n\)의 정수 계수 다항함수들이라 하고 \(a\)를 고정된 정수라 하자. \(G\)가 정수 계수 다항함수이고 \(\frac{G(F)}a\)가 \(x\)에 관한 정수 계수 다항함수가 되는 모든 함수 \(\frac{G(F)}a\)는 그 가운데 유한개에 관한 정수 계수 다항함수이다.}
+
+실제로 힐베르트의 정수 계수 모듈 기저 정리에 따라 각 \(\frac{G(F)}a\)는
+\[
+\frac{G(F)}a=
+A_1(F_1,\ldots,F_k)\frac{G_1(F)}a+\cdots+
+A_\varrho(F_1,\ldots,F_k)\frac{G_\varrho(F)}a
+\]
+로 나타난다. 여기서 \(A_1,\ldots,A_\varrho\)는 \(F\)의 정수 계수 다항함수이고,
+\[
+\frac{G_1(F)}a,\ldots,\frac{G_\varrho(F)}a
+\]
+도 해당 계에 속한다. 따라서 함수들
+\[
+F_1=\frac{aF_1}{a},\ldots,F_k=\frac{aF_k}{a},
+\qquad
+\frac{G_1(F)}a,\ldots,\frac{G_\varrho(F)}a
+\]
+가 구하는 기저를 이룬다.
+
+\begin{center}
+\textbf{§ 2. 정수 계수 이원불변식의 유한성}
+\end{center}
+
+\(x,y\)를 부정계수 변환
+\begin{equation}
+\tag{1}
+x=s_{11}x'+s_{12}y',\qquad y=s_{21}x'+s_{22}y'
+\end{equation}
+을 받는 이원변수라 하고, \(f\)를 계수가 부정원인 이원 기본형식이라 하자. 그러면 (1)에 따라
+\begin{equation}
+\tag{2}
+f=a_0x^n+a_1x^{n-1}y+\cdots+a_ny^n
+=a'_0x'^n+a'_1x'^{\,n-1}y'+\cdots+a'_ny'^n
+\end{equation}
+이다. 잘 알려져 있듯이 \(f\)의 정수 계수 불변식이란
+\begin{equation}
+\tag{3}
+I(a')=|s_{ik}|^\varrho I(a)
+\qquad\text{\(a,s_{ik}\)에 관한 항등식}
+\end{equation}
+을 만족하는 정수 계수 다항함수 \(I(a)\)를 뜻한다\srcfn{1)}{불변식론에서 흔히 하듯 이항계수를 써서 \(f=b_0x^n+\binom n1b_1x^{n-1}y+\cdots+b_ny^n\)로 쓰면, 모든 정수 계수 불변식 \(I(b)\)의 영역은 \(I(a)\)의 영역보다 넓어지고 여기서 쓰는 유한성 논법은 실패한다. \(I(b)\)가 더는 근들의 정수 계수 다항함수가 되지 않기 때문이다.}. 기본형식계의 정수 계수 불변식도 이에 맞추어 정의한다. 각 기본형식의 계수들에 관한 동차성을 정의에 함께 넣어도 된다. 각 형식에 관하여 따로 동차인 불변식들의 정수 계수 선형결합으로 나머지 불변식들을 만들 수 있기 때문이다.
+
+이제 (2)와 함께 하나의 \emph{특수한} 이원형식 \(g\), 곧 계수들이 다시 \emph{부정원}인 \(n\)개 일차형식의 곱을 생각하자.
+\begin{equation}
+\tag{4}
+\begin{aligned}
+g&=(\alpha_1x+\beta_1y)(\alpha_2x+\beta_2y)\cdots(\alpha_nx+\beta_ny)\\
+ &=\sigma_0(\alpha,\beta)x^n+\sigma_1(\alpha,\beta)x^{n-1}y+\cdots+\sigma_n(\alpha,\beta)y^n\\
+ &=(\alpha'_1x'+\beta'_1y')(\alpha'_2x'+\beta'_2y')\cdots(\alpha'_nx'+\beta'_ny')\\
+ &=\sigma'_0x'^n+\sigma'_1x'^{\,n-1}y'+\cdots+\sigma'_ny'^n.
+\end{aligned}
+\end{equation}
+여기서 \(\sigma_0(\alpha,\beta),\sigma_1(\alpha,\beta),\ldots,\sigma_n(\alpha,\beta)\)는 동차화한 기본대칭함수들이고, 변환된 계수 \(\sigma'_i\)는 \(\sigma_i(\alpha',\beta')\)와 같다.
+
+이 기본대칭함수들이 대수적으로 독립이므로 각 관계
+\begin{equation}
+\tag{5}
+G(\sigma_0,\sigma_1,\ldots,\sigma_n)=0
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\end{equation}
+에는 관계
+\begin{equation}
+\tag{6}
+G(\sigma_0,\sigma_1,\ldots,\sigma_n)=0
+\qquad\text{\(\sigma_0,\ldots,\sigma_n\)에 관한 항등식}
+\end{equation}
+이 대응하고, 따라서 부정원 \(a_0,\ldots,a_n\)에 대해서도
+\begin{equation}
+\tag{7}
+G(a_0,a_1,\ldots,a_n)=0
+\qquad\text{\(a_0,\ldots,a_n\)에 관한 항등식}
+\end{equation}
+이 대응한다.
+
+\(f\)의 각 정수 계수 불변식 \(I(a)\)에는 치환 \(a_i=\sigma_i(\alpha,\beta)\)을 통하여 \(g\)의 정수 계수 불변식
+\[
+I(\sigma)=H(\alpha,\beta)
+\]
+가 대응한다. 여기서 \(H\)는 \(\alpha,\beta\)의 정수 계수 다항함수이다. 이 불변식에 대하여 관계 (3)은
+\begin{equation}
+\tag{8}
+I(\sigma')=|s_{ik}|^\varrho I(\sigma)
+\qquad\text{\(\sigma,s_{ik}\)에 관한 항등식}
+\end{equation}
+으로 넘어간다. \(\sigma'=\sigma(\alpha',\beta')\)이므로 (8)에서
+\begin{equation}
+\tag{9}
+H(\alpha',\beta')=|s_{ik}|^\varrho H(\alpha,\beta)
+\qquad\text{\(\alpha,\beta;s_{ik}\)에 관한 항등식}
+\end{equation}
+이 따라온다. 따라서 \(I(\sigma)=H(\alpha,\beta)\)는 \(n\)개 일차형식 \(\alpha_i x+\beta_i y\)의 정수 계수 불변식이다.
+
+역으로 \(H(\alpha,\beta)\)가 이 \(n\)개 일차형식의 정수 계수 불변식이어서 (9)를 만족하고, 동시에 \(\sigma\)의 정수 계수 다항함수 \(I(\sigma)\)와 같다고 하자. 그러면
+\[
+H(\alpha',\beta')=I(\sigma(\alpha',\beta'))=I(\sigma')
+\]
+이므로 (9)는
+\begin{equation}
+\tag{9a}
+I(\sigma')=|s_{ik}|^\varrho I(\sigma)
+\qquad\text{\(\alpha,\beta;s_{ik}\)에 관한 항등식}
+\end{equation}
+으로도 쓸 수 있다. (5), (6)에 따라 여기서 (8)이, 다시 (7)에 따라 (3)이 따라온다. \emph{따라서 각 정수 계수 불변식 \(I(a)\)에는 \(n\)개 일차형식의 정수 계수 불변식 \(H(\alpha,\beta)=I(\sigma)\)가 대응하고, 그 역도 성립한다.}
+
+더 나아가 \(I_1(a),\ldots,I_k(a)\)가 모든 \(I(a)\)의 정수 계수 기저이면 \(H_1(\alpha,\beta),\ldots,H_k(\alpha,\beta)\)는 동시에 \(\sigma\)의 정수 계수 다항함수 \(I(\sigma)\)인 모든 \(H(\alpha,\beta)\)의 정수 계수 기저가 된다. (5), (6), (7)에 따라 여기서도 역이 성립한다. \emph{그러므로 모든 \(I(a)\)의 정수 계수 기저가 존재함을 보이려면, 동시에 정수 계수 다항함수 \(I(\sigma)\)인 모든 정수 계수 불변식 \(H(\alpha,\beta)\)에 대하여 이를 보이면 충분하다. 기저}
+\[
+H_1(\alpha,\beta)=I_1(\sigma),\ldots,H_k(\alpha,\beta)=I_k(\sigma)
+\]
+\emph{는 \(I(a)\)들에 기저 \(I_1(a),\ldots,I_k(a)\)를 준다.}
+
+이제 \(H(\alpha,\beta)=I(\sigma)\)가 (4)의 모든 정수 계수 불변식을 두루 취하게 하자. (3)에 따라 각 불변식은 \(\sigma\)들에 관하여 동차이고, (4)에 따라 각 \(\sigma\)는 각 일차형식의 계수에 관하여 동차이며 일차이다. 따라서 \(H(\alpha,\beta)\)는 각 열 \(\alpha_i,\beta_i\)에 관하여 동차이고 모든 열에서 차수가 같으며, 물론 \(n\)개 열에 관한 대칭함수이다. 역으로 \(n\)개 열의 정수 계수 대칭함수 \(H(\alpha,\beta)\)가 각 열에 관하여 따로 동차이고 모든 열에서 차수가 같으면, 대칭함수의 기본정리에 따라 \(\sigma\)들의 정수 계수 다항함수이다. 따라서 \(H(\alpha,\beta)\)가 불변이면 위의 결과에 따라 불변식 \(I(\sigma)\)가 된다. 그러므로 (4)의 정수 계수 불변식 전체는 다음 성질들을 가진 정수 계수 다항함수 \(H(\alpha,\beta)\) 전체로 특징지어진다.
+\[
+\begin{array}{ll}
+1)& n\text{개 일차형식 }\alpha_i x+\beta_i y\text{의 정수 계수 불변식이다};\\
+2)& n\text{개 열 }\alpha_i,\beta_i\text{ 각각에 관하여 동차이고 모든 열에서 차수가 같다};\\
+3)& n\text{개 열 }\alpha_i,\beta_i\text{에 관하여 대칭이다}.
+\end{array}
+\]
+
+특수 유한성 정리 I에 따라 조건 1) 때문에 \(H(\alpha,\beta)\)는 행렬식
+\[
+(ik)=\alpha_i\beta_k-\beta_i\alpha_k
+\]
+의 정수 계수 다항함수이다. 즉
+\[
+H(\alpha,\beta)=G((ik)).
+\]
+이 표현에 \(n\)개 열의 모든 순열을 적용하면 대칭성을 형식적으로도 나타낼 수 있다.
+\begin{equation}
+\tag{10}
+n!\,H(\alpha,\beta)
+=G^{(1)}((ik))+G^{(2)}((ik))+\cdots+G^{(n!)}((ik))
+=G^*((ik)).
+\end{equation}
+\(G^*\)는 \((ik)\)들의 각 거듭제곱곱 \(P\)와 함께 \(P\)의 모든 순열에 대한 합
+\[
+Q=P^{(1)}+\cdots+P^{(n!)}
+\]
+를 포함하며, 유한개의 \(Q\)에 관한 정수 계수 선형결합 \(G^*=\sum cQ\)가 된다. \(Q\)들은 조건 1), 2), 3)을 만족하여 그 자체가 불변식이므로 \(G^*((ik))\) 대신 \(Q\)들을 생각하면 충분하다.
+
+이제 \(P\)가 \(Q\)들에 나타나는 모든 거듭제곱곱, 곧 조건 2)를 만족하는 \((ik)\)의 모든 거듭제곱곱으로 이루어진 계 \(\mathfrak S\)를 두루 취하게 하자. 두 \(P\)의 몫이 \((ik)\)들의 다항식이면 그 몫도 조건 2)를 만족하므로 \(\mathfrak S\)에 속한다. 정리 II에 따라 그러한 \(P\) 가운데 유한개 \(P_1,\ldots,P_\varrho\)가 존재하여 각 \(P\)를 음이 아닌 지수로
+\[
+P=P_1^{\lambda_1}\cdots P_\varrho^{\lambda_\varrho}
+\]
+와 같이 나타낼 수 있다. 모든 순열을 적용하면
+\[
+Q=
+P_1^{(1)\lambda_1}\cdots P_\varrho^{(1)\lambda_\varrho}
++\cdots+
+P_1^{(n!)\lambda_1}\cdots P_\varrho^{(n!)\lambda_\varrho}.
+\]
+따라서 \(Q\)는 각각 \(\varrho\)개 원소로 이루어진 다음 \(n!\)개 변수열의 정수 계수 대칭함수이다.
+\[
+P_1^{(1)},\ldots,P_\varrho^{(1)};\quad
+P_1^{(2)},\ldots,P_\varrho^{(2)};\quad\ldots;\quad
+P_1^{(n!)},\ldots,P_\varrho^{(n!)}.
+\]
+그러므로 정리 III에 따라 \(Q\)는 이 변수열들의 유한개의 대칭함수에 관한 정수 계수 다항함수이다. 이 기저함수들은 그 자체가 \(Q\)이거나 \(n!\)개 원소 \(P_i^{(1)},P_i^{(2)},\ldots,P_i^{(n!)}\)의 기본대칭함수이므로 조건 1), 2), 3)을 만족하며 다음 정수 계수 불변식들이 된다.
+\begin{equation}
+\tag{11}
+H_1(\alpha,\beta)=I_1(\sigma),\ldots,\quad
+H_l(\alpha,\beta)=I_l(\sigma).
+\end{equation}
+
+(10)에서 \(G^*=\sum cQ\)이므로 각 \(H(\alpha,\beta)=I(\sigma)\)는
+\[
+H(\alpha,\beta)=I(\sigma)=\frac1{n!}\Phi(I_1,\ldots,I_l)
+\]
+꼴이다. 여기서 \(\Phi\)는 정수 계수 다항함수이다. 역으로 \(\frac1{n!}\Phi\)가 \(\alpha,\beta\)의 정수 계수 다항함수가 되면 정수 계수 불변식이다. 따라서 정리 IV에 따라 불변식 (11)에 유한개의 \(I_{l+1}(\sigma),\ldots,I_k(\sigma)\)를 더하여
+\[
+\begin{gathered}
+H_1(\alpha,\beta)=I_1(\sigma),\ldots,H_l(\alpha,\beta)=I_l(\sigma),\\
+H_{l+1}(\alpha,\beta)=I_{l+1}(\sigma),\ldots,H_k(\alpha,\beta)=I_k(\sigma)
+\end{gathered}
+\]
+\emph{가 모든 불변식 \(H(\alpha,\beta)=I(\sigma)\)의 정수 계수 기저를 이루게 할 수 있다. 이로써 하나의 기본형식인 경우의 정리가 증명되었다.}
+
+기본형식계를 다룰 때에는 위에서 말했듯 각 기본형식의 계수에 관한 불변식의 동차성을 가정할 수 있다. 다시 일반 기본형식들을 각각 일차형식들의 곱인 형식으로 바꾼다. 그러면 그 불변식들은 1) 이 일차형식들의 불변식이고, 2) 일차형식의 계수들로 이루어진 각 열에 관하여 동차이며 한 기본형식에 속한 열들에서는 차수가 같고, 3) 각 기본형식에 속한 열들에 관하여 대칭이다. 역으로 이 조건들을 만족하는 모든 일차형식의 정수 계수 불변식에는 다시 기본형식계의 정수 계수 불변식이 대응한다. 증명은 위의 증명과 완전히 나란히 진행된다. 개별 행렬식들의 가중치 조건을 만족하는 각 거듭제곱곱
+\[
+P=P_1^{\lambda_1}\cdots P_\varrho^{\lambda_\varrho}
+\]
+(정리 I, II)에 모든
+\[
+N=n_1!n_2!\cdots n_\mu!
+\]
+개의 순열을 적용한다. 여기서 \(n_1,\ldots,n_\mu\)는 기본형식들의 차수이다. 그러면 \(N\cdot I\)는 각각 \(\varrho\)개 원소로 이루어진 \(N\)개 열의 정수 계수 대칭함수로 넘어간다. 여기서 모든 \(N\cdot I\)의 정수 계수 기저를 얻고, 이어서 정리 IV에 따라 모든 \(I\)의 정수 계수 기저를 얻는다.
+
+\bigskip
+\begin{center}
+\textbf{§ 3. 이원 일차형식의 정수 계수 불변식의 기저}
+\end{center}
+
+이제 특수 유한성 정리 I의 증명을 보충해야 한다. 클렙슈가 처음 증명한 잘 알려진 정리에 따르면, \(n\)개 일차형식 \(\alpha_i x+\beta_i y\)의 모든 다항 유리불변식은 행렬식 \((ik)\)들의 다항함수이다. 따라서 이 일차형식들의 모든 \emph{정수 계수} 불변식도 이 행렬식들의 다항함수이지만 반드시 정수 계수 다항함수인 것은 아니다.
+
+\emph{이하에서는 \((ik)\)들 사이에 성립하는 항등관계들을 사용하면 이 표현을 언제나 정수 계수로도 만들 수 있음을 보인다.}
+
+이를 공식과 모듈론의 언어로 쓰면 다음과 같다. \(i<k\)인 \(\xi_{ik}\)들을 부정원이라 하자. \(F((ik))\)가 \(\alpha,\beta\)에 관하여 항등적으로 사라지는 모든 정수 계수 다항식 \(F(\xi_{ik})\)의 전체는 모듈 \(\mathfrak M\)을 이룬다. 두 \(F\)의 합과 한 \(F\)에 \(\xi_{ik}\)들의 임의의 정수 계수 다항식을 곱한 것도 이 전체에 속하기 때문이다. 공식으로 쓰면
+\[
+F((ik))=0\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+에서
+\[
+F(\xi_{ik})\equiv0\pmod{\mathfrak M}
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이 따라오고, 그 역도 성립한다.
+
+이제 완전히 대응하여 다음이 성립함을 보이겠다.
+\[
+F((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+에서
+\begin{equation}
+\tag{1}
+F(\xi_{ik})\equiv0\pmod{(\mathfrak M,p)}
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\end{equation}
+이 따라오고 그 역도 성립하며, 이는 \emph{모든} 소수 \(p\)에 대하여 옳다. \emph{따라서 \(\mathfrak M\)은 \((ik)\)들의 모든 \(p\)를 법으로 하는 관계에 대응하는 모듈 \(\mathfrak M_p\)와도 같다.} 여기서 \(\mathfrak M_p\)는 \(F((ik))\)가 \(p\)를 법으로 \(\alpha,\beta\)에 관한 항등식으로 사라지는 모든 정수 계수 다항식 \(F(\xi_{ik})\)로 이루어진다.
+
+(1)이 \emph{정수 계수 표현 가능성}을 뜻한다는 사실은 다음과 같이 알 수 있다. (1)은 이렇게도 쓸 수 있다. \(F((ik))=p\cdot H(\alpha,\beta)\)가 \(\alpha,\beta\)에 관한 항등식이면
+\[
+F(\xi_{ik})-p\cdot G(\xi_{ik})\equiv0\pmod{\mathfrak M}
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이고, 따라서 \(\mathfrak M\)의 정의에 따라
+\[
+F((ik))=p\cdot G((ik))
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}\srcfn{1)}{이 마지막 추론은 동시에 (1)의 역을 증명한다.}
+\]
+이다. 그러므로 \(p\cdot H(\alpha,\beta)=p\cdot G((ik))\), 즉
+\[
+H(\alpha,\beta)=G((ik))
+\]
+이다. 따라서
+\[
+H(\alpha,\beta)=
+\frac{1}{p_1^{\lambda_1}\cdots p_\varrho^{\lambda_\varrho}}F((ik))
+\]
+와 같은 표현이 있고 \(p_1,\ldots,p_\varrho\)가 소수이면
+\[
+H(\alpha,\beta)=
+\frac{1}{p_1^{\lambda_1-1}\cdots p_\varrho^{\lambda_\varrho}}G((ik))
+\]
+와 같은 표현도 있다. 이를 유한번 반복하면 표현의 정수성이 따라온다.
+
+(1)을 증명하기 위하여
+\[
+f_{ik,rs}=\xi_{ik}\xi_{rs}-\xi_{ir}\xi_{ks}+\xi_{is}\xi_{kr},
+\qquad i<k<r<s
+\]
+를 \((ik)\)들 사이의 이차관계
+\[
+(ik)(rs)-(ir)(ks)+(is)(kr)=0
+\]
+에 대응하는 부정원 \(\xi_{ik}\)들의 형식이라 하고, \(\mathfrak N=(f_{ik,rs})\)를 이 형식들이 생성하는 정수 계수 다항식 모듈이라 하자. 그러면
+\[
+F(\xi_{ik})\equiv0\pmod{\mathfrak N}
+\quad\Longrightarrow\quad
+F((ik))=0
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+이고,
+\begin{equation}
+\tag{2}
+\begin{array}{c}
+F(\xi_{ik})\equiv0\pmod{(\mathfrak N,p)}\\
+\Longrightarrow\quad
+F((ik))\equiv0\pmod p\quad\text{\(\alpha,\beta\)에 관한 항등식}
+\end{array}
+\end{equation}
+이다.
+
+\(\mathfrak N\)에 관한 잉여류의 정규화를 이용하여 (2)의 역도 성립함을 보이겠다. 그러면 \(\mathfrak N=\mathfrak M=\mathfrak M_p\)이고 (1)이 증명된다. 여기서 \(\mathfrak N=\mathfrak M\)은 \(p=0\)으로 둔 \(\mathfrak N=\mathfrak M_p\)의 특수한 경우로 얻어진다. \emph{이하의 고찰에는 \(p=0\)인 경우도 언제나 포함된다.} 달리 말하면, \emph{\(f_{ik,rs}\)들은 \(\mathfrak M_p\), 특히 \(\mathfrak M_0=\mathfrak M\)의 정수 계수 모듈 기저를 이룬다.}
+
+\textbf{a) 두 열 또는 세 열 \(\alpha_i,\beta_i\)인 경우.}
+서로 다른 네 지표가 아직 나타나지 않으므로 \(\mathfrak N\)은 영모듈이다. 따라서
+\begin{equation}
+\tag{3}
+\begin{array}{c}
+F((ik))\equiv0\pmod p\quad\text{\(\alpha,\beta\)에 관한 항등식}\\[2pt]
+\Longrightarrow\quad
+F(\xi_{ik})\equiv0\pmod p\quad\text{\(\xi_{ik}\)에 관한 항등식}
+\end{array}
+\end{equation}
+을 보이면 된다. 그러면 \(\mathfrak M=\mathfrak M_p=0\)인 (1)이 증명된다.
+
+\(F((ik))=p\cdot H(\alpha,\beta)\)라는 조건은 각 열에 관하여 \emph{동차인} 성분마다 따로 충족되어야 한다. 따라서 언제나 \(F((ik))\)가 각 열에 관하여 동차이고, 곧 \(F(\xi_{ik})\)가 각 지표에 관하여 동차라고 가정하면 충분하다. 두 열인 경우에는 행렬식 \((12)\) 하나와 이에 대응하는 부정원 \(\xi_{12}\) 하나만 있다. 동차성에 따라 \(F=c\,\xi_{12}^x\)이다. 그런데
+\[
+c(12)^x\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+이고 \((12)\not\equiv0\pmod p\)이므로 언제나 \(c\equiv0\pmod p\)이다. 따라서
+\[
+F(\xi_{ik})\equiv0\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이고, 이로써 (3), 따라서 (1)이 증명된다.
+
+세 열인 경우에는 행렬식 \((12),(13),(23)\)과 그에 대응하는 부정원 \(\xi_{12},\xi_{13},\xi_{23}\)이 있다. 따라서
+\[
+F=\sum c\,\xi_{12}^{\tau_{12}}\xi_{13}^{\tau_{13}}\xi_{23}^{\tau_{23}}.
+\]
+\(F\)가 지표 \(1,2,3\)에 관하여 각각 차수 \(\sigma_1,\sigma_2,\sigma_3\)라고 하자. 그러면
+\[
+\sigma_1=\tau_{12}+\tau_{13},\qquad
+\sigma_2=\tau_{12}+\tau_{23},\qquad
+\sigma_3=\tau_{13}+\tau_{23}
+\]
+이고, 역은 유일하게
+\[
+\tau_{12}=\frac12(\sigma_1+\sigma_2-\sigma_3),\quad
+\tau_{13}=\frac12(\sigma_1-\sigma_2+\sigma_3),\quad
+\tau_{23}=\frac12(-\sigma_1+\sigma_2+\sigma_3)
+\]
+로 주어진다. 따라서 각 지표에 관하여 동차인 \(F\)는 많아야 항 하나만 포함한다.
+\[
+F=c\,\xi_{12}^{\tau_{12}}\xi_{13}^{\tau_{13}}\xi_{23}^{\tau_{23}}.
+\]
+여기서 위와 마찬가지로 (3), 따라서 (1)이 성립한다.
+
+\textbf{b) 네 열 \(\alpha_i,\beta_i\)인 경우.}
+여섯 부정원 \(\xi_{12},\xi_{13},\xi_{14},\xi_{23},\xi_{24},\xi_{34}\)와 대응 행렬식들이 나타나고, \(\mathfrak N=(f_{12,34})\)이다. 관계
+\begin{equation}
+\tag{4}
+\xi_{14}\xi_{23}\equiv\xi_{13}\xi_{24}-\xi_{12}\xi_{34}
+\pmod{\mathfrak N}
+\end{equation}
+에 따라 \(\xi_{ik}\)들의 각 거듭제곱곱은 \(\mathfrak N\)을 법으로 할 때 곱 \(\xi_{14}\xi_{23}\)을 포함하지 않는 거듭제곱곱들의 정수 계수 선형결합과 합동이다. 따라서 각 다항식 \(F(\xi_{ik})\)에 대하여
+\begin{equation}
+\tag{5}
+F(\xi_{ik})\equiv F_0(\xi_{ik})\pmod{\mathfrak N}
+\end{equation}
+이고, 여기서 \(F_0\)는 곱 \(\xi_{14}\xi_{23}\)을 포함하지 않는다. \emph{\(F_0\)를 \(F\)의 잉여류의 정규화 다항식이라 부르겠다.} (4)가 각 지표에 관하여 동차이므로, 각 지표에 관하여 동차인 \(F\)에는 같은 성질의 \(F_0\)가 대응한다.
+
+이제
+\begin{equation}
+\tag{6}
+F_0(\xi_{ik})=G(\xi_{ik})+\xi_{34}F_1(\xi_{ik})
+\end{equation}
+로 두자. 여기서 \(G\)는 \(\xi_{34}\)로 나누어지는 거듭제곱곱을 하나도 포함하지 않는다. 또
+\begin{equation}
+\tag{7}
+\left[G\right]_{\xi_{14}=\xi_{13}}
+=K(\xi_{12},\xi_{13},\xi_{23})
+\end{equation}
+로 둔다.
+
+\[
+F((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+에서 (5)와 (2)에 따라
+\begin{equation}
+\tag{8}
+F_0((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\end{equation}
+이 따라온다. 여기에 \(\alpha_4=\alpha_3,\ \beta_4=\beta_3\)을 특수화하고 (6), (7)을 사용하면
+\[
+K((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+이다. 따라서 a)에서 증명한 결과에 따라
+\[
+K(\xi_{ik})\equiv0\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이고, 여기서 아래에서 보충하여 보일 바와 같이
+\[
+G(\xi_{ik})\equiv0\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이 따라온다. 그러므로 (6)에 따라
+\[
+F_0(\xi_{ik})\equiv\xi_{34}F_1(\xi_{ik})\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이다. \((34)\not\equiv0\pmod p\)이므로 (8)에서
+\[
+F_1((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+도 따라온다. 여기서 \(F_1(\xi_{ik})\)는 다시 정규화되어 있고 \(\xi_{34}\)에 관한 차수가 더 낮다. 이 절차를 유한번 반복하면
+\[
+F_0(\xi_{ik})\equiv\xi_{34}^\lambda F_\lambda(\xi_{ik})\pmod p
+\]
+를 얻는다. \(F_\lambda\)의 \(\xi_{34}\)에 관한 차수는 0이므로 방금 증명한 바에 따라 \(p\)를 법으로 사라진다. 따라서
+\begin{equation}
+\tag{9}
+\begin{array}{rcl}
+F_0(\xi_{ik})&\equiv&0\pmod p
+\quad\text{\(\xi_{ik}\)에 관한 항등식},\quad\text{또는}\\
+F(\xi_{ik})&\equiv&0\pmod{(\mathfrak N,p)}
+\quad\text{\(\xi_{ik}\)에 관한 항등식}
+\end{array}
+\end{equation}
+이다. \emph{이로써 (2)의 역, 따라서 (1)이 증명되었다.} 동시에 \(F_0(\xi_{ik})\)에 관한 더 강한 명제도 얻었다\srcfn{1)}{이 더 강한 명제는 각 잉여류가 정규화 다항식을 정확히 하나만 포함한다는 뜻이다.}.
+
+\(K(\xi_{ik})\equiv0\pmod p\)에서 \(G(\xi_{ik})\equiv0\pmod p\)이 따라옴, 곧 \(G(\xi_{ik})\not\equiv0\pmod p\)에서 \(K(\xi_{ik})\not\equiv0\pmod p\)이 따라옴을 보충해야 한다. \emph{귀납추론의 이 부분에서만 정규화가 필요하다.} 치환 \(\xi_{14}=\xi_{13}\)으로 \(G\)의 개별 거듭제곱곱은 사라지지 않는다. 따라서 \(K\)가 사라지려면 \(G\)의 서로 다른 거듭제곱곱들이 \(K\)의 같은 거듭제곱곱에 대응해야 한다. 이는 그 거듭제곱곱들이 지표 3과 4의 맞바꿈만으로 서로 달라질 때에만 가능하다. 예컨대 가정에 따라 정규화된 한 거듭제곱곱이
+\[
+\xi_{12}^{\tau_{12}}\xi_{13}^{\tau_{13}}
+\xi_{14}^{\tau_{14}}\xi_{24}^{\tau_{24}}
+\]
+로 주어졌다고 하자. 각 지표에 관한 동차성 때문에 한 \(\xi_{ik}\)에서 3을 4로 바꾸면 다른 \(\xi_{ik}\)에서는 4를 3으로 바꾸어야 한다. 따라서 소거될 수 있는 항은 \(\xi_{13}\xi_{24}\) 대신 곱 \(\xi_{14}\xi_{23}\)을 포함해야 하지만, 정규화에 따라 이는 배제된다. 완전히 같은 방식으로
+\[
+\xi_{12}^{\tau_{12}}\xi_{13}^{\tau_{13}}
+\xi_{14}^{\tau_{14}}\xi_{24}^{\tau_{24}}
+\]
+와 소거될 수 있는 항도 인수 \(\xi_{14}\xi_{23}\)을 포함해야 하므로 정규화에 따라 배제된다. \emph{따라서 \(K(\xi_{ik})\equiv0\pmod p\)에서 \(G(\xi_{ik})\equiv0\pmod p\)이 따라온다.}
+
+\textbf{c) \(n\)개 열 \(\alpha_i,\beta_i\)인 경우.}
+이제 네 열의 경우를 그대로 일반화하여 완전귀납법으로 처리할 수 있다\srcfn{2)}{이 증명은 \(n=3\)인 경우에도 성립한다.}.
+
+먼저 각 다항식 \(F\)에 대하여
+\begin{equation}
+\tag{10}
+F(\xi_{ik})\equiv F_0(\xi_{ik})\pmod{\mathfrak N}
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\end{equation}
+인 합동식이 성립하고 \(F_0(\xi_{ik})\)가 정규화되어 있음을 다시 보이겠다. 여기서 \(\mathfrak N=(f_{ik,rs})\)이고, 정규화는 다음을 뜻한다. \emph{\(i,k,r,s\)가 서로 다른 네 지표이고 \(i<k<r<s\)이면 \(F_0\)는 곱 \(\xi_{is}\xi_{kr}\)을 포함하지 않는다. 즉 한 \(\xi\)의 두 지표가 다른 \(\xi\)의 두 지표 사이에 함께 놓이지 않는다.} 두 열이나 세 열인 경우에는 이 조건이 아무 제한도 주지 않으므로 모든 다항식이 정규화되어 있다. 네 열인 경우에도 이미 보았듯 각 잉여류에는 정규화 다항식이 존재한다. 따라서 \emph{\((n-1)\)개 열의 각 잉여류에 정규화 다항식이 존재함}을 귀납가정으로 둘 수 있다.
+
+\(F\)의 임의의 거듭제곱곱을
+\[
+\xi_{i_1n}\cdots\xi_{i_\sigma n}\,P
+\]
+꼴로 쓰자. 여기서 \(P\)에는 지표 \(n\)이 더는 나타나지 않는다. 귀납가정에 따라 \(P\)는 \(\mathfrak N\)을 법으로 한 정수 계수 정규화 다항식 \(P_0\)와 합동이다.
+\[
+\xi_{i_1n}\cdots\xi_{i_\sigma n}P
+\equiv
+\xi_{i_1n}\cdots\xi_{i_\sigma n}P_0
+\pmod{\mathfrak N}.
+\]
+\(P_0\)가 다음 성질의 \(\xi_{rs}\)를 하나도 포함하지 않는다고 하자. 적어도 하나의 \(i_\lambda\)에 대하여 \(r,s\)가 \(i_\lambda\)과 \(n\) 사이에 놓이는 것, 곧 \(i_\lambda<r<s<n\)인 것이다. 그러면 \(P_0\) 안의 임의의 두 \(\xi\)의 곱은 이미 정규화 조건을 만족하므로 정규화가 끝난다.
+
+그렇지 않으면 \(i_\lambda<r<s<n\)인 \(i_\lambda\)를 택하고, \(P_0^*\)를 \(P_0\)에서 \(\xi_{rs}\)를 포함하는 거듭제곱곱이라 하자. 관계
+\[
+\xi_{i_\lambda n}\xi_{rs}\equiv
+\xi_{i_\lambda s}\xi_{rn}-\xi_{i_\lambda r}\xi_{sn}
+\pmod{\mathfrak N}
+\]
+에 따라
+\begin{align*}
+&\xi_{i_1n}\cdots\xi_{i_\lambda n}\cdots\xi_{i_\sigma n}P_0^*\\
+&\equiv
+\xi_{i_1n}\cdots\xi_{rn}\cdots\xi_{i_\sigma n}Q
++
+\xi_{i_1n}\cdots\xi_{sn}\cdots\xi_{i_\sigma n}R
+\pmod{\mathfrak N}\\
+&\equiv
+\xi_{i_1n}\cdots\xi_{rn}\cdots\xi_{i_\sigma n}Q_0
++
+\xi_{i_1n}\cdots\xi_{sn}\cdots\xi_{i_\sigma n}R_0
+\pmod{\mathfrak N}.
+\end{align*}
+여기서 \(Q_0,R_0\)는 다시 \(Q,R\)의 잉여류의 정규화 다항식들이다. \(Q,R\)에는 지표 \(n\)이 없으므로 귀납가정에 따라 \(Q_0,R_0\)가 존재한다. 또한 \(Q,R\)가 단순한 거듭제곱곱이므로 이들은 확실히 정수 계수 다항식이다. \(i_\lambda<r<s<n\)이므로
+\[
+((n-i_1)+\cdots+(n-r)+\cdots+(n-i_\sigma))
+<
+((n-i_1)+\cdots+(n-i_\lambda)+\cdots+(n-i_\sigma)),
+\]
+\[
+((n-i_1)+\cdots+(n-s)+\cdots+(n-i_\sigma))
+<
+((n-i_1)+\cdots+(n-i_\lambda)+\cdots+(n-i_\sigma)).
+\]
+따라서 \(P_0^*\)에서 \(Q_0,R_0\)로 넘어가면 이 차이합이 작아진다. 이 합은 반드시 \(\sigma\) 이상이므로 각 거듭제곱곱 \(P_0^*\)에 대한 절차는 유한 단계 뒤에 끝난다. 그러므로
+\[
+\begin{aligned}
+F(\xi_{ik})
+&=\sum \xi_{i_1n}\cdots\xi_{i_\sigma n}P^{(\nu)}\\
+&\equiv
+\sum \xi_{j_1n}\cdots\xi_{j_\sigma n}S_0^{(\nu)}
+=F_0(\xi_{ik})\pmod{\mathfrak N}
+\end{aligned}
+\]
+을 얻는다. 정수 계수 다항식 \(F_0(\xi_{ik})\)는 반드시 정규화되어 있다. 그렇지 않으면 차이합을 더 낮출 수 있기 때문이다. 이로써 (10)이 증명되었다. 더 나아가 \((n-1)\)개 지표에서 각 지표에 관하여 동차인 \(F\)에 같은 성질의 정규화 다항식 \(F_0\)가 대응한다는 귀납가정 아래, 위 절차는 \(n\)개 지표에서도 그러함을 보인다. 따라서 이하에서는 각 지표에 관하여 동차인 다항식만 다룬다.
+
+b)에서와 비슷하게 다시
+\begin{equation}
+\tag{11}
+F_0(\xi_{ik})=G(\xi_{ik})+\xi_{n-1,n}F_1(\xi_{ik})\srcfnmark{1)}
+\end{equation}
+\srcfntext{1)}{(10), (11)에 대응하는 항등식
+\[
+F((ik))=F_0((ik))=G((ik))+(n-1,n)F_1((ik))
+\]
+은 두 열 \((n-1)\), \((n)\)을 변수열 \(x,y\), 따라서 \((n-1,n)\)을 \((xy)\)로 바꾸면 클렙슈--고르단 급수전개에 대응한다. 클렙슈--고르단에서는 극형에 따라 전개하지만, \(F_0\)의 정규화는 극형의 \glqq{}선두항\grqq{}에 대응한다. 이 때문에 클렙슈--고르단에서는 성립하지 않는 정수성을 강제할 수 있다. 정수성을 무시하면 \(f_{ik,rs}\)들이 \(\mathfrak M\)의 기저를 이룬다는 잘 알려진 증명은 바로 클렙슈--고르단 급수전개를 사용한다. Gordan--Kerschensteiner, \emph{Vorlesungen über Invariantentheorie}, 132쪽.}
+로 둔다. 여기서 \(G\)는 \(\xi_{n-1,n}\)으로 나누어지는 거듭제곱곱을 하나도 포함하지 않는다. 또
+\begin{equation}
+\tag{12}
+\left[G\right]_{\xi_{in}=\xi_{i,n-1}}=K(\xi_{ik})
+\end{equation}
+로 둔다. 정규화의 정의에서 알 수 있듯 \(G\)뿐 아니라 \(K\)도 정규화되어 있다.
+
+그러면 \(G\)와 \(K\) 사이에는 다시 \emph{일대일 대응}이 성립한다. 실제로 \(G\)의 서로 다른 거듭제곱곱들이 \(K\)에서 같은 거듭제곱곱에 대응할 수 있는 것은 오직 지표 \(n\)과 \(n-1\)의 맞바꿈으로만 서로 다를 때이다. 예컨대 \(G\)의 지표 \(n-1\)에 관한 차수가 \(\varrho\), 지표 \(n\)에 관한 차수가 \(\sigma\)라 하고,
+\[
+u_1\le u_2\le\cdots\le u_\varrho
+\le u_{\varrho+1}\le\cdots\le u_{\varrho+\sigma}
+\]
+를 \(G\)의 한 거듭제곱곱에서 \(n-1\) 및 \(n\)과 연결된 지표들이라 하자. (11)에 따라 부정원 \(\xi_{n-1,n}\)이 \(G\)에 나타나지 않으므로 그 개수는 \(\varrho+\sigma\)이다. 정규화에 따라 그 거듭제곱곱은
+\[
+\xi_{u_1,n-1}\cdots\xi_{u_\varrho,n-1}
+\xi_{u_{\varrho+1},n}\cdots\xi_{u_{\varrho+\sigma},n}
+P(\xi_{ik})
+\]
+꼴이고, \(P(\xi_{ik})\)에는 지표 \(n,n-1\)이 더는 나타나지 않는다. \(i\ne j\)일 때 \(n\)과 \(n-1\)을 맞바꾸면 인수 \(\xi_{in}\xi_{j,n-1}\), \(i<j\)가 생긴다. 그러면 \(j,n-1\)이 \(i,n\) 사이에 놓여 그 항은 정규화되어 있지 않다. 따라서 고정된 \(u_1,u_2,\ldots,u_{\varrho+\sigma}\)와 고정된 \(P\)에 대하여 \(G\)는 거듭제곱곱을 \emph{하나만} 포함한다. 이로써 \(G\)의 서로 다른 거듭제곱곱들은 \(K\)의 서로 다른 거듭제곱곱에 대응함이 증명되었다.
+\begin{equation}
+\tag{13}
+K(\xi_{ik})\equiv0\pmod p
+\quad\Longrightarrow\quad
+G(\xi_{ik})\equiv0\pmod p.
+\end{equation}
+
+\[
+F((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+에서 (10)과 (2)에 따라
+\begin{equation}
+\tag{14}
+F_0((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\end{equation}
+이 따라온다. 여기에 \(\alpha_n=\alpha_{n-1},\ \beta_n=\beta_{n-1}\)을 특수화하고 (11), (12)를 쓰면
+\begin{equation}
+\tag{15}
+K((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\end{equation}
+이다. \(K(\xi_{ik})\)는 정규화되어 있고 지표가 \(n-1\)개뿐이다. 따라서 a)와 b)의 (9)에서 증명한 결과를 (15)에 적용하면
+\[
+K(\xi_{ik})\equiv0\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이라고 둘 수 있고, (13)에 따라
+\[
+G(\xi_{ik})\equiv0\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이 따라온다. 그러므로 (11)에 따라
+\[
+F_0(\xi_{ik})\equiv\xi_{n-1,n}F_1(\xi_{ik})\pmod p
+\qquad\text{\(\xi_{ik}\)에 관한 항등식}
+\]
+이다. \((n,n-1)\not\equiv0\pmod p\)이므로 (14)에서
+\[
+F_1((ik))\equiv0\pmod p
+\qquad\text{\(\alpha,\beta\)에 관한 항등식}
+\]
+도 따라온다. 여기서 \(F_1(\xi_{ik})\)는 다시 정규화되어 있고, \(\xi_{n-1,n}\)에 관한 차수가 \(F_0\)보다 낮다. 이 절차를 유한번 반복하면
+\[
+F_0(\xi_{ik})\equiv\xi_{n-1,n}^{\lambda}F_\lambda(\xi_{ik})\pmod p
+\]
+이고, \(F_\lambda\)의 \(\xi_{n-1,n}\)에 관한 차수는 0이므로 방금 증명한 결과에 따라 \(p\)를 법으로 사라진다. 따라서
+\begin{equation}
+\tag{16}
+\begin{array}{rcl}
+F_0(\xi_{ik})&\equiv&0\pmod p
+\quad\text{\(\xi_{ik}\)에 관한 항등식},\quad\text{또는}\\
+F(\xi_{ik})&\equiv&0\pmod{(\mathfrak N,p)}
+\quad\text{\(\xi_{ik}\)에 관한 항등식}
+\end{array}
+\end{equation}
+이다. 이로써 (2)의 역, 따라서 (1)이 증명되었다. 동시에 귀납추론에서 사용한 \(F_0(\xi_{ik})\)에 관한 더 강한 명제도 \(n\)개 지표의 경우에 증명되었으므로 일반적으로 성립한다.
+
+\bigskip
+\begin{center}
+\textbf{§ 4. 유한군의 정수 계수 불변식의 유한성}
+\end{center}
+
+나의 글 \glqq{}유한군 불변식의 유한성 정리\grqq{}\srcfn{1)}{\emph{Math. Ann.} 77, 89쪽 (1915).}에서 제시한 초등적인 유한성 증명은 § 1의 특수 유한성 정리 III, IV를 사용하여 정수성까지 강화할 수 있다. 반면 힐베르트의 모듈 기저 정리에 근거한 통상적 증명은 이 정수성을 주지 않는다. 정수 계수 모듈 기저를 사용해도 군의 위수인 정수 \(h\)의 임의로 높은 거듭제곱이 분모에 나타나는 표현만 얻기 때문이다.
+
+이하에서는 위 글의 기호를 그대로 따른다. 유한군 \(\mathfrak H\)가 행렬식이 0이 아닌 \(h\)개의 선형변환 \(A_1,\ldots,A_h\)로 이루어진다고 하자\srcfn{2)}{\(\mathfrak H\)가 한 추상 유한군과 한 단계 동형이라고 가정하는 것으로도 충분하다. 즉 \(A\) 가운데 어떤 변환행렬식이 사라지면 \(\mathfrak H\)가 \(\begin{pmatrix}\mathfrak S&0\\0&0\end{pmatrix}\) 꼴의 군과 상사이고, \(\mathfrak S\)의 치환행렬식들은 사라지지 않는다고 하면 된다. 이 경우 \(\mathfrak H\)의 불변식은 \(\mathfrak S\)의 불변식과 일치하므로 행렬식의 비소멸 조건은 실제로 일반성을 제한하지 않는다.}. \(A_k\)는 선형변환
+\[
+x_1^{(k)}=\sum_{\nu=1}^{n}a_{1\nu}^{(k)}x_\nu,
+\quad\ldots,\quad
+x_n^{(k)}=\sum_{\nu=1}^{n}a_{n\nu}^{(k)}x_\nu
+\]
+또는 줄여서 \((x^{(k)})=A_k(x)\)를 나타낸다. 따라서 군 \(\mathfrak H\)는 원소 \(x_1,\ldots,x_n\)으로 이루어진 열 \((x)\)를 원소 \(x_1^{(k)},\ldots,x_n^{(k)}\)으로 이루어진 열 \((x^{(k)})\)들로 보낸다. 계수 \(a_{i\nu}^{(k)}\)는 \emph{대수적 정수}라고 가정한다. J. 슈어의 정리\srcfn{3)}{\emph{Über Gruppen linearer Substitutionen mit Koeffizienten aus einem algebraischen Zahlkörper}, 정리 VII, Math. Ann. 71 (1912), 355쪽.}에 따라 각 유한 선형변환군은 \(a_{i\nu}^{(k)}\)들이 대수적 정수가 되는 군과 상사이므로, 이는 일반성을 제한하지 않는다.
+
+군의 \emph{정수 계수 (절대)불변식}이란 \(x_1,\ldots,x_n\)의 다항함수로서 \(a_{i\nu}^{(k)}\)들이 생성하는 대수적 수체 \(\mathfrak K\)의 \emph{대수적 정수}들을 계수로 가지며 \(A_1,\ldots,A_h\)를 적용해도 항등적으로 바뀌지 않는 것을 뜻한다고 하자. 그러한 불변식 \(f(x)\)에 대해서는
+\begin{equation}
+\tag{1}
+f(x)=f(x^{(1)})=\cdots=f(x^{(h)})
+=\frac1h\sum_{k=1}^{h}f(x^{(k)})
+\end{equation}
+이다. 역으로 \(h\)개 변수열 \((x^{(k)})\)의 각 정수 계수 대칭함수도 군의 정수 계수 불변식이 된다.
+
+\(\omega_1,\omega_2,\ldots,\omega_\varrho\)를 \(\mathfrak K\)의 모든 대수적 정수의 기저라 하자. 그러면 각 불변식은
+\[
+f(x)=\omega_1f_1(x)+\cdots+\omega_\varrho f_\varrho(x)
+\]
+로 나타낼 수 있고, \(f_1(x),\ldots,f_\varrho(x)\)는 유리정수 계수를 갖는다. (1)에 따라
+\[
+h\,f(x)=
+\omega_1\sum_{k=1}^{h}f_1(x^{(k)})+\cdots+
+\omega_\varrho\sum_{k=1}^{h}f_\varrho(x^{(k)})
+\]
+이다. 여기서 각 합은 유리정수 계수를 갖는 \(h\)개 변수열 \((x^{(k)})\)의 대칭함수이다. 따라서 정리 III에 따라, 이 합들은 변수열들의 유한개의 유리정수 계수 대칭함수에 관한 유리정수 계수 다항함수로 나타난다. 이 기저함수 \(I_1(x),\ldots,I_\sigma(x)\)는 위의 결과에 따라 군의 정수 계수 불변식이 된다. 다만 \(\mathfrak H\)가 일반적으로 \(A\)와 함께 대수적으로 켤레인 모든 변환을 포함하지는 않으므로 그 계수는 일반적으로 \emph{대수적 정수}이다.
+
+따라서
+\begin{equation}
+\tag{2}
+h\cdot f(x)=\omega_1G_1(I)+\cdots+\omega_\varrho G_\varrho(I)
+\end{equation}
+인 표현이 성립하고, \(G_1,\ldots,G_\varrho\)는 유리정수 계수를 갖는다.
+
+이제 \(w_1,\ldots,w_\varrho\)를 부정원이라 하고,
+\[
+L=w_1G_1(I)+\cdots+w_\varrho G_\varrho(I)
+\]
+가 \(w_i=\omega_i/h\)라는 치환으로 표현 (2)의 불변식 \(f(x)\)에 대응하는 모든 \(w\)의 선형형식을 두루 취하게 하자. 힐베르트의 정수 계수 모듈 기저 정리에 따라
+\begin{equation}
+\tag{3}
+L=A_1(I)L_1+\cdots+A_\tau(I)L_\tau
+\end{equation}
+이고, \(A_i\)들은 유리정수 계수를 갖는다. 모든 \(L\)이 \(w\)에 관하여 선형이므로 \(A_i\)들에는 \(w\)가 더는 나타나지 않는다. 치환 \(w_i=\omega_i/h\)에 따라 \(L_1,\ldots,L_\tau\)에 각각 불변식 \(\mathfrak I_1(x),\ldots,\mathfrak I_\tau(x)\)가 대응한다고 하자. 이 치환으로 (3)은
+\begin{equation}
+\tag{4}
+f(x)=A_1(I)\mathfrak I_1(x)+\cdots+
+A_\tau(I)\mathfrak I_\tau(x)
+\end{equation}
+으로 넘어간다. 표현 (4)는
+\[
+I_1(x),\ldots,I_\sigma(x);
+\quad\mathfrak I_1(x),\ldots,\mathfrak I_\tau(x)
+\]
+\emph{가 군 \(\mathfrak H\)의 모든 정수 계수 불변식의 기저를 이루며, 각 불변식은 이 유한개의 불변식에 관한 유리정수 계수 다항함수로 나타남}을 보여 준다.
+
+특히 군 \(\mathfrak H\)가 각 변환 \(A\)와 함께 대수적으로 켤레인 계수를 갖는 모든 변환 \(A',A'',\ldots\)도 포함한다고 하자. 그러면 \(h\)개 열 \((x^{(k)})\)의 유리정수 계수 대칭함수들은 \(x\)의 유리정수 계수 다항함수가 되고, 대칭함수의 기저함수들도 그러하다. 따라서 유리정수 계수를 갖는 불변식 \(f(x)\)들로 제한하면 기저함수들
+\[
+I_1(x),\ldots,I_\sigma(x);
+\quad\mathfrak I_1(x),\ldots,\mathfrak I_\tau(x)
+\]
+도 유리정수 계수를 갖는다. 그러므로 일반적으로 군 \(\mathfrak H\)가 만족하지는 않는 이 특수한 가정 아래에서는 유리정수 계수 불변식들의 부분영역에 대해서도 정수 계수 유한성이 성립한다.

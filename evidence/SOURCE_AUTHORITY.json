@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "captured_local_date": "2026-08-13",
+  "declared_target_scope": "43 numbered papers, two post-numbered works/scopes, and terminal bibliography/editorial apparatus",
+  "active_authority": {
+    "pointer_id": "NOETH-DE-AUTH-v047-20260808",
+    "pointer_path": "03_projects/noether/07_german_canon_control/pointers/v047.json",
+    "pointer_bytes": 132270,
+    "pointer_sha256": "0053EA0B7E44DDE7EA7DC285ABC115DFC43F4A74B34C54DE8F39DE4E445D5BEA",
+    "authority_id": "NOETH-DE-ED-0011",
+    "body_path": "03_projects/noether/07_german_canon_control/candidates/ED0011/noether.tex",
+    "body_bytes": 2153594,
+    "body_sha256": "9E6BF2BC3155ECE3DF98CD8A408C23662BEFB047A1DDF200CA1DC8476A488BF3",
+    "logical_lines": 24146
+  },
+  "mutable_pointer_file_at_capture": {
+    "path": "03_projects/noether/07_german_canon_control/CURRENT_GERMAN_AUTHORITY_POINTER.json",
+    "bytes": 152755,
+    "sha256": "2B36556DCF123F19281AB6BF36CE6E46BEE8ADDBF37DA682032372306564D0DE",
+    "contained_pointer_id": "NOETH-DE-AUTH-v051-20260811",
+    "canonical_claim": false,
+    "authority_state": "inactive candidate only",
+    "use_rule": "v047/ED0011 remains active until a qualifying same-concept publication, complete anonymous file readback, and durable activation transaction"
+  },
+  "coverage": {
+    "scope_ledger": "source/sp11.csv",
+    "scope_ledger_bytes": 8981,
+    "scope_ledger_sha256": "E9C638A3C745F58EC445ACA64AEA6655B944C635E15B1E58CC5EBE2FA0283971",
+    "scopes": 48,
+    "first_line": 1,
+    "last_line": 24146,
+    "contiguous_exactly_once": true
+  },
+  "target_identity": {
+    "ledger": "source/prov12.csv",
+    "ledger_bytes": 13044,
+    "ledger_sha256": "A8497C7EEE730A6D46FAB9759B34F4509169D134FE29D60B6D200B48F675BB31",
+    "maintained_targets": 47,
+    "reader_inputs": 46,
+    "p09_tail_lineage_target": 1,
+    "all_exact": true
+  },
+  "shared_source_mutated_by_language_release": false,
+  "sga": "held and untouched"
+}

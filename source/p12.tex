@@ -1,0 +1,247 @@
+% Korean Noether paper 12 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 8088--8488.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 18,724 bytes; SHA-256 CD538526814F2E5812FE1D8C03ACF2BBDB0FED7F45ECC7DE5802394B07E05652.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{12. 임의의 미분식의 불변식}
+\begin{center}
+{\Large\bfseries 12. 임의의 미분식의 불변식.}\par
+\vspace{0.8em}
+괴팅겐의 에미 뇌터.\par
+\vspace{1.5em}
+Nachr. v. d. Ges. d. Wiss. zu Göttingen 1918, 37--44쪽
+\end{center}
+
+\vspace{3em}
+\begin{center}
+1918년 1월 25일 회의에서 F. Klein이 제출.
+\end{center}
+
+미분식이란 \(n\)개의 변수 \(x_1,\ldots,x_n\)과 그 미분
+\(dx_1,\ldots,dx_n\)의 함수
+\[
+f(x;dx)=f(x_1,\ldots,x_n;\,dx_1,\ldots,dx_n)
+\]
+를 뜻한다. 이 함수는 두 인수계 각각에 관하여 해석적이라고 가정하지만 반드시 실함수일 필요는 없다. 이제 변수의 모든 해석적 변환으로 이루어진 군을 바탕에 두면, 이에 미분의 모든 선형변환으로 이루어진 군이 대응한다.
+\srcnumdisplay{(1)}{%
+x_i=x_i(y_1,\ldots,y_n);\qquad
+dx_i=\sum_k\frac{\partial x_i}{\partial y_k}\,dy_k;\qquad
+\delta x_i=\sum_k\frac{\partial x_i}{\partial y_k}\,\delta y_k.
+}
+이 변환으로 \(f(x,dx)\)가 \(g(y,dy)\)로 옮겨 간다고 하자. \(f(x,dx)\)의 불변식이란 이 군과, 이 군이 고차 미분 \(d^2x,d\delta x,\ldots\) 및 \(f(x,dx)\)의 도함수들에 유도하는 군에 대한 불변식을 뜻한다. 다시 말해 임의의 \(f\)에 대하여 (1)에 따라 변수들과 나타나는 모든 미분에 관하여 항등적으로
+\[
+\begin{aligned}
+&J\!\left(f,\frac{\partial f}{\partial dx}\cdots
+\frac{\partial^{\rho+\sigma}f}{\partial x^\rho\partial dx^\sigma}
+\cdots dx,\delta x,d^2x,\ldots\right)\\
+&\qquad =
+J\!\left(g,\frac{\partial g}{\partial dy}\cdots
+\frac{\partial^{\rho+\sigma}g}{\partial y^\rho\partial dy^\sigma}
+\cdots dy,\delta y,d^2y,\ldots\right)\srcfnmark{1)}
+\end{aligned}
+\]
+을 만족하는 해석함수 \(J\)이다.
+\srcfntext{1)}{\(\displaystyle
+\frac{\partial^{\rho+\sigma}f}{\partial x^\rho\partial dx^\sigma}\)
+는 이하에서 줄여 쓴 표기로서
+\[
+\frac{\partial^{\rho+\sigma}f}
+{\partial x_{i_1}\cdots\partial x_{i_\rho}
+ \partial dx_{k_1}\cdots\partial dx_{k_\sigma}}
+\]
+를 뜻하며, 지표들은 \(1\)부터 \(n\)까지의 임의의 수이다.}
+여러 미분식으로 이루어진 연립계의 불변식도 완전히 같은 방식으로 정의한다. 그러한 불변식이 특히 일차 미분 \(dx,\delta x\)와 이 미분들에 관한 도함수만을 포함하고 변수에 관한 도함수는 포함하지 않는다면, 함수에 변수가 나타난다는 사실과 미분의 선형변환은 고려할 필요가 없다. 이 특수한 불변식들은 부정계수를 가진 \(dx,\delta x\)의 모든 선형변환군에 대한 불변식이 되며, 이하에서는 연립계의 사영불변식이라 부르겠다.
+
+Christoffel(Crelle 70)과 Ricci(Math. Annalen 54)는 이차 동차 미분형식에 대하여, 모든 불변식이 그 연립계의 사영불변식이 되도록 하는 불변 구성들의 한 계를 세웠다. 이로써 불변식 전체와 동치성의 문제는 선형불변식론의 문제로 환원된다. 나는 이를 \glqq{}환원정리\grqq{}라 부르고자 한다. 완전계는 가산무한개의 형식으로 이루어지지만, 각 유한 차수 \(\rho\)의 불변식, 곧 변수에 관한 \(\rho\)차보다 높은 도함수를 포함하지 않는 불변식에는 유한개의 형식만 필요하다.
+
+이하에서는 임의의 미분식에 대하여 \glqq{}환원정리\grqq{}가 성립함을 보인다. 여기서도 완전계는 가산무한개의 불변 구성으로 이루어지되, 각 유한 차수에는 유한개만 필요하다. Christoffel과 Ricci는 불변식을 만들고 환원정리를 증명할 때 조망하기 어려운 소거에 의존한다. 이에 반해 나는 불변적인 미분과정과 변분과정으로 불변식을 직접 만든다. 변분과정도 다른 매개변수에 관한 미분과정으로 간단히 볼 수 있다. Lagrange(\emph{Mécanique analytique}, 제2부 제IV절)에 이어 Riemann(Werke XXII)과 Lipschitz(Crelle 70, 72)는 이 불변 미분과정의 알고리즘을 이차 미분형식에 대하여 전개하였으나 환원정리에까지 이르지는 않았다. 환원정리의 증명에 쓰이는 도구는 Riemann이 이차형식에 도입한 \glqq{}정규좌표\grqq{}이다(Werke XIII). 이 좌표는 대응하는 변분문제에서 한 점으로부터 나가는 극값곡선들을 직선으로 바꾸지만, 동차 미분식
+\[
+f(x,\varkappa\cdot dx)=\Phi(\varkappa)\cdot f(x,dx)
+\]
+에 대해서만 존재한다.\srcfn{1)}{\(\Phi(\varkappa)=\varkappa^c\)가 됨을 쉽게 알 수 있으며, 여기서 \(c\)는 임의의 실수 또는 복소수이다.} 그러나 비동차 경우는 이 경우로 환원할 수 있다.
+
+\begin{center}
+\textbf{I. 불변식의 생성}
+\end{center}
+
+일반적으로 끝나지 않는 \(f(x,dx)\)의 사영불변식 열은 극화로 얻어진다. 미분의 변환이 선형이므로 \(f(x,dx)=g(y,dy)\)에서
+\[
+f(x,dx+\lambda\delta x)=g(y,dy+\lambda\delta y)
+\]
+도 따라온다. 이를 \(\lambda\)에 관하여 전개하면 불변성을 특징짓는 다음 관계들이 생긴다.
+\srcnumdisplay{(2)}{%
+\begin{gathered}
+f(dx)=g(dy),\\
+f_\delta=\sum\frac{\partial f(dx)}{\partial dx}\,\delta x
+       =\sum\frac{\partial g(dy)}{\partial dy}\,\delta y,\\
+\vdots\\
+f_{\delta^\sigma}=
+\sum\frac{\partial^\sigma f(dx)}{\partial dx^\sigma}\,\delta x^\sigma
+=
+\sum\frac{\partial^\sigma g(dy)}{\partial dy^\sigma}\,\delta y^\sigma,\\
+\vdots
+\end{gathered}
+}
+
+각 극형에 변분과정 \(\bdelta\)를 적용하면 끝나지 않는 일반 불변식 열을 얻는다.
+\srcnumdisplay{(3)}{%
+\begin{gathered}
+\bdelta^\rho f(x,dx)=\bdelta^\rho g(y,dy),\\
+\vdots\\
+\bdelta^\rho f_{\delta^\sigma}
+=\bdelta^\rho\sum\frac{\partial^\sigma f(dx)}{\partial dx^\sigma}\,
+\delta x^\sigma
+=\bdelta^\rho\sum\frac{\partial^\sigma g(dy)}{\partial dy^\sigma}\,
+\delta y^\sigma,\\
+\vdots\\[0.2em]
+(\rho=0,1,2,\ldots)
+\end{gathered}
+}
+관계 (2)와 (3)에서는 (1)을 이용하여 \(f(x,dx)\)의 도함수들에 대한 변환법칙을 읽어 낼 수 있지만, 이하에서는 이를 쓰지 않는다. 이제 불변식 (3)을 선형결합하면 \glqq{}\(\rho\)차 변분의 정규형\grqq{}을 얻을 수 있다. \(\rho=1\)인 경우는 Lagrange에게, \(\rho=2\)인 경우는 Riemann에게서 찾을 수 있다. 이 정규형은 \((\rho+1)\)차 혼합미분
+\[
+d^\rho\delta,\ d^{\rho-1}\delta^2,\ldots
+\]
+이 소거된다는 성질로 특징지어진다. 구체적으로 다음을 얻는다.
+\srcnumdisplay{(4)}{%
+\begin{gathered}
+\Omega_1=\delta f(dx)-d f_\delta(dx),\\
+\Omega_2=\delta^2 f-\delta d f_\delta+\frac12 d^2 f_{\delta^2},\\
+\vdots\\
+\Omega_\rho=\delta^\rho f-\delta^{\rho-1}d f_\delta
++\frac12\delta^{\rho-2}d^2 f_{\delta^2}
++\cdots+\frac{(-1)^\rho}{\rho!}\,d^\rho f_{\delta^\rho},\\
+\vdots
+\end{gathered}
+}
+
+이제 Riemann의 한 착상을 일반화하면 불변식 (4)에서 일차 미분만을 포함하는 불변식으로 나아갈 수 있다. 이러한 불변식을 \glqq{}기본함수\grqq{}라 부르겠다. 실제로 \(\Omega_1\)에서 미분들을 미분몫으로 바꾸면, \(\Omega_1=0\)은 \(\bdelta x\)에 관하여 항등적으로
+\[
+f\!\left(\frac{dx}{dt}\right)
+\]
+에 딸린 변분문제의 라그랑주 방정식과 정확히 같아진다. 이제 방향 \((d+\lambda\delta)\)가 이 라그랑주 방정식들을 만족한다는 불변조건을 세운다.
+\srcnumdisplay{(5)}{%
+\begin{gathered}
+\Omega_1(d+\lambda\delta)=
+\bdelta f(dx+\lambda\delta x)
+-(d+\lambda\delta)f_{\bdelta}(dx+\lambda\delta x)=0,\\
+(\bdelta x\text{에 관하여 항등적으로}).
+\end{gathered}
+}
+동차 \(f(dx)\)에서는 \(\bdelta=d+\lambda\delta\)를 대입하여 다음도 따라온다.
+\srcnumdisplay{(6)}{%
+(d+\lambda\delta)f(dx+\lambda\delta x)=0.
+}
+다만 일차 동차인 경우는 예외이다. 이 경우 방정식계 (5)는 독립인 조건을 \((n-1)\)개만 주므로, (6)을 새 조건으로 덧붙인다. (5), 또는 (5)와 (6)에서 \(\lambda\)의 0차, 1차, 2차 계수를 각각 0으로 두면 세 불변 방정식계
+\[
+\varphi=0,\qquad\psi=0,\qquad\chi=0
+\]
+을 얻는다. 이들은 \(\bdelta x\)에 관하여 항등적이며, 이를 이용하면 \(d^2x,d\delta x,\delta^2x\)를 일차 미분으로 나타낼 수 있다. 더 나아가 다음 불변 방정식계는 모든 고차 미분을 일차 미분으로 나타내는 데 정확히 충분하다.
+\srcnumdisplay{(7)}{%
+\begin{gathered}
+d^\sigma\varphi=0,\qquad d^\sigma\psi=0,\qquad
+d^\sigma\chi=0,\qquad d^{\sigma-1}\delta\chi=0,\\
+d^{\sigma-2}\delta^2\chi=0,\ldots,\delta^\sigma\chi=0
+\qquad(\sigma=0,1,2,\ldots).
+\end{gathered}
+}
+\srcfn{1)}{선형형식 \(\sum A_i\,dx_i\)만은 따로 다루어야 한다. 이 경우 방정식계 (5)에 이차 미분이 들어 있지 않기 때문이다.}
+따라서 함수 (4)를 불변 방정식계 (7)과 결합하면 일차 미분만을 포함하는 기본함수 \([\Omega_\rho]\)를 얻으며, 이때 \([\Omega_1]\)은 항등적으로 사라진다.
+
+마찬가지로 기본함수 \(h\)의 미분 \(\delta h(dx,\delta x)\)에서도 (7)을 이용하여 다시 하나의 기본함수를 얻을 수 있다. 이를 \(h\)의 \glqq{}공변미분\grqq{} \([h^{(1)}]\)이라 부르겠다. 일반적으로 \([h^{(\nu)}]\)는 \([h^{(\nu-1)}]\)의 공변미분을 뜻한다. 이 두 과정은 다음의 이중 무한 기본함수 열을 준다.
+\srcnumdisplay{(8)}{%
+\begin{array}{cccccc}
+[\Omega_2], & [\Omega_2^{(1)}], & [\Omega_2^{(2)}] & \ldots
+& [\Omega_2^{(\nu)}] & \ldots\\
+\vdots &&&& \vdots&\\
+{}[\Omega_\rho], & [\Omega_\rho^{(1)}], & \ldots & \ldots
+& [\Omega_\rho^{(\nu)}] & \ldots\\
+\vdots & \vdots &&& \vdots&
+\end{array}
+}
+
+고차 미분을 일차 미분으로 나타내는 방정식들의 좌변은 일차 미분과 동변임도 알 수 있다. 즉 같은 선형변환을 따른다. 따라서 고차 미분 대신 이 좌변들 \(p,q,r,\ldots\)을 불변식의 인수로 도입하면, 그 불변식은 도함수들 이외에는 서로 동변인 양들에만 의존한다. 위에서 제시한 함수 (8)의 구성은 바로 이 새 양들을 도입하는 것과 같다. 각 불변식은 이로써 불변식들의 합으로 바뀌며, 그 가운데 \(dx,\delta x\)만을 포함하고 \(p,q,r,\ldots\)은 포함하지 않는 항을 골라낸다.
+
+이하에서는 동차성 가정
+\[
+f(\varkappa\cdot dx)=\Phi(\varkappa)\cdot f(dx)
+\]
+아래에서 기본함수 (8)이 찾고 있는 완전계 전체를 이룸을 보인다.
+
+\begin{center}
+\textbf{II. 정규좌표, 동치성과 환원정리}
+\end{center}
+
+\(f\!\left(\frac{dx}{dt}\right)\)에 딸린 변분문제를 적분하면 정규좌표에 이른다.
+\srcnumdisplay{(9)}{%
+\begin{gathered}
+\Omega_1=\delta f\!\left(\frac{dx}{dt}\right)
+-\frac{d}{dt}f_\delta\!\left(\frac{dx}{dt}\right)=0
+\quad(\delta x\text{에 관하여 항등적으로}),\\
+\frac{d}{dt}f\!\left(\frac{dx}{dt}\right)=0
+\quad(\text{귀결 또는 추가조건}).
+\end{gathered}
+}
+\(f(dx)\)가 동차라는 가정 때문에 이 방정식계는 매개변수 치환 \(t=\varkappa\cdot\tau\) 아래에서 자기 자신으로 옮겨진다. 따라서 (9)를 이용하여
+\(\frac{d^\rho x_i}{dt^\rho}\)를 일차 도함수의 함수
+\(\varphi_\rho^{(i)}\!\left(\frac{dx}{dt}\right)\)로 나타내면,
+\(\varphi_\rho^{(i)}\)는 \(\rho\)차 동차가 된다.
+\srcnumdisplay{(10)}{%
+\varphi_\rho^{(i)}\!\left(\varkappa\cdot\frac{dx}{dt}\right)
+=\varkappa^\rho\varphi_\rho^{(i)}\!\left(\frac{dx}{dt}\right).
+}
+이제 (9)를 적분할 때 \(t=t_0\)에서 초깃값
+\[
+x=(x)_0,\qquad \frac{dx}{dt}=\left(\frac{dx}{dt}\right)_0
+\]
+을 주고 다음과 같이 둔다.
+\srcnumdisplay{(11)}{%
+u_i=(t-t_0)\left(\frac{dx_i}{dt}\right)_0.
+}
+여기서 \(f\!\left(\frac{dx}{dt}\right)=\mathrm{const.}\)이므로 매개변수 \((t-t_0)\)는 \glqq{}극값곡선의 길이\grqq{}에 비례한다. 그러면 \((t-t_0)\)의 거듭제곱으로 전개하여 (10)에 따라 다음을 얻는다.
+\srcnumdisplay{(12)}{%
+x_i-(x_i)_0=u_i+\frac12\varphi_2^{(i)}(u)+\cdots+
+\frac{1}{\rho!}\varphi_\rho^{(i)}(u)+\cdots .
+}
+이 전개는 변수변환 \(x_i=x_i(u)\)로 볼 수 있으며, 이때 \(u\)가 바로 리만 정규좌표이다. 따라서 이 좌표는 (11)과 (12)에 따라 \((x)_0\)를 지나는 극값곡선들을 직선으로 바꾼다. 또 임의의 변수변환 \(x=x(y)\)에는 (11)에 따라 대응하는 정규좌표들의 선형변환 \(u=u(v)\)가 대응한다. 그 계수들은 임의로 택한 값의 계 \((x)_0\)에만 의존하므로, 미분 \(du,\delta u\)도 \(u\) 자체와 같은 변환을 따른다.
+
+(12)에 따라 \(f(x,dx)\)가 \(F(u,du)\)로 옮겨 간다고 하자. 이를 \(u\)의 거듭제곱으로 전개하면
+\srcnumdisplay{(13)}{%
+F(u,du)=F_0(u,du)+F_1(u,du)+\cdots+F_\rho(u,du)+\cdots ,
+}
+여기서 \(F_\rho(u,du)\)는 \(u\)에 관한 \(\rho\)차 동차형식이다. 변환 \(u=u(v)\)가 선형이므로 \(F(u,du)=G(v,dv)\)이면 각 동차 성분도 서로 대응한다.
+\srcnumdisplay{(14)}{%
+F_\rho(u,du)=G_\rho(v,dv).
+}
+따라서 \((x)_0\)를 임의의 고정된 상수 값의 계로 택하면, (13)과 (14)는 \(f(dx)\)와 \(g(dy)\)의 동치성이 대응하는 함수계 \(F_\rho(u,du)\)들의 선형변환에 관한 동치성과 같은 뜻임을 보여 준다. 더 나아가 \(F_\rho(u,du)\), 또는 대응하는 \(F_\rho(\delta u,du)\)는 점 \(x=(x)_0\)에서 취한 \(f(dx)\)의 불변식이며, 이 점에 대한 기본함수의 완전계를 이룬다. 실제로
+\[
+F_\rho(\delta u,du)=\frac1{\rho!}\sum
+\frac{\partial F_\rho}{\partial \delta u^\rho}\,\delta u^\rho;
+\qquad
+\frac{\partial F_\rho}{\partial \delta u^\rho}
+=\left(\frac{\partial F(du)}{\partial u^\rho}\right)_0
+\]
+이고, 이 마지막 도함수는 (12)를 이용하여 점 \(x=(x)_0\)에서 취한 \(f(dx)\)의 도함수들로 나타낼 수 있다. 대응하게 만든 \(G(dv)\)의 도함수도 \(g(dy)\)의 도함수들로 나타낼 수 있다. 또한
+\[
+\left(\frac{\partial^{\rho+\sigma}F(du)}
+{\partial u^\rho\partial du^\sigma}\right)_0
+=
+\frac{\partial^{\rho+\sigma}F_\rho(\delta u,du)}
+{\partial\delta u^\rho\partial du^\sigma}
+\]
+이므로, 점 \(x=(x)_0\)에서 취한 \(f(dx)=F(du)\)의 모든 불변식은 고차 미분들을 \(dx,\delta x\)와 동변인 \(p,q,r,\ldots\)로 바꾸기만 하면 \(F_\rho(\delta u,du)\)들의 사영불변식이 된다.
+
+이제 \((x)_0\)를 매개변수로 볼 수 있다. 점 \(x=(x)_0\)에서의 각 불변식에는 \((x)_0\)를 다시 \(x\)로 바꾸어 얻는 \(f(dx)\)의 불변식이 대응한다. 따라서 \(F_\rho(\delta u,du)\)들이 점 \(x=(x)_0\)에서 취한 불변식 \(\Psi_\rho(\delta x,dx)\)가 된다면 --- 이 점에서 \(du,\delta u\)는 \(dx,\delta x\)로 옮겨 간다 --- \(\Psi_\rho\) 자체가 한 완전계의 기본함수들을 이룬다. 이제 이 기본함수계를 \(f(dx)\)의 명시적인 불변식들, 곧 함수 (8)로 표현해야 한다. 미분과정에 의한 생성법은 이것이 가능함을 보여 준다. 최고차항에 대해서는 이 과정들이 단순한 극화과정이 되며, Clebsch--Gordan의 급수전개와 비슷한 변형에 생략한 항들에 관한 귀납을 결합하면 명제가 증명된다. 연립계의 불변식을 다루는 경우에는, \(f(dx)\)에 딸린 정규좌표를 다른 미분식들에 도입해 보면 알 수 있듯이 기본함수 (8)에 그 다른 미분식들의 공변미분도 덧붙여야 한다.
+
+\(f(dx)\)와 \(g(dy)\)의 동치성은 (14)의 동치성으로 환원되었으므로, 이제 \(\Psi_\rho\)들의 동치성, 또는 함수 (8)의 미분에 대한 선형변환 아래의 동치성과도 같은 뜻이 된다. (14)로 환원할 수 있다는 사실에서 알 수 있듯이 이때 별도의 적분가능조건은 필요하지 않다. 이로써 환원정리의 모든 부분이 증명되었다. 특히 함수열
+\[
+[\Omega_2],[\Omega_3],\ldots,[\Omega_\rho],\ldots
+\]
+이 항등적으로 사라지는 것은 \(f(dx)\)를 상수계수를 가진 식으로 변환할 수 있기 위한 필요충분조건이다.
+
+마지막으로 모든 해석적 변환의 군 대신 한 부분군을 바탕에 두면, 대응하는 \(u\)의 선형변환군도 사영군의 한 부분군으로 바뀐다. \(f(dx)\)의 불변식들은 다시 함수 (8)의 선형변환에 대한 불변식이 되지만, 이제는 이 부분군에 대한 불변식이다. 따라서 동차화하면 비동차 함수 \(f(dx)\)의 경우를 아핀군으로 환원할 수 있고, 그 완전계는 변수를 하나 더 두고 만든 함수 (8)에서 이끌어 낼 수 있다.
+
+이차형식, 더 일반적으로 \(p\)차 형식의 특수 경우는 다음과 같이 환원정리에서 얻어진다. 이 경우 함수계는 \([\Omega_2]\), 더 일반적으로는 \([\Omega_p]\)와 그 공변미분들에서 끝나며, 그 뒤의 모든 기본함수는 이들의 사영불변식이 된다. 이로써 이차형식에서 리만 곡률형식 \([\Omega_2]\)가 갖는 특별한 위치가 설명된다. 이차형식, 또는 \(p\)차 형식의 동치성 문제는 \([\Omega_2]\), 또는 \([\Omega_2],\ldots,[\Omega_p]\)와 그 공변미분들의 선형변환 아래의 동치성으로 환원된다. 또 \([\Omega_2]\), 또는 \([\Omega_2],\ldots,[\Omega_p]\)가 항등적으로 사라지는 것은 상수계수를 가진 형식으로 변환하기 위한 필요충분조건이다. 이차형식에 대해서는 이 명제가 가장 잘 알려진 결과들 가운데 하나이다.
+
+더 자세한 서술은 곧 Math. Annalen에 출판할 예정이다.

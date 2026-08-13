@@ -1,0 +1,129 @@
+% Korean Noether paper 23 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 13534--13657.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 22,689 bytes; SHA-256 C62813E6BAD5EE45D81206826401DBB8D6DB2EED50BD78619D41AA2D67B5EFAC.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{23. 대수불변식과 미분불변식}
+\begin{center}
+Jahresber. d. Deutschen Mathematiker-Vereinigung 32 (1923), 177--184쪽
+\end{center}
+
+\begin{center}
+{\Large\bfseries 대수불변식과 미분불변식.}\par
+\vspace{0.45em}
+1922년 9월 18일 라이프치히 강연에 따른 보고.\par
+\vspace{1.0em}
+괴팅겐의 \textsc{에미 뇌터}.
+\end{center}
+
+\begingroup
+\renewcommand{\thefootnote}{\arabic{footnote})}
+\setcounter{footnote}{0}
+\newcommand{\PXXIIIitem}[2]{\par\noindent\hangindent=2.2em\hangafter=1\makebox[2.2em][l]{#1.}#2\par}
+
+대수불변식과 미분불변식의 발전을 보고하면서, 두 분야 모두에서 힐베르트의 표현에 따르면 소박한 시기와 형식적 시기 뒤에 오는 비판적 시기에 논의를 한정하고자 한다. 이 비판적 시기는 대수불변식의 경우 힐베르트 자신의 이름으로, 미분불변식의 경우 리만의 이름으로 특징지어진다. 내용을 기준으로 말하면, 전자에서는 이러한 문제를 다루는 과정에서 본질적으로 발달하고 여기서 그 온전한 위력을 드러낼 수 있었던 대수학의 산술적 방법이, 후자에서는 형식적 변분법의 방법이 그 특징이다. 따라서 나는 특수한 대상 자체를 넘어서는 의의를 가진 산술적 방법을 보고하고, 둘째 부분에서는 변분법의 방법을 따라 이루어지는 미분불변식론의 대수불변식론으로의 환원만을 다루겠다.
+
+\textbf{1.} 잘 알려져 있듯이 \emph{대수불변식}의 바탕에는 $x_1,\ldots,x_n$의 \emph{일반선형군}
+\srcnumdisplay{(1)}{x_i=\sum_k s_{ik}x'_k
+\qquad\text{또는 간단히}\qquad x=S(x')}
+이 있다. 여기서 $s_{ik}$는 부정원이고, 따라서 $\D=|s_{ik}|$는 영이 아니다. 이제 $f(a,x),g(b,x),\ldots$가 $x$에 관한 차수 $\alpha,\beta,\ldots$의 형식이고 그 계수가 부정원 $a,b,\ldots$라면, (1)에 따라 $a,b,\ldots$의 \emph{유도변환}이 생긴다. 실제로
+\[
+\begin{aligned}
+f(a,x)&=\sum a_{i_1\ldots i_n}x_1^{i_1}\cdots x_n^{i_n}
+      =\sum{}' a'_{j_1\ldots j_n}{x'_1}^{j_1}\cdots {x'_n}^{j_n}
+      =f(a',x'),\\
+g(b,x)&=\sum b_{r_1\ldots r_n}x_1^{r_1}\cdots x_n^{r_n}
+      =\sum{}' b'_{s_1\ldots s_n}{x'_1}^{s_1}\cdots {x'_n}^{s_n}
+      =g(b',x')
+\end{aligned}
+\]
+에서 $a',b',\ldots$가 $a,b,\ldots$의 선형 동차함수가 되고, 그 계수들은 $s_{ik}$에 관하여 각각 차수 $\alpha,\beta,\ldots$임을 알 수 있다.
+\srcnumdisplay{(2)}{a'=A_\alpha(a);\qquad b'=B_\beta(b),\ldots .}
+이제 \emph{불변식}이란 변환 (1)과 (2)에 대한 불변식을 말한다. 즉 $a,b,\ldots,x,y,\ldots$의 부정원에 관한 다항함수 --- 여기서 $y=S(y')$이기도 하다 --- 로서, 변환을 적용하면 치환행렬식의 한 거듭제곱이라는 인자만큼 달라진 채 다시 자신을 주는 것이다.
+\srcnumdisplay{(3)}{I(a',b',\ldots,x',y',\ldots)
+=\D^\rho I(a,b,\ldots,x,y,\ldots).}
+임의의 수체 $P$에 계수를 둔 각 불변식은 유리수 계수 또는 정수 계수를 가진 유한개의 특수 불변식의 $P$-선형결합으로 나타낼 수 있으므로, $I$의 계수는 유리수, 나아가 정수라고 가정할 수 있다. 마찬가지로 각 불변식은 각 열에 관하여 따로 동차인 유한개의 특수 불변식의 합이므로, $I$가 각 열에 관하여 따로 동차라고 가정해도 제한이 없다.
+
+역으로 조건 (3)을 요구하면 (1)과 (2)도 다시 결정된다는 점을 지적해 두자. 최근 Ostrowski와 Schur가 보였듯이,\footnote{A. \textsc{Ostrowski}와 I. \textsc{Schur}, Über eine fundamentale Eigenschaft der Invarianten einer binären Form, Math. Zeitschr. 15 (1922), 및 이에 이어지는 Ostrowski의 미출판 연구.} 유도변환은 각 열마다 따로 작용하는 선형변환들 가운데, 명시할 수 있는 몇 가지 예외를 제외하면 $x,y,\ldots$를 포함하지 않는 임의의 불변식 $I$를 허용하는 변환들의 전체로도 특징지을 수 있다.
+
+두 불변식의 곱은 다시 불변식이지만, 합은 가중치, 곧 (3)의 지수 $\rho$가 일치할 때 그리고 그때에만 불변식이다. 그러나 행렬식이 1인 변환들로 제한하면 임의의 합도 다시 불변식이며, 이렇게 제한된 군에 대한 모든 불변식을 빠짐없이 얻는다. 따라서 하나의 정역, 더 정확히는 \emph{동차 정역}을 얻는다. 여기서 동차 정역이란 어떤 다항식이 영역에 속하면 그 동차 성분들도 각각 그 영역에 속하는 영역을 말한다. 이 경우에는 다시 (3)의 각 열에 관하여 따로 동차인 불변식들로 귀착된다.
+
+여기서 불변식론과 산술대수학 전체가 발전하는 계기가 된 근본 문제가 생긴다. \emph{이 정역은 유한한가? 즉 모든 불변식을 $I_1,\ldots,I_k$의 다항식으로 나타낼 수 있게 하는 유한 정수성 기저 $I_1,\ldots,I_k$를 가지는가,
+$I=G(I_1,\ldots,I_k)$?} 힐베르트의 해법은 정수성 기저의 문제를 아이디얼 기저의 문제로 환원한다. Gordan의 이원형식에 대한 증명은 조망하기 어려운 기호계산 때문에 확장할 수 없고, Mertens--Hilbert의 증명은 이원형식을 선형형식들로 분해하는 것을 사용하기 때문에 확장할 수 없다. 여기서는 산술적 기본사상을 강조하면서 힐베르트의 논법을 간단히 개괄한 뒤, 그와 이어지는 세 문제군, 곧 유한 단계에 의한 기저의 실제 구성, 부분군에서의 유한성 문제, 정수성을 고려한 유한성 문제를 다루겠다.
+
+\textbf{2.} (유한) 대수적 수체에서의 \emph{아이디얼 정의}를 상기하자. 그 체의 수들로 이루어진 계 $\ma$가 아이디얼이라는 것은 다음을 뜻한다.
+\PXXIIIitem{1}{$\ma$는 그 체의 모든 대수적 정수의 영역 $\mo$에 포함된다.}
+\PXXIIIitem{2}{$\alpha$와 $\beta$가 $\ma$에 속하면 그 차 $\alpha-\beta$도 $\ma$에 속한다.}
+\PXXIIIitem{3}{$\alpha$가 $\ma$에 속하고 $\lambda$가 $\mo$의 임의의 원소이면 $\lambda\alpha$도 $\ma$에 속한다.}
+그리고 모든 아이디얼은 \emph{아이디얼 기저}를 가져 $\ma=(\alpha_1,\ldots,\alpha_k)$가 된다는 정리가 알려져 있다. 즉 $\ma$에는 유한개의 원소 $\alpha_1,\ldots,\alpha_k$가 있어서, 조건 2와 3으로 이 원소들에서 $\ma$를 이끌어 낼 수 있다. 다시 말해
+$\alpha=\lambda_1\alpha_1+\cdots+\lambda_k\alpha_k$가 $\ma$의 모든 원소를 빠짐없이 나타낸다.\footnote{$k$를 2까지 줄일 수 있다는 사실은 이하의 논의와 무관하다.}
+
+이 아이디얼 정의는 $\mo$가 정역이라는 사실에만 의존한다. 따라서 $\mo$를 임의의 정역으로 바꾸어도 아이디얼의 개념과 아이디얼 기저의 개념은 글자 그대로 유지된다.
+
+이제 힐베르트의 유한성 증명은 다음 세 정리로 나뉜다.
+\PXXIIIitem{1}{유리성 영역에 계수를 둔 $n$개 부정원의 모든 다항식의 영역에서는 모든 아이디얼에 대하여 아이디얼 기저 정리가 성립하며, 따라서 임의의 계 $\mS$에 대해서도 성립한다.}
+\PXXIIIitem{2}{다항식들로 이루어진 동차 정역 $\mJ$가 유한한 것은 $\mJ$에서 아이디얼 기저 정리가 성립할 때 그리고 그때뿐이다.}
+\PXXIIIitem{3}{불변식 영역 $\mJ$에서는 아이디얼 기저 정리가 다음의 강화된 형태로 성립한다. 모든 다항식의 영역에 관하여 만든 아이디얼 기저는 동시에 $\mJ$ 안에서도 아이디얼 기저이다. 즉}
+\[
+ I=A_1I_1+\cdots+A_kI_k
+ \qquad\text{이면 언제나}\qquad
+ I=i_1I_1+\cdots+i_kI_k
+\]
+이다. 여기서 $A$들은 $a,b,\ldots,x,y,\ldots$의 다항식이고, $i$들은 불변식이다.
+
+정리 1의 증명은 원리상 대수적 수체의 경우와 같은 추론에 바탕을 둔다. 두 경우 모두 아이디얼 기저의 존재는 선형형식들의 모듈에 관한 한 일반정리의 직접적인 귀결이다.\footnote{이에 관해서는 대수함수의 산술이론에 관한 나의 비교 보고, Jahresber. 28 (1920), 187쪽 및 188쪽 주 2)를 참조하라.} 정리 1에서 다항식들로 이루어진 모든 유한 정역에 아이디얼 기저가 존재함이 직접 따라오며, 동차 영역에서는 그 역도 성립함을 쉽게 알 수 있다. 정리 3에서만 불변식의 특수한 성질이 사용된다. 힐베르트에게서 정리 3은 $\Omega$-과정에 관한 알려진 정리의 귀결로 얻어진다. 최근 E. Fischer는 다른 일반정리들을 바탕으로 하면, 각 변환과 더불어 그 반변변환 또는 복소켤레변환도 포함한다는 일반선형군의 성질만으로 정리 3을 이끌어 낼 수 있음을 보였다.\footnote{E. \textsc{Fischer}, Über die Endlichkeit der Invarianten, Göttinger Nachrichten 1915 및 라이프치히 강연.}
+
+\textbf{3.} \emph{기저의 실제 구성}은 \emph{함수체} 이론을 도입하여 유한성의 개념을 한 번 더 산술적으로 바꾸어 쓰는 데 바탕을 둔다. 다음이 성립한다.
+\PXXIIIitem{4}{다항식들로 이루어진 정역 $\mJ$가 유한한 것은 $\mJ$ 안에 유한 부분정역 $\mJ'$가 있어서 $\mJ$가 $\mJ'$에 대하여 대수적으로 정수일 때 그리고 그때뿐이다. 이 경우 $\mJ'$의 임의의 정수성 기저에 이 대수적 정수 원소들의 한 기본계를 덧붙이면 $\mJ$의 기저를 얻는다.\footnote{Hilbert는 Über die vollen Invariantensysteme, Math. Annalen 42 (1893), § 1과 § 2에서 가정한 유한성으로부터 이 사실들이 따름을 보였다. 역으로 대수적 정수 종속성에서 유한성이 따르는 것은 유리기저의 존재에서 나온다(E. Noether, Körper und Systeme rationaler Funktionen, Math. Annalen 76 (1915), § 12).}}
+특히 불변식의 경우처럼 아이디얼 기저 정리가 강화된 형태 3으로 성립하는 동차 영역 $\mJ$를 생각하자. 그러면 그러한 영역 $\mJ'$는 다음 성질을 가진, 언제나 존재하는 어떤 유한개의 다항식 $I_1,\ldots,I_s$에서 정수성 기저를 취하여 만들어 낼 수 있다. 이 다항식들이 모두 영이면 $\mJ$의 모든 다항식도 영이다. 이 사실은 다시 아이디얼론의 한 일반정리에 바탕을 둔다.
+\PXXIIIitem{5}{다항식 아이디얼 $\ma$마다 정수 $r$이 존재하여, $\ma$의 모든 영점에서 영이 되는 각 아이디얼 $\mb$에 대하여 $\mb^r$은 $\ma$로 나누어진다.}
+
+불변식의 경우에는 $I_1,\ldots,I_s$의 \emph{차수에 대한 상계}, 따라서 그 개수 $s$에 대한 상계도 정할 수 있으며, 이 상계는 바탕에 놓인 기본형식들의 차수에만 의존한다. 이 대목에서는 불변식의 특수한 성질이 다시 사용된다. 수치적으로 특수화한 기본형식계가 영이 아닌 불변식을 갖는 것은 $\D=|s_{ik}|$가 변환된 계수들에 대하여 대수적으로 정수일 때 그리고 그때뿐이라는 정리가 그것이다.
+
+K. Hentzelt는\footnote{나는 곧 이 유고를 출판할 예정이다.} 이 상계에서 \emph{정수성 기저에 속하는 불변식들의 차수에 대한 상계}를 정했다. 이 상계도 기본형식들의 차수에만 의존한다. 그는 정리 5의 \emph{지수} $r$에 대하여, $\ma$의 한 아이디얼 기저에 속하는 다항식들의 개수와 최대차수에만 의존하고 그 계수들과는 무관하며 주어진 수들에서 유한 단계로 계산할 수 있는 \emph{상계}를 제시함으로써 이를 해냈다. 원리상 이로써 제기한 문제는 완전히 해결된다. 다만 그 상계는 상당히 크다. 예를 들어 삼원 이차형식에서는 판별식, 곧 3차 불변식 하나만으로도 $x$를 포함하지 않는 모든 불변식의 기저가 되지만, Hilbert와 Hentzelt의 방법으로는 상계가 수백만까지 올라간다.
+
+\textbf{4.} 일반선형군의 \emph{부분군}에 대한 불변식의 유한성 문제에서는 아직 부분적인 결과만 얻었다. 그 방법은 거의 전적으로 Study가 직교군에 대하여 사용한 절차, 곧 부분군의 불변식을 일반선형군의 연립불변식으로 환원하는 데 바탕을 둔다. Weitzenböck은 운동불변식과 아핀불변식에 대하여, Deruyts는 반불변식과 평행이동불변식에 대하여 이를 수행하였다.\footnote{문헌은 불변식론에 관한 Weitzenböck의 백과사전 논문 III E 1을 참조하라.} 이 방법이 어디까지 미치는지는 아직 결정되지 않았다. 2절 끝에서 언급한 Fischer의 관찰도 여러 부분군의 유한성 문제를 해결하며, 특히 직교군에 대한 가장 간단한 증명을 준다. 그러나 반불변식의 예는 부분군에서는 유한성이 성립하더라도 아이디얼 기저에 관한 강화된 명제 3이 성립하지 않을 수 있음을 보여 준다. Fischer는 최근 이 점을 지적하였다.\footnote{라이프치히 강연 및 Math. Zeitschrift.}
+
+여기서의 유한성 문제를 체론의 관점에서 정식화하면, 힐베르트가 제기한 \emph{상대적으로 정수인 함수}의 문제에 이른다. 즉 유리함수체에 속하는 모든 다항식으로 이루어진 정역은 언제나 유한한가라는 물음이다. 이 방향의 한 결과로, 유한군의 불변식에 대해서는 초등적으로 증명할 수 있는 특별한 정수성 기저를 직접 제시할 수 있다. 그것은 갈루아 레졸벤트의 계수계이다.\footnote{E. Noether, Der Endlichkeitssatz der Invarianten endlicher Gruppen, Math. Ann. 77 (1916).}
+
+\textbf{5.} 불변식의 유한성 정리를 \emph{정수성}에 관하여 강화할 수 있는가라는 문제도 일반적으로는 아직 해결되지 않았다. 힐베르트가 보였듯이 모든 정수 계수 다항식의 영역에서도 아이디얼 기저 정리는 성립하고, 아이디얼 기저와 정수성 기저 사이의 연관 2도 그대로 유지된다.\footnote{특히 이 연관에서, 내가 Math. Ann. 83 (1921)에서 전개한 일반 아이디얼론의 분해정리가 모든 유한 정역에 대하여 성립함이 따른다.} 그러나 필수적이지는 않은 강화된 형태 3에 대한 증명은 실패한다. \emph{이원 불변식}의 경우에는 \emph{정수 계수 유한성}을 증명할 수 있다.\footnote{E. Noether, Die Endlichkeit des Systems der ganzzahligen Invarianten binärer Formen, Göttinger Nachrichten 1919.} 이 증명은 이원형식에 대한 Mertens--Hilbert 유한성 증명을 정수성에 관하여 강화한 것으로, 정수 계수 아이디얼 기저 정리뿐 아니라 이원형식을 선형형식들로 분해하는 것도 사용한다. 따라서 더 많은 부정원으로 옮길 수는 없다. 반면 비슷한 토대 위에서 \emph{유한군의 불변식}에 대한 \emph{정수 계수 유한성}을 위에서 언급한 증명의 강화로 얻을 수 있다. 다만 여기서도 기저를 실제로 제시하지는 못하고 존재만을 증명한다.\footnote{주 11)에 인용한 논문의 § 4.} 이 문제에서도 함수체 이론과 일반 아이디얼론을 한층 더 발전시켜야만 목표에 이를 수 있을 것이다.
+
+\textbf{6.} 이제 \emph{미분불변식}과, 서론에서 제기한 그것을 대수불변식론으로 환원하는 문제로 넘어가겠다. 여기서 바탕이 되는 군은 잘 알려져 있듯이 $x_i=x_i(y)$에 따라 다음과 같이 정의된다.
+\srcnumdisplay{(4)}{d x_i=\sum_k \frac{\partial x_i}{\partial y_k}d y_k;\qquad
+ d\delta x_i=\sum_k \frac{\partial x_i}{\partial y_k}d\delta y_k+
+\sum_{k,l}\frac{\partial^2 x_i}{\partial y_k\partial y_l}d y_k\,\delta y_l;\ \ldots .}
+(4)가 유도하는 변환으로 넘어가기 위해 임의의 함수 $f(x,d x)=g(y,d y)$를 바탕으로 삼을 수 있다. $\delta f,\delta^2f,\ldots$가 (4)에 대하여 불변이라고 요구하면, $f$를 $x$와 $d x$로 미분한 도함수들의 변환을 얻는다. 이를테면 $d x$에 관한 동차형식으로 제한하면
+\[
+ f(x,d x)=\sum a_{i_1\ldots i_n}(x)d x_1^{i_1}\cdots d x_n^{i_n}
+ =\sum{}' a'_{j_1\ldots j_n}(y)d y_1^{j_1}\cdots d y_n^{j_n}
+ =g(y,d y)
+\]
+이고, $a'$는 $a$에 관하여 선형이며, $\frac{\partial a'}{\partial y}$는 $a$와 $\frac{\partial a}{\partial x}$에 관하여 선형이고, 그 뒤도 마찬가지이다.
+\srcnumdisplay{(5)}{a'=A_0(a),\qquad
+\frac{\partial a'}{\partial y}=A_1\!\left(a,\frac{\partial a}{\partial x}\right),\qquad
+\frac{\partial^2 a'}{\partial y^2}=A_2\!\left(a,\frac{\partial a}{\partial x},\frac{\partial^2 a}{\partial x^2}\right),\ldots}
+따라서 문제는 변환 (4)와 (5)에 대한 불변성이다. 이때 나타나는 모든 양
+\[
+a,\ \frac{\partial a}{\partial x},\ldots,\ d x,\ \delta x,\ d\delta x,\ldots;\ 
+\frac{\partial x}{\partial y},\ \frac{\partial^2 x}{\partial y^2},\ldots
+\]
+은 부정원으로 보아야 하므로 각 변환의 행렬식은 분명 영이 아니다. 형식적으로 완성된 이론을 특수한 함수에 적용할 때에야 비로소, 어떤 영역에서 변환이 유일하게 역변환될 수 있고 충분한 수의 미분몫이 존재하는 함수들로 제한해야 하는가라는 문제가 생긴다. 이는 대수적 경우 수치적 특수화에서 행렬식 $|s_{ik}|$가 영이 아니라고 가정해야 하는 것과 완전히 같다.
+
+나타나는 모든 인수를 부정원으로 보는 이 관점에서 문제의 군은 보통의 대수적 방법으로 직접 다룰 수 없는 특수한 선형군이다. 이 군에서 $d x$의 변환과 $a'=A_0(a)$의 변환은 각각 (1)과 유도변환 (2)에 일치한다. 여기서 \emph{새 인수들을 도입}하여 변환 (4)와 (5)를 일반선형군 (1)과 그것이 \emph{유도하는 변환} (2)으로 일반적으로 \emph{환원}할 수 있는가라는 문제가 생긴다.
+
+실제로 그렇게 할 수 있다. 고차 미분 $d^2x,\delta d x,\ldots$는 $f(x,d x)$에 딸린 변분문제에서 생기는 라그랑주 도함수들과, 그것들을 다시 극화하여 얻는 결합들(Weyl과 Schouten의 용어로 접속)로 바꾸어야 한다. 이들은 모두 $d x$에 동변이므로 그 변환은 일반선형군 (1)로 주어진다. 한편 $\frac{\partial a}{\partial x},\frac{\partial^2a}{\partial x^2},\ldots$ 또는 더 일반적으로 동차라고 가정한 $f$를 $x$와 $d x$로 미분한 도함수들은 다음 형식들의 계수로 바꾸어야 한다. 즉 ``고차 변분의 정규형''에서 위에 제시한 방법으로 $d^2x,\delta d x,\ldots$를 소거하여 생기는 어떤 형식들과 그 ``공변미분''
+\[
+ [\Omega_i],\quad [\Omega_i^{(1)}],\quad [\Omega_i^{(2)}],\ldots\qquad (i=1,2,\ldots)
+\]
+의 계수들이다. $[\Omega_i^{(k)}]$는 (4)와 (5)에 대한 불변식이며 $d x$와 $\delta x$에만 의존하므로, 이 계수들은 대수적으로 유도된 변환 (2)을 따른다.\footnote{E. Noether, Invarianten beliebiger Differentialausdrücke, Göttinger Nachrichten 1918.} 이 \emph{환원정리}에 따라 미분불변식론은 대수불변식론에 종속된다.
+
+$f(x,d x)$가 $d x$에 관한 $\alpha$차 동차형식이면 $[\Omega_i]$의 열은 $[\Omega_\alpha]$에서 끝난다. 이차형식의 경우 $[\Omega_2]$는 리만의 곡률형식과 같아지며, 여기서 제시한 구성과정은 리만이 라틴어 현상논문에서 제시한 바로 그 과정이다. 리만의 교수자격취득 강연에 이어 Lipschitz도 이와 독립적으로 같은 과정을 전개하였다.\footnote{주 7)에 언급한 Weitzenböck의 백과사전 논문 제2부 28번에 실린 Riemann과 Lipschitz에 관한 나의 설명도 참조하라.} Christoffel과 Ricci가 이차 미분형식에 대하여 계산으로 증명한 환원정리는 한 점에서 나가는 극값곡선들을 직선으로 바꾸는 ``리만 정규좌표''의 도입에 바탕을 둔다. 이 좌표에서는 $x$의 임의의 변환에 정규좌표의 선형변환이 대응하므로, 일반선형군으로 넘어갈 수 있다.
+
+Weyl과 Schouten의 절차처럼 군을 정의할 때 변분문제 대신 하나의 \emph{접속만을 바탕으로 삼는} 경우에도 그러한 환원정리가 성립하는가라는 문제가 생긴다. 즉 라그랑주 도함수에 대응하여 고차 미분을 소거하는 식 $\psi_i(d\delta x,d x,\delta x)$를 세우고, 이차 미분형식과 비슷하게 그 자체로는 불필요한 조건, 곧 $\psi_i$가 $d x$에 관하여 선형이어야 한다는 조건을 덧붙이는 경우이다. 임의의 동차 $f(x,d x)$에서는 극화된 라그랑주 도함수가 $d x$에 관하여 일차 동차일 뿐이다. $\psi$가 $d x$에 동변이어야 한다고 요구하면 그 계수들의 변환이 유도되고, 따라서 (5)와 비슷하게 군이 정해진다. Weitzenböck은 Weyl의 경우 가장 낮은 차수의 불변식들에 대하여 환원정리를 계산으로 확인했지만, 일반적인 접근법은 아직 없다.\footnote{이에 관해서는 Weyl, Raum, Zeit, Materie; Schouten, Math. Zeitschr. 13 (1922); Weitzenböck, Sitzungsber. d. Wiener Akademie, 1920 및 1921을 참조하라.}
+
+\begin{center}
+(1922년 10월 26일 접수.)
+\end{center}
+\endgroup

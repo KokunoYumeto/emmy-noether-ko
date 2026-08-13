@@ -1,0 +1,272 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathrsfs,mathtools,array,booktabs,pdflscape,adjustbox,diagbox}
+\setmainfont{Malgun Gothic}[
+  ItalicFont={Malgun Gothic},
+  ItalicFeatures={FakeSlant=0.2},
+  BoldItalicFont={Malgun Gothic Bold},
+  BoldItalicFeatures={FakeSlant=0.2}
+]
+\setsansfont{Malgun Gothic}
+\newfontfamily\latinfont{Times New Roman}
+\XeTeXlinebreaklocale "ko"
+\XeTeXlinebreakskip=0pt plus 1pt
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+\providecommand{\srcspaced}[1]{\textbf{#1}}
+\providecommand{\srcfn}[2]{\begingroup\renewcommand{\thefootnote}{#1}\footnote{#2}\addtocounter{footnote}{-1}\endgroup}
+\providecommand{\srcfnmark}[1]{\begingroup\renewcommand{\thefootnote}{#1}\footnotemark\addtocounter{footnote}{-1}\endgroup}
+\providecommand{\srcfntext}[2]{\begingroup\renewcommand{\thefootnote}{#1}\footnotetext{#2}\endgroup}
+\providecommand{\srcnumdisplay}[3][3.4em]{\par\smallskip\noindent\begin{minipage}[t]{#1}\vspace*{0pt}#2\end{minipage}\begin{minipage}[t]{\dimexpr\linewidth-#1\relax}\vspace*{0pt}\centering\(\displaystyle #3\)\end{minipage}\par\smallskip}
+\providecommand{\srcdisplay}[2]{\par\smallskip\noindent\makebox[3.2em][l]{#1}\makebox[\dimexpr\linewidth-3.2em\relax][c]{$\displaystyle #2$}\par\smallskip}
+\providecommand{\NoetherSrcNote}[2]{\textsuperscript{#1}\begingroup\renewcommand{\thefootnote}{}\footnotetext{\textsuperscript{#1}~#2}\endgroup}
+\providecommand{\pair}[2]{(#1\,|\,#2)}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\Hgrp}{\mathfrak H}
+\providecommand{\Gg}{\mathfrak G}
+\providecommand{\Hh}{\mathfrak H}
+\providecommand{\oo}{\mathfrak o}
+\providecommand{\Sp}{\operatorname{Sp}}
+\providecommand{\glqq}{“}
+\providecommand{\grqq}{”}
+\providecommand{\mat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\providecommand{\mA}{\mathfrak A}
+\providecommand{\mB}{\mathfrak B}
+\providecommand{\mK}{\mathfrak K}
+\providecommand{\mL}{\mathfrak L}
+\providecommand{\mR}{\mathfrak R}
+\providecommand{\mS}{\mathfrak S}
+\providecommand{\mT}{\mathfrak T}
+\providecommand{\ma}{\mathfrak a}
+\providecommand{\mb}{\mathfrak b}
+\providecommand{\mo}{\mathfrak o}
+\providecommand{\mJ}{\mathfrak J}
+\providecommand{\D}{\Delta}
+\providecommand{\A}{\Delta}
+\providecommand{\R}{\varrho}
+\providecommand{\mcell}[1]{\ensuremath{\begin{gathered}#1\end{gathered}}}
+\providecommand{\bdelta}{\bar{\delta}}
+\providecommand{\frakO}{\mathfrak O}
+\providecommand{\frako}{\mathfrak o}
+\providecommand{\frakp}{\mathfrak p}
+\providecommand{\Afield}{\mathfrak A}
+\providecommand{\Bfield}{\mathfrak B}
+\providecommand{\Cfield}{\mathfrak C}
+\providecommand{\Jdom}{\mathfrak J}
+\providecommand{\Kfield}{\mathfrak K}
+\providecommand{\Lsys}{\mathfrak L}
+\providecommand{\Gdom}{\mathfrak G}
+\providecommand{\Ssys}{\mathfrak S}
+\providecommand{\Mfield}{\mathfrak M}
+\providecommand{\Rfield}{\mathfrak R}
+\providecommand{\Xreal}{\mathfrak X}
+\providecommand{\Yreal}{\mathfrak Y}
+\providecommand{\rcdots}{\,\cdots\,}
+\providecommand{\qtext}[1]{\glqq #1\grqq{}}
+\providecommand{\p}{\partial}
+\providecommand{\dd}{\mathop{}\!\mathrm{d}}
+\providecommand{\modu}[1]{\;\operatorname{mod} #1}
+\providecommand{\ideal}[1]{\mathfrak{#1}}
+\providecommand{\eqzero}[1]{\equiv 0\,(#1)}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 에미 뇌터 저작집 — 한국어 복원·번역본}\par
+\vspace{0.8em}
+{\large 현재 통합된 논문: 1--43}\par
+\vspace{0.25em}
+{\large 별도 통합 범위: POST-A (초복소량의 대수학), POST-B (카프페러 논문과 E. 뇌터 공동 부록)}\par
+\vspace{0.25em}
+{\large 판본 부록: 참고문헌, 단신, 서평 및 공동 편집서 목록}\par
+\vspace{0.5em}
+{\small 제작 원고. 독립 검토 및 인증 전 상태.}
+\end{center}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p01.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p02.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p03.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p04.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p05.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p06.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p07.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p08.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p09.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p10.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p11.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p12.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p13.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p14.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p15.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p16.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p17.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p18.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p19.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p20.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p21.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p22.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p23.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p24.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p25.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p26.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p27.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p28.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p29.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p30.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p31.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p32.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p33.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p34.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p35.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p36.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p37.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p38.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p39.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p40.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p41.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p42.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{p43.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{post_a.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{post_b.tex}
+
+\clearpage
+\setcounter{footnote}{0}
+\input{back.tex}
+
+\end{document}

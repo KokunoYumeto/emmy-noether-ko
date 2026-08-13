@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "release_date": "2026-08-13",
+  "source_replay": {
+    "state": "PASS",
+    "authority": "NOETH-DE-AUTH-v047-20260808 / NOETH-DE-ED-0011",
+    "coverage": "48 contiguous scopes cover logical lines 1-24146 exactly once",
+    "target_replay": "47/47 maintained TeX identities exact; 46 unique reader inputs plus p09_tail lineage target",
+    "publication_copy_comparison": "52/52 selected corpus/control files byte-identical to the completed working edition"
+  },
+  "translation_state": {
+    "state": "COMPLETE_FOR_ACTIVE_AUTHORITY",
+    "numbered_papers": 43,
+    "post_numbered_works_or_scopes": 2,
+    "terminal_bibliography_and_apparatus": true,
+    "known_untranslated_spans": 0,
+    "known_unresolved_korean_content_defects": 0,
+    "p32_u06_integrated": true,
+    "p32_sha256": "42ECB0405F18753032F8220AA7FE118FA805A176DF8232818391F489E4FD443E"
+  },
+  "checker_history": {
+    "independent_returns_preserved": true,
+    "principal_receipts": ["ko_r01", "ko_ed8", "ko_r2", "ko_r10", "ko_r11", "P32/U06 candidate and custody"],
+    "all_returned_korean_content_findings_incorporated": true,
+    "shared_tounicode_build_defect_resolved": true,
+    "independent_certification_claim": false
+  },
+  "deterministic_build": {
+    "state": "PASS",
+    "source_date_epoch": 1786579200,
+    "xelatex_passes": 4,
+    "passes_3_and_4_byte_identical": true,
+    "raw_pdf": {
+      "bytes": 2768190,
+      "sha256": "92C262E5496620FCF2A0D8FD2FCB0E59A831E6905EBED04AE5E5ABE69E261B20",
+      "pages": 519
+    },
+    "fixed_reader_pdf": {
+      "bytes": 3369539,
+      "sha256": "F9B52180AA09863594B173625016B4354FA2880C03DD169B0859BCDE6A314C76",
+      "pages": 519
+    },
+    "fonts": "38/38 embedded, subset, and ToUnicode-enabled",
+    "fatal_or_undefined_or_missing_character_or_rerun_signals": 0,
+    "disclosed_layout_warnings": "11 overfull and 2 underfull boxes; visual inspection found no clipping or unreadability"
+  },
+  "extraction": {
+    "state": "PASS",
+    "poppler_sha256": "5BED8DA11EC59F4A26792997734140CB911C3E8F6C93932C20FFDEB01C5F5027",
+    "pypdf_sha256": "DDDBA8058EF986C8891CD4416C5E57E8FA8859A9F3EFC910E7ACEA4B2506640E",
+    "disallowed_c0": 0,
+    "nul": 0,
+    "replacement_characters": 0
+  },
+  "rendered_inspection": {
+    "state": "PASS",
+    "pages_rendered": 519,
+    "contact_sheets": 21,
+    "contact_sheet_coverage": "pages 1-519 exactly once",
+    "high_resolution_pages_reopened": [1, 2, 3, 4, 518, 519],
+    "defects_found": 0
+  },
+  "navigation": {
+    "outline_entries": 47,
+    "link_annotations": 776,
+    "linked_contents_pages": 2
+  },
+  "calendar_sync_log": {
+    "state": "1/3 recorded against the active authority before this publication",
+    "release_dependency": false,
+    "note": "Preserved as maintenance provenance; it does not imply a known Korean content gap or block publication under the current methodology."
+  },
+  "unresolved_items": "evidence/UNRESOLVED_ITEMS.tsv",
+  "release_closed": true,
+  "human_review_required": false,
+  "sga": "held and untouched"
+}

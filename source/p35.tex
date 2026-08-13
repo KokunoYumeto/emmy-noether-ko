@@ -1,0 +1,280 @@
+% Korean Noether paper 35 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 18361--18624.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 34,091 bytes; SHA-256 DAED6EF21C297425F018C0AE6B23BC5BDD05C0B86984B3FC25FB5937DCBEBD6A.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{35. 정수적 함수로 이루어진 극대영역에 관하여}
+
+\begin{center}
+에미 뇌터 (괴팅겐)\par
+\emph{Rec. Soc. Math. Moscou 36 (1929), 65--72쪽}
+\end{center}
+
+다음 고찰은 상대적으로 정수인 함수에 관한 힐베르트의 문제와 밀접하게 맞닿아 있다\textsuperscript{1)}. 이 고찰은 E. 헤케가 우연히 던진 물음에서 나왔다. 그는 보조정리로 필요했던 한 특수한 경우를 직접 계산하여 해결할 수 있었다\textsuperscript{2)}.
+
+문제는 다음과 같다. 주어진 영역 \(\mathfrak Z\) 안에서 \(x_1,\ldots,x_n\)의 정수적 함수 --- 다항식, 거듭제곱급수 또는 그러한 것들의 몫 --- 로 이루어진 \emph{극대영역}이란 정수 분모를 첨가하여 더는 확대할 수 없는 영역을 뜻한다고 하자. 즉 \(g(x)\in\mathfrak Z\)이고 \(a\)가 0이 아닌 유리정수일 때, \(a\cdot g(x)\)가 영역에 속하면 언제나 \(g(x)\)도 영역에 속하는 것이다. \(\mathfrak Z\) 안의 각 정역 \(\mathfrak I\)은 하나의 극대영역 \(\mathfrak M(\mathfrak I)\)을 유일하게 생성한다. 이것은 적어도 하나의 \(a\ne0\)에 대하여 \(a\cdot g(x)\in\mathfrak I\)가 되는 \(\mathfrak Z\)의 모든 함수 \(g(x)\)로 이루어진다.
+
+원래 정역 \(\mathfrak I\)이 유한 생성된 경우, 곧 \(\mathfrak Z\)의 유한개 함수 \(f_1(x),\ldots,f_r(x)\)에 관한 모든 정수 계수 다항식으로 이루어진 경우에 이 극대영역 \(\mathfrak M(\mathfrak I)\)의 분모 \(a\)에 관하여 무엇을 말할 수 있는지를 묻는다. 여기서 \(\mathfrak Z\)로는 \(x_1,\ldots,x_n\)의 모든 정수 계수 다항식 또는 거듭제곱급수를 택하고, 몫을 다룰 때에는 \(f(x)\)들에 나타나는 분모와 그 거듭제곱 이외의 분모가 없는 것들만 택한다.
+
+거듭제곱급수나 그 몫을 다룰 때에는 \(f(x)\) 사이의 종속성이 오직 대수적이라는 부가가정 아래, \(a\)들을 언제나 다음과 같이 택할 수 있음을 보이겠다. 모든 \(a\)를 통틀어 서로 다른 소수는 유한개만 그 인수로 나타난다. 다만 이 소수들은 일반적으로 임의의 높은 거듭제곱으로 나타난다.
+
+마지막 사실은 즉시 분명하다. \(a\cdot g(x)\in\mathfrak I\)이지만 어떠한 지수 \(\varrho\)에 대해서도 \(a^{\varrho-1}g(x)^\varrho\)가 \(\mathfrak I\)에 속하지 않는다면 모든 거듭제곱 \(a^\varrho\)이 나타난다. 예를 들어 \(\mathfrak I=[2x]\)이면 \(x^\varrho=(2x)^\varrho/2^\varrho\)이다.
+
+유계성의 물음은 다음처럼만 정식화할 수 있다. 일반적으로 무한한 \(\mathfrak M(\mathfrak I)\)의 생성계를, 대응하는 분모에서 소수들의 지수가 유계가 되도록 제시할 수 있는가? 관련된 소수가 유한개이므로, 알려진 논법\textsuperscript{3)}에 따라 이 물음은 \(\mathfrak M(\mathfrak I)\)의 유한 생성성과 같다. 따라서 이는 정수적 형식으로 표현한 상대적으로 정수인 함수에 관한 힐베르트의 문제와 같다. 여기서 사용하는 방법으로는 이 문제를 결정할 수 없다\textsuperscript{4)}.
+
+분모 \(a\)에 서로 다른 소수 \(p\)가 유한개만 나타남을 보이는 증명은 다음 사실에 근거한다. 그러한 각 \(p\)에는 \(\mathfrak I\)을 생성하는 \(f(x)\)들 사이의 적어도 하나의 \(p\)를 법으로 하는 관계가 대응하며, 이 관계는 정수 계수로는 \(x\)에 관한 항등식이 아니다. 달리 말해, \(\mathfrak o\)가 부정원 \(u_1,\ldots,u_r\)의 정수 계수 다항식환이면 대응 \(u_i\mapsto f_i(x)\)에 따라 \(\mathfrak I\)은 \(\mathfrak o\)의 준동형상이다. 이 준동형은 \(\mathfrak o\)의 한 소아이디얼 \(\mathfrak a\)를 통하여 주어진다. 즉 \(\mathfrak I\)은 잉여류환 \(\mathfrak o/\mathfrak a\)와 동형이다. 이에 따라 \(\mathfrak I_p\)는 \(\mathfrak o_p\)의 준동형상이다. 아래첨자는 \(p\)를 법으로 하는 잉여류로 넘어감을 뜻하며, \(\mathfrak I\)의 분모에 나타나는 유한개의 소수를 제외하면 이 이행이 가능하다. 이 준동형은 다시 \(\mathfrak o_p\)의 한 소아이디얼 \(\mathfrak c_p\)를 통하여 주어지며, \(\mathfrak c_p\)는 \(\mathfrak a_p\)를 포함한다. \(p\)가 \(\mathfrak M(\mathfrak I)\)의 분모에 나타나는 것은 \(\mathfrak c_p\)가 \(\mathfrak a_p\)의 진상위아이디얼, 곧 아이디얼 의미의 진약수가 될 때 그리고 그때뿐이다. 이는 \(\mathfrak I_p\)의 초월 차수가 \(\mathfrak I\)의 초월 차수보다 낮아지거나 \(\mathfrak a_p\)가 소아이디얼의 성질을 잃을 때에만 일어날 수 있다\textsuperscript{5)}. 이런 일이 유한개의 \(p\)에 대해서만 일어난다는 사실은 다음 두 결과에서 따라온다. \(p\)를 법으로 해도 대수적 종속성은 함수행렬식의 소멸을 수반하며 (§ 1), 더 나아가 \(\mathfrak a\)는 절대소아이디얼이므로 유한개의 \(p\)를 법으로 할 때에만 소아이디얼의 성질을 잃는다\textsuperscript{6)}.
+
+유리정수 대신 한 유한 대수적 수체의 대수적 정수들을 놓고, 소수 대신 그 수체의 소아이디얼들을 놓아도 모든 고찰은 조금만 고치면 그대로 성립한다는 점도 덧붙인다(§ 4).
+
+\bigskip
+\paragraph{§ 1. 표수 \(p\)인 계수영역에서의 함수행렬식.}
+
+\textbf{1.}
+\(f_1(x_1,\ldots,x_n),\ldots,f_t(x_1,\ldots,x_n)\)을 표수 \(p\)인 체 \(P\)를 계수체로 하는 유리함수, 또는 더 일반적으로 형식적으로 정의된 거듭제곱급수나 그 몫이라 하자. 도함수 \(\partial f_i/\partial x_k\)도 형식적으로 정의되고 통상의 계산법칙이 모두 유지된다고 하자. \(\Omega\)는 \(P\)의 대수적으로 닫힌 확대체라 하자.
+
+그러면 표수 0에서와 마찬가지로 다음이 성립한다.
+
+\textbf{정리.}
+\emph{\(f(x)\)들 사이에 \(\Omega\)의 계수를 갖는 대수적 종속관계가 있으면, 함수행렬 \((\partial f_i/\partial x_k)\) \((i=1,\ldots,t;\ k=1,\ldots,n)\)의 랭크는 \(t\)보다 작다.}\textsuperscript{7)}
+
+\emph{증명.}
+다항식환 \(\Omega[u_1,\ldots,u_t]\)에서, \(G(f)=0\)이 \(x\)에 관한 항등식이 되는 모든 다항식 \(G(u)\)의 소아이디얼을 \(\mathfrak m\)이라 하자. 가정에 따라 \(\mathfrak m\)은 영아이디얼과 다르다. \(\mathfrak m\)에서 차수가 가장 낮은 다항식 \(G(u)\ne0\), 따라서 상수도 아닌 것을 택하자. 특히 \(G(u)\)는 기약이다. 그러면 통상적인 방법으로
+\[
+\begin{aligned}
+\left(\frac{\partial G}{\partial u_1}\right)_{f}\frac{\partial f_1}{\partial x_1}
+ +\cdots+
+\left(\frac{\partial G}{\partial u_t}\right)_{f}\frac{\partial f_t}{\partial x_1}&=0,\\[-1mm]
+&\vdots\\[-1mm]
+\left(\frac{\partial G}{\partial u_1}\right)_{f}\frac{\partial f_1}{\partial x_n}
+ +\cdots+
+\left(\frac{\partial G}{\partial u_t}\right)_{f}\frac{\partial f_t}{\partial x_n}&=0
+\end{aligned}
+\]
+을 얻는다. 따라서 함수행렬의 랭크가 \(t\)보다 작거나, 아니면 모든 \(\left(\partial G/\partial u_i\right)_f\)가 사라진다. 그런데 \(G(u)\)를 차수가 가장 낮은 다항식으로 택했으므로, 후자의 경우에는 모든 \(\partial G/\partial u_i\) 자체가 사라진다.
+
+그러므로 \(G(u)=H(u_1^p,\ldots,u_t^p)\)이다. 계수체 \(\Omega\)는 대수적으로 닫혀 있으므로 완전체이고, 따라서 더 나아가
+\[
+G(u)=H(u_i^p)=(T(u))^p
+\]
+가 되어 \(G(u)\)의 선택에 모순된다. 물론 이 증명은 표수 0에서도 성립하며, 그 경우에는 마지막 추론이 필요 없다.
+
+\textbf{2. 따름정리.}
+\(F_1(x_1,\ldots,x_n),\ldots,F_t(x_1,\ldots,x_n)\)을 함수행렬의 랭크가 정확히 \(t\)인 정수적 함수들, 곧 다항식, 거듭제곱급수 또는 그 몫이라 하자. 소수 \(p\)는 \(F(x)\)들의 분모에도, 함수행렬의 모든 \(t\)행렬식에도 공통으로 나누어 들어가지 않도록 택하자.
+
+그러면 \(F_1(x),\ldots,F_t(x)\)는 \(p\)를 법으로 해도 대수적으로 독립이다.
+
+\emph{증명.}
+\(P\)를 \(p\)에 대한 잉여류체라 하고, \(f_1(x),\ldots,f_t(x)\)를 \(F_1(x),\ldots,F_t(x)\)의 정수 계수들을 \(p\)에 대한 잉여류로 바꾸어 얻는 \(P\) 위의 함수들이라 하자. \(p\)가 \(F_i(x)\)의 분모에 나타나지 않으므로 \(f_i(x)\)들은 정의된다. 함수행렬 \((\partial f_i/\partial x_k)\)도 \((\partial F_i/\partial x_k)\)의 정수 계수들을 \(p\)에 대한 잉여류로 바꾸어 얻는다. \((\partial F_i/\partial x_k)\)에는 \(F(x)\)들에 없는 다른 분모가 나타나지 않는다. \(p\)의 선택에 따라 \((\partial f_i/\partial x_k)\)의 랭크는 \(t\)로 유지된다. 따라서 \(f(x)\)들은 \(\Omega\)에서 대수적으로 독립이고, 더욱이 \(P\)에서도 대수적으로 독립이다.
+
+\bigskip
+\paragraph{§ 2. 정리의 정식화.}
+
+\textbf{1.}
+서론에서와 같이 \(\mathfrak I\)은 \(x_1,\ldots,x_n\)의 정수적 함수, 곧 유리정수 계수의 다항식이나 거듭제곱급수 또는 그 몫으로 이루어진 정역이라 하자. 거듭제곱급수는 형식적으로 정의된 것이어도 되고 어떤 영역에서 수렴하는 것이어도 된다. 사용되는 것은 해당 함수들이 정역을 이룬다는 사실뿐이다.
+
+\(\mathfrak Q\)를 \(\mathfrak I\)의 분수체라 하고, \(\mathfrak Z\)를 \(\mathfrak I\)과 \(\mathfrak Q\) 사이의 정역이라 하자. 서론에서와 같이, \(a\ne0\)이 정수이고 \(g(x)\in\mathfrak Z\)일 때 \(a\cdot g(x)\)가 \(\mathfrak M\)에 속하면 언제나 \(g(x)\)도 \(\mathfrak M\)에 속하는 경우 \(\mathfrak M\)을 \(\mathfrak Z\) 안에서 \emph{극대}라고 한다. \(\mathfrak I\)에 대해서는 \(\mathfrak I\)이 \(\mathfrak Z\) 안에서 생성하는 극대영역 \(\mathfrak M(\mathfrak I)\)이 유일하게 존재한다. 이는 \(\mathfrak I\)을 포함하는 \(\mathfrak Z\) 안의 모든 극대영역의 교집합이다. 실제로 \(\mathfrak Z\) 자체가 그러한 영역이고, 임의의 개수의 극대영역들의 교집합도 극대이며 \(\mathfrak I\)을 포함한다. \(\mathfrak M(\mathfrak I)\)은 적어도 하나의 \(a\ne0\)에 대하여 \(a\cdot g(x)\in\mathfrak I\)가 되는 \(\mathfrak Z\)의 모든 함수 \(g(x)\)로 이루어진다.
+
+실제로 이 \(g(x)\)들은 \(\mathfrak I\)을 포함하는 \(\mathfrak Z\) 안의 극대영역 \(\mathfrak N\)을 이룬다. \(b\ne0\), \(h(x)\in\mathfrak Z\), \(b\cdot h(x)\in\mathfrak I\)이면 \(ab\cdot h(x)\in\mathfrak I\)이고 \(ab\ne0\)이므로 \(h(x)\in\mathfrak N\)이다. 한편 \(\mathfrak Z\) 안에서 \(\mathfrak I\)을 포함하는 모든 극대영역 \(\mathfrak M\)은 \(\mathfrak N\)을 포함한다. 실제로 \(a\cdot g(x)\in\mathfrak I\)이면 \(\mathfrak I\subseteq\mathfrak M\)이므로 \(a\cdot g(x)\in\mathfrak M\)이고, 따라서 \(g(x)\in\mathfrak M\)이다.
+
+\textbf{2.}
+이제 \(\mathfrak I\)을 단위원을 가진 유한 생성 정역이라 하고, \(f_1(x),\ldots,f_r(x)\)를 그 정수성 기저라 하자. 즉 \(\mathfrak I\)은 \(f_i(x)\)들에 관한 모든 정수 계수 다항식으로 이루어진다. 더 나아가 \(\mathfrak Z\)는 \(x\)에 관한 모든 정수 계수 다항식 또는 거듭제곱급수로 이루어지거나, 유한개의 \(f_i(x)\)에 나타나는 분모 이외의 분모가 없는 그러한 것들의 몫으로 이루어진다고 하자. 이 분모들은 물론 임의의 거듭제곱으로 허용한다.
+
+또 적어도 하나의 \(f_i(x)\), 일반적으로는 모든 \(f_i(x)\)에 \(x\)가 실제로 나타난다고 가정하자. 그렇지 않으면 \(\mathfrak I\)과 \(\mathfrak Z\)가 단지 한 분수 \(1/c\)의 모든 정수 계수 다항식으로 이루어져 증명할 것이 없기 때문이다.
+
+다항식 또는 유리함수를 다루는 경우에는 분수체 \(\mathfrak Q\)가 유리수체 \(K\)에 관하여 초월 차수 \(t\), \(1\leq t\leq r\)를 갖는다. 예를 들어 \(f_1(x),\ldots,f_t(x)\)가 기약계(주 \textsuperscript{5)})이면, \(\mathfrak Q\)는 순수초월체 \(K(f_1(x),\ldots,f_t(x))\)의 유한 대수적 확대이다. 동시에 \(f_1(x),\ldots,f_r(x)\)의 함수행렬과 \(f_1(x),\ldots,f_t(x)\)의 함수행렬은 모두 정확히 랭크 \(t\)를 갖는다\textsuperscript{8)}.
+
+거듭제곱급수나 그 몫의 경우에도 \(\mathfrak Q\)가 이 구조를 유지하도록 다음 부가가정을 둔다. \(t\)가 \(f_i(x)\)들의 함수행렬의 랭크이고, 동시에 예컨대 \(f_1(x),\ldots,f_t(x)\)의 함수행렬의 랭크도 \(t\)라고 하자. 따라서 이 함수들은 § 1의 1에 따라 기약계를 이룬다. 이때 다시 \(\mathfrak Q\)가 순수초월체 \(K(f_1(x),\ldots,f_t(x))\)의 유한 대수적 확대라고 가정한다. 즉 \(f_{t+1}(x),\ldots,f_r(x)\)가 \(K(f_1(x),\ldots,f_t(x))\)에 관하여 대수적이라고 가정한다\textsuperscript{9)}. 또한 표수가 0이므로 모든 \(\partial f_i/\partial x_k\)가 사라질 수 없어서 다시 \(t\geq1\)이다.
+
+이 조건은 정수성 기저에서 택한 함수 \(t\)개 가운데 함수행렬의 랭크가 정확히 \(t\)인 모든 계에 대해서도 성립한다. 실제로 그러한 함수들은 기약계를 이루므로 나머지 함수들이 그 계에 대하여 대수적으로 종속된다.
+
+\textbf{3.}
+이제 \(\mathfrak o\)를 부정원 \(u_1,\ldots,u_r\)의 정수 계수 다항식환이라 하자. 대응 \(u_i\mapsto f_i(x)\)가 직접 보여 주듯이 \(\mathfrak I\)은 \(\mathfrak o\)의 환준동형상이다. 따라서 \(\mathfrak I\)은 \(\mathfrak o/\mathfrak a\)와 환으로서 동형이다. 여기서 \(\mathfrak I\)은 영인수가 없는 환이므로 \(\mathfrak a\)는 소아이디얼이고, \(G(f)\)가 \(x\)에 관하여 항등적으로 사라지는 모든 다항식 \(G(u)\)로 이루어진다.
+
+서론에서 이미 언급했듯이 증명할 정리는 다음과 같다.
+
+\textbf{정리.}
+\emph{2의 부가가정 아래 \(\mathfrak o_p,\mathfrak a_p,\mathfrak I_p\)를 \(\mathfrak o,\mathfrak a,\mathfrak I\)의 정수 계수들을 \(p\)를 법으로 하는 잉여류로 바꾸어 얻는 영역들이라 하자. 그러면 많아야 유한개의 소수 --- \(\mathfrak I_p\)가 정의되려면 \(f(x)\)들의 분모에 나타나는 소수들도 여기에 포함된다 --- 를 제외하면, \(\mathfrak o_p\)에서 \(\mathfrak I_p\)로 가는 준동형은 \(\mathfrak a_p\)를 통하여 주어진다. 따라서 \(\mathfrak I_p\)는 \(\mathfrak o_p/\mathfrak a_p\)와 환으로서 동형이고, 다시 \(\mathfrak o/(\mathfrak a,p\mathfrak o)\)와 동형이다.}
+
+이 정리로부터 \(\mathfrak M(\mathfrak I)\)의 분모 \(a\)에 소수가 유한개만 나타난다는 사실은 다음 따름정리를 통하여 얻어진다.
+
+\textbf{따름정리.}
+\emph{\(p\)를 \(\mathfrak I_p\cong\mathfrak o_p/\mathfrak a_p\)가 되도록 택했다고 하자. \(p\cdot g(x)\in\mathfrak I\)이고 \(g(x)\in\mathfrak Z\)이면 언제나 \(g(x)\in\mathfrak I\)이다.}
+
+달리 말하면, \(\mathfrak I\)은 유한개의 예외소수와 다른 모든 소수에 관하여 \(\mathfrak Z\) 안에서 극대이다.
+
+\(\mathfrak o_p/\mathfrak a_p\)는 \(\mathfrak o/(\mathfrak a,p\mathfrak o)\)와 동형이다. 실제로 정의상 \(\mathfrak o_p=\mathfrak o/p\mathfrak o\)이고, 이에 따라 \(\mathfrak a_p=(\mathfrak a,p\mathfrak o)/p\mathfrak o\)이다. 그러므로 제1동형정리에 따라 \(\mathfrak o_p/\mathfrak a_p\), 그리고 가정에 의해 \(\mathfrak I_p\)도 \(\mathfrak o/(\mathfrak a,p\mathfrak o)\)와 동형이다.
+
+이는 다음을 뜻한다.
+\[
+H(f_i(x))\equiv0\pmod p\quad\text{\(\mathfrak I\) 안에서}
+\quad\Longrightarrow\quad
+H(u)\equiv0\pmod{(\mathfrak a,p\mathfrak o)}
+\quad\text{\(\mathfrak o\) 안에서}.
+\]
+
+이를 다음과 같이 바꿔 쓸 수 있다. \(H(f_i(x))=p\cdot g(x)\), 여기서 \(H(f_i(x))\in\mathfrak I\), \(g(x)\in\mathfrak Z\)이면 \(H(u_i)-pF(u_i)\equiv0\pmod{\mathfrak a}\)이다. 따라서 \(H(f_i(x))=pF(f_i(x))\)이고 \(g(x)=F(f_i(x))\), 즉 \(g(x)\in\mathfrak I\)이다.
+
+이를 유한번 반복하면 다음을 얻는다. \(a\)가 어느 예외소수로도 나누어지지 않을 때 \(a\cdot g(x)\in\mathfrak I\), \(g(x)\in\mathfrak Z\)이면 언제나 \(g(x)\in\mathfrak I\)이다. 이로써 따름정리가 증명되었다.
+
+\bigskip
+\paragraph{§ 3. 정리의 증명.}
+
+\textbf{1. 보조정리.}
+\emph{\(\mathfrak I\)과 \(\mathfrak o\) 사이의 준동형을 규정하는 소아이디얼 \(\mathfrak a\)(§ 2, 3)는 절대소아이디얼이다.}
+
+\(\mathfrak o^*\)를 \(u_1,\ldots,u_r\)에 관한 다항식환으로서 임의의 대수적 수, 분수형 대수적 수도 계수로 허용한 것이라 하자. \(\mathfrak a^*\)는 \(\mathfrak o^*\)에서 \(\mathfrak a\)가 생성하는 아이디얼이라 하자. 따라서 \(\mathfrak a^*\)는
+\[
+a_1G_1(u)+\cdots+a_sG_s(u)
+\]
+꼴의 모든 선형결합으로 이루어진다. 여기서 \(a_i\)는 임의의 대수적 수이고 \(G_i(u)\)는 \(\mathfrak a\)의 다항식이다. \(\mathfrak a^*\)가 소아이디얼임을 보여야 한다.
+
+\(\mathfrak a^*\)가 \(\mathfrak o^*\)에서 \(\mathfrak I^*\)로 가는 준동형을 규정함을 보이면 증명이 끝난다. 여기서 \(\mathfrak I^*\)는 \(f_i(x)\)에 관한 다항식 가운데 계수로 임의의 대수적 수를 허용한 것들로 이루어진 정역이다. 즉 \(H(u)\in\mathfrak o^*\)이고 \(H(f_i(x))=0\)이면 \(H(u)\in\mathfrak a^*\)임을 보이면 된다.
+
+\(\omega_1,\ldots,\omega_s\)를 \(H(u)\)의 유한개의 계수들이 생성하는 유한 수체의 선형독립 기저라 하자. 그러면
+\[
+a\cdot H(u)=\omega_1H_1(u)+\cdots+\omega_sH_s(u)
+\]
+로 쓸 수 있다. 여기서 \(H_i(u)\in\mathfrak o\)이고 \(a\ne0\)은 유리정수이다. \(H(f)=0\)에서
+\[
+\omega_1H_1(f)+\cdots+\omega_sH_s(f)=0
+\]
+을 얻고, 따라서 \(H_1(f)=0,\ldots,H_s(f)=0\)이다. 그러므로 \(H_1(u),\ldots,H_s(u)\in\mathfrak a\)이고 결국 \(H(u)\in\mathfrak a^*\)이다.
+
+\textbf{2.}
+이제 정리는 다음 형태로 증명할 수 있다.
+
+\(p\)를 다음 조건들이 성립하도록 택하자.
+\begin{itemize}
+\item[I.] \(\mathfrak I_p\)가 정의된다.
+\item[II.] \(\mathfrak a_p\)가 소아이디얼, 더구나 절대소아이디얼로 남는다.
+\item[III.] \(\mathfrak I_p\)의 초월 차수가 \(\mathfrak I\)의 초월 차수보다 낮아지지 않는다.
+\end{itemize}
+그러면 \(\mathfrak o_p\)에서 \(\mathfrak I_p\)로 가는 준동형은 \(\mathfrak a_p\)를 통하여 주어진다. 이 조건들은 많아야 유한개의 예외소수를 빼면 모든 소수에 대하여 충족된다.
+
+조건 I, II, III 각각에 관하여 예외소수가 유한개뿐이라는 사실은 앞의 결과에서 곧바로 따라온다.
+
+I은 분명하다. 예외소수는 \(f_i(x)\)들의 분모에 나타나는 유한개의 소수뿐이다. II는 보조정리에 따라 \(\mathfrak a\)가 절대소아이디얼이라는 사실에서 나온다. 따라서 유한개를 제외한 모든 소수를 법으로 해도 이 성질을 유지한다(주 \textsuperscript{6)} 참조). 끝으로 III은 § 1, 2의 따름정리에서 증명하였다. 실제로 § 2, 2에 따라 \(f_1(x),\ldots,f_t(x)\)의 함수행렬은 정확히 랭크 \(t\)이다.
+
+이제 이 예외소수들과 다른 \(p\)를 택하자. \(\mathfrak o_p\)에서 \(\mathfrak I_p\)로 가는 준동형은 한 아이디얼 \(\mathfrak c_p\)를 통하여 주어진다. \(\mathfrak I_p\)도 영인수가 없는 환이므로 \(\mathfrak c_p\)는 소아이디얼이고, 그 초월 차수는 \(\mathfrak I_p\)의 초월 차수로 주어지므로 적어도 \(t\)이다. 실제로 \(\mathfrak I_p\cong\mathfrak o_p/\mathfrak c_p\)이므로 \(\mathfrak c_p\)의 잉여류체는 \(\mathfrak I_p\)의 분수체와 동형이다.
+
+\(\mathfrak a_p\)도 소아이디얼이고 \(\mathfrak c_p\)의 배수, 곧 부분아이디얼이므로, \(\mathfrak a_p\)와 \(\mathfrak c_p\)는 초월 차수가 같을 때 그리고 그때에만 일치한다\textsuperscript{10)}. \(\mathfrak c_p\)의 배수인 \(\mathfrak a_p\)의 초월 차수도 적어도 \(t\)이고, 실제로 \(u_1,\ldots,u_t\)의 \(\mathfrak a_p\)에 대한 잉여류들이 기약계를 이룬다. 이 초월 차수가 정확히 \(t\)임을 보이면 모든 것이 증명된다.
+
+여기서 거듭제곱급수나 그 몫의 경우에는 \(\mathfrak I\)의 분수체 \(\mathfrak Q\)의 구조에 관한 부가가정(§ 2, 2)을 사용한다. 그 가정에 따라 소아이디얼 \(\mathfrak a\)의 초월 차수는 언제나 \(t\)였다. 번호는 \(u_1,\ldots,u_t\)의 \(\mathfrak a\)에 대한 잉여류들이 기약계를 이루고 \(u_{t+1},\ldots,u_r\)의 잉여류들이 그 기약계에 대하여 대수적으로 종속되도록 정하였다. 따라서 \(\mathfrak a\)에는 정수 계수이고 원시적인 다음 다항식들이 들어 있다.
+\[
+G_1(u_{t+1};u_1,\ldots,u_t),\ldots,
+G_{r-t}(u_r;u_1,\ldots,u_t). \tag{1}
+\]
+이들은 \(\mathfrak a_p\)의 다항식
+\[
+G^*_1(u_{t+1};u_1,\ldots,u_t),\ldots,
+G^*_{r-t}(u_r;u_1,\ldots,u_t) \tag{2}
+\]
+로 넘어가며, 원시성이 있으므로 사라지지 않는다. 그런데 각 \(G^*_\lambda\)에는 \(u_{t+\lambda}\)가 실제로 나타나야 한다. 그렇지 않다면 \(p\)의 선택과 모순되게 \(u_1,\ldots,u_t\)의 \(\mathfrak a_p\)에 대한 잉여류들 사이에 대수적 종속관계가 생겼을 것이다. 이로써 \(\mathfrak a_p\)의 초월 차수가 \(t\)임을 보였다. 따라서 \(\mathfrak a_p=\mathfrak c_p\)이고 \(\mathfrak a_p\)가 준동형을 규정하므로 모든 것이 증명되었다.
+
+\bigskip
+\paragraph{§ 4. 대수적 정수 계수로의 확장.}
+
+서론 끝에서 이미 말했듯이, 유리정수 대신 한 유한 대수적 수체 \(K\)의 대수적 정수들을 기초로 삼고 소수 \(p\) 대신 이 수체의 소아이디얼 \(\mathfrak p\)를 기초로 삼아도 모든 고찰은 조금만 고치면 그대로 성립한다. § 1은 완전히 그대로 유지되고, § 2에서 정리를 정식화하기까지의 고찰도 마찬가지다. 다만 증명(§ 3, 2)과 § 2, 3의 따름정리에는 몇 가지를 덧붙여야 한다.
+
+\textbf{1.}
+§ 3, 2에서는 다항식 \(G_1(u),\ldots,G_{r-t}(u)\)을 나누는 유한개의 소아이디얼을 예외소아이디얼에 더해야 한다[§ 3, 2의 (1)]. 이제는 이 다항식들을 원시적이라고 가정할 수 없기 때문이다. 그러면 다항식 \(G^*_1(u),\ldots,G^*_{r-t}(u)\)이 사라지지 않음이 보장된다[§ 3, 2의 (2)]. 이는 조건 III를 강화한 것이다. 절대기약성에 관한 정리는 바뀌지 않으므로 조건 II도 그대로이고, 물론 조건 I도 그대로이다.
+
+\textbf{2.}
+최종결과인 § 2, 3의 따름정리는 그곳의 마지막 서술에 맞추어 다음처럼 정식화한다.
+
+\textbf{따름정리.}
+\emph{\(K\)의 대수적 정수 \(\alpha\)가 유한개의 예외소아이디얼 가운데 어느 것으로도 나누어지지 않는다면, \(\alpha\cdot g(x)\in\mathfrak I\), \(g(x)\in\mathfrak Z\)에서 언제나 \(g(x)\in\mathfrak I\)가 따라온다.}
+
+\(K\)의 대수적 정수 \(\lambda_1,\ldots,\lambda_s\)를 각각 하나의 예외소아이디얼로는 나누어지지만 그 제곱이나 다른 예외소아이디얼들로는 나누어지지 않도록 택하자. 그러면 분모 \(\alpha\)로는 이 \(\lambda\)들의 거듭제곱곱만으로 충분하다.
+
+\emph{증명.}
+\[
+(\alpha)=\mathfrak p_1^{\varrho_1}\cdots\mathfrak p_g^{\varrho_g}
+\]
+를 \(\alpha\)의 소아이디얼분해라 하고, \(\mathfrak p_1,\ldots,\mathfrak p_g\)가 예외소아이디얼들과 다르다고 하자. 따라서 각 \(\mathfrak p_i\)에 대하여
+\[
+\mathfrak I_{\mathfrak p_i}\cong
+\mathfrak o_{\mathfrak p_i}/\mathfrak a_{\mathfrak p_i}.
+\]
+\(K\)의 모든 대수적 정수의 환에서 출발하여, \((\alpha)\)와 서로소인 대수적 정수들, 곧 \(\mathfrak p_1,\ldots,\mathfrak p_g\) 어느 것으로도 나누어지지 않는 대수적 정수들만을 분모로 모두 첨가해 얻는 국소화환 \(\mathfrak R\)로 넘어가자. \(\mathfrak R\)에서도 \(\mathfrak p_1,\ldots,\mathfrak p_g\)는 소아이디얼로 남지만 이제 주아이디얼이 되고, 다른 모든 소아이디얼은 단위아이디얼과 같아진다. \((\alpha)\)의 분해는 그대로 유지된다\textsuperscript{11)}. 따라서 \(\mathfrak R\)을 계수영역으로 삼아도 따름정리와 그 증명은 § 2, 3의 형태 그대로 성립한다.
+
+이는 다음을 뜻한다. \(\alpha\cdot g(x)\in\mathfrak I\)이면 \(g(x)=F(f_i(x))\)이고, 여기서 다항식 \(F(u)\)의 계수들은 \(\mathfrak R\)에 속한다. 이 계수들의 공통분모를 \(\delta\)라 하자. 그러면 \(\delta\)는 \(\alpha\)와 서로소이다. 따라서 같은 사실을 다음처럼 쓸 수 있다. \(\alpha\cdot g(x)\in\mathfrak I\)이면 \(\delta\cdot g(x)\in\mathfrak I\)인 \(\alpha\)와 서로소인 \(\delta\)가 존재한다. 그러므로 \((\delta,\alpha)\)는 단위아이디얼이고, 결국 \(\alpha\cdot g(x)\in\mathfrak I\)에서 \(g(x)\in\mathfrak I\)가 따라온다. 이로써 위 따름정리의 첫째 주장을 증명하였다.
+
+둘째 주장을 증명하기 위하여 \(\mathfrak R^*\)를 유한개의 예외소아이디얼로 정해지는 \(K\) 안의 국소화환이라 하고, \(\lambda_1,\ldots,\lambda_s\)를 \(\mathfrak R^*\)에서 이 소아이디얼들의 생성원이라 하자. 이 생성원들은 대수적 정수로 택할 수 있다. \(\mathfrak R^*\)에서 \(\alpha\)는 \(\mathfrak R^*\)의 한 단위원을 제외하면 \(\lambda\)들의 거듭제곱곱이다. 다시 대수적 정수들로 돌아가면
+\[
+\gamma\alpha=\beta\lambda_1^{\varrho_1}\cdots\lambda_s^{\varrho_s}
+\]
+를 얻는다. 여기서 \(\gamma,\beta\)는 어느 예외소아이디얼로도 나누어지지 않는다. \(\alpha\cdot g(x)\in\mathfrak I\)이면
+\[
+\beta\lambda_1^{\varrho_1}\cdots\lambda_s^{\varrho_s}g(x)\in\mathfrak I
+\]
+이고, 따라서 따름정리의 첫째 주장에 의하여
+\[
+\lambda_1^{\varrho_1}\cdots\lambda_s^{\varrho_s}g(x)\in\mathfrak I
+\]
+이다.
+
+\begin{center}
+\rule{4cm}{0.4pt}\\[0.6em]
+\textbf{주}
+\end{center}
+
+{\small
+\setlength{\parindent}{0pt}
+
+\noindent\textsuperscript{1)} D. Hilbert, \emph{Mathematische Probleme}, Gött. Nachr. 1900, 253--297쪽, 문제 14.
+
+\noindent\textsuperscript{2)} E. Hecke, \emph{Über die Konstruktion relativ-Abelscher Zahlkörper durch Modulfunktionen von zwei Variabeln}, Math. Ann. 74 (1913), 465--510쪽, § 2. 헤케의 경우에는 유한 생성 정역 \(\mathfrak I\)이 두 변수에 관한 거듭제곱급수의 몫 세 개로 생성되며, 이들 사이에는 하나의 대수적 관계가 있다.
+
+\noindent\textsuperscript{3)} 힐베르트의 앞의 논문 또는 E. Noether, \emph{Die Endlichkeit des Systems der ganzzahligen Invarianten binärer Formen}, Gött. Nachr. 1919, 138--156쪽, § 1, IV의 더 상세한 서술을 보라.
+
+\noindent\textsuperscript{4)} 따라서 예를 들어 한 기본형식계의 정수 계수 (사영)불변식의 경우, 통상적 의미의 한 완전불변식계로 그것들을 나타낼 수 있으며 그 분모에는 서로 다른 소수가 \emph{유한개}만 나타남을 보인 것이다. 이는 통상적인 \(\Omega\)-과정의 방법에서는 따라오지 않는 결과이다. 그러나 정수 계수 유한성 자체에 대해서는 아무것도 말하지 않는다. 이 유한성은 지금까지 이원 기본형식의 경우에만 알려져 있다. 3)에 인용한 글을 보라.
+
+\noindent\textsuperscript{5)} 한 계의 \glqq{}초월 차수\grqq{}란 그 계가 대수적으로 종속되는 대수적으로 독립인 함수들의 불변적인 개수를 뜻한다. 대수적으로 독립인 함수들로 이루어진 계를 기약계라 한다. 한 소아이디얼의 초월 차수(차원)는 그 잉여류체의 초월 차수로 이해한다. 소아이디얼은 같은 초월 차수를 가진 진소약수를 갖지 않는다. 예컨대 B. L. van der Waerden, \emph{Zur Nullstellentheorie der Polynomideale}, Math. Ann. 96 (1926), 183--208쪽을 보라.
+
+\noindent\textsuperscript{6)} E. Noether, \emph{Eliminationstheorie und allgemeine Idealtheorie}, Math. Ann. 90 (1923), 229--261쪽, § 7. 이 정리는 소거론\textsuperscript{*)}을 거쳐, 절대기약다항식은 유한개의 소수를 법으로 할 때에만 그 성질을 잃는다는 더 간단한 정리에서 따라온다. A. Ostrowski, \emph{Zur arithmetischen Theorie der algebraischen Größen}, Gött. Nachr. 1919, 279--298쪽, 특히 296쪽; 더 간단한 증명은 E. Noether, \emph{Ein algebraisches Kriterium für absolute Irreduzibilität}, Math. Ann. 85 (1922), 26--33쪽, 7번을 보라. \(\mathfrak I\)의 정수성 기저가 그 초월 차수보다 정확히 함수 하나만 더 포함하여 \(\mathfrak a\)가 주아이디얼이 되는 경우, 예컨대 헤케가 다룬 경우(주 2)에는 소거론을 피하고 이 더 간단한 정리만 사용해도 충분하다. 곳곳에서 소수 대신 한 유한 대수적 수체의 소아이디얼을 놓을 수 있다. 이 정리는 \(\mathfrak a\)가 영아이디얼인 경우에도 분명히 성립한다.
+
+\noindent\textsuperscript{7)} 원래 서술에서는 계수체 \(P\)를 완전체라고 가정하였다. \(P\)에서 \(\Omega\)로 넘어감으로써 임의의 체, 완전체가 아닌 체까지 확장하는 것은 B. L. van der Waerden에게서 배웠다. 완전체 \(P\)에서도 표수 \(p\)에서는 역이 성립하지 않음을 \(f=x^p,\ df/dx=0\)이라는 예가 보여 준다.
+
+\medskip
+\hrule width 2.7cm
+\smallskip
+\noindent\textsuperscript{*)} \(\mathfrak a\)의 계수 표수가 0이므로, 정확히 말하면 이 논문의 보조정리 V와 무관하게 그러하다. 실제로 그 보조정리의 증명은 옳지 않다. 거기서 제시한 치환을 하면 모든 것이 항등적으로 사라질 수 있다. 올바른 증명은 B. L. van der Waerden, \emph{Eine Verallgemeinerung des Bézoutschen Theorems}, Math. Ann. 99 (1928), 497--541쪽, 주 37에 비로소 나온다.
+
+같은 논문의 257쪽에도 쉽게 알 수 있는 수정이 하나 더 필요하다. 정리 XIV 역시 § 7에서는 사용되지 않는다. 거기에는 \((\mathfrak R)\)의 모든 원소가 \((x_i)\) 안의 \(t_{\mu,\nu}\)를 \((\mathfrak R')\)의 원소들로 특수화하여 생긴다고 적혀 있다. 실제로는 더 일반적인 선형형식
+\[
+\sum s_{\lambda_1\ldots\lambda_n}
+(y_1)^{\lambda_1}\cdots(y_n)^{\lambda_n}
+\]
+에서 특수화하여 생기지만, 그 지수는 \((x_i)\)의 지수와 같다.
+
+\noindent\textsuperscript{8)} 표수 0에 관한 이 함수행렬식 정리의 순수대수적 증명은 B. L. van der Waerden, \emph{Algebraische Theorie der Differentiation}, Nieuw Archief v. Wiskunde (2) 15 (1926), 111--120쪽을 보라.
+
+\noindent\textsuperscript{9)} 이 부가가정은 헤케가 다룬 경우(주 2)처럼 해석함수들을 다루고 \(f_1(x),\ldots,f_t(x)\)가 해석적으로 독립이며 \(f_{t+1}(x),\ldots,f_r(x)\)가 이들에 대하여 대수적으로 종속될 때 충족된다. 그러나 이 가정은 형식적으로 정의된 거듭제곱급수의 경우에도 명확한 뜻을 갖도록 의도적으로 함수행렬의 랭크라는 형식으로 서술하였다. 이로써 모든 고찰은 순수하게 형식대수적인 범위에 머물며, 해석함수에 관한 정리는 특수한 경우에 그 가정이 충족됨을 보이는 데에만 필요하다.
+
+\noindent\textsuperscript{10)} 예컨대 B. L. van der Waerden, \emph{Zur Nullstellentheorie der Polynomideale}, Math. Ann. 96 (1926), 183--208쪽, § 3을 보라.
+
+\noindent\textsuperscript{11)} 예컨대 H. Grell, \emph{Zur Theorie der Ordnungen in algebraischen Zahl- und Funktionenkörpern}, Math. Ann. 97 (1927), 524--558쪽, § 2, 1을 보라.
+}
+
+\bigskip
+\begin{center}
+\rule{4cm}{0.4pt}\\[0.8em]
+{\Large\bfseries 정수적 함수의 극대영역에 관하여}\par
+\vspace{0.7em}
+{\bfseries 에미 뇌터 (괴팅겐)}\par
+\vspace{0.5em}
+\emph{러시아어 요약의 한국어 번역}
+\end{center}
+
+영인수가 없는 각 환(정역) \(\mathfrak I\)은 같은 유형의 한 극대영역 \(\mathfrak M(\mathfrak I)\)을 정한다. 이 극대영역은 적어도 하나의 \(a\ne0\)에 대하여 \(a\cdot g(x)\in\mathfrak I\)가 되는 모든 함수 \(g(x)\)로 이루어진다.
+
+이 논문에서는 \(\mathfrak I\)이 유한 생성되었다는 가정 아래 이 극대영역 \(\mathfrak M(\mathfrak I)\)의 \glqq{}분모\grqq{} \(a\)를 연구한다. 모든 \(a\)를 통틀어 인수로 나타나는 소수가 유한개뿐이도록 \(a\)들을 언제나 택할 수 있음을 증명한다. 다만 \(g(x)\)들이 거듭제곱급수 또는 그러한 급수들의 몫인 경우에는, \(\mathfrak I\)을 정하는 함수 \(f_1(x),\ldots,f_r(x)\) 사이에 오직 대수적 관계만 있을 수 있다고 가정한다.
+
+증명은 문제를 일반 아이디얼론의 몇 가지 물음으로 환원하는 데에 바탕을 둔다. 이 환원에서는 인수 \(p\)가 분모 \(a\)에 나타나는 것을 함수 \(f_i\)들 사이의 \(p\)를 법으로 하는 관계로 해석한다.
+
+\begin{center}
+(\emph{Rec. Math.} XXXVI:1, 1929.)
+\end{center}

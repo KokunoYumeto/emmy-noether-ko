@@ -1,0 +1,1747 @@
+% Korean Noether paper 06 — mechanically assembled inherited production body.
+% Origin reopened against ED0005; current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U01_r2.tex
+% sha256: 933A1AAA19FACDB49EA5357A0181C750B1F101DB19054E0B7FE17A396CD0A438
+\begin{center}
+{\Large\bfseries 6. 유리 함수의 체와 계}\par
+\vspace{1.2em}
+Math. Ann. 76 (1915), S. 161--196
+\end{center}
+
+\vspace{2em}
+
+이 논문은 임의의 유리함수계와 다항함수계에서의 기저 문제를 다룬다. 그런데 여기에 적용되는 체론의 방법에 따르면, 유리 함수들로 이루어진 체 --- 유리 함수체\srcfn{*)}{빈 자연과학자대회 때 발표한 예비보고를 참조하라: Rationale Funktionenkörper --- Jahresber. d. D. Math.-Ver. 22 (1913) ---; 여기에는 문제 설정과 함수체에 관한 결과의 개요가 제시되어 있다.} --- 에서 이 문제들을 해결하는 일이 본질을 이루며, 그 결과를 임의의 계로 일반화하는 일은 그 따름으로 얻어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U02_r2.tex
+% sha256: B67426901DF89AC04E593F5761C1679FC3F7B619B0C26F21EA056D6D15057EB0
+일반적인 계의 기저 문제 가운데 지금까지 알려진 것은 힐베르트 정리(Math. Ann. 36)가 보장하는 모듈기저의 존재뿐이다. 이하에서는 유리적 표현가능성의 문제가 임의의 모든 계에 대한 유리기저의 존재와 함께 완전히 해결되며(\S\ 7), 체의 유리기저는 이미 \S\ 4에서 얻어진다. 이 유리기저의 존재 덕분에 처음부터 끝까지 추상적으로 정의된 체나 계에서 출발할 수 있고, 그리하여 계 자체가 아니라 오직 유리기저의 특수한 선택 때문에 생기는 어려움, 예컨대 특수한 분모나 기저함수들의 기본점이 나타나는 일을 피할 수 있다.
+
+체에 대해서는 더 나아가 최소기저, 즉 대수적으로 독립인 함수들로 이루어진 유리기저의 문제도 다룬다(\S\ 6). 체론의 방법은 또한 특별히 구별되는 유리기저인 인볼루션기저(Involutionsbasis)\srcfn{**)}{이 명칭은 유리 함수체가 기하학적 해석에서 선형공간의 가장 일반적인 인볼루션을 나타내기 때문에 택하였다.}(\S\ 5)로 이끈다. 이 기저는 특히 다항식들로 이루어진 정역에서 본질적인 역할을 한다(\S\ 8). 여기서 이 기저는 고정된 분모를 갖는 표현을 주는데, 그 분모는 정역이 정하는 한 함수의 거듭제곱이다. 이러한 표현은 가령 불변식의 전형표현이라는 특수한 경우에 알려져 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U03_r2.tex
+% sha256: 59F79904827A651047BDFFA8D15A3AB967C27AC95DE8C9F8177102F5134012E2
+이제 유리적 표현 가능성으로부터 다항식적 표현 가능성, 즉 좁은 의미의 유한성 문제에 대하여 가능한 한 폭넓은 결론을 이끌어 낸다.
+
+지금까지 알려진 유한성 정리들은 모두 다음 사실에 근거한다. 곧 모듈기저에 관한 힐베르트 정리는
+\[
+  F=A_1f_1+A_2f_2+\cdots+A_kf_k
+\]
+라는 표현이
+\[
+  F=B_1f_1+B_2f_2+\cdots+B_kf_k
+\]
+라는 또 하나의 표현을 수반하고, 여기서 $B_i$가 그 계에 속하며 $F$보다 낮은 차수를 갖는 모든 계에 대하여 유한성을 보장한다.
+
+이에 반해 유리기저 정리와 체론의 방법을 이용하면 전혀 다른 종류의 가정 아래에서도 유한성을 결론지을 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U04_r2.tex
+% sha256: 20D2DF5726F3EA504331E11228C7231C6C84BEE1DC95379F00483AD585D9AC8E
+그리하여 힐베르트의 한 문제(Math. Probleme 14)에 대한 부분적인 답으로서, 유한 정역이며 앞서 말한 인볼루션기저가 그 정기저를 이루는 상대적으로 정수적인 함수들의 한 부류(제1종 상대정역)를 얻게 된다(\S\ 10). 대수적 정수인 양들의 기본계에 관한 크로네커 정리에 대한 힐베르트의 증명(Volle Invariantensysteme, \S\ 2; Math. Ann. 42)과 유사하게, 더 나아가 다항식으로 이루어진 모든 정칙계 --- 즉 기본점이 없는 계로 사상할 수 있는 모든 계 --- 가 정기저를 가짐을 보일 수 있다(\S\ 12). 한편 정기저가 없는 비정칙계도 쉽게 제시할 수 있다. 이 사실의 간단한 예로 다음 정리를 들 수 있다. \glqq{}한 부정원에 관한 무한히 많은 다항식으로 이루어진 임의의 계에는 유한개의 다항식이 존재하여, 그 계의 모든 다항식을 이 유한개에 대한 다항식 결합으로 나타낼 수 있다.\grqq{} 더 많은 예는 \S\ 13에 있다.
+
+끝으로 마지막 절들(\S\S\ 14 및 15)은 정수계수성에 관하여 기저정리들을 강화한다.
+
+이 연구의 본질적인 보조수단은 \S\ 3의 전이 원리이다. 이에 따르면 여기에서 제기한 모든 기저 문제는 부정원의 수와 그 계의 대수적으로 독립인 함수의 수가 일치하는 계들에 대해서만 고찰하면 충분하다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U05_r2.tex
+% sha256: 1AAA18364156564524A6AA12B6DA5B24121E89E76971AB8C7A2D18FEA7418041
+본 연구의 계기는 E. Fischer와 나눈 대화, 특히 그가 라그랑주 종영역(Gattungsbereich)의 최소기저에 관하여 제기한 질문이었다. 그와 관련된 연구는 지정된 군을 갖는 방정식의 구성으로 이어졌으며(앞에서 인용한 \glqq{}유리 함수체\grqq{}에 관한 보고의 제2부를 참조하라), 추후 발표로 남겨 둔다.
+
+본 논문이 최초의 보고에 비해 갖는 본질적인 확장은, 그곳에서는 체나 특수한 정역에 대해서만 진술되었던 기저정리들을 임의의 계로 옮겼다는 데 있다. 이러한 이행은 임의의 계를 포함하는 최소체라는 개념, 곧 정역의 분수체를 일반화한 개념에 힘입어 간단하게 이루어진다(\S\ 7). 체의 유리기저가 알려진 뒤 K. Hentzelt가 힐베르트의 모듈기저를 거치는 우회로를 통해 임의의 계에도 유리기저가 존재함을 증명할 수 있었던 사실이 이 개념을 세우도록 나를 이끌었다. 또한 내가 정역에 적용한 추론들이 동일한 전제를 만족하는 임의의 계에도 유효하다는 K. Hentzelt의 지적은 정칙계의 정기저에 관한 정리로도 나를 이끌었다. 그 밖의 몇 가지 개별적인 작은 지적 역시 Hentzelt에게 빚지고 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T01_U06_r2.tex
+% sha256: ACEECFD0E5CFD4062E4064A37935C4AEB630E2F7729F9E2AFADA73B7FD1D49C8
+끝으로, 부정원이 하나인 경우 체의 유리기저와 최소기저가 E. Steinitz의 \glqq{}체의 대수적 이론\grqq{}, \S\ 24 (Crelles Journ. 137)에 나와 있음을 언급해 둔다. 다만 그곳에서는 계수영역을 가장 일반적인 의미의 체로 가정한다. 여기에서 제시한 정리들이 이러한 더 일반적인 전제 아래 어디까지 유지되는지는 이하에서 다루지 않는다. 어쨌든 증명에는 수정이 필요하다. 예컨대 표수 $p$인 체에서는 야코비 행렬식 이론에서 가져온 보조수단부터 이미 쓸 수 없기 때문이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U07_r2.tex
+% sha256: CD001E955A038C7495397916D9EDC6FF054858B98E2C4BFCEB081B370F5092B1
+\section*{\S\ 1. 체 $\Kfield_{n\rho}$와 계 $\Ssys_{n\rho}$.}
+
+이하에서는 $n$개 부정원의 유리함수계, 특히 유리함수체를 고찰한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U08_r2.tex
+% sha256: 3A15C458D74CB909E3BD194305DA8E38C5AEF082864B0A39464EFE0A74401721
+$f(x_1\cdots x_n)$, $g(x_1\cdots x_n)$, \ldots\ 또는 줄여서 $f(x)$, $g(x)$, \ldots\ 로 적은 것은 언제나 $x_1\cdots x_n$의 유리함수를 뜻한다. 이 함수들은 기약표현 --- 즉 분자와 분모가 서로소인 표현 --- 으로 주어진다고 가정한다. 다항함수(다항식)는 대문자 $F(x)$, $G(x)$, \ldots\ 로 표시한다. 계수영역 $\Omega$는 어떤 수체로 가정하며, 따라서 특히 모든 복소수를 포함할 수도 있다. $\Omega$에는 또한 유한개의 매개변수가 들어 있을 수도 있다.
+
+$\Omega$의 원소들, 즉 모든 0차 함수는 언제나 그 계에 속하는 것으로 간주한다.
+
+이러한 약정 아래 유리함수들로 이루어진 체 --- 유리함수체 --- 를 추상적으로 정의할 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T02_U09_UNCHECKED.tex
+% sha256: F25818E612C12FD8FA50E23FE1C0D5340B56D7C5A81DE55675455CA4F92CEECC
+\emph{정의 I: 유리함수계가 다음 조건들을 만족할 때 이를 체라 한다:}
+\begin{enumerate}
+\item \emph{그 계가 $f(x)$를 포함하면, $\Omega$의 모든 원소 $c$에 대하여 $c\cdot f(x)$도 포함한다.}
+\item \emph{그 계가 $f(x)$와 $g(x)$를 포함하면 언제나 $f(x)+g(x)$, $f(x)\cdot g(x)$도 포함하며, $g(x)\ne0$일 때에는 몫 $f(x):g(x)$도 포함한다.}\srcfn{*)}{$f(x)$와 $g(x)$는 0차일 수도, 즉 $\Omega$의 원소일 수도 있다.}
+\end{enumerate}
+특수한 체란 $\Omega$에 유리함수 유한개
+\[
+  f_1(x),\ f_2(x),\ldots, f_k(x)
+\]
+를 첨가하여 생기는 체를 말하며, 이를
+\[
+  \Omega\bigl(f_1(x)\cdots f_k(x)\bigr)
+  \quad\text{또는}\quad
+  \Omega(f_1\cdots f_k)
+\]
+로 표시한다.\srcfn{**)}{이 \glqq{}특수한 체들\grqq{}로 이미 모든 체가 망라된다는 사실은 \S\ 4에서 도출된다.} 이 특수한 체들 가운데에는 $\Omega$에 $x_1,\ldots,x_n$을 첨가하여 생기는 체
+\[
+  \Omega(x_1\cdots x_n)
+\]
+도 언급해 둔다. 이 체는 $\Omega$의 계수를 갖는 $x_1\cdots x_n$의 모든 유리함수 전체와 동일하다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U10_r2.tex
+% sha256: F91366AA34A3A5DA6B4487D0E23EC95B4BA378D3BC01EE710153A7C69C1CBE3A
+이제 (E. Steinitz를 따라) 중간체의 개념도 도입한다:
+\begin{quote}
+\glqq{}체 $\Mfield$가 $\Omega_1$과 $\Omega_2$ 사이에 놓인다는 것은, 그 체가 $\Omega_1$을 포함하고 $\Omega_2$에 포함된다는 뜻이다\grqq{};
+\end{quote}
+그러면 정의 I은 다음과 같이도 표현할 수 있다:
+
+$n$개 부정원의 유리함수체는 $\Omega$와 $\Omega(x_1\cdots x_n)$의 중간체로서, 그 체의 적어도 하나의 함수가 이 $n$개의 부정원을 모두 실질적으로 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U11_r2.tex
+% sha256: 49C302744D52EEC1C59C3F28EF7EE407090A5D1C619CDD9B3C5350749852B56B
+부정원의 수 외에 유리함수계에는 또 하나의 특성수, 곧 대수적으로 독립인 함수의 수 또는 대수적 랭크가 있으며, 이는 다음 정의로 주어진다.
+
+\emph{정의 II: 유리함수계에서 대수적으로 독립인 $\rho$개의 함수를 제시할 수 있지만, 그 계에서 택한 임의의 $(\rho+1)$개 함수는 대수적으로 종속일 때, 그 계는 대수적 랭크 $\rho$를 갖는다.}\srcfn{***)}{$\rho$개의 함수 $f_1(x)\cdots f_\rho(x)$는 모든 관계
+\[
+F\bigl(f_1(x)\cdots f_\rho(x)\bigr)=0\quad(x_1\cdots x_n\text{에 관한 항등식})
+\]
+로부터 다음이 따라 나올 때 대수적으로 독립이라 한다.
+\[
+F(\lambda_1\cdots \lambda_\rho)=0\quad(\lambda_1\cdots \lambda_\rho\text{에 관한 항등식}).
+\]
+반대의 경우에는 이 함수들을 대수적으로 종속이라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U12_r2.tex
+% sha256: 29A5EC845B7DF4AB6DEBC55FFFB419671BCA223410899D4EF46EE3E15134A74D
+$n$개의 부정원에 관한 (유한개 또는 무한개의) 유리함수로 이루어지고 대수적 랭크가 $\rho$인 계는 이중 첨자를 사용하여
+\[
+  \Ssys_{n\rho}
+\]
+로 나타내기로 한다. 특히
+\[
+  \Kfield_{n\rho}
+\]
+는 $n$개의 부정원에 관한 대수적 랭크 $\rho$의 체를 뜻한다. 다음 부등식이 성립한다.
+\[
+  1\leq \rho\leq n.
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U13_r2.tex
+% sha256: FD3BA75FD5A94117D83815121B59B003EAF1E7AE8B983AAECA667A11B20461FF
+체 $\Kfield_{nn}$과 $\Kfield_{n\rho}$의 몇 가지 예를 더 제시한다.
+
+1. 체 $\Kfield_{nn}$은 라그랑주 종영역이며, 이는 다음과 같이 정의할 수 있다.
+\begin{quote}
+\glqq{}$x_1\cdots x_n$의 유리함수(및 다항함수) 가운데 $x_1\cdots x_n$의 한 순열군 $G$의 순열들을 허용하는 함수 전체.
+\grqq{}
+\end{quote}
+이 체들은 항상 대칭함수체를 포함하며, 따라서 대수적으로 독립인 $n$개의 기본대칭함수도 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T02_U14_r2.tex
+% sha256: 2600117B81BD77141A148DB34F75A3FB29925E98236CE7BDEC7820C881852FB8
+2. 체 $\Kfield_{n\rho}$의 예로는 하나 또는 여러 기본형식의 유리불변식(및 다항불변식) 전체로 이루어진 사영불변식체가 있다.\srcfn{*)}{행렬식이 $1$인 변환만을 고려하는 편이 적절하다. 그러면 임의로 많은 불변식의 모든 유리결합은 다시 그 변환을 허용하며, 실제로 체를 얻게 된다. 동차인 등중(等重) 불변식만 따로 취하면 체를 이루지 않지만, 계 $\Ssys_{n\rho}$는 이룬다.} 대수적으로 독립인 불변식의 수는 언제나 계수의 수보다 작으므로 $\rho<n$이다.
+
+사영군의 부분군에 대한 불변식체에도 같은 사실이 성립한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T03_U15_r2.tex
+% sha256: D375C9DC0DF5E8765EDAF083F0497FA224756335F12F76BC179CA87367545A83
+\section*{\S\ 2. 대수적으로 종속인 함수들에 관한 보조정리.}
+
+이 절의 보조정리에 의해 \S\ 3에서 한 계의 대수적 랭크가 진정한 특성수임이 드러날 것이다. 즉 이 보조정리는, $\rho$개의 대수적으로 독립인 함수가 대수적으로 독립인 채로 남도록 몇몇 부정원에 잇따라 수치를 특수화할 때, 이 $\rho$개 함수에 대수적으로 종속인 임의의 함수가 항등적으로 영이 되거나 부정형이 되는 일이 없음을 보여 준다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T03_U16_r2.tex
+% sha256: A7D5133C63D4189FAF52ABB91F5D810C33B5E2D7C10F6B12BD8B948DEC1E7BF1
+그러므로 계
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(1)& g_1(x),\ g_2(x),\ldots,g_\rho(x)
+\end{array}
+\]
+가 대수적 랭크 $\rho$ --- 여기서 $\rho<n$ --- 를 갖고, $h(x)$가 함수들 (1)에 대수적으로 종속인 유리함수라고 하자. 알려진 정리들에 따르면 (1)의 야코비 행렬의 랭크는 $\rho$이다. 따라서 부정원들은 다음이 성립하도록 번호가 매겨져 있다고 하자:
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(2)& \displaystyle
+\frac{\partial(g_1\ g_2\cdots g_\rho)}{\partial(x_1\ x_2\cdots x_\rho)}
+=\frac{\Gamma(x)}{G(x)^{\rho+1}}\ne0,
+\end{array}
+\]
+여기서 잘 알려진 바와 같이 $G(x)$는 함수들 (1)의 공통분모를 뜻한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U17_UNCHECKED.tex
+% sha256: A8B395E696DA0FBCFC168F9C9C6071AF9F46F9631347FEE8539E6377CD42DF4C
+\emph{이제 수 $a$를 곱 $G(x)\cdot\Gamma(x)$가 $(x_i-a)$로 나누어떨어지지 않도록 택하자}. 여기서 $i$는 $\rho+1,\rho+2,\ldots,n$ 가운데 하나를 뜻한다. 그러면 $x_i=a$일 때 함수들 (1)의 공통분모는 0이 될 수 없고, $\rho$개의 함수
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(3)& [g_1(x)]_{x_i=a},\ldots,[g_\rho(x)]_{x_i=a}
+\end{array}
+\]
+도 대수적으로 독립이다. 앞으로 계 (1)의 대수적 랭크는 대입 $x_i=a$에 의해 보존된다고 말하기로 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U18_UNCHECKED.tex
+% sha256: 96158DD395A0A99BE3166E8039A0B0F379238ECBD3E8FFC59884EE8F04A55429
+함수들 (1)에 관하여 $h(x)$가 만족하는 기약방정식이 다음과 같이 주어졌다고 하자:
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(4)& A_0(g_1\cdots g_\rho)\cdot h(x)^\tau
+ +A_1(g_1\cdots g_\rho)\cdot h(x)^{\tau-1}
+ +\cdots+A_\tau(g_1\cdots g_\rho)=0,
+\end{array}
+\]
+여기서 $A_0(g_1\cdots g_\rho)$와 $A_\tau(g_1\cdots g_\rho)$는 항등적으로 영이 되지 않는다. 이 식으로부터 다항식들 사이의 항등식을 얻기 위해 다음과 같이 둔다:
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(5)& g_i(x)=G_i(x):G(x);\qquad h(x)=H_1(x):H_2(x),
+\end{array}
+\]
+그리고 $h(x)$가 기약표현으로 주어졌다는 가정에 의해 $H_1(x)$과 $H_2(x)$가 서로소임을 주목한다. (5)에 의해 (4)는 다음과 같이 바뀐다:
+\[
+\begin{array}{@{}r@{\quad}l@{}}
+(6)& \begin{aligned}[t]
+&B_0(G\,G_1\cdots G_\rho)\cdot G(x)^{\sigma_0}\cdot H_1(x)^\tau
++B_1(G\,G_1\cdots G_\rho)\cdot G(x)^{\sigma_1}\cdot H_1(x)^{\tau-1}H_2(x)\\
+&\quad+\cdots+B_\tau(G\,G_1\cdots G_\rho)\cdot G(x)^{\sigma_\tau}\cdot H_2(x)^\tau=0,
+\end{aligned}
+\end{array}
+\]
+여기서 $B_k$는 $G,G_i$의 동차형식이고, 음이 아닌 지수 $\sigma_k$ 가운데 적어도 하나는 0이어야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U19_UNCHECKED.tex
+% sha256: AC1C363178B097953C016BFD85BD384F63B9518DBA4804DDEB075A9D88ECFB9B
+이제 $H_1(x)$가 $(x_i-a)$로 나누어떨어진다고 가정하면, (6)에 의해
+\[
+  B_\tau(G\,G_1\cdots G_\rho)\cdot G(x)^{\sigma_\tau}\cdot H_2(x)^\tau
+\]
+도 $(x_i-a)$로 나누어떨어질 것이다. 가정에 따라 $G(x)$에 대해서는 이것이 배제되어 있다. 따라서 $B_\tau$가 나누어떨어진다면
+\[
+  A_\tau=B_\tau:G^\lambda
+\]
+도 나누어떨어지게 되고, 함수들 (3) 사이에 관계 $A_\tau=0$이 성립하게 되는데, 이는 가정한 대수적 독립성에 어긋난다.
+끝으로 $H_1(x)$과 서로소인 $H_2(x)$도 $(x_i-a)$로 나누어떨어질 수 없다\srcfn{*)}{기약표현에 근거한 이 마지막 결론은, 나머지 가정들을 유지하면서 $x_i=a$, $x_k=b$를 대입하는 경우에는 더 이상 내릴 수 없을 것이다. 그 경우 $H_1(x)$과 $H_2(x)$가 동시에 영이 될 수 있으므로 몫은 대입에 의해 부정형 $=\frac00$이 될 것이다. 예컨대
+\[
+ h(x)=\frac{x_3(\alpha x_1+\beta x_2)+x_4(\gamma x_1+\delta x_2)}
+ {x_3(\alpha' x_1+\beta' x_2)+x_4(\gamma' x_1+\delta' x_2)}
+\]
+에 $x_3=0$, $x_4=0$을 대입하는 경우가 그러하다.}; 따라서 $H_1(x)$가 $(x_i-a)$로 나누어떨어진다는 가정은 모순에 이른다. 같은 방식으로 $H_2(x)$도 $(x_i-a)$로 나누어떨어질 수 없음을 보인다. 그러므로 함수 $[h(x)]_{x_i=a}=k(x)$는 항등적으로 영이 될 수도, 부정형이 될 수도 없다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U20_UNCHECKED.tex
+% sha256: 2C923333710848C0BDE4B4F538C33BB21F8DFBFAAF7272A0E5CED4A4195E0DCE
+계 (3)과 다시 기약표현으로 주어졌다고 가정하는 함수 $k(x)$에는 위의 논법을 다시 적용할 수 있으며, 이 절차를 계속하면 마침내 다음 보조정리에 이른다.
+
+\emph{보조정리: 두 계}
+\[
+\begin{array}{c}
+g_1(x),\ g_2(x),\ldots,\ g_\rho(x),\\
+g_1(x),\ g_2(x),\ldots,\ g_\rho(x),\ h(x)
+\end{array}
+\]
+\emph{는 각각 대수적 랭크 $\rho$ --- 여기서 $\rho<n$ --- 를 갖는다고 하고, 예컨대 다음이 성립한다고 하자.}
+\[
+ \frac{\partial(g_1\cdots g_\rho)}
+ {\partial(x_1\cdots x_\rho)}
+ =\frac{\Gamma(x)}{G(x)^{\rho+1}}\ne0.
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U21_UNCHECKED.tex
+% sha256: 24DCDF0C062D39CC32256CBD1D398990A32AA590DE845E6104F5D0A84EF4C65C
+\emph{수들}
+\[
+ a_n,\ a_{n-1},\ldots,\ a_{\rho+1}
+\]
+\emph{은 다음 대입에 의해}
+\[
+ x_n=a_n,\quad x_{n-1}=a_{n-1},\ldots,\quad x_{\rho+1}=a_{\rho+1}
+\]
+\emph{곱 $G(x)\cdot\Gamma(x)$가 영이 되지 않도록 --- 즉 계 (1)의 대수적 랭크가 보존되도록 --- 택한다고 하자. 잇따른 대입들}
+\[
+\begin{array}{c}
+[h(x)]_{x_n=a_n}=h^{(n-1)}(x);\quad
+[h^{(n-1)}(x)]_{x_{n-1}=a_{n-1}}=h^{(n-2)}(x);\quad\cdots;\\[0.25em]
+[h^{(\rho+1)}(x)]_{x_{\rho+1}=a_{\rho+1}}=h^*(x_1,x_2,\ldots,x_\rho)
+\end{array}
+\]
+\emph{에서는 함수들 $h(x),h^{(n-1)}(x),\ldots,h^{(\rho+1)}(x)$을 각각 기약표현으로 만든다고 하자. 이 가정들 아래에서는 함수 $h^*(x_1\cdots x_\rho)$의 분자도 분모도 항등적으로 영이 될 수 없으며, 이 함수는 $\frac00$이 될 수도 없다.}\srcfn{**)}{잇따른 대입은 예컨대 앞 주석의 함수 $h(x)$에서 다음을 준다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T03_U22_UNCHECKED.tex
+% sha256: F09F8FC5A78E6FBB070706014F9FF4B31567BB758B68388D8F97D9FD94814619
+\[
+ [h(x)]_{x_4=0}=h^{(3)}(x)=\frac{\alpha x_1+\beta x_2}{\alpha' x_1+\beta' x_2},\qquad
+ h^*(x_1,x_2)=\frac{\alpha x_1+\beta x_2}{\alpha' x_1+\beta' x_2}.
+\]}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U23_UNCHECKED.tex
+% sha256: 07E3C4D7149A10F768C7ACD3C228A7D2556E11043442BC062C1C1B517C39C4AC
+\section*{\S\ 3. 계 $\Ssys_{n\rho}$에서 계 $\Ssys^*_{\rho\rho}$로의 일대일 대응.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T04_U24_r2.tex
+% sha256: CAE3C84D17DDB54276324F923E38E824D06C7EF010F8493006C9B260DC5160C7
+보조정리로부터 몇몇 부정원을 수로 바꿈으로써 계 $\Ssys_{n\rho}$를 계 $\Ssys^*_{\rho\rho}$로 보내는 사상을 곧바로 얻게 된다. 이에 따라 대수적 랭크 $\rho$는 진정한 특성수로 나타난다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T04_U25_r2.tex
+% sha256: 92F6A14F5898AD951FF89018330CF219743CDBCB320FC0AC42F4987145219500
+$\Ssys_{n\rho}$의 대수적 랭크가 $\rho$이므로, $\Ssys_{n\rho}$에는 대수적으로 독립인 $\rho$개의 함수
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& g_1(x)\cdots g_\rho(x),
+\end{array}
+\]
+가 존재한다. 또한 $f(x)$가 $\Ssys_{n\rho}$의 임의의 함수를 나타내면, 계
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)& g_1(x)\cdots g_\rho(x),\ f(x)
+\end{array}
+\]
+도 대수적 랭크 $\rho$를 가지며, 계 (1)과 (2)는 보조정리의 조건을 충족한다.\srcfn{*)}{필요하다면 부정원들의 번호를 다시 매긴다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U26_UNCHECKED.tex
+% sha256: CC583256C5E138164E5B66AD31BE979889A5FD4FA58801907D29333A416BF2D0
+그러므로 보조정리에 따라 수
+\[
+ a_n,\ a_{n-1},\ldots,\ a_{\rho+1}
+\]
+를, 계 (1)의 대수적 랭크 $\rho$가 대입에 의해 보존되도록 정하면 --- 이는 임의로 많은 방식으로 가능하다 --- 다음과 같이 정의되는 함수에서
+\[
+\begin{array}{c}
+[f(x)]_{x_n=a_n}=f^{(n-1)}(x);\quad
+[f^{(n-1)}(x)]_{x_{n-1}=a_{n-1}}=f^{(n-2)}(x);\quad\cdots;\\[0.25em]
+[f^{(\rho+1)}(x)]_{x_{\rho+1}=a_{\rho+1}}=f^*(x_1\cdots x_\rho)
+\end{array}
+\]
+곧
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& f^*(x_1\cdots x_\rho)
+\end{array}
+\]
+에서는 분자도 분모도 항등적으로 사라질 수 없다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U27_UNCHECKED.tex
+% sha256: 66AF3DEAD8F29E4C4EF7850B9CAECD598750B508181A455BBC8F8EDE755C58FA
+이제 $f(x)$가 $\Ssys_{n\rho}$에 속하는 모든 함수(유한개일 수도 무한개일 수도 있다)를 두루 나타내게 하자. 모든 함수 (3)의 전체로 이루어진 계를 생각하자. 이 계는 다음 성질을 갖는다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U28_UNCHECKED.tex
+% sha256: 059F3E0CFF909FA88687F1E909B44C3886072B77CBBD347AAA2FD18EED93A5C6
+1. 이 계는 대수적 랭크 $\rho$를 갖는다. 실제로 이 계는 (1)에서 생기는 함수들
+\[
+g_1^*(x_1\cdots x_\rho),\ldots,g_\rho^*(x_1\cdots x_\rho),
+\]
+을 포함하며, 이 함수들은 $a_n,a_{n-1},\ldots,a_{\rho+1}$의 선택으로 인해 대수적으로 독립이다. 그러므로 이 계를
+\[
+\Ssys^*_{\rho\rho}
+\]
+로 나타내기로 한다.\srcfn{**)}{여기서 $f^*(x)$, $g^*(x)$, \ldots 는 이하 각각 모두 사상 함수, 즉 $x_1\cdots x_\rho$의 함수로 이해한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U29_UNCHECKED.tex
+% sha256: 7BBB70AF2C65B6CB154BDBDADEE1963A4D11305E9A11BB04BD5F73F27A8F5D9F
+2. 함수 $f(x)$와 $f^*(x)$ 사이의 대응은 예외 없이 일대일이다.
+
+실제로 $f_1(x)$와 $f_2(x)$가 $\Ssys_{n\rho}$에 속하면, 그 차
+\[
+d(x)=f_1(x)-f_2(x)
+\]
+도 계 (1)에 대수적으로 종속이며, 또한 다음이 성립한다:
+\[
+d^*(x)=f_1^*(x)-f_2^*(x).
+\]
+$d(x)$는 계 (1)과 함께 보조정리의 조건을 충족하므로,
+\[
+d(x)\ne0
+\]
+이면 반드시
+\[
+d^*(x)\ne0
+\]
+이다. 즉 $\Ssys_{n\rho}$의 서로 다른 함수들에는 $\Ssys^*_{\rho\rho}$의 서로 다른 함수들이 대응한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U30_UNCHECKED.tex
+% sha256: FE646A48F0B05AF4A2A3D5DB8E6ABCD8F26F825D6ECF39FC07AC6BB1624F295A
+3. $\Ssys^*_{\rho\rho}$에 속하는 함수들 사이의 임의의 관계식
+\[
+F\bigl(f_1^*(x),f_2^*(x),\ldots,f_k^*(x)\bigr)=0
+\quad\text{$x_1\cdots x_\rho$에 관하여 항등적으로}
+\]
+으로부터 $\Ssys_{n\rho}$에 속하는, 각각 유일하게 대응하는 함수들에 대해 다음이 따라 나온다:
+\[
+F\bigl(f_1(x),f_2(x),\ldots,f_k(x)\bigr)=0
+\quad\text{$x_1\cdots x_n$에 관하여 항등적으로}.
+\]
+실제로 $f_1(x),f_2(x),\ldots,f_k(x)$와 마찬가지로 이 함수들의 모든 유리 결합도 계 (1)에 대수적으로 종속이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U31_UNCHECKED.tex
+% sha256: 84A82E2FF065ABBD483560664C8BE682293CF5EC348FA7D8FB0B7C65E12BF822
+또한 (4)의
+\[
+\begin{array}{@{}l@{\quad}l@{}}
+(4)& h(x)=F\bigl(f_1(x)\cdots f_k(x)\bigr):\\
+& h^*(x)=F\bigl(f_1^*(x)\cdots f_k^*(x)\bigr).
+\end{array}
+\]
+로부터, 보조정리에 따라
+\[
+h(x)\ne0\quad\text{이면 또한}\quad h^*(x)\ne0;
+\]
+이 따른다.
+q. e. d.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U32_UNCHECKED.tex
+% sha256: 2280F90D050885B4A9B1D06BCDDF80DB41B8C5BB8BA9883FF7FC07BED295E031
+요약하면 다음 정리를 얻는다.
+
+\emph{정리 I: (유한 또는 무한히 많은) 유리함수들로 이루어진 각 계 $\Ssys_{n\rho}$에는, $\Ssys^*_{\rho\rho}$의 함수들 사이에 성립하는 모든 관계가 $\Ssys_{n\rho}$에서도 보존되고 그 역도 성립하도록, 계 $\Ssys^*_{\rho\rho}$를 임의로 많은 방식으로 일대일 대응시킬 수 있다. 이때 체(體) $\Kfield_{n\rho}$에는 (4)에 따라 특히 다시 체(體) $\Kfield^*_{\rho\rho}$가 대응한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U33_UNCHECKED.tex
+% sha256: E2C7B9D7916A9C9158B758CF743A3D65B28298DFBB2D32B2D8884CF35B431CD5
+정리 I로부터 앞으로의 모든 증명을 단순하게 하는 다음 따름결과도 얻는다. \emph{계 $\Ssys_{n\rho}$의 함수들 사이의 유한 또는 무한히 많은 관계로 특징지어지는 계 $\Ssys_{n\rho}$의 성질은, 그것이 하나의 사상계 $\Ssys^*_{\rho\rho}$에 대하여 성립하기만 하면 계 $\Ssys_{n\rho}$에 대해서도 성립한다.}
+
+이 따름결과를 줄여서 \glqq{}전이 원리\grqq{}라고 부른다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T04_U34_UNCHECKED.tex
+% sha256: 6E6E4D25E3091EC30F268123A8BB25036A8F8928602926494D166F0AE7DFB784
+이 사상의 가장 간단한 예는 대수적 불변식 이론이다. 실제로 선형변환을 통해 기본형식의 몇몇 계수를 언제나 수치적으로 정하여, 특수형식에 대해 성립하는 모든 관계가 일반적으로도 보존되도록 할 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U35_UNCHECKED.tex
+% sha256: FBE9C32939888DD3A1E2ADA1BAA32EA89A75A5B9A247E4E436421E4203808750
+\section*{\S\ 4. 체(體) $\Kfield_{n\rho}$의 유리기저.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U36_UNCHECKED.tex
+% sha256: 8887077F873D3BC6EC66A2EB2A17054CB8C3E75440B39736431430AE2BEDD425
+이하에서 기저 개념을 중심으로 전개되는 연구에서는 시종일관 \S\ 3의 \glqq{}전이 원리\grqq{}를 이용한다. 우선 체(體)에 대하여 기저의 존재를 증명하지만, 정의들은 일반적으로 제시한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U37_UNCHECKED.tex
+% sha256: CE3494F79253522BCFE40FC7D3E26207D47ACB18F71E14BDB92339086909A232
+\emph{정의 III: $\Ssys_{n\rho}$에 속하는 유한개의 함수는, $\Ssys_{n\rho}$의 모든 함수를 $\Omega$의 계수를 갖는 이 유한개 함수의 유리결합으로 나타낼 수 있을 때 유리기저라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U38_UNCHECKED.tex
+% sha256: FFC7190AB5528EDCF6DD233F2B273D3CDDF8B92421AAD76602AC3DDEA6A81085
+유리기저로부터 유도된 계의 대수적 랭크는 그 유리기저의 대수적 랭크와 같으므로, 유리기저는 대수적으로 독립인 함수 $\rho$개를 포함해야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T05_U39_r2.tex
+% sha256: 2F3700FA2C11BE3BCC8531AA1F804D7AAB8AA1B023DB70E3800012EF8814985F
+먼저 유리기저의 존재 증명에 전이 원리를 적용할 수 있음을 보인다. 실제로 정의 III는 다음과 같이 말할 수 있다:
+
+$\Ssys_{n\rho}$에 속하는 함수들
+\[
+g_1(x),\ g_2(x),\ldots,g_k(x)
+\]
+는 다음 무한히 많은 관계가 성립할 때 그리고 그때에만 유리기저를 이룬다:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& f(x)=\gamma\bigl(g_1(x)\cdots g_k(x)\bigr),
+\end{array}
+\]
+여기서 $f(x)$는 $\Ssys_{n\rho}$의 모든 함수를 두루 나타내고, $\gamma$는 $f$에 따라 달라지는 $k$개 인수의 유리함수를 뜻한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U40_UNCHECKED.tex
+% sha256: BA59C2B6C0BD76FBFF3F1B606376CDBD7EB39E952E18E4CBCCB45127A566B2FF
+그러므로 사상계 $\Ssys^*_{\rho\rho}$에
+\[
+g_1^*(x),\ g_2^*(x),\ldots,g_k^*(x)
+\]
+로 주어진 유리기저가 있고, 이것이 관계
+\[
+f^*(x)=\gamma\bigl(g_1^*(x)\cdots g_k^*(x)\bigr)
+\]
+를 귀결한다면, 정리 I에 따라 $\Ssys_{n\rho}$에서 관계 (1)이 성립한다. 즉 \emph{유리기저에 대한 전이 원리}는 다음과 같다:
+
+\emph{사상계 $\Ssys^*_{\rho\rho}$에 유리기저가 존재하면 원래 계 $\Ssys_{n\rho}$에도 유리기저가 존재한다.}\srcfn{*)}{여기서 다루는 각 기저 문제에 대해서도 전이 원리는 이에 상응하게 진술된다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U41_UNCHECKED.tex
+% sha256: 74F9EF7AAFD1E2B49CB3D23D24F27068AE8541DC888AF7CC18D3B3F498D608CB
+모든 체(體) $\Kfield_{n\rho}$에 대한 유리기저의 존재를 증명하기 위해, 따라서 우리는 체(體) $\Kfield^*_{\rho\rho}$만을 다루면 충분하다. 여기서는 E. Steinitz가 사용한 논법을 직접 일반화하면 목적에 이른다.\srcfn{*)}{E. Steinitz, Algebraische Theorie der Körper, \S\ 24, Crelles Journ. 137 (1909).}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T05_U42_r2.tex
+% sha256: 5DB38BBC624585757255B588297ED91C6805D7542AED79234A6C476F0FD36C84
+$\Kfield^*_{\rho\rho}$에서 택한 $\rho$개의 대수적으로 독립인 함수로 이루어진 다음 계를 생각하자.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)& g_1^*(x_1\cdots x_\rho),\ldots,g_\rho^*(x_1\cdots x_\rho)
+\end{array}
+\]
+$x_1\cdots x_\rho$를 소거하면 $\rho$개의 관계식이 얻어진다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& F_1\bigl(g_1^*(x)\cdots g_\rho^*(x),x_1\bigr)=0,\ldots,
+F_\rho\bigl(g_1^*(x)\cdots g_\rho^*(x),x_\rho\bigr)=0,
+\end{array}
+\]
+각 관계식 $F_i=0$에는 부정원 $x_i$가 실제로 나타난다. 그렇지 않으면 가정과 달리 계 (2)의 함수들 사이에 대수적 종속관계가 생길 것이기 때문이다. 관계식 (3)은 다음을 뜻한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T05_U43_r2.tex
+% sha256: D638640B73321BDC9CAE3ABF4F08AC29582438048A277A27B4E8F416B6919BB0
+\[
+x_1,x_2,\ldots,x_\rho
+\]
+가
+\[
+\Omega\bigl(g_1^*(x)\cdots g_\rho^*(x)\bigr)
+\]
+에 관하여 대수적 원소라는 것이다. 따라서 $x_1\cdots x_\rho$를 첨가하여 생기는 체(體)
+\[
+\Omega\bigl(g_1^*\cdots g_\rho^*,x_1\cdots x_\rho\bigr)=\Omega(x_1\cdots x_\rho)
+\]
+는 $\Omega(g_1^*\cdots g_\rho^*)$ 위의 (유한) 대수적 확대체이다. 알려진 정리\srcfn{**)}{예컨대 Weber, Lehrbuch d. Algebra 1, \S\ 144 (제1판) 또는 \S\ 55 (축약판) 참조.}에 따라 $\Kfield^*_{\rho\rho}$는 $\Omega(g_1^*\cdots g_\rho^*)$와 $\Omega(x_1\cdots x_\rho)$의 중간체로서 그 자체가 $\Omega(g_1^*\cdots g_\rho^*)$ 위의 대수적 확대체이며, 한편 $\Omega(x_1\cdots x_\rho)$는 $\Kfield^*_{\rho\rho}$ 위의 대수적 확대체이다. 그러므로 $\Kfield^*_{\rho\rho}$는 $\Omega(g_1^*\cdots g_\rho^*)$에 $\Kfield^*_{\rho\rho}$의 유한 개 원소를 첨가하여 얻어지며, 또는 적절히 택한 함수 \emph{하나}를 첨가하여도 얻어진다. 즉,
+\[
+\Kfield^*_{\rho\rho}
+=\Omega(g_1^*\cdots g_\rho^*,g_{\rho+1}^*\cdots g_k^*)
+=\Omega(g_1^*\cdots g_\rho^*g_0^*).
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U44_UNCHECKED.tex
+% sha256: 6F9B3B52F83EA586122B13FEDB9FC83EE194B748294EBC2B74243CB4C255AF97
+전이 원리에 따라 다음을 얻는다.
+
+\emph{정리 II: 모든 체(體) $\Kfield_{n\rho}$는 대수적 랭크 $\rho$의 유리기저를 갖는다. 특히 이 유리기저는 많아야 $\rho+1$개의 함수를 포함하도록 택할 수 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U45_UNCHECKED.tex
+% sha256: AEB80B792751924B70A88CFF7BF01C180256F93BD668DA36380F82565E33B6F0
+$\Kfield_{n\rho}$에서 택한 $\rho$개의 대수적으로 독립인 함수로 이루어진 임의의 계가 $h_1(x)\cdots h_\rho(x)$로 주어졌다고 하자. 이 계는 위의 방법으로 다음 유리기저까지 확장할 수 있다.
+\[
+h_1(x)\cdots h_\rho(x);\ h_{\rho+1}(x)\cdots h_\sigma(x)
+\]
+정의 성질에 따라 다음 관계식들이 존재한다.
+\[
+\begin{array}{ll}
+h_i(x)=\chi_i\bigl(g_1(x)\cdots g_k(x)\bigr)&(i=1,2,\ldots,\sigma),\\
+g_j(x)=\psi_j\bigl(h_1(x)\cdots h_\sigma(x)\bigr)&(j=1,2,\ldots,k),
+\end{array}
+\]
+여기서 $\chi_i$, $\psi_j$는 각각 그 인수들의 유리함수를 뜻한다. 즉,
+
+임의의 한 유리기저로부터 다른 모든 유리기저가 쌍유리 변환으로 얻어진다. 또한,
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T05_U46_UNCHECKED.tex
+% sha256: CCA26592F2B7CE7A6CC262F7F6697D1802693F2FDC65E08B11017004DEBE3834
+만일
+\[
+h_1(x)\cdots h_\rho(x)
+\]
+가 $\Kfield_{n\rho}$에서 택한 $\rho$개의 대수적으로 독립인 함수로 이루어진 임의의 계라면, $\Kfield_{n\rho}$는
+\[
+\Omega\bigl(h_1(x)\cdots h_\rho(x)\bigr)
+\]
+위의 (유한) 대수적 확대체이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U47_UNCHECKED.tex
+% sha256: 466E50F403532E4ABBC09400BA59A84F3DAB55C7F6CDAD0BAAD041C6C7895233
+\section*{\S\ 5. 체(體) $\Kfield_{n\rho}$의 인볼루션형식과 인볼루션기저.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U48_UNCHECKED.tex
+% sha256: 68C1F523C8A790E31F5998B0E539B847840347D4348207693C47916C8096296C
+\S\ 4에서 구성된 모든 유리기저는 임의로 택한 출발함수들에 의존한다는 단점을 지녔으나, 이제 우리는 \emph{그 체(體)에 의해 유일하게 결정되는 유리기저}가 존재함을 보인다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T06_U49_r2.tex
+% sha256: 7A7C83D43B17992DD1F95756AAE478B98A2A75F303EC11B4451D4EA6074DF0A1
+\S\ 4에 따르면 $\Omega(x_1\cdots x_\rho)$는 $\Kfield^*_{\rho\rho}$ 위의 --- 가령 차수가 $i$인 --- 대수적 확대체이며, 다음 등식 때문에
+\[
+\Kfield^*_{\rho\rho}(x_1\cdots x_\rho)=\Omega(x_1\cdots x_\rho)
+\]
+$\Kfield^*_{\rho\rho}$에 관하여 대수적인 원소 $x_1\cdots x_\rho$를 첨가함으로써 얻어진다. 따라서 우리는 $\Kfield^*_{\rho\rho}$에 관하여 기약다항식 $\Phi^*(z,u)$를 생각하며, 이 다항식은 다음을 근으로 갖는다.
+\[
+z=u_1x_1+u_2x_2+\cdots+u_\rho x_\rho=u(x),
+\]
+그리고 이 다항식은 $z$에 관하여 $i$차이다. 더 나아가 $\Phi^*(z,u)$는 $[z-u(x)]$와 켤레인 양들의 곱이므로 $z,u_1\cdots u_\rho$에 관한 $i$차 동차형식이다; 따라서 $z^i$의 계수로서 $u$에 무관한 $\Kfield^*_{\rho\rho}$의 함수를 포함한다. 이 최고차계수를 나누어 $1$로 만들면 기약다항식 $\Phi^*(z,u)$는 유일하게 결정된다. 이와 같이 정의한 동차형식
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U50_UNCHECKED.tex
+% sha256: 1FA91D182F6A14776746247ADB93E95CBE3EAA4C5AA173AC7EE68A1B79518793
+\[
+\begin{array}{@{}l@{\quad}l@{}}
+(1)& \displaystyle \Phi^*(z,u)=z^i+\sum{}'g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x_1\cdots x_\rho)\cdot
+z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+& \displaystyle\qquad(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\end{array}
+\]
+이 형식을 $\Kfield^*_{\rho\rho}$의 \emph{인볼루션형식}\srcfn{*)}{이 명칭의 이유는 이 절의 끝에서 드러난다; $\sum'$은 $z^i$를 제외한 모든 항에 걸쳐 합을 취한다는 뜻이다.}이라 부르기로 한다; (1)로부터 다음 형식을 얻는다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U51_UNCHECKED.tex
+% sha256: 7BB83B26B4E798BD00F0B75FA05265924BE45B0E197D51836012ECB6DBFB45AA
+\[
+\begin{array}{@{}l@{\quad}l@{}}
+(2)& \displaystyle \Phi(z,u)=z^i+\sum{}'g_{\alpha\alpha_1\ldots\alpha_\rho}(x)\cdot
+z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+& \displaystyle\qquad(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\end{array}
+\]
+이는 $\Kfield_{n\rho}$의 한 \emph{인볼루션형식}이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T06_U52_r2.tex
+% sha256: 56C0F8913BDA67A13710980C2927395CA27FB4E9D376B39F3E9C7E9FB41CCFB3
+인볼루션형식 $\Phi^*(z,u)$의 계수(係數)들은 $\Kfield^*_{\rho\rho}$의 유리기저를 이루게 된다. 즉 다음 관계가 성립한다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& \Omega\bigl(g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x_1\cdots x_\rho)\bigr)=\Kfield^*_{\rho\rho}\qquad(\alpha+\alpha_1+\cdots+\alpha_\rho=i).
+\end{array}
+\]
+이를 증명하기 위해, $\Phi^*(z,u)$가 $\Omega(g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x))$에 속하는 계수(係數)들을 가지며, $\Kfield^*_{\rho\rho}$에 관하여 기약이므로 이 부분체에 관해서는 더욱 기약임을 주목한다. 따라서 $\Phi^*(z,u)$는 $\Omega(g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x))$에 관한 $u(x)$의 기약방정식을 나타낸다. 여기서 $\Omega(x_1\cdots x_\rho)$는 $\Omega(g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x))$ 위의 차수 $i$인 대수적 확대체임이 따른다. $\Kfield^*_{\rho\rho}$가 $\Omega(g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x))$와 $\Omega(x_1\cdots x_\rho)$ 사이에 놓이므로, 알려진 바와 같이 차수의 동일성에서 체들의 동일성, 곧 관계 (3)이 따른다. 전이 원리에 따라 $\Phi(z,u)$의 계수(係數)들도 이에 대응하여 $\Kfield_{n\rho}$의 유리기저를 이룬다. 따라서 다음 정리를 얻는다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U53_UNCHECKED.tex
+% sha256: FDA7F7A7DAAB04488B33DF33875205358E0AB472BB8960DC9AB9BECDD0DAE14A
+\emph{정리 III: 인볼루션형식의 계수(係數)들은 체(體)에 의해 정해지는 유리기저, 곧 인볼루션기저를 이룬다. 체 $\Kfield^*_{\rho\rho}$에 대해서는 이 기저가 유일하게 정해진다.}\srcfn{*)}{체 $\Kfield_{n\rho}$의 경우 인볼루션형식은 사상에 의존할 수 있다. 미정 계수(係數)를 가진 사상을 사용하면 유일성을 얻을 수 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U54_UNCHECKED.tex
+% sha256: 61C6C8CCA30150BF0B36CE85B145AA07F0D3396D40C868D477EE7F16AB926EB2
+이제 이 사실과 인볼루션의 기하학적 이론 사이의 연관을 드러내는 무리적 해석을 제시한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U55_UNCHECKED.tex
+% sha256: E257F38EA86B1A4FF31C983E50ECE009EA5343CAE0F0084EF3426678656097EF
+$\Phi^*(z,u)$를 일차인수로 분해한 것이 어떤 확대체에서 다음과 같이 주어졌다고 하자.
+\[
+\begin{array}{@{}l@{\quad}l@{}}
+(4)& \Phi^*(z,u)=(z-u_1x_1-\cdots-u_\rho x_\rho)(z-u_1x_1^{(1)}-\cdots-u_\rho x_\rho^{(1)})\cdots\\[0.25em]
+& \qquad\qquad\quad (z-u_1x_1^{(i-1)}-\cdots-u_\rho x_\rho^{(i-1)}).
+\end{array}
+\]
+(1)과 비교하면 함수들
+\[
+g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x_1\cdots x_\rho)\qquad(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\]
+은 다음 양들의 열들에 대한 기본대칭함수와 항등적으로 같음을 알 수 있다.
+\[
+\begin{array}{@{}l@{\quad}cccc@{}}
+(5)&x_1&x_2&\cdots&x_\rho\\
+&x_1^{(1)}&x_2^{(1)}&\cdots&x_\rho^{(1)}\\
+&\vdots&\vdots&&\vdots\\
+&x_1^{(i-1)}&x_2^{(i-1)}&\cdots&x_\rho^{(i-1)}.
+\end{array}
+\]
+그러므로 $\Kfield^*_{\rho\rho}$의 모든 함수는 이 기본대칭함수들의 유리 결합으로서 양들의 열 (5)에 대하여 대칭이며, 거꾸로 양들의 열 (5)의 모든 대칭함수는 $\Kfield^*_{\rho\rho}$에 속한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U56_UNCHECKED.tex
+% sha256: 978275C936887BF5BD1E09176978F257ABCF007A1ADDD7F9C10D363968BFD2A4
+따라서
+\[
+f^*(x)=\frac{F^*(x)}{H^*(x)}
+\]
+가 $\Kfield^*_{\rho\rho}$의 모든 함수를 두루 취하면, 다음과 같은 무한히 많은 관계로 이루어진 계가 성립한다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(6)&\displaystyle \frac{F^*(x)}{H^*(x)}=\frac{F^*(x^{(1)})}{H^*(x^{(1)})}=\cdots=\frac{F^*(x^{(i-1)})}{H^*(x^{(i-1)})};
+\end{array}
+\]
+또는 이를 한데 쓰면 다음과 같다.
+\[
+F^*(x^{(k)})H^*(x^{(l)})-F^*(x^{(l)})H^*(x^{(k)})=0\qquad(k,l=0,1,\ldots,(i-1));
+\]
+여기서 $F^*(x^{(k)})$와 $H^*(x^{(k)})$는 각각 $F^*(x)$와 $H^*(x)$에 켤레이며 형식적으로 대칭이므로, 어느 것도 항등적으로 소멸하지 않는다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U57_UNCHECKED.tex
+% sha256: 0A40F10597FC29F788DA6AD3145DE8DE84A91B0E5CBD5A9667785FE585963D6B
+거꾸로, 무한히 많은 관계
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(7)&F^*(x)H^*(\xi)-H^*(x)F^*(\xi)=0,\qquad H^*(\xi)\ne0
+\end{array}
+\]
+를 만족하는 양들의 열 $\xi$ 각각은 양들의 열 (5)에 속한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T06_U58_r2.tex
+% sha256: 9B1FC37BB5E954FEEF40D32121D3A7292026E393D99EE21E66E37D5EAC34E340
+실제로 $G^*(x)$가 $\Phi^*(z,u)$의 계수들의 공통분모를 뜻한다고 하자. 그러면 가정 (7)에 따라 $\xi$에 관해서도 다항식인
+\[
+G^*(\xi)\cdot\Phi^*(z,u;\xi)
+\]
+는 항등적으로 소멸하지 않는다. 즉 $\Phi^*(z,u;\xi)$의 계수들은 부정형이 되지 않으며, 이 함수는 다음 근을 갖는다.
+\[
+z=u_1\xi_1+u_2\xi_2+\cdots+u_\rho\xi_\rho.
+\]
+따라서 (7)에 의해 $\Phi^*(z,u;x)$ 또한 $z=u(\xi)$를 근으로 갖는다. 즉 $\xi$는 양들의 열 (5)에 속한다. (6)에 따라, $\xi$가 켤레인 양들의 열에 관한 방정식계를 만족할 때에도 이에 상응하는 사실이 성립한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U59_UNCHECKED.tex
+% sha256: FA78D2A9696D1A7692D1A2A56EB5BD371431A59F5F9278D9F597C8C4B2FFA990
+\[
+F^*(x^{(k)})H^*(\xi)-H^*(x^{(k)})F^*(\xi)=0;\qquad H^*(\xi)\ne0,
+\]
+즉 양들의 열 (5)는 다음 방정식계의 해 $\xi$들로 정의된다.
+\[
+F^*(x)H^*(\xi)-H^*(x)F^*(\xi)=0;\qquad H^*(\xi)\ne0,
+\]
+여기서 $\frac{F^*(x)}{H^*(x)}$는 $\Kfield^*_{\rho\rho}$의 모든 함수를 두루 취한다. 이때 양들의 열 $x$는 어떤 켤레인 열로도 바꿀 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U60_UNCHECKED.tex
+% sha256: 4DF977C2E53C506B8A1C97C15BEA3F8DA96C2E75895F48E1C45349EBE8490CDA
+기하학적으로 각 열 $x$를 하나의 점으로 해석하면 이는 다음을 뜻한다. (7)의 해들은 $\rho$차원 선형공간 $\infty^\rho$ 안에서 각각 $i$개의 점으로 이루어진 군들을 나타내며, 그 군의 어느 한 점으로부터도 개별 군이 유일하게 정해진다. 이러한 점들의 군으로 이루어진 계를 \glqq{}\emph{선형공간의 인볼루션}\grqq{}이라 한다.\srcfn{*)}{(7)의 해들 가운데 $F^*(\xi)=0$, $H^*(\xi)=0$이 되는 까닭에 제외된 것들 --- 그리고 인볼루션기저에 대응하는 방정식계에서 제외된 해들도 마찬가지로 --- 을 인볼루션의 기본점이라 한다. 이때 동차화로 생기는 \glqq{}무한원에 놓인\grqq{} 점들도 함께 세어야 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U61_UNCHECKED.tex
+% sha256: 5A54186E37A7C010B69394E2ABC6A1C2881377FD4043239E6D459A8BE5492FC2
+이에 대응하여 체 $\Kfield_{n\rho}$에 의해, 선형공간 안에서 곡선, 곡면 등으로 이루어진 하나의 인볼루션이 특징지어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U62_UNCHECKED.tex
+% sha256: 50A0435324D5E6A22A868E55430B90B1FD4568D28DF03BE96629D039801C1C1F
+위에서 본 바에 따라, $\Kfield^*_{\rho\rho}$에 관한 $\Omega(x_1\cdots x_\rho)$의 차수 $i$는 부가조건 $H^*(\xi)\ne0$을 갖는 (7)의 해계의 수 --- 이를 $\Kfield^*_{\rho\rho}$의 해계라 부를 수 있다 --- 와 같다. 그러므로 인볼루션기저의 존재 증명에 쓰인 논법은 다음과 같은 무리적 표현도 허용한다.
+
+\glqq{}$\Lsys^*$가 $\Kfield^*_{\rho\rho}$의 한 부분체이고, 체 $\Lsys^*$의 모든 해계가 $\Kfield^*_{\rho\rho}$의 해계이기도 하면, $\Lsys^*$와 $\Kfield^*_{\rho\rho}$는 동일하다.\grqq{}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T06_U63_UNCHECKED.tex
+% sha256: 2AD0D71ECCA4D6FF0B80B39978ED0FC0CC498808889D0F1886F1C5934D045120
+전이 원리에 따라 $\Kfield_{n\rho}$의 부분체 $\Lsys$에도 이에 대응하는 명제가 성립한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U64_UNCHECKED.tex
+% sha256: 4279D0EA99D44D808A89297344914C9714C8AB0FE3CD3B251CC68177D79DAC8F
+\section*{\S\ 6. 체(體) $\Kfield_{n\rho}$의 최소기저.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U65_UNCHECKED.tex
+% sha256: F2532052C787A898E622277D3E76C5ECB6425132EA6994C95AF02132B7B07492
+이 절에서는 이미 알려진 정리들을 개관하되, 전이 원리와 유리기저의 존재로 가능해진 확장된 형태로 제시한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U66_UNCHECKED.tex
+% sha256: 9E687F6799EC83E03FB6F4356394B0CCC704A0FEB46C1BD306B9969649FE020D
+\emph{정의 IV: 체(體) $\Kfield_{n\rho}$의 유리기저가 함수의 최소 개수인 $\rho$개만을 포함하고, 따라서 이 함수들이 대수적으로 독립이어야 할 때 이를 최소기저라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U67_UNCHECKED.tex
+% sha256: 5F1CA8F100F668628616CEBA6875B185E869382A5F90F8EC273954A2FCDBDF28
+뤼로트, 카스텔누오보, 엔리케스의 정리들\srcfn{*)}{J. Lüroth: Beweis eines Satzes über rationale Kurven, Math. Ann. 9 (1875). --- G. Castelnuovo: Sulla razionalità delle involuzioni piane, Math. Ann. 44 (1893). --- F. Enriques: Sopra una involuzione non razionale dello spazio, Rend. Acc. Linc, Vol. 21, 21. Jan. 1912.}로부터 다음 사실들이 따른다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U68_UNCHECKED.tex
+% sha256: AF37F84B5C6C8B23FF8369B75CFB13CE40ED4BE649E89BB6C6BF2E3ADA4EB6BF
+I. 모든 체(體) $\Kfield_{n1}$에는 최소기저가 존재하며, 그것은 일차분수변환까지 유일하게 정해지는 그 체의 뤼로트 함수이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U69_UNCHECKED.tex
+% sha256: 835002813FE242587B6D8D18F420CC084DA786E25B922F02B7D6E887AC252C0F
+II. 체(體) $\Kfield_{n2}$에서는 계수영역 $\Omega$의 대수적 확대를 허용할 때 언제나 최소기저가 존재하고, 일반적으로는 그러한 경우에만 존재한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U70_UNCHECKED.tex
+% sha256: D97264D5ECC2DFE375BC77361323022B7ADF6BDD71F40831D4753A375C08878A
+III. 체(體) $\Kfield_{n\rho}$ ($\rho\ge3$)에는 일반적으로 최소기저가 존재하지 않는다. 최소기저를 갖는 특수한 체 $\Kfield_{n\rho}$의 특성화는 아직 시도되지 않았다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T07_U71_r2.tex
+% sha256: 21252F070647C23BA4932F0E95EE2337AE8D776DF0E14D04AFA8D69E31091A78
+E. 슈타이니츠가 체(體) $\Kfield^*_{11}$에 대한 뤼로트 정리에 관하여 제시한 증명\srcfn{**)}{앞의 문헌, \S\ 24.}을 간단히 개략한다:
+
+$\Phi^*(z,u)$를 $\Kfield^*_{11}$의 인볼루션형식이라 하고, $\psi^*(x)$를 $\Phi^*(z,u)$의 계수들 가운데 부정원 $x$를 실제로 포함하는 임의의 하나라 하자. $\Omega(\psi^*(x))$에 대한 $\Omega(x)$의 차수는 $\Kfield^*_{11}$에 대한 $\Omega(x)$의 차수와 같음이 드러나며, 이로부터 두 체가 동일함이 따른다. 또한 $\Omega(\chi^*(x))$가 $\Omega(\psi^*(x))$와 같다고 하자. 그러면 $\chi^*(x)$와 $\psi^*(x)$가 서로 유리적으로 종속되므로, 두 함수가 일차분수적으로 종속됨이 따른다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U72_UNCHECKED.tex
+% sha256: 82D1A266F9E14B798D447C376F950CA6FC5AF53EDC11FA3FBE9CC344D013DBF4
+그러므로 전이 원리에 따라 뤼로트 정리는 다음과 같이도 진술할 수 있다:
+
+\emph{체(體) $\Kfield_{n1}$의 최소기저는 인볼루션기저의 임의의 한 함수로 이루어진다. 또한 $\Kfield_{n1}$의 인볼루션기저에 속하는 임의의 두 함수는 서로 일차분수적으로 종속된다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U73_UNCHECKED.tex
+% sha256: D59EF07E559DCD7FE6271BC85E63D99C791BBDA7A1E71D24C983E97F69646C72
+G. 카스텔누오보는 세 함수로 이루어진 유리기저에서 유도되는 체(體) $\Kfield^*_{22}$에 관하여, 인볼루션의 기하학적 이론을 사용하여 사실 II를 증명한다. 계수영역 $\Omega$의 유한 대수적 확대에서도 전이 원리가 유지되므로, 유리기저의 존재에 의해 이 증명은 모든 체 $\Kfield_{n2}$에 대하여 성립한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\Noether_P06_Korean_T07_U74_UNCHECKED.tex
+% sha256: 1F14B92EA4B94144BE38E018893BFB3DA43958BD5FD5D9FA94E7F40DEC1CC09A
+III에 관해서는 엔리케스가 3차원 공간에서 비유리 인볼루션을 구성했다는 점, 즉 최소기저를 갖지 않는 체(體) $\Kfield_{33}$을 구성했다는 점에 주목해야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U75.tex
+% sha256: 99422EDB941303B1B718CC0BE96E092116FC1D940DE7464A8BF8676FCE39830D
+\section*{\S\ 7. 유리함수의 임의의 계 $\Ssys_{n\rho}$, 선형족 $\Lsys_{n\rho}$ 및 정역(整域) $\Jdom_{n\rho}$. 유리기저의 존재.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U76_r2.tex
+% sha256: E838BB201F2F156F1DF67E4A1707D09B96BAB7249AFAE77AE31C228098F9A5AE
+체(體) $\Kfield_{n\rho}$의 유리기저가 존재한다는 사실로부터 이제 유리함수와 다항함수의 임의의 계에도 유리기저가 존재한다는 결과가 나올 것이다. 우리는 이 계들을 덧셈, 곱셈, 나눗셈이라는 기본 연산을 거쳐 차례로 서로로부터 생겨나는 순서대로 배열한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U77_r2.tex
+% sha256: 13B5C0338FC3C0C1E397EC4A467E15F7EBAAB962222BC84E18F8EC28CB3AE137
+I. 언제나와 같이 $\Ssys_{n\rho}$는 $n$개의 부정원에 관한, 대수적 랭크가 $\rho$인 유리함수(또는 다항함수)의 임의의 계를 나타낸다. $\Omega$의 원소들도 이 계에 속하는 것으로 센다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U78.tex
+% sha256: EBC27330C96A20E88D06F2AF350EF797627114BC1918485C07CC12CD23F5C9B6
+II. 계 $\Lsys_{n\rho}$가 다음 조건들을 만족할 때 이를 \emph{선형족}이라 한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U79.tex
+% sha256: 8488EA1997ED78726F72C9AF5865DC46B330DD7C76CE754B1B511C59ECB45D92
+1. $\Lsys_{n\rho}$는 $f(x)$와 함께 언제나 $c\cdot f(x)$도 포함한다. 여기서 $c$는 $\Omega$의 임의의 원소이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U80.tex
+% sha256: E198168EAA4C1B704FDD4953A204CA58DCC8E51F9AB128CB01D2CE7BDA9AF092
+2. $\Lsys_{n\rho}$는 $f(x)$와 $g(x)$와 함께 언제나 $f(x)+g(x)$도 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U81.tex
+% sha256: 669BB29DFB5F8CD0F9B707248EF0D229666A06ED894FD516EE60DCC6FAD25F62
+III. 선형족 $\Jdom_{n\rho}$가 다음의 추가 조건을 만족할 때 이를 \emph{정역(整域)}이라 한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U82.tex
+% sha256: 4233CC10527A7FF960AF19B8E3ABED470FD19F8222DC2BA6170DA3B49D77F03E
+3. $\Jdom_{n\rho}$는 $f(x)$와 $g(x)$와 함께 언제나 $f(x)\cdot g(x)$도 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U83.tex
+% sha256: 66A433C9A9485FD4434620B27732A023676F7B2F856C3A84936ADBFEE64BA817
+IV. 정역(整域) $\Kfield_{n\rho}$가 다음의 추가 조건을 만족할 때 이를 \emph{체(體)}라 한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U84.tex
+% sha256: 6BBF396112030B19B094E3401DA1E3BA6A9463F6671CE7BD013CA8CFE2BC0FB5
+4. $\Kfield_{n\rho}$는 $f(x)$와 $g(x)$ --- 여기서 $g(x)\ne0$ --- 와 함께 언제나 몫 $f(x):g(x)$도 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U85.tex
+% sha256: D26BB1A69B121D8847094E661776764A6E0FEEAAE1B5BF10BFA301CC29D028BB
+조건 1부터 4까지는 \S\ 1에서 체에 대하여 제시한 조건들이다.\srcfn{*)}{$f(x)$와 $g(x)$는 0차일 수도 있다. 즉 $\Omega$의 원소일 수도 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U86.tex
+% sha256: B1E4ACE0467764F247DC5FB186C3C7559E6DF060FA8CE2D59820617CCCD20A5A
+이제 이 영역들을 차례로 서로로부터 유도한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U87.tex
+% sha256: 8708E9E7851BC73B0327FF64C50090BE6D90C9281CFD4254CF735A900920364D
+a) 임의의 계 $\Ssys_{n\rho}$에 다음 조건을 부과하여 이를 선형족 $\Lsys_{n\rho}$로 확대한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U88.tex
+% sha256: 1A970FC910E08E3C2EF5D99AFE9D15EF606C37E7F962FA049E07E60313A096E0
+$\Lsys_{n\rho}$는 $\Ssys_{n\rho}$와 함께, $\Ssys_{n\rho}$의 유한 개 함수로부터 $\Omega$의 계수를 써서 선형적으로 나타낼 수 있는 모든 함수 $h(x)$를, 그리고 오직 그러한 함수들만을 포함한다:
+\[
+h(x)=c_1f_1(x)+c_2f_2(x)+\cdots+c_kf_k(x),
+\]
+여기서 $f_1(x)\cdots f_k(x)$는 $\Ssys_{n\rho}$의 모든 함수를 두루 나타내고, $c_1\cdots c_k$는 $\Omega$의 모든 원소를 두루 나타낸다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U89.tex
+% sha256: 5C51D75DA34A19558A1317944F3F91A2EAE5E8648D28B2C9014AD72907B442C7
+이는 계의 함수들에 대한 유리 결합을 첨가해도 계의 대수적 랭크가 유지되기 때문이다. $\Lsys_{n\rho}$는 조건 1과 2를 만족하므로 선형족이다. 더 나아가 $\Ssys_{n\rho}$를 포함하는 모든 선형족은 조건 1과 2에 따라 $\Lsys_{n\rho}$도 포함하므로, $\Lsys_{n\rho}$는 $\Ssys_{n\rho}$를 포함하는 최소 선형족이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U90.tex
+% sha256: 7161F4207F786EA6549355B85B71AAEB57866BAE9B355A1A475570F0E938418F
+b) 이에 대응하여 선형족 $\Lsys_{n\rho}$로부터 이를 포함하는 최소 정역(整域) $\Jdom_{n\rho}$을 다음 조건으로 얻는다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U91_r2.tex
+% sha256: 6047CEC60A2070300E36DF30C7C7ED5C77CB33F088A788AA1213492635F7E8AC
+$\Jdom_{n\rho}$는 $\Lsys_{n\rho}$와 함께, $\Lsys_{n\rho}$의 유한 개 함수 $f_1(x)\cdots f_k(x)$의 $\Omega$-계수 \emph{다항식 결합}으로 나타낼 수 있는 모든 함수 $h(x)$를, 그리고 오직 그러한 함수만을 포함한다. 여기서 $f_1(x)\cdots f_k(x)$는 $\Lsys_{n\rho}$의 모든 함수를 두루 나타낸다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U92.tex
+% sha256: C16D75C921F8E408B2EC7459F982C16B3612F6F40FC57E7C9ED9A746623B1DBC
+c) 끝으로 정역(整域) $\Jdom_{n\rho}$로부터 이를 포함하는 최소 체(體) $\Kfield_{n\rho}$를 다음 조건으로 얻는다. $\Kfield_{n\rho}$는 $\Jdom_{n\rho}$와 함께, $\Jdom_{n\rho}$의 두 함수의 몫으로 나타낼 수 있는 모든 함수 $h(x)$를, 그리고 오직 그러한 함수만을 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U93.tex
+% sha256: 2A740A0935B6B2F5E988469C278A8C4E30CE3012199CB9F61DC1952D975645F6
+이 세 확대를 한 단계로 합치면 다음을 얻는다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U94.tex
+% sha256: 51EAD338ACE3A6D7F0C4AC0C8A481D6D166A9E90F4C9ED10AE8DA8AC735282D0
+\emph{모든 계 $\Ssys_{n\rho}$는 다음 조건에 따라 이를 포함하는 최소 체 $\Kfield_{n\rho}$로 확대할 수 있다:}
+
+\emph{$\Kfield_{n\rho}$는 $\Ssys_{n\rho}$와 함께, $\Ssys_{n\rho}$의 유한 개 함수 $f_1(x)\cdots f_k(x)$의 $\Omega$-계수 유리 결합으로 나타낼 수 있는 모든 함수 $h(x)$를, 그리고 오직 그러한 함수만을 포함한다. 여기서 $f_1(x)\cdots f_k(x)$는 $\Ssys_{n\rho}$의 모든 함수를 두루 나타낸다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U95.tex
+% sha256: 9F784C8644D08370669788736D390CA18622941ACFAB786E63E0FF3177FC391F
+마지막 사실로부터 임의의 영역에 대한 유리기저의 존재가 곧바로 따른다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U96.tex
+% sha256: 45045B359A25C2FE7E00998CA12B0B32E520D16B97D754588EF0D34A9A483EBB
+$\Kfield_{n\rho}$를 $\Ssys_{n\rho}$를 포함하는 최소 체라 하고, $\Kfield_{n\rho}$의 한 유리기저가 다음으로 주어진다고 하자:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)&h_1(x),\ h_2(x),\ldots,h_\sigma(x).
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U97.tex
+% sha256: 9015F790F87DA74C417466584F8DFCBF9C64B458A7AB14DFE854D35ACEFC4857
+$\Kfield_{n\rho}$의 정의에 따라 다음 관계들이 존재한다:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)&h_1(x)=r_1(g_1(x)\cdots g_\lambda(x));\quad\ldots;\quad h_\sigma(x)=r_\sigma(g_\mu(x)\cdots g_\nu(x)),
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U98_r2.tex
+% sha256: 568751DCE42511B26D335A20CD72B9D8C13ADF3885820BB4AF081FA3AAB85160
+여기서 $r_1\cdots r_\sigma$는 각자의 인수에 관한 유리함수이고,
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)&g_1(x)\cdots g_\lambda(x),\ldots,g_\mu(x)\cdots g_\nu(x)
+\end{array}
+\]
+는 모두 $\Ssys_{n\rho}$에 속한다. 관계 (2)에 따라 (3)도 (1)과 더불어 $\Kfield_{n\rho}$의 유리기저를 이룬다. 또한 (3)의 함수들이 $\Ssys_{n\rho}$에 속하므로, 이는 동시에 $\Ssys_{n\rho}$의 유리기저이다. 따라서 다음을 얻는다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U99_r2.tex
+% sha256: 150BBDFF08CE87C90DBF0ED0EDB960118AFE76F85962575398C4A19A8701F57C
+\emph{정리 IV: 유리함수(또는 다항함수)의 임의의 계 $\Ssys_{n\rho}$에는 그 계의 유한 개 함수로 이루어지고 대수적 랭크가 $\rho$인 유리기저가 존재한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U100.tex
+% sha256: C52967A9DE4FCD11DF5FC58EE385A484E4BEEE109B8BAC7368D1BAB02679B348
+이제 특별히 $\Lsys_{n\rho}$가 선형족이고,
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(4)&g_1(x)\cdots g_\rho(x);\ g_{\rho+1}(x)\cdots g_\nu(x)
+\end{array}
+\]
+가 $\Lsys_{n\rho}$의 유리기저라고 하자. 이를테면
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U101.tex
+% sha256: 04C9D76C04F185B7D942AC713A2D9125952857EE1304ADBED7F31C55A79F5CE6
+\[
+g_1(x)\cdots g_\rho(x)
+\]
+가 대수적으로 독립이라고 하자. 이제 다음과 같이 두면
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U102.tex
+% sha256: 3C8EC688FB28AA5211BF26F24138CDBDE3E538D24C375950FE8546633D1EE5C4
+\[
+g(x)=c_1g_{\rho+1}(x)+c_2g_{\rho+2}(x)+\cdots+c_{\nu-\rho}g_\nu(x),
+\]
+$c_i$들을 $\Omega$의 수들로 다음이 성립하도록 선택할 수 있다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U103.tex
+% sha256: AB318BA949579A549EF09CC653A6AF41B5B60032A3C297DD0D23FC6E938DA9ED
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(5)&g_1(x)\cdots g_\rho(x),\ g(x)
+\end{array}
+\]
+가 이를 포함하는 최소 체 $\Kfield_{n\rho}$의 유리기저가 된다. 그런데 $\Lsys_{n\rho}$는 선형족이므로 $g(x)$는 $\Lsys_{n\rho}$에 속하고, (5)는 $\Lsys_{n\rho}$의 유리기저를 이룬다. 즉,
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T08_U104_r2.tex
+% sha256: EA2A7F194D86C6F0D5E926A6CF307FB5F095A7F36ED9F6A20A0305F2C2544E44
+\emph{정리 V: 유리함수(또는 다항함수)의 모든 선형족 $\Lsys_{n\rho}$의 유리기저, 따라서 특히 모든 정역 $\Jdom_{n\rho}$과 모든 체 $\Kfield_{n\rho}$의 유리기저는 많아야 $\rho+1$개의 함수(그리고 적어도 $\rho$개)를 포함하도록 특별히 선택할 수 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U105.tex
+% sha256: 0F7C843E42990469B96FB8D6E9F9717A41015D42B08BDE22396003F574285C54
+따라서 \S\ 4에서 체에 대하여 얻은 유리기저 함수 수의 제한은 그 체가 선형족이라는 성질에 근거한다. 반면 최소기저가 존재하는 경우 $\rho$개의 함수로 제한되는 것은 체에 관한 모든 가정을 사용한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T08_U106.tex
+% sha256: 6475571FAA39C5E48ADF1D2BD5B005B64CD75B0E9B121A581900D1F865BC0152
+끝으로 \S\ 3 (4)에 따라 계와 그 계를 포함하는 최소 계의 모든 특징적 성질은 사상에서도 보존된다는 점을 언급한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U107.tex
+% sha256: 1E37A2F2AEDE13D05C1F537E396F3C4F34835A0077D7D5A6ECE229F6C7877774
+\section*{\S\ 8. 다항식으로 이루어진 정역(整域) $\Jdom_{n\rho}$의 인볼루션기저.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T09_U108_r2.tex
+% sha256: BDEF050FCF2BC884F67AF2E9DF3AB16BBE029C762576A540E46D10B2193B2126
+이하의 절들에서는 원소가 다항함수(다항식)인 계 $\Ssys_{n\rho}$를 다룬다. 우선 다항식으로 이루어진 정역(整域) $\Jdom_{n\rho}$를 다룬다. 이 정역 $\Jdom_{n\rho}$에 대해서는 먼저 나눗셈 관계의 개념을 정한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U109.tex
+% sha256: 73B484FBBF9F56FB556F74AD6631E3F824B82EB0BE887C605CF3746141C8C46F
+$F(x),G(x)$를 $\Jdom_{n\rho}$의 두 다항식이라 하고, $L(x)$를 이 다항식들의 공약수라 하여 다음이 성립한다고 하자:
+\[
+F(x)=L(x)\cdot F_1(x);\qquad G(x)=L(x)\cdot G_1(x).
+\]
+세 다항식 $L(x),F_1(x),G_1(x)$가 $\Jdom_{n\rho}$에 속할 때, 그리고 그때에만 $L(x)$를 \emph{$\Jdom_{n\rho}$에서의 공약수}라 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U110.tex
+% sha256: 4C1E9A88CEAC436C198EEE9B7A5D84C018FF736C6D8F48B0A7FB445408FAE54F
+$\Jdom_{n\rho}$의 두 다항식이 $\Jdom_{n\rho}$에서 공약수를 갖지 않을 때 이들을 \emph{$\Jdom_{n\rho}$에서 서로소}라 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U111.tex
+% sha256: B8C6A0CEB56775CAFE9C7B8A1A18D33DE017933E05A70AC5FE293A445BDFFED9
+$\Kfield_{n\rho}$를 $\Jdom_{n\rho}$를 포함하는 최소 체(體)라 하자. 그러면 정의에 따라 $\Kfield_{n\rho}$의 모든 함수는 다음과 같이 나타낼 수 있다:
+\[
+f(x)=F_1(x):F_2(x),
+\]
+여기서 $F_1(x),F_2(x)$는 $\Jdom_{n\rho}$에 속하며 $\Jdom_{n\rho}$에서 서로소이다. 이에 따라 $\Kfield_{n\rho}$의 여러 함수도 $\Jdom_{n\rho}$에서 공통분모로 통분할 수 있다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U112.tex
+% sha256: 82F62CF4CD73E9EA6087DF4E83B915913B9885156770415541D33165884AFE13
+\[
+f_1(x)=\frac{F_1(x)}{F(x)}\cdots f_k(x)=\frac{F_k(x)}{F(x)}.
+\]
+$\Jdom_{n\rho}$의 다항식 $F(x),F_1(x),\ldots,F_k(x)$가 $\Jdom_{n\rho}$에서 서로소일 때, 그리고 그때에만 $F(x)$를 \emph{$\Jdom_{n\rho}$에서의 최소공통분모}라 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T09_U113_r2.tex
+% sha256: 02C1A8D6241859CCC2A1E3C07C93D06F90C7B815CD93F36E91EBF70F452896C0
+$\Jdom_{n\rho}$에서는 일반적으로 기약다항식으로의 유일분해 법칙이 성립하지 않으므로, 이러한 표현은 여러 방식으로 가능할 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U114.tex
+% sha256: 98F613EE00FDEC600AF4B3A74893A87D966B1CFCB7A4BEFDA0F028061921F0D6
+이제 인볼루션형식과 인볼루션기저의 개념을 정역에 옮김으로써, $\Kfield_{n\rho}$의 인볼루션기저가 $\Jdom_{n\rho}$에 대하여 갖는 의미를 조사한다. 다음을 두자:
+\[
+\begin{gathered}
+\Phi(z,u)=z^i+\sum{}' g_{\alpha\alpha_1\ldots\alpha_\rho}(x)z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\end{gathered}
+\]
+이를 $\Kfield_{n\rho}$의 인볼루션형식이라 하고, $G(x)$를 $\Phi(z,u)$의 계수들에 대한 $\Jdom_{n\rho}$에서의 최소공통분모라 하자. $G(x)$를 곱하면 $\Phi(z,u)$는 형식 $\Psi(z,u)$로 바뀌며, 그 계수들은 $\Jdom_{n\rho}$의 다항식이고 $\Jdom_{n\rho}$에서 서로소이다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U115.tex
+% sha256: A7679FD5091FC9B796039A5E8BB57D8C566E4D77A91B43908D5ADD55DDD2536D
+\[
+\begin{gathered}
+G(x)\cdot\Phi(z,u)=\Psi(z,u)=G(x)z^i+\sum{}'G_{\alpha\alpha_1\ldots\alpha_\rho}(x)z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+(\alpha+\alpha_1+\cdots+\alpha_\rho=i).
+\end{gathered}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U116.tex
+% sha256: A85313797972CC5FE1B7DA00740E66298268FF9CA365F0A8BCDD7701A9AA879F
+\emph{$\Kfield_{n\rho}$의 인볼루션형식 $\Phi(z,u)$에 $\Jdom_{n\rho}$의 한 다항식을 곱하여 얻어지는 모든 형식 $\Psi(z,u)$ 가운데, $\Psi(z,u)$의 계수들이 $\Jdom_{n\rho}$의 다항식이고 $\Jdom_{n\rho}$에서 서로소가 되도록 얻어진 형식을 $\Jdom_{n\rho}$의 인볼루션형식이라 하고, $\Psi(z,u)$의 계수들을 그에 대응하는 인볼루션기저라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U117.tex
+% sha256: A12088771CD27429809B17DAB23531548E8C410635B2392E4BA3D9911FF65464
+우선 $\Kfield_{n\rho}$의 인볼루션기저가 갖는 의미로부터, $\Jdom_{n\rho}$의 모든 인볼루션기저가 동시에 유리기저임은 분명하다. 더 조사하기 위하여 사상영역 $\Jdom^*_{\rho\rho}$를 생각하자. 이를 포함하는 최소 체 $\Kfield^*_{\rho\rho}$에 대하여, 근
+\[
+z=u_1x_1+\cdots+u_\rho x_\rho
+\]
+을 갖는 기약방정식은 $\Phi^*(z,u)=0$으로 주어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U118.tex
+% sha256: A4250A0EAFE60273C2D5539ACBFAAB72F1F21BDE5CDCC890F4C1594B778B6859
+\S\ 5에 따르면
+\[
+\begin{gathered}
+\Phi^*(z,u)=z^i+\sum{}'g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x)z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\end{gathered}
+\]
+의 계수들은 $\Kfield^*_{\rho\rho}$에 관하여 서로 켤레인 양들의 열
+\[
+x,\ x^{(1)}\cdots x^{(i-1)}
+\]
+의 기본대칭함수들을 나타낸다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T09_U119_r2.tex
+% sha256: 794834901D82C0575FE25FF14E1103CA40C6CDF66C743DA975D22F519F23B8AB
+$F^*(x)$를 $\Kfield^*_{\rho\rho}$의 임의의 다항식이라 하면,
+\[
+F^*(x)=\frac1i\left(F^*(x)+F^*(x^{(1)})+\cdots+F^*(x^{(i-1)})\right),
+\]
+이므로 $F^*(x)$는 이 양들의 열에 대한 대칭다항식이다. 따라서 이는 기본대칭함수들, 즉 함수
+\[
+g^*_{\alpha\alpha_1\ldots\alpha_\rho}(x)
+\]
+의 다항식 결합으로 나타낼 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\P06_T09_U120_r2.tex
+% sha256: 918334E1752CE24AE5C8DED6FA4DF025480A66BD8C62D88FCBFBBB68C158CBE7
+이제
+\[
+\begin{gathered}
+G^*(x)\cdot\Phi^*(z,u)=\Psi^*(z,u)=G^*(x)z^i+
+\sum{}'G^*_{\alpha\alpha_1\ldots\alpha_\rho}(x)z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}\\
+(\alpha+\alpha_1+\cdots+\alpha_\rho=i)
+\end{gathered}
+\]
+가 $\Jdom^*_{\rho\rho}$의 인볼루션형식이면, 이에 따라 $\Kfield^*_{\rho\rho}$의 모든 다항식, 특히 $\Jdom^*_{\rho\rho}$의 모든 다항식은 몫
+\[
+G^*_{\alpha\alpha_1\ldots\alpha_\rho}(x):G^*(x)
+\]
+의 다항식 결합이 된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U121.tex
+% sha256: 14ACEDD9152641B3CFD19E5E309129457C526AB73C9967CAEA090D5401BF9211
+전이 원리를 고려하면 이로부터 다음이 얻어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T09_U122.tex
+% sha256: 13D70260CB2CDBDB70B1F64D4AD44C72C49F0A7AA4C02688DE5CDF6D0F3B33AD
+\emph{정리 VI: 다항식으로 이루어진 모든 정역(整域) $\Jdom_{n\rho}$에는 적어도 하나의 특별한 유리기저, 곧 인볼루션기저가 존재한다. 이 기저는 $\Jdom_{n\rho}$의 모든 다항식을 인볼루션기저의 함수들로 유리적으로 나타낼 때 분모에는 하나의 고정된 함수(그에 대응하는 인볼루션형식의 최고차항의 계수)의 거듭제곱만이 나타나도록 하는 성질을 갖는다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U123.tex
+% sha256: 58736144100A4D082BFB76245526618747BF0A83A2702976E3C461AF4F39106C
+\section*{\S\ 9. 다항식으로 이루어진 상대정역(相對整域) $\Gdom_{n\rho}$.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U124.tex
+% sha256: 5D6866618E139C2CAA857660F993C81FE932BF79FBEC94CA11C200DBEE5AEBDF
+이하에서는 정역과 체 사이의 중간 단계를 이루는, 다항식으로 된 특수한 정역들을 고찰한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U125.tex
+% sha256: E00348FAF22D7114D6FC50AC56120DBEC6F28A56B7C49BACCFF5804F8599666E
+다항식으로 이루어진 정역 $\Gdom_{n\rho}$가 다음 조건을 만족할 때 이를 
+\glqq{}상대정역\grqq{}이라 한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U126.tex
+% sha256: 82700267F401F52E803EFF9ACBC5438EDA06EEEAAF5C10D1C394C6084F1B0B61
+\emph{4a) $\Gdom_{n\rho}$는 $F(x)$와 $G(x)$ --- 여기서 $G(x)\ne0$ --- 와 함께, 몫 $F(x):G(x)$가 부정원들에 관한 정식(整式), 즉 다항식일 때, 그리고 그때에만 언제나 이 몫도 포함한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U127.tex
+% sha256: 9B23D6147187C16B9C2B9D8AE42CF0689A7335A0E4169CE0D705FF6643A72120
+우선 상대정역이 유리함수체 $\Kfield_{n\sigma}$ ($\sigma\ge \rho$)의 다항식 전체와 동일함을 증명해야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U128.tex
+% sha256: B449557FE70176164D798B63CE8C9A3BA8C63BE3D33BF6C0471EF78505758B4E
+$\Kfield_{n\rho}$를 $\Gdom_{n\rho}$를 포함하는 최소 체라 하자. $\Kfield_{n\rho}$의 모든 함수 $f(x)$는 $\Gdom_{n\rho}$의 두 다항식의 몫으로 나타낼 수 있다:
+\[
+f(x)=F_1(x):F_2(x),
+\]
+여기서는 0차 다항식도 허용한다. $f(x)$가 다항식이면 조건 4a)에 따라 $\Gdom_{n\rho}$에 속한다. 또한 $\Gdom_{n\rho}$는 그 밖의 다항식을 포함할 수 없으므로, \emph{모든 상대정역 $\Gdom_{n\rho}$는 이를 포함하는 최소 체의 다항식 전체와 동일하다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U129.tex
+% sha256: AF021E56AFE1BD34340DE49A334BABB61A710E32C94CBF43FA1786E50B81FDE8
+거꾸로 $\Kfield_{n\sigma}$를 임의의 유리함수체(즉 주어진 어떤 계를 포함하는 최소 체일 필요는 없는 체)라 하고, $\mathfrak J$를 $\Kfield_{n\sigma}$에 포함되는 다항식 전체라 하자. $\mathfrak J$는 정역의 조건 1, 2, 3과 조건 4a)를 만족하므로 상대정역이다. 즉 \emph{체 $\Kfield_{n\sigma}$에 포함되는 다항식 전체는 상대정역 $\Gdom_{n\rho}$ ($\rho\le\sigma$)를 이룬다.}\srcfn{*)}{$\rho=0$일 수도 있다. 즉 $\Kfield_{n\sigma}$의 다항식 전체가 계수영역 $\Omega$의 원소들로 이루어질 수도 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U130.tex
+% sha256: AF7D581DA14BF98ECFB5D8B1F413CCABCE85C690F415DA88C93B0200CDAB5B26
+더 나아가 상대정역이 힐베르트가 도입한 
+\glqq{}상대적으로 정수적인 함수들의 정역\grqq{}과 동일함을 보인다.\srcfn{**)}{D. Hilbert: Mathematische Probleme. Vortrag Paris 1900. Problem 14 (Göttinger Nachrichten 1900).}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U131.tex
+% sha256: 3F823B3357FADBFA42ABBE17C0EFB068C59EAFB684E8F3DB1E1E5033E16D0DC0
+다음을
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& G_1(x)\cdots G_k(x)
+\end{array}
+\]
+$\Gdom_{n\rho}$의 유리기저라 하자. 조건 1, 2, 3, 4a)에 따라 다항식 (1)의 유리 결합 가운데 부정원들에 관한 정식, 즉 다항식이 되는 모든 것은 $\Gdom_{n\rho}$에 속한다. 거꾸로 $\Gdom_{n\rho}$의 모든 다항식은 유리기저의 개념에 따라 다항식 (1)로 유리적으로 나타낼 수 있다. 따라서 $\Gdom_{n\rho}$는 \emph{다항식 (1)의 유리 결합 가운데 부정원들에 관한 정식, 즉 다항식인 것들의 전체와 동일하다.} 이로써 특수한 유리기저에서 출발하는 힐베르트의 정의를 얻는다. 반면 우리의 정의는 이 영역의 추상적 성질들만을 사용한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U132.tex
+% sha256: 08E45855D0F200098E55637CF1A9D4252FA55931960DC0EB917D96274427260D
+상대정역의 경우에는 \S\ 8에서 일반 정역에 대하여 제시한 공약수의 정의가 간단해진다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U133.tex
+% sha256: 53B5199A7DD5B3A35121E4482170CE70DA62758A1274DBE1D319DD304D7BF241
+$F(x),G(x)$를 $\Gdom_{n\rho}$의 두 다항식이라 하고, $L(x)$를 이 다항식들의 공약수라 하자. $L(x)$가 $\Gdom_{n\rho}$에 속할 때, 그리고 그때에만 $L(x)$를 \emph{$\Gdom_{n\rho}$에서의 공약수}라 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U134.tex
+% sha256: A3DECC6CC2A1E418F7539C3304466C5601C1EF93749365D9AC8F17B637157125
+몫 $F(x):L(x)$와 $G(x):L(x)$가 속한다는 것은 이때 조건 4a)에서 따르기 때문이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U135.tex
+% sha256: 1ADB688D39E8071D0E8B62A4F9965BA30EFCF83C093BD78A82C1904328F7DA4B
+상대정역의 또 하나의 본질적 성질은 
+\glqq{}$\Gdom_{n\rho}$에 관하여 대수적으로 정수적인 것\grqq{}의 개념을, 대수적 수체나 체 $\Omega(x_1\cdots x_n)$에 관하여 알려진 것과 똑같이 임의의 방정식을 통해 정의할 수 있다는 점이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U136.tex
+% sha256: 29D8920258653B8A3927FF733851273EB2AD4334AB6FC0ADD0647D1FA67F9649
+\emph{정의 V: 한 양 $\xi$가 최고차항의 계수는 1이고 나머지 계수들은 $\Gdom_{n\rho}$의 다항식인 어떤 방정식을 만족할 때, $\xi$를 $\Gdom_{n\rho}$에 관하여 대수적으로 정수적이라고, 또는 상대대수적으로 정수적이라고도 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U137.tex
+% sha256: 3137EE00D3D2CBAEC3CC281E30EF3AC28DD7DE31AF81788099A9CB92719F9CDB
+상대대수적으로 정수적인 양 $\xi$가 이를테면 방정식
+\[
+L(z)=z^\lambda+G_1(x)z^{\lambda-1}+\cdots+G_\lambda(x)=0
+\]
+을 만족한다고 하자. $L(z)$는 이를 포함하는 최소 체 $\Kfield_{n\rho}$에 관하여 기약다항식
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U138.tex
+% sha256: 46D41C943B9168A7D5B1D15CBEE1BC8F2DD0E5005E5FF4F1D546CECAA2A23014
+\[
+M(z)=z^\mu+H_1(x)z^{\mu-1}+\cdots+H_\mu(x)
+\]
+로 나누어진다. 그런데 이 나눗셈 관계로부터 잘 알려진 가우스 정리의 확장\srcfn{*)}{Vgl. etwa J. König: Einleitung in die allgemeine Theorie der algebraischen Größen (Leipzig, B. G. Teubner, 1903), Kap. IX, \S\ 2 oder Weber (kleine Ausgabe), \S\ 20.}에 따라 유리함수 $H_1(x)\cdots H_\mu(x)$가 $\Gdom_{n\rho}$의 다항식이며, 따라서 $\Gdom_{n\rho}$에 속함이 따른다. 이로써 상대대수적으로 정수적인 양 $\xi$의 정의를 기약방정식으로도 얻었다. 특히 $\Gdom_{n\rho}$의 모든 다항식 $F(x)$는 방정식 $z-F(x)=0$을 만족하므로 $\Gdom_{n\rho}$에 관하여 대수적으로 정수적이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U139.tex
+% sha256: 6EB571DB12AD783EBB3B8459124BDBF7490A9DCAF04E2FEB111CB7432EBB321D
+또한 다항식으로 이루어진 정역 $\Jdom_{n\rho}$에 대해서는, 이를 포함하는 최소 체와 마찬가지로 이를 포함하는 최소 상대정역 $\Gdom_{n\rho}$가 다음 조건으로 정의된다는 점을 언급한다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U140.tex
+% sha256: 27D3B91C0F3D99722C5C7B4072CD192669EA4C81DACD1914AA7347D23C191A82
+$\Gdom_{n\rho}$는 $\Jdom_{n\rho}$와 함께, $\Jdom_{n\rho}$의 두 다항식의 몫으로 나타낼 수 있는 모든 다항식 $H(x)$를, 그리고 오직 그러한 다항식만을 포함한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U141.tex
+% sha256: 4823045938DF1C4E9FC9D0DF422671D836AAFA6701D9D5B6AE2DD6DA77E7CBD7
+이 정의로부터 더 나아가 다음이 따른다. $\Jdom_{n\rho}$의 모든 인볼루션형식과 인볼루션기저로부터, 기저의 모든 다항식이 $\Gdom_{n\rho}$에서 갖는 공약수를 하나까지 분리해 냄으로써 $\Gdom_{n\rho}$의 대응하는 인볼루션형식과 인볼루션기저가 생긴다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U142.tex
+% sha256: 48F5833AA84B3BB59CD0E9EE5CC69B0832715B743089C18F563AEABA2FA54C76
+$\Jdom_{n\rho}$와 $\Gdom_{n\rho}$는 이를 포함하는 동일한 최소 체 $\Kfield_{n\rho}$를 갖기 때문이다. 또한 $\Jdom_{n\rho}$의 모든 인볼루션형식은 $\Kfield_{n\rho}$의 한 인볼루션형식에 $\Jdom_{n\rho}$의 다항식을 곱하여 생긴다. 따라서 그 계수들은 $\Gdom_{n\rho}$에 속하지만, $\Gdom_{n\rho}$에서 공약수를 가질 수 있다.\srcfn{*)}{예를 들어 $x_1^2$과 $x_1x_2$의 모든 다항식 결합으로 이루어진 정역 $\Jdom_{22}$에 대해서는 다음 인볼루션형식이 얻어진다:
+\[
+\Psi(z,u)=x_1^2z^2-x_1^4u_1^2-2x_1^3x_2u_1u_2-x_1^2x_2^2u_2^2.
+\]
+$x_1^2$은 $\Jdom_{22}$에, 따라서 더더욱 이를 포함하는 최소 상대정역 $\Gdom_{22}$에 속하고, 그러므로 $\Gdom_{22}$에서 공약수이다. 이에 따라 $\Gdom_{22}$의 인볼루션형식으로 다음이 얻어진다:
+\[
+\Psi(z,u)=z^2-x_1^2u_1^2-2x_1x_2u_1u_2-x_2^2u_2^2.
+\]}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T10_U143.tex
+% sha256: 864B85072DCEF98FEB23066C77104611A1DFE31178B8D8DE9DBE51D355BB7C42
+끝으로 상대정역 $\Gdom_{n\rho}$의 \emph{사상영역}은 \S\ 7에 따라 다시 다항식으로 이루어진 정역 $\Jdom^*_{\rho\rho}$이지만, 반드시 상대정역일 필요는 없다는 점을 언급한다. 실제로 $F(x)$와 $G(x)$가 $\Gdom_{n\rho}$의 두 다항식이고 그 몫이 다항식이 아니어서 $\Gdom_{n\rho}$에 속하지 않으면, 몫 $F^*(x):G^*(x)$도 $\Jdom^*_{\rho\rho}$에 속하지 않는다. 그러나 몇몇 부정원의 특수화로 생기는 이 몫은 얼마든지 다항식일 수 있으며, 그러면 $\Jdom^*_{\rho\rho}$에서는 조건 4a)가 성립하지 않는다.\srcfn{**)}{예를 들어 $\Jdom_{32}$가 $F=x_1^2x_2$, $G=x_1^2(1+x_3)$의 유리 결합인 모든 다항식으로 이루어져 있다고 하자. 허용되는 특수화 $x_3=0$은 $F^*:G^*=x_2$를 주지만, $F:G$는 다항식이 아니다. 따라서 $\Jdom^*_{22}$는 상대정역이 아니다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U144.tex
+% sha256: 645392D87ADD8D63D980322EC84A25B11B70C2E3132AB76B4DCE3F1541B6A38A
+\section*{\S\ 10. 제1종 상대정역과 그 정기저(整基底).}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U145.tex
+% sha256: D8BE08F80B1BE9FCB8808006C05E5CDDAD55EAF727109B4A896492CA05FAB3F0
+\S\ 9 (정의 V)에서 도입한 
+\glqq{}상대대수적으로 정수적인 것\grqq{}의 개념을 이용하면 유한 정역인 상대정역의 한 부류를 제시할 수 있고, 따라서 D. 힐베르트가 제기한 문제(Mathematische Probleme, Probl. 14)에 적어도 이 부류에 대해서는 긍정적으로 답할 수 있다. 다음 정의를 둔다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U146.tex
+% sha256: 6C3E8E850A3BABB341764783F91FCB2B4BE0E346F5098450777412D6CDEA97C8
+\emph{정의 VI: $\Gdom_{n\rho}$의 유한 개 다항식으로 된 집합을 사용하여 $\Gdom_{n\rho}$의 모든 다항식을 이 유한 개 다항식의 $\Omega$-계수 다항식 결합으로 나타낼 수 있을 때, 이 유한 개 다항식을 정기저라 한다. 다항식으로 이루어진 정역이 정기저를 가지면 이를 유한 정역이라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U147.tex
+% sha256: F28ACF306E5AEB2B05D199A4F51B42E93F26C7741BFAB22C51C62C928ECD71CF
+인볼루션기저가 정기저임을 보이게 될 상대정역의 부류를 다음 정의에 따라 제1종 상대정역이라 부른다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U148.tex
+% sha256: 63F505199FFD55FDDE888379F92AC2FFB61FAC7065B2B3359DBBEE06A3002A9D
+\emph{정의 VII: 상대정역 $\Gdom_{n\rho}$가 사상영역으로 상대정역 $\Gdom^*_{\rho\rho}$를 가지며, $x_1\cdots x_\rho$의 임의의 모든 다항식($\Omega$의 계수를 갖는)이 $\Gdom^*_{\rho\rho}$에 대하여 대수적으로 정수적으로 종속될 때, $\Gdom_{n\rho}$를 제1종이라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U149.tex
+% sha256: 5A8B9EDC8FD5DA952ED516D12C97BD000C3C42F322258B9F98B6B9499A73E8AD
+실제로 이 정의에 따르면 부정원 $x_1\cdots x_\rho$와 따라서 선형형식 $u(x)=u_1x_1+\cdots+u_\rho x_\rho$도 $\Gdom^*_{\rho\rho}$에 대하여 대수적으로 정수적으로 종속된다. 그러므로 근 $z=u(x)$를 갖는 기약다항식 --- 이를 포함하는 최소 체 $\Kfield^*_{\rho\rho}$의 인볼루션형식 --- 은 최고차항의 계수가 1이고 나머지 계수들은 $\Gdom^*_{\rho\rho}$의 다항식이다. 따라서 이는 동시에 $\Gdom^*_{\rho\rho}$의 인볼루션형식이며, $\Gdom^*_{\rho\rho}$에는 다른 인볼루션형식이 존재할 수 없다. 전이 원리에 따라 $\Gdom_{n\rho}$도 최고차항의 계수가 1인 인볼루션형식을 갖는다. 정리 VI에 따라 $\Gdom_{n\rho}$의 모든 다항식을 그에 대응하는 인볼루션기저로 유리적으로 나타낼 때 분모에는 이 최고차항의 계수만 들어가므로, 인볼루션기저는 정기저가 된다. 즉,
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U150.tex
+% sha256: 74669D62E604F8923DAAE9522E1A22CED3054B355BBFD84C102FB4BBB06E1102
+\emph{정리 VII. 모든 제1종 상대정역은 유한 정역이다. 정기저는 그 상대정역을 특징짓는 사상영역에서 얻은 인볼루션기저로 주어진다. 특히 제1종 상대정역 $\Gdom_{\rho\rho}$의 정기저는 $\Gdom_{\rho\rho}$의 유일하게 정의되는 인볼루션기저로 주어진다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U151.tex
+% sha256: 8ACE4D821F396B26E360A5293C5C2F1A0D231BADAB9F34D31EE4740A6D0288E3
+제1종 상대정역에 대한 한 판정법을 더 제시한다. $\Gdom_{n\rho}$가 제1종이고 그 정기저가 다음으로 주어진다고 하자:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& F_1(x),F_2(x),\ldots,F_k(x).
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U152.tex
+% sha256: 1E1D4B85344E561F5BCA7E1619905268EA7F63625208A09C11353404B9613B5E
+그러면 힐베르트의 보조정리\srcfn{*)}{D. Hilbert: Über die vollen Invariantensysteme, Math. Ann. 42 (1893), \S\ 1. (거기서는 동차다항식에 대해서만 진술된 보조정리이지만 비동차다항식에도 똑같이 성립한다.)}에 따라 $\Gdom_{n\rho}$에는 대수적으로 독립인 $\rho$개의 다항식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)& G_1(x),G_2(x),\ldots,G_\rho(x)
+\end{array}
+\]
+가 존재한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U153.tex
+% sha256: 914906A94CD54D3CF6AD1F46D12CC646B2ECC3209536B1A0B5E625257FA81ACC
+다항식 (1), 따라서 $\Gdom_{n\rho}$의 모든 다항식은 다항식 (2)에 대하여 대수적으로 정수적으로 종속된다. 사상영역 $\Gdom^*_{\rho\rho}$의 모든 다항식에 대해서도, 그에 대응하는 다항식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& G_1^*(x),G_2^*(x),\ldots,G_\rho^*(x).
+\end{array}
+\]
+에 관하여 같은 사실이 성립한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U154.tex
+% sha256: DF20D6F67D266F52C2A9D74B3218D83706246374668707B95CEB7FC47DF352C6
+따라서 정의 VII에 의해 $x_1\rcdots x_\rho$의 임의의 모든 다항식도 다항식 (3)에 대하여 대수적으로 정수적으로 종속된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U155.tex
+% sha256: A3690EAE23D546E5D8B657F7E845FF42C788FD89E1591C6DE9B2746F06281F78
+이제 거꾸로 임의의 상대정역 $\Gdom_{n\rho}$의 한 사상영역 $\Jdom^*_{\rho\rho}$가 다항식 (3)을 $\rho$개 포함하고, $x_1\rcdots x_\rho$의 모든 다항식이 이들에 대하여 대수적으로 정수적으로 종속된다고 하자. 그러면 이로부터 $\Jdom^*_{\rho\rho}$가 상대정역 $\Gdom^*_{\rho\rho}$임이 나오고, 더 나아가 $\Gdom^*_{\rho\rho}$와 따라서 $\Gdom_{n\rho}$가 제1종임을 보이겠다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U156.tex
+% sha256: 7786EBAC4007180AF0428346DD6BB82F39B538897F1E962C5295FB60707ADD01
+실제로 $F^*(x)$를 $\Jdom^*_{\rho\rho}$를 포함하는 최소 체 $\Kfield^*_{\rho\rho}$의 한 다항식이라 하자. 가정에 따라 이는 다항식 (3)에 대하여 대수적으로 정수적으로 종속된다. 그러면 $\Kfield_{n\rho}$의 대응하는 함수는 $\Gdom_{n\rho}$의 $\rho$개 다항식에 대하여 대수적으로 정수적으로 종속되므로 다항식 $F(x)$이고, 따라서 $\Gdom_{n\rho}$에 속한다. 그러므로 $F^*(x)$는 $\Jdom^*_{\rho\rho}$에 속한다. 따라서 사상영역 $\Jdom^*_{\rho\rho}$는 $\Kfield^*_{\rho\rho}$의 모든 다항식을 포함하여 상대정역 $\Gdom^*_{\rho\rho}$이다. 그런데 $\Gdom^*_{\rho\rho}$와 따라서 $\Gdom_{n\rho}$에 대해서는 가정과 정의 V 및 VII로부터 이들이 제1종임이 곧바로 따른다. 즉,
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T11_U157.tex
+% sha256: 96E1DFB5E680C6C967BC4B2208D0C7664E6588D3038FF6657F6951E2D1DCAF01
+\emph{제1종 상대정역 $\Gdom_{n\rho}$는 한 사상영역 $\Jdom^*_{\rho\rho}$에 $\rho$개의 다항식이 존재하여 $x_1\rcdots x_\rho$의 임의의 모든 다항식이 이들에 대하여 대수적으로 정수적으로 종속된다는 성질로 특징지어진다. 이 가정으로부터 사상영역은 상대정역임이 나온다.}\srcfn{*)}{예를 들어 \S\ 9의 끝 주석에서 언급한 영역 $\Gdom_{32}$에서는 허용되는 특수화 $x_1=1$이 두 다항식 $F^*=x_2$, $G^*=1+x_3$을 주며, $x_2,x_3$의 임의의 모든 다항식은 이들에 대하여 대수적으로 정수적으로 종속된다. 따라서 $\Gdom_{32}$는 제1종이고, 이때 $F(x)$와 $G(x)$가 정기저이다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U158.tex
+% sha256: BF7D0C77F75598685926BD16A181645C3B43C91E8D5E9CF47A77F2E00DC1315C
+\section*{\S\ 11. 대수적 정수적 종속에 관한 보조정리.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U159.tex
+% sha256: 3169C8E71756529DEBFD242C44FBA4C7C6C50B28BAD79A3CC4077ABFB0AA1C7A
+이제 $x_1\rcdots x_\rho$의 임의의 모든 다항식이 $x_1\rcdots x_\rho$의 $\rho$개 다항식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& G_1^*(x)\rcdots G_\rho^*(x)
+\end{array}
+\]
+에 대하여 대수적으로 정수적으로 종속되기 위한 판정법을 제시한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U160.tex
+% sha256: 4D4C80F2B94D5325A6877C6162001551B98CD314DBDAB39872733CD5D1153942
+다항식 (1)이 특별히 동차형식들이라면, (1)을 0으로 만드는 모든 특수한 값의 계에 대하여 대수적으로 정수적으로 종속되는 모든 형식도 동시에 0이 된다. 특히 $x_1\rcdots x_\rho$도 모두 0이 된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U161.tex
+% sha256: 87487AE2F44E702561E28FC2D5247328CA2FB5AE9FC344F96ABBE9D9ED8DFD96
+따라서 형식 (1)은
+\[
+x_1=0,\ldots,x_\rho=0
+\]
+이외의 어떤 값의 계에서도 동시에 0이 될 수 없다. 그러므로 그 종결식은 0이 아니어야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U162.tex
+% sha256: 3B8CAA6E6577FC4CF8ED059C0AEB4A2496E0085241AA658BA2FE1473685934C9
+거꾸로 이 조건은 충분하기도 하며, 다음 보조정리에 따라 비동차다항식으로 확장할 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U163.tex
+% sha256: F386E55B2D86E7BA3D4A32128F8936511419FE0D2AD91988D7FDA87DA9A4BE37
+\emph{보조정리: $x_1\rcdots x_\rho$의 임의의 모든 다항식이 $x_1\rcdots x_\rho$의 $\rho$개 다항식
+\[
+G_1^*(x)\rcdots G_\rho^*(x)
+\]
+에 대하여 대수적으로 정수적으로 종속되기 위한 충분조건은, 다항식 (1)의 최고차항들}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U164.tex
+% sha256: F4B8443447B5CECDAA40A460BAE7EFB1C33FE0A0F54FE5DCFBDC60A3CA4A88EB
+\[
+H_1^*(x)\rcdots H_\rho^*(x)
+\]
+\emph{의 $x_1\rcdots x_\rho$에 관한 종결식이 0이 아닌 것이다:}
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)& \displaystyle R_0=\left[\begin{array}{c} H_1^*\rcdots H_\rho^*\\ x_1\rcdots x_\rho\end{array}\right]\ne0.
+\end{array}
+\]
+\emph{동차형식 (1)에 대해서는 조건 (2)가 필요조건이다.}\srcfn{*)}{종결식 이론에 관해서는 F. Mertens, Zur Theorie der Elimination (I. u. II. Teil), Sitzungsber. d. k. Ak. d. Wiss. Wien, Math.-naturw. Kl. Abt. IIa, Bd. 108 (1899) 참조. (J. König, Theorie d. algebr. Größen, Kap. VI에 일부 재수록.)}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U165.tex
+% sha256: 36CD58FBD3A85CB1ED1590B709DFEC74390B088F2116DE7817D4012F6489B465
+증명을 위하여 다음 다항식들을 만든다:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& \begin{gathered}
+\bar G_1^*(x)=G_1^*(x)-\lambda_1,\ldots,\bar G_\rho^*(x)=G_\rho^*(x)-\lambda_\rho,\\
+\bar\Phi^*(x)=\Phi^*(x)-\mu,
+\end{gathered}
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U166.tex
+% sha256: 91CBFA44CFFF22E35446EEC3BF675453FCF4AA883DB7A8E3E9556BC6345E5115
+여기서 $\lambda_1\rcdots\lambda_\rho,\mu$는 부정원이고, $\Phi^*(x)$는 $x_1\rcdots x_\rho$의 임의의 다항식이다. 다항식 (3)의 $x_1\rcdots x_\rho,1$에 관한 종결식\srcfn{**)}{즉 다른 부정원 $x_0$을 사용하여 다항식 (3)을 $x$에 관한 차수가 유지되도록 동차화했을 때 $x_1\rcdots x_\rho x_0$에 관한 동차 종결식이다.}이 다음으로 주어진다고 하자:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(4)& \displaystyle R(\lambda,\mu)=\left[\begin{array}{cc} \bar G_1^*\rcdots \bar G_\rho^*\bar\Phi^*\\ x_1\rcdots x_\rho\quad 1\end{array}\right];
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U167.tex
+% sha256: E14574EFD0D6A21E5FA0C5E33937229612F6644BDA44CF268A8FCFD4C15B6272
+이는 $\lambda_1\rcdots\lambda_\rho,\mu$의 다항함수이다. 이제 F. 메르텐스에 따르면 (4)를 $\mu$의 거듭제곱으로 전개했을 때 최고차항의 계수를 명시적으로 제시할 수 있다.\srcfn{***)}{A. a. O. \S\ 3 (Beweis von Satz I) 및 명시적으로 \S\ 6 (Bestimmung des Inbegriffs aller Glieder der Resultante $R$, welche ein gegebenes Potenzprodukt $a_{\lambda\lambda}^{p_\lambda}a_{\mu\mu}^{p_\mu}\cdots a_{\sigma\sigma}^{p_\sigma}$ als Faktor enthalten). 여기서는 $p_\lambda=0$, $p_\mu=0,\ldots,p_\sigma=\tau$, $a_{\sigma\sigma}=(-\mu)$로 둔다. König, Kap. VI, \S\ 9에 재수록.} 다음을 얻는다:
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(5)& (-1)^\tau R(\lambda,\mu)=R_0^\sigma\cdot\mu^\tau+A_1(\lambda)\mu^{\tau-1}+\cdots+A_\tau(\lambda),
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U168.tex
+% sha256: 2A6668910C2B934A268025D98D27384EB1973BA413C0850FABC58771367261BF
+여기서 $A_1(\lambda)\rcdots A_\tau(\lambda)$는 $\lambda_1\rcdots\lambda_\rho$와 다항식 (3)의 계수들에 관한 정수계수 다항함수이다. 이 전개는 우선 가정 (2) $R_0\ne0$ 아래에서 $R(\lambda,\mu)$도 항등적으로 0일 수 없음을 보여 준다. 또한 $x_1\rcdots x_\rho,\lambda_1\rcdots\lambda_\rho\mu$에 관한 항등식
+\[
+R(\lambda,\mu)\equiv0\pmod{\bar G_1^*(x),\ldots,\bar G_\rho^*(x),\bar\Phi^*(x)}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U169.tex
+% sha256: 07F16146181A83D5FA523642E69639DDD26F65441A7A75561E22993AE45F2F68
+은 치환
+\[
+\lambda_i=G_i^*(x),\qquad \mu=\Phi^*(x)
+\]
+에 따라 다음으로 바뀐다:
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T12_U170.tex
+% sha256: D99C27F7E3A802B18AD6BF1A825444211085786E70B88026F0B9E239344D772F
+\[
+\begin{array}{@{}l@{\quad}l@{}}
+(6)& \displaystyle R(G_i^*(x),\Phi^*(x))=R_0^\sigma\cdot\Phi^{*\tau}(x)+A_1(G_i^*(x))\Phi^{*\tau-1}(x)+\cdots\\
+& \displaystyle\qquad +A_\tau(G_i(x))=0,
+\end{array}
+\]
+이로써 보조정리가 증명되었다. 실제로 가정에 따라 $R_0$은 $\Omega$의 한 수이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U171.tex
+% sha256: 17AC434F49067A55F7B4C246692EE1024288DF7755402DB5DCB3BA56A62D783F
+\section*{\S\ 12. 다항식으로 이루어진 정칙계 $\Ssys_{n\rho}$의 정기저.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U172.tex
+% sha256: 13CA918F3192A60AD95598FC9DC703BE4CE34F243D79EB572AF6C27586FD5F19
+\S\ 11의 보조정리는 \S\ 10의 결론과 함께 다음 사실을 곧바로 준다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U173.tex
+% sha256: A13E6AB3A71FA04A433006B21CB69BBED8EA38BF84613B3D8DA5BC056FDBB5DD
+\emph{$\Gdom_{n\rho}$의 한 사상영역 $\Jdom^*_{\rho\rho}$ 안에 최고차항들의 동차 종결식이 항등적으로 0이 아닌 --- $R_0\ne0$ --- $\rho$개의 다항식이 존재한다면, $\Gdom_{n\rho}$는 제1종이고 따라서 유한 정역이며, 인볼루션기저가 그 정기저이다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U174.tex
+% sha256: F27C76BF79D423DD8560683C1F2D92D6E8365864B060658D9E5F2891CC94501B
+이제 조건 $R_0\ne0$은 보조정리에 힘입어 정기저의 존재에 대한 두 번째 증명을 가능하게 한다. 이 증명은 본질적으로 D. 힐베르트가 제시한 것으로서\srcfn{*)}{Über die vollen Invariantensysteme, \S\ 2. 힐베르트의 경우에는 불변식체의 정기저가 다른 방법으로 이미 존재한다고 가정하고, 이 기저를 한 체의 대수적 정수인 양들에 대한 크로네커 기본계로 해석하는 일만을 다룬다.}, 인볼루션기저 자체를 식별해 주지는 않지만 그 대신 위 성질을 갖는 모든 계 $\Ssys_{n\rho}$에 한결같이 적용된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U175.tex
+% sha256: 15E513957B26FE7BB48605F92C96A0BED4CB32CDDDD449E8498E6B1FC770EB4F
+실제로 $R_0\ne0$이고 따라서 대수적으로 독립인 $\Jdom^*_{\rho\rho}$의 $\rho$개 다항식이 다음과 같이 주어졌다고 하자.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& G_1^*(x)\rcdots G_\rho^*(x).
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U176.tex
+% sha256: 3C4A58413E27B415A2FAD0C2A3BCF244DBE70A6F1AA17224EDD633AAAC98AAB6
+보조정리에 따르면 $x_1\rcdots x_\rho$의 임의의 다항식, 특히 $\Jdom^*_{\rho\rho}$를 포함하는 최소 체 $\Kfield^*_{\rho\rho}$의 모든 다항식은 다항식 (1)에 대하여 대수적으로 정수적으로 종속된다. 따라서 이에 대응하는 $\Ssys_{n\rho}$의 다항식이
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)& G_1(x)\rcdots G_\rho(x)
+\end{array}
+\]
+라면, 전이 원리에 따라 $\Ssys_{n\rho}$를 포함하는 최소 체 $\Kfield_{n\rho}$의 모든 다항식, 따라서 특히 $\Ssys_{n\rho}$의 모든 다항식은 다항식 (2)에 대하여 대수적으로 정수적으로 종속된다. 거꾸로 $\Kfield_{n\rho}$의 함수 가운데 다항식 (2)에 대하여 대수적으로 정수적으로 종속되는 것은 모두 다항식이다. 그러므로 (\S\ 4에 따라) $\Kfield_{n\rho}$를 $\Omega(G_1\rcdots G_\rho)$ 위의 대수적 체로 보면, $\Kfield_{n\rho}$의 다항식 전체 --- 상대정역 $\Gdom_{n\rho}$ --- 는 이 체의 대수적 정수인 양들 전체와 일치한다. $G(x)$를 $\Kfield_{n\rho}$의 다항식으로서 (2)를 유리기저로 보충하는 것이라 하고, $D(x)$를 $G(x)$가 $\Omega(G_1\rcdots G_\rho)$에 관하여 만족하는 $k$차 기약방정식의 판별식이라 하자. 그러면 $\Kfield_{n\rho}$의 모든 다항식, 특히 $\Ssys_{n\rho}$의 모든 다항식 $F(x)$은 대수적 정수인 양으로서 다음 표현을 갖는다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& \displaystyle F(x)=\frac{\Gamma_1(G_i)\cdot G(x)^{k-1}+\Gamma_2(G_i)\cdot G(x)^{k-2}+\cdots+\Gamma_k(G_i)}{D(x)}.
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U177.tex
+% sha256: A6F17A384B55C7EE70DE2FE71EDFBC388442F8806EBBEBC08D10D3CB6BE87246
+이제 $F(x)$가 $\Ssys_{n\rho}$의 모든 다항식을 두루 달리게 하자. 이때 해당 함수 $v_1\Gamma_1(G_i)+v_2\Gamma_2(G_i)+\cdots+v_k\Gamma_k(G_i)$로 이루어진 계에 힐베르트의 모듈기저 정리 I (Math. Ann. 36)를 적용하면, $\Ssys_{n\rho}$의 유한개의 다항식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(4)& F_1(x),F_2(x),\ldots,F_\lambda(x)
+\end{array}
+\]
+이 존재함을 알 수 있다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U178.tex
+% sha256: 769E2E15295C87C9A8861B6E5414CCF9546F5783586BF082E2AF41D7601E5831
+그리하여 $\Ssys_{n\rho}$의 모든 다항식은 다음 표현을 갖는다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(5)& F(x)=A_1(G_i)F_1(x)+A_2(G_i)\cdot F_2(x)+\cdots+A_\lambda(G_i)F_\lambda(x),
+\end{array}
+\]
+여기서 $A_1\rcdots A_\lambda$는 $G_i(x)$의 다항식이다. 따라서 다항식 (2)와 (4)는 $\Ssys_{n\rho}$의 한 정기저를 이룬다. 즉,
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U179.tex
+% sha256: 0AA6ED2A0098C35CE9592FF6F430B5317DB3140D417597B48678908CC2EACC5D
+\emph{정리 VIII: 다항식으로 이루어진 계 $\Ssys_{n\rho}$의 한 사상계 $\Jdom^*_{\rho\rho}$ 안에 최고차항들의 종결식이 항등적으로 0이 아닌 --- $R_0\ne0$ --- $\rho$개의 다항식이 존재한다면, $\Ssys_{n\rho}$는 한 정기저를 갖는다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U180.tex
+% sha256: 5270BF82CE9B6EF35F5A4CE536F4119B655BC700C714B19F15D543835F80A0E6
+이 정리는 쉽게 일반화할 수 있다. $R_0\ne0$인 $\rho$개의 다항식 (1)이 $\Ssys^*_{\rho\rho}$를 포함하는 최소 정역 $\Jdom^*_{\rho\rho}$에 속하기만 하면 충분하다. 실제로 정리 VIII에 이르는 추론은 이 경우에도 표현 (5)가 성립함을 보여 준다. 그런데 정의에 따라 최소 포함 정역 $\Jdom_{n\rho}$의 모든 다항식 $L(x)$은 $\Ssys_{n\rho}$의 유한개의 다항식 --- 이 다항식들은 $L(x)$에 따라 달라진다 --- 으로 다항식적으로 나타낼 수 있다. 따라서 $\Ssys_{n\rho}$에는 $\sigma$개의 다항식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(6)& K_1(x),K_2(x),\ldots,K_\sigma(x)
+\end{array}
+\]
+이 존재하여, 다항식 $G_i(x)$는 (6)의 다항식 결합이 된다. 그러므로 (6)과 (4)가 한 정기저를 이룬다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U181.tex
+% sha256: 80171184DBA56DBEACCAA5D0A33981E8AF353BDA6279DED3AA143FFD906F9166
+\emph{정의 VIII: 다항식으로 이루어진 계 $\Ssys_{n\rho}$를 포함하는 최소 정역의 한 사상영역에 최고차항들의 종결식이 항등적으로 0이 아닌 --- $R_0\ne0$ --- $\rho$개의 다항식이 존재할 때, $\Ssys_{n\rho}$를 정칙이라고 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U182.tex
+% sha256: DB4445F72F7333A3E1E1C0AE69291F8961D8F716F53CC913C19C514AE38C79E1
+따라서 다음이 성립한다.
+
+\emph{정리 IX: 다항식으로 이루어진 모든 정칙계 $\Ssys_{n\rho}$는 한 정기저를 갖는다.}\srcfn{*)}{정기저가 없는 비정칙계가 존재한다는 것을 힐베르트는 한 예로 보였다(Gött. Nachr. 1891, S. 233). 다음 예는 조금 더 간단하다.
+\[
+\Ssys_{22}=x_1,
+x_1x_2,
+x_1x_2^2,
+\ldots,
+x_1x_2^\nu,
+\ldots\quad\text{무한히 계속}.
+\]
+여기서 정기저의 존재는 다음 항등식들이 성립하도록 하는 양의 정수 $\nu$가 존재한다는 것과 동치이다.
+\[
+x_1x_2^{\nu+\sigma}=\sum c\cdot x_1^{i_0}(x_1x_2)^{i_1}(x_1x_2^2)^{i_2}\cdots(x_1x_2^\nu)^{i_\nu},
+\qquad(\sigma=1,2,\ldots).
+\]
+$x_1,x_2$에 관한 차수를 비교하면 이미 $\sigma=1$에서 지수들에 대한 두 조건방정식
+\[
+1=i_0+i_1+i_2+\cdots+i_\nu,
+\qquad
+\nu+1=i_1+2i_2+\cdots+\nu i_\nu
+\]
+을 얻는데, 이는 명백히 음이 아닌 정수해를 갖지 않는다. 따라서 $\Ssys_{22}$는 정기저를 갖지 않는다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U183.tex
+% sha256: 3E905139B7D58375B75AD81332943B7DD0A17D11372FD2E4B4457F0CCF294A0D
+이제 인볼루션에 대해 \S\ 5에서 한 것과 유사하게 정칙계를 기하학적으로 해석한다. 이를 위해 그곳의 (7)에서와 같이 방정식계
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(7)& L^*(x)-L^*(\xi)=0
+\end{array}
+\]
+을 고찰하되, $L^*(x)$가 $\Jdom^*_{\rho\rho}$의 모든 다항식을 두루 달리게 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U184.tex
+% sha256: D468EE3123FF3A3ADA3D6FE085CDE84C06F944E41A0572217A00B227B4DD2D0B
+$x_0,\xi_0$을 사용하여 동차화하면, (7)이 동차형식들 사이의 다음 방정식계로 옮겨간다고 하자.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(8)& \xi_0^m\cdot M^*(x)-x_0^m\cdot M^*(\xi)=0.
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U185.tex
+% sha256: 5FC4B1D43EF3B80B157AFB29F758CDD844527C5FB1DE09876C5E36A01D5D975E
+여기서 $H^*(x)$가 $L^*(x)$의 최고차항들을 나타낼 때 다음 관계가 성립한다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(9)& H^*(x)\equiv M^*(x)\pmod{x_0}.
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U186.tex
+% sha256: 549CA9F9167055B13C16D2EECBC3CAF2A6B11856503D10EBA03C627D3993F4C9
+$\Jdom^*_{\rho\rho}$의 \emph{기본점}이라 함은(\S\ 5의 주석 참조) (8)의 해 가운데 $x$와 독립인 것, 곧 $x$에 켤레인 열들과 다른 것을 말한다. 따라서 기본점은 $\xi_1=0,\ldots,\xi_\rho=0$과 다른 값의 계로서 다음을 동시에 만족하는 것이다.
+\[
+\xi_0^m=0,
+\qquad M^*(\xi)=0
+\]
+또는 (9)에 따라
+\[
+\xi_0=0,
+\qquad H^*(\xi)=0.
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U187.tex
+% sha256: 9780C82FC99308DB1497D588508BEE143165BAE206E119283570BC91C5262409
+이제 $R_0\ne0$인 $\rho$개의 형식 $H^*(\xi)$, 곧 공통해를 갖지 않는 형식들이 존재한다면, $\Jdom^*_{\rho\rho}$는 기본점을 가질 수 없다. 특히 $\Ssys^*_{\rho\rho}$가 동차형식들로 이루어져 있다면, $R_0\ne0$일 때 $\Ssys^*_{\rho\rho}$ 역시 기본점을 가질 수 없다. 그러한 기본점은 동시에 $\Jdom^*_{\rho\rho}$의 기본점일 것이기 때문이다. 그러나 그 역도 성립한다. 이를 위해 모든 형식 $H^*(x)$로 이루어진 계 $\Jdom(H^*)$를 고찰하면, 이 역시 한 정역을 이룬다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U188.tex
+% sha256: 930D8E64C7656585C413FFCBC6382FD9E6F3FEBAA8AF58945EC2C667994A31B0
+그러므로 힐베르트의 모듈기저 정리 I와 힐베르트 보조정리(\S\ 10의 인용 참조)로부터, 그 소멸이 $\Jdom(H^*)$의 모든 형식의 소멸을 수반하는 $\Jdom(H^*)$의 $\rho$개 형식이 존재함을 얻는다. 이제 $\Jdom^*_{\rho\rho}$가 기본점을 갖지 않는다면 이 $\rho$개 형식은 동시에 소멸할 수 없으므로, 그 종결식은 $R_0\ne0$이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T13_U189.tex
+% sha256: 8C5D1185AB55C82FB3FB440AA5E47F701FFE9D2F776ACE87AD660BC122230C7B
+따라서 다음이 성립한다.
+
+\emph{다항식으로 이루어진 정칙계 $\Ssys_{n\rho}$는, 이를 포함하는 최소 정역의 한 사상영역 $\Jdom^*_{\rho\rho}$가 기본점을 갖지 않는다는 성질로 특징지어진다. 동차형식으로 이루어진 정칙계 $\Ssys^*_{\rho\rho}$의 경우에는 계 자체가 이미 기본점을 갖지 않는다.}\srcfn{*)}{앞 주석에서 제시한 비정칙계 $\Ssys_{22}$는 다음 기본점을 갖는다.
+\[
+\xi_1:\xi_2:\xi_0=0:1:0.
+\]}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U190.tex
+% sha256: BFEA5CD46C7CC6A8B0BD0B73D05FB4C9F985AB5D714E4EF04A4AFF9995A0BF2A
+\section*{\S\ 13. 제1종 상대정역과 정칙계의 예.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U191.tex
+% sha256: B44FD80CEBE718B84D968C31B85002E732E4004799F403D088B1FAF796BAC600
+1. 제1종 상대정역 $\Gdom_{nn}$의 첫 번째 예로, \emph{주어진 순열군 $G$를 허용하는 $x_1\rcdots x_n$의 다항식 전체}, 곧 한 라그랑주 종영역의 다항식 전체를 고찰한다. $x_1\rcdots x_n$은 항등식
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)& x_k^n-\sigma_1(x)x_k^{n-1}+\sigma_2(x)x_k^{n-2}+\cdots\pm\sigma_n(x)=0\quad(k=1,2,\ldots,n)
+\end{array}
+\]
+에 따라 $\Gdom_{nn}$에 속하는 기본대칭함수들에 대하여 대수적으로 정수적이므로, 정의 V에 따라 $\Gdom_{nn}$에 대하여 대수적으로 정수적으로 종속된다. 따라서 $\Gdom_{nn}$은 제1종이다. 더 나아가 $\Gdom_{nn}$의 원소들이 동차형식이고 $n=\rho$이므로, $\Gdom_{nn}$은 제1종 영역으로서(\S\ 10의 결론에 따라) 한 정칙계를 이룬다. 실제로 (1)에 의해 기본대칭함수들의 종결식 $R_0$은 항등적으로 소멸할 수 없으며, 종결식 이론의 계산 규칙에 따르면 $R_0=\pm1$이다. $\Gdom_{nn}$의 \emph{인볼루션형식}은 --- $\Gdom_{nn}$이 제1종이고 $n=\rho$이므로 --- 대응하는 라그랑주 종영역의 인볼루션형식으로서 유일하게 정해진다. 이 영역에서 $x_1\rcdots x_n$에 켤레인 양들은 군 $G$의 순열들로 생기므로, 이 인볼루션형식은 다음과 같다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)&
+\begin{aligned}
+  \Psi(z,u)&=\prod_i
+  (z-u_1x_{i_1}-u_2x_{i_2}-\cdots-u_nx_{i_n})\\
+  &=z^i+\sum{}'G_{\alpha\alpha_1\ldots\alpha_n}(x)
+  z^\alpha u_1^{\alpha_1}\cdots u_n^{\alpha_n},
+\end{aligned}
+\end{array}
+\]
+여기서 곱은 $G$의 모든 순열에 걸쳐 취한다. (2)는 \glqq{}군 $G$의 갈루아형식\grqq{}을 나타낸다. 따라서 다음 사실이 성립한다.
+
+\emph{순열군 $G$를 허용하는 $x_1\rcdots x_n$의 모든 다항식은 그 군의 갈루아형식의 계수 $G_{\alpha\alpha_1\ldots\alpha_n}(x)$들의 다항식 결합이다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U192.tex
+% sha256: BF8380DAD46F8038219E62EDD8EC8DA375B354238EC46CF47BC94F6B15D104DF
+2. \emph{정칙계}의 예로 다항식으로 이루어진 계 $\Ssys_{n1}$, 곧 대수적으로 독립인 다항식을 하나만 포함하는 계를 고찰한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U193.tex
+% sha256: 4CA4D717284E53D3856282D2C6083B61A2095F0D16A0C92A2B47BE3BD212674B
+실제로 $\Ssys^*_{11}$을 $\Ssys_{n1}$의 한 사상계라 하고
+\[
+  F^*(x)=a_0x^k+a_1x^{k-1}+\cdots+a_k\qquad(a_0\ne0)
+\]
+를 $\Ssys^*_{11}$의 한 다항식이라 하면,
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)& R_0=a_0\ne0\text{\srcfnmark{*)}}
+\end{array}
+\]
+\srcfntext{*)}{Mertens, a. a. O. \S\ 5.}
+가 된다. 그러므로 $\Ssys_{n1}$은 정의 VIII에 따라 정칙이며, 따라서 다음이 성립한다.
+
+\emph{다항식으로 이루어진 모든 계 $\Ssys_{n1}$, 특히 한 부정원의 무한히 많은 다항식으로 이루어진 모든 계는 한 정기저를 갖는다.}\srcfn{**)}{따라서 정기저가 없는 가장 단순한 비정칙계는 계 $\Ssys_{22}$이다. 그러한 계가 실제로 존재한다는 것은 힐베르트의 예와 \S\ 12의 주석에 든 예가 보여 준다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U194.tex
+% sha256: 6DC5DDE80F2E58D37505231DFDFD609136B06ADD38F1063AC5020401073426D9
+3. 이제 계 $\Ssys_{n1}$을 상대정역 $\Gdom_{n1}$로 특수화한다. 이들은 정칙계이므로 \S\ 12에 따라 제1종 상대정역이다. 따라서 그 정기저는 인볼루션기저로 주어지며, 이 기저는 동시에 이를 포함하는 최소 체 $\Kfield_{n1}$의 인볼루션기저이다. 그런데 \S\ 6에 따르면 $\Kfield_{n1}$의 인볼루션기저의 임의의 함수는 동시에 최소기저이고 --- 우리는 이를 그 체의 뤼로트함수라 불렀다 --- 인볼루션기저의 모든 함수는 이 뤼로트함수에 일차분수식으로 종속된다. 우리의 경우 뤼로트함수는 $\Gdom_{n1}$에 속하므로 다항식이다. 따라서 인볼루션기저의 다른 모든 다항식은 이 뤼로트함수 $L(x)$에 일차분수식으로 종속되고, (3)에 따라 대수적으로 정수적이므로 정수적이며 선형적으로 종속된다. 그러므로 $L(x)$가 정기저가 된다. 여기에 $(u_1=1)$을 놓으면 $\Gdom^*_{11}$의 인볼루션형식은
+\[
+  \Psi^*(z)=L^*(z)-L^*(x)
+\]
+가 되며, 여기서도 $L(x)$가 정기저임이 드러난다. 따라서 다음이 성립한다.
+
+\emph{상대정역 $\Gdom_{n1}$은 제1종이다. 그 정기저는 하나의 다항식, 곧 이를 포함하는 최소 체의 뤼로트함수로 이루어진다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T14_U195.tex
+% sha256: 47D6008C6E7B23455433200A3EF383C80E12A4B5AF8C9661B6E065B8D526CD50
+4. 상대정역 $\Gdom_{n1}$의 특수한 예로, $s$개 변수의 이차형식에 대한 다항 사영불변식들을 들 수 있다. 앞의 결과와 일치하게, 이들은 잘 알려진 대로 그 형식의 행렬식 $|a_{ik}|$의 다항식 결합으로 나타낼 수 있다. 그리고 이 행렬식은 동시에 대응하는 불변식체의 뤼로트함수이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U196.tex
+% sha256: C22B26993D1D52EA1A22F8786AA46E8BA2586D4D68627962ED93DF08980E4467
+\section*{\S\ 14. 정수계수 다항식으로 이루어진 계.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U197.tex
+% sha256: 08A780694FFE5939EF60DE5A7C46E5414842E73D91A5C6B0132D26732C5A8DCB
+이제 지금까지 얻은 기저정리들을 정수성에 관하여 강화하고자 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U198.tex
+% sha256: 6D259DCD45E05B25B3892CC0D01F1197C65749A4645686A5568330636DD0FB39
+따라서 이하에서는 계수영역 $\Omega$를 (유한) 대수적 수체라 가정한다. 또한 $[\Omega]$는 $\Omega$ 안의 대수적 정수 전체를 나타내며, 이를 줄여서 정수라 부르기로 한다. 정수계수 다항식이란 $[\Omega]$의 계수를 갖는 다항식을 뜻한다. 이제부터 $F(x),G(x),\ldots$는 오직 정수계수 다항식만을 나타낸다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U199.tex
+% sha256: 8DADA052B92353F256CAF40842C1B62C098F8FAFD056134A0F1417610F6DEA71
+\S\ 7과 유사하게 정수계수 다항식으로 이루어진 여러 계를 고찰한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U200.tex
+% sha256: 3FB70E383383DEF7E05F9A5D57F99691F4ACFBA4B095A4E6E852B69F471DC38F
+정수계수 다항식으로 이루어진 임의의 계를 정수계수계 $\Ssys_{n\rho}$라 부른다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U201.tex
+% sha256: 188556D284664510893501714135BCD5A10A5EB3457546EA998C43509FCCE7DF
+정수계수 선형족 $\Lsys_{n\rho}$은 $F_1(x)$과 $F_2(x)$를 포함할 때마다 $c_1,c_2$가 $[\Omega]$의 임의의 정수인 $c_1F_1(x)+c_2F_2(x)$도 항상 포함하는 정수계수계이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U202.tex
+% sha256: 66F4F7DEC9DC8C786DED46D05A2C434A60E6DCD423B7F7BBB7C165B262DC6401
+정수계수 정역 $\Jdom_{n\rho}$은 $F(x)$과 $G(x)$를 포함할 때마다 그 곱 $F(x)\cdot G(x)$도 항상 포함하는 정수계수 선형족이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U203.tex
+% sha256: 6FF3D8CB5CB391E763710381137C677559429F653193CBA9D68C3AECAEC49DBB
+정수계수 상대정역 $\Gdom_{n\rho}$은 $F(x)$과 $G(x)$를 포함하고 $G(x)\ne0$일 때, 그 몫 $F(x):G(x)$이 정수계수 다항식인 경우에 그리고 그 경우에만 이 몫도 포함하는 정역이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U204.tex
+% sha256: D955FAD81C5373B272CB496A7FE3B7201DF1869487BBBD6F12F3E704A18D6BF5
+\S\ 7에서와 마찬가지로, 정수계수계 $\Ssys_{n\rho}$를 포함하는 최소 정수계수 정역 $\Jdom_{n\rho}$은 $\Ssys_{n\rho}$의 유한개의 다항식에 대한 정수계수 다항식 결합으로 나타나는 모든 다항식 $H(x)$로 이루어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U205.tex
+% sha256: 8F9A3EFD32C2D050146FB574890D45BEACBCBAAFAFF1E640A9FD81757E7D9B8C
+이를 포함하는 최소 정수계수 상대정역 $\Gdom_{n\rho}$은 $\Ssys_{n\rho}$의 유한개의 다항식에 대한 유리결합으로 나타나는 모든 정수계수 다항식 $H(x)$로 이루어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U206.tex
+% sha256: 945B4D6E3949D5E119E1A280FDA96883D01ABD9D20650C46E35669F4A5EB4FDE
+이제 기저정리들을 옮기자. 유리기저에 관해서는 오직 \glqq{}유리적인 것\grqq{}에만 기초하는 체, 최소 포함 체, 유리기저의 개념은 아무런 변화도 겪지 않는다는 점에 유의해야 한다. 더 나아가 정수계수계 $\Ssys_{n\rho}$의 사상계 $\Ssys^*_{\rho\rho}$를 다시 정수계수계가 되도록 임의로 많은 방식으로 선택할 수 있다. 정수계수 선형족에서도 개수의 제한을 이끌어 내는 추론이 그대로 유지되므로 다음이 성립한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U207.tex
+% sha256: C4958C5BC8F281C3A0A246A93A80AAC0F335F2EE3DC918F0D50DEFA8FE0C41FE
+\emph{정리 V$'$: 모든 정수계수계 $\Ssys_{n\rho}$는 한 유리기저를 갖는다. 특히 정수계수 선형족 $\Lsys_{n\rho}$의 유리기저는 많아야 $\rho+1$개의 다항식을 포함하도록 선택할 수 있다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U208.tex
+% sha256: D0DDA78B51DE7783DD1D9CD5CA290693AB52EDCDB9F7F8C9AA2A5D90133682E4
+이제 다항식으로 이루어진 정역의 인볼루션기저(\S\ 8)에 대응하는 것을 고찰한다. 이를 위해 \emph{양들의 열에 대한 대칭함수}의 정리를 \emph{정수성}에 관하여 다음 보조정리로 확장해야 한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U209.tex
+% sha256: F14ABF053FDA549C7B87151FD63022A4B132153AB55A702A496AFBDACEF0DEB1
+\emph{보조정리. $n$개의 양들의 열 $(yz\cdots t)$}
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(1)&
+\begin{array}{cccc}
+  y_1&z_1&\cdots&t_1\\
+  y_2&z_2&\cdots&t_2\\
+  \vdots&\vdots&&\vdots\\
+  y_n&z_n&\cdots&t_n
+\end{array}
+\end{array}
+\]
+\emph{에 대한 정수계수 대칭다항식들은 그 가운데 유한개의 함수로 된 정수계수 다항함수이다. 구체적으로 그 유한개의 함수는 기본대칭함수}
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(2)&
+\begin{gathered}
+  \sigma_1(y),\sigma_2(y),\ldots,\sigma_n(y);\quad
+  \sigma_1(z),\sigma_2(z),\ldots,\sigma_n(z);\quad\ldots;\\
+  \sigma_1(t),\ldots,\sigma_n(t);
+\end{gathered}
+\end{array}
+\]
+\emph{와 함수}
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(3)&
+  \chi_1(y,z,\ldots,t),\ldots,\chi_k(y,z,\ldots,t),
+\end{array}
+\]
+\emph{이며, 함수 (3)은 함수 (2)에 대하여 대수적으로 정수적이고 정수계수적으로 종속된다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U210.tex
+% sha256: 3AE0B5F7A1BED53E1F7EF8FFEBA80875F7EE214D986114B49BBE7203001B0A98
+실제로 $n$개의 양 $y_1,\ldots,y_n$은 $\sigma_1(y),\ldots,\sigma_n(y)$에 대하여 대수적으로 정수적이고 정수계수적으로 종속된다. $z_1,\ldots,z_n$과 $\sigma_1(z),\ldots,\sigma_n(z)$ 사이에도 같은 관계가 성립하며, 그 밖의 열들에도 마찬가지이다. 따라서 양들의 열 (1)에 대한 대칭함수체는 함수 (2)가 정하는 체 위의 대수적 체를 이루고, 이 체의 대수적으로 정수적이며 정수계수적인 양들은 양들의 열 (1)에 대한 정수계수 대칭다항식들과 일치한다. 그러므로 (3)을 크로네커 기본계로 정하면 보조정리가 증명된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U211.tex
+% sha256: 65991096DC4E252E496B51FE7AC931EA9837C8A2F80C8D7F7056C26C1B3C580D
+이제 $\Jdom_{n\rho}$을 정수계수 정역, $\Jdom^*_{\rho\rho}$을 정수계수 사상영역이라 하고
+\[
+  \Psi^*(z,u)=G^*(x)\cdot z^i+
+  \sum{}'G^*_{\alpha\alpha_1\ldots\alpha_\rho}(x)\cdot
+  z^\alpha u_1^{\alpha_1}\cdots u_\rho^{\alpha_\rho}
+\]
+를 $\Jdom^*_{\rho\rho}$의 인볼루션형식이라 하자. 여기서 $G^*(x)$는 0차, 곧 $[\Omega]$의 한 수일 수도 있다. 그러면 함수 (2)에 대응하는 기본대칭함수들은 다음 몫들 가운데 몇몇으로 주어진다.
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(4)&
+  G^*_{\alpha\alpha_1\ldots\alpha_\rho}(x):G^*(x).
+\end{array}
+\]
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U212.tex
+% sha256: 772FFDE6E14F07F8386B7CB26AB7AC99EF1BDB62DCA22B404319E61F55B92080
+보조정리에 따라 함수 (3)은 (2)에 대하여 대수적으로 정수적이고 정수계수적으로 종속된다. 그러므로 대수적 정수인 계수를 갖는 다항식에 대한 가우스 정리의 확장에 의해, (3)에 대응하는 $\Kfield^*_{\rho\rho}$의 함수들은
+\[
+\begin{array}{@{}l@{\quad}c@{}}
+(5)&
+  K_i^*(x):(G^*(x))^\sigma
+\end{array}
+\]
+로 주어진다. 여기서 $K_i^*(x)$는 $\Jdom^*_{\rho\rho}$의 정수계수 다항식이다. 따라서 상대정역을 다루는 경우 이 함수들은 그 영역에 속하고, 일반적으로는 $\Jdom^*_{\rho\rho}$의 다항식들의 몫이다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U213.tex
+% sha256: 46BC5FAF24D7F5BBE9F39FE3B66AB755B63B923DB36C83BFC12E64692A9383C4
+이제 $F^*(x)$가 $\Jdom^*_{\rho\rho}$의 임의의 정수계수 다항식이면
+\[
+  F^*(x)=\frac1i\Bigl(F^*(x)+F^*(x^{(1)})+\cdots+F^*(x^{(i-1)})\Bigr)
+\]
+이고, 따라서 $i\cdot F^*(x)$는 양들의 열 $x,x^{(1)},\ldots,x^{(i-1)}$에 대한 정수계수 대칭다항식이 된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T15_U214.tex
+% sha256: F5EB472E7B16F261398C4762E8B1B5430A88B8530EE1389686C692FB716C6AFD
+보조정리와 전이 원리에 따라 다음이 성립한다.
+
+\emph{정리 VI$'$: 정수계수 정역 $\Jdom_{n\rho}$에서는 각 인볼루션형식이 하나의 특별한 유리기저를 정하며, $\Jdom_{n\rho}$의 모든 다항식 $F(x)$은 다음 표현을 갖는다.}
+\[
+  F(x)=\frac{\Gamma(H(x),H_1(x),\ldots,H_\sigma(x))}{i\cdot H(x)^k},
+\]
+\emph{여기서 $\Gamma$는 정수계수 다항함수이다. 정수계수 상대정역 $\Gdom_{n\rho}$의 사상영역도 정수계수 상대정역 $\Gdom^*_{\rho\rho}$인 경우, 분모 $H(x)$는 대응하는 인볼루션형식의 최고차항의 계수로 주어진다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U215.tex
+% sha256: 3ED31D0BF674FA69B9767A440210B86BBAFCCA4F6049AEF361C143F95B6FA5F7
+\section*{\S\ 15. 제1종 정수계수 상대정역과 정수계수 정칙계.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U216.tex
+% sha256: 8D9A6C6CDCFDE225F2D3BE31ED8843210129758865E53D271FCDC96910DE6BDB
+정수계수계에서는 정기저 대신 정수계수 정기저를 사용한다. 이는 그 계의 유한개의 정수계수 다항식으로서, 계의 모든 정수계수 다항식을 이 유한개에 대한 정수계수 다항식 결합으로 나타낼 수 있게 하는 것을 말한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U217.tex
+% sha256: 9257194C3CEE2990C215D2B16F3435E85CF2275ECFF54D955F4B76FF4C72213E
+정수계수 정기저에 관한 정리들은 본질적으로 앞의 정리들과 나란히 진행되며, 증명만 약간 수정하면 된다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U218.tex
+% sha256: FA93D13518CA02BC5E5E6E04B39FE95D29DAA93660FF27493A6FE7F30556A792
+먼저 정의 V(\S\ 9)를 그대로 옮길 수 있다.
+
+\emph{정의 V$'$: 한 양 $\xi$가 최고차항의 계수가 $[\Omega]$의 한 단원이고 나머지 계수들이 $\Gdom_{n\rho}$의 다항식인 어떤 방정식을 만족할 때, $\xi$를 정수계수 상대정역 $\Gdom_{n\rho}$에 관하여 대수적으로 정수적이고 정수계수적이라고 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U219.tex
+% sha256: EE52FD3CAD9635F50F18320EC0F7FA32A28F146CEA2ADD028A29A526CD27E59A
+실제로 대수적 정수인 계수를 갖는 다항식에 대한 가우스 정리의 확장은 \S\ 9에서와 마찬가지로 이로부터 기약방정식에 의한 정의를 얻을 수 있음을 보여 준다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U220.tex
+% sha256: CBB3003C35AD29501A3738B2928548FA2DC06813EECBDC096F8AA148D8C66126
+정의 V$'$로부터 정의 VII도 옮길 수 있다.
+
+\emph{정의 VII$'$: 정수계수 상대정역 $\Gdom_{n\rho}$이 어떤 상대정역 $\Gdom^*_{\rho\rho}$을 사상영역으로 가지며, $x_1\rcdots x_\rho$의 임의의 정수계수 다항식이 모두 $\Gdom^*_{\rho\rho}$에 대하여 대수적으로 정수적이고 정수계수적으로 종속될 때, $\Gdom_{n\rho}$을 제1종이라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U221.tex
+% sha256: 4808B496A4E28C814C83F9FE5C19BD090844D9D5146C8C911006C85C752BCDB6
+이 제1종 영역들의 유한성을 보이기 위해, 먼저 \S\ 10에서와 마찬가지로 정의로부터 인볼루션형식의 최고차항의 계수가 $[\Omega]$의 한 단원임이 따른다는 점에 유의한다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U222.tex
+% sha256: 17080496F4E6892AE5242ACF0BE0CD952B98B61DAD9E31A22983B16C6DED7DCF
+따라서 정리 VI$'$ (\S\ 14)에 의해 $\Gdom_{n\rho}$의 모든 다항식 $F(x)$은 다음 표현을 갖는다.
+\[
+  F(x)=\frac{\Gamma(H_1(x)\rcdots H_\sigma(x))}{i}.
+\]
+이제 정수계수 다항식 $\Gamma(H_1\rcdots H_\sigma)$들로 이루어진 계에, 정수 계수에 대하여 진술된 힐베르트의 정수계수 모듈기저 정리 II (Math. Ann. 36)를 대수적 정수계수 다항식으로 확장한 형태로 적용한다.\srcfn{*)}{$w_1\rcdots w_k$가 $\Omega$의 대수적 정수들에 대한 한 기본계이고
+\[
+  \Gamma(H_1\rcdots H_\sigma)=\Gamma_1(H)w_1+\cdots+\Gamma_k(H)w_k
+\]
+로 놓으면, $\Gamma_1(H)\rcdots \Gamma_k(H)$는 보통 정수 계수를 갖는다. 형식 $v_1\Gamma_1(H)+\cdots+v_k\Gamma_k(H)$로 이루어진 계에 정리 II를 적용하면 이 확장의 타당성이 곧바로 따른다.} 그러면 정수계수 정기저의 존재가 드러난다. 즉,
+
+\emph{정리 VII$'$: 모든 제1종 정수계수 상대정역은 한 정수계수 정기저를 갖는다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U223.tex
+% sha256: 948F57A2FDEE5885828E3D7B657CB757688890AFAE319488C1E84E8C5FCB24FB
+이제 정칙계의 정의를 옮긴다.
+
+\emph{정의 VIII$'$: 정수계수계 $\Ssys_{n\rho}$을 포함하는 최소 정수계수 정역의 한 사상영역 $\Jdom^*_{\rho\rho}$ 안에 최고차항들의 종결식이 $[\Omega]$의 한 단원인 --- $R_0=\eps$ --- $\rho$개의 다항식이 존재할 때, $\Ssys_{n\rho}$을 정수계수 정칙이라 한다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U224.tex
+% sha256: 1E2FDAEC4035D04A31EE58652C70FB9D1A7FC3575B522632C14379A05CDDA416
+정수계수 정기저의 존재증명을 옮기기 위해, \S\ 11의 보조정리가 다음과 같은 더 강한 형태를 갖는다는 점에 유의한다. 이는 \S\ 11의 방정식 (5), (6)과 $A_1(\lambda)\rcdots A_\tau(\lambda)$가 $\lambda_1\rcdots\lambda_\rho$의 정수계수 다항함수라는 사실에서 따른다.
+
+\emph{$x_1\rcdots x_\rho$의 임의의 모든 정수계수 다항식이 $\rho$개의 정수계수 다항식에 대하여 대수적으로 정수적이고 정수계수적으로 종속되기 위한 충분조건은, 이 다항식들의 최고차항들의 종결식이 $[\Omega]$의 한 단원인 것이다 --- $R_0=\eps$.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U225.tex
+% sha256: A9015669C0B85726E09F664D0E6470F0FD2E40972912EE862F5CCDF1E2D55C5C
+이 보조정리로부터 \S\ 12에서와 똑같이 정수계수 정칙계의 모든 다항식 $F(x)$에 대하여 \S\ 12의 표현 (3)을 얻는다. 이제 $\Gamma_1(G_i)\rcdots\Gamma_k(G_i)$는 $G_i$의 정수계수 다항식이다. 더 나아가 \S\ 12에서와 같이, 대수적 정수계수 다항식으로 확장한 힐베르트 정리 II (Math. Ann. 36)를 적용하고 이를 최소 포함 정수계수 정역의 정의와 결합하면 정수계수 정기저의 존재를 얻는다. 즉,
+
+\emph{정리 IX$'$: 모든 정수계수 정칙계는 한 정수계수 정기저를 갖는다.}
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U226.tex
+% sha256: 0A929779C05B8CC1B7C8B56DC51A93D8C68245497170D0086204AC45D9270022
+제1종 정수계수 상대정역의 예로, \S\ 13의 예 1과 유사하게 한 라그랑주 종영역의 정수계수 다항식 전체 $\Gdom_{nn}$을 들 수 있다. $\Gdom_{nn}$이 정수계수 제1종이라는 사실은 항등식
+\[
+  x_k^n-\sigma_1(x)x_k^{n-1}+\cdots\pm\sigma_n(x)=0
+  \qquad(k=1,2,
+\ldots,n)
+\]
+에서 따른다. 기본대칭함수들의 종결식 값이 $\pm1$이므로, $\Gdom_{nn}$은 정수계수 정칙계이기도 하다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U227.tex
+% sha256: 59DE638CABCA263CD2A5A8D28C0B814D8F7A3F14D9C8D3A0E9012FAF8B30817D
+또 다른 예는 \S\ 14의 보조정리에 따라 $n$개의 양들의 열에 대한 정수계수 대칭다항식 전체로 주어진다.
+
+% inherited: noether_paper06_ko_translation_001_20260804\targets\T16_U228.tex
+% sha256: C740748876B7C227E952B18F20A2D702C52657E0BFD18D74EE2D04AD2AE0BA8F
+에를랑겐, 1914년 5월.

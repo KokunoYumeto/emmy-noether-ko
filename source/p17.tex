@@ -1,0 +1,1213 @@
+% Korean Noether paper 17 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 10071--11217.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 93,905 bytes; SHA-256 E2C254B35629D7211201AB449A487EB90305A29E3D2F533064D4C9B10C0F2A91.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\providecommand{\mM}{\mathfrak M}
+\providecommand{\mN}{\mathfrak N}
+\providecommand{\mL}{\mathfrak L}
+\providecommand{\mG}{\mathfrak G}
+\providecommand{\mA}{\mathfrak A}
+\providecommand{\mB}{\mathfrak B}
+\providecommand{\mU}{\mathfrak U}
+\providecommand{\mP}{\mathfrak P}
+\providecommand{\mD}{\mathfrak D}
+\providecommand{\mS}{\mathfrak S}
+\providecommand{\mx}{\mathfrak x}
+\providecommand{\my}{\mathfrak y}
+\providecommand{\mz}{\mathfrak z}
+\providecommand{\me}{\mathfrak e}
+\providecommand{\mbarA}{\overline{\mathfrak A}}
+\providecommand{\mbarB}{\overline{\mathfrak B}}
+\providecommand{\bara}{\overline{\mathfrak a}}
+
+\begingroup
+\makeatletter
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\@makefnmark}{\hbox{\textsuperscript{\normalfont\thefootnote}}}
+\long\def\@makefntext#1{\parindent 1em\noindent
+  \hb@xt@2.4em{\normalfont\thefootnote)\hfil}#1}
+\makeatother
+\setcounter{footnote}{0}
+\newcommand{\pseventeenkoheading}[2]{%
+  \par\medskip
+  \begin{center}
+    \textnormal{\S~#1.}\\[.3ex]
+    \textbf{#2}
+  \end{center}
+  \nopagebreak
+}
+
+\begin{center}
+{\Large\bfseries 비가환 영역의 모듈, 특히\\
+미분식과 차분식으로 이루어진 모듈}\par
+\medskip
+에미 뇌터와 베르너 슈마이들러, 괴팅겐\par
+\medskip
+\rule{2.2em}{0.25pt}
+\end{center}
+
+\begin{center}
+\textbf{목차}
+\end{center}
+\begin{center}
+\begin{tabular}{@{}r@{\hspace{0.7em}}p{0.77\linewidth}@{}}
+& 서론.\\
+\S~1. & 미분식과 차분식의 형식적 성질.\\
+\S~2. & 일반 다항식영역.\\
+\S~3. & 한쪽 모듈과 그 잉여군.\\
+\S~4. & 잉여군의 두 부분군으로의 가약성과 모듈과의 관계.\\
+\S~5. & 단위원을 이용한 계산과 \(k\)개 부분군으로의 가약성.\\
+\S~6. & 유한성정리.\\
+\S~7. & 유일분해가 성립하는 한 경우.\\
+\S~8. & 완전가약군의 소군들로의 가법적 분해. 동형정리.\\
+\S~9. & ‘동형’과 ‘같은 종류’라는 개념의 관계.\\
+\S~10. & 한 군에 무한히 많은 분해가 존재함.\\
+\S~11. & 미분방정식계와 그 적분해들과의 관계.\\
+\S~12. & 예.
+\end{tabular}
+\end{center}
+
+\begin{center}\textbf{서론}\end{center}
+
+한 변수 미분식의 형식이론은 어떤 의미에서 \emph{유일한} 기약인자분해까지 이른다.\footnote{E. Landau, \emph{Ein Satz über die Zerlegung homogener linearer Differentialausdrücke in irreduzible Faktoren}, Journal für die reine und angewandte Mathematik 124 (1902), 115--120쪽과, 이에 이어지는 A. Loewy, \emph{Über reduzible lineare homogene Differentialgleichungen}, Mathematische Annalen 56 (1903), 549--584쪽을 보라.} 그러나 대수학의 대응 정리는 여러 변수의 다항식으로 옮길 수 있는 반면, 편미분식에는 더 이상 옮길 수 없다.\footnote{H. Blumberg, \emph{Über algebraische Eigenschaften von linearen homogenen Differentialausdrücken}, 괴팅겐 박사학위논문, 1912, 52쪽에 실린 Landau의 반례(51--52쪽)를 보라.} 그런데 한 변수의 미분식에는 곱표현과 나란히 최소공배수로서의 표현도 있으며, 여기에도 비슷한 법칙이 성립한다. 곧 \emph{서로 다른 두 분해의 개별 성분들을 두 개씩 서로 대응시킬 수 있고}, 그렇게 대응하는 성분들은 ‘같은 종류’이다.\footnote{앞서 든 논문들과 함께 A. Loewy, \emph{Über vollständig reduzible lineare homogene Differentialgleichungen}, Mathematische Annalen 62 (1906), 89--117쪽도 보라. 이하 Loewy로 인용한다.}
+
+이 최소공배수 개념은 모듈개념으로 이해할 수 있고, 그렇게 하면 \(n\)개의 변수로 옮겨진다. 이 논문은 이 방식으로 위 정리들의 \emph{자연스러운} 일반화를 얻는다. 더 나아가 미분식에서 실제로 쓰는 것은 다음 두 성질뿐임도 주목한다. 미분식들을 비가환 곱셈을 갖는 다항식으로 볼 수 있고, 곱의 차수가 인자들 차수의 합과 같다는 것이다. 예컨대 차분식도 이 조건들을 만족하므로, 지금까지 한 변수에 대해서만 알려져 있던 정리들은 차분식에도 성립한다.\footnote{G. Wallenberg--A. Guldberg, \emph{Theorie der linearen Differenzengleichungen}, 라이프치히·베를린, 1911을 보라.}
+
+따라서 우리는 일반적으로 원소가 비가환 곱셈을 갖는 다항식인 모듈들의 이론을 전개하며, \emph{모듈의 고찰을 잉여류의 고찰로 환원한다}.\footnote{가환영역의 경우에는 W. Schmeidler, \emph{Über Moduln und Gruppen hyperkomplexer Größen}, Mathematische Zeitschrift 3 (1919), 29--42쪽을 보라.} 가환인 특수한 경우와 달리 여기서는 잉여류들의 합은 말할 수 있지만 곱은 말할 수 없고, 잉여류와 다항식의 곱만 말할 수 있다. 따라서 ‘잉여군’의 개념을 가환인 경우와 다르게 고쳐야 한다. 한 변수 다항식의 특수한 경우에는 잉여군이 ‘유한’, 곧 선형독립인 잉여류를 유한개만 갖는다. 일반적으로는 그러한 유한한 ‘차수’가 존재하지 않아 군이 ‘무한’이다. 그러나 우리의 방법에서는 이 차이가 문제가 되지 않는다.
+
+가환인 경우와 마찬가지로, 한 모듈을 서로 소인 모듈들의 최소공배수로 나타내는 데에는 잉여군을 가법적으로 분해하는 더 간단한 과정이 대응한다. 여기서 핵심이 되는 것은 잉여군들의 \emph{동형}이다. 이를 한 변수 미분식으로 특수화하면 대응 모듈들의 같은 종류라는 개념이 되고, 가환모듈로 특수화하면 동일성이 된다. 같은 종류라는 개념 자체도 \(n\)개의 변수로 옮길 수 있고 동형개념과 일치함을 보일 수 있다. 잉여군의 가법적 분해에는 언제나 \emph{유한개}의 합항만 나타난다는 사실은 고르단의 증명법에 근거한 힐베르트의 모듈기저정리를 옮겨서 보인다. 힐베르트의 원래 증명법을 쓰면 곱셈법칙에 제한이 필요할 것이다. 공식 (6)의 오른쪽에 \(a_i\) 대신 \(a\)가 와야 하는데, 이는 미분식에서는 성립하지만 차분식에서는 성립하지 않는다.
+
+이제 \emph{유일성정리}에 이르기 위해서는 Loewy와 마찬가지로 모듈을 ‘완전가약’, 곧 소모듈들의 최소공배수로 나타낼 수 있는 모듈로 특수화해야 한다. \emph{서로 다른 두 분해가 있으면 그 성분들은 두 개씩 서로 동일하거나, 적어도 한 분해의 각 성분에 다른 분해의 동형인 성분이 대응하고 그 역도 성립한다. 이 둘째 경우에는 각 분해가 동형인 성분을 적어도 두 개씩 포함한다.} 더 나아가 같은 분해 안에 동형인 두 성분이 나타나면 무한히 많은 분해가 존재한다. 이는 소모듈로 제한하지 않아도 성립하며, 지금까지 한 변수 미분식의 특수한 경우에도 알려지지 않았던 사실이다.
+
+끝으로 미분식으로 이루어진 모듈에서는 적분해와의 관계로 돌아간다. 유한 잉여군의 차수는 선형독립인 적분해들의 최대수와 같다. 따라서 잉여군이 유한일 필요충분조건은 일반적분에 임의함수가 나타나지 않는 것이다. 두 모듈이 같은 종류라는 것은 한 변수의 경우와 마찬가지로 그 적분해들이 ‘쌍유리적’ 관계에 있다는 뜻이다. 마지막에는 몇 가지 예를 든다. ---
+
+이 논문을 쓰게 된 최초의 계기는 몇 해 전 E. Landau가 E. Noether에게 곱정리의 일반화를 물은 것이었다. 당시 E. Noether는 이것이 비가환 다항식영역의 모듈이론 문제라는 점만 알아보았지만, 문제에 손댈 수는 없었다. 그때 유일하게 알려져 있던 Lasker의 모듈정리들은 이 영역으로 직접 옮길 수 없었다. Lasker의 증명법은 한 다항식이 기약인자들로 유일하게 분해된다는 정리에 근거하기 때문이다.\footnote{최근 E. Noether는 여기에 쓰인 방법과 가까운 방법으로 이 정리를 쓰지 않고도 Lasker의 정리들을 정초할 수 있음을 알아보았다.} 비로소 Schmeidler의 방법들이 전이 가능성을 열어 주었고, 우리는 이를 함께 수행하였다. 세부적으로 말하면 잉여군의 일반화, 힐베르트 유한성정리의 전이와 응용, 무한히 많은 분해의 존재는 E. Noether에게서 나왔다. Loewy의 완전가약 개념의 일반화, 동형개념과 이것이 같은 종류라는 개념과 맺는 관계는 W. Schmeidler에게서 나왔다.
+
+\pseventeenkoheading{1}{미분식과 차분식의 형식적 성질}
+
+\textbf{1.} 한 변수 미분식에는 기호적인 곱셈을 도입해 왔다. 다음과 같이 두자.
+\[
+ a_0(x)\frac{\dd^n y}{\dd x^n}+a_1(x)\frac{\dd^{n-1}y}{\dd x^{n-1}}+\cdots+a_n(x)y=A(y),
+\]
+\[
+ b_0(x)\frac{\dd^m y}{\dd x^m}+b_1(x)\frac{\dd^{m-1}y}{\dd x^{m-1}}+\cdots+b_m(x)y=B(y).
+\]
+그러면 기호적 곱 \(AB(y)\)를 다음 미분식으로 정의한다.
+\[
+ a_0(x)\frac{\dd^n B(y)}{\dd x^n}+a_1(x)\frac{\dd^{n-1}B(y)}{\dd x^{n-1}}+\cdots+a_n(x)B(y).
+\]
+이 곱셈은 실제로 두 연산자의 곱셈이다. 통상적으로 \(\frac{\dd^n}{\dd x^n}\)을 \(\left(\frac{\dd}{\dd x}\right)^n\)으로 바꾸면 이를 가장 간단히 쓸 수 있다. 그러면 \(AB\)는
+\[
+ \left(a_0\left(\frac{\dd}{\dd x}\right)^n+\cdots+a_n\right)
+ \left(b_0\left(\frac{\dd}{\dd x}\right)^m+\cdots+b_m\right)y
+\]
+가 되며, 곱을 실행할 때에는 합과 곱의 통상적인 미분법칙을 쓴다. 연산자가 작용하는 함수를 명시적으로 쓰지 않고 변수 \(\frac{\dd}{\dd x}=\xi\)에 곱의 미분법칙에 대응하는 곱셈법칙을 부여하면, 각 연산자를 이 한 변수의 다항식으로 볼 수 있다.
+\[
+ \frac{\dd}{\dd x}\bigl(a(x)y\bigr)=a(x)\frac{\dd}{\dd x}(y)+a'(x)y.
+\]
+우리 표기에서는 (\(n=1,m=0\))
+\begin{equation}
+ \xi\cdot a=a\cdot\xi+a'.
+\tag{1}
+\end{equation}
+
+한 함수 \(y\)의 선형 편미분식
+\[
+ \left(\sum a_{\alpha_1\ldots\alpha_n}(x_1,\ldots,x_n)
+ \frac{\p^{\alpha_1+\cdots+\alpha_n}}
+ {\p x_1^{\alpha_1}\cdots\p x_n^{\alpha_n}}\right)y
+\]
+도 완전히 같은 방식으로 다룬다. \(n\)개 연산자 \(\frac{\p}{\p x_1},\ldots,\frac{\p}{\p x_n}\)에 변수 \(\xi_1,\ldots,\xi_n\)을 도입하면 다항식
+\[
+ \sum a_{\alpha_1\ldots\alpha_n}(x_1,\ldots,x_n)
+ \xi_1^{\alpha_1}\cdots\xi_n^{\alpha_n}
+\]
+을 얻는다. 두 다항식의 곱은 다음 법칙으로 계산한다.
+\begin{equation}
+ \xi_i a=a\xi_i+a_i \qquad (i=1,\ldots,n).
+\tag{2}
+\end{equation}
+여기서 \(a_i\)는 \(x_i\)에 관한 \(a\)의 편도함수이고, \(\xi\)들끼리의 곱은 가환적이다. 이렇게 정의한 다항식에는 곱셈의 교환법칙을 제외한 통상적인 대수학의 모든 덧셈법칙과 곱셈법칙이 성립한다. 특히 두 그러한 다항식의 곱은 전체차수와 각 개별 변수에 관한 차수가 모두 두 인자의 대응 차수의 합과 같다.
+
+\textbf{2.} 다음 꼴의 차분식(앞서 든 Wallenberg의 책을 보라)
+\[
+ a_x^{(0)}y_{x+n}+a_x^{(1)}y_{x+n-1}+\cdots+a_x^{(n)}y_x=A_x,
+\]
+\[
+ b_x^{(0)}y_{x+m}+b_x^{(1)}y_{x+m-1}+\cdots+b_x^{(m)}y_x=B_x
+\]
+에는 이에 대응하여 다음 곱을 정의한다.
+\[
+ (AB)_x=a_x^{(0)}B_{x+n}+a_x^{(1)}B_{x+n-1}+\cdots+a_x^{(n)}B_x.
+\]
+이 곱은 곱셈법칙
+\[
+ (ay)_{x+1}=a_{x+1}y_{x+1}
+\]
+을 이용하여 실행할 수 있다. \(x\)에서 \(x+1\)로 가는 연산자를 \(\xi\)라 하면 \(\xi\{ay\}=a^*\xi\{y\}\)이고, 여기서 \(a^*=a_{x+1}\)이다. 다시 연산자가 작용하는 함수 \(y\)를 생략하면 다음 법칙을 얻는다.
+\begin{equation}
+ \xi a=a^*\xi.
+\tag{3}
+\end{equation}
+여기서 \(a\)와 함께 \(a^*\)도 항등적으로 사라지지 않는다. \(n\)개의 변수에서도 완전히 같은 방식으로
+\begin{equation}
+ \xi_i a=a_i\xi_i\qquad (i=1,\ldots,n)
+\tag{4}
+\end{equation}
+이다. 여기서 \(\xi_i\)는 \(x_i\)에서 \(x_i+1\)로 가는 연산자이고, \(a_i\)는 \(a\)에서 \(x_i\)를 \(x_i+1\)로 바꾸어 얻은 함수이다. 따라서 \(a\)가 항등적으로 사라지지 않으면 \(a_i\)도 그러하다. 이 규정 아래에서도 교환법칙을 제외한 덧셈과 곱셈의 모든 법칙, 그리고 곱의 차수에 관한 법칙이 성립한다.
+
+다음 절에서는 이 두 경우를 임의의 계수를 갖고 아주 일반적으로 정의한 하나의 다항식영역 아래에 포함시킨다.
+
+\pseventeenkoheading{2}{일반 다항식영역}
+
+임의의 추상적으로 정의된 체 \(P\)에서 시작하자. 그 원소들은 작은 라틴문자로 나타내며, 이 체에는 모든 대수법칙, 특히 곱셈의 교환법칙과 유일한 역연산이 성립한다. 이 체에 \(n\)개의 부정원 \(\xi_1,\ldots,\xi_n\)을 첨가한다. 곧 곱 \(a\xi_1,b\xi_2,\ldots,c\xi_n\)과 그 유한합들로 이루어진 정역 \(J\)를 고찰하되, 곱셈의 교환법칙을 제외한 덧셈과 곱셈의 모든 법칙이 성립한다고 한다. 특히 다음 꼴의 유한합을 ‘다항식’이라고 부르고, 언제나 큰 라틴문자로 나타낸다.
+\[
+ F(\xi_1,\ldots,\xi_n)=\sum a_{\nu_1\ldots\nu_\rho}\xi_{\nu_1}\cdots\xi_{\nu_\rho}.
+\]
+이제 교환법칙 대신 \(J\)의 원소들에 \emph{두 다항식의 곱이 다시 다항식이 되는} 곱셈법칙을 부여한다. 곧 \(J\)의 모든 다항식들의 영역이 이미 영역 \(J\) 전체가 되게 한다. 이를 위한 필요충분조건은 \(\xi_1,\ldots,\xi_n\)과 \(P\)의 임의의 원소 \(a\)에
+\begin{equation}
+ \xi_i a=F_i(\xi_1,\ldots,\xi_n)\qquad (i=1,\ldots,n)
+\tag{5}
+\end{equation}
+꼴의 곱셈법칙이 성립하는 것이다. 여기서 \(F_i(\xi_1,\ldots,\xi_n)\)는 \(\xi_i\)와 \(a\)에 자연스럽게 의존하는 어떤 다항식이다. 특히 미분식과 차분식에 관한 법칙 (2), (4)가 이 꼴이다. 실제로 \(\xi_i a\) 자체는 다항식이 아니지만 가정상 영역에 속하므로 이 등식이 필요하다. 역으로 공식 (5)를 유한번 적용하면 영역 \(J\)의 각 원소를 다항식으로 바꿀 수 있다.
+
+1로 나타내는 체의 단위원에는 \(\xi_i\cdot1=1\cdot\xi_i=\xi_i\)가 성립한다고 하자. 또 \(\xi_1,\ldots,\xi_n\)끼리의 곱셈은 가환적이라고 규정한다.\footnote{이 가정은 § 6부터 유한성정리와 그 귀결들을 위해서만 쓰인다.} 그러면 \(J\)의 각 다항식은 \(P\)의 계수를 갖는 \(\xi_1,\ldots,\xi_n\)의 통상적인 다항식처럼 쓰이며, 두 다항식은 모든 계수가 일치할 때에만 일치한다.
+
+이제 이하에서는 더 특별히,\footnote{이 가정도 § 6부터만 쓰인다.} (5) 대신
+\begin{equation}
+ \xi_i a=a_i\xi_i+b_i\qquad (a_i\ne0)\quad(i=1,\ldots,n)
+\tag{6}
+\end{equation}
+이 성립한다고 요구한다. 여기에도 특히 법칙 (2), (4)가 포함된다. 그러면 곱의 차수는 인자들 차수의 합과 같으며, 이는 전체차수와 각 개별 변수에 관한 차수 모두에 성립한다. 따라서 항등적으로 사라지지 않는 두 다항식의 곱도 영과 다르다.
+
+\pseventeenkoheading{3}{한쪽 모듈과 그 잉여군}
+
+우리 영역 \(J\)에서는 곱셈이 비가환이므로 다음 종류의 모듈들을 구별할 수 있다.\footnote{모듈은 큰 독일문자로 나타낸다.}\footnote{A. Hurwitz도 이미 한쪽 아이디얼들을 고찰하였다. \emph{Vorlesungen über die Zahlentheorie der Quaternionen}, 베를린, Springer, 1919, 제6강을 보라. 그러나 거기서는 본질적으로 주아이디얼을 다루며, 그곳의 주 1에 인용된 Du Pasquier의 논문들도 마찬가지이다.}
+
+\textbf{1. 우측모듈}은 \(M\)과 함께 임의의 다항식 \(F\)에 대한 \(FM\)을 포함하고, \(M_1,M_2\)와 함께 \(M_1+M_2\)도 포함한다.
+
+\textbf{2. 좌측모듈}은 \(M\)과 함께 \(MF\)를 포함하고, \(M_1,M_2\)와 함께 \(M_1+M_2\)도 포함한다.
+
+이 두 종류를 한데 \emph{한쪽 모듈}이라고 부르며, 우측이면서 좌측인 모듈을 \emph{양쪽 모듈}이라 한다. 이하에서는 우측모듈로 제한한다. 좌측모듈의 이론도 완전히 같은 방식으로 세울 수 있다.
+
+두 다항식 \(F,G\)의 차가 \(\mM\)으로 나누어지는, 곧 \(\mM\)에 속하는 경우 이 두 다항식을 법 \(\mM\)에 관하여 합동이라고 하고 \(F\equiv G(\mM)\)라고 쓴다. 한 다항식과 합동인 모든 다항식의 집합은 법 \(\mM\)의 한 \emph{잉여류}를 이룬다. 잉여류는 작은 독일문자로 나타낸다. 합동식
+\[
+ F_1\equiv F_2(\mM)\qquad\text{및}\qquad G_1\equiv G_2(\mM)
+\]
+에서 \(F_1+G_1\equiv F_2+G_2(\mM)\)가 따르므로, 두 잉여류 \(\mx,\my\)의 합은 정의되며 다시 잉여류 \(\mx+\my\)이다. 반면 모듈이 한쪽 모듈이므로 두 잉여류의 곱은 말할 수 없다. 실제로
+\[
+ F_1=F_2+M_1,\qquad G_1=G_2+M_2
+\]
+에서
+\[
+ F_1G_1=F_2G_2+F_2M_2+M_1G_2+M_1M_2
+\]
+가 따르기는 한다. 그러나 \(M_1\)이 \(\mM\)에 속하더라도 \(M_1G_2\)는 \(\mM\)에 속하지 않을 수 있으므로, 일반적으로 \(F_1G_1\)과 \(F_2G_2\)는 합동일 필요가 없다. 이에 비해 \(M_1=0\), 곧 \(F_1=F_2=F\)이면 \(G_1\equiv G_2\)에서 \(FG_1\equiv FG_2\)가 따른다. 따라서 임의의 잉여류 \(\my\)의 앞에 다항식 \(F\)를 곱할 수 있고, 그렇게 해서 잘 정의된 잉여류 \(F\my=\mz\)를 얻는다.
+
+잉여류의 계산에서는 덧셈의 교환법칙과 결합법칙, 덧셈의 유일한 역연산법칙이 성립한다. 또 잉여류와 다항식의 곱과 덧셈에는 분배법칙 \(F(\my_1+\my_2)=F\my_1+F\my_2\)이 성립한다. 이는 법 \(\mM\)의 다항식 계산에서 곧바로 따른다.
+
+단위원이 속하는 잉여류를 단위원류, 또는 단위원 \(\me\)라고 하자. 그러면 \(F\me=\mx\)는 다항식 \(F\)가 속하는 잉여류이다. 일반적인 잉여류와 달리 여기서는 곱 \(\mx\me\)도 잘 정의되며 \(\mx\)와 같다. 실제로
+\[
+ F_1=F_2+M_1,\qquad G_1=1+M_2
+\]
+이면 \(M_1\cdot1=M_1\)이므로
+\[
+ F_1G_1=F_2+M
+\]
+도 성립한다. 법 \(\mM\)의 모든 잉여류의 집합을 \emph{\(\mM\)의 잉여군}이라 한다. 따라서 한 잉여군은 다음 성질을 갖는다.
+
+\textbf{1.} 각 잉여류 \(\mx\)와 임의의 다항식 \(F\)에 대하여 잉여류 \(F\mx\)를 포함하고, 잉여류 \(\mx_1,\mx_2\)와 함께 \(\mx_1+\mx_2\)도 포함한다.\footnote{이 성질을 더 일반적인 의미에서 잉여군의 ‘모듈 성질’이라고 부를 수도 있다.}
+
+\textbf{2.} 잉여군에는 단위원 \(\me\)가 있어서, 각 다항식 \(F\)에 대하여 \(F\me\)가 \(F\)의 잉여류 \(\mx\)를 나타낸다. \emph{따라서 \(F\)가 모든 다항식을 돌면 \(F\me\)는 잉여군 전체를 돈다.}
+
+\pseventeenkoheading{4}{잉여군의 두 부분군으로의 가약성과 모듈과의 관계}
+
+다음 정의들이 보여 주듯, 한쪽 모듈에서도 \emph{나눗셈}, \emph{최대공약인자}, \emph{최소공배수}라는 개념은 양쪽 모듈의 경우와 똑같이 유지된다.
+
+한 모듈 \(\mM\)의 \(M\equiv0(\mM)\)에서 언제나 \(M\equiv0(\mN)\)이 따르면 \(\mM\)은 다른 모듈 \(\mN\)으로 나누어진다고 한다.
+
+두 모듈 \(\mM,\mN\)의 \emph{최대공약인자} \((\mM,\mN)\)는 \(M\equiv0(\mM)\), \(N\equiv0(\mN)\)인 \(M,N\)에 대하여 \(M+N\) 꼴로 나타나는 모든 다항식의 집합으로 정의되며, 다시 모듈이다. 여러 모듈에 대해서도 마찬가지이다.
+
+\(\mM\)과 \(\mN\)으로 모두 나누어지는 모든 다항식의 집합은 모듈 \([\mM,\mN]\), 곧 \(\mM,\mN\)의 \emph{최소공배수}를 이룬다. 이 정의도 여러 모듈에 대하여, 나아가 임의의 기수를 갖는 모듈들의 집합에 대하여 그대로 성립한다.
+
+두 모듈의 최대공약인자가 모든 다항식으로 이루어진 단위원모듈이면 두 모듈이 서로 소라고 한다.
+
+이제 한 모듈 \(\mM\)이 서로 소인 두 진인자 \(\mN,\mL\)의 최소공배수로 나타난다고 하자.
+\begin{equation}
+ \mM=[\mN,\mL].
+\tag{7}
+\end{equation}
+\(\mM\)의 잉여군 \(\mG\)를 조사하자. 가정에 따라, \(N\equiv0(\mN)\), \(L\equiv0(\mL)\)인 두 다항식 \(N,L\)에 대하여
+\begin{equation}
+ 1\equiv N+L(\mM)
+\tag{8}
+\end{equation}
+이다. 여기서 다음을 보이겠다.
+\begin{equation}
+ \mL=(\mM,L),\qquad \mN=(\mM,N).
+\tag{9}
+\end{equation}
+예컨대 \((\mM,L)\)는 \(M+FL\) 꼴의 모든 다항식으로 이루어진 모듈이다. 우선 \((\mM,L)\equiv0(\mL)\)이다. 한편 (8)에서 임의의 다항식 \(F\)에 대하여
+\begin{equation}
+ F\equiv FN(\mL)
+\tag{10}
+\end{equation}
+을 얻는다. 이제 \(F\equiv0(\mL)\)이면 \(FN\equiv0(\mL)\), 따라서 \(FN\equiv0(\mM)\)이고, 결국 \(F\equiv FL(\mM)\)이다. 같은 방식으로 \(\mN=(\mM,N)\)을 증명한다. 또 \(\mN,\mL\)이 \(\mM\)의 진인자이므로 \(L\equiv0(\mM)\)도 \(N\equiv0(\mM)\)도 성립할 수 없다는 것이 여기서 따라온다.
+
+\(\ma\)를 법 \(\mM\)의 \(N\)의 잉여류, \(\mb\)를 \(L\)의 잉여류라 하자. 그러면 (8)에 따라
+\[
+ \me=\ma+\mb\qquad(\ma\ne0,\ \mb\ne0).
+\]
+각 잉여류는 \(F\me\) 꼴이므로, 분배법칙에 따라 모든 잉여류에 대하여
+\begin{equation}
+ F\me=F\ma+F\mb\qquad(\ma\ne0,\ \mb\ne0)
+\tag{11}
+\end{equation}
+이다. 임의의 잉여류를 \(G\ma\) 꼴의 잉여류와 \(H\mb\) 꼴의 잉여류의 합으로 나타내는 이 표현은 \emph{유일하다}. 실제로 관계 \(0=G\ma+H\mb\)가 있고 \(K\)가 잉여류 \(G\ma=-H\mb\)의 한 다항식이면, 분명 \(K\equiv GN(\mM)\), \(K\equiv-HL(\mM)\)이다. 따라서 \(K\equiv0(\mN)\), \(K\equiv0(\mL)\)이고, 결국 \(K\equiv0(\mM)\), 곧 \(G\ma=0\), \(H\mb=0\)이다.
+
+역으로 이제 관계 (11)이 각 다항식 \(F\)에 대하여 위 의미에서 \emph{유일하게} 성립한다고 하자. \(N\)을 \(\ma\)의 한 다항식, \(L\)을 \(\mb\)의 한 다항식이라 하고, (9)의 두 모듈을 만들자. 그러면 (7), (8)이 성립한다. (8)은 \(F=1\)인 (11)에서 따른다. 또 \(\mN,\mL\)의 정의에 따라 \(\mM\)은 이 두 모듈의 공배수이고, 더구나 최소공배수이다. 실제로 \(F\equiv0(\mL)\), \(F\equiv0(\mN)\)이면 \(F\equiv HL\equiv GN(\mM)\)이다. 따라서 \(G\ma=H\mb\), \(G\ma-H\mb=0\)이고, 표현의 유일성 때문에 \(G\ma=0\), \(H\mb=0\), \(F\equiv0(\mM)\)이다. 이로써 \emph{한 모듈 \(\mM\)을 서로 소인 두 모듈의 최소공배수로 나타내는 것과, 공식 (11)이 주는 \(\mM\)의 잉여군 \(\mG\)의 유일한 가법적 분해가 같은 뜻}임을 보였다.
+
+이제 \(F\ma\) 꼴 잉여류들의 계 \(\mA\)를 조사하고, 이를 \(\mL\)의 잉여군 \(\mbarA\)와 관계시키자. \(\bara\)를 법 \(\mL\)의 \(N\)의 잉여류, 따라서 \(\mbarA\)의 단위원류라고 하면, (11)에 따라 \(\mbarA\)의 각 다항식 \(F\)는 잉여류 \(F\ma\)에 속한다. \(\mA\)의 잉여류 \(F\ma\)와 \(\mbarA\)의 잉여류 \(F\bara\)를 서로 대응시키자. 그러면 \(\mA\)의 각 잉여류에 \(\mbarA\)의 잉여류가 대응하고, \(\mA\)의 두 잉여류의 합에는 대응하는 \(\mbarA\)의 잉여류들의 합이, \(\mA\)의 한 잉여류와 한 다항식의 곱에는 대응하는 \(\mbarA\)의 잉여류와 같은 다항식의 곱이 대응한다. 이 대응은 일대일이다. \(F\ma=0\)이면 (11)에 따라 \(F\equiv0(\mL)\), 따라서 \(F\bara=0\)이기 때문이다. 역으로 \(F\bara=0\), 곧 \(F\equiv0(\mL)\)이면 (10)에 따라 \(FN\equiv0(\mL)\), 따라서 \(FN\equiv0(\mM)\), 곧 \(F\ma=0\)이다.
+
+이로써 다음과 같이 정의할 근본개념을 얻었다.
+
+\emph{두 잉여류계 \(\mA,\mbarA\) 사이의 일대일 대응에서 \(\mA\)의 두 잉여류의 합에 \(\mbarA\)의 대응 잉여류들의 합이 대응하고, \(\mA\)의 임의의 잉여류와 한 다항식의 곱에 \(\mbarA\)의 대응 잉여류와 같은 다항식의 곱이 대응하면, 이 대응을 동형이라고 한다.}
+
+\(\mG\) 안의 잉여류 부분계 \(\mA\)가 한 모듈의 잉여군과 동형이면 \(\mA\)를 \(\mG\)의 \emph{부분군}이라 한다. 위 증명이 보여 주듯, 여기서는 특별히 \(\mA\)의 각 잉여류가 \(\mbarA\)의 대응 잉여류에 어떤 다항식들, 곧 \(\mL\)에는 속하지만 \(\mM\)에는 속하지 않는 모든 다항식을 덧붙여 생긴다.
+
+마찬가지로 \(F\mb\) 꼴의 모든 잉여류가 \(\mG\)의 한 부분군 \(\mB\)를 이루고, 이는 \(\mN\)의 잉여군 \(\mbarB\)와 동형임을 보일 수 있다.
+
+잉여류들이 유일한 가법적 분해 (11)을 갖는 잉여군 \(\mG\)를 두 부분군 \(\mA,\mB\)로 \emph{가약}이라고 하고 \(\mG=\mA+\mB\)라고 쓴다. 가약이 아닌 군을 \emph{기약}이라고 한다. 대응 모듈들도 때때로 각각 가약, 기약이라고 부른다. 따라서 다음 정리가 성립한다.
+
+\textbf{정리 I}\footnote{앞서 든 Schmeidler의 논문, 39쪽을 보라.}. \emph{한 모듈 \(\mM\)을 서로 소인 두 진인자 \(\mL,\mN\)의 최소공배수로 나타낼 수 있을 필요충분조건은 그 잉여군 \(\mG\)가 두 부분군 \(\mA,\mB\)로 가약인 것이다. 이때 \(\mA,\mB\)는 각각 \(\mL,\mN\)의 잉여군과 동형이다.}
+
+\pseventeenkoheading{5}{단위원을 이용한 계산과 \(k\)개 부분군으로의 가약성}
+
+\(\mG\)의 잉여류 \(\ma,\mb\)는 단위원 \(\me\)와 마찬가지로 임의의 잉여류 \(\mx\)와의 곱이 정의된다. 따라서 \(\ma,\mb\)도 \(\mG\)의 단위원이라고 부른다. 실제로 (11)에 \(F=M\)을 넣으면
+\[
+ 0=M\me=M\ma+M\mb
+\]
+이고, 유일성 때문에 \(M\ma=0\), \(M\mb=0\)이다. 따라서
+\[
+ (F+M)\ma=F\ma=\mx\ma
+\]
+이다. 여기서 \(\mx\)는 \(F\)의 잉여류이다. 그러므로 관계 (11) 대신 그와 동치인 잉여류 관계
+\[
+ \mx\me=\mx\ma+\mx\mb
+\]
+를 쓸 수 있다. 특히 \(\mx=\ma\)를 넣으면
+\[
+ \ma=\ma^2+\ma\mb
+\]
+이고, 유일성 때문에 \(\ma^2=\ma\), \(\ma\mb=0\)이다. 마찬가지로 \(\mb^2=\mb\), \(\mb\ma=0\)이다.
+
+잉여군을 두 성분의 합으로 나타낸 것에 대응하여 \(k\)개 성분의 합도 정의할 수 있다. 곧 유일한 표현
+\[
+ F\me=F\ma_1+F\ma_2+\cdots+F\ma_k
+ \qquad(\ma_1\ne0,\ldots,\ma_k\ne0)
+\]
+가 주어졌다고 하자. 여기서 \(0=G_1\ma_1+\cdots+G_k\ma_k\)이면 각 \(G_i\ma_i=0\)이다. 특히 \(F=M\)으로 두면 \(M\ma_i=0\)이므로 이 표현을 다음 꼴로도 쓸 수 있다.\footnote{잉여군의 가법적 분해에는 교환법칙과 결합법칙이 성립한다. 그러나 가환인 경우와 달리 \(\mathfrak A_1+\mathfrak A_2=\mathfrak A_1+\mathfrak A_3\)에서 \(\mathfrak A_2=\mathfrak A_3\)가 따르지는 않는다. § 12의 예 1을 보라.}
+\begin{equation}
+ \mx\me=\mx\ma_1+\cdots+\mx\ma_k
+ \qquad(\ma_1\ne0,\ldots,\ma_k\ne0).
+\tag{12}
+\end{equation}
+이 표현은 두 성분으로의 분해를 차례로 반복하여 생긴 것으로도 볼 수 있다. 모든 \(\ma_i\ne0\)인 채로 이를 제한 없이 계속할 수 있으면 무한히 많은 성분의 합이라고 한다.
+
+(12)에 \(\mx=\ma_i\)를 넣으면
+\begin{equation}
+ \ma_i^2=\ma_i,\qquad
+ \ma_i\ma_j=0\quad(i\ne j),\qquad
+ (i,j=1,\ldots,k),\qquad
+ (\ma_i\ne0)
+\tag{13}
+\end{equation}
+을 얻는다. 역으로 \(\mG\) 안에 직교조건 (13)을 만족하고
+\begin{equation}
+ \me=\ma_1+\cdots+\ma_k
+\tag{14}
+\end{equation}
+인 잉여류계 \(\ma_1,\ldots,\ma_k\)가 있다고 하자. 그러면 군을 \(k\)개 성분의 합으로 나타내는 표현이 생김을 보이겠다. 먼저 \(\ma_i\)의 임의의 다항식 \(A_i\)에 대하여 \(A_i\ma_i=(A_i+M)\ma_i\)이므로 \(M\ma_i=0\)이다. 따라서 \(\ma_i\)는 각 잉여류와 곱할 수 있다. 이제 (14)에서 표현 (12)가 따르며, 이 표현은 유일하다. 실제로 \(0=\mx_1\ma_1+\cdots+\mx_k\ma_k\)이면 오른쪽에 \(\ma_i\)를 곱하여 (13)에 따라 \(0=\mx_i\ma_i\)를 얻는다. 이로써 유일성과 주장을 증명하였다. 단위원류의 분해에 나타나는 잉여류 \(\ma_1,\ldots,\ma_k\)를 이 분해에 속하는 단위원들이라고 한다. 따라서 이 단위원들은 직교관계 (13)과 조건 (14)로도 정의된다. 이후의 전개는 본질적으로 단위원들을 이용한 계산으로 귀착될 것이다.
+
+이제 군을 \(k\)개 성분으로 가법적으로 분해하는 것과 대응 모듈분해 사이의 관계를 밝혀야 한다. \(k=2\)의 경우처럼 모듈을 서로 완전히 소인 \(k\)개 모듈의 최소공배수로 나타내는 표현이 생기며, 귀납법을 쓴다.
+
+분해 (12)가 주어졌다고 하고, 이를
+\begin{align}
+ \mx\me&=\mx\mb+\mx\ma_k,\tag{15}\\
+ \mx\mb&=\mx\ma_1+\cdots+\mx\ma_{k-1}\tag{16}
+\end{align}
+로 쓰자. (15)와 정리 I에 따라 잉여류 \(\mx\bar{\mb}\)는 모듈
+\begin{equation}
+ \mN=(\mM,A_k)
+\tag{17}
+\end{equation}
+의 잉여군과 동형이다. 따라서 그 잉여류 \(\mx\bar{\mb}\)에는 (16)에 대응하는 표현
+\begin{equation}
+ \mx\bar{\mb}=\mx\bar{\ma}_1+\cdots+\mx\bar{\ma}_{k-1}
+\tag{18}
+\end{equation}
+도 성립한다. 이제 이미 다음이 증명되었다고 하자.
+\begin{equation}
+ \mN=[\mM_1,\ldots,\mM_{k-1}],
+\tag{19}
+\end{equation}
+여기서
+\begin{equation}
+\left\{
+\begin{aligned}
+ \mM_1&=(\mN,A_2+\cdots+A_{k-1}),\\
+ \mM_2&=(\mN,A_1+A_3+\cdots+A_{k-1}),\\[-0.2ex]
+ &\hspace{0.25cm}\cdot\quad\cdot\quad\cdot\quad\cdot\quad\cdot\quad\cdot\quad\cdot\quad\cdot\\[-0.2ex]
+ \mM_{k-1}&=(\mN,A_1+\cdots+A_{k-2}).
+\end{aligned}\right.
+\tag{20}
+\end{equation}
+합항이 두 개일 때 이 명제는 앞의 결과와 일치한다. 또 § 4에 따라 뒤 잉여류의 다항식들이 앞 잉여류에 포함되므로, \(A_i\)들은 \(\bar{\ma}_i\)에 속하면서 동시에 \(\ma_i\)에도 속하는 다항식들로 특별히 택할 수 있다. 그러면 (15)에 따라
+\begin{equation}
+ \mM=[\mN,\mM_k]
+\tag{21}
+\end{equation}
+이고,
+\[
+ \mM_k=(\mM,A_1+\cdots+A_{k-1})
+\]
+이다. (19), (21)에서 최소공배수의 정의에 따라
+\[
+ \mM=[[\mM_1,\ldots,\mM_{k-1}],\mM_k]
+     =[\mM_1,\ldots,\mM_{k-1},\mM_k]
+\]
+가 따른다. (17), (20)에 따라
+\[
+ \mM_1=(\mM,A_k,A_2+\cdots+A_{k-1})
+\]
+이고, 따라서
+\[
+ \mM_1=(\mM,A_2+\cdots+A_k).
+\]
+실제로 뒤 모듈은 (13)에 따라 다항식
+\[
+ A_k=A_k(A_2+\cdots+A_k)(\mM)
+\]
+도 포함한다. \(\mM_2,\ldots,\mM_{k-1}\)에 대해서도 대응하는 표현들을 얻는다. 또 (14)에 따라
+\[
+ \frac{1}{k-1}\Bigl((A_2+\cdots+A_k)
+ +(A_1+A_3+\cdots+A_k)+\cdots+(A_1+\cdots+A_{k-1})\Bigr)
+ \equiv1(\mM)
+\]
+이므로 \(\mM_1,\ldots,\mM_k\)는 서로 소이다. 더 나아가 이 모듈들은 \emph{서로 완전히 소인 계}를 이룬다. 곧 그 가운데 임의로 고른 모듈들의 최소공배수는 나머지 모듈들의 최소공배수와 서로 소이다.\footnote{이는 Loewy가 도입한 개념의 일반화이다.} 공식 (12)의 합항들을 알맞은 두 무리로 묶으면 이 사실이 곧바로 따른다.
+
+이로써 잉여군을 \(k\)개 합항으로 분해하는 데에는 모듈을 서로 완전히 소인 계를 이루는 \(k\)개 모듈의 최소공배수로 나타내는 표현이 대응함을 보였다. 이제 이 정리의 역도 귀납법으로 보이겠다.
+
+다음과 같이 두자.
+\[
+ \mM=[\mM_1,\ldots,\mM_k]
+     =[[\mM_1,\ldots,\mM_{k-1}],\mM_k]
+     =[\mN,\mM_k],
+\]
+여기서 \(\mM_1,\ldots,\mM_k\)는 서로 완전히 소인 계를 이룬다. 정리 I을 함께 쓰면 잉여군에 대한 표현 (15)가 따른다. \(\mM_1,\ldots,\mM_{k-1}\)도 서로 완전히 소인 계를 이룬다. 실제로 이 계의 모듈들을 어떤 식으로든 두 무리로 나누었을 때 한 무리의 최소공배수와 다른 무리의 최소공배수가 공통인자를 가진다면, 한 무리에 \(\mM_k\)를 덧붙여 최소공배수를 만든 뒤에도 이 인자가 남을 것이다.\footnote{이 논의를 계속하면 \(\mM_1,\ldots,\mM_k\) 가운데 임의의 두 모듈이 서로 소임을 알 수 있다. 그 역, 곧 이 사실에서 \(\mM_1,\ldots,\mM_k\)가 서로 완전히 소인 계를 이룬다는 결론은 가환인 경우에만 일반적으로 성립한다. § 12의 반례 1을 보라.} \(k=2\)에서는 ‘서로 완전히 소’와 ‘서로 소’가 같은 뜻이므로, 주장은 \(k-1\)까지 증명되었다고 가정할 수 있다. 따라서 잉여류 \(\mx\bar{\mb}\)에는 유일한 표현 (18)이 성립하고, 동형에 따라 (16), 나아가 주장이 따른다.
+
+\textbf{정리 II.} \emph{한 모듈 \(\mM\)을 서로 완전히 소인 계를 이루는 \(k\)개 모듈 \(\mM_1,\ldots,\mM_k\)의 최소공배수로 나타낼 수 있을 필요충분조건은 그 잉여군 \(\mG\)가 \(k\)개 부분군 \(\mU_1,\ldots,\mU_k\)로 가약인 것이다. 적절히 번호를 붙이면 \(\mU_i\)는 \(\mM_i\)의 잉여군과 동형이다.}
+
+\pseventeenkoheading{6}{유한성정리}
+
+이 절에서는 모든 잉여군을 \emph{유한개}의 기약성분들의 합으로 나타낼 수 있음을 보인다. 이를 위해 먼저 힐베르트의 모듈기저정리를 옮긴다.
+
+이제부터는 § 2에서 세운 더 특별한 가정들을 쓴다. 곧 \(\xi_1,\ldots,\xi_n\)끼리의 곱셈은 가환적이고, 다항식의 곱셈법칙은
+\begin{equation}
+ \xi_i a=a_i\xi_i+b_i,\qquad
+ (a_i\ne0)\quad(i=1,\ldots,n)
+\tag{6}
+\end{equation}
+꼴이다.
+
+모듈에 대해서만 증명하면 충분하다. 실제로 \(\mS\)가 임의의 다항식계이면, \(\mS\)의 유한개의 다항식 \(G_1,\ldots,G_k\)에서 \(A_1G_1+\cdots+A_kG_k\) 꼴로 합성할 수 있는 모든 다항식을 \(\mS\)에 덧붙여 여기서 유도된 모듈 \(\mM\)을 만든다. \(F_1,\ldots,F_l\)이 \(\mM\)의 한 모듈기저이고
+\[
+ F_i=\sum_j A_{ij}G_j\qquad(i=1,\ldots,l)
+\]
+이면, 이 표현들에 나타나는 유한개의 다항식 \(G_j\)가 \(\mS\)의 한 기저를 이룬다.
+
+모듈기저의 증명은 Gordan의 증명(Göttinger Nachrichten, 1899)을 따른다. 증명은 두 부분으로 갈린다. 첫 부분은 무한히 많은 거듭제곱곱으로 이루어진 한 계 \(\mP\)에 관한 것이며, \(\xi_1,\ldots,\xi_n\)의 가환성 때문에 본질적으로 그대로 유지된다. 각 거듭제곱곱은 계에 한 번만 넣고,
+\[
+ P=\xi_1^{a_1}\cdots\xi_n^{a_n}
+\]
+들을 차수가 커지는 순서로, 같은 차수 안에서는 임의의 고정된 순서로 배열하자. 이제 앞에 오는 어떤 \(P\)로도 나누어지지 않는 모든 거듭제곱곱 \(P=Q\)로 이루어진 \(\mP\)의 부분계 \(\mD\)를 고찰한다. 어떤 \(Q\)도 뒤에 오는 \(Q\)로 나누어지지 않는다. 뒤의 것들은 차수가 더 높거나, 같은 차수이면 앞의 것과 다르기 때문이다. 반면 \(\mP\)의 각 \(P\)는 적어도 하나의 \(Q\)로 나누어진다. 그렇지 않다고 하고, 어떤 \(Q\)로도 나누어지지 않는 첫 \(P\)를 \(P_m\)이라 하자. \(P_m\) 자체는 \(Q\)일 수 없으므로 적어도 하나의 앞선 \(P\)로 나누어진다. 그런데 이 앞선 \(P\)는 가정에 따라 어떤 \(Q\)로 나누어지므로 \(P_m\)도 \(Q\)로 나누어져 모순이다.
+
+이제 \emph{\(Q\)의 수가 유한함}을 주장한다. 첫 \(Q\)를
+\[
+ Q_0=\xi_1^{h_1}\cdots\xi_n^{h_n}
+\]
+이라 하자. 임의의 \(Q_\rho=\xi_1^{h_{\rho1}}\cdots\xi_n^{h_{\rho n}}\)는 \(Q_0\)로 나누어지지 않으므로, 각 \(Q\)마다 적어도 하나의 \(h_{\rho\lambda}<h_\lambda\)가 있다. \(\lambda\)는 매번 이 부등식이 처음 성립하는 첨자라고 하자. 이제 \(h_{\rho\lambda}\)가 같은 고정된 값 \(c_\lambda\)인 모든 \(Q\)를 한 류 \(K(c_\lambda)\)로 묶는다. \(c_\lambda<h_\lambda\)이므로 이 류들의 수는 유한하다. 각 류의 원소 수도 유한하다. 실제로 \(K(c_\lambda)\)의 한 \(Q\)를 \(\xi_\lambda^{c_\lambda}Q'\)로 쓰면 \(Q'\)들도 어느 하나가 다른 하나로 나누어지지 않는 거듭제곱곱들의 계를 이루고 변수는 \(n-1\)개뿐이다. \(n=2\)이면 \(Q'\)들은 변수 하나만 포함하므로 그 수가 \(1\), 따라서 유한하다. 그러므로 변수 \(n-1\)개에 대해서도 그 수가 유한하다고 가정할 수 있고, 주장이 증명된다.
+
+둘째로 이제 \(\mM\)이 다항식들의 한 모듈이고 그 항들을 사전식으로 배열했다고 하자. \(\mP\)는 각 최고항에 나타나는 거듭제곱곱들의 계이며, 각각을 한 번만 쓴다. 그러면 계 \(\mD=(Q_1,\ldots,Q_l)\)에 유한개의 다항식 \(F_1,\ldots,F_l\)이 대응한다. 각 \(Q_i\)에 최고항이 \(b_iQ_i\)인 \(\mM\)의 어떤 다항식을 대응시켜 \(F_i=b_iQ_i+\cdots\)로 두며, 생략한 항들은 더 낮은 항들이다.
+
+\(F=bP+\cdots\)가 \(\mM\)의 임의의 다항식이고 \(P=\xi_1^{\beta_1}\cdots\xi_n^{\beta_n}Q_i\)라 하자. 곱
+\[
+ \xi_1^{\beta_1}\cdots\xi_n^{\beta_n}F_i
+ =\xi_1^{\beta_1}\cdots\xi_n^{\beta_n}(b_iQ_i+\cdots)
+ =c\,\xi_1^{\beta_1}\cdots\xi_n^{\beta_n}Q_i+\cdots
+ =cP+\cdots
+\]
+을 만들면 (6)에 따라 \(c\ne0\)이다. 또 곱셈은 지수에 관해서 더 낮은 항들을 제외하면 가환적이므로 이어지는 항들은 모두 사전식 순서에서 더 낮은 항들이다.\footnote{여기서 법칙 (6) 대신 조금 덜 제한적인
+\[
+ \xi_i a=a_i\xi_i+a_{i,i+1}\xi_{i+1}+\cdots+a_{in}\xi_n+b_i
+ \qquad(a_i\ne0)
+\]
+를 써도 됨을 알 수 있다. 여기서는 \(\xi\)들에 어떤 고정된 번호를 붙인다.} 따라서 차
+\[
+ F-\frac bc\,\xi_1^{\beta_1}\cdots\xi_n^{\beta_n}F_i
+\]
+는 더 낮은 항들만 포함하고 다시 \(\mM\)에 속한다. 이 절차는 유한번 뒤에 끝나므로 \(F_1,\ldots,F_l\)이 모듈기저임이 드러난다.
+
+\textbf{정리 III.} \emph{무한히 많은 다항식으로 이루어진 모든 계 \(\mS\)는 유한 모듈기저 \(G_1,\ldots,G_k\)를 갖는다. 곧 \(\mS\)의 각 다항식 \(G\)는 \(G=A_1G_1+\cdots+A_kG_k\)로 나타낼 수 있다.}
+
+여기서 다음이 곧바로 따른다.
+
+\textbf{따름명제.} \emph{법 \(\mM\)의 무한히 많은 잉여류로 이루어진 모든 계 \(\mS\)는 기저 \(\mx_1,\ldots,\mx_k\)를 갖는다. 곧 \(\mS\)의 각 \(\mx\)는 \(\mx=A_1\mx_1+\cdots+A_k\mx_k\)로 나타낼 수 있다.}
+
+실제로 각 잉여류에 임의의 대표원을 대응시키고, 이 대표원들과 \(\mM\)의 모든 다항식으로 이루어진 계를 고찰하면 된다.
+
+이제 다음을 증명한다.
+
+\textbf{정리 IV.} \emph{모든 잉여군은 유한개의 기약성분들의 합으로 나타낼 수 있다. 따라서 정리 II에 따라 모든 모듈은 서로 완전히 소인 계를 이루는 유한개의 기약모듈들의 최소공배수로 나타낼 수 있다.}
+
+반대로 \(\mG\)가 무한히 많은 성분 \(\mU_1,\mU_2,\ldots\)의 합이라고 하자(§ 5를 보라). 그에 속하는 단위원들을 \(\ma_1,\ma_2,\ldots\)라 하면 정의상 모두 영과 다르다. 이 단위원들 전체의 계 \(\mS\)를 만들자. 정리 III의 따름명제에 따라 이 계에는 \(i_1<\cdots<i_\nu\)인 유한 기저 \(\ma_{i_1},\ldots,\ma_{i_\nu}\)가 있다. \(\mu>i_\nu\)라 하면
+\[
+ \ma_\mu=\mx_1\ma_{i_1}+\cdots+\mx_\nu\ma_{i_\nu}
+\]
+이다. 이는 단위원들 사이의 선형관계인데, 정의상 그러한 관계는 있을 수 없다. 따라서 한 잉여군의 각 가법적 분해에는 유한번 뒤에 기약성분이 하나 나타나며, 분해가 가환적이므로 이를 맨 앞으로 옮길 수 있다. 일반성을 잃지 않고 \(\mU_i\)들 자체를 기약이라고 할 수 있다. 위 논의에 따라 성분 \(\mU_i\)는 유한개만 나타날 수 있으므로 주장이 증명된다.
+
+\pseventeenkoheading{7}{유일분해가 성립하는 한 경우}
+
+\[
+ \mG=\mU_1+\cdots+\mU_k=\mB_1+\cdots+\mB_l
+\]
+가 한 잉여군이고 그 성분 \(\mU_1,\ldots,\mU_k\), \(\mB_1,\ldots,\mB_l\)이 기약이라고 하자. 그러면
+\begin{equation}
+ \mx\me=\mx\ma_1+\cdots+\mx\ma_k
+       =\mx\mb_1+\cdots+\mx\mb_l
+\tag{22}
+\end{equation}
+이다. 여기서 \(\ma_\varkappa\)는 \(\mU_\varkappa\)의 단위원류에 동형으로 대응하는 \(\mG\)의 잉여류이고, \(\mb_\lambda\)도 \(\mB_\lambda\)에 대하여 같은 뜻이다. 이제 \(\mx\)를 \(\mx\mb_\lambda\)로 바꾸자. 여기서 \(\lambda\)는 \(1,\ldots,l\) 가운데 고정된 첨자이다. 그러면
+\begin{equation}
+ \mx\mb_\lambda
+ =\mx\mb_\lambda\ma_1+\cdots+\mx\mb_\lambda\ma_k
+\tag{23}
+\end{equation}
+이다. 군 \(\mB_\lambda\)의 이 표현은 유일하지만, 오른쪽의 개별 잉여류들이 \(\mB_\lambda\)에 속할 필요가 없으므로 \(\mB_\lambda\)의 가법적 분해는 아니다. \(\mb_\lambda\ne0\)이므로 모든 곱 \(\mb_\lambda\ma_\varkappa\)가 영일 수는 없다. 일반성을 잃지 않고
+\[
+ \mb_\lambda\ma_1\ne0,\ldots,\mb_\lambda\ma_\rho\ne0,\qquad
+ \mb_\lambda\ma_{\rho+1}=0,\ldots,\mb_\lambda\ma_k=0
+\]
+이라 하자. 그러면
+\[
+ \mx\mb_\lambda
+ =\mx\mb_\lambda\ma_1+\cdots+\mx\mb_\lambda\ma_\rho
+\]
+이다.
+
+이제 \(1,\ldots,\rho\) 가운데 고정된 \(\varkappa\)에 대하여, 영과 다르고 \(\mx\mb_\lambda\ma_\varkappa\ne0\)도 만족하는 잉여류 \(\mx\mb_\lambda\)들의 전체를 고찰한다. \emph{두 계 \(\mx\mb_\lambda\)와 \(\mx\mb_\lambda\ma_\varkappa\)는 동형이다.} 우선 대응은 일대일이다. 가정에 따라 \(\mx\mb_\lambda\ma_\varkappa=0\)에서 \(\mx\mb_\lambda=0\)이 따르고, 역으로 뒤 등식에서 표현 (23)의 유일성에 따라 \(\mx\mb_\lambda\ma_\varkappa=0\)이 따르기 때문이다. 또 합에는 합이, 임의의 다항식을 곱한 것에는 대응하는 곱이 대응한다. 이제 \(\varkappa\)를 고정하고 \(\mb_\lambda\ma_\varkappa\ne0\)인 각 \(\lambda\)에 대하여 같은 논의를 할 수 있다. 각 \(\ma_\varkappa\)에는 그러한 \(\mb_\lambda\)가 적어도 하나 있어야 한다. 실제로 \(\ma_\varkappa=(\mb_1+\cdots+\mb_l)\ma_\varkappa\ne0\)이다.
+
+\emph{먼저 각 \(\varkappa\)에 대하여 \(\mb_\lambda\ma_\varkappa\ne0\)인 \(\lambda\)가 하나뿐이고, 각 \(\lambda\)에 대하여 그러한 \(\varkappa\)도 하나뿐이라고 가정하자.}
+
+이 대응에서 \(k=l\)이 따른다. 번호를 알맞게 붙여 \(\mb_\varkappa\ma_\varkappa\ne0\)이고 \(\lambda\ne\varkappa\)이면 \(\mb_\lambda\ma_\varkappa=0\)이 되게 할 수 있다. 이때 곱 \(\mb_\lambda\ma_\varkappa\)들이 대각도식을 이룬다고 한다. 이 경우 (23)에 따라 단위원 \(\mb_\varkappa=\mb_\varkappa\ma_\varkappa\)이고,
+\begin{equation}
+ \ma_\varkappa
+ =\mb_1\ma_\varkappa+\cdots+\mb_l\ma_\varkappa
+ =\mb_\varkappa\ma_\varkappa
+ =\mb_\varkappa
+\tag{24}
+\end{equation}
+이므로 일반적으로 \(\mU_\varkappa=\mB_\varkappa\)이다. \emph{따라서 분해는 유일하고}, 곱 \(\ma_\varkappa\mb_\lambda\)들도 대각도식을 이룬다.
+
+\emph{특별히 잉여류 \(\ma_\varkappa,\mb_\lambda\)의 곱에 교환법칙이 성립하면 위 가정은 언제나 충족된다.} 실제로 이때 (23)의 각 성분 \(\mx\mb_\lambda\ma_\varkappa=\mx\ma_\varkappa\mb_\lambda\)는 \(\mB_\lambda\)에 속하므로 (23)은 군 \(\mB_\lambda\)의 가법적 분해이다. \(\mB_\lambda\)가 기약이므로 하나를 제외한 모든 \(\mb_\lambda\ma_\varkappa\)가 영이다. 또 (24)에 따라 고정된 \(\varkappa\)에 대하여도 영과 다른 \(\mb_\lambda\ma_\varkappa\)는 하나뿐이다. 그렇지 않으면 \(\ma_\varkappa\)와 \(\mb_\lambda\)의 교환성 때문에 (24)가 기약이어야 할 \(\mU_\varkappa\)의 가법적 분해를 줄 것이기 때문이다.\footnote{앞서 든 Schmeidler의 논문에서 다룬 비가환 양쪽 모듈의 경우에도 같은 사실이 성립한다. 그 경우에는 한 부분군의 각 잉여류와 다른 부분군의 각 잉여류의 곱이 사라진다. 실제로 \(\mb_\lambda\ma_\varkappa=\mb_\lambda\ma_\varkappa\mb_1+\cdots+\mb_\lambda\ma_\varkappa\mb_l\)이고, \(\lambda\ne\mu\)이면 \(\mb_\lambda(\ma_\varkappa\mb_\mu)=0\)이므로 \(\mb_\lambda\ma_\varkappa=\mb_\lambda\ma_\varkappa\mb_\lambda\), 따라서 이 곱은 \(\mB_\lambda\)에 속한다. \(\mB_\lambda\)의 기약성에서 \(\mb_\lambda\ma_\varkappa\ne0\)인 \(\varkappa\)가 하나뿐, 따라서 정확히 하나임이 따른다. 같은 방식으로 각 \(\ma_\varkappa\)에 대하여 \(\ma_\varkappa\mb_\lambda\ne0\)인 \(\mb_\lambda\)가 정확히 하나 있음을 보이고, 여기서 \(k=l\)이 따른다. 따라서 \(\mb_\lambda\ma_\varkappa\)들은 대각도식을 이루며, 이로써 그곳에서 증명한 유일성이 나온다.}
+
+모든 \(\mb_\lambda\)가 아니라 그 일부 \((\lambda=1,\ldots,\sigma)\)에 대해서만 \(\mb_\lambda\ma_\lambda\ne0\), \(\lambda\ne\varkappa\), \(\varkappa=1,\ldots,k\)이면 \(\mb_\lambda\ma_\varkappa=0\)이고, 마찬가지로 각 \(\mu=1,\ldots,l\)에 대하여 \(\varkappa=1,\ldots,\sigma\)이면 \(\mb_\mu\ma_\varkappa=0\), \(\mb_\varkappa\ma_\varkappa\ne0\)이라는 조건들이 성립하는 경우에도 같은 결론이 적용된다. 이때 \(\mU_\varkappa=\mB_\varkappa\) (\(\varkappa=1,\ldots,\sigma\))를 얻는다. 또
+\[
+ \mU_{\sigma+1}+\cdots+\mU_k=\mU,\qquad
+ \mB_{\sigma+1}+\cdots+\mB_l=\mB
+\]
+로 두면, \(\mU,\mB\)의 단위원 \(\ma,\mb\)에 대해서도 \(\mb\ma_\varkappa=0\), \(\mb_\varkappa\ma=0\) (\(\varkappa=1,\ldots,\sigma\)), \(\mb\ma\ne0\)이고, 여기서 \(\mU=\mB\)가 따른다.
+
+\pseventeenkoheading{8}{완전가약군의 소군들로의 가법적 분해. 동형정리}
+
+이제 유일성은 성립하지 않지만 서로 다른 분해들의 동형이 성립하는 다른 경우를 고찰한다. 이는 Loewy가 다룬 경우의 일반화이다.
+
+\textbf{정의.} \emph{자기 자신과 모든 다항식을 포함하는 단위원모듈 외에는 인자를 갖지 않는 모듈을 ‘소모듈’이라고 한다. 한 소모듈의 잉여군을 ‘소군’이라고 한다.}
+
+모든 소군은 당연히 기약이다. 무한 소군도 존재한다(§ 11의 정의와 § 12의 예 2를 보라).
+
+주어진 잉여군 \(\mG\)를 두 가지 방식으로 각각 유한개의 소군 \(\mU_1,\ldots,\mU_k\), 또는 \(\mB_1,\ldots,\mB_l\)의 합으로 나타낼 수 있다고 하자. \emph{소군들의 합으로 나타내는 그러한 표현을 적어도 하나 갖는 잉여군과 그 대응 모듈 \(\mM\)을 Loewy의 용어에 따라 완전가약이라고 한다.}
+
+이제 곱 \(\ma_\varkappa\mb_\lambda\) (\(\varkappa=1,\ldots,k\), \(\lambda=1,\ldots,l\))를 고찰한다. \(\ma_\varkappa\mb_\lambda=0\)이거나, 아니면 \(\mx\)가 \(\mG\)의 모든 잉여류를 돌 때 \(\mx\ma_\varkappa\mb_\lambda\)가 군 \(\mB_\lambda\) 전체를 돈다는 것을 보이겠다. 실제로 \(\mB_\lambda\)에 속하는 모듈
+\[
+ (\mM,\mb_1+\cdots+\mb_{\lambda-1}
+       +\mb_{\lambda+1}+\cdots+\mb_l)=\mM_{\mb_\lambda},
+\]
+곧 \(\mb_1+\cdots+\mb_{\lambda-1}+\mb_{\lambda+1}+\cdots+\mb_l\)이라는 잉여류의 모든 다항식을 \(\mM\)에 덧붙여 얻는 모듈에는 인자
+\[
+ (\mM,\mb_1+\cdots+\mb_{\lambda-1}
+       +\mb_{\lambda+1}+\cdots+\mb_l,
+       \ma_\varkappa\mb_\lambda)
+\]
+가 있다. 그런데 가정상 \(\mM_{\mb_\lambda}\)는 소모듈이므로 이 인자는 \(\mM_{\mb_\lambda}\) 자신이거나 단위원모듈이다. 첫 경우에는 \(\ma_\varkappa\mb_\lambda\)가 \(\mM_{\mb_\lambda}\)에 속하므로 관계
+\[
+ \ma_\varkappa\mb_\lambda
+ =\mx(\mb_1+\cdots+\mb_{\lambda-1}
+       +\mb_{\lambda+1}+\cdots+\mb_l)
+\]
+가 있고, 여기서 \(\ma_\varkappa\mb_\lambda=0\)이 따른다. 다른 경우에는 두 잉여류 \(\mx_0,\mx_1\)가 있어서
+\[
+ \mx_0\ma_\varkappa\mb_\lambda
+ +\mx_1(\mb_1+\cdots+\mb_{\lambda-1}
+        +\mb_{\lambda+1}+\cdots+\mb_l)
+ =\me
+ =\mb_1+\cdots+\mb_{\lambda-1}
+  +\mb_{\lambda+1}+\cdots+\mb_l+\mb_\lambda
+\]
+이다. 유일성 때문에 \(\mx_0\ma_\varkappa\mb_\lambda=\mb_\lambda\)이다. 따라서 \(F\), 또는 \(\mx\)가 각각 모든 다항식, 또는 \(\mG\)의 모든 잉여류를 돌면 \(F\mx_0\ma_\varkappa\mb_\lambda\), 따라서 \(\mx\ma_\varkappa\mb_\lambda\)가 군 \(\mB_\lambda\) 전체를 돈다. 이로써 주장을 증명하였다.
+
+\(\ma_\varkappa\mb_\lambda\ne0\)이면 \(\mU_\varkappa\)는 \(\mB_\lambda\)와도 동형이다. 실제로 \(\mx\ma_\varkappa\ne0\)이고 \(\mx\ma_\varkappa\mb_\lambda\ne0\)인 모든 류의 집합은 § 7에 따라 \(\mx\ma_\varkappa\mb_\lambda\) 꼴 류들의 계와 동형이고, 뒤의 류들은 부분군 \(\mB_\lambda\)를 모두 소진한다. 따라서 앞서 말한 류 \(\mx\ma_\varkappa\)들이 군 \(\mU_\varkappa\)를 모두 소진함만 보이면 된다. 이를 위해 \(\mx\ma_\varkappa\mb_\lambda=0\)인 모든 잉여류 \(\mx\ma_\varkappa\)를 고찰하자. 이 계의 두 류의 합과 한 류에 임의의 다항식을 곱한 것은 다시 이 계에 속한다. 따라서 이 모든 잉여류를 모듈 \(\mM_{\ma_\varkappa}\)에 덧붙이면 다시 \(\mM_{\ma_\varkappa}\)의 인자인 모듈이 생기며, 이는 \(\mM_{\ma_\varkappa}\) 자신이거나 단위원모듈이다. 뒤의 경우라면 \(\ma_\varkappa\) 자체도 이 모듈에 속하여 가정과 달리 \(\ma_\varkappa\mb_\lambda=0\)일 것이다. 그러므로 \(\mx\ma_\varkappa\ne0\)이면서 \(\mx\ma_\varkappa\mb_\lambda=0\)인 류는 없고, \(\mU_\varkappa\)와 \(\mB_\lambda\)의 동형이 증명된다.
+
+어떤 고정된 \(\varkappa\)에 대하여 \(\ma_\varkappa\mb_{\lambda_1}\ne0,\ldots,\ma_\varkappa\mb_{\lambda_i}\ne0\) (\(i>1\))이라고 하자. 그러면 \(\mU_\varkappa\)는 군 \(\mB_{\lambda_1},\ldots,\mB_{\lambda_i}\)와 동형이므로, 이 군들은 서로 동형이다.
+
+이때 \(\mU\)들 가운데도 적어도 두 개가 동형임을 보이겠다. 곱 \(\mb_\lambda\ma_\varkappa\)에서 각 \(\mb_\lambda\)에 \(\mb_\lambda\ma_\varkappa\ne0\)인 \(\ma_\varkappa\)가 하나씩만 대응한다면 \(\mb_\lambda=\mb_\lambda\ma_\varkappa\)일 것이다. 그러면 \(\mU_\varkappa\)는 소군이어서 진부분군을 포함할 수 없으므로 \(\mB_\lambda=\mU_\varkappa\)이다. 따라서 \(k=l\)이고, 알맞게 번호를 붙이면 \(\ma_\varkappa=\mb_\varkappa\)이다. 그러면 도식 \(\ma_\varkappa\mb_\lambda\)도 대각도식이어야 하지만, 지금은 그렇지 않다. 이로써 다음 정리를 증명하였다.
+
+\textbf{정리 V.} \emph{완전가약군 \(\mG\)를 두 가지 방식으로 소군들의 합
+\[
+ \mG=\mU_1+\cdots+\mU_k=\mB_1+\cdots+\mB_l
+\]
+로 나타냈다고 하자. 그러면 각 군 \(\mU\)는 적어도 하나의 군 \(\mB\)와 동형이고, 그 역도 성립한다. 각 \(\mU\)가 정확히 하나의 \(\mB\)와 동형이면 두 분해는 동일하다. 그렇지 않으면 \(\mU\)들 가운데 적어도 두 개가 서로 동형이고, \(\mB\)들 가운데도 적어도 두 개가 서로 동형이다.}
+
+\pseventeenkoheading{9}{‘동형’과 ‘같은 종류’라는 개념의 관계}
+
+이 절에서는 한 변수 미분식에 대하여 알려진 ‘같은 종류’라는 개념을 뜻에 맞게 일반화하면 대응 잉여군들의 동형에 이르게 됨을 보인다.
+
+\textbf{정의}\footnote{한 변수 미분식에 대해서는 앞서 든 Blumberg의 논문, 25쪽의 형식적 정의를 보라.}. \emph{두 모듈 \(\mM,\mN\)이 같은 종류라는 것은, \(\mM\)과 서로 소인 다항식 \(P\), \(\mN\)과 서로 소인 다항식 \(Q\)가 있어서 모든 \(M\equiv0(\mM)\), \(N\equiv0(\mN)\)에 대하여}
+\begin{align}
+ MQ&\equiv0(\mN),\tag{25}\\
+ NP&\equiv0(\mM)\tag{26}
+\end{align}
+\emph{이 성립한다는 뜻이다. 여기서 서로 소라는 것은 두 다항식 \(X,Y\)가 있어서}
+\begin{align}
+ YQ&\equiv1(\mN),\tag{27}\\
+ XP&\equiv1(\mM)\tag{28}
+\end{align}
+\emph{이 성립한다는 뜻이다.}
+
+이제 다음 정리가 성립한다.
+
+\textbf{정리 VI.} \emph{두 모듈이 같은 종류일 필요충분조건은 그 잉여군들이 동형인 것이다.}
+
+\textbf{1.} \(\mA\)가 \(\mM\)의 잉여군, \(\mB\)가 \(\mN\)의 잉여군이고, \(\mA,\mB\)가 동형이라고 하자. \(\ma,\mb\)를 각각 \(\mA,\mB\)의 단위원류라 하자. 또 \(Q\mb\)는 \(\mA\)의 단위원 \(\ma\)에 대응하는 \(\mB\)의 류이고, \(P\ma\)는 \(\mB\)의 단위원 \(\mb\)에 대응하는 \(\mA\)의 류라 하자. 이 대응을
+\begin{align}
+ \ma&\sim Q\mb,\tag{29}\\
+ P\ma&\sim\mb\tag{30}
+\end{align}
+로 쓴다. 여기서
+\[
+ 0=M\ma\sim MQ\mb,\qquad\text{곧}\qquad MQ\equiv0(\mN)
+\]
+가 따르므로 (25)가 증명된다. 마찬가지로
+\[
+ NP\ma\sim N\mb=0,\qquad\text{곧}\qquad NP\equiv0(\mM)
+\]
+이어서 관계 (26)이 성립한다. 또 (29)에 따라 \(P\ma\sim PQ\mb\)이고, (30)에서는 \(P\ma\sim\mb\)라고 가정했으므로 대응의 유일성에 따라 \(PQ\mb=\mb\), 곧 \(PQ\equiv1(\mN)\)이다. 마찬가지로 \(QP\equiv1(\mM)\)이다. 따라서 \(X=Q,Y=P\)인 (27), (28)도 증명되었다.
+
+\textbf{2.} \(\mM,\mN\)이 같은 종류여서 관계 (25)--(28)이 성립한다고 하자. \(\mA\)의 임의의 류 \(F\ma\)에 \(\mB\)의 류 \(FQ\mb\)를 대응시킨다. 이때 \(\mA\)의 각 류에는 \(\mB\)의 류 하나만 대응한다. 실제로 \(F\ma=0\), 곧 \(F=M\)이면 (25)에 따라 \(FQ\mb=0\)이다. 또 이 대응은 군 \(\mB\) 전체를 소진한다. 특별한 류 \(Y\ma\)에는 (27)에 따라 \(\mb\)와 같은 류 \(YQ\mb\)가 대응하기 때문이다. 따라서 \(\mA\)에서 \(\mB\) 위로 가는 \emph{일의적} 사상 \(\Phi\)를 얻었지만, 이것이 일대일임은 아직 보이지 않았다. 똑같이 (26), (28)에서 \(\mB\)에서 \(\mA\) 위로 가는 일의적 사상 \(\Psi\)를 얻지만, 역시 일대일임은 아직 보이지 않았다.
+
+두 사상 가운데 하나가 일대일이면 합과 곱에 관한 요구가 충족되므로 동형이 증명된다. 그러나 \(\Phi,\Psi\)가 모두 일대일이 아니라고 하자. 그러면 이를테면 \(\mA\)에는 \(\mB\)에서 영류 \(GQ\mb=0\)에 대응하는 류 \(G\ma\)가 있다. 나머지 잉여류 \(F\ma\)에 대응하는 류 \(FQ\mb\)들만으로 이미 군 \(\mB\)를 소진하므로, 사상 \(\Psi\)를 적용하면 류 \(FQP\ma\)들로 군 \(\mA\) 전체를 다시 얻는다. 또 \(\mB\)에는 \(\Psi\)에 따라 \(\mA\)의 영류에 대응하는 영과 다른 류들이 있다. \(G_1\ma\ne0\)이지만 \(G_1QP\ma=0\)인 모든 류를 \(G_1\ma\)라고 나타내자. 다른 모든 다항식 \(F\)는 \(FQP\ma\)가 군 \(\mA\)를 소진한다는 성질을 갖는다. \(FQP\ma=G_1\ma\)가 되는 다항식 \(F\)들을 \(G_2\)라고 하자. \(G_1\)이 존재하면 그러한 다항식은 언제나 존재한다. 각 \(G_2\)에 대하여 \(G_2QP\ma\ne0\)이지만 \(G_2(QP)^2\ma=0\)이다. 마찬가지로 각 양의 정수 \(\nu\)에 대하여 \(G_\nu(QP)^{\nu-1}\ma\ne0\), \(G_\nu(QP)^\nu\ma=0\)인 류 \(G_\nu\ma\)가 있다.
+
+모든 다항식 \(G_1,G_2,\ldots\)로 이루어진 계 \(\mS\)를 고찰하자. 이는 유한 모듈기저 \(G_{\lambda_1},\ldots,G_{\lambda_\varrho}\)를 갖는다. \(\lambda\)를 첨자 \(\lambda_1,\ldots,\lambda_\varrho\) 가운데 가장 큰 것으로 두고 \(\nu>\lambda\)를 택하면
+\[
+ G_\nu=A_1G_{\lambda_1}+\cdots+A_\varrho G_{\lambda_\varrho}.
+\]
+여기에 \((QP)^\lambda\)를 곱하면
+\[
+ G_\nu(QP)^\lambda\equiv0(\mM)
+\]
+을 얻어 가정과 모순이다. 따라서 동형이 성립하고, 1에 따라 \(X=Q,Y=P\)인 더 강한 관계 (27), (28)도 성립한다.
+
+정리 VI를 이용하면 정리 V를 다음과 같이도 쓸 수 있다.
+
+\textbf{정리 VII}\footnote{Loewy, 100--101쪽을 보라.}. \emph{완전가약모듈 \(\mM\)을 두 가지 방식으로, 각각 서로 완전히 소인 계를 이루는 소모듈 \(\mP_1,\ldots,\mP_k\), 또는 \(\mD_1,\ldots,\mD_l\)의 최소공배수로 나타냈다고 하자. 그러면 각 \(\mP\)는 적어도 하나의 \(\mD\)와 같은 종류이고, 그 역도 성립한다. 각 \(\mP\)가 정확히 하나의 \(\mD\)와 같은 종류이면 두 분해는 동일하다. 그렇지 않으면 \(\mP\)들 가운데 적어도 두 개가 서로 같은 종류이고, \(\mD\)들 가운데도 적어도 두 개가 서로 같은 종류이다.}
+
+\pseventeenkoheading{10}{한 군에 무한히 많은 분해가 존재함}
+
+완전가약군의 합표현이 유일하지 않으면, 정리 V에 따라 각 표현에는 서로 동형인 부분군이 적어도 두 개씩 있다. 그러한 동형 부분군들의 한 계에서 이루어진 부분군
+\[
+ \mathfrak H=\mathfrak A_1+\cdots+\mathfrak A_\alpha
+\]
+를 고찰하자. 여기서 \(\mathfrak A_1,\mathfrak A_2,\ldots,\mathfrak A_\alpha\)는 모두 서로 동형이다. 유리성영역 \(P\)가 ‘상수’, 곧 \(\xi_i a=a\xi_i\)인 원소 \(a\)를 무한히 많이 포함하기만 하면 \(\mathfrak H\)가 그러한 서로 다른 분해를 무한히 많이 가짐을 주장한다. 이 정리는 군 \(\mathfrak A_i\)들에 더 아무것도, 심지어 기약성조차 가정하지 않아도 성립한다. 따라서 다음이 성립한다.
+
+\textbf{정리 VIII.} \emph{\(\mathfrak G\)를 유한개의 서로 동형인 부분군들의 합으로 나타낼 수 있고, 유리성영역 \(P\)가 상수를 무한히 많이 포함하면, 이 표현은 서로 다른 방식으로 무한히 많이 가능하다. 여기서 상수란 \(\xi_i a=a\xi_i\)인 영역의 원소 \(a\)를 뜻한다.}
+
+\textbf{증명.} 다음과 같이 두자.
+\[
+ \mathfrak G=\mathfrak A_1+\cdots+\mathfrak A_\alpha,
+\]
+그리고 \(i,\varkappa=1,\ldots,\alpha\), \(\alpha\geq2\)에 대하여 \(\mathfrak A_i\)가 \(\mathfrak A_\varkappa\)와 동형이라고 하자. 하나의 특정한 동형대응을 주기 위해 먼저 한 부분군, 이를테면 \(\mathfrak A_1\)을 특별히 택한다. \(\mathfrak A_1\)과 \(\mathfrak A_i\) 사이의 동형을
+\begin{equation}
+ a_1\sim t_{1\varkappa}a_\varkappa;\qquad
+ a_i\sim t_{i1}a_1;\qquad
+ t_{11}a_1=a_1
+ \quad(i,\varkappa=1,\ldots,\alpha)
+\tag{31}
+\end{equation}
+로 고정하자. 군 \(\mathfrak A_1\) 안에서는 각 잉여류가 자기 자신에 대응한다. \(Ma_1=0\), \(Ma_i=0\)에서 \(Mt_{1\varkappa}a_\varkappa=0\), \(Mt_{i1}a_1=0\)이 따른다. 따라서 류 \(t_{1\varkappa}a_\varkappa,t_{i1}a_1\)은 단위원과 마찬가지로 다항식뿐 아니라 잉여류와도 곱할 수 있다. 동형의 정의에 따라 서로 대응하고 이러한 잉여류 곱셈을 허용하는 두 류 \(\mathfrak y,\bar{\mathfrak y}\)에 대해서는 \(\mathfrak r\mathfrak y\)와 \(\mathfrak r\bar{\mathfrak y}\)도 서로 대응한다. 그러므로 관계 \(a_ra_s=0\) (\(r\ne s\), \(r,s=1,\ldots,\alpha\))에서 \(s=1\)로 두면
+\begin{equation}
+\left\{
+\begin{aligned}
+ a_r t_{1\varkappa}a_\varkappa&=0
+ &&(\varkappa=1,\ldots,\alpha,\ r\ne1)\\
+ \text{그리고 \(s>1\)이면}\qquad
+ a_r t_{s1}a_1&=0 &&(r\ne s),\\
+ \text{따라서}\qquad
+ t_{1\varkappa}a_\varkappa&=a_1t_{1\varkappa}a_\varkappa,
+ &t_{i1}a_1&=a_it_{i1}a_1
+\end{aligned}\right.
+\tag{32}
+\end{equation}
+을 얻는다.
+
+또 (31)과 대응의 유일성에서 (27), (28)의 일반화인
+\begin{equation}
+ t_{1i}t_{i1}a_1=a_1;\qquad
+ t_{\varkappa1}t_{1\varkappa}a_\varkappa=a_\varkappa
+\tag{33}
+\end{equation}
+가 따른다. 이제 \(\mathfrak A_i,\mathfrak A_\varkappa\) 사이의 동형은 (31)의 합성으로 생기는 관계로 고정하자. 개별 군은 자기동형을 가질 수 있으므로 이렇게 고정할 필요가 있다. (31)--(33)에서
+\begin{equation}
+ a_i\sim t_{i1}t_{1\varkappa}a_\varkappa
+      =t_{i\varkappa}a_\varkappa;\qquad
+ t_{ii}a_i=a_i;\qquad
+ a_rt_{s\varkappa}a_\varkappa=0\quad(r\ne s)
+\tag{34}
+\end{equation}
+를 얻는다. 여기서 \(t_{i1}t_{1\varkappa}=t_{i\varkappa}\)로 두었다. (33), (34)에서 더 나아가
+\[
+ t_{i\varkappa}t_{\varkappa l}a_l
+ =t_{i1}t_{1\varkappa}t_{\varkappa1}t_{1l}a_l
+ =t_{i1}t_{1l}a_l=t_{il}a_l
+\]
+이다. 이로써 \(\mathfrak A_1\)을 특별히 택한 것은 다시 사라진다. 정의에 \(\mathfrak A_1\) 대신 어느 군 \(\mathfrak A_\varkappa\)를 써도 \(\mathfrak A_i,\mathfrak A_\varkappa\) 사이의 동형관계는 같다. 따라서 \(t_{i\varkappa}\)들은 한데 다음 관계들을 만족하는 류들이다.
+\begin{equation}
+ Mt_{i\varkappa}a_\varkappa=0;\quad
+ a_rt_{i\varkappa}a_\varkappa=0\ (r\ne i);\quad
+ t_{i\varkappa}t_{\varkappa l}a_l=t_{il}a_l;\quad
+ t_{\varkappa i}a_i
+ =t_{\varkappa i}t_{i\varkappa}a_\varkappa
+ =a_\varkappa
+\tag{35}
+\end{equation}
+이다. 이 관계들은 \(\mathfrak A_i,\mathfrak A_\varkappa\)에 속하는 모듈 \(\mathfrak M_i,\mathfrak M_\varkappa\)가 같은 종류라는 것을 정확히 말한다(§ 9의 정의를 보라). 그곳의 \(P,Q\) 대신 여기서는 각각 류 \(t_{i\varkappa},t_{\varkappa i}\)가 오며, (35)의 첫 두 관계를 합친 것은 각각 공식 (25), (26)에 대응한다. 역으로 이 관계들에서는 정리 VI에 따라 동형이 따른다.\footnote{여기서는 유한성정리를 쓰지 않아도 된다. 공식들이 이미 사상 \(\varphi_{i\varkappa}\)와 그 역 \(\varphi_{\varkappa i}\)을 각각 나타내기 때문이다. 실제로 \(ra_i=ra_i t_{i\varkappa}a_\varkappa t_{\varkappa i}a_i\)이므로 \(ra_i\ne0\)에서 \(ra_i t_{i\varkappa}a_\varkappa\ne0\)도 따른다.}
+이제 류 \(t_{i\varkappa}a_\varkappa\)들에서 다시 군 \(\mathfrak B_\rho\)의 단위원이 되는 류 \(b_\rho\)들을 합성할 수 있다. 그러면
+\[
+ \mathfrak G=\mathfrak B_1+\cdots+\mathfrak B_\alpha
+\]
+라는 표현이 따라온다. 실제로 \(\lambda_{i\varkappa}\)들을 행렬식 \(|\lambda_{i\varkappa}|\ne0\)인 상수들이라고 하고, \(\lambda^{\varkappa r}\)를 \(|\lambda_{i\varkappa}|\)로 나눈 대응 여인자라고 하자. 그러면
+\begin{equation}
+\left\{
+\begin{aligned}
+ \sum_{r=1}^{\alpha}\lambda_{ri}\lambda^{r\varkappa}
+ &=\delta_{i\varkappa}
+ =\begin{cases}0,&i\ne\varkappa,\\1,&i=\varkappa,\end{cases}\\
+ \sum_{r=1}^{\alpha}\lambda_{ir}\lambda^{\varkappa r}
+ &=\delta_{i\varkappa}
+\end{aligned}\right.
+\tag{36}
+\end{equation}
+이다. 이제
+\begin{equation}
+ b_\rho=\sum_{i,\varkappa}
+ \lambda_{\rho i}\lambda^{\rho\varkappa}
+ t_{i\varkappa}a_\varkappa
+ \qquad(\rho=1,\ldots,\alpha)
+\tag{37}
+\end{equation}
+로 정의한다. (35)--(37)에서 \(Mb_\rho=0\)이고
+\begin{equation}
+ \sum_{\rho=1}^{\alpha}b_\rho
+ =\sum_{i,\varkappa,\rho}
+  \lambda_{\rho i}\lambda^{\rho\varkappa}
+  t_{i\varkappa}a_\varkappa
+ =\sum_{i,\varkappa}\delta_{i\varkappa}
+  t_{i\varkappa}a_\varkappa
+ =\sum_i t_{ii}a_i=\sum_i a_i=e
+\tag{38}
+\end{equation}
+이다. 더 나아가
+\[
+\begin{aligned}
+ b_\rho b_\sigma
+ &=\sum_{\substack{i,\varkappa\\ \mu,\nu}}
+  \lambda_{\rho i}\lambda^{\rho\varkappa}
+  \lambda_{\sigma\mu}\lambda^{\sigma\nu}
+  t_{i\varkappa}a_\varkappa t_{\mu\nu}a_\nu\\
+ &=\sum_{i,\mu,\nu}
+  \lambda_{\rho i}\lambda^{\rho\mu}
+  \lambda_{\sigma\mu}\lambda^{\sigma\nu}
+  t_{i\nu}a_\nu
+ =\delta_{\rho\sigma}\sum_{i,\nu}
+  \lambda_{\rho i}\lambda^{\sigma\nu}t_{i\nu}a_\nu\\
+ &=\begin{cases}0&(\rho\ne\sigma),\\ b_\rho&(\rho=\sigma)\end{cases}
+\end{aligned}
+\]
+이다 (\(\rho,\sigma=1,\ldots,\alpha\)). 따라서 표현 \(\mathfrak r e=\mathfrak r b_1+\cdots+\mathfrak r b_\alpha\)는 군 \(\mathfrak G\)의 한 가법적 분해이다. \(\lambda_{i\varkappa}\)가 대각행렬만을 이루지 않으면 군 \(\mathfrak B_\rho\)들은 군 \(\mathfrak A_\sigma\)들과 다르다. 실제로 \(a_\sigma b_\rho\)를 만들면 (35)에 따라
+\[
+ a_\sigma b_\rho
+ =\sum_{i,\varkappa}\lambda_{\rho i}\lambda^{\rho\varkappa}
+  a_\sigma t_{i\varkappa}a_\varkappa
+ =\lambda_{\rho\sigma}\sum_\varkappa
+  \lambda^{\rho\varkappa}t_{\sigma\varkappa}a_\varkappa
+ \ne0
+ \quad\text{\(\lambda_{\rho\sigma}\ne0\)이면}
+\]
+이다. 마지막 합이 영이라면 각 합항이 따로 사라져야 하지만, 그렇지 않기 때문이다. 따라서 고정된 \(\sigma\)에 대하여 \(\lambda_{\rho\sigma}\ne0\)인 \(\rho\)가 적어도 두 개이면 \(\mathfrak A_\sigma\)는 어떤 \(\mathfrak B_\rho\)와도 동일할 수 없다.
+
+그런데 군 \(\mathfrak B_\rho\)들은 서로 동형이고 군 \(\mathfrak A_\sigma\)들과도 동형이다. 이를 위해 먼저 \(\mathfrak A_\sigma,\mathfrak B_\rho\)의 동형을 매개하는 류 \(r_{\rho\sigma}a_\sigma\), \(r^{\sigma\rho}b_\rho\)의 존재를 보이자 (\(\rho,\sigma=1,\ldots,\alpha\)). 곧 류
+\[
+ r_{\rho\sigma}a_\sigma
+ =\sum_i\lambda_{\rho i}t_{i\sigma}a_\sigma,\qquad
+ r^{\sigma\rho}
+ =\sum_\varkappa\lambda^{\rho\varkappa}
+  t_{\sigma\varkappa}a_\varkappa
+ =r^{\sigma\rho}b_\rho\text{\footnotemark[21]}
+\]
+\footnotetext[21]{(37)에 따라 \(r^{\sigma\rho}b_\rho=\sum_{\varkappa,i,\mu}\lambda^{\rho\varkappa}t_{\sigma\varkappa}a_\varkappa\lambda_{\rho i}\lambda^{\rho\mu}t_{i\mu}a_\mu=\sum_{\varkappa,\mu}\lambda^{\rho\varkappa}\lambda_{\rho\varkappa}\lambda^{\rho\mu}t_{\sigma\mu}a_\mu=\sum_\mu\lambda^{\rho\mu}t_{\sigma\mu}a_\mu=r^{\sigma\rho}\)이다.}
+가 모듈
+\[
+ (\mathfrak M,b_1+\cdots+b_{\rho-1}
+              +b_{\rho+1}+\cdots+b_\alpha)
+\]
+과
+\[
+ (\mathfrak M,a_1+\cdots+a_{\sigma-1}
+              +a_{\sigma+1}+\cdots+a_\alpha)
+\]
+사이의 ‘같은 종류’ 관계
+\begin{equation}
+\left\{
+\begin{aligned}
+ b_\varkappa r_{\rho\sigma}a_\sigma&=0
+ &&(\varkappa\ne\rho);&
+ r^{\sigma\rho}r_{\rho\sigma}a_\sigma
+ &=a_\sigma\text{\footnotemark[22]},\\
+ a_\varkappa r^{\sigma\rho}b_\rho&=0
+ &&(\varkappa\ne\sigma);&
+ r_{\rho\sigma}r^{\sigma\rho}b_\rho
+ &=b_\rho
+\end{aligned}\right.
+\tag{39}
+\end{equation}
+\footnotetext[22]{역관계는 여기서처럼 첨자들을 서로 바꾸어 얻어지지 않으므로, 공식의 수가 (35)에 비해 두 배이다.}
+\setcounter{footnote}{22}
+를 만족함을 보인다. 그러면 (35)의 경우와 마찬가지로 대응
+\begin{equation}
+ b_\rho\sim r_{\rho\sigma}a_\sigma;\qquad
+ a_\sigma\sim r^{\sigma\rho}b_\rho
+\tag{40}
+\end{equation}
+에 따라 동형이 따른다.
+
+실제로
+\[
+\begin{aligned}
+ b_\varkappa r_{\rho\sigma}a_\sigma
+ &=\sum_{\mu,\nu,i}
+  \lambda_{\varkappa\mu}\lambda^{\varkappa\nu}
+  t_{\mu\nu}a_\nu\lambda_{\rho i}t_{i\sigma}a_\sigma\\
+ &=\sum_{\mu,i}
+  \lambda_{\varkappa\mu}\lambda^{\varkappa i}
+  \lambda_{\rho i}t_{\mu\sigma}a_\sigma
+ =\delta_{\varkappa\rho}\sum_\mu
+  \lambda_{\varkappa\mu}t_{\mu\sigma}a_\sigma\\
+ &=\delta_{\varkappa\rho}r_{\rho\sigma}a_\sigma
+ =0\quad(\varkappa\ne\rho)
+\end{aligned}
+\]
+이다. 또
+\[
+ r^{\sigma\rho}r_{\rho\sigma}a_\sigma
+ =\sum_{\nu,i}\lambda^{\rho\nu}t_{\sigma\nu}a_\nu
+  \lambda_{\rho i}t_{i\sigma}a_\sigma
+ =\sum_i\lambda^{\rho i}\lambda_{\rho i}a_\sigma
+ =a_\sigma.
+\]
+역으로 마찬가지로
+\[
+ a_\varkappa r^{\sigma\rho}b_\rho
+ =a_\varkappa\sum_\mu
+  \lambda^{\rho\mu}t_{\sigma\mu}a_\mu
+ =0\quad(\varkappa\ne\sigma)
+\]
+이고
+\[
+ r_{\rho\sigma}r^{\sigma\rho}b_\rho
+ =\sum_{i,\mu}\lambda_{\rho i}t_{i\sigma}a_\sigma
+  \lambda^{\rho\mu}t_{\sigma\mu}a_\mu
+ =\sum_{i,\mu}\lambda_{\rho i}\lambda^{\rho\mu}
+  t_{i\mu}a_\mu=b_\rho
+\]
+이다. 이제 증명한 같은 종류 관계에서 (다시 유한성정리를 쓰지 않고) \(\mathfrak A_\sigma,\mathfrak B_\rho\)의 동형이 따른다.
+
+\(\mathfrak B_\rho,\mathfrak B_\tau\) 사이의 동형은 이를 합성하여 얻으며, 그 공식을 적어 두자. 다음과 같이 둔다.
+\[
+ \ell_{\rho\tau}b_\tau
+ =r_{\rho\varkappa}r^{\varkappa\tau}b_\tau
+ =\sum_{i,j}\lambda_{\rho i}t_{i\varkappa}a_\varkappa
+  \lambda^{\tau j}t_{\varkappa j}a_j
+ =\sum_{i,j}\lambda_{\rho i}\lambda^{\tau j}t_{ij}a_j.
+\]
+그러면 대응은 \(b_\rho\sim\ell_{\rho\tau}b_\tau\)이다. 여기에서도 같은 종류 관계를 형식적으로 다시 확인할 수 있다. \(\ell_{\rho\tau}\)들을 \(t_{i\varkappa}\) 대신 넣으면 관계 (35)를 만족한다. 실제로
+\[
+ b_\sigma\ell_{\rho\tau}b_\tau
+ =b_\sigma r_{\rho\varkappa}r^{\varkappa\tau}b_\tau
+ =0\quad(\sigma\ne\rho)
+\]
+이고
+\[
+ \ell_{\rho\sigma}\ell_{\sigma\tau}b_\tau
+ =r_{\rho\varkappa}r^{\varkappa\sigma}
+  r_{\sigma\lambda}r^{\lambda\tau}b_\tau
+ =r_{\rho\varkappa}a_\varkappa r^{\varkappa\tau}b_\tau
+ =\ell_{\rho\tau}b_\tau
+\]
+이다.
+
+\(\lambda_{i\varkappa}\)들을 대각행렬이 아니고, 대각행렬을 곱하는 변환으로 서로 옮길 수도 없게 무한히 많은 방식으로 택하기만 하면 되므로 정리 VIII이 증명되었다.
+
+정리 VIII을 정리 V, 또는 VII과 함께 쓰면 다음이 따른다.
+
+\textbf{정리 IX}\footnote{Loewy, 106--107쪽을 보라.}. \emph{모듈 \(\mathfrak M\)이 완전가약이고, 서로 완전히 소인 계를 이루는 소모듈 \(\mathfrak P_1,\ldots,\mathfrak P_k\)의 최소공배수이며, 유리성영역 \(P\)가 상수를 무한히 많이 포함한다고 하자. \(\mathfrak M\)을 소모듈들의 최소공배수로 나타내는 서로 다른 표현이 무한히 많이 존재할 필요충분조건은 \(\mathfrak P_1,\ldots,\mathfrak P_k\) 가운데 적어도 두 모듈이 같은 종류인 것이다.}
+
+이제 한 모듈 \(\mathfrak M\)이 무한히 많은 소모듈로 나누어지는 일반적인 판정기준을 얻기 위해 먼저 다음을 증명한다.
+
+\textbf{보조정리}\footnote{Loewy, 96쪽을 보라.}. \emph{완전가약모듈 \(\mathfrak M=[\mathfrak P_1,\ldots,\mathfrak P_k]\)이 모든 \(\mathfrak P_i\)와 다른 소모듈 \(\mathfrak P'\)으로 나누어지면, \(\mathfrak P_i\)들 가운데 적어도 두 개는 같은 종류이다.}
+
+먼저 \(\mathfrak P_1,\ldots,\mathfrak P_k\) 가운데 아직 지우지 않은 모듈들의 최소공배수에 포함되는 소모듈을 차례로 지워 서로 완전히 소인 계를 골라낸다. 따라서 이제 \(\mathfrak P_1,\ldots,\mathfrak P_k\) 자체가 서로 완전히 소인 계를 이룬다고 가정하자. \(a'\)를 법 \(\mathfrak P'\)의 단위원류에 대응하는 \(\mathfrak M\)의 한 류라 하자. 그러면 각 다항식 \(F\)에 대하여
+\[
+ Fa'=Fa'a_1+\cdots+Fa'a_k
+\]
+이다. 곱 \(a'a_i\) 가운데 적어도 두 개, 이를테면 \(a'a_1,a'a_2\)는 영과 다르다. 이를테면 \(a'a_1\) 하나만 영과 다르면 \(Fa'=Fa'a_1\)이고, 잉여류 \(Fa'\)들은 \(\mathfrak A_1\)의 부분군을 이룬다. \(\mathfrak A_1\)은 소군이므로 이 부분군은 \(\mathfrak A_1\)과 같고, 따라서 모듈 \(\mathfrak P',\mathfrak P_1\)도 일치할 것이다. 그러므로 § 8의 논법에 따라 \(\mathfrak A'\)은 \(\mathfrak A_1,\mathfrak A_2\)와 동형이다.
+
+이제 \(\mathfrak M\)을 임의의 모듈이라 하자. \(\mathfrak M\)을 나누는 모든 소모듈의 최소공배수 \(\mathfrak N\)을 고찰한다.\footnote{그러한 소모듈이 무한히 많으면 정리 IV에 따라 이 표현에는 잉여군의 가법적 분해가 대응할 수 없다. § 12의 예 4도 보라.} 두 경우가 가능하다. 첫째, \(\mathfrak N\)을 유한개의 소모듈의 최소공배수로 나타낼 수 없다. 이 경우에는 \(\mathfrak N\), 따라서 \(\mathfrak M\)이 무한히 많은 소모듈을 인자로 갖는다. 둘째, \(\mathfrak N\)을 유한개의 소모듈의 최소공배수로 나타낼 수 있다. 이때 \(\mathfrak N\)을 Loewy의 대응 구성에 따라 \(\mathfrak M\)의 \emph{최대 완전가약모듈}이라고 한다. 이 유한개의 소모듈 가운데 같은 종류인 두 개가 있으면 정리 IX에 따라 \(\mathfrak N\), 따라서 \(\mathfrak M\)은 무한히 많은 소모듈로 나누어진다. 역으로 뒤의 사실이 성립하면, \(\mathfrak N\)을 최소공배수로 나타내는 그 유한개의 소모듈 모두와 다른 \(\mathfrak N\)의 소인자가 적어도 하나 있다. 보조정리에 따라 \(\mathfrak N\), 따라서 \(\mathfrak M\)은 같은 종류의 소인자 두 개를 갖는다. 이로써 다음 정리를 증명하였다.
+
+\textbf{정리 X.} \emph{유리성영역 \(P\)가 상수를 무한히 많이 포함하면, 한 모듈이 무한히 많은 서로 다른 소모듈로 나누어질 필요충분조건은 최대 완전가약모듈이 존재하지 않거나, 그러한 모듈이 존재할 경우 같은 종류의 서로 다른 소모듈 적어도 두 개로 나누어지는 것이다.}
+
+\pseventeenkoheading{11}{미분방정식계와 그 적분해들과의 관계}
+
+유한성정리에 따라 미분식들의 각 모듈에는 유한개의 미분식으로 이루어진 한 기저를 대응시킬 수 있다. 모듈의 한 미분식을 영으로 놓아 생기는 모든 미분방정식의 공통 적분해 전체는, 기저미분식들을 영으로 놓아 얻는 유한 미분방정식계의 적분해 전체와 일치한다. 이로써 선형 편미분방정식계의 이론과 연결된다. 모듈의 잉여군이 ‘유한’인 경우에 이 관계를 조금 더 추적하자.
+
+\textbf{정의.} \emph{한 잉여군에 수 \(\mu\)가 있어서, 임의의 \(\mu+1\)개 잉여류 사이에는 \(P\)의 계수를 갖는 선형관계가 있지만 아무 관계도 없는 \(\mu\)개 잉여류의 계가 적어도 하나 있으면 이 잉여군을 유한이라고 한다. \(\mu\)를 군의 차수라고 하고, 뒤의 계를 잉여군의 선형기저라고 한다. 그렇지 않으면 잉여군을 무한이라고 한다.}
+
+두 유한 잉여군의 합은 유한하고, 그 차수는 두 차수의 합이다. 두 무한군의 합이나 한 유한군과 한 무한군의 합은 무한군이다. 한 변수 모듈의 모든 잉여군이 유한군의 예이다. 여러 변수에서도 차수는 유한할 수 있다. 예컨대 기저가 \(\xi_1^2,\xi_2^2\)인 모듈에서는 모든 잉여류가 \(1,\xi_1,\xi_2,\xi_1\xi_2\)의 잉여류들의 선형결합으로 만들어진다. 무한군의 예는 § 12를 보라.
+
+이제 다음 정리가 성립한다.
+
+\textbf{정리 XI.} \emph{한 모듈의 잉여군이 유한이면, 그 모듈의 한 기저를 영으로 놓아 생기는 모든 미분방정식계는 잉여군의 차수와 정확히 같은 수의 선형독립인 적분해를 갖는다. 역으로 유한개의 선형 편미분방정식으로 이루어진 주어진 계가 선형독립인 적분해를 유한개만 가지면, 그 수는 미분식들이 생성하는 모듈의 잉여군 차수와 같다.}
+
+여기서 유리성영역 \(P\)는 \(n\)개 변수 \(x_1,\ldots,x_n\)의 해석함수들로 이루어진다고 하자. 나타나는 특이점들은 어떤 \(n\)차원 영역 안에서 기껏해야 더 낮은 차원의 다양체들을 이루므로, 정칙인 \(n\)차원 근방을 갖는 점들이 얼마든지 존재한다고 한다.
+
+\(\mathfrak M\)을 유한 잉여군을 갖는 모듈이라 하자. 그러면 다음 성질을 갖는 거듭제곱곱들의 한 선형기저가 존재함을 보이겠다. \emph{임의의 잉여류를 이 기저로 나타낼 때 분모에는 \(P\)의 유한개의 서로 다른 원소들의 거듭제곱만 나타날 수 있다.}
+
+이를 위해 모든 거듭제곱곱 \(\xi_1^{a_1}\cdots\xi_n^{a_n}\)을 사전식으로 배열하고, 앞선 것들과 법 \(\mathfrak M\)에서 선형독립인 것들을 모두 잉여류의 대표원 \(Q_1,\ldots,Q_m\)으로 택한다. 가정에 따라 이는 유한개뿐이다. 나머지는 모두 이 대표원들의 선형결합으로 나타낼 수 있다.
+
+\(\mathfrak S\)를 선형기저에 포함되지 않은 모든 거듭제곱곱의 계라고 하자. 정리 III의 증명 첫 부분에 따라 \(\mathfrak S\)에는 유한 부분계 \(\mathfrak T\)가 있어서, \(\mathfrak S\)의 각 거듭제곱곱은 \(\mathfrak T\)의 적어도 하나의 거듭제곱곱으로 나누어진다. \(P_1,\ldots,P_\rho\)를 \(\mathfrak T\)의 거듭제곱곱들이라 하고, \(M_1\equiv0,\ldots,M_\rho\equiv0\;(\mathfrak M)\)을 각각 \(P_1,\ldots,P_\rho\)를 법 \(\mathfrak M\)에서 더 낮은 거듭제곱곱들의 선형결합으로 나타내는 관계들이라 하자. 예컨대
+\[
+ M_i=b_iP_i+\text{낮은 항들}
+\]
+이다. \(P\)가 \(\mathfrak S\)의 임의의 거듭제곱곱이면
+\[
+ \xi_1^{h_1}\cdots\xi_n^{h_n}P_i
+\]
+꼴이고,
+\[
+\begin{aligned}
+ \xi_1^{h_1}\cdots\xi_n^{h_n}M_i
+ &=b_i\xi_1^{h_1}\cdots\xi_n^{h_n}P_i
+   +\text{낮은 항들}\\
+ &=b_iP+\text{낮은 항들}
+\end{aligned}
+\]
+이 따른다. \(P\)보다 낮은 모든 거듭제곱곱에서는 분모에 \(b_1,\ldots,b_\rho\)의 거듭제곱만 나타나고, 분자는 \(M_i\)의 계수들에서 덧셈·곱셈·미분으로 만들어진다고 이미 증명되었다고 하자. 그러면 \(P\) 자체에도 이 사실이 성립한다. \(\mathfrak S,\mathfrak T\)의 첫 원소 \(P_1\)에 대해서는 이 가정이 충족되므로 이러한 귀납가정이 허용된다.
+
+또 정리 III에 따라 \(M_1,\ldots,M_\rho\)는 \(\mathfrak M\)의 모듈기저이다. 이제 \(b_1\ne0,\ldots,b_\rho\ne0\)이고 \(M_i\)의 나머지 계수들이 정칙인 \(x_1,\ldots,x_n\)의 한 값계 \(\beta_1,\ldots,\beta_n\), 곧 미분방정식계 \(M_1=0,\ldots,M_\rho=0\)의 한 정칙점을 고찰하자. 거듭제곱곱 \(Q_i=\xi_1^{h_{i1}}\cdots\xi_n^{h_{in}}\) (\(i=1,\ldots,m\))에는 편도함수
+\[
+ \frac{\partial^{h_{i1}+\cdots+h_{in}}}
+ {\partial x_1^{h_{i1}}\cdots\partial x_n^{h_{in}}}y
+\]
+가 대응한다. 점 \((\beta_1,\ldots,\beta_n)\)에서 이 편도함수들에 임의의 상수값 \((\gamma_1,\ldots,\gamma_m)\)을 준다. 그러면 미분방정식 \(M_i=0\)에 따라 이 점에서 \(y\)의 모든 고계도함수 값이 유한한 값으로 유일하게 정해진다. 분모에는 \(b_i\)들만 나타나기 때문이다. 여기서 선형독립인 해석적 적분해 \(m\)개가 존재함을 보이는 것은 잘 알려져 있다.
+
+한편 우리의 가정 아래에서는 선형독립인 적분해가 \(m\)개보다 많을 수 없다. 그렇다면 한 정칙점에서 적절히 고른 \(m+1\)개 도함수의 값을 임의로 줄 수 있다는 알려진 결론이 나오는데, 이는 임의의 \(m+1\)개 거듭제곱곱 사이에 법 \(\mathfrak M\)의 선형종속관계가 있어야 한다는 사실과 모순이다.
+
+역으로 한 모듈의 잉여군이 무한이면 같은 방식으로 선형독립인 적분해가 무한히 많이 존재함을 보인다. 따라서 선형독립인 적분해가 \(m\)개뿐이면 잉여군은 유한이고, 위에서 본 바에 따라 그 차수는 \(m\)이다.
+
+이 절의 끝으로, 미분식들로 이루어진 두 모듈의 동형개념, 또는 같은 뜻인 같은 종류라는 개념이 대응 미분방정식계의 적분해들에 대하여 Poincaré가 한 변수에서 쓴 종류개념과 같은 뜻을 가짐을 보인다(앞서 든 Blumberg의 논문, 부록 I을 보라).
+
+\textbf{정리 XII.} \emph{미분식들로 이루어진 두 모듈 \(\mathfrak M,\mathfrak N\)이 같은 종류이면, 두 미분식 \(P,Q\)가 있어서 \(y\)가 \(\mathfrak M\)의 모든 적분해를 돌 때 \(P(y)\)가 \(\mathfrak N\)의 모든 적분해를 돌고, \(z\)가 \(\mathfrak N\)의 모든 적분해를 돌 때 \(Q(z)\)가 \(\mathfrak M\)의 모든 적분해를 돈다.}
+
+실제로 가정과 § 9에 따라 알맞게 고른 두 다항식 \(P,Q\)에 대하여
+\[
+ MQ\equiv0(\mathfrak N),\qquad PQ\equiv1(\mathfrak N)
+\]
+이고
+\[
+ NP\equiv0(\mathfrak M),\qquad QP\equiv1(\mathfrak M)
+\]
+이다. 그러므로 \(NP(y)=0\)에 따라 함수 \(P(y)\)는 \(\mathfrak N\)의 적분해이다. 마찬가지로 \(Q(z)\)는 \(\mathfrak M\)의 적분해이다. \(PQ(z)=z\), \(QP(y)=y\)이므로 \(P(y)\)는 \(\mathfrak N\)의 모든 적분해를 돌고, \(Q(z)\)는 \(\mathfrak M\)의 모든 적분해를 돈다. 이때 영과 다른 각 \(y\)에는 영과 다른 \(z\)가 대응하고, 그 역도 성립한다.
+
+\pseventeenkoheading{12}{예}
+
+\textbf{1.} 첫 예로 계수들이 적분해들의 대칭함수로 나타나는 통상적인 2계 선형미분방정식을 고찰한다. 여기서 유리성영역 \(P\)는 적분해들과 그 도함수들의 모든 유리함수로 이루어지고, 미분방정식의 한 정칙점의 충분히 작은 근방으로 제한한다. \(\mathfrak M\)을 \(y_1,y_2\)를 적분해로 갖는 모든 미분식의 집합으로 정의하고, 이 식들을 다시 한 부정원 \(\xi\)의 다항식으로 쓴다. 모듈기저는 한 원소로 이루어지고, 다항식
+\[
+ M=
+ \begin{vmatrix}y_1&y_2\\y_1'&y_2'\end{vmatrix}\xi^2
+ -\begin{vmatrix}y_1&y_2\\y_1''&y_2''\end{vmatrix}\xi
+ +\begin{vmatrix}y_1'&y_2'\\y_1''&y_2''\end{vmatrix}
+\]
+으로 주어진다. 이는 \(P\)의 한 원소를 인자로 곱하는 차이까지만 유일하게 정해진다. 이제
+\begin{equation}
+ \mathfrak M=[\mathfrak M_1,\mathfrak M_2]
+\tag{41}
+\end{equation}
+이다. 여기서 \(\mathfrak M_i\)는 \(y_i\)를 적분해로 갖는 모든 미분식으로 이루어지고, 그 기저는 \(P\)의 한 인자를 곱하는 차이까지만
+\[
+ M_i=y_i\xi-y_i'\qquad(i=1,2)
+\]
+로 정해진다. 실제로 \(\mathfrak M\)은 적분해 \(y_1,y_2\)에서 사라지므로 \(\mathfrak M_1,\mathfrak M_2\)로, 따라서 \([\mathfrak M_1,\mathfrak M_2]\)로 나누어진다. \([\mathfrak M_1,\mathfrak M_2]\)의 기저다항식의 차수는 적어도 2여야 하므로 \(\mathfrak M=[\mathfrak M_1,\mathfrak M_2]\)이다. 또
+\begin{equation}
+ \frac{y_2}{D}(y_1\xi-y_1')
+ -\frac{y_1}{D}(y_2\xi-y_2')=1,\qquad
+ D=D(y)=\begin{vmatrix}y_1&y_2\\y_1'&y_2'\end{vmatrix}
+\tag{42}
+\end{equation}
+이므로 \(\mathfrak M_1,\mathfrak M_2\)는 서로 소이다. 그 잉여군의 차수가 1이므로 이들은 소모듈이기도 하다.
+
+그런데 \(\mathfrak M\)은 \(y_1,y_2\)뿐 아니라
+\[
+ z_1=\alpha_{11}y_1+\alpha_{12}y_2,\qquad
+ z_2=\alpha_{21}y_1+\alpha_{22}y_2,\qquad
+ A=|\alpha_{ik}|\ne0
+\]
+도 모두 적분해로 갖는다. 따라서 각각 \(z_1,z_2\)를 적분해로 갖는 서로 소인 두 모듈 \(\mathfrak N_1,\mathfrak N_2\)의 최소공배수와 동일하다. 그 기저다항식은
+\[
+ N_i=z_i\xi-z_i'
+ =(\alpha_{i1}y_1+\alpha_{i2}y_2)\xi
+  -(\alpha_{i1}y_1'+\alpha_{i2}y_2')
+\]
+이다. 그러므로 \(\mathfrak M\)은 서로 소인 소모듈들의 최소공배수로 나타내는 서로 다른 표현을 무한히 많이 갖는다. 따라서 정리 VII에 따라 \(\mathfrak N_1,\mathfrak N_2\)는 서로 같은 종류이고 \(\mathfrak M_1,\mathfrak M_2\) 각각과도 같은 종류이다. 실제로 이 모든 모듈의 잉여군은 차수가 1이므로 동형이다.
+
+이제 표현 (41)에 대응하는 잉여군의 가법적 분해 \(\mathfrak G=\mathfrak A_1+\mathfrak A_2\)를 세우자. § 4에 따라 \(\mathfrak M_1,\mathfrak M_2\)가 서로 소임을 말하는 관계 (42)에서 시작한다. 단위원 \(a_1,a_2\)로는 각각 다항식
+\[
+ -\frac{y_1}{D}(y_2\xi-y_2')
+ \quad\text{및}\quad
+ \frac{y_2}{D}(y_1\xi-y_1')
+\]
+이 생성하는 잉여류들을 얻는다. 이로써
+\[
+ \mathfrak M_1
+ =\left(\mathfrak M,\frac{y_2}{D}(y_1\xi-y_1')\right),
+ \qquad
+ \mathfrak M_2
+ =\left(\mathfrak M,-\frac{y_1}{D}(y_2\xi-y_2')\right).
+\]
+마찬가지로 \(y_i\)를 \(z_i\)로 바꾸어 분해 \(\mathfrak M=[\mathfrak N_1,\mathfrak N_2]\)에 대응하는 단위원 \(b_1,b_2\)를 만들면
+\[
+ -\frac{z_1}{D(z)}(z_2\xi-z_2')
+ =-\frac{\alpha_{11}y_1+\alpha_{12}y_2}{AD(y)}
+ \bigl((\alpha_{21}y_1+\alpha_{22}y_2)\xi
+      -(\alpha_{21}y_1'+\alpha_{22}y_2')\bigr),
+\]
+\[
+ \frac{z_2}{D(z)}(z_1\xi-z_1')
+ =\frac{\alpha_{21}y_1+\alpha_{22}y_2}{AD(y)}
+ \bigl((\alpha_{11}y_1+\alpha_{12}y_2)\xi
+      -(\alpha_{11}y_1'+\alpha_{12}y_2')\bigr)
+\]
+이고, 따라서
+\begin{equation}
+\left\{
+\begin{aligned}
+ b_1&=\frac{\alpha_{11}y_1+\alpha_{12}y_2}{y_1}
+ \left(\frac{\alpha_{22}}{A}\right)a_1
+ +\frac{\alpha_{11}y_1+\alpha_{12}y_2}{y_2}
+ \left(-\frac{\alpha_{21}}{A}\right)a_2\\
+ &=\frac{z_1}{y_1}\alpha^{11}a_1
+  +\frac{z_1}{y_2}\alpha^{12}a_2,\\
+ b_2&=\frac{\alpha_{21}y_1+\alpha_{22}y_2}{y_1}
+ \left(-\frac{\alpha_{12}}{A}\right)a_1
+ +\frac{\alpha_{21}y_1+\alpha_{22}y_2}{y_2}
+ \left(\frac{\alpha_{11}}{A}\right)a_2\\
+ &=\frac{z_2}{y_1}\alpha^{21}a_1
+  +\frac{z_2}{y_2}\alpha^{22}a_2
+\end{aligned}\right.
+\tag{43}
+\end{equation}
+이다. 여기서 \((\alpha^{ik})\)는 행렬 \((\alpha_{ik})\)의 역행렬이다.
+
+역으로 \(z_i\)와 \(y_i\)를 서로 바꾸면
+\begin{equation}
+\left\{
+\begin{aligned}
+ a_1&=\frac{y_1}{z_1}\alpha_{11}b_1
+     +\frac{y_1}{z_2}\alpha_{12}b_2,\\
+ a_2&=\frac{y_2}{z_1}\alpha_{21}b_1
+     +\frac{y_2}{z_2}\alpha_{22}b_2
+\end{aligned}\right.
+\tag{44}
+\end{equation}
+를 얻는다. 이 공식들에서 군 \(\mathfrak A,\mathfrak B\)의 동형을 알아볼 수 있다. 실제로 우리의 일반적인 논의에 따라 \(a_1b_\sigma\ne0\)이면 대응은 \(a_1\sim a_1b_\sigma\)이고, 따라서 (44)에 따라
+\[
+ a_1\sim\frac{y_1}{z_\sigma}\alpha_{1\sigma}b_\sigma,
+ \qquad\text{\(\alpha_{1\sigma}\ne0\)이면}
+\]
+이다. (43)에 따라 마찬가지로
+\[
+ b_\sigma\sim\frac{z_\sigma}{y_2}\alpha^{\sigma2}a_2,
+ \qquad\text{\(\alpha^{\sigma2}\ne0\)이면}
+\]
+이고, 따라서
+\[
+ \frac{y_1}{z_\sigma}\alpha_{1\sigma}b_\sigma
+ \sim
+ \frac{y_1}{z_\sigma}\alpha_{1\sigma}
+ \frac{z_\sigma}{y_2}\alpha^{\sigma2}a_2
+ =\frac{y_1}{y_2}\alpha_{1\sigma}\alpha^{\sigma2}a_2.
+\]
+그러므로
+\[
+ a_1\sim\alpha_{1\sigma}\alpha^{\sigma2}\frac{y_1}{y_2}a_2
+ \quad\text{\(\alpha_{1\sigma}\alpha^{\sigma2}\ne0\)이면},
+ \qquad
+ \frac{1}{\alpha_{1\sigma}\alpha^{\sigma2}}
+ \frac{y_2}{y_1}a_1\sim a_2,
+\]
+이고, 뒤 관계는 역대응이다. \((\alpha_{ik})\)가 대각행렬이 아니면 어떤 \(\sigma\)에 대해서는 조건 \(\alpha_{1\sigma}\alpha^{\sigma2}\ne0\)이 언제나 성립한다. 대각행렬인 경우에는 모듈들이 동일하므로 제외해야 한다. 또 예컨대 \(\alpha_{12}=0\)만 성립하면 \(\mathfrak A_1=\mathfrak B_1\)이지만 \(\mathfrak A_2=\mathfrak B_2\)는 아니다. 따라서 \(\mathfrak A_1+\mathfrak A_2=\mathfrak B_1+\mathfrak B_2\), \(\mathfrak A_1=\mathfrak B_1\)에서 \(\mathfrak A_2=\mathfrak B_2\)가 따르지 않는다(주 12를 보라). 이때 세 모듈 \(\mathfrak M_1,\mathfrak M_2,\mathfrak N_2\)는 두 개씩 서로 소이지만 서로 완전히 소인 계를 이루지는 않는다. \([\mathfrak M_1,\mathfrak M_2]\)가 \(\mathfrak N_2\)로 나누어지기 때문이다(주 15를 보라).
+
+또
+\[
+ t_{12}=\alpha_{1\sigma}\alpha^{\sigma2}\frac{y_1}{y_2}a_2,
+ \qquad
+ t_{21}=\frac{1}{\alpha_{1\sigma}\alpha^{\sigma2}}
+ \frac{y_2}{y_1}a_1
+\]
+로 두면, 직접 계산하여 확인할 수 있듯 관계 (35)가 충족된다.
+
+\textbf{2.} 둘 이상의 변수를 가지면서 기저가 다항식 하나뿐인 모든 모듈은 무한군의 예이다. 다음 예는 조금 더 복잡하며, 다항식을 둘 이상 포함하는 모듈기저를 갖는 여러 원소 모듈에서도 무한군이 나타날 수 있음을 보여 준다.\footnote{앞서 든 Blumberg의 논문에 실린 Landau의 예, 51--52쪽을 보라. 여기와 이하에서는 독립변수를 \(x,y\)로 나타낸다.}
+\[
+ \mathfrak M=[(\xi+x\eta),(\xi+1)]=[(P),(Q)]
+ \qquad\left(\xi=\frac{\partial}{\partial x},
+ \ \eta=\frac{\partial}{\partial y}\right).
+\]
+곱셈법칙은 미분식의 법칙으로 한다. \((\xi+x\eta)\)와 \((\xi+1)\)의 잉여군들이 모두 무한이고, 모듈 \((\xi+x\eta)\), \((\xi+1)\)은
+\[
+ 1=(-x\xi-x^2\eta+1)Q+(x\xi+x-1)P
+\]
+에 따라 서로 소이므로 여기서 잉여군은 무한이다.
+
+다음과 같이 놓으면 \(\mathfrak M\)이 2차 다항식을 갖지 않음을 아주 쉽게 보일 수 있다.
+\[
+ (u_1\xi+u_2\eta+u_3)(\xi+x\eta)
+ =(v_1\xi+v_2\eta+v_3)(\xi+1).
+\]
+여기서 \(u_1=u_2=u_3=v_1=v_2=v_3=0\)을 얻는다. 또 \(\mathfrak M\)의 3차 다항식을 찾으면 선형독립인 것 두 개, 예컨대
+\[
+ (\xi^2+x\xi\eta+\xi+(2+x)\eta)Q
+ =(\xi^2+2\xi+1)P
+\]
+와
+\[
+ (\xi^2+2x\xi\eta+x^2\eta^2+\eta)Q
+ =(\xi^2+x\xi\eta+\xi+(x-1)\eta)P
+\]
+를 얻는다. \(\mathfrak M\)이 한 원소 모듈이면 두 다항식은 모두 기저다항식으로 나누어져야 한다. 그런데 \(\mathfrak M\)에는 2차 다항식이 없으므로 3차 다항식으로 나누어져야 하고, 따라서 서로 비례해야 하지만 그렇지 않다. \(\mathfrak M\)이 여러 원소 모듈이라는 사실이 한 변수의 경우에 성립하는 Landau의 곱정리들이 실패하는 내적인 이유이다.
+
+\textbf{3.} 다음 예는 소모듈에서도 무한군이 나타날 수 있음을 보여 준다.\footnote{우리의 ‘소모듈’ 정의는 가환인 경우 소모듈이라고 부르는 것과 다르다. 그 경우에는 다양체가 0차원, 곧 잉여군이 유한인 경우를 제외하면 언제나 더 낮은 차원의 인자가 존재하기 때문이다.} \(P\)를 두 변수 \(x,y\)의 모든 유리함수의 영역이라고 하자. 기저
+\[
+ \xi-\frac{y}{x}\eta=\xi-a
+\]
+를 갖는 모듈 \(\mathfrak M\)의 잉여군은 \(y\)의 각 거듭제곱의 잉여류를 포함하므로 무한이다. 한편 \(\mathfrak M\)은 소모듈이다. 실제로 각 인자
+\[
+ \mathfrak M_1=(\xi-a,F(\xi,\eta))
+\]
+가 단위원모듈임을 보이겠다. 모든 다항식 \(F(\xi,\eta)\)은 법 \((\xi-a)\)에서 한 다항식 \(G(\eta)\)으로 나타낼 수 있다.
+\[
+ F(\xi,\eta)\equiv
+ c_0\eta^\nu+c_1\eta^{\nu-1}+\cdots+c_\nu
+ \quad(\mathfrak M).
+\]
+일반성을 잃지 않고 \(c_0=1\)이라 하자. 곱셈법칙에 따라 \(\xi\eta^\nu-\eta^\nu\xi=0\)이다. 따라서
+\[
+ \xi\equiv a(\mathfrak M_1),\qquad
+ \eta^\nu\equiv F_1(\mathfrak M_1)
+\]
+이고 \(F_1=-(c_1\eta^{\nu-1}+\cdots+c_\nu)\)로 두면
+\[
+ \xi F_1-\eta^\nu a\equiv0(\mathfrak M_1)
+\]
+이다.
+
+\[
+ \eta^\nu a
+ =a\eta^\nu+\nu\frac{\partial a}{\partial y}\eta^{\nu-1}
+ +\cdots
+\]
+로 전개하고 다시 \(\eta^\nu\)를 \(F_1\)으로 바꾸면
+\[
+ \xi(c_1\eta^{\nu-1}+\cdots+c_\nu)
+ -a(c_1\eta^{\nu-1}+\cdots+c_\nu)
+ +\nu\frac{\partial a}{\partial y}\eta^{\nu-1}
+ +\cdots\equiv0(\mathfrak M_1),
+\]
+또는
+\[
+ c_1\eta^{\nu-1}a
+ +\frac{\partial c_1}{\partial x}\eta^{\nu-1}+\cdots
+ -ac_1\eta^{\nu-1}+\cdots
+ +\nu\frac{\partial a}{\partial y}\eta^{\nu-1}+\cdots
+ \equiv0(\mathfrak M_1),
+\]
+마지막으로
+\[
+ \left(\frac{\partial c_1}{\partial x}
+ +\nu\frac{\partial a}{\partial y}\right)\eta^{\nu-1}
+ +\cdots\equiv0(\mathfrak M_1)
+\]
+을 얻는다. 왼쪽은 정확히 \(\nu-1\)차이고 항등적으로 사라지지 않는 \(\eta\)의 다항식이다. 실제로 최고계수
+\[
+ \frac{\partial c_1}{\partial x}
+ +\nu\frac{\partial a}{\partial y}
+ =\frac{\partial c_1}{\partial x}+\nu\frac1x
+ \ne0
+\]
+이다. 그렇지 않으면 \(c_1=-\nu\log x+\varphi(y)\)가 되어 유리함수가 아닐 것이기 때문이다. 따라서 이 절차를 계속할 수 있고, 마침내 항등적으로 사라지지 않는 0차 다항식에 이른다. 이로써 단위원도 \(\mathfrak M_1\)에 속함을 보였다.\footnote{이 절차는 한 미분방정식계에 필요한 적분가능조건들이 충족되지 않음을 보이는 것으로 귀착된다.}
+
+\textbf{4.} 반면 유리성영역에 함수 \(\log x\)를 더 첨가하면 \(\mathfrak M\)은 인자
+\[
+ \left(\xi-\frac{y}{x},\ \eta-\log x+\varphi(y)\right)
+\]
+들을 갖는다. 여기서 \(\varphi(y)\)는 \(y\)의 모든 유리함수를 돈다. 이 인자들은 모두 서로 다르고, 각각 적분가능조건을 만족하며, 대응 적분해는
+\[
+ y\log x-\int\varphi(y)\,dy+c
+\]
+이다. 그러므로 단위원은 모듈에 속할 수 없다. 그렇다면 영함수가 유일하게 가능한 적분해일 것이기 때문이다. 한편 \(\xi,\eta\)는 이 모듈에 관하여 영역의 어떤 원소들과 합동이다. 따라서 잉여군은 유한이고 차수 1이다. 또 무한히 많은 인자 가운데 임의의 두 개는 서로 소이며, 주어진 모듈 \(\mathfrak M\)은 이 모든 인자의 최소공배수 \(\mathfrak N\)과 같다. 실제로 \(\mathfrak M\)은 모든 인자로, 따라서 \(\mathfrak N\)으로 나누어진다. \(\mathfrak N\)이 \(\mathfrak M\)의 진인자이면 \(\mathfrak N\)은 \(\eta\)에만 의존하는 다항식 \(F\), 이를테면 차수 \(\rho\)인 것을 적어도 하나 더 포함해야 한다. 이제 \(\varphi(y)\)가 함수 \(y,\ldots,y^{\rho+1}\)을 돌게 하면 대응 적분해
+\[
+ y\log x-\frac{y^{i+1}}{i+1}+c_i
+ \qquad(i=1,\ldots,\rho+1)
+\]
+사이에는 \(y\)와 무관한 계수를 갖는 선형관계가 없다. 그러나 \(\rho\)계 미분방정식 \(F=0\)은 선형독립인 적분해 \(\rho+1\)개를 가질 수 없다.
+
+그런데 모듈 \(\mathfrak M=\mathfrak N\)은 완전가약이 아니다.\footnote{이로써 정리 X의 첫 경우에 해당하는 예를 얻었다.} 그렇다면 유한개의 이 소모듈의 최소공배수일 것이고 그 잉여군도 유한차수일 것이다. 그러나 \(\xi-\frac yx\)의 잉여군은 \(\eta\)의 모든 거듭제곱의 잉여류를 포함하므로 무한이다.
+
+괴팅겐, 1919년 8월 1일.
+
+\begin{center}
+(1919년 8월 4일 접수.)
+\end{center}
+
+\endgroup
+
+\clearpage

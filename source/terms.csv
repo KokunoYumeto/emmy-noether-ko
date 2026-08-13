@@ -1,0 +1,274 @@
+german,korean,scope,note
+Körper,체,algebra,"field; do not use 신체"
+Ring,환,algebra,
+Ideal,아이디얼,algebra,
+Modul,모듈,algebra,"module; P34's operator/representation context consistently uses 가군, while the established arithmetic/commutative corpus term remains 모듈"
+Modulbasis,모듈기저,module_theory,"Hilbert's module-basis theorem; keep distinct from Rationalbasis and Integritätsbasis"
+Bereich,영역,algebra,"domain/realm; refine contextually"
+Integritätsbereich,정역,algebra,
+Zerfällungskörper,분해체,representation_theory,
+Darstellung,표현,representation_theory,
+irreduzibel,기약인,algebra,
+vollständig reduzibel,완전가약인,representation_theory,
+invariant,불변인,invariant_theory,
+Invariante,불변식,invariant_theory,
+Kovariante,공변식,invariant_theory,
+Kontravariante,반공변식,invariant_theory,"P02 convention; distinguish from kontragredient"
+Formensystem,형식계,invariant_theory,
+ganze rationale Funktion,다항함수,historical_algebra,"avoid literal 정칙 유리함수"
+ganze rationale Verbindung,다항식 결합,historical_algebra,"polynomial combination; not 정칙 or literal 정유리"
+relativ-ganze Funktion,상대적으로 정수적인 함수,historical_algebra,"integral relative to the specified domain"
+Endlichkeitssatz,유한성 정리,general,
+Differente,디퍼런트,algebraic_number_theory,
+verschranktes Produkt,교차곱,algebra,
+Maximalordnung,극대 오더,algebra,"order in an algebra; keep distinct from regular/maximal ring properties"
+isomorphe Abbildung,동형사상,field_theory,
+rationale Basis,유리기저,field_theory,"historical rational-generation basis"
+Abschnittskörper,절단체,field_theory,
+algebraische Basis,초월기저,field_theory,"historical source term; structurally a transcendence basis"
+Primkörper,소체,field_theory,
+extrem unstetig,극도로 불연속,analysis,
+Parameterdarstellung,매개변수표현,field_theory,
+Lagrangescher Gattungsbereich,라그랑주 종영역,field_theory,"invariant field attached to a permutation group"
+Minimalbasis,최소기저,field_theory,
+Affekt,아펙트,field_theory,"historical Galois-theory term; retain transliteration"
+natürliche Irrationalität,자연스러운 무리량,field_theory,
+Nullstellenkörper,영점체,commutative_algebra,
+Restklassenkörper,잉여류체,commutative_algebra,
+Primideal,소아이디얼,commutative_algebra,
+Primärideal,으뜸아이디얼,commutative_algebra,
+Elementarteiler,초등인자,algebra,
+Grundideal,기초아이디얼,commutative_algebra,"historical elimination-theory filtration term"
+Reihenentwicklung,급수전개,invariant_theory,
+Normalform,정규형,invariant_theory,
+Komplexkoordinaten,콤플렉스 좌표,invariant_theory,"Pluecker complex coordinates, not generic complex-number coordinates"
+Linienkoordinaten,선좌표,invariant_theory,
+formale Variationsrechnung,형식적 변분법,calculus_of_variations,
+Lagrangescher Ausdruck,라그랑주 식,calculus_of_variations,
+kovariante Ableitung,공변미분,differential_geometry,
+Krümmungsform,곡률형식,differential_geometry,
+Normalkoordinaten,정규좌표,differential_geometry,
+Parallelverschiebung,평행이동,differential_geometry,
+allgemeine lineare Gruppe,일반선형군,invariant_theory,
+induzierte Transformation,유도변환,invariant_theory,
+homogener Integritätsbereich,동차 정역,commutative_algebra,
+Idealbasis,아이디얼 기저,commutative_algebra,
+Integritätsbasis,정수성 기저,commutative_algebra,"finite algebra-generating basis in this historical usage"
+Galoische Resolvente,갈루아 레졸벤트,invariant_theory,
+Reduktionssatz,환원정리,differential_geometry,
+Übertragung,접속,differential_geometry,"Weyl--Schouten historical connection terminology"
+Lagrangesche Ableitung,라그랑주 도함수,calculus_of_variations,
+verschränktes Produkt,교차곱,algebra,
+Faktorensystem,인자계,algebra,
+einfache normale Algebra,단순 정규대수,algebra,"historical term; central simple algebra"
+Zerfallen,분할,algebra,"splitting of an algebra"
+Hauptgeschlecht,주종,algebraic_number_theory,
+Normensatz,노름정리,algebraic_number_theory,
+Normenrest,노름잉여,algebraic_number_theory,
+Transformationsgröße,변환량,algebra,
+Galoismodul,갈루아 가군,representation_theory,
+Operatorisomorphie,연산자동형,representation_theory,"operator isomorphism; legacy inherited wording 연산자 동형사상 is not propagated into fresh P34"
+Führer,도체,algebraic_number_theory,
+Differentialausdruck,미분식,differential_geometry,
+Grundfunktion,기본함수,differential_geometry,"Noether's invariant-theory term"
+Variationsprozess,변분과정,calculus_of_variations,
+Polare,편극형,invariant_theory,
+Polarenbildung,편극연산,invariant_theory,
+kogredient,동변인,invariant_theory,"same linear transformation law"
+kontragredient,반변인,invariant_theory,"contragredient transformation law; distinguish from Kontravariante"
+Ordnung,계수차수,invariant_theory,"P02 source footnote: degree in the coefficients"
+Grad,변수차수,invariant_theory,"P02 source footnote: degree in the variables"
+Funktionaldeterminante,야코비 행렬식,invariant_theory,
+Überschiebung,전이연산,invariant_theory,"historical transvection operation"
+Syzygie,시지지,invariant_theory,"relation among forms"
+Integrabilitätsbedingung,적분가능조건,differential_geometry,
+absolute Irreduzibilität,절대기약성,commutative_algebra,
+Reduzibilitätsform,가약성형식,commutative_algebra,
+Graderniedrigung,차수저하,commutative_algebra,
+induzierter Exponent,유도지수,commutative_algebra,
+Kroneckersche Substitution,크로네커 치환,commutative_algebra,
+algebraisch abgeschlossener Körper,대수적으로 닫힌 체,field_theory,
+Normalbasis,정규기저,algebraic_number_theory,
+Hauptordnung,정수환,algebraic_number_theory,"ring of integers / maximal order of a number field"
+höhere Verzweigung,고차 분기,algebraic_number_theory,
+gewöhnliche Verzweigung,순분기,algebraic_number_theory,"historical term for tame ramification"
+ganzzahliger Gruppenring,정수군환,representation_theory,
+Wurzelzahl,근수,representation_theory,"historical generalized Lagrange resolvent factor"
+Gruppendeterminante,군행렬식,representation_theory,
+Exponent,지수,algebra,"Brauer-group exponent; distinguish Index"
+Index,인덱스,algebra,"central-simple-algebra index; distinguish character 지표"
+Multiplizität,중복도,algebraic_geometry,
+Schnittpunktmultiplizität,교점중복도,algebraic_geometry,
+volles Restsystem,완전잉여계,commutative_algebra,
+Idealquotient,아이디얼 몫,commutative_algebra,
+Länge eines Ideals,아이디얼의 길이,commutative_algebra,
+Maximalbereich,극대영역,commutative_algebra,"integer-denominator saturated domain in P35"
+Funktionalmatrix,함수행렬,differential_algebra,
+absolutes Primideal,절대소아이디얼,commutative_algebra,
+Ausnahmeprimzahl,예외소수,arithmetic,
+ganzzahlige Invariante,정수 계수 불변식,invariant_theory,
+Größenreihe,변수열,invariant_theory,"use 양들의 열 in P06 where the entries are historical Größen rather than named variables"
+Resultante,종결식,elimination_theory,
+multiplikative Basis,곱셈기저,commutative_algebra,
+Primmodul,소모듈,commutative_algebra,
+normiertes Polynom,정규화 다항식,commutative_algebra,
+Divergenzrelation,발산관계,calculus_of_variations,
+Abhängigkeit,종속관계,calculus_of_variations,
+erstes Integral,제1적분,calculus_of_variations,
+Erhaltungssatz,보존법칙,physics,
+relative Invarianz,상대불변성,invariant_theory,
+eigentliche Energierelation,고유 에너지 관계,physics,
+uneigentliche Energierelation,비고유 에너지 관계,physics,
+Polygon,폴리곤,algebraic_geometry,"historical Dedekind--Weber divisor terminology"
+Divisorklasse,인자류,algebraic_geometry,
+vollständige lineare Schar,완전 선형계,algebraic_geometry,
+komplementärer Modul,여모듈,algebraic_number_theory,"trace-dual/complementary module"
+Verzweigungsideal,분기아이디얼,algebraic_number_theory,"historical synonym Grundideal/Differente"
+Doppelpunktsideal,이중점 아이디얼,algebraic_geometry,
+adjungierte Form,수반형식,algebraic_geometry,
+korresiduale Punktgruppen,공잔여 점군,algebraic_geometry,
+Grundmodul,기초모듈,commutative_algebra,
+Determinantenteiler,행렬식인자,linear_algebra,
+Resultantenform,종결식형,elimination_theory,
+Elementarteilerform,초등인자형,elimination_theory,
+Restklassensystem,잉여류계,commutative_algebra,
+transformiertes Ideal,변환된 아이디얼,elimination_theory,
+Grundideal,기초아이디얼,elimination_theory,
+Ordnung,오더,algebraic_number_theory,"nonmaximal or general order; Hauptordnung remains 정수환"
+Erweiterungsring,확대환,commutative_algebra,
+Erweiterungsideal,확대아이디얼,commutative_algebra,
+Verengungsideal,수축아이디얼,commutative_algebra,
+vollständig reduzibler Ring,완전가약환,commutative_algebra,
+Primideal erster Art,제1종 소아이디얼,commutative_algebra,
+Primideal zweiter Art,제2종 소아이디얼,commutative_algebra,
+Darstellungsklasse,표현류,representation_theory,
+Klasseninvariante,류불변량,representation_theory,
+Diskriminantenideal,판별식아이디얼,algebraic_number_theory,
+Multiplikationsring,곱셈환,algebraic_number_theory,
+reziproke Darstellung,반대 표현,representation_theory,"historical anti-representation/opposite-ring representation"
+direkte Darstellung,직접 표현,representation_theory,
+Darstellungsmodul,표현가군,representation_theory,
+Doppelmodul,쌍가군,module_theory,
+Produktring,곱환,ring_theory,"ring generated by two subrings in a common overring; not necessarily a direct product"
+reziprok isomorph,반대동형인,ring_theory,
+Erweiterungsmodul,확대가군,module_theory,
+Abspaltungskörper,분리체,field_theory,"field splitting off at least one absolutely irreducible factor; distinguish Zerfällungskörper"
+Klasse ähnlicher Algebren,유사한 대수들의 류,algebra,
+Erweiterungsklasse,확대류,algebra,
+Schurscher Index,슈어 인덱스,algebra,
+komplementäre Basis,여차기저,field_theory,
+direktes Produkt,직접곱,ring_theory,"Noether's scalar-extension/tensor-product construction; distinguish Produktring"
+definierendes Ideal,정의아이디얼,commutative_algebra,
+Differenzenideal,차분아이디얼,commutative_algebra,
+Differenzenquotient,차분몫,commutative_algebra,
+Idealdifferentialquotient,아이디얼 미분몫,commutative_algebra,
+galoisscher Erweiterungsring,갈루아 확대환,field_theory,
+Erzeugendensystem,생성계,ring_theory,
+unabhängige Modulbasis,독립 모듈기저,module_theory,
+Fundamentalgleichung,기본방정식,algebraic_number_theory,
+Spur,대각합,field_theory,"trace; formulas retain Sp"
+Verzweigungstheorie,분기이론,algebraic_number_theory,
+Supplementzahlen,보충수,algebraic_number_theory,
+Primfunktion,소함수,commutative_algebra,
+Primärfunktion,으뜸함수,commutative_algebra,
+eigentliche Primärfunktion,진으뜸함수,commutative_algebra,
+Einzelnorm,개별노름,elimination_theory,
+algebraischer Rang,대수적 랭크,field_theory,"used synonymously with transcendence degree in P24"
+isolierte Komponente,고립성분,commutative_algebra,
+vollkommener Körper,완전체,field_theory,
+unvollkommener Körper,비완전체,field_theory,
+reduzierter Grad,축약차수,field_theory,
+Erweiterung erster Art,제1종 확대,field_theory,
+Restgruppe,잉여군,module_theory,
+Primgruppe,소군,module_theory,
+von gleicher Art,같은 종류,module_theory,"historical equivalence relation between modules"
+Rationalitätsbereich,유리성영역,differential_algebra,
+total teilerfremdes System,서로 완전히 소인 계,module_theory,
+rechtsseitiger Modul,우측모듈,module_theory,
+linksseitiger Modul,좌측모듈,module_theory,
+Integral,적분해,differential_equations,"solution of a differential equation, not an integration expression"
+Matrizenprodukt,행렬곱,invariant_theory,
+Faltung,수축,invariant_theory,"historical symbolic contraction process"
+Defekt der Faltung,수축의 결손,invariant_theory,
+kogrediente Faltung,동변 수축,invariant_theory,
+Grundfaltung,기본 수축,invariant_theory,
+Formenreihe,형식열,invariant_theory,
+Zerlegungsidentität,분해 항등식,invariant_theory,
+Reduzent,환원자,invariant_theory,
+Gewichtsindex,무게지수,invariant_theory,
+Ringbereich,환영역,ring_theory,
+reduzibel,가약인,ideal_theory,
+kürzeste Darstellung,최단표현,ideal_theory,
+reduzierte Darstellung,축약표현,ideal_theory,
+Komplement,보충부분,ideal_theory,
+größter gemeinsamer Teiler,최대공약아이디얼,ideal_theory,
+kleinstes gemeinsames Vielfaches,최소공배수,ideal_theory,
+zugehöriges Primideal,대응 소아이디얼,commutative_algebra,
+größtes primäres Ideal,극대 으뜸아이디얼,commutative_algebra,
+relativprim,상대소인,ideal_theory,"directional unless both directions are stated"
+relativprim-irreduzibel,상대소-기약인,ideal_theory,
+teilerfremd,서로소인,ideal_theory,"symmetric; distinct from relativprim"
+teilerfremd-irreduzibel,서로소-기약인,ideal_theory,
+isoliertes Ideal,고립아이디얼,commutative_algebra,
+Einheitsideal,단위아이디얼,ring_theory,
+Hauptideal,주아이디얼,ideal_theory,
+Residualmodul,잔여모듈,module_theory,
+Doppelbereich,이중환영역,module_theory,
+rechtsseitiges Ideal,우측아이디얼,noncommutative_algebra,
+linksseitiges Ideal,좌측아이디얼,noncommutative_algebra,
+zweiseitiger Modul,양쪽모듈,noncommutative_algebra,
+zweiseitiges Ideal,양쪽아이디얼,noncommutative_algebra,
+algebraisches Gebilde,대수도형,elimination_theory,
+Minimalresolvente,최소 레졸벤트,elimination_theory,
+Elementarteilersystem,초등인자계,linear_algebra,
+Matrizenklasse,행렬류,linear_algebra,
+Teilerkettensatz,약수사슬정리,ideal_theory,"ascending chain condition in Noether's divisibility order"
+Vielfachenkettensatz,배수사슬정리,ideal_theory,"descending chain condition in Noether's divisibility order"
+Doppelkettensatz,이중사슬정리,ideal_theory,"Teiler- and Vielfachenkettensatz together"
+Funktionalbereich,함수영역,commutative_algebra,"Kronecker function ring"
+ganze Größe,정수적 원소,commutative_algebra,
+ganz-abgeschlossen,정수적으로 닫힌,commutative_algebra,
+ganze Abhängigkeit,정수적 종속성,commutative_algebra,
+Modulbereich,모듈영역,module_theory,
+Hauptmodul,주모듈,module_theory,
+Modulquotient,모듈 몫,module_theory,
+"größter gemeinsamer Teiler (von Moduln)",최대공약모듈,module_theory,
+linearer Rang,선형 랭크,module_theory,
+schwaches Primideal,약한 소아이디얼,ideal_theory,
+starkes Primideal,강한 소아이디얼,ideal_theory,
+schwaches Primärideal,약한 으뜸아이디얼,ideal_theory,
+starkes Primärideal,강한 으뜸아이디얼,ideal_theory,
+prim zu,대하여 상대소,ideal_theory,"directional; same relation recorded as relativprim"
+gegenseitig prim,서로 상대소,ideal_theory,"symmetric closure of prim zu; distinct from teilerfremd"
+einfaches Ideal,단순아이디얼,ideal_theory,
+gebrochenes Ideal,분수아이디얼,ideal_theory,
+Restklassenmodul,잉여류모듈,module_theory,
+Kompositionsreihe,합성열,module_theory,
+hyperkomplexe Größe,초복소량,noncommutative_algebra,
+hyperkomplexes System,초복소계,noncommutative_algebra,
+Operatorhomomorphismus,연산자준동형,representation_theory,
+Radikal,근기,noncommutative_algebra,
+nilpotent,멱영인,noncommutative_algebra,
+idempotentes Element,멱등원,noncommutative_algebra,
+Automorphismenring,자기동형환,representation_theory,
+Automorphismenkörper,자기동형체,representation_theory,"Körper may be noncommutative in P34"
+Matrizeneinheit,행렬단위,noncommutative_algebra,
+Zentrum,중심,noncommutative_algebra,
+Peircesche Zerlegung,페어스 분해,noncommutative_algebra,
+zweiseitig einfach,양쪽단순인,noncommutative_algebra,
+direkt-unzerlegbar,직접분해불능인,module_theory,
+Hauptspur,주대각합,representation_theory,
+reduzierte Spur,축약대각합,representation_theory,
+Charakter,지표,representation_theory,"character; keep distinct from Index 인덱스"
+Systemdeterminante,계행렬식,representation_theory,
+Diskriminante,판별식,algebra,
+reduzierte Diskriminante,축약판별식,algebra,
+Erweiterung zweiter Art,제2종 확대,field_theory,
+Pseudomatrizeneinheit,유사행렬단위,noncommutative_algebra,
+kleines Faktorensystem,소인자계,noncommutative_algebra,
+großes Faktorensystem,대인자계,noncommutative_algebra,
+verschränkte Darstellung,교차표현,representation_theory,
+normierte verschränkte Darstellung,정규화된 교차표현,representation_theory,
+Kompositum,합성체,field_theory,
+Kurzmitteilung,단신,edition_apparatus,
+Buchbesprechung,서평,edition_apparatus,

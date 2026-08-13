@@ -1,0 +1,3740 @@
+% POST-A fresh Korean production translation.
+% Initial translation authority: ED0005 / NOETH-DE-AUTH-v038-20260805.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Scope: current German lines 21005--23741.
+% Complete translated scope: current German lines 21005--23741.
+
+\begin{center}
+\vspace*{3.5em}
+{\LARGE\bfseries 초복소량의 대수학\par}
+\vspace{3.5em}
+{\large 에미 뇌터 교수의 강의\par}
+{\large 1929/30년 겨울학기\par}
+\vspace{1.5em}
+{\large M. 도이링 교수 정리\par}
+\vspace{4em}
+{\Large\bfseries 목차\par}
+\end{center}
+\vspace{1em}
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\newcommand{\tocline}[2]{\noindent #1\dotfill #2\par}
+\newcommand{\tocsec}[3]{\noindent\hspace*{1.2em}\S\,#1.\quad #2\dotfill #3\par}
+\tocline{\textbf{서론}}{3}
+\medskip
+\tocline{\textbf{제I장: 표현}}{3}
+\tocsec{1}{직접 표현의 정의 --- 반대 표현의 정의}{3}
+\tocsec{2}{표현류}{4}
+\tocsec{3}{표현가군}{4}
+\tocsec{4}{표현가군과 표현의 관계}{5}
+\medskip
+\tocline{\textbf{제II장: 가환체의 갈루아 이론}}{7}
+\tocsec{5}{초복소계의 계수 확대}{7}
+\tocsec{6}{가환계의 기약표현}{8}
+\tocsec{7}{한 체의 동형들}{8}
+\tocsec{8}{분해체}{9}
+\tocsec{9}{\(Z_1\)에서 \(Z_i\)로 가는 동형들}{9}
+\tocsec{10}{갈루아군}{9}
+\tocsec{11}{갈루아 이론의 주정리}{9}
+\tocsec{12}{성분 \(e_i\)의 형식적 의미}{11}
+\tocsec{13}{일반 연장정리}{12}
+\medskip
+\tocline{\textbf{제III장: 아벨군}}{13}
+\tocsec{14}{군환}{13}
+\tocsec{15}{아벨군의 군환}{14}
+\tocsec{16}{지표관계}{15}
+\tocsec{17}{아벨군의 갈루아 이론}{15}
+\medskip
+\tocline{\textbf{제IV장: 양쪽단순환}}{18}
+\tocsec{18}{보조정리}{18}
+\tocsec{19}{양쪽단순 초복소계의 계수체의 비가환 확대체 안에서의 표현}{19}
+\tocsec{20}{비가환체}{22}
+\tocsec{21}{비가환체의 갈루아 이론}{26}
+\clearpage
+\tocline{\textbf{제V장: 인자계}}{29}
+\tocsec{22}{중심이 주어진 체들의 군}{29}
+\tocsec{23}{인자계}{30}
+\tocsec{24}{인자계의 곱셈}{33}
+\tocsec{25}{갈루아 극대 가환부분체를 갖는 \(\mathfrak K_r\)의 정규표현}{39}
+\tocsec{26}{교차표현의 곱셈}{43}
+\medskip
+\tocline{\textbf{제VI장: 교차곱 이론}}{44}
+\tocsec{27}{\(\mathfrak R_r\)의 교차곱 표현}{44}
+\tocsec{28}{인자계의 곱정리}{47}
+\tocsec{29}{최소에서의 주종정리}{50}
+\tocsec{30}{순환 분해체에의 특수화}{50}
+\tocsec{31}{순환 특수 경우의 응용}{52}
+\endgroup
+\clearpage
+
+\section*{서론}
+
+이 강의는 한편으로 유한군의 표현론에서, 다른 한편으로 초복소수계의 대수적ㆍ산술적 이론에서 성장해 나온 일반 환표현론을 다룬다. 표현론을 이처럼 일반적으로 파악하면 종래의 이론(프로베니우스, 슈어)에 비해 다음과 같은 장점이 있다.
+
+군 자체가 아니라 군환, 더 일반적으로는 초복소계나 임의의 환을 고찰하므로 환론과 아이디얼론을 쓸 수 있고, 이에 따라 복잡하고 불투명한 많은 계산에서 이론을 해방할 수 있다. 일반 환론과 아이디얼론을 쓰면 이론이 단순해질 뿐 아니라, 예컨대 한 군과 그 부분군들의 관계라는 문제에서 더 멀리 나아가고 새로운 응용영역도 열린다. 일반 표현론의 도움으로 갈루아 이론에 새롭고 매우 우아한 기초를 줄 수 있으며, 어쩌면 더 중요하게도 비가환체의 갈루아 이론을 세울 수 있다.
+
+군론ㆍ환론ㆍ아이디얼론의 기본개념과 표현론의 일반정리는 뇌터 양의 논문 \emph{Hyperkomplexe Größen und Darstellungstheorie}, Mathematische Zeitschrift 30, 641쪽에 있다. 이하 M. Z.로 인용하는 이 논문은 이 강의록을 보완하는 것으로 보아야 한다. 뇌터 양의 1927/28년 겨울학기 강의 \emph{Hyperkomplexe Größen und Gruppencharaktere}를 정리한 글에서도 M. Z.와 같은 내용을 찾을 수 있다.
+
+여기서는 직접 표현가군에 비해 형식적으로만 새로운 반대 표현가군과 반대 표현을 도입하기 위해 표현과 표현가군의 개념을 짧게 설명한다.
+
+\section*{제I장. 표현}
+
+\(\mathfrak{o}\)를 표현될 환, \(\mathsf T\)를 표현이 이루어지는 다른 환이라 하자.
+
+\subsection*{§ 1. 직접 표현의 정의}
+
+\(\mathfrak{o}\)의 \(\mathsf T\) 안에서의 \(n\)차 \emph{직접 표현}이란, \(\mathsf T\)의 원소로 된 \(n\)행 정방행렬환 \(\mathsf T_n\)의 한 부분환 \(\mathfrak D\)로 \(\mathfrak{o}\)가 환준동형으로 사상되는 것을 말한다. 기호로는
+\[
+        \mathfrak{o}\longrightarrow\mathfrak D\subseteq\mathsf T_n
+\]
+이다.
+
+\subsection*{반대 표현의 정의}
+
+\(\mathfrak{o}\)의 \(\mathsf T^*\) 안에서의 \(n\)차 \emph{반대 표현}이란, \(\mathsf T^*\)의 원소로 된 \(n\)행 정방행렬환 \(\mathsf T_n^*\)의 한 부분환 \(\mathfrak D^*\)로 \(\mathfrak{o}\)가 반준동형으로 사상되는 것을 말한다. 반준동형이라는 말은 \(\mathfrak{o}\)의 원소 \(c,d\)에 \(\mathfrak D^*\)의 원소 \(c^*,d^*\)가 대응할 때, \(\mathfrak{o}\)의 원소 \(cd\)에는 \(\mathfrak D^*\)의 원소 \(d^*c^*\)가, \(c+d\)에는 \(c^*+d^*\)가 대응한다는 뜻이다. 기호로는
+\[
+        \mathfrak{o}\nrightarrow\mathfrak D^*
+        \subseteq\mathsf T_n^*
+\]
+이다.
+
+반준동형의 예를 들자. 가환체의 \(n\)행 정방행렬에 그 전치행렬을 대응시키면 이 대응은 반대 환동형이다.
+
+일반적으로 임의의 환 \(\mathsf T\)에 대해 그와 반대동형인 환 \(\mathsf T^*\)를 다음과 같이 구성할 수 있다.
+
+\(\mathsf T\)의 각 원소 \(c\)에 기호 \(c^*\)를 대응시키고, 이 기호들의 덧셈과 곱셈을
+\[
+        c^*+d^*=(c+d)^*,
+        \qquad
+        c^*d^*=(dc)^*
+\]
+로 정의한다. 기호 \(c^*\)들의 집합은 \(\mathsf T\)와 반대동형인 환 \(\mathsf T^*\)이다.
+
+\subsection*{§ 2. 표현류}
+
+\(\mathfrak{o}\)의 \(\mathsf T\) 안에서의 직접 표현 \(\mathfrak D\)를 한 정칙행렬 \(P\)로 원소별 변환하면 동형인 표현 \(\mathfrak D'\)로 바꿀 수 있다. 곧 \(\mathfrak{o}\)의 원소 \(c\)에 \(C\in\mathfrak D\) 대신 \(P^{-1}CP\in P^{-1}\mathfrak D P\)를 대응시킨다.
+
+이 방식으로 서로 변환될 수 있는 두 표현을 \emph{동치}라 한다.
+
+한 표현과 동치인 모든 표현은 하나의 \emph{표현류}(직접 표현류)를 이룬다.
+
+반대 표현의 동치도 똑같이 정의한다. 한 반대 표현을 정칙행렬로 변환하여 다른 하나를 얻을 수 있으면 두 반대 표현은 동치이다. 고정된 한 반대 표현과 동치인 모든 표현은 하나의 \emph{반대 표현류}를 이룬다.
+
+\subsection*{§ 3. 표현가군}
+
+\emph{직접 표현가군}의 정의.
+
+\(\mathfrak{o}\)의 \(\mathsf T\)에 관한 직접 표현가군이란 다음 조건을 만족하는 모든 \(\mathfrak{o},\mathsf T\)-쌍가군 \(\mathfrak M\)을 말한다. 곧 \(\mathfrak M\)은 덧셈으로 쓴 아벨군이며, \(\mathfrak{o}\)에 관해서는 좌측가군이고 \(\mathsf T\)에 관해서는 우측가군이며, 모든 \(c\in\mathfrak{o}\), \(m\in\mathfrak M\), \(\tau\in\mathsf T\)에 대해 결합법칙
+\[
+        (cm)\tau=c(m\tau)
+\]
+을 만족한다. 또한 \(\mathsf T\)-가군으로서는 유한개의 한 원소 가군의 직접합으로
+\[
+        \mathfrak M=x_1\mathsf T+x_2\mathsf T+\cdots+x_n\mathsf T
+\]
+라 쓸 수 있고, \(x_i\tau=0\)이면 \(\tau=0\)이어야 한다.
+
+\emph{반대 표현가군}의 정의.
+
+\(\mathfrak{o}\)의 \(\mathsf T^*\)에 관한 반대 표현가군이란 \(\mathfrak{o}\)-좌측가군이자 \(\mathsf T^*\)-좌측가군인 모든 \(\mathfrak M^*\)로서, 모든 \(c\in\mathfrak{o}\), \(m\in\mathfrak M^*\), \(\tau\in\mathsf T^*\)에 대해 교환법칙
+\[
+        c(\tau^*m^*)=\tau^*(cm)
+\]
+을 만족하고 유한개의 단순 \(\mathsf T^*\)-가군의 직접합
+\[
+        \mathfrak M^*
+        =\mathsf T^*x_1+\cdots+\mathsf T^*x_n
+\]
+으로 쓸 수 있는 것을 말한다. 여기서 \(\tau^*x_i^*=0\)이면 \(\tau^*=0\)이다.
+
+\subsection*{§ 4. 표현가군과 표현의 관계}
+
+\textbf{1.} \emph{모든 표현가군은 하나의 표현류를 유일한 방식으로 낳는다. 직접 표현가군은 직접 표현류를, 반대 표현가군은 반대 표현류를 낳는다.}
+
+그 방식은 다음과 같다.
+
+직접 표현가군 \(\mathfrak M\)에 \(\mathfrak{o}\)의 원소 \(c\)를 곱하는 것은 \(\mathfrak M\)에서 자기 자신으로 가는 준동형이다. 결합법칙 \((cm)\tau=c(m\tau)\) 때문에 이 준동형은 \(\mathsf T\)의 원소들을 연산자로 허용한다. 따라서 이는 \(\mathfrak M\)에서 자기 자신으로 가는 \emph{선형변환}이다. 곧 대응 \(m\mapsto cm=m'\)은 다음 성질을 갖는다.
+\[
+\text{\(y_i\mapsto y_i'(=cy_i)\)이면 }
+\sum y_i\tau_i\mapsto
+\sum y_i'\tau_i\left(=c\sum y_i\tau_i\right).
+\]
+
+두 선형변환
+\[
+\mathfrak T_1:\ m\mapsto m'(=c_1m),
+\qquad
+\mathfrak T_2:\ m\mapsto m''(=c_2m)
+\]
+의 합 \(\mathfrak T_1+\mathfrak T_2\)을 변환 \(m\mapsto m'+m''=(c_1+c_2)m\)으로 정의하고, 그 곱 \(\mathfrak T_1\mathfrak T_2\)를 합성변환 \(m\mapsto(m'')'=c_1c_2m\)으로 정의하자. 그러면 \(\mathfrak{o}\)의 원소들이 생성하는 서로 다른 선형변환들의 집합은 \(\mathfrak{o}\)의 환준동형상 \(\overline{\mathfrak D}\)이다.
+
+이제 \(\mathfrak M\)의 임의의 기저 \(x_1,\ldots,x_n\)을 택하자. \(c\)가 생성하는 \(\mathfrak M\)의 선형변환은 기저원소 \(x_i\)들이 어떻게 변환되는지를 알면 정해진다. 곧 연립방정식
+\[
+        x_j'=cx_j=\sum_i x_i\gamma_{ij}
+\]
+의 행렬 \((\gamma_{ij})=C\)를 알면 충분하다. 다른 원소 \(x=\sum x_j\tau_j\)에 대해서는 단순히 \(x'=\sum x_j'\tau_j\)이기 때문이다. 이 행렬 \(C\)들은 서로 다른 선형변환들과 일대일로 대응하고 서로를 결정하며, 곧바로 알 수 있듯 \(\overline{\mathfrak D}\)와 동형인 환을 이룬다. 따라서 이는 \(\mathfrak{o}\)의 환준동형상, 곧 \(\mathfrak{o}\)의 \(n\)차 표현이다.
+
+\(\overline{\mathfrak D}\)와 표현 사이의 동형은 다음 식들에 들어 있다. \(c\in\mathfrak{o}\)가 생성하는 선형변환에 행렬 \(C\)가 대응하여
+\[
+        c(x_1,\ldots,x_n)=(x_1,\ldots,x_n)C
+\]
+이고, 같은 방식으로 \(d\in\mathfrak{o}\)와 \(D\in\mathsf T_n\)가 대응하여
+\[
+        d(x_1,\ldots,x_n)=(x_1,\ldots,x_n)D
+\]
+이면
+\[
+\begin{aligned}
+(c+d)(x_1,\ldots,x_n)
+&=(cx_1+dx_1,\ldots,cx_n+dx_n)\\
+&=(x_1,\ldots,x_n)(C+D)
+\end{aligned}
+\]
+이고
+\[
+\begin{aligned}
+cd(x_1,\ldots,x_n)
+&=c(dx_1,\ldots,dx_n)
+ =c\bigl((x_1,\ldots,x_n)D\bigr)\\
+&=(cx_1,\ldots,cx_n)D
+ =(x_1,\ldots,x_n)CD.
+\end{aligned}
+\]
+
+그러므로 \(\mathfrak{o}\)가 생성하는 \(\mathfrak M\)의 자기 선형변환들을 \(\mathfrak M\)의 특정한 기저 \(x_\nu\)로 실현하면 \(\mathfrak{o}\)의 \(\mathsf T\) 안에서의 \(n\)차 표현을 얻는다.
+
+\((y_1,\ldots,y_n)\)이 \(\mathfrak M\)의 다른 기저이면, 이는 정칙행렬 \(P\)를 곱하여 \(x_1,\ldots,x_n\)에서 얻어진다.
+\[
+        (y_1,\ldots,y_n)=(x_1,\ldots,x_n)P.
+\]
+한 선형변환이 기저 \(x_\nu\)에서 행렬 \(C\)로 실현되면 기저 \(y_\nu\)에서는 \(P^{-1}CP\)로 실현된다. 실제로
+\[
+        c(x_1,\ldots,x_n)=(x_1,\ldots,x_n)C
+\]
+이면
+\[
+\begin{aligned}
+c(y_1,\ldots,y_n)
+&=c(x_1,\ldots,x_n)P
+ =\bigl((x_1,\ldots,x_n)C\bigr)P\\
+&=(x_1,\ldots,x_n)CP
+ =\bigl((y_1,\ldots,y_n)P^{-1}\bigr)CP\\
+&=(y_1,\ldots,y_n)P^{-1}CP.
+\end{aligned}
+\]
+
+여기서 곧바로 다음이 따른다.
+
+\emph{\(\mathfrak M\)의 모든 기저를 써서 \(\mathfrak{o}\)가 유도하는 \(\mathfrak M\)의 선형변환들을 실현하면, \(\mathfrak M\)은 한 표현류의 모든 표현을 준다.}
+
+\textbf{2.} \emph{모든 표현류는 1에서 설명한 방식으로 한 표현가군에 의해 생성된다.} 다시 직접 표현에 국한하자.
+
+\emph{증명.} 그 류의 한 특정한 표현을 택하고 준동형 대응 \(c\mapsto C\)로 주어졌다고 하자. 표현의 차수가 \(n\)이면 \(n\)개의 부정원 \(x_1,\ldots,x_n\)으로 \(\mathsf T\)-우측가군
+\[
+        \mathfrak M=x_1\mathsf T+\cdots+x_n\mathsf T
+\]
+를 만든다. 통상적인 계산법칙
+\[
+\sum x_i\tau_i+\sum x_i\bar\tau_i
+ =\sum x_i(\tau_i+\bar\tau_i),
+\]
+\[
+\sum x_i\tau_i=\sum x_i\bar\tau_i
+\quad\Longleftrightarrow\quad
+\tau_i=\bar\tau_i\ \text{(모든 \(i\))},
+\qquad
+\left(\sum x_i\tau_i\right)\varrho
+=\sum x_i\tau_i\varrho
+\]
+을 쓴다. 이제 \(C\)가 \(\mathfrak{o}\)의 원소 \(c\)에 대응하는 표현행렬이고
+\[
+        (x_1',\ldots,x_n')=(x_1,\ldots,x_n)C
+\]
+일 때
+\[
+        c\sum x_i\tau_i=\sum x_i'\tau_i
+\]
+로 정하여 \(\mathfrak M\)을 \(\mathfrak{o}\)-좌측가군으로 만든다.
+
+이 규정으로 \(\mathfrak M\)은 \(\mathfrak{o},\mathsf T\)-쌍가군이 된다. 실제로 첫째, 준동형관계
+\[
+        c+d\longmapsto C+D,
+        \qquad
+        cd\longmapsto CD
+\]
+에서
+\[
+        (c+d)x_i=cx_i+dx_i
+\]
+와
+\[
+\begin{aligned}
+cd\cdot x_i&=c\cdot dx_i,\\
+c\left(\sum x_i\tau_i+\sum x_i\bar\tau_i\right)
+&=c\sum x_i\tau_i+c\sum x_i\bar\tau_i
+\end{aligned}
+\]
+가 따르며, 이것들이 좌측가군 성질이다. 둘째,
+\[
+        c\left(\sum x_i\tau_i\varrho\right)
+        =\left(c\sum x_i\tau_i\right)\varrho
+\]
+임은 명백하며, 이것이 양쪽을 관통하는 결합법칙이다.
+
+따라서 \(\mathfrak M\)은 표현가군이고, 기저 \(x_1,\ldots,x_n\)을 써서 그 선형변환들을 실현하면 1에서 설명한 방식으로 처음의 표현을 생성한다. 다른 기저들은 그 류의 나머지 표현들을 준다.
+
+반대 표현과 반대 표현가군의 경우에도 모든 것이 똑같다. 가군
+\[
+        \mathfrak M^*
+        =\mathsf T^*x_1^*+\cdots+\mathsf T^*x_n^*
+\]
+은 \(\mathfrak{o}\)의 원소 \(c\)에 식
+\[
+c\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}
+=\begin{pmatrix}cx_1\\ \vdots\\ cx_n\end{pmatrix}
+=C\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}
+\]
+의 행렬 \(C\)를 대응시켜 \(\mathfrak{o}\)의 \(\mathsf T^*\) 안에서의 반대 표현을 생성한다. 서로 다른 기저들은 다시 한 류의 서로 다른 표현들을 준다.
+
+\section*{제II장. 가환체의 갈루아 이론}
+
+지금까지 전개한 표현론만으로도 갈루아 이론에 기초를 줄 수 있다. 이 방법은 통상적인 방법과 달리 특별한 생성원계나 부정원의 다항식에 관한 정리에 의존할 필요가 없다는 장점이 있다.\srcfn{1}{이하에서는 M. Z. §§ 15--20과 비교하라. M. Z. § 21에는 뒤따르는 갈루아 이론 부분의 첫 정리들이 들어 있다. 초복소계의 정의는 M. Z. § 6을 보라.}
+
+\subsection*{§ 5. 초복소계의 계수 확대}
+
+거의 자명하므로 증명은 생략하고 다음 일반정리를 정식화한다. \(\mathfrak{o}=c_1\mathsf P+\cdots+c_n\mathsf P\)를 가환체 \(\mathsf P\) 위의 초복소계라 하자. \(\Omega\)를 중심에 \(\mathsf P\)를 포함하는 \(\mathsf P\)의 확대환이라 하자. \emph{확대계} \(\mathfrak{o}_\Omega\)를 \(\omega_i\in\Omega\)인 모든 형식적 합 \(\sum c_i\omega_i\)의 집합으로 정의한다. 먼저
+\[
+\begin{array}{l}
+\displaystyle
+\sum c_i\omega_i=\sum c_i\omega_i'
+\quad\Longleftrightarrow\quad
+\omega_i=\omega_i'\ \text{(모든 \(i\))},\\[0.4em]
+\displaystyle
+\sum c_i\omega_i+\sum c_i\omega_i'
+=\sum c_i(\omega_i+\omega_i'),\\[0.4em]
+\displaystyle
+\omega\sum c_i\omega_i=\sum c_i\omega\omega_i,
+\qquad
+\sum c_i\omega_i\cdot\omega=\sum c_i\omega_i\omega,\\[0.4em]
+\displaystyle
+\sum c_i\omega_i=\sum\omega_i c_i
+\end{array}
+\]
+로 정하여 이를 \(\Omega\)와 가환적으로 결합된 \(\Omega\)-가군으로 만든다. 더 나아가
+\[
+        \sum c_i\omega_i\cdot\sum c_i\omega_i
+        =\sum_i\sum_jc_ic_j\omega_i\omega_j
+\]
+로 정하여 \(\mathfrak{o}\)의 확대환으로 만든다. 여기서 \(c_ic_j\)는 \(\mathfrak{o}\)의 원소로서 이미 정의되어 있다. \(\mathfrak{o}_\Omega\)는 \(\Omega\) 위에서 랭크 \(n\)이고
+\[
+        \mathfrak{o}_\Omega
+        =c_1\Omega+\cdots+c_n\Omega
+\]
+로 쓸 수 있다.
+
+\emph{\(\mathfrak{o}_\Omega\)의 정의는 기저 \(c_1,\ldots,c_n\)에 의존하지 않는다. \(\Omega\)가 가환체이면 \(\mathfrak{o}_\Omega\)는 \(\Omega\) 위의 초복소계이다.}
+
+\subsection*{§ 6. 가환계의 기약표현}
+
+\(\mathfrak Z=z_1\mathsf P+\cdots+z_n\mathsf P\)를 \(\mathsf P\) 위의 가환계라 하자. \(\mathsf P\)의 대수적으로 닫힌 확대체 \(\Omega\) 안에서 \(\mathfrak Z\)의 모든 기약표현을 구하고자 한다. \(\mathfrak Z\)의 \(\Omega\) 안에서의 모든 표현은 \(\mathfrak Z_\Omega=z_1\Omega+\cdots+z_n\Omega\)의 표현을 낳는다. 이미 \(\mathsf P\)에 들어 있는 기저원소들의 표현을 알면 전체 표현을 세우기에 충분하기 때문이다. 역으로 \(\mathfrak Z_\Omega\)의 모든 표현은 \(\mathfrak Z\)의 표현을 포함하므로 \(\mathfrak Z_\Omega\)의 표현을 물어도 된다. M. Z. § 20에 따라 이 표현들은 \(\mathfrak Z_\Omega\)의 정칙표현, 곧 \(\mathfrak Z_\Omega\) 자체를 표현가군으로 써서 얻는 표현에 들어 있다. 더 나아가 \(\mathfrak C\)를 \(\mathfrak Z_\Omega\)의 근기라 할 때 표현가군 \(\mathfrak Z_\Omega/\mathfrak C\)에 국한해도 충분하다(M. Z. § 19).
+
+그런데 \(\mathfrak Z_\Omega/\mathfrak C\)는 완전가약계이므로 \(\Omega\) 위의 유한차수 체들의 직접합이다. \(\Omega\)가 대수적으로 닫혀 있으므로 이 가수들은 \(\Omega\)와 동형이다.
+\[
+        \mathfrak Z_\Omega/\mathfrak C
+        =e_1\Omega+\cdots+e_t\Omega.
+\]
+\(e_\nu\)들은 단위원의 성분들이다. 그러므로 다음이 성립한다.
+
+\emph{\(\mathfrak Z_\Omega\)는 \(\Omega\) 안에서 정확히 \(t\)개의 서로 다른 기약 표현류를 가지며, 이들은 모두 1차이다. 여기서 \(t\)는 \(\mathfrak Z_\Omega/\mathfrak C\)의 랭크이므로 \(n\) 이하이다.}
+
+각 표현류는 표현을 하나만 포함한다. 가환체의 1차 표현은 변환해도 \(\pi^{-1}\alpha\pi=\alpha\)이므로 바뀌지 않기 때문이다.
+
+따라서 \(\mathfrak Z_\Omega\)에서 \(\Omega\)의 부분환들로 가는 서로 다른 준동형상 \(\Theta_1,\ldots,\Theta_t\)가 정확히 \(t\)개 있다.
+
+\subsection*{§ 7. 한 체의 동형들}
+
+이제 \(\mathfrak Z\)를 체라 하자. \(\mathfrak Z_\Omega\)에서 \(\Omega\)의 한 부분환으로 가는 각 준동형 \(\Theta_i\)는 \(\mathfrak Z\)를 \(\Omega\)의 부분체 \(Z_i\)로 동형사상해야 한다. \(Z_i=0\)이거나 \(Z_i\)가 \(\mathfrak Z\)의 동형상이기 때문이다. 여기서는 \(\mathfrak Z\)의 단위원에 \(\Omega\)의 단위원이 대응하므로 \(Z_i=0\)일 수 없다. 따라서 다음을 얻는다.
+
+\emph{\(\mathfrak Z\)가 \(\mathsf P\)의 \(n\)차 유한체확대이면, \(\Omega\) 안에서 \(\mathfrak Z\)와 동형인 서로 다른 체 \(Z_i\)의 수는 \(\mathfrak Z_\Omega/\mathfrak C\)의 랭크 \(t\)와 같다. 따라서 \(Z_i\)의 수는 \(n\) 이하이다.}
+
+\(Z_i\)의 수가 \(n\)과 같으면 \(\mathfrak Z\)를 \(\mathsf P\) 위의 \emph{제1종}이라 하고, 그 수가 \(n\)보다 작으면 \emph{제2종}이라 한다.
+
+\emph{\(\mathfrak Z\)는 \(\mathfrak Z_\Omega\)가 완전가약일 때 그리고 그때에만 \(\mathsf P\) 위의 제1종이다.}
+
+여기서 이 갈루아 이론의 기초가 통상적인 것보다 갖는 장점을 볼 수 있다. 통상적인 갈루아 이론에서는 \(Z_i\) 가운데 하나에서 다른 것들로 가는 동형들을 고찰하므로 비대칭이 생긴다. 여기서는 이를 피한다. 한 체의 켤레체 수가 그 차수보다 많지 않음을 보이기 위해 보통은 원시원소를 쓰지만, 여기서는 \(\mathfrak Z_\Omega\)의 모든 기약표현이 정칙표현에 들어 있다는 사실에서 단순히 따른다.
+
+\subsection*{§ 8. 분해체}
+
+\(Z_i\)들은 \(\mathfrak Z\)의 \(\Omega\) 안에서의 기약표현들이다. 따라서 \(\mathsf P\subseteq\Gamma\subseteq\Omega\)인 체 \(\Gamma\)가 모든 \(Z_i\)를 포함하면 \(\mathfrak Z_\Gamma/\mathfrak C\)는 이미 \(t\)개의 1차 체 \(\Gamma\)로 분해되어야 한다. 역으로 \(\mathfrak Z_\Gamma/\mathfrak C\)가 \(t\)개의 체로 분해되고 이들이 \(\mathfrak Z_\Gamma\)의 1차 기약표현들이 되려면 \(Z_i\)들이 \(\Gamma\)에 들어 있어야 한다. \(\mathfrak Z_\Gamma/\mathfrak C\)가 \(t\)개 체의 직접합이 되는 성질을 갖는 체 \(\Gamma\)를 \(\mathfrak Z\)의 분해체라 부르면 다음을 얻는다.
+
+\emph{\(\mathfrak Z\)와 동형인 \(Z_i\)들의 갈루아체, 곧 그 합성체는 \(\mathfrak Z\)의 최소분해체이다.}
+
+\subsection*{§ 9. \(Z_1\)에서 \(Z_i\)로 가는 동형들}
+
+\(\mathfrak Z\)에 국한하면 \(\Theta_i\)는 \(\mathfrak Z\)에서 \(Z_i\)로 가는 동형사상이다. 따라서 \(S_i=\Theta_i\Theta_1^{-1}\)은 \(Z_1\)에서 \(Z_i\)로 가는 동형사상이다. \(\Theta_i\)들이 서로 다르므로 \(S_i\)들도 서로 다르다. 이 \(S_i\)들은 통상적인 갈루아 이론에서 고찰하는, 한 체 \(Z_1\)에서 그 켤레체들로 가는 동형들이다. 다른 것은 없다. 다른 \(\Theta_i\)가 없기 때문이다.
+
+\subsection*{§ 10. 갈루아군}
+
+\(\mathfrak Z\)가 갈루아체여서 \(Z_i\)들이 원소집합으로 서로 같으면, \(S_i\)들은 \(\mathsf P\)를 고정하는 \(Z\)의 모든 자기동형의 군을 이룬다. 실제로 모든 곱 \(S_iS_j\)는 \(Z\)의 자기동형이고, \(S_i\) 이외의 자기동형은 없으므로 \(S_iS_j=S_k\)인 \(S_k\)가 있다. 따라서 \(S_i\)들은 \(Z\)에서 자기 자신으로 가며 \(\mathsf P\)의 각 원소를 고정하는 모든 자기동형의 군을 이룬다. 이것이 \emph{\(\mathsf P\)에 관한 \(Z\)의 갈루아군}이다.
+
+\subsection*{§ 11. 갈루아 이론의 주정리}
+
+\(\mathfrak Z\)를 \(\mathsf P\)의 제1종 갈루아확대라 하자. 갈루아 이론의 주정리를 증명한다.
+
+\emph{\(\mathsf P\)와 \(\mathfrak Z\) 사이의 체 \(\Gamma\)들과 \(\mathsf P\)에 관한 \(Z\)의 갈루아군 \(\mathfrak G\)의 부분군 \(\mathfrak H\)들을 다음과 같이 일대일로 대응시킬 수 있다. 체 \(\Gamma\)에 대응하는 군 \(\mathfrak H\)는 \(\Gamma\)의 모든 원소를 고정하는 \(Z\)의 모든 자기동형으로 이루어지고, \(\Gamma\)는 \(\mathfrak H\)에 속하는 모든 자기동형 아래에서 고정되는 \(Z\)의 모든 원소의 전체이다.}
+
+이를 짧게 쓰면 다음과 같다.
+
+\begin{enumerate}
+\item \emph{\(\mathfrak H\)가 \(\Gamma\)의 불변군이면 \(\Gamma\)는 \(\mathfrak H\)의 불변체이다.}
+\item \emph{\(\Gamma\)가 \(\mathfrak H\)의 불변체이면 \(\mathfrak H\)는 \(\Gamma\)의 불변군이다.}
+\end{enumerate}
+
+\paragraph{1은 다음 보조정리로 환원된다.}
+
+\emph{\(\mathsf P\subseteq\Sigma\subseteq\mathsf T\subseteq\mathsf Z\)이고 \(\mathsf T\)가 \(\Sigma\) 위에서 차수 \(t\)이면, \(\Sigma\)에서 한 켤레체로 가는 모든 동형은 \(\mathsf T\)에서 켤레체들로 가는 서로 다른 동형 \(t\)개로 연장될 수 있다. 그 켤레체들은 반드시 \(\mathsf Z\) 안에 들어 있다.}
+
+실제로 \(\mathfrak H\)가 \(\Sigma\)의 불변군이고 \(\mathsf T\)가 \(\mathfrak H\)의 불변체라고 가정하면 다음과 같이 추론할 수 있다. \(\mathfrak H\)의 원소들은 \(\Sigma\)의 항등동형을 \(\mathsf Z\) 전체로 연장한 것들이다. 이 연장들을 \(\mathsf T\)에만 적용하면 보조정리에 따라 \(t\)개의 류로 나뉜다. 같은 류의 동형들은 \(\mathsf T\) 위에서 같고, 서로 다른 류의 동형들은 \(\mathsf T\) 위에서 다르다. 그런데 \(\mathsf T\)가 \(\mathfrak H\)의 불변체이므로 \(t=1\), \(\mathsf T=\Sigma\)이어야 한다. 증명 끝.
+
+보조정리를 증명하기 위해 \(\mathsf P\)와 \(\mathsf Z\) 사이의 체 \(\mathfrak S,\mathfrak T\)로 돌아가자. \(\Theta_1\)은 이들에 각각 \(\Sigma,\mathsf T\)를 대응시킨다. 이제 다음을 증명해야 한다.
+
+\emph{\(\mathfrak S\)에서 \(\Sigma_i\)로 가는 모든 동형 \(H_i\)는 \(\mathfrak T\)에서 \(\mathsf Z\)의 부분체 \(\mathsf T_i\)로 가는 동형으로 정확히 \(t\)가지 서로 다른 방식으로 연장된다.}
+
+\(\mathfrak Z\)가 \(\mathsf P\) 위의 제1종이라는 가정 때문에 \(\mathfrak Z_\Omega/\mathfrak C\)는 \(\mathfrak Z_\Omega\) 자체와 같고, 따라서 \(\mathfrak S_\Omega\)는 그 차수 \(s\)만큼의 체로 분해된다.
+\[
+        \mathfrak S_\Omega
+        =E_1\Omega+\cdots+E_s\Omega.
+\]
+\(E_\nu\Omega\)들은 표현가군으로서 \(\mathfrak S\)에서 \(s\)개의 부분체 \(\Sigma_1,\ldots,\Sigma_s\)로 가는 \(s\)개의 동형을 생성한다. \(\mathfrak T\)의 동형들을 찾으려면 \(\mathfrak T_\Omega\)가 필요하다. \(E_\nu\Omega\)들이 \(\mathfrak S_\Omega\)의 아이디얼이므로
+\[
+        E_\nu\Omega=\mathfrak S_\Omega E_\nu.
+\]
+또한 명백히
+\[
+        \mathfrak T_\Omega
+        =\mathfrak T\Omega
+        =\mathfrak T\mathfrak S_\Omega.
+\]
+따라서
+\[
+\begin{aligned}
+\mathfrak T_\Omega
+&=E_1\mathfrak S_\Omega\mathfrak T+\cdots
+  +E_s\mathfrak S_\Omega\mathfrak T\\
+&=E_1\mathfrak T_\Omega+\cdots+E_s\mathfrak T_\Omega.
+\end{aligned}
+\]
+이는 \(\mathfrak T_\Omega\)의 아이디얼분해이다. \(E_\nu\mathfrak T_\Omega\)는 \(t\)개의 단순아이디얼로 분해된다. 실제로 차수관계
+\[
+[\mathfrak T_\Omega E_\nu:\mathfrak S_\Omega E_\nu]
+\leqq[\mathfrak T_\Omega:\mathfrak S_\Omega]
+=[\mathfrak T:\mathfrak S]=t
+\]
+가 성립하고, \(\mathfrak S_\Omega E_\nu=\Omega E_\nu\simeq\Omega\)이므로
+\[
+[\mathfrak T_\Omega E_\nu:\Omega]
+=[\mathfrak T_\Omega E_\nu:\mathfrak S_\Omega E_\nu]
+\leqq t.
+\]
+모든 차수 \([\mathfrak T_\Omega E_\nu:\Omega]\)의 합은 \(st\)이어야 하므로
+\[
+[\mathfrak T_\Omega E_\nu:\Omega]=t,
+\qquad
+E_\nu\mathfrak T_\Omega
+=e_\nu^{(1)}\Omega+\cdots+e_\nu^{(t)}\Omega.
+\]
+각 \(e_\nu^{(i)}\Omega\)는 \(\mathfrak T_\Omega\)의 기약표현을 준다. 이 표현들을 \(\mathfrak S_\Omega\)에만 적용하면 \(E_\nu\Omega\)가 생성하는 표현과 일치함을 보이면 증명이 끝난다. 이는 명백하다. 실제로
+\[
+sE_\nu=E_\nu\sigma_\nu
+\qquad
+\bigl(s\in\mathfrak S_\Omega\text{는 }\sigma_\nu\text{로 표현된다}\bigr)
+\]
+에서
+\[
+        \sum s e_\nu^{(i)}
+        =\sum e_\nu^{(i)}\sigma_\nu
+\]
+가 따르고, 합표현의 유일성 때문에
+\[
+        s e_\nu^{(i)}=e_\nu^{(i)}\sigma_\nu
+\]
+이다. 따라서 새 표현들도 원소 \(s\)에 원소 \(\sigma_\nu\)를 대응시킨다.
+
+\paragraph{2. \(\mathsf T\)를 \(\mathfrak H\)의 불변체라 하자.}
+
+\(\mathfrak H\)가 \(\mathsf T\)의 불변군임을 확인하려면, \(\mathfrak H\)에 속하지 않는 한 자기동형 아래에서 고정되지 않는 \(\mathsf T\)-원소 하나를 제시하면 충분하다.
+
+\(\mathsf Z\)의 갈루아군 \(\mathfrak G\)의 원소 \(S_i\)들은 \(\mathsf P\)를 고정하는 \(\mathsf Z\)의 자기동형들이다. 모든 \(z\in\mathfrak Z\)에 대해
+\[
+        S_i z=z
+\]
+로 정하여 이들을 \(\mathfrak Z_{\mathsf Z}\)의 자기동형으로 만든다. \(S_i\)를
+\[
+        \mathfrak Z_{\mathsf Z}
+        =e_1\mathsf Z+\cdots+e_n\mathsf Z
+\]
+에 적용하면 유일하게 정해지는 직접가수 \(e_\nu\mathsf Z\)들을 서로 바꾸어야 한다. 특히
+\[
+        S_i e_\nu=e_{\nu'},
+        \qquad
+        S_i e_\nu\ne S_k e_\nu\quad(i\ne k)
+\]
+이다. \(S_1,\ldots,S_h\)가 \(\mathfrak H\)의 원소들이면 임의의 \(e_\nu\), 이를테면 \(e'\)를 택하여 \(i\leqq h\)인 \(S_i\)들이 여기서 생성하는 모든 \(e_\nu\)를 고찰하자.
+\[
+        e_1=S_1e',\ldots,e_h=S_he'.
+\]
+\(i\leqq h\), \(j\leqq h\)이면
+\[
+        S_i e_j=S_iS_j e'=S_k e'=e_k
+        \qquad(k\leqq h)
+\]
+이므로 \(\mathfrak H\)의 각 \(S_i\)는 \(e_1,\ldots,e_h\)를 서로 치환한다. 따라서
+\[
+        E_1=e_1+\cdots+e_h
+\]
+은 모든 \(S_i\in\mathfrak H\) 아래에서 불변인 \(\mathfrak Z\)-원소이다. \(\mathfrak Z\)의 한 기저로 \(E_1\)을 나타내면 그 계수들은 \(\mathfrak H\) 아래에서 불변인 \(\mathsf Z\)-원소이어야 하므로 \(\mathsf T\)에 속한다.
+
+\(E_1\)은 \(\mathfrak H\)에 속하지 않는 모든 \(S_i\) 아래에서 불변이 아니다. 그러한 \(S_i\)에 대해
+\[
+        S_i E_1=e_i+\cdots
+\]
+는 \(e_1,\ldots,e_h\) 사이에 없는 성분 \(e_i\)를 포함하지만, \(E_1\)의 합표현은 유일하기 때문이다.
+
+\subsection*{§ 12. 성분 \(e_i\)의 형식적 의미}
+
+\(\mathfrak Z\)의 고정된 기저 \(z_1,\ldots,z_n\)을 택하자.
+\[
+        \mathfrak Z=z_1\mathsf P+\cdots+z_n\mathsf P.
+\]
+이제는 \(\mathfrak Z\)가 제1종이라는 것만을 가정한다. 동형 \(\Theta_i\)는 \(z_1,\ldots,z_n\)을 \(\mathsf Z_i\)의 기저 \(\zeta_1^{(i)},\ldots,\zeta_n^{(i)}\)로 사상하며, 그 관계는
+\[
+        z_\nu e_i=e_i\zeta_\nu^{(i)}
+\]
+이다.
+
+역으로 단위원의 성분 \(e_j\)는 \(\mathsf Z\)의 계수를 써서 \(z_\nu\)들로
+\[
+        e_j=\sum_\nu\varrho_\nu^{(j)}z_\nu
+\]
+나타나야 한다. 따라서
+\[
+\begin{aligned}
+e_j=e_j^2
+&=\sum_\nu\varrho_\nu^{(j)}z_\nu e_j\\
+&=\sum_\nu\varrho_\nu^{(j)}
+  \zeta_\nu^{(j)}e_j
+\end{aligned}
+\]
+이고
+\[
+\begin{aligned}
+0=e_je_k
+&=\sum_\nu\varrho_\nu^{(j)}z_\nu e_k\\
+&=\sum_\nu\varrho_\nu^{(j)}
+  \zeta_\nu^{(k)}e_k.
+\end{aligned}
+\]
+그러므로
+\[
+        \sum_\nu\varrho_\nu^{(j)}\zeta_\nu^{(j)}=1,
+        \qquad
+        \sum_\nu\varrho_\nu^{(j)}\zeta_\nu^{(k)}=0
+        \quad(j\ne k).
+\]
+이는 행렬
+\[
+\begin{pmatrix}
+\zeta_1^{(1)}&\cdots&\zeta_n^{(1)}\\
+\cdots&\cdots&\cdots\\
+\cdots&\cdots&\cdots\\
+\cdots&\cdots&\cdots\\
+\zeta_1^{(n)}&\cdots&\zeta_n^{(n)}
+\end{pmatrix}
+\quad\text{와}\quad
+\begin{pmatrix}
+\varrho_1^{(1)}&\cdots&\varrho_1^{(n)}\\
+\cdots&\cdots&\cdots\\
+\cdots&\cdots&\cdots\\
+\cdots&\cdots&\cdots\\
+\varrho_n^{(1)}&\cdots&\varrho_n^{(n)}
+\end{pmatrix}
+\]
+가 서로 역행렬이라는 뜻이다. 달리 말하면 \(\varrho_1^{(i)},\ldots,\varrho_n^{(i)}\)는 \(\zeta_1^{(i)},\ldots,\zeta_n^{(i)}\)에 대한 여기저이다. 이 기저는 수체의 디퍼런트 이론에서 역할을 한다.
+
+\subsection*{§ 13. 일반 연장정리}
+
+10쪽에서 증명한 \(H_i\)의 연장에 관한 정리는 일반화할 수 있다.
+
+\(\mathfrak Z=z_1\mathsf P+\cdots+z_n\mathsf P\)를 가환 완전가약 초복소계라 하자. \(\mathfrak S,\mathfrak T\)를 다음과 같이 \(\mathfrak Z\)의 부분계라 하자. 이 상황에서는 이들도 반드시 완전가약이다.
+\[
+        \mathsf P\subseteq\mathfrak S
+        \subseteq\mathfrak T\subseteq\mathfrak Z.
+\]
+M. Z. § 13에 따라 세 계는 각각 단위원을 갖는다. 그러나 이 세 단위원은 같을 필요가 없다. \(\mathfrak S,\mathfrak T\)가 \(\mathfrak Z\)의 서로 다른 아이디얼이면 확실히 같지 않다. \(E\)를 \(\mathfrak S\)의 단위원이라 하자. 계 \(\mathfrak T E\)는 유한랭크 \(\mathfrak S\)-가군이다.
+\[
+        E\mathfrak T
+        =a_1\mathfrak S+\cdots+a_t\mathfrak S.
+\]
+일반적으로 \(\mathfrak T\) 자체는 그렇지 않다.
+
+\emph{증명.} \(\mathfrak S\)는 체들의 직접합
+\[
+        \mathfrak S=\mathfrak K_1+\cdots+\mathfrak K_r
+\]
+이다. 이에 \(\mathfrak T E\)의 직접합분해가 대응한다. \(\mathfrak T E\)의 각 가수는 \(\mathfrak K_i\) 가운데 하나를 포함해야 한다. 그렇지 않으면 \(E\)에 의해 소멸되지만 \(E\)는 \(\mathfrak T E\)의 단위원이기 때문이다. 따라서 \(\mathfrak T E\)는 \(\mathfrak K_i\)들의 확대환들의 직접합, 곧
+\[
+        \mathfrak T E
+        =a_{11}\mathfrak K_1+\cdots+a_{1p_1}\mathfrak K_1
+        +\cdots+a_{rp_r}\mathfrak K_r
+\]
+꼴의 직접합이다. 따라서
+\[
+        E\mathfrak T
+        =a_{11}\mathfrak S+\cdots+a_{rp_r}\mathfrak S.
+\]
+증명 끝.
+
+\begin{center}
+\textbf{일반 연장정리.}
+\end{center}
+
+\emph{\(\mathfrak S\)의 \(\Omega\) 안에서의 모든 기약표현은 한 준동형 \(H_i\)로 주어지며, 이를 \(\mathfrak T\)의 표현으로 정확히 \(t\)가지 서로 다른 방식으로 확대할 수 있다.}
+
+증명은 10--11쪽의 것과 같다. 다음 식들이 성립한다.
+\[
+        \mathfrak S_\Omega
+        =E_1\Omega+\cdots+E_s\Omega,
+        \qquad
+        E_\nu\Omega=\mathfrak S_\Omega E_\nu,
+\]
+\[
+\begin{aligned}
+\mathfrak T_\Omega E
+&=\mathfrak T E\Omega
+ =\mathfrak T\mathfrak S\Omega
+ =\mathfrak T\mathfrak S_\Omega,
+\end{aligned}
+\]
+\[
+\begin{aligned}
+\mathfrak T_\Omega E
+&=\mathfrak T(E_1\mathfrak S_\Omega+\cdots
+  +E_s\mathfrak S_\Omega)\\
+&=E_1\mathfrak T_\Omega+\cdots
+  +E_s\mathfrak T_\Omega,
+\end{aligned}
+\]
+\[
+\begin{aligned}
+[\mathfrak T_\Omega E_\nu:\Omega]
+&=[\mathfrak T_\Omega E_\nu:\Omega E_\nu]\\
+&=[\mathfrak T_\Omega E_\nu:E_\nu\mathfrak S_\Omega]\\
+&\leqq[\mathfrak T_\Omega E:\mathfrak S_\Omega]
+ =[\mathfrak T E:\mathfrak S]=t,
+\end{aligned}
+\]
+\[
+        \sum[\mathfrak T_\Omega E_\nu:\Omega]=st.
+\]
+따라서
+\[
+        [\mathfrak T_\Omega E_\nu:\Omega]=t.
+\]
+그러므로 \(\mathfrak T_\Omega E_\nu\)는 \(t\)개의 아이디얼로 분해된다. 각 아이디얼은 \(\mathfrak T_\Omega E\), 따라서 \(\mathfrak T_\Omega\)의 한 가수이므로 \(\mathfrak T_\Omega\)의 표현을 주며, 이 표현은 10--11쪽에서와 같이 \(H_\nu\)가 주는 표현의 연장임이 드러난다. \(\mathfrak T_\Omega\)의 나머지 기약표현들, 곧 \(\mathfrak T_\Omega E_\nu\)에 포함되지 않는 \(\mathfrak T_\Omega\)의 가수들이 생성하는 표현들은 \(H_\nu\)가 생성하는 \(\mathfrak S_\Omega\)의 표현을 연장한 것일 수 없다. 이 아이디얼들이 \(\mathfrak T_\Omega E_\nu\), 따라서 더구나 \(\mathfrak S_\Omega\)에 의해 소멸되기 때문이다.
+
+\section*{제III장. 아벨군}
+
+\subsection*{§ 14. 군환}
+
+\(\mathfrak G\)를 원소 \(a_1,\ldots,a_h\)를 갖는 유한군, \(\mathsf P\)를 가환체라 하자. 군의 곱셈을 곱셈으로 써서 초복소계
+\[
+        \mathfrak o[\mathfrak G]
+        =a_1\mathsf P+\cdots+a_h\mathsf P
+\]
+를 만들고, 이를 \emph{\(\mathsf P\) 안에서의 \(\mathfrak G\)의 군환}이라 한다(M. Z. § 6; Speiser, \emph{Theorie der Gruppen endlicher Ordnung}, § 48).
+
+\(\mathfrak o[\mathfrak G]\)의 \(\mathsf P\) 안에서의 표현, 또는 \(\mathsf P\) 위의 대수적으로 닫힌 체 \(\Omega\) 안에서의 표현을 묻자. 앞서 말했듯 기약표현들은 \(\mathfrak o[\mathfrak G]/\mathfrak C\)의 단순 좌측아이디얼들이 생성한다. 따라서 갈루아 이론에서와 마찬가지로 \(\mathfrak o[\mathfrak G]\)가 언제 근기를 갖는가가 중요하다. 이에 관하여 다음 일반정리가 성립한다.
+
+\begin{center}
+\emph{\(\mathfrak G\)의 위수 \(h\)가 \(\mathsf P\)의 표수 \(p\)로 나누어지지 않을 때 그리고 그때에만 \(\mathfrak o[\mathfrak G]\)는 완전가약이다.}
+\end{center}
+
+먼저
+\[
+        h\equiv0\pmod p\quad\Longrightarrow\quad
+        \mathfrak C\ne0
+\]
+을 증명하자.
+\[
+        \mathfrak a
+        =\mathsf P(a_1+\cdots+a_h)
+\]
+는 \(\mathfrak o\)의 양쪽아이디얼이다. 실제로 군원소 \(a_i\)들의 성질 때문에
+\[
+\begin{aligned}
+\mathsf P(a_1+\cdots+a_h)a
+&=\mathsf P(a_1a+\cdots+a_ha)\\
+&=\mathsf P(a_1+\cdots+a_h)=\mathfrak a
+\end{aligned}
+\]
+이고
+\[
+\begin{aligned}
+a\mathsf P(a_1+\cdots+a_h)
+&=\mathsf P(aa_1+\cdots+aa_h)\\
+&=\mathsf P(a_1+\cdots+a_h)=\mathfrak a.
+\end{aligned}
+\]
+\(\mathfrak a\)는 물론 0이 아니지만 멱영이다.
+\[
+        \left(\sum_i a_i\right)^2
+        =\sum_i\sum_j a_i a_j
+        =h\sum_j a_j=0.
+\]
+
+그 역
+\[
+        h\not\equiv0\pmod p\quad\Longrightarrow\quad
+        \mathfrak C=0
+\]
+은 여기서는 아벨군에 대해서만 증명한다. 이 부분은 M. Z. § 26에서 일반적으로 증명되어 있다.
+
+\subsection*{§ 15. 아벨군의 군환}
+
+\(\mathfrak A=\{a_1,\ldots,a_h\}\)를 아벨군이라 하자. 그러면 \(\mathfrak o\)가 가환이므로 가환 초복소계에 관한 일반정리들을 적용할 수 있다.
+
+\emph{\(h\)가 \(\mathsf P\)의 표수 \(p\)로 나누어지지 않으면 \(\mathfrak o[\mathfrak A]\)는 \(\Omega\) 안에서 서로 다른 기약표현을 정확히 \(h\)개 갖는다. \(\mathfrak o\)가 가환이므로 이들은 1차이다.}
+
+그러면 \(\mathfrak o[\mathfrak A]/\mathfrak C\)는 \(\mathfrak o\)와 같은 랭크를 가지며, 따라서 \(\mathfrak C=0\)이다. 이는 바로 위에서 남겨 둔 정리의 둘째 부분을 아벨군에 대해 증명한다.
+
+\emph{증명.} \(\mathfrak A\)는 위수가 \(h_i\)인 순환군 \(\mathfrak Z_i\)들의 직접곱이다.
+\[
+        \mathfrak A
+        =\mathfrak Z_1\times\cdots\times\mathfrak Z_t,
+        \qquad
+        h=h_1h_2\cdots h_t.
+\]
+\(z_i\)가 \(\mathfrak Z_i\)의 생성원이면, 한 1차 기약표현에서 이에 대응하는 원소는 \(h_i\)차 단위근 \(\varepsilon_\nu^{(h_i)}\)이어야 한다. 역으로 각 \(z_i\)에 하나의 \(h_i\)차 단위근 \(\varepsilon_\nu^{(h_i)}\)를 대응시키면 \(\mathfrak o\)의 \(\Omega\) 안에서의 기약표현을 얻는다. \(h\not\equiv0\pmod p\)이면 더구나 각 \(h_i\not\equiv0\pmod p\)이므로 \(\mathfrak o\)의 서로 다른 표현은 정확히 \(h_1h_2\cdots h_t=h\)개이다. 증명 끝.
+
+(\(h\equiv0\pmod p\)이면 적어도 한 \(h_i\equiv0\pmod p\)이고, 그 \(h_i\)에 대해서는 서로 다른 \(\varepsilon_\nu^{(h_i)}\)가 많아야 \(h_i/p\)개뿐이므로 표현은 \(h\)개보다 적다. 따라서 \(\mathfrak o_\Omega\)는 0이 아닌 근기를 가져야 한다. 그러나 이 사실만으로는 \(\mathfrak o\)의 근기에 관해 곧바로 아무것도 따르지 않는다.)
+
+\(\mathfrak o_\Omega\)에서 \(\Omega\)의 부분환들로 가는 서로 다른 \(h\)개의 준동형상을 \(\Theta_1,\ldots,\Theta_h\)라 하자. 각 \(\Theta_i\)에는 표현가군으로서 \(\mathfrak o_\Omega\)의 한 가수 \(e_i\Omega\)가 속한다. 때로는 \(\Theta_i\)를 \(\mathfrak A\)에만 적용하고 이를 \(\mathfrak A\)의 표현이라 부른다. \(\mathfrak A\)를 단위근들의 군들로 사상하는 이 준동형들이 \emph{\(\mathfrak A\)의 \(h\)개 지표}이다. 특별한 지표로 모든 \(\mathfrak A\)-원소에 1을 대응시키는 \emph{주지표}가 있다. 이에 속하는 \(\Theta_i\)를 \(\Theta_1\)이라 하자.
+
+주지표에 의한 표현은 아벨군만 아니라 모든 군에서 가능하다. 이 표현은 이미 \(\mathsf P\) 안에 있으므로 \(\mathfrak o\)가 완전가약이면 \(\mathfrak o\)는 이 표현을 주는 단순가수 \(E\mathfrak o\)를 떼어 내야 한다. \(E\)는 쉽게 계산된다. \(E=\sum_i x_i a_i\)라 하자. 첫째,
+\[
+        aE=E\cdot1,
+        \qquad\text{곧}\qquad
+        \sum_i x_i aa_i=\sum_i x_i a_i
+\]
+이다. \(a=a_j a_i^{-1}\)로 놓으면
+\[
+\begin{aligned}
+&x_1a_ja_i^{-1}a_1+\cdots+x_i a_j+\cdots+x_ha_ja_i^{-1}a_h\\
+&\qquad=x_1a_1+\cdots+x_ha_h
+\end{aligned}
+\]
+이므로 계수들을 비교하여
+\[
+        x_i=x_j
+\]
+를 얻는다.
+
+둘째,
+\[
+        E=E^2
+        =x^2\left(\sum_i a_i\right)^2
+        =x^2h\sum_i a_i=xhE.
+\]
+\(h\equiv0\pmod p\)이면 \(E=0\)이다. 곧 \(\mathfrak o\)는 주지표의 표현가군을 포함하지 않으므로 완전가약일 수 없었다. 이로써 13쪽 정리의 한 방향을 다시 증명했다.
+
+그러나 \(h\not\equiv0\pmod p\), 따라서 \(\mathfrak o\)가 완전가약이면 곧바로
+\[
+        x=\frac1h,
+        \qquad
+        E=\frac1h(a_1+\cdots+a_h)
+\]
+가 따른다.
+
+\subsection*{§ 16. 지표관계}
+
+\(E=(1/h)\sum a_i\)가 주지표를 준다는 사실에서 지표관계가 곧바로 나온다.
+\[
+        a e_i=e_i\Theta_i a
+\]
+이어야 하므로
+\[
+        e_i\Theta_i e_j
+        =\begin{cases}
+          e_i,&i=j,\\
+          0,&i\ne j,
+        \end{cases}
+\]
+또는
+\[
+        \Theta_i e_j
+        =\begin{cases}
+          1,&i=j,\\
+          0,&i\ne j
+        \end{cases}
+\]
+이다. 특히
+\[
+        \Theta_i e_1
+        =\begin{cases}
+          1,&i=1,\\
+          0,&i\ne1
+        \end{cases}
+\]
+이고 \(e_1=(1/h)\sum a_i\)이므로
+\[
+        \sum_\nu\Theta_i a_\nu
+        =\begin{cases}
+          h,&i=1,\\
+          0,&i\ne1.
+        \end{cases}
+\]
+이것이 잘 알려진 지표관계이다.
+
+\emph{한 지표를 모든 군원소에 걸쳐 합하면 주지표의 경우에는 \(h\), 나머지 경우에는 0이다.}
+
+\subsection*{§ 17. 아벨군의 갈루아 이론}
+
+아벨군의 군환에 대해서도 가환체의 갈루아 이론에서 증명한 것과 비슷한 정리들을 세울 수 있다. 갈루아 이론에서는 \(\Theta_i\Theta_1^{-1}\)들이 한 군 \(\mathfrak G\)를 이루었다. 주정리는 \(\mathfrak G\)의 부분군들과 \(Z\)의 부분체들을 일정한 불변성질에 따라 일대일로 대응시킨다.
+
+\(\mathfrak o[\mathfrak A]\)의 준동형 \(\Theta_i\)들도 한 군 \(\mathsf A\)로 묶을 수 있으며, 그 부분군들은 \(\mathfrak A\)의 부분군들과 비슷한 관계에 있다.
+
+\emph{곱 \(\Theta_i\Theta_k=\Theta\)를}
+\[
+        \Theta a=\Theta_i a\cdot\Theta_k a
+\]
+\emph{로 정의하면, 모든 \(\Theta_i\)의 집합은 \(\mathfrak A\)와 동형인 군 \(\mathsf A\)이다.}
+
+\emph{증명.} \(\Theta=\Theta_i\Theta_k\)는
+\[
+\begin{aligned}
+\Theta a\cdot\Theta b
+&=\Theta_i a\cdot\Theta_k a\cdot
+  \Theta_i b\cdot\Theta_k b\\
+&=\Theta_i a\cdot\Theta_i b\cdot
+  \Theta_k a\cdot\Theta_k b\\
+&=\Theta_i(ab)\cdot\Theta_k(ab)
+ =\Theta(ab)
+\end{aligned}
+\]
+이므로 \(\mathfrak A\)의 준동형이다. \(\mathfrak A\)에는 \(\Theta_i\) 이외의 준동형이 없으므로 \(\Theta=\Theta_j\)인 \(j\)가 있다. 따라서 \(\Theta_i\)들은 실제로 \(h\)개 원소를 갖는 군을 이룬다.
+
+\(\varepsilon_{h_\nu}\)를 원시 \(h_\nu\)차 단위근이라 하자. \(\Theta_i\)는 \(\mathfrak A\)의 순환인자 \(\mathfrak Z_\nu\)의 생성원 \(z_\nu\)를 \(\varepsilon_{h_\nu}\)의 한 거듭제곱으로 사상한다.
+\[
+        \Theta_i z_\nu
+        =\varepsilon_{h_\nu}^{\varrho_\nu^{(i)}}.
+\]
+준동형 \(\Theta_i\)에 \(\mathfrak A\)의 원소
+\[
+        \prod_\nu z_\nu^{\varrho_\nu^{(i)}}
+\]
+를 대응시키자. 이 대응은 \(\mathsf A\)에서 \(\mathfrak A\)로 가는 일대일사상이다. \(\Theta_i\)는 \(\varrho_\nu^{(i)}\)들로 결정되므로 서로 다른 \(\Theta_i\)에는 서로 다른 곱이 대응하기 때문이다. 또한 이 사상은 동형이다. 한편
+\[
+\begin{aligned}
+\Theta_i\Theta_j z_\nu
+&=\Theta_i z_\nu\cdot\Theta_j z_\nu\\
+&=\varepsilon_{h_\nu}^{
+  \varrho_\nu^{(i)}+\varrho_\nu^{(j)}},
+\end{aligned}
+\]
+다른 한편
+\[
+\prod_\nu z_\nu^{\varrho_\nu^{(i)}}
+\cdot
+\prod_\nu z_\nu^{\varrho_\nu^{(j)}}
+=\prod_\nu z_\nu^{
+\varrho_\nu^{(i)}+\varrho_\nu^{(j)}}.
+\]
+증명 끝.
+
+이제 다음을 정의한다.
+
+\emph{\(\mathsf A\)의 부분군 \(\mathsf B\)의 불변영역}은 모든 \(\Theta\in\mathsf B\)에 의해 1로 사상되는 \(\mathfrak A\)의 원소들이 이루는 부분군 \(\mathfrak B\)이다.
+
+\emph{\(\mathfrak A\)의 부분군 \(\mathfrak B\)의 불변군}은 모든 \(a\in\mathfrak B\)를 1로 사상하는 \(\mathsf A\)의 원소들이 이루는 부분군 \(\mathsf B\)이다.
+
+주정리는 다음과 같다.
+
+\emph{\(\mathfrak A\)의 부분군 \(\mathfrak B\)들과 \(\mathsf A\)의 부분군 \(\mathsf B\)들을 일대일로 대응시킬 수 있다. 서로 대응하는 \(\mathfrak B,\mathsf B\)에 대해 \(\mathsf B\)는 \(\mathfrak B\)의 불변군이고 \(\mathfrak B\)는 \(\mathsf B\)의 불변영역이다.}
+
+따라서 다음 두 명제를 보여야 한다.
+
+\begin{enumerate}
+\item \emph{\(\mathsf B\)가 \(\mathfrak B\)의 불변군이면 \(\mathfrak B\)는 \(\mathsf B\)의 불변영역이다.}
+\item \emph{\(\mathfrak B\)가 \(\mathsf B\)의 불변영역이면 \(\mathsf B\)는 \(\mathfrak B\)의 불변군이다.}
+\end{enumerate}
+
+\paragraph{1.}
+이는 10쪽에서와 같이 일반 연장정리에서 따른다. \(\mathsf B\)가 \(\mathfrak B\)의 불변군이고, \(\mathfrak B'\)가 \(\mathsf B\)의 불변영역이라고 하자. 그러면 \(\mathfrak B'\)는 \(\mathfrak B\)를 포함한다. \(\mathsf B\)의 원소들은 \(\mathfrak B\)를 1로 사상하는 하나의 준동형을 \(\mathfrak A\) 전체로 연장한 것들이다. 이 연장들을 \(\mathfrak B'\)에만 적용하면 일반 연장정리에 따라 \(t\)개의 류로 나뉜다. 같은 류의 준동형들은 \(\mathfrak B'\)에서 같고, 서로 다른 류의 준동형들은 \(\mathfrak B'\)에서 다르다. 여기서 \(t\)는 \(\mathfrak o[\mathfrak B']\)의 \(\mathfrak o[\mathfrak B]\) 위에서의 차수, 곧 \(\mathfrak B'\) 안에서 \(\mathfrak B\)의 지수이다. \(\mathfrak o[\mathfrak B]\)와 \(\mathfrak o[\mathfrak B']\)가 \(\mathfrak A\) 전체와 같은 단위원을 갖기 때문이다. 그런데 \(\mathfrak B'\)는 \(\mathsf B\)의 불변영역이므로 \(t=1\), 따라서 \(\mathfrak B'=\mathfrak B\)이어야 한다. 증명 끝.
+
+\textbf{2.}는 1로 환원한다.
+
+\(\mathfrak A\)의 원소 \(a\)를 \(\mathsf A\)의 준동형으로 보자. 곧 \(a\Theta\)를 단위근 \(\Theta a\)와 같게 놓아
+\[
+        a\Theta=\Theta a
+\]
+로 정한다. 그러면 \(a\)는 실제로 \(\mathsf A\)의 준동형이다. 왜냐하면
+\[
+        a\Theta\cdot a\Theta'
+        =\Theta a\cdot\Theta'a
+        =\Theta\Theta'a
+        =a\Theta\Theta'
+\]
+이기 때문이다.
+
+두 준동형 \(a,b\)의 곱은 통상적인 군곱이다.
+\[
+        ab\Theta
+        =a\Theta\cdot b\Theta
+        =\Theta a\cdot\Theta b
+        =\Theta(ab).
+\]
+
+군원소로서 서로 다른 \(a,b\)는 준동형으로서도 서로 다르다. 모든 \(\Theta\)에 대해 \(a\Theta=b\Theta\)이면 모든 \(\Theta\)에 대해 \(\Theta a=\Theta b\), 곧 \(\Theta(ab^{-1})=1\)이다. 따라서 \(\Theta\)들은 \(ab^{-1}\)이 생성하는 \(\mathfrak A\)의 순환부분군 \(\mathfrak Z\)의 항등준동형을 \(\mathfrak A\) 전체로 연장한 것들이다. 연장정리에 따라 \(\mathfrak A\)에서 \(\mathfrak Z\)의 지수는 \(h\)이다. 곧 \(\mathfrak Z=\{e\}\)이고 \(a=b\)이다.
+
+이제 새 관점에서 한 명제
+\[
+\begin{array}{ll}
+\text{a)}&\mathfrak B\text{는 }\mathsf B\text{의 불변군이다},\\
+\text{b)}&\mathsf B\text{는 }\mathfrak B\text{의 불변영역이다}
+\end{array}
+\]
+를 옛 관점으로 번역하자.
+
+a)에서 \(\mathfrak B\)는 모든 \(\Theta\in\mathsf B\)에 대해 \(a\Theta=1\)인 모든 \(a\in\mathfrak A\)로 이루어진다. 이는 모든 \(\Theta\in\mathsf B\)에 대해 \(\Theta a=1\)인 모든 \(a\in\mathfrak A\)로 이루어진다는 뜻이다. 따라서 a)의 번역은
+\[
+        \text{a') }\quad
+        \mathfrak B\text{는 }\mathsf B\text{의 불변영역이다}
+\]
+이다.
+
+마찬가지로 b)의 번역은
+\[
+        \text{b') }\quad
+        \mathsf B\text{는 }\mathfrak B\text{의 불변군이다}
+\]
+이다.
+
+그러므로 1에서 이미 증명한 명제
+\[
+\mathfrak B\text{가 }\mathsf B\text{의 불변군이면 }
+\mathsf B\text{는 }\mathfrak B\text{의 불변영역이다}
+\]
+를 번역하면 바로 증명하려는 명제
+\[
+\mathfrak B\text{가 }\mathsf B\text{의 불변영역이면 }
+\mathsf B\text{는 }\mathfrak B\text{의 불변군이다}
+\]
+가 된다.
+
+15쪽의 지표관계를 \(\mathfrak A\) 대신 \(\mathsf A\)에 대해 쓰면
+\[
+        \sum_{i=1}^{h}\Theta_i a_\nu
+        =\begin{cases}
+          h,&\nu=1,\\
+          0,&\nu\ne1
+        \end{cases}
+\]
+를 얻는다.
+
+\emph{모든 지표를 한 군원소에서 합하면 단위원의 경우에는 \(h\), 나머지 군원소의 경우에는 0이다.}
+
+\section*{제IV장. 양쪽단순환}
+
+\subsection*{§ 18. 보조정리}
+
+\(\mathsf K\)를 체, \(\mathfrak G\)를 \(\mathsf K\)의 자기동형들, 곧 자기 자신으로 가는 동형사상들의 한 군이라 하자. \(\mathfrak G\)에 속하는 모든 자기동형 아래에서 변하지 않는 \(\mathsf K\)-원소들의 집합은 \(\mathsf K\)의 부분체 \(\mathsf P\)이고, 이를 \(\mathfrak G\)의 \emph{불변체}라 한다.
+
+0이 아닌 임의의 \(\mathsf K\)-원소 \(\tau\)에 대해 \(\mathsf K\)의 원소 \(\alpha\)에 \(\tau^{-1}\alpha\tau\)를 대응시키면 \(\mathsf K\)의 자기동형을 얻는다. 군론의 대응하는 명칭을 따라 이를 \emph{내부자기동형}이라 한다. 한 체 \(\mathsf K\)의 모든 내부자기동형이 이루는 군의 불변체는 \(\mathsf K\)의 중심이다.
+
+이제 체 \(\mathsf K\), 그 자기동형군 \(\mathfrak G\), 그리고 그 불변체 \(\mathsf P\)가 주어졌다고 하자.
+\[
+        \mathfrak M
+        =x_1\mathsf P+\cdots+x_n\mathsf P
+\]
+를 랭크 \(n\)인 \(\mathsf P\)-가군이라 하자. \(\mathfrak G\)의 원소 \(\gamma\)가 \(\mathfrak M\)의 원소들에 작용하는 방식을
+\[
+        \gamma x_i=x_i,
+        \qquad
+        \gamma\sum\varrho_i x_i=\sum\varrho_i x_i
+\]
+로 정의한다. 그러면 \(\mathfrak G\)는 확대가군
+\[
+        \mathfrak M_{\mathsf K}
+        =x_1\mathsf K+\cdots+x_n\mathsf K
+\]
+의 자기동형군이 되고, \(\mathfrak M_{\mathsf K}\) 안에서 \(\mathfrak G\)의 불변영역은 \(\mathfrak M\)이다. 이 가정 아래 다음 정리가 성립한다.
+
+\begingroup\itshape
+\[
+        \mathfrak C
+        =z_1\mathsf K+\cdots+z_r\mathsf K
+\]
+가 \(\mathfrak M_{\mathsf K}\)의 부분가군이고, \(\mathfrak G\)의 모든 원소 \(\gamma\)가 \(\mathfrak C\)를 자기 자신으로 옮긴다고 하자. 각 원소를 고정할 필요는 없다. 그러면 \(\mathfrak C\)는 \(\mathfrak M\)의 한 부분가군 \(\mathfrak c\)를 \(\mathsf K\)로 확대한 가군이다.
+\[
+        \mathfrak C=\mathfrak c_{\mathsf K}.
+\]
+\endgroup
+
+\emph{증명.} \textbf{1. 예비논평.} 반드시
+\[
+        \mathfrak c=\mathfrak C\cap\mathfrak M
+\]
+이어야 한다. 일반적으로
+\[
+        \mathfrak c
+        =\mathfrak c_{\mathsf K}\cap\mathfrak M
+\]
+이 성립하기 때문이다.
+
+\(\mathfrak c\subseteq\mathfrak c_{\mathsf K}\cap\mathfrak M\)은 명백하다. 역포함을 보이기 위해 \(\mathfrak c\)의 기저 \(y_1,\ldots,y_r\)을 택하자.
+\[
+        \mathfrak c
+        =y_1\mathsf P+\cdots+y_r\mathsf P,
+\]
+그러면
+\[
+        \mathfrak c_{\mathsf K}
+        =y_1\mathsf K+\cdots+y_r\mathsf K.
+\]
+\(\mathfrak c_{\mathsf K}\cap\mathfrak M\)의 모든 원소 \(c\)는 \(\mathfrak c_{\mathsf K}\)-원소로서 기저표현
+\[
+        c=\sum_{i=1}^{r}y_i\chi_i
+\]
+를 갖고, \(\mathfrak M\)-원소로서는 기저표현
+\[
+        c=\sum_{i=1}^{r}y_i\varrho_i
+          +\sum_{j=r+1}^{n}y_j\varrho_j
+\]
+를 갖는다. 여기서 \(y_{r+1},\ldots,y_n\)은 \(y_1,\ldots,y_r\)을 \(\mathfrak M\)의 한 기저로 보충하는 \(\mathfrak M\)-원소들이다(M. Z. § 6).
+
+두 표현 모두 \(\mathfrak M_{\mathsf K}\) 안의 기저표현으로 볼 수 있으므로 서로 같고,
+\[
+        \chi_i=\varrho_i\quad(i=1,\ldots,r),
+        \qquad
+        \varrho_j=0\quad(j=r+1,\ldots,n).
+\]
+따라서
+\[
+        c=\sum_{i=1}^{r}y_i\varrho_i
+\]
+이고, \(c\in\mathfrak c\)이다. 증명 끝.
+
+\textbf{2.} 정리를 증명하기 위해 원소 \(z_i\)들이 \(\mathfrak M\)에 속하는 \(\mathfrak C\)의 기저 \(z_1,\ldots,z_r\)을 구성하자. 그러면
+\[
+        \mathfrak c
+        =z_1\mathsf P+\cdots+z_r\mathsf P
+\]
+로 놓았을 때 실제로
+\[
+        \mathfrak C=\mathfrak c_{\mathsf K}
+\]
+이다.
+
+\(\mathfrak C\)의 임의의 기저 \(y_1,\ldots,y_r\)을 택하고, \(\mathfrak M\)의 기저 \(x_1,\ldots,x_n\), 따라서 \(\mathfrak M_{\mathsf K}\)의 기저 가운데 알맞은 원소 \(x_{r+1},\ldots,x_n\)을 덧붙여 \(\mathfrak M_{\mathsf K}\)의 기저로 보충하자. M. Z. § 5에 따라 이것이 가능하다.
+\[
+        \mathfrak M_{\mathsf K}
+        =\mathfrak C+x_{r+1}\mathsf K+\cdots+x_n\mathsf K.
+\]
+여기서 \(\mathfrak M\)의 기저의 앞 \(r\)개 원소 \(x_1,\ldots,x_r\)에 대해
+\[
+        x_i=z_i-\sum_{j=r+1}^{n}x_j\chi_j^{(i)},
+        \qquad
+        z_i\in\mathfrak C,\quad
+        \chi_j^{(i)}\in\mathsf K
+\]
+인 식들을 얻는다.
+
+\(z_i\)들은 \(x_{r+1},\ldots,x_n\)과 함께 \(\mathfrak M_{\mathsf K}\)의 기저를 이루므로 선형독립이고, 따라서 \(z_1,\ldots,z_r\)은 \(\mathfrak C\)의 기저이다. 이제 이것이 구하는 형태의 기저이고 \(z_i\in\mathfrak M\)임을 보이자.
+
+\(\gamma\in\mathfrak G\)라 하자. 한편
+\[
+\begin{array}{rcl}
+(1)\qquad \gamma z_i
+&=&\displaystyle
+\gamma x_i+\sum_{j=r+1}^{n}
+\gamma x_j\cdot\gamma\chi_j^{(i)}\\
+&=&\displaystyle
+x_i+\sum_{j=r+1}^{n}x_j\gamma\chi_j^{(i)}.
+\end{array}
+\]
+다른 한편 \(\mathfrak C\)가 모든 \(\gamma\in\mathfrak G\)를 허용하므로
+\[
+\begin{array}{rcl}
+(2)\qquad
+\gamma z_i
+&=&\displaystyle
+\sum_{\mu=1}^{r}z_\mu\sigma_\mu^{(i)},
+\qquad
+\sigma_\mu^{(i)}\in\mathsf K.
+\end{array}
+\]
+(2)는 다시
+\[
+\begin{array}{rcl}
+(3)\qquad
+\gamma z_i
+&=&\displaystyle
+\sum_{\mu=1}^{r}x_\mu\sigma_\mu^{(i)}
++\sum_{j=r+1}^{n}x_j
+ \sum_{\mu=1}^{r}
+ \chi_j^{(\mu)}\sigma_\mu^{(i)}
+\end{array}
+\]
+로 쓸 수 있다. (1)과 (3)의 계수를 비교하면
+\[
+        \sigma_j^{(i)}
+        =\begin{cases}
+          1,&i=j,\\
+          0,&i\ne j.
+        \end{cases}
+\]
+따라서
+\[
+        \gamma z_i=z_i.
+\]
+그러므로 \(z_i\)들은 \(\mathfrak G\)의 불변영역, 곧 \(\mathfrak M\)에 속한다. 증명 끝.
+
+\subsection*{§ 19. 양쪽단순 초복소계의 계수체의 비가환 확대체 안에서의 표현}
+
+\[
+        \mathfrak S
+        =x_1\mathsf P+\cdots+x_n\mathsf P
+\]
+를 양쪽단순, 따라서 완전가약인 초복소계라 하고, \(\mathsf K\)를 중심이 \(\mathsf P\)인 체라 하자.
+
+\textbf{정리 1.} \emph{\(\mathfrak S_{\mathsf K}\)는 양쪽단순이고, 따라서 완전가약이기도 하다.}
+
+\emph{증명.} \textbf{1.} \(\mathfrak S_{\mathsf K}\)의 모든 양쪽아이디얼 \(\mathfrak a\)는 \(\mathsf K\)의 내부자기동형군 \(\mathfrak G\) 아래에서 불변이다. 실제로 0이 아닌 \(\chi\in\mathsf K\)에 대해
+\[
+        \chi^{-1}\mathfrak a\chi=\bar{\mathfrak a}
+\]
+로 놓으면 아이디얼 성질 때문에 \(\bar{\mathfrak a}\subseteq\mathfrak a\)이다. 그런데 \(\bar{\mathfrak a}\)와 \(\mathfrak a\)는 \(\mathsf K\)-가군으로서 같은 랭크를 가지므로 \(\bar{\mathfrak a}=\mathfrak a\)이어야 한다.
+
+\textbf{2.} 바로 앞의 보조정리에 따라 \(\mathfrak S_{\mathsf K}\)의 양쪽아이디얼 \(\mathfrak a\)는 \(\mathfrak S\)의 한 부분가군 \(\mathfrak A\)의 확장아이디얼이어야 한다.
+\[
+        \mathfrak a=\mathfrak A_{\mathsf K}.
+\]
+\(\mathfrak A=\mathfrak S\cap\mathfrak a\)이므로 \(\mathfrak A\)는 \(\mathfrak S\)의 양쪽아이디얼이다. 실제로
+\[
+\mathfrak S\mathfrak A
+\subseteq\mathfrak S\mathfrak S\cap
+\mathfrak S\mathfrak a
+\subseteq\mathfrak S\cap\mathfrak a
+=\mathfrak A,
+\]
+\[
+\mathfrak A\mathfrak S
+\subseteq\mathfrak S\mathfrak S\cap
+\mathfrak a\mathfrak S
+\subseteq\mathfrak S\cap\mathfrak a
+=\mathfrak A.
+\]
+\(\mathfrak S\)의 양쪽아이디얼은 \(0\)과 \(\mathfrak S\)뿐이므로 \(\mathfrak S_{\mathsf K}\)의 양쪽아이디얼도 \(0\)과 \(\mathfrak S_{\mathsf K}\)뿐이다. 증명 끝.
+
+이제 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 기약표현을 구하되, 형식적인 장점이 있는 반대 표현을 세우겠다. 직접 표현과 반대 표현은 일대일로 대응하므로 어느 쪽을 택해도 결국 같다.
+
+\(\mathfrak M\)을 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 반대 표현가군이라 하자. 곧 \(\mathfrak M\)은 유한랭크 \(\mathfrak S\)-좌측가군이자 \(\mathsf K\)-좌측가군이고
+\[
+        \mathfrak M
+        =\mathsf K y_1+\cdots+\mathsf K y_r
+\]
+이며 교환법칙
+\[
+        s(xm)=x(sm)
+\]
+을 만족한다.
+
+\(\mathfrak M\)을 \(\mathfrak S_{\mathsf K}\)-좌측가군으로도 볼 수 있음을 증명하자. 먼저 \(\mathfrak S_{\mathsf K}\)의 원소와 \(\mathfrak M\)의 원소의 곱을 정의해야 한다. \(s\in\mathfrak S\), \(x\in\mathsf K\), \(m\in\mathfrak M\)일 때
+\[
+        sx\cdot m=s\cdot(xm)
+\]
+로 놓고, 이에 따라 일반 원소 \(\sum s_ix_i\in\mathfrak S_{\mathsf K}\)에 대해
+\[
+        \sum s_ix_i\cdot m
+        =\sum s_i(x_i m)
+\]
+로 놓는다.
+
+이 정의는 \(\mathfrak S_{\mathsf K}\)-원소를 곱 \(s_ix_i\)들의 합으로 나타내는 방식에 의존하지 않는다. 이를 보이려면
+\[
+        \sum_{i=1}^{p}s_ix_i=0                                      \tag{1}
+\]
+에서
+\[
+        \sum_{i=1}^{p}s_i(x_i m)=0
+\]
+이 따름을 보이면 된다. \(s_1,\ldots,s_q\)가 선형독립이고 \(s_{q+1},\ldots,s_p\)가
+\[
+        s_j=\sum_{i=1}^{q}s_i\varrho_i^{(j)},
+        \qquad j=q+1,\ldots,p
+\]
+로 \(s_1,\ldots,s_q\)에 의해 나타난다고 하자. 이 표현은 이미 \(\mathfrak S\) 안에서 가능하고 유일하므로 계수들은 \(\mathsf P\)에 속해야 한다. (1)에서
+\[
+        x_i+\sum_{j=q+1}^{p}
+        \varrho_i^{(j)}x_j=0,
+        \qquad i=1,\ldots,q
+\]
+을 얻는다. 따라서 가군 성질과 결합법칙을 차례로 쓰면
+\[
+\begin{aligned}
+\sum_{i=1}^{p}s_i(x_i m)
+&=\sum_{i=1}^{q}s_i(x_i m)
+  +\sum_{j=q+1}^{p}
+    \left(\sum_{i=1}^{q}s_i\varrho_i^{(j)}\right)(x_jm)\\
+&=\sum_{i=1}^{q}s_i(x_i m)
+  +\sum_{j=q+1}^{p}\sum_{i=1}^{q}
+    s_i\bigl(\varrho_i^{(j)}x_jm\bigr)\\
+&=\sum_{i=1}^{q}
+  s_i\left(
+  \left(x_i+\sum_{j=q+1}^{p}
+  \varrho_i^{(j)}x_j\right)m\right)\\
+&=0.
+\end{aligned}
+\]
+여기서는 \(s'(sm)=s's\cdot m\), \(x'(xm)=x'x\cdot m\)을 썼다.
+
+\(\mathfrak M\)의 \(\mathfrak S_{\mathsf K}\)-가군 성질 가운데 분배법칙
+\[
+        (S+S')m=Sm+S'm,
+        \qquad
+        S(m+m')=Sm+Sm'
+\]
+은 명백하다. 결합법칙 \(S(S'm)=SS'\cdot m\)만 더 살펴보면 된다. 분배법칙이 있으므로
+\[
+        sx\cdot(s'x'm)=sxs'x'\cdot m
+\]
+인 경우에 국한할 수 있다. 정의에 따라 한편
+\[
+\begin{aligned}
+sx\cdot(s'x'\cdot m)
+&=s\bigl(x(s'(x'm))\bigr),
+\end{aligned}
+\]
+다른 한편
+\[
+\begin{aligned}
+sxs'x'\cdot m
+&=ss'xx'\cdot m
+ =ss'\bigl(xx'm\bigr)\\
+&=s\bigl(s'(x(x'm))\bigr)
+ =s\bigl(x(s'(x'm))\bigr).
+\end{aligned}
+\]
+마지막 등식에는 두 교환관계
+\[
+        xs'=s'x,
+        \qquad
+        s'(xm)=x(s'm)
+\]
+을 썼다.
+
+따라서 \(\mathfrak M\)은 실제로 유한 \(\mathfrak S_{\mathsf K}\)-좌측가군이다. 역으로 모든 유한 \(\mathfrak S_{\mathsf K}\)-좌측가군은 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 반대 표현가군이다. 유한 \(\mathsf K\)-가군임은 명백하고,
+\[
+        s(xm)=sx\cdot m=xs\cdot m=x(sm)
+\]
+이므로 교환조건도 만족하기 때문이다(§ 24의 더 간단한 증명도 비교하라).
+
+M. Z. § 18에 따라 모든 유한 \(\mathfrak S_{\mathsf K}\)-가군은 \(\mathfrak S_{\mathsf K}\)의 단순 좌측아이디얼들과 \(\mathfrak S_{\mathsf K}\)-연산자동형인 단순가군들의 합이다. 역으로 \(\mathfrak S_{\mathsf K}\)의 모든 좌측아이디얼은 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 표현가군이고, 모든 \(\mathfrak S_{\mathsf K}\)-좌측아이디얼은 서로 연산자동형이다. 따라서 다음 정리가 성립한다.
+
+\textbf{정리 2.} \emph{\(\mathfrak S\)의 \(\mathsf K\) 안에서의 유일한 기약 반대 표현류는 \(\mathfrak S_{\mathsf K}\)의 한 단순 좌측아이디얼이 생성하는 것이다.}
+
+이 기약표현의 차수가 \(r\)이면 임의의 표현의 차수는 \(r\)의 배수이다. 반대로 기약표현들을 나란히 붙이면 \(r\)의 임의의 배수 \(rs\)에 대해 \(rs\)차 표현을 만들 수 있다. 이는 \(s\)개의 단순가군의 직접합인 표현가군을 만드는 데 대응한다.
+
+우리는 이미 \(\mathfrak S\) 자체를 표현가군으로 써서 얻는 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 한 표현, 곧 주표현(M. Z. § 20)을 알고 있으며, 이는 이미 \(\mathsf P\) 안에 있다. 그 차수는 \(n\)이므로 \(r\)은 \(n\)을 나눈다.
+\[
+        n=rt.
+\]
+몫 \(t\)는 쉽게 구할 수 있다. \(r\)은 한 좌측아이디얼의 \(\mathsf K\) 위에서의 랭크이고 \(n\)은 \(\mathfrak S_{\mathsf K}\) 전체의 랭크이므로, \(t\)는 \(\mathfrak S_{\mathsf K}\)의 좌측아이디얼 가수의 수이다. 따라서 \(t^2\)은 \(\mathfrak S_{\mathsf K}\)가 그 단순아이디얼들의 자기동형체 위에서 갖는 랭크이다.
+
+이제 \(\mathfrak S\)가 가환체인 경우로 고찰을 특수화한다.
+
+\textbf{정리 3.} \emph{\(\mathfrak S\)가 가환체이면 \(\mathfrak S\)는 \(\mathfrak S_{\mathsf K}\)의 중심이다.}
+
+\emph{증명.} \(\mathfrak S\)의 각 원소는 모든 \(\mathfrak S\)-원소 및 모든 \(\mathsf K\)-원소와 가환하므로 모든 \(\mathfrak S_{\mathsf K}\)-원소와 가환한다. 따라서 \(\mathfrak S\)는 \(\mathfrak S_{\mathsf K}\)의 중심에 포함된다. 역으로 한 \(\mathfrak S_{\mathsf K}\)-원소가 모든 \(\mathfrak S_{\mathsf K}\)-원소와 가환하려면 적어도 모든 \(\mathsf K\)-원소와 가환해야 한다. 그러면 그 계수들은 \(\mathsf K\)의 중심, 곧 \(\mathsf P\)에 속하므로 그 원소는 \(\mathfrak S\)에 속한다. 증명 끝.
+
+가환환에서는 반대동형과 직접동형 사이에 차이가 없으므로 모든 반대 표현을 직접 표현으로도 볼 수 있다. 따라서 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 기약표현은 직접 표현가군으로도 얻어져야 한다. 이 직접 표현가군은 \(\mathfrak S_{\mathsf K}\)의 단순 우측아이디얼이다. 실제로 \(\mathfrak r\)은 랭크 \(r\)인 유한 \(\mathsf K\)-우측가군이고, \(\mathfrak r\mathfrak S=\mathfrak S\mathfrak r\)이므로 \(\mathfrak S\)-좌측가군이기도 하며, 관통 결합법칙도 당연히 만족한다. 따라서 이는 랭크 \(r\)인 직접 표현가군이다. 기약 표현류가 하나뿐이므로 주어진 표현을 생성해야 한다.
+
+\subsection*{§ 20. 비가환체}
+
+이제
+\[
+        \mathfrak K
+        =y_1\mathsf P+\cdots+y_m\mathsf P
+\]
+를 중심이 \(\mathsf P\)인 비가환체라 하자. \(\mathfrak K\)에 관하여 유한 대수적 가환체확대의 이론과 비슷한 일련의 정리들을 전개하겠다.
+
+\(Z=\xi_1\mathsf P+\cdots+\xi_n\mathsf P\)가 \(\mathsf P\) 위의 초복소계를 뜻하면 두 확대계 \(\mathfrak K_Z\)와 \(Z_{\mathfrak K}\)는 같다. 실제로
+\[
+        \mathfrak K_Z
+        =y_1\xi_1\mathsf P+\cdots+y_m\xi_n\mathsf P
+\]
+로 쓸 수 있고
+\[
+        Z_{\mathfrak K}
+        =\xi_1y_1\mathsf P+\cdots+\xi_ny_m\mathsf P
+\]
+로 쓸 수 있는데, \(y_i\xi_j=\xi_jy_i\)이므로 두 표현은 같다.
+
+이하에서 \(Z\)는 언제나 가환체이므로 § 19의 정리들을 적용할 수 있다. § 19의 정리 1에 따라 \(\mathfrak K_Z\)는 언제나 양쪽단순이다.
+
+\textbf{정리 1.} \emph{\(\Omega\)를 \(\mathsf P\)의 대수적으로 닫힌 확대체라 하자. 그러면 \(\mathfrak K_\Omega\)의 중심은 \(\Omega\)이다.}
+
+\emph{증명.} § 19의 대응하는 정리 3을 쓴다. \(\Omega\)가 \(\mathfrak K_\Omega\)의 중심에 놓인다는 것은 명백하다. \(\alpha\)가 \(\mathfrak K_\Omega\)의 중심의 임의의 원소이면 그 계수들은 \(\mathsf P\)의 한 유한 대수적 확대체 \(Z\), 곧 이 계수들이 생성하는 체에 속한다. 그러면 \(\alpha\)는 \(\mathfrak K_Z\)의 중심에도 속해야 하는데, 그 중심은 \(Z\)이다. 따라서 \(\alpha\in Z\subseteq\Omega\)이다. 증명 끝.
+
+아주 비슷한 방식으로 다음을 증명한다.
+
+\textbf{정리 2.} \emph{\(\mathfrak K_\Omega\)는 양쪽단순이다.}
+
+\emph{증명.} \(\mathfrak a=z_1\Omega+\cdots+z_r\Omega\)를 양쪽아이디얼이라 하자. \(z_1,\ldots,z_r\)의 계수들은 \(\mathsf P\)의 한 유한확대체 \(Z\)에 속한다. \(\mathfrak K_Z\) 안에서
+\[
+        \mathfrak a'=z_1Z+\cdots+z_rZ
+\]
+는 양쪽아이디얼이다. \(\mathfrak K_Z\)가 양쪽단순이므로 \(\mathfrak a'\)는 0 또는 \(\mathfrak K_Z\)이고, 따라서 \(\mathfrak a\)는 0 또는 \(\mathfrak K_\Omega\)이다. 증명 끝.
+
+이 정리에 따라 \(\mathfrak K_\Omega\)는 그 중심 \(\Omega\)의 한 확대체 위의 행렬환이다. 그 체는 \(\mathfrak K_\Omega\)의 부분환으로서 \(\Omega\) 위에서 유한차수이어야 하므로 \(\Omega\) 자체와 같다.
+
+\textbf{정리 3.} \emph{\(\mathfrak K_\Omega\)는 \(\Omega\) 위의 행렬환이다.}
+\[
+        \mathfrak K_\Omega=\sum\Omega c_{ik}.
+\]
+\emph{따라서 \(\mathfrak K\)가 그 중심 \(\mathsf P\) 위에서 갖는 차수는 제곱수 \(m=t^2\)이다.}
+
+\(\mathfrak K_\Omega\)가 분해되는 우측아이디얼, 또는 좌측아이디얼의 수 \(t\)를 \(\mathfrak K\)의 \emph{절대성분수}라 부르겠다.
+
+\(\mathfrak K_\Omega\)가 \(t\)개의 단순아이디얼로 분해된다는 \(\Omega\)의 성질은 이미 \(\mathsf P\)의 유한확대 \(Z\)들도 가질 수 있다. 예컨대 \(c_{ik}\)의 계수들을 \(\mathsf P\)에 첨가하여 얻는 \(Z\)가 그렇다. 이제 이 분해체들을 조사한다.
+
+\textbf{정의.} \(\mathsf P\)의 유한 대수적 확대체 \(Z\)에 대하여 \(\mathfrak K_Z\)가 분해되는 단순 우측아이디얼의 수가 이미 절대성분수 \(t\)와 같으면 \(Z\)를 \(\mathfrak K\)의 \emph{분해체}라 한다.\srcfn{1}{9쪽의 분해체 개념과 비교하라.}
+
+\textbf{정리 4.} \emph{\(Z\)가 \(\mathfrak K\)의 분해체이면 \(Z\)는 \(\mathfrak K_Z\)의 우측아이디얼들의 자기동형체이다. 역으로 \(\mathfrak K_Z\)의 우측아이디얼들의 자기동형체가 \(Z\)이면 \(Z\)는 분해체이다.}
+
+\emph{증명.} \textbf{1.} \(Z\)가 분해체이고 \(\mathfrak T\)가 \(\mathfrak K_Z\)의 우측아이디얼들의 자기동형체라고 하자. 그러면
+\[
+        \mathfrak K_Z=\sum\mathfrak T c_{ik}
+\]
+이고 따라서
+\[
+        \mathfrak K_\Omega
+        =\sum\mathfrak T_\Omega c_{ik}.
+\]
+\(\mathfrak K_\Omega\)가 \(\Omega\) 위에서 갖는 랭크는 \(t^2\)과 \(\mathfrak T_\Omega\)의 랭크의 곱인데, 다른 한편 \(t^2\)이다. 따라서 \(\mathfrak T_\Omega\), 그리고 \(\mathfrak T\)의 랭크는 1이고 \(\mathfrak T=Z\)이다.
+
+\textbf{2.} \(Z\)가 \(\mathfrak K_Z\)의 단순아이디얼들의 자기동형체이면
+\[
+        \mathfrak K_Z=\sum Zc_{ik},
+\]
+따라서
+\[
+        \mathfrak K_\Omega=\sum\Omega c_{ik}.
+\]
+그러므로 \(c_{ik}\)의 수는 \(t^2\)과 같아야 한다. 증명 끝.
+
+\textbf{정리 5.} \emph{\(\mathfrak K\)의 분해체 \(Z\)의 \(\mathfrak K\) 안에서의 기약표현 \(\mathfrak Z\)는 행렬환 \(\mathfrak K_r\)의 극대 가환부분체이다. 여기서 \(r\)은 \(Z\)의 기약표현의 차수이다. 22쪽 정리 2에 따라 기약 표현류는 하나뿐이다.}
+
+\emph{역으로 \(\mathsf P\)의 가환확대체 \(Z\)의 기약표현 \(\mathfrak Z\)가 \(\mathfrak K_r\)의 극대 가환부분체이면 \(Z\)는 분해체이다.}
+
+\emph{증명.} \textbf{1.} 분해체 \(Z\)가 \(\mathsf P\) 위에서 차수 \(n\)이면 \(Z\)의 기약표현 \(\mathfrak Z\)의 차수 \(r\)은 \(n/t\)이다(22쪽). 이제
+\[
+        \mathfrak Z\subseteq\mathfrak Z^*
+        \subseteq\mathfrak K_r
+\]
+이고 \(\mathfrak Z^*\)가 \(\mathsf P\) 위에서 차수 \(n^*\geq n\)인 극대 가환체라고 하자. \(\mathfrak Z^*=\mathfrak Z\)를 보여야 하지만 \(n^*=n\)을 보이면 충분하다. \(\mathfrak Z^*\)와 동형인 \(Z\)의 확대체 \(Z^*\)의 기약표현 차수를 \(r^*\)라 하자. 그러면 다시 \(n^*=r^*t\)이다. 다른 한편 \(\mathfrak Z^*\) 안에는 \(Z^*\)의 \(r\)차 표현이 있으므로 \(r^*\)은 \(r\)을 나누고, 따라서 \(r^*\leq r\)이다. 그러므로
+\[
+        n\leq n^*=r^*t\leq rt=n
+\]
+에서 \(n^*=n\)이 따른다.
+
+\textbf{2.} \(\mathsf P\)의 가환확대체 \(Z\)의 \(\mathfrak K\) 안에서의 \(r\)차 기약표현 \(\mathfrak Z\)가 \(\mathfrak K_r\)의 극대 가환부분체라고 하자. \(\mathfrak K_Z\)의 단순아이디얼들의 자기동형체를 \(\mathfrak T\)라 하면
+\[
+        \mathfrak K_Z
+        =\sum_{1}^{t'}\mathfrak T c_{ik}.
+\]
+\(\mathfrak T\)는 \(Z\)를 포함한다. \(\mathfrak T=Z\)임을 보여야 한다. \(\mathfrak K_r\)의 한 단순 우측아이디얼 \(\mathfrak r\)은 \(Z\)의 \(\mathfrak K\) 안에서의 표현가군일 뿐 아니라 \(\mathfrak T\)의 표현가군이기도 하다. 실제로
+\[
+        \mathfrak r
+        =\mathfrak T c_{i1}+\cdots+\mathfrak T c_{ik},
+\]
+따라서 \(\mathfrak T\mathfrak r=\mathfrak r\)이고, \(\mathfrak r\)은 \(\mathfrak T\)-좌측가군이자 물론 \(\mathfrak K\)-우측가군이다.
+
+그러므로 \(\mathfrak K_r\)에는 \(\mathfrak T\)와 동형이고 \(\mathfrak Z\)를 포함하는 부분체 \(\overline{\mathfrak T}\)가 있다. \(\mathfrak T\ne Z\), 따라서 \(\overline{\mathfrak T}\ne\mathfrak Z\)이면 \(\mathfrak Z\)에 속하지 않는 \(\overline{\mathfrak T}\)-원소 \(\alpha\)를 \(\mathfrak Z\)에 첨가하여 \(\mathfrak K_r\) 안에서 \(\mathfrak Z\)의 진정한 가환확대체를 얻는다. 이는 \(\mathfrak Z\)의 극대성과 모순이다. 증명 끝.
+
+정리 5에서 곧바로 다음이 따른다.
+
+\textbf{정리 6.} \emph{\(\mathfrak K\)의 극대 가환부분체들은 \(\mathsf P\) 위에서 차수 \(t\)이고 분해체이다.}\srcfn{1}{이제 모든 분해체가 \(\mathfrak K\)의 한 극대 가환부분체를 포함할 것이라는 추측은 옳지 않다. 이 성질을 갖지 않는 분해체가 있을 수 있으며, 이에 속하는 \(r\)은 반드시 1보다 크다. R. Brauer 및 E. Noether, \emph{Über minimale Zerfällungskörper irreduzibler Darstellungen}, Sitzungsberichte der Preußischen Akademie der Wissenschaften 1927 XXXII, 221쪽을 보라.}
+
+이제 \(\mathfrak K_r\)의 부분환들의 동형에 관한 정리를 전개한다. 비가환체 \(\mathfrak K\)의 갈루아군의 구조와 그에 관련된 사실들을 더 정확히 아는 일은 이 정리에 기초한다.
+
+\textbf{정리 7.} \emph{\(\mathfrak S_1,\mathfrak S_2\)를 \(\mathfrak K\) 위의 행렬환 \(\mathfrak K_r\) 안에서 \(\mathsf P\)를 포함하는 양쪽단순 부분환들이라 하고, 둘 사이에 \(\mathsf P\)의 모든 원소를 고정하는 동형 \(\mathfrak S_1\cong\mathfrak S_2\)가 있다고 하자. 그러면 이 동형은 한 정칙 \(\mathfrak K_r\)-원소 \(\tau\)에 의한 변환이다.}
+
+\emph{\(\sigma_1\in\mathfrak S_1\)과 \(\sigma_2\in\mathfrak S_2\)가 서로 대응하면}
+\[
+        \tau^{-1}\sigma_1\tau=\sigma_2.
+\]
+
+\emph{증명.} \(\mathfrak S_1,\mathfrak S_2\)와 반대동형인 한 환 \(\Sigma\)를 구성하고, 그 안에서 \(\mathsf P\)와 동형인 부분체를 \(\mathsf P\)와 동일시한다. 그러면 \(\mathfrak S_1,\mathfrak S_2\)는 같은 환 \(\Sigma\)의 \(\mathfrak K\) 안에서의 같은 차수 \(r\)인 두 반대 표현이다. 22쪽 정리 2에 따라 기약 반대 표현류가 하나뿐이고, 따라서 주어진 각 차수의 표현류도 하나뿐이다. 그 차수는 기약류의 배수이다. 그러므로 \(\mathfrak S_1,\mathfrak S_2\)는 같은 류에 속하고 변환으로 서로 옮겨진다. 증명 끝.
+
+정리 7에서 곧바로 다음이 따른다.
+
+\textbf{정리 8.} \emph{\(\mathsf P\)의 모든 원소를 고정하는 \(\mathfrak K\)의 자기동형군, 곧 그 중심에 관한 \(\mathfrak K\)의 갈루아군 \(\mathfrak G\)는 \(\mathfrak K\)의 내부자기동형군이다.}
+
+정리 7에서 \(r=1\), \(\mathfrak S_1=\mathfrak S_2=\mathfrak K\)로 놓으면 된다.
+
+다음 두 정리는 지금까지 전개한 일반이론이 특수한 문제를 다루는 데 유용함을 보여 준다.
+
+\textbf{정리 9.} \emph{중심이 실수체 \(R\)인 유한차수 비가환체는 사원수체뿐이다.}
+
+\emph{증명.} \(\mathfrak K\)를 중심이 \(R\)인 비가환체로서 \(R\) 위에서 유한랭크인 것이라 하자. 정리 6에 따라 \(\mathfrak K\)가 \(R\) 위에서 갖는 차수는 \(\mathfrak K\)의 한 극대 가환부분체의 차수 \(t\)의 제곱이다. 그런데 그러한 부분체는 복소수체와 동형인 체일 수밖에 없으므로 \(t=2\)이고, \(\mathfrak K\)는 \(R\) 위에서 차수 4이다. \(\mathfrak Z_1\)을 \(\mathfrak K\)의 한 극대 가환부분체라 하자. 그러면 \(i^2=-1\)인 \(i\)를 써서 \(\mathfrak Z_1=R(i)\)로 놓을 수 있다. \(\mathfrak Z_2=R(-i)\)도 \(\mathfrak Z_1\)과 원소집합으로 같고 그와 동형인 체이며, 동형은 \(i\mapsto-i\)로 주어진다. 정리 7에 따라
+\[
+        j^{*-1}ij^*=-i
+\]
+인 \(j^*\in\mathfrak K\)가 있다.
+
+\(j^*\notin\mathfrak Z_1\)이므로 \(\mathfrak Z_1(j^*)\)가 \(\mathfrak Z_1\) 위에서 갖는 랭크는 적어도 2이다. 따라서 \(\mathfrak Z_1(j^*)\)는 \(R\) 위에서 랭크 4이고 \(\mathfrak K\)와 같다. 곧
+\[
+        \mathfrak K
+        =R+Ri+Rj^*+Rij^*.
+\]
+또
+\[
+\begin{aligned}
+j^{*-2}1j^{*2}&=1,\\
+j^{*-2}ij^{*2}&=i,\\
+j^{*-2}j^*j^{*2}&=j^*,\\
+j^{*-2}ij^*j^{*2}&=ij^*
+\end{aligned}
+\]
+이므로 \(j^{*2}\)는 \(\mathfrak K\)의 모든 원소와 가환하고 중심 \(R\)에 속한다. 따라서 \(j^{*2}\)는 실수 \(r\)이다. \(r\)은 양수일 수 없다. 그렇다면 가환체 \(R(j^*)\) 안에서 다항식 \(x^2-r\)이 네 근 \(+\sqrt r,-\sqrt r,+j^*,-j^*\)을 갖기 때문이다. 따라서 \(j^{*2}=-m^2\), \(m\in R\)이다. \(j=j^*m^{-1}\)로 놓으면 \(j^2=-1\)이고 \(1,i,j,k=ij\)는 사원수 단위들이다. 증명 끝.
+
+이 증명은 \(R\) 대신 임의의 실폐체에 대해서도 그대로 성립한다.
+
+\textbf{정리 10(웨더번 정리).} \emph{유한개의 원소로 이루어진 모든 체는 가환이다.}
+
+\emph{증명.} \(\mathfrak K\)를 원소가 유한개인 체, \(\mathsf P\)를 그 중심이라 하자. \(\mathfrak K\)가 \(\mathsf P\) 위에서 갖는 차수를 \(t^2\)이라 하자. \(\mathfrak K\)의 모든 극대 가환부분체는 \(\mathsf P\) 위에서 차수 \(t\)이므로 원소 수가 같다. 유한체 이론의 잘 알려진 정리인 무어 정리에 따라 이 체들은 서로 동형이다. 모든 유한체가 그 소체의 갈루아확대이므로 이 동형들은 \(\mathsf P\)의 각 원소가 자기 자신에 대응하도록 고를 수 있다. 정리 7에 따라 \(\mathfrak K\)의 모든 극대 가환부분체는 한 \(\mathfrak Z\)에서 변환으로 얻어진다.
+
+그런데 \(\mathfrak K\)는 그 모든 극대 가환부분체들의 합집합이다. \(\mathsf P\)에 원소 하나를 첨가하면 가환체가 생성되기 때문이다. 이제 0을 뺀 \(\mathfrak K\)의 곱셈군 \(\mathfrak K^*\)만을 보면, \(\mathfrak K^*\)는 부분군 \(\mathfrak Z^*\)와 켤레인 부분군들의 합집합이다. \(t>1\)이면 이는 모순이다. 실제로 \(\mathfrak K^*\)의 원소 수를 \(M\), \(\mathfrak Z^*\)의 원소 수를 \(N\), \(\mathfrak K^*\) 안에서 \(\mathfrak Z^*\)의 지수를 \(L\)이라 하면 \(M=NL\)이고 서로 다른 켤레부분군의 수는 \(L\) 이하이다. 그 수가 \(L\)과 같더라도 이 켤레부분군들이 군 전체를 모두 채우려면 임의의 두 부분군이 원소를 공유해서는 안 된다. 그러나 이들은 모두 단위원을 공유한다.
+
+\subsection*{§ 21. 비가환체의 갈루아 이론}
+
+\(G\)를 그 중심 \(\mathsf P\)에 관한 \(\mathfrak K\)의 갈루아군이라 하자. 정리 8에 따라 \(G\)는
+\[
+        \overline G=\mathfrak K^*/\mathsf P^*
+\]
+와 동형이며, 이 동형을 고정해 둔다. \(G\)의 부분군 \(H\)에 동형 \(G\simeq\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak K^*\)의 부분군을 \(\mathfrak H^*\)라 하자. \(\mathfrak H^*\)에 \emph{0을 덧붙였을 때} 체가 되면 \(H\)를 \emph{닫힌} 부분군이라 한다.
+
+\textbf{정리 11. 갈루아 이론의 주정리.} \emph{\(G\)의 닫힌 부분군 \(H\)들과 \(\mathsf P\)와 \(\mathfrak K\) 사이의 체 \(\mathfrak S\)들을 일대일로 대응시킬 수 있다. 서로 대응하는 \(H,\mathfrak S\)에 대해 \(H\)는 \(\mathfrak S\)의 불변군이고 \(\mathfrak S\)는 \(H\)의 불변체이다.}
+
+\emph{증명.} 정리를 세 부분으로 나눈다.
+
+\begin{enumerate}
+\item 체 \(\mathfrak S\)의 불변군 \(H\)는 닫혀 있다.
+\item \(\mathfrak S\)의 불변군이 \(H\)이면 \(\mathfrak S\)는 \(H\)의 불변체이다.
+\item \(H\)의 불변체가 \(\mathfrak S\)이면 \(H\)는 \(\mathfrak S\)의 불변군이다.
+\end{enumerate}
+
+\textbf{1.} 체 \(\mathfrak S\)의 불변군 \(H\)에 동형 \(G\simeq\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak H^*\)는 \(\mathfrak S\)의 각 원소와 가환하는 0 아닌 모든 \(\mathfrak K\)-원소의 집합이다. 여기에 0을 덧붙이면 당연히 체가 되므로 \(H\)는 닫혀 있다.
+
+\textbf{2.} 셋째 부분정리를 둘째 부분정리로 환원하자. 체 \(\mathfrak S\)에는 \(G\)의 부분군 \(S\), 곧 \(\mathfrak S^*/\mathsf P^*\)에 대응하는 \(G\)의 부분군이 속한다. 마찬가지로 군 \(H\)에는 \(\mathfrak K\)의 부분체 \(\mathfrak H\)가 속하여
+\[
+        H\simeq\mathfrak H^*/\mathsf P^*
+\]
+이다. \(\mathfrak S\)가 \(H\)의 불변체이면 \(\mathfrak S\)는 \(\mathfrak H\)의 모든 원소와 가환하는 모든 \(\mathfrak K\)-원소로 이루어진다. 달리 말하면 \(S\)는 \(\mathfrak H\)의 불변군이다. 이에 대응하여 \(H\)가 \(\mathfrak S\)의 불변군이면 \(\mathfrak H\)는 \(S\)의 불변체이다. 따라서 셋째 부분정리는 다음처럼 정식화할 수도 있다.
+
+\[
+\text{3'. }\quad
+\mathfrak H\text{의 불변군이 }S\text{이면 }
+\mathfrak H\text{는 }S\text{의 불변체이다.}
+\]
+이는 바로 아직 증명해야 할 둘째 부분정리와 같은 형식이다.
+
+\textbf{3.} 이 증명은 몇 가지 작은 차이를 제외하면 가환인 경우와 같다.
+
+\(\mathfrak K\)와 반대동형인 체 \(K\)를 만들고 그 중심을 \(\mathsf P\)와 동일시한다. \(\mathfrak K\)의 자기동형 대신 \(\mathfrak S\)에서 \(K\)로 가는 반대동형들을 고찰할 수 있다.
+
+가환인 경우에 쓴 연장정리와 비슷한 보조정리를 다시 증명하자.
+
+\(\mathfrak S,\mathfrak T\)를 \(\mathsf P\)와 \(\mathfrak K\) 사이의 체들이라 하자.
+\[
+        \mathsf P\subseteq\mathfrak S
+        \subseteq\mathfrak T\subseteq\mathfrak K.
+\]
+\(\mathfrak S\)에서 \(K\)의 한 부분체로 가는 모든 반대동형, 곧 \(\mathfrak S\)의 \(K\) 안에서의 1차 반대 표현은 \(\mathfrak T\)의 반대동형으로 적어도 \(s=[\mathfrak T:\mathfrak S]\)가지 방식으로 연장될 수 있다고 주장한다.
+
+체 \(\mathsf P,\mathfrak S,\mathfrak T,\mathfrak K\)를 \(K\)로 확대하면
+\[
+        K\subseteq\mathfrak S_K
+        \subseteq\mathfrak T_K
+        \subseteq\mathfrak K_K.
+\]
+20쪽 정리 1에 따라 각 \(\mathfrak S_K\)는 양쪽단순이고 완전가약이며, 서로 연산자동형인 단순 좌측아이디얼들은 \(\mathfrak S\)의 \(K\) 안에서의 유일한 기약 표현류의 표현가군들이다. \(K\)의 구성에 의해 \(K\) 안에는 \(\mathfrak S\)와 반대동형인 체가 있으므로 이 표현류는 1차이다. 따라서 단순 좌측아이디얼들은 모두 랭크 1이고, \(\mathfrak S_K\)는 \(\mathsf P\) 위에서의 차수만큼의 좌측아이디얼들의 합이다.
+\[
+        \mathfrak S_K
+        =K E_1+\cdots+K E_p,
+        \qquad
+        K E_\nu=\mathfrak S_K E_\nu.
+\]
+
+그러면
+\[
+\begin{aligned}
+\mathfrak T_K&=\mathfrak T K
+ =\mathfrak T\mathfrak S_K,\\
+\mathfrak T_K
+&=\mathfrak T\mathfrak S_K E_1+\cdots
+  +\mathfrak T\mathfrak S_K E_p\\
+&=\mathfrak T_K E_1+\cdots+\mathfrak T_K E_p.
+\end{aligned}
+\]
+각 아이디얼 \(\mathfrak T_K E_\nu\)는 \(s\)개의 단순아이디얼로 분해된다. 실제로
+\[
+\begin{aligned}
+[\mathfrak T_K E_\nu:K]
+&=[\mathfrak T_K E_\nu:K E_\nu]\\
+&=[\mathfrak T_K E_\nu:\mathfrak S_K E_\nu]\\
+&\leqq[\mathfrak T_K:\mathfrak S_K]
+ =[\mathfrak T:\mathfrak S]=s
+\end{aligned}
+\]
+이고
+\[
+        \sum[\mathfrak T_K E_\nu:K]=sp
+\]
+이므로
+\[
+        [\mathfrak T_K E_\nu:K]=s,
+        \qquad
+        \mathfrak T_K E_\nu
+        =K e_1^{(\nu)}+\cdots+K e_s^{(\nu)}.
+\]
+
+\(K e_i^{(\nu)}\)가 주는 \(\mathfrak T\)의 표현은 \(K E_\nu\)가 주는 \(\mathfrak S\)의 표현을 연장한다. 실제로 \(\alpha\in\mathfrak S\)이면
+\[
+        \alpha E_\nu=\sigma E_\nu,
+\]
+\[
+        \sum_i\alpha e_i^{(\nu)}
+        =\sigma\sum_i e_i^{(\nu)},
+        \qquad
+        \alpha e_i^{(\nu)}
+        =\sigma e_i^{(\nu)}.
+\]
+
+이제 \(K e_i^{(\nu)}\)들이 주는 표현들이 모두 서로 다름만 보이면 된다. 가환인 경우에는 서로 다른 표현류에 속했으므로 명백했다. 여기서는 반대로 모두 같은 표현류에 속하므로 표현 자체를 살펴야 한다. \(K e_i^{(\nu)}\)가 주는 \(\mathfrak T_K\) 전체의 \(K\)-준동형상들을 고찰하자. 기저원소들이 어떻게 표현되는지만 알면 전체 사상을 구성할 수 있으므로 이 사상들은 \(\mathfrak T\)의 표현들로 이미 완전히 정해진다. 따라서 \(K e_i^{(\nu)}\)가 주는 \(\mathfrak T_K\)의 사상들이 모두 다름만 보이면 충분하다. \(e_i^{(\nu)}\)를 한 번은 표현가군 \(K e_i^{(\nu)}\)로, 다른 한 번은 \(K e_j^{(\nu)}\)로 표현하면
+\[
+        e_i^{(\nu)2}=e_i^{(\nu)}
+\]
+이므로 첫째 경우에는 1이, 
+\[
+        e_i^{(\nu)}e_j^{(\nu)}=0
+\]
+이므로 둘째 경우에는 0이 \(e_i^{(\nu)}\)를 나타내는 원소로 나온다. 따라서 두 표현은 실제로 서로 다르다. 가환인 경우에도 똑같이 추론할 수 있지만 그곳에서는 필요하지 않다.
+
+이제부터는 10쪽과 16쪽에서와 똑같이 추론한다. \(H\)가 \(\mathfrak S\)의 불변군이고 \(\mathfrak T\)가 \(H\)의 불변체라고 하자. \(H\)의 원소들은 \(\mathfrak S\)의 항등자기동형을 \(\mathfrak K\) 전체로 연장한 모든 것들이다. 방금 증명한 보조정리에 따라 이들 가운데 \(\mathfrak T\) 위에서 서로 다른 것이 적어도 \(s\)개 있으므로 \(s=1\), \(\mathfrak T=\mathfrak S\)이어야 한다. 증명 끝.
+
+\section*{제V장. 인자계}
+
+\subsection*{§ 22. 중심이 주어진 체들의 군}
+
+고정된 가환체 \(\mathsf P\)를 모든 논의의 바탕으로 삼는다. 자기동형체 \(\mathfrak K\)가 중심이 \(\mathsf P\)이고 \(\mathsf P\) 위에서 유한랭크인 체인 모든 행렬환 \(\mathfrak K_r\)의 전체는 \glqq{}직접곱\grqq{}에 관하여 곱셈적으로 닫혀 있다. 그러한 두 환 \(\mathfrak K_r,\mathfrak L_s\)의 직접곱은 \(\mathfrak K_r\)의 바탕체를 \(\mathfrak L_s\)로 확대하여 얻는 환 \(\mathfrak K_r\mathfrak L_s\)이다.
+\[
+        \mathfrak K_r\times\mathfrak L_s
+        =\mathfrak K_r\mathfrak L_s.
+\]
+22쪽의 논평에 따라 이 직접곱은 가환이다.
+\[
+        \mathfrak K_r\times\mathfrak L_s
+        =\mathfrak L_s\times\mathfrak K_r.
+\]
+
+모든 \(\mathfrak K_r\)의 계가 곱셈적으로 닫혀 있다는 주장은 \(\mathfrak K_r\times\mathfrak L_s\)가 다시 한 행렬환이고 그 자기동형체 \(\mathfrak M\)의 중심이 \(\mathsf P\)라는 뜻이다. \(\mathsf P\)에 관한 유한랭크임은 자명하다. 20쪽 정리 1에 따라 \(\mathfrak K_r\times\mathfrak L_s\)는 양쪽단순이고 완전가약이므로 \(\mathsf P\)의 한 확대체 \(\mathfrak M\) 위의 행렬환이다. \(\mathfrak M\)의 중심이 \(\mathsf P\)라는 것은 첫째 \(\mathsf P\)가 반드시 그 중심에 포함되고, 둘째 그 중심이 \(\mathfrak K\), 또는 \(\mathfrak L\)의 중심 \(\mathsf P\)에 포함되어야 한다는 데서 곧바로 따른다.
+
+곱셈 \(\mathfrak K_r\times\mathfrak L_s\)는 명백히 결합적이다. \(\mathfrak K_r\)들은 곱셈적으로 닫힌 계이지만 군은 아니다. \(\mathfrak K_r\times\mathfrak L_s=\mathfrak M_m\)이면 반드시 \(m\geq rs\)이므로, \(r>m\)일 때 등식 \(\mathfrak K_r\times\mathfrak L_s=\mathfrak M_m\)을 만족하는 \(\mathfrak L_s\)는 찾을 수 없기 때문이다.
+
+이제 같은 \(\mathfrak K\)를 갖는 모든 \(\mathfrak K_r\)을 한 류 \(\{\mathfrak K\}\)로 묶자. \(\mathfrak K_r,\mathfrak K_{r'}\)이 같은 류 \(\{\mathfrak K\}\)에 속하고 \(\mathfrak L_s,\mathfrak L_{s'}\)이 같은 류 \(\{\mathfrak L\}\)에 속하면, \(\mathfrak K_r\times\mathfrak L_s\)와 \(\mathfrak K_{r'}\times\mathfrak L_{s'}\)도 같은 류에 속한다.
+
+\(\mathfrak K_r\times\mathfrak L_s\)가 \(\mathfrak K\times\mathfrak L\)과 같은 류에 속함을 보이면 충분하다. 곧 \(\mathfrak K\times\mathfrak L=\mathfrak M_m\)이면 \(\mathfrak K_r\times\mathfrak L_s\)도 \(\mathfrak M\) 위의 행렬환임을 보이면 된다. 이는 쉽게 알 수 있다.
+\[
+\begin{aligned}
+\mathfrak K_r\times\mathfrak L
+&=\left(\sum_1^r\mathfrak Kc_{ik}\right)\mathfrak L\\
+&=\sum_1^r\mathfrak K_{\mathfrak L}c_{ik}
+ =\sum_1^r\mathfrak M_m c_{ik}.
+\end{aligned}
+\]
+이는 \(\mathfrak M_m\) 위의 \(r\)차 행렬환이고, 따라서 \(\mathfrak M\) 위의 \(mr\)차 행렬환이다. 똑같이 계속하면
+\[
+\begin{aligned}
+\mathfrak K_r\times\mathfrak L_s
+&=\left(\sum_1^s\mathfrak Ld_{ik}\right)_{\mathfrak K_r}\\
+&=\sum_1^s\mathfrak L_{\mathfrak K_r}d_{ik}
+ =\sum_1^s\mathfrak M_{mr}d_{ik}
+ =\mathfrak M_{mrs}.
+\end{aligned}
+\]
+이로써 주장이 증명되었다. 특히
+\[
+        \mathfrak L\times\mathfrak K=\mathfrak M_m
+        \quad\Longrightarrow\quad
+        \mathfrak K_r\times\mathfrak L_s
+        =\mathfrak M_{mrs}
+\]
+임을 기억해 두자.
+
+따라서 두 류 \(\{\mathfrak K\}\), \(\{\mathfrak L\}\)의 곱을 각 류의 대표들의 곱이 속하는 류로 정의하면, 이 정의는 대표의 선택에 의존하지 않는다.
+
+그러므로 사상
+\[
+        \mathfrak K_r\longmapsto\{\mathfrak K\}
+\]
+은 모든 \(\mathfrak K_r\)의 계에서 모든 류 \(\{\mathfrak K\}\)의 집합으로 가는 준동형이다. 따라서 류들의 집합 \(\mathscr K\)는 곱셈적으로 닫힌 계이다. 이제 \(\mathscr K\)가 군임을 증명하자. 단위원은 명백히 류 \(\{\mathsf P\}\)이다.
+\[
+        \mathfrak K_r\times\mathsf P=\mathfrak K_r.
+\]
+
+따라서 각 류 \(\{\mathfrak K\}\)에 역류 \(\{\mathfrak K\}^{-1}\)가 존재함만 보이면 된다. \(\overline{\mathfrak K}\)가 \(\mathfrak K\)와 반대동형인 체를 뜻할 때
+\[
+        \{\mathfrak K\}^{-1}
+        =\{\overline{\mathfrak K}\}
+\]
+로 놓아야 한다. 달리 말하면 \(\mathfrak K\times\overline{\mathfrak K}\)가 \(\mathsf P\) 위의 행렬환이어야 한다. \(\mathfrak K\)가 \(\mathsf P\) 위에서 랭크 \(t^2\), 따라서 \(\mathfrak K\times\overline{\mathfrak K}\)가 랭크 \(t^4\)이면 이 곱은 \(t^2\)개의 단순 좌측아이디얼로 분해되어야 한다. 실제로 \(\mathfrak K\times\overline{\mathfrak K}\)의 한 단순 좌측아이디얼은 \(\overline{\mathfrak K}\)의 \(\mathfrak K\) 안에서의 1차 기약 반대 표현의 표현가군으로서 \(\mathfrak K\) 위에서 랭크 1, 따라서 \(\mathsf P\) 위에서 랭크 \(t^2\)이다.
+
+\(\mathsf P\)와 \(\mathfrak K\) 사이에 중심이 역시 \(\mathsf P\)인 체가 없으면 \(\mathfrak K\)를 \emph{단순체}라 부르겠다.
+
+\textbf{정리.} \emph{모든 체 \(\mathfrak K\)는 단순 부분체들의 직접곱이다.}
+\[
+        \mathfrak K
+        =\mathfrak K^{(1)}\times\cdots
+        \times\mathfrak K^{(p)}.
+\]
+
+\emph{증명.} 중심이 \(\mathsf P\)인 \(\mathfrak K\)의 부분체 \(\mathfrak K^{(1)}\)이 주어지면 중심이 \(\mathsf P\)인 \(\mathfrak K\)의 부분체 \(\mathfrak S\)로서
+\[
+        \mathfrak K^{(1)}\times\mathfrak S
+        =\mathfrak K
+\]
+을 만족하는 것이 있음을 보이면 충분하다. 적어도
+\[
+        \{\mathfrak K^{(1)}\}
+        \times\{\mathfrak S\}
+        =\{\mathfrak K\}
+\]
+을 만족하는 류 \(\{\mathfrak S\}\)는 존재한다. 곧
+\[
+        \{\mathfrak S\}
+        =\{\overline{\mathfrak K^{(1)}}\}
+         \times\{\mathfrak K\}.
+\]
+\[
+        \overline{\mathfrak K^{(1)}}\times\mathfrak K
+        =\mathfrak S_\lambda
+\]
+라 하자. 그러면
+\[
+\begin{aligned}
+\mathfrak K^{(1)}\times\mathfrak S_\lambda
+&=\mathfrak K^{(1)}
+  \times\overline{\mathfrak K^{(1)}}\times\mathfrak K\\
+&=\mathsf P_{t^2}\times\mathfrak K
+ =\mathfrak K_{t^2},
+\qquad
+t^2=\operatorname{rank}_{\mathsf P}\mathfrak K^{(1)}.
+\end{aligned}
+\]
+\(\mathfrak K^{(1)}\times\mathfrak S_\lambda\)는 차수가 적어도 \(\lambda\)인 행렬환이므로 \(\lambda\leq t^2\)이다. 한편
+\[
+        \mathfrak S_\lambda
+        =\overline{\mathfrak K^{(1)}}\times\mathfrak K
+\]
+는 \(\overline{\mathfrak K^{(1)}}\)가 \(\mathfrak K\) 안에서 1차 반대 표현을 허용하므로 \(\mathfrak K\) 위에서 랭크 1인 단순아이디얼들로 분해되어야 한다. 따라서 \(\lambda\geq t^2\), 곧 \(\lambda=t^2\)이고
+\[
+        \mathfrak K_{t^2}
+        =\mathfrak K^{(1)}\times\mathfrak S_{t^2}.
+\]
+그러므로 \(\mathfrak K^{(1)}\times\mathfrak S\) 자체가 체이어야 하고
+\[
+\begin{aligned}
+\mathfrak K^{(1)}\times\mathfrak S_{t^2}
+&=\bigl(\mathfrak K^{(1)}
+  \times\mathfrak S\bigr)_{t^2}\\
+&=\mathfrak K_{t^2}.
+\end{aligned}
+\]
+
+\(\mathfrak K^{(1)}\times\mathfrak S\)는 \(\mathfrak K_{t^2}\)의 한 분해에서 단순 좌측아이디얼들의 자기동형체이고, \(\mathfrak K\)는 다른 한 분해에서 단순 좌측아이디얼들의 자기동형체이다. \(\mathfrak K_{t^2}\)의 서로 다른 임의의 두 좌측아이디얼을 한 분해에 함께 넣을 수 있으므로 \(\mathfrak K\)와 \(\mathfrak K^{(1)}\times\mathfrak S\)는 동형이며, 이 동형은 \(\mathsf P\)의 각 원소를 고정하도록 고를 수 있다. 따라서 25쪽 정리 7에 따라 이 동형은 \(\mathfrak K_{t^2}\)의 한 내부자기동형이 생성한다.
+\[
+\begin{aligned}
+\mathfrak K
+&=\lambda^{-1}
+  \bigl(\mathfrak K^{(1)}\times\mathfrak S\bigr)\lambda\\
+&=\lambda^{-1}\mathfrak K^{(1)}\lambda
+  \times\lambda^{-1}\mathfrak S\lambda,
+\qquad
+\lambda\in\mathfrak K_{t^2}.
+\end{aligned}
+\]
+\(\lambda^{-1}\mathfrak K^{(1)}\lambda\)는 \(\mathfrak K^{(1)}\)과 동형인 \(\mathfrak K\)의 부분체이다. 그러므로 다시 25쪽 정리 7에 따라 알맞은 \(\mu\in\mathfrak K\)가 있어
+\[
+        \mu^{-1}\lambda^{-1}
+        \mathfrak K^{(1)}\lambda\mu
+        =\mathfrak K^{(1)}
+\]
+이고, 따라서
+\[
+\begin{aligned}
+\mu^{-1}\mathfrak K\mu
+=\mathfrak K
+&=\mathfrak K^{(1)}
+  \times\mu^{-1}\lambda^{-1}
+  \mathfrak S\lambda\mu.
+\end{aligned}
+\]
+이로써 주장이 증명되었다.
+
+\subsection*{§ 23. 인자계}
+
+이하의 고찰에서는 바탕체 \(\mathsf P\)가 완전체라고 가정한다. 그 대신 다음과 같은 더 일반적인 가정을 둘 수도 있다. 곧 중심이 \(\mathsf P\)인 비가환체 \(\mathfrak K\) 가운데, 모든 \(\mathfrak K_r\)가 \(\mathsf P\) 위에서 제1종인 극대 가환부분체를 포함하는 것만을 고찰한다. (그 뒤 쾨테가 보인 바에 따르면, 이는 모든 \(\mathfrak K\)에 대하여 성립한다.)
+
+중심이 \(\mathsf P\)인 비가환체 \(\mathfrak K\)의 한 분해체를 \(Z\)라 하자. \(Z\)의 \(\mathfrak K\) 안에서의 기약표현 \(\mathfrak Z\)가 차수 \(r\)이라고 하자. 그러면 \(\mathfrak Z\)는 \(\mathfrak K_r\)의 극대 가환부분체이다. \(\Gamma\)를 \(Z\)의 갈루아체라 하면
+\[
+        \mathfrak Z_\Gamma
+        =e_1\Gamma+\cdots+e_n\Gamma
+        \qquad\text{(9쪽)}
+\]
+이다. 여기서 \(n\)은 \(Z\)의 \(\mathsf P\) 위에서의 차수이다. 따라서 \(\Gamma\)로 확대된 환 \(\mathfrak K_r\)에도 분해
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak K_{r\Gamma}e_1
+         +\cdots+
+         \mathfrak K_{r\Gamma}e_n
+\]
+가 있고, 곧
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak l_1+\cdots+\mathfrak l_n,
+        \qquad
+        \mathfrak l_i=\mathfrak K_{r\Gamma}e_i
+\]
+이다. \(\mathfrak l_i\)들은 명백히 좌측아이디얼이며, 사실 단순 좌측아이디얼이다. 실제로 \(Z\)가 분해체이므로 \(\mathfrak K_{r\Gamma}\)는 \(\Gamma\) 위의 차수 \(r\cdot t=n\)인 행렬환이다. (23쪽 정리 4 및 22쪽의 \(n=rt\).) 이렇게 얻은 \(\mathfrak K_{r\Gamma}\)의 단순 좌측아이디얼들로의 분해는 \(\mathfrak K\)와 \(Z\)의 대수적 성질에 특별히 맞추어져 있다. 실제로 18쪽에서처럼 \(\Gamma/\mathsf P\)의 갈루아군 \(\mathfrak G\)의 치환 \(S\)가 모든 \(\mathfrak K_{r\Gamma}\)-원소에 작용하는 방식을, 각 \(\mathfrak K_r\)-원소 \(z\)에 대하여
+\[
+        S(z)=z
+\]
+로 정의하면 아이디얼 \(\mathfrak l_i\)들은 서로 켤레이다. 즉 \(S\)를 어떤 \(\mathfrak l_j\)에 적용하면 다른 하나가 되어
+\[
+        S(\mathfrak l_j)=\mathfrak l_i
+\]
+이다. 단위원의 각 비분해 성분 \(e_j\)가 다른 하나 \(e_i\)로 옮겨가야 하기 때문이다. (11쪽도 보라.)
+
+표현가군 \(e_i\Gamma\)에 의해 \(\mathfrak Z\)는 \(\Gamma\)의 한 부분체 \(Z_i\) 위로 사상된다. \(Z_i\)에 의한 \(\mathfrak Z\)의 표현이 이미 \(Z_i\) 안에 들어 있으므로 \(\mathfrak Z_{Z_i}\)는 표현가군 \(e_iZ_i\)를 분리해 내야 한다. 따라서 \(e_i\)는 이미 \(\mathfrak Z_{Z_i}\) 안에 있다. \(Z_i\)와 \(Z_k\)의 합성체를 \(\{Z_i,Z_k\}\)라 하자. \(\mathfrak K_{r\{Z_i,Z_k\}}\)는 두 좌측아이디얼
+\[
+        \bar{\mathfrak l}_i
+        =\mathfrak K_{r\{Z_i,Z_k\}}e_i,
+        \qquad
+        \bar{\mathfrak l}_k
+        =\mathfrak K_{r\{Z_i,Z_k\}}e_k
+\]
+를 분리해 내며, 이들은 단순하다. 왜냐하면
+\(
+ \mathfrak l_i
+ =\mathfrak K_{r\Gamma}\bar{\mathfrak l}_i
+\)
+이기 때문이다. 그러므로
+\[
+\begin{aligned}
+\bar{\mathfrak l}_i
+ &=\sum_{\lambda=1}^{m}
+   \{Z_i,Z_k\}c_{\lambda i}^{(ik)},\\
+\bar{\mathfrak l}_k
+ &=\sum_{\lambda}
+   \{Z_i,Z_k\}c_{\lambda k}^{(ik)}.
+\end{aligned}
+\]
+여기서 \(c_{\lambda\rho}^{(ik)}\)는 \(\mathfrak K_{r\{Z_i,Z_k\}}\)의 한 행렬단위계이다.
+
+\(\mathfrak K_{r\{Z_i,Z_k\}}\)를 연산자 영역으로 하는 \(\bar{\mathfrak l}_i\)에서 \(\bar{\mathfrak l}_k\) 위로의 각 동형사상 \(a_i\mapsto a_k\)는 \(e_i\mapsto p_{ik}\)인 원소 \(p_{ik}\)로 특징지어진다. 실제로 이때
+\[
+        a_i=a_ie_i\longmapsto a_ip_{ik},
+        \qquad
+        \bar{\mathfrak l}_i p_{ik}=\bar{\mathfrak l}_k
+\]
+이다. 가능한 모든 그러한 \(p_{ik}\)는 명백히
+\[
+        p_{ik}=c_{ik}^{(ik)}\gamma_{ik},
+        \qquad
+        0\ne\gamma_{ik}\in\{Z_i,Z_k\}
+\]
+이다. 따라서 \(a_i\mapsto a_ip_{ik}\)는 \(\mathfrak l_i\)에서 \(\mathfrak l_k\) 위로의 연산자동형도 준다. 이제 그러한 \(p_{ik}\)들의 특정한 계를 켤레조건을 부과하여 선택한다.
+
+치환 \(S\)가 첨자 \(i\)에 작용하는 방식을
+\[
+        S(i)=k,
+        \qquad\text{만일}\qquad
+        S(Z_i)=Z_k
+\]
+로 정의하자. 각 첨자쌍 \((\nu,\mu)\)에는 \(S(\nu,\mu)=(1,k)\) 꼴인 켤레쌍이 적어도 하나 있다. 켤레 첨자쌍의 각 류에서 고정된 한 쌍 \((1,k)\)를 고르고, 이 \((1,k)\)에 대하여
+\[
+        p_{1k}=c_{1k}^{(1k)}\gamma_{1k},
+        \qquad
+        0\ne\gamma_{1k}\in\{Z_1,Z_k\}
+\]
+를 그 밖에는 임의로 정한다. 이어서 \(S(1,k)=(\nu,\mu)\)이면
+\[
+        p_{\nu\mu}=S(p_{1k})
+\]
+로 둔다. 그러면 실제로 \(p_{\nu\mu}\)는
+\[
+        p_{\nu\mu}
+        =c_{\nu\mu}^{(\nu\mu)}\gamma_{\nu\mu},
+        \qquad
+        0\ne\gamma_{\nu\mu}
+        \in\{Z_\nu,Z_\mu\}
+\]
+꼴이다. 왜냐하면 \(S\)를 동형사상
+\[
+        a_1\longmapsto a_1p_{1k},
+        \qquad\text{특히}\qquad
+        e_1\longmapsto p_{1k},
+        \qquad
+        \bar{\mathfrak l}_1\longrightarrow
+        \bar{\mathfrak l}_k
+\]
+에 작용시키면 동형사상
+\[
+        a_\nu\longmapsto a_\nu p_{\nu\mu},
+        \qquad\text{특히}\qquad
+        e_\nu\longmapsto p_{\nu\mu},
+        \qquad
+        \bar{\mathfrak l}_\nu\longrightarrow
+        \bar{\mathfrak l}_\mu
+\]
+를 얻기 때문이다.
+
+\(c_{\lambda\rho}\)를 \(\mathfrak K_{r\Gamma}\)의 한 행렬단위계라 하면 \(p_{\nu\mu}\)를
+\[
+        p_{\nu\mu}=c_{\nu\mu}\bar\gamma_{\nu\mu}
+\]
+꼴로도 쓸 수 있음은 분명하다. 따라서 관계식
+\[
+        c_{ij}c_{1k}=0\quad(j\ne1),
+        \qquad
+        c_{ij}c_{jk}=c_{ik}
+\]
+에서 다음 관계식들이 따라온다.
+\[
+\begin{aligned}
+p_{ij}p_{1k}&=0,
+   &&\text{만일 }j\ne1,\\
+p_{ij}p_{jk}&=\alpha_{ik}^{(j)}p_{ik},
+   &&\alpha_{ik}^{(j)}\in\Gamma
+     \quad\text{(더 정확히는 }\{Z_i,Z_j,Z_k\}\text{ 안에 있다).}
+\end{aligned}
+\]
+이 \(n^3\)개의 양 \(\alpha\)는 유사행렬단위계 \(p_{ik}\)에 속하는, \emph{\(Z\)를 바탕으로 한 \(\mathfrak K\)의 인자계}를 이룬다.
+
+이 \(\alpha\)들은 서로 켤레이다. 곧
+\[
+        S(i,k,j)=(\nu,\mu,\tau)
+\]
+이면
+\[
+        S\bigl(\alpha_{ik}^{(j)}\bigr)
+        =\alpha_{\nu\mu}^{\tau}
+\]
+이다.
+
+유사행렬단위계 \(p_{ik}^*\)는 모두, 처음의 \(p_{1k}\)들에 \(\{Z_1,Z_k\}\)의 임의의 \(\delta_{1k}\ne0\)를 곱하여
+\[
+        p_{1k}^*=p_{1k}\delta_{1k}
+\]
+로 둔 다음, 다시 \(S(1,k)=(\nu,\mu)\)일 때
+\[
+        p_{\nu\mu}^*=S(p_{1k}^*)
+\]
+로 놓음으로써 한 유사행렬단위계 \(p_{ik}\)에서 얻어진다. 따라서
+\[
+        p_{\nu\mu}^*=p_{\nu\mu}\delta_{\nu\mu},
+        \qquad
+        \delta_{\nu\mu}\in\{Z_\nu,Z_\mu\}
+\]
+이다. \(\delta_{\nu\mu}\)들은 서로 켤레이며,
+\[
+        S(i,k)=(\nu,\mu)
+        \quad\Longrightarrow\quad
+        S(\delta_{ik})=\delta_{\nu\mu}.
+\]
+\(p_{ik}^*\)에 속하는 인자계를 \(\alpha^*\)라 하면
+\[
+        \alpha_{ik}^{(j)*}
+        =\frac{\delta_{ij}\delta_{jk}}{\delta_{ik}}
+         \alpha_{ik}^{(j)}
+\]
+이다.
+
+인자계 \(\alpha^*\)와 \(\alpha\)를 \emph{연관되었다}고 한다. \(p_{ik}^*\)와 \(p_{ik}\)도 마찬가지이다. \(Z\)를 바탕으로 한 \(\mathfrak K\)의 모든 인자계는 연관된 인자계들의 한 류 \(\{\alpha\}\)를 이룬다.
+
+이 류 \(\{\alpha\}\)는 그 정의의 바탕으로 삼은 \(\mathfrak K_r\) 안에서의 \(Z\)의 표현 \(\mathfrak Z\)에 의존하지 않는다. 실제로 한 \(\mathfrak Z\)에서 다른 \(\mathfrak Z'\)로의 이행은 \(\mathfrak K_r\)의 한 원소, 따라서 \(\mathfrak G\)-불변인 원소 \(\lambda\)에 의한 변환으로 할 수 있다. 그러므로 \(\mathfrak Z\)에 속하는 계 \(p_{ik}\)에서 \(\mathfrak Z'\)에 속하는 계
+\[
+        p'_{ik}=\lambda^{-1}p_{ik}\lambda
+\]
+가 생긴다. 그러나 \(p_{ik}\)와 \(p'_{ik}\)의 인자계는 서로 동일하다.
+
+인자계란 \(\mathfrak K_{n\Gamma}\)의 곱셈표, 다만 \(\mathfrak K\)의 특별한 대수적 성질에 맞추어진 곱셈표에 지나지 않는다.
+
+\subsection*{§ 24. 인자계의 곱셈}
+
+비가환체 \(\mathfrak K\)의 분해체라는 말 대신 \(\{\mathfrak K\}\)의 분해체라고도 한다. 이것은 뜻이 있다. \(\mathfrak K_Z\)와 더불어 모든 환 \(\mathfrak K_{rZ}\)도 절대기약 성분들로 분해되고, 그 역도 성립하기 때문이다.
+
+중심이 \(\mathsf P\)인 임의의 두 체 \(\mathfrak K,\mathfrak S\)에는 공통 분해체가 있다. 예를 들어 \(\mathfrak K\)의 한 분해체와 \(\mathfrak S\)의 한 분해체의 합성체가 그러하다.
+
+\textbf{정리 1.} \emph{체 \(Z\)를 분해체로 갖는 류 \(\{\mathfrak K\}\)들은 모든 \(\{\mathfrak K\}\)의 군 \(\mathscr K\)의 한 부분군 \(\mathscr K_Z\)를 이룬다.}
+
+\emph{증명.} \(\mathfrak K\)와 \(\mathfrak S\)가 \(Z\)를 분해체로 가지면 \(\mathfrak K_Z\)와 \(\mathfrak S_Z\)가 분해되므로 \((\mathfrak K\times\mathfrak S)_Z\)도 절대기약 성분들로 분해된다. 즉 \(Z\)는 \(\{\mathfrak K\times\mathfrak S\}\)의 분해체이다. (23쪽 정리 4.)
+
+서로 반대동형인 체들은 모든 분해체를 공유한다.
+
+이제 보조 고찰을 하자. 단순 좌측아이디얼들로의 분해
+\[
+        \mathfrak K_r
+        =\mathfrak L_1+\cdots+\mathfrak L_r,
+        \qquad
+        \mathsf P_m
+        =\mathfrak z_1+\cdots+\mathfrak z_m
+\]
+가 주어졌다고 하자. 그러면
+\[
+\begin{aligned}
+\mathfrak K_{rm}
+ &=\mathfrak K_r\times\mathsf P_m\\
+ &=\mathfrak L_1\mathfrak z_1+
+   \cdots+
+   \mathfrak L_i\mathfrak z_j+
+   \cdots+
+   \mathfrak L_r\mathfrak z_m
+\end{aligned}
+\]
+은 \(\mathfrak K_{rm}\)을 \(0\)이 아닌 \(rm\)개의, 따라서 단순한 좌측아이디얼들로 분해한 것이다. 그러므로 \(\mathfrak K_{rm}\)의 길이가 \(r\)인 각 좌측아이디얼 \(A\)는 길이가 \(r\)인 좌측아이디얼
+\[
+        \mathfrak L_1\mathfrak z_1+
+        \cdots+
+        \mathfrak L_r\mathfrak z_1
+        =\mathfrak K_r\mathfrak z_1
+\]
+과 한 내부자기동형으로 연결된다. 곧
+\[
+\begin{aligned}
+A
+ &=\tau^{-1}\mathfrak K_r\tau\,
+   \tau^{-1}\mathfrak z_1\tau\\
+ &=\mathfrak K'_r\mathfrak z'_1.
+\end{aligned}
+\]
+
+\(\mathfrak Z\subset\mathfrak K_r\)에 속하는, 켤레인 좌측아이디얼들로의 분해
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak l_1+\cdots+\mathfrak l_n,
+        \qquad
+        \mathfrak l_i=\mathfrak K_{r\Gamma}e_i
+\]
+가 주어졌다고 하자. 그러면
+\[
+\begin{aligned}
+S(\tau^{-1}\mathfrak l_i\tau\,\mathfrak z'_1)
+ &=S(\tau^{-1}\mathfrak l_i\tau)\,\mathfrak z'_1\\
+ &=\tau^{-1}(S\mathfrak l_i)\tau\,\mathfrak z'_1\\
+ &=\tau^{-1}\mathfrak l_k\tau\,\mathfrak z'_1
+\end{aligned}
+\]
+이므로
+\[
+\tag{1}
+        A_\Gamma
+        =\mathfrak l'_1\mathfrak z'_1+
+         \cdots+
+         \mathfrak l'_n\mathfrak z'_1
+\]
+은 \(A_\Gamma\)를 켤레인 좌측아이디얼들로 분해한 것이다. \(\tau^{-1}e_i\tau=e'_i\)라 두고 \(E'\)가 \(\mathfrak z'_1\)의 단위원을 뜻한다고 하면
+\[
+        \mathfrak l'_i\mathfrak z'_1
+        =\mathfrak K_{rm\Gamma}e'_iE'
+\]
+이다.
+
+켤레인 좌측아이디얼들로의 다른 임의의 분해
+\[
+\tag{2}
+        A_\Gamma=\mathfrak q_1+\cdots+\mathfrak q_n,
+        \qquad
+        S\mathfrak q_i=\mathfrak q_k
+        \quad\text{만일}\quad
+        S(\mathfrak l'_i\mathfrak z'_1)
+        =\mathfrak l'_k\mathfrak z'_1
+\]
+는 (1)에서 한 \(\mathfrak K_{rm}\)-원소 \(\lambda\)에 의한 변환으로 생긴다.
+\[
+        \mathfrak q_i
+        =\lambda^{-1}\mathfrak l'_i\mathfrak z'_1\lambda.
+\]
+따라서 \(e_i^*\)가 \(\mathfrak q_i\)의 단위원이면
+\[
+        e_i^*=\lambda^{-1}e'_iE'\lambda
+\]
+이다.
+
+이 주장은 다음 보조정리에서 곧바로 따라온다.
+
+\textbf{보조정리.} \emph{\(A\)를 \(\mathfrak K_n\)의 한 좌측아이디얼이라 하고, 가정상 존재하는 분해}
+\[
+        A
+        =\mathfrak l_1+\cdots+\mathfrak l_n
+        =\mathfrak K_{n\Gamma}e_1+
+         \cdots+
+         \mathfrak K_{n\Gamma}e_n
+\]
+\emph{이 켤레인 좌측아이디얼들로의 분해라고 하자. 여기서 일반성을 잃지 않고 \(\mathfrak l_i\)들을 서로 켤레라고 가정할 수 있다.}
+
+\emph{\(\mathfrak z\)가 \(A\)와 연산자동형이고 같은 가정들이 성립한다고 하자.}
+\[
+        \mathfrak z
+        =\mathfrak q_1+\cdots+\mathfrak q_n
+        =\mathfrak K_{n\Gamma}e_1^*+
+         \cdots+
+         \mathfrak K_{n\Gamma}e_n^*.
+\]
+\emph{따라서 \(\mathfrak q_i\)들과 \(e_i^*\)들은 서로 켤레이다. 그러면 \(\mathfrak K_n\)의 한 가역원 \(\lambda\)가 존재하여}
+\[
+        \mathfrak q_i=\lambda^{-1}\mathfrak l_i\lambda
+\]
+\emph{이다.}
+
+\emph{증명.} 1. \emph{\(e_i\)들을 서로 켤레라고 가정할 수 있다.} 실제로 \(e_1\)이 \(\mathfrak l_1\)의 임의의 생성 멱등원, 즉 \(\mathfrak l_1=\mathfrak K_{n\Gamma}e_1\)이라고 하자. \(\Gamma\)의 한 자기동형을 적용하면 \(\mathfrak l_i=\mathfrak K_{n\Gamma}e_i\)를 얻는데, 이때 \(e_i\)는 \(e_1\)과 켤레이며 다시 생성 멱등원이다.
+
+2. \emph{각 \(\mathfrak l\)은 각 \(\mathfrak q\)와 동형이다.} 실제로 서로 켤레인 \(\mathfrak l\)들은 모두 같은 절대길이를 갖고, \(\mathfrak z\)와 \(A\)가 동형이라는 가정 아래 \(\mathfrak l\)들의 수와 \(\mathfrak q\)들의 수가 일치한다.
+
+3. 대응
+\[
+\tag{3}
+\begin{gathered}
+e_1\longmapsto s_1=e_1s_1,
+\qquad
+e_1^*\longmapsto t_1=e_1^*t_1,\\
+s_1t_1=e_1,
+\qquad
+t_1s_1=e_1^*
+\end{gathered}
+\]
+으로 \(\mathfrak l_1\)과 \(\mathfrak q_1\) 사이의 한 동형사상과 그 역을 고정하자. 모든 자기동형을 적용하면 (3)은
+\[
+\begin{gathered}
+e_i\longmapsto s_i=e_is_i,
+\qquad
+e_i^*\longmapsto t_i=e_i^*t_i,\\
+s_it_i=e_i,
+\qquad
+t_is_i=e_i^*
+\end{gathered}
+\]
+로 옮겨간다. 이로써 동형사상
+\[
+        \mathfrak q_i=\mathfrak l_is_i,
+        \qquad
+        \mathfrak l_i=\mathfrak q_it_i
+\]
+가 고정된다.
+
+4. 이제
+\[
+        s=s_1+\cdots+s_n,
+        \qquad
+        t=t_1+\cdots+t_n
+\]
+로 두면
+\[
+\begin{gathered}
+\mathfrak q_i=\mathfrak l_is,
+\qquad
+\mathfrak l_i=\mathfrak q_it,\\
+st=e_1+\cdots+e_n=\xi,
+\qquad
+ts=e_1^*+\cdots+e_n^*=\xi^*
+\end{gathered}
+\]
+를 얻는다. 여기서 \(\xi\)와 \(\xi^*\)는 \(\mathfrak K_n\)에 속하며
+\[
+        A\xi=A,
+        \qquad
+        \mathfrak z\xi^*=\mathfrak z
+        \quad
+        (\mathfrak l_i\xi
+          =\mathfrak l_i\mathfrak l_i
+          =\mathfrak l_i\text{이므로})
+\]
+이고
+\[
+        \xi^2=\xi,
+        \qquad
+        \xi^{*2}=\xi^*
+\]
+이다. 이제
+\[
+        e=\overline E+E=\overline E^*+E^*
+\]
+로 두어
+\[
+\begin{aligned}
+\mathfrak K_n
+ &=\overline A+A
+  =\mathfrak K_n\overline\xi+\mathfrak K_n\xi\\
+ &=\overline{\mathfrak z}+\mathfrak z
+  =\mathfrak K_n\overline\xi^*+\mathfrak K_n\xi^*
+\end{aligned}
+\]
+라고 하면 \(\overline A\)와 \(\overline{\mathfrak z}\)도 동형이 된다. 따라서
+\[
+        \overline E\longmapsto
+        \overline s=\overline E\,\overline s,
+        \qquad
+        \overline E^*\longmapsto
+        \overline t=\overline E^*\overline t
+\]
+가 서로 역인 동형사상이고
+\[
+        \lambda=s+\overline s,
+        \qquad
+        \mu=t+\overline t
+\]
+로 두면
+\[
+\begin{gathered}
+\lambda\mu=\mu\lambda=e,
+\qquad
+\mathfrak l_i\lambda=\mathfrak q_i,
+\qquad
+\lambda^{-1}\mathfrak q_i=\mathfrak q_i,\\
+\lambda^{-1}\mathfrak q_i\subseteq\mathfrak q_i
+=\lambda\lambda^{-1}\mathfrak q_i
+\subseteq\lambda^{-1}\mathfrak q_i.
+\end{gathered}
+\]
+따라서
+\[
+        \lambda^{-1}\mathfrak l_i\lambda=\mathfrak q_i,
+\]
+증명 끝.
+
+분해 (1)에 대하여 다시 원소
+\[
+        r_{ik}=c_{ik}^{\prime(ik)}\gamma_{ik},
+        \qquad
+        \gamma_{ik}\in\{Z_i,Z_k\}
+\]
+를 정할 수 있다. 이들은 \(e'_iE'\mapsto r_{ik}\)에 의해 아이디얼 \(\mathfrak l'_i\mathfrak z'_1\)과 \(\mathfrak l'_k\mathfrak z'_1\) 사이의 연산자동형을 주고, \(S(i,k)=(\nu,\mu)\)이면
+\[
+        S(r_{ik})=r_{\nu\mu}
+\]
+인 켤레조건도 만족한다. 이 원소들은
+\[
+        r_{ij}r_{jk}=\alpha_{ik}^{(j)}r_{ik}
+\]
+에 의해 \(A_\Gamma\)의 한 인자계 \(\alpha\)를 정한다. 이제 중요한 점은 \(A_\Gamma\)의 인자계를 정하는 데 임의의 분해 (2)를 똑같이 쓸 수 있다는 것이다. 실제로 (1)에 속하는 계 \(r_{ik}\)를
+\[
+        r'_{ik}=\lambda^{-1}r_{ik}\lambda
+\]
+로 바꾸면 \(e_i^*\mapsto r'_{ik}\)는 \(\mathfrak q_i\)에서 \(\mathfrak q_k\) 위로의 연산자동형을 준다. \(\lambda\)가 갈루아군에 불변이므로 \(r'_{ik}\)들은 켤레조건을 만족하며, \(r'_{ik}\)들은 \(r_{ik}\)들과 같은 인자계를 갖는다.
+
+\(\mathfrak K\)의 유사행렬단위계 \(p_{ik}\)를 택하면
+\[
+        r_{ik}=\tau^{-1}p_{ik}\tau\,E'
+\]
+은 같은 인자계를 갖는 \(A_\Gamma\)의 한 \(r_{ik}\)-계이다. 따라서 다음 정리를 얻는다.
+
+\textbf{정리.} \emph{\(A_\Gamma\)를 켤레인 좌측아이디얼들로 분해한 임의의 분해}
+\[
+        A_\Gamma=\mathfrak q_1+\cdots+\mathfrak q_n
+\]
+\emph{을 사용하여 만든 \(A_\Gamma\)의 인자계들은 \(\mathfrak K_r\)의 인자계들과 같다.}
+
+다음 정리는 \(Z\)를 바탕으로 한 \(\{\mathfrak K\}\), \(\{\mathfrak S\}\)의 인자계가 각각 \(\alpha_{ik}^{(j)}\), \(\beta_{ik}^{(j)}\)이면
+\[
+        \varepsilon_{ik}^{(j)}
+        =\alpha_{ik}^{(j)}\beta_{ik}^{(j)}
+\]
+가 \(Z\)를 바탕으로 한 \(\{\mathfrak K\times\mathfrak S\}\)의 인자계임을 보인다. 따라서 연관된 인자계들의 두 류 \(\{\alpha\}\), \(\{\beta\}\)의 \emph{곱 \(\{\alpha\}\times\{\beta\}\)}을 류
+\[
+        \bigl\{\alpha_{ik}^{(j)}\beta_{ik}^{(j)}\bigr\}
+\]
+로 정의하는 것은 뜻이 있다.
+
+\textbf{정리 2.} \emph{\(\{\mathfrak K\}\)가 \(Z\)를 바탕으로 하여 연관된 인자계들의 류 \(\{\alpha\}\)를 갖는다고 하자. 분해체 \(Z\)를 갖는 모든 \(\{\mathfrak K\}\)의 류 \(\{\alpha\}\)들은 하나의 군을 이루며, 이 군은 대응}
+\[
+        \{\mathfrak K\}\longmapsto\{\alpha\}
+\]
+\emph{에 의해 \(\mathscr K_Z\)와 동형으로 대응한다.}
+
+\textbf{증명을 위해} 다음 두 가지를 보여야 한다.
+
+1. \(\{\mathfrak K\}\)와 \(\{\mathfrak S\}\)가 각각 인자계 \(\alpha_{ik}^{(j)}\)와 \(\beta_{ik}^{(j)}\)를 가지면
+\[
+        \varepsilon_{ik}^{(j)}
+        =\alpha_{ik}^{(j)}\beta_{ik}^{(j)}
+\]
+는 \(\{\mathfrak K\times\mathfrak S\}\)의 인자계이다.
+
+2. \(\{\mathfrak K\}\)가 인자계 \(\alpha_{ik}^{(j)}=1\)을 가지면 \(\mathfrak K=\mathsf P\)이다.
+
+1. \(\mathfrak K\)와 \(\mathfrak S\) 안에서의 \(Z\)의 기약표현의 차수가 각각 \(r,s\)라고 하고
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak l_1+\cdots+\mathfrak l_n,
+        \qquad
+        \mathfrak S_{s\Gamma}
+        =\mathfrak m_1+\cdots+\mathfrak m_n
+\]
+을 켤레인 아이디얼들로의 분해라 하자. 여기서 \(\mathfrak l_i\)와 \(\mathfrak m_i\)는 서로 대응하는 아이디얼들이라고 한다. 곧 이들은 각각 \(\mathfrak Z_r\)와 \(\mathfrak Z'_r\)의 대응하는 성분들에서 얻어진다. 그러면
+\[
+ (\mathfrak K_r\times\mathfrak S_s)_\Gamma
+ =\mathfrak l_1\mathfrak m_1+
+  \cdots+
+  \mathfrak l_i\mathfrak m_j+
+  \cdots+
+  \mathfrak l_n\mathfrak m_n
+\]
+은 \(0\)이 아닌 \(n^2\)개의, 따라서 단순한 아이디얼들로의 분해이다. 그러므로
+\[
+        A_1
+        =\mathfrak l_1\mathfrak m_1+
+         \mathfrak l_2\mathfrak m_2+
+         \cdots+
+         \mathfrak l_n\mathfrak m_n
+\]
+은 절대길이가 \(n\)인 아이디얼이다. \(\mathfrak m_i\)들이 \(\mathfrak l_i\)들과 똑같이 변환되므로 \(A_1\)은 모든 \(S\)에 대하여 불변이다. 따라서
+\[
+        A_1=A_\Gamma
+\]
+인 \(\mathfrak K_r\times\mathfrak S_s\)-아이디얼 \(A\)가 존재한다. (18쪽 보조정리.)
+
+\(\mathfrak K\times\mathfrak S\)의 단순아이디얼들의 자기동형체 \(\mathfrak M\) 안에서의 \(\mathfrak Z\)의 기약표현의 차수를 \(u\)라 하자. 그러면 \(A\)는 \(u\)개의 단순아이디얼로 분해된다. 그 절대길이가 \(n\)이기 때문이다. 따라서 우리의 보조정리에 의해 \(A\)의 인자계들은 \(\mathfrak M\)의 인자계들이기도 하다.
+
+그런데 \(A_\Gamma\)를 켤레인 아이디얼들로 분해한 한 분해는 정의에 사용한
+\[
+\tag{3}
+        A_\Gamma
+        =\mathfrak l_1\mathfrak m_1+
+         \mathfrak l_2\mathfrak m_2+
+         \cdots+
+         \mathfrak l_n\mathfrak m_n
+\]
+이다. \(\alpha_{ik}^{(j)}\), \(\beta_{ik}^{(j)}\)가 각각 \(\mathfrak K\), \(\mathfrak S\)의 유사행렬단위 \(p_{ik}\), \(q_{ik}\)에 속한다고 하자. 그러면
+\[
+        r_{ik}=p_{ik}q_{ik}
+\]
+가 분해 (3)에 관한 \(A_\Gamma\)의 유사행렬단위계임은 명백하다. 여기에 속하는 인자계
+\[
+        \varepsilon_{ik}^{(j)}
+        =\alpha_{ik}^{(j)}\beta_{ik}^{(j)}
+\]
+는 따라서 \(\mathfrak M\)의 인자계이기도 하다.
+
+2. \(\{\mathfrak K\}\)가 인자계 \(\alpha_{ik}^{(j)}=1\), 이에 속하는 유사행렬단위 \(p_{ik}\), 그리고 켤레인 아이디얼들로의 분해
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak l_1+\cdots+\mathfrak l_n
+\]
+을 갖는다고 하자. 우리는 \(\mathfrak K=\mathsf P\), 또는 \(\mathfrak K_r=\mathsf P_r\), 또는 \(\mathfrak K_r\)에 랭크가 \(n\)인 좌측아이디얼 \(\mathfrak l\)이 존재함을 보여야 한다. 실제로 \(\mathfrak K_r\)의 단순 좌측아이디얼은 랭크가 \(t^2r\)이므로, 정수 \(h\)에 대하여 \(n=t^2rh\)여야 하며, 따라서 \(t=1\)이어야 하기 때문이다.
+
+\(\mathfrak K_{r\Gamma}\)-아이디얼
+\[
+        \Omega
+        =\mathfrak l_1(p_{11}+\cdots+p_{1n})
+\]
+은 \(0\)이 아니다. 실제로 \(e_1\sum_i p_{1i}\ne0\)이다. 따라서 \(\Omega\)는 단순하며 랭크가 \(n\)이다. 또한 \(\Omega\)는 \(\mathfrak G\)-불변이다. 곧
+\[
+\begin{aligned}
+S\Omega
+ &=\mathfrak l_i\sum_\nu S p_{1\nu}\\
+ &=\mathfrak l_i\sum_\mu p_{i\mu}\\
+ &=\mathfrak l_i\sum_\mu p_{i1}p_{1\mu},
+\end{aligned}
+\]
+여기서는 \(\alpha_{ik}^{(j)}=1\)을 썼다. 따라서
+\[
+\begin{aligned}
+S\Omega
+ &=\mathfrak l_ip_{i1}\sum_\mu p_{1\mu}\\
+ &=\mathfrak l_1\sum_\mu p_{1\mu}
+  =\Omega.
+\end{aligned}
+\]
+그러므로
+\[
+        \Omega=\mathfrak l_\Gamma,
+\]
+\emph{여기서 \(\mathfrak l\)은 랭크가 \(n\)인 \(\mathfrak K_r\)-아이디얼이다.}
+
+\textbf{정리 3.} \emph{군 \(\mathscr K\)의 각 원소 \(\{\mathfrak K\}\)는 유한 위수 \(\lambda\)를 가지며, \(\lambda\)는 \(\mathfrak K\)의 절대성분수 \(t\)의 약수이다.}
+
+\emph{첫째 증명(브라우어).} \(\mathfrak K_{r\Gamma}\)를 켤레인 좌측아이디얼들로 분해한 두 분해
+\[
+\begin{gathered}
+\mathfrak K_{r\Gamma}
+=\mathfrak l_1+\cdots+\mathfrak l_n
+=\mathfrak z_1+\cdots+\mathfrak z_n,\\
+\mathfrak l_i=\mathfrak K_{r\Gamma}e_i,
+\qquad
+\mathfrak z_i=\mathfrak K_{r\Gamma}e_i^*
+\end{gathered}
+\]
+를 택한다. \(a_i\mapsto a_ir_{ik}\), 특히 \(e_i\mapsto r_{ik}\)가 \(\mathfrak l_i\)에서 \(\mathfrak z_k\) 위로의 한 연산자동형이라고 하자. 그 역에서 \(e_k^*\)는 \(\mathfrak l_i\)의 한 원소 \(s_{ki}\)로 옮겨가며
+\[
+        s_{ki}r_{ik}=e_k^*
+\]
+이다. \(r_{ik}\)들을 서로 켤레가 되도록, 곧
+\[
+        S(r_{ik})=r_{\nu\mu}
+        \quad\text{만일}\quad
+        S(i,k)=(\nu,\mu)
+\]
+로 고르면 \(s_{ik}\)들도 서로 켤레이다. 실제로
+\[
+\begin{aligned}
+S(s_{ki})S(r_{ik})
+ &=S(s_{ki}r_{ik})
+  =S(e_k^*)
+  =e_\mu^*\\
+ &=s_{\mu\nu}r_{\nu\mu}
+  =s_{\mu\nu}S(r_{ik}),
+\end{aligned}
+\]
+따라서 \(S(s_{ki})=s_{\mu\nu}\)이다. \(e_i\mapsto e_ir_{ij}s_{jk}\)가 \(\mathfrak l_i\)에서 \(\mathfrak l_k\) 위로의 한 연산자동형을 주므로
+\[
+        r_{ij}s_{jk}
+        =p_{ik}\xi_{ik}^{(j)},
+        \qquad
+        0\ne\xi_{ik}^{(j)}\in\Gamma
+\]
+이어야 한다.
+
+\(r\)들, \(s\)들, \(p\)들이 서로 켤레이므로 \(\xi\)들도 서로 켤레이다. 곧
+\[
+        S(i,j,k)=(\nu,\tau,\mu)
+        \quad\Longrightarrow\quad
+        S(\xi_{ik}^{(j)})=\xi_{\nu\mu}^{\tau}.
+\]
+
+등식
+\[
+\begin{aligned}
+r_{i\lambda}s_{\lambda j}r_{j\lambda}s_{\lambda k}
+ &=r_{i\lambda}e_\lambda^*s_{\lambda k}\\
+ &=r_{i\lambda}s_{\lambda k}
+\end{aligned}
+\]
+에서
+\[
+        p_{ij}\xi_{ij}^{(\lambda)}
+        p_{jk}\xi_{jk}^{(\lambda)}
+        =p_{ik}\xi_{ik}^{(\lambda)}
+\]
+가 따라온다. 그런데 \(p_{ij}p_{jk}=p_{ik}\alpha_{ik}^{(j)}\)이므로
+\[
+        \alpha_{ik}^{(j)}
+        =\frac{\xi_{ik}^{(\lambda)}}
+        {\xi_{ij}^{(\lambda)}\xi_{jk}^{(\lambda)}}.
+\]
+이제
+\[
+        \delta_{\nu\mu}
+        =\prod_\lambda\xi_{\nu\mu}^{(\lambda)}
+\]
+로 두자. \(\delta_{\nu\mu}\)는 \(\nu\)와 \(\mu\)를 고정하는 모든 \(S\)에 불변이므로 \(\{Z_\nu,Z_\mu\}\) 안에 있다. 또 \(\xi_{\nu\mu}^{(j)}\)들이 서로 켤레이므로 \(\delta_{\nu\mu}\)들도 서로 켤레이다. 이제
+\[
+\begin{aligned}
+\alpha_{ik}^{(j)n}
+ &=\frac{\prod_\lambda\xi_{ik}^{(\lambda)}}
+        {\prod_\lambda\xi_{ij}^{(\lambda)}
+         \prod_\lambda\xi_{jk}^{(\lambda)}}\\
+ &=\frac{\delta_{ik}}{\delta_{ij}\delta_{jk}}
+\end{aligned}
+\]
+이다. 따라서 연관된 인자계에 관한 공식(32쪽)에 의해 \(\alpha_{ik}^{(j)n}\)은 계 \(\beta_{ik}^{(j)}=1\)과 연관되어 있다. \(\{\mathfrak K\}\)의 위수는 \(\{\alpha\}\)의 위수와 같으므로 \(\{\mathfrak K\}\)의 위수는 \(n\)의 약수이다. 특히 \(\mathfrak Z\)를 \(\mathfrak K\)의 한 극대 가환부분체로 택하면 \(n=t\)이다. 따라서 \(\lambda\)는 \(t\)의 약수이다.
+
+\emph{둘째 증명(슈어).} 이 증명은 \(p_{ik}\)를 \(\Gamma\) 위의 가역인 \(n\)차 행렬 \(P_{ik}\)들로 표현하는 데 바탕을 둔다. 이 행렬들은 \(p_{ik}\)들과 같은 켤레조건을 만족한다. \(p_{ik}\)가 \(P_{ik}\)에 대응하면 \(P_{ik}\)는 \(\{Z_i,Z_k\}\)에 속하고, \(S(p_{ik})\)는 \(S(P_{ik})\)에 대응한다. 이 표현은 준동형이다. 즉 \(P_{ik}\)와 \(P_{kj}\)가 각각 \(p_{ik}\)와 \(p_{kj}\)에 대응하면 \(P_{ik}P_{kj}\)는 \(p_{ik}p_{kj}\)에 대응하므로
+\[
+        P_{ik}P_{kj}
+        =\alpha_{ij}^{(k)}P_{ij}
+\]
+이다. (\(k_1\ne k_2\)일 때 \(P_{ik_1}P_{k_2j}=0\)인 경우는 생길 수 없다.) 이러한 \(p_{ik}\)의 표현이 있으면 다음과 같이 결론을 얻는다. 행렬식을 취하면
+\[
+        |P_{ik}|\,|P_{kj}|
+        =\alpha_{ij}^{(k)n}|P_{ij}|
+\]
+이다. 행렬 \(P_{ik}\)들이 가역이므로 \(|P_{\nu\mu}|\ne0\)이다. 따라서 \(|P_{\nu\mu}|=\delta_{\nu\mu}\)로 두면
+\[
+        \alpha_{ij}^{(k)n}
+        =\frac{\delta_{ik}\delta_{kj}}{\delta_{ik}}
+\]
+이고, 그 뒤는 브라우어의 증명과 같다.
+
+\emph{행렬 \(P_{ik}\)들에 의한 \(p_{ik}\)의 표현.}
+
+분해
+\[
+        \mathfrak K_{r\Gamma}
+        =\mathfrak l_1+\cdots+\mathfrak l_n
+\]
+의 아이디얼 \(\mathfrak l_i\)들은 \(\Gamma\) 안에서의 \(\mathfrak K_r\)의 반대 표현가군들이다. (32쪽 정리 2.) \(\mathfrak Z\)에 관한 \(\mathfrak K_r\)의 한 고정된 기저 \(k_1,\ldots,k_n\)을 택하면
+\[
+        \mathfrak K_{r\Gamma}
+        =k_1\mathfrak Z_r+\cdots+k_n\mathfrak Z_r,
+\]
+따라서
+\[
+\begin{aligned}
+\mathfrak l_i
+ &=\mathfrak K_{r\Gamma}e_i\\
+ &=k_1\mathfrak Z_re_i+
+   \cdots+
+   k_n\mathfrak Z_re_i\\
+ &=k_1e_i\Gamma+\cdots+k_ne_i\Gamma.
+\end{aligned}
+\]
+그러므로
+\[
+\begin{aligned}
+\mathfrak l_k
+ &=\mathfrak l_ip_{ik}\\
+ &=k_1p_{ik}\Gamma+\cdots+k_np_{ik}\Gamma.
+\end{aligned}
+\]
+\(\mathfrak l_k\)의 두 기저
+\[
+        (k_1e_i,\ldots,k_ne_i),
+        \qquad
+        (k_1p_{ik},\ldots,k_np_{ik})
+\]
+는 한 가역행렬 \(P_{ik}\)를 곱하여 서로 옮겨갈 수 있다.
+\[
+        P_{ik}
+        \begin{pmatrix}
+          k_1e_i\\ \vdots\\ k_ne_i
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+          k_1p_{ik}\\ \vdots\\ k_np_{ik}
+        \end{pmatrix},
+        \qquad
+        \text{줄여서}\quad
+        P_{ik}(k_\varrho e_i)=(k_\varrho p_{ik}).
+\]
+이로부터 \(P_{ik}\)들의 켤레성이 따라온다.
+\[
+\begin{aligned}
+S(P_{ik})(k_\varrho S(e_k))
+ &=(k_\varrho S(p_{ik})),
+        \quad\text{즉}\\
+S(P_{ik})(k_\varrho e_\mu)
+ &=(k_\varrho p_{\nu\mu})
+  =P_{\nu\mu}(k_\varrho e_\mu).
+\end{aligned}
+\]
+따라서
+\[
+        S(P_{ik})=P_{\nu\mu}
+        \quad\text{만일}\quad
+        S(i,k)=(\nu,\mu).
+\]
+다시 이로부터 \(P_{ik}\)가 \(\{Z_i,Z_k\}\)에 속함이 따라온다. 실제로 이 합성체는 \(i\)와 \(k\)를 고정하는 \(S\)들의 불변체이다. 준동형성도 쉽게 알 수 있다.
+\[
+\begin{split}
+P_{ik}P_{kj}(k_\varrho e_j)
+ &=P_{ik}(k_\varrho p_{kj})
+  =(k_\varrho p_{ik}p_{kj})\\
+ &=\alpha_{ij}^{(k)}(k_\varrho p_{ij})
+  =\alpha_{ij}P_{ij}(k_\varrho e_j),
+\quad\text{따라서}\\
+&\hspace{-2em}P_{ik}P_{kj}
+  =\alpha_{ij}^{(k)}P_{ij},
+\quad\text{증명 끝.}
+\end{split}
+\]
+
+정리 3은 다음과 같이 강화할 수 있다.
+
+\textbf{정리 4.} \emph{소수 \(p\)가 \(\mathfrak K\)의 절대성분수 \(t\)의 소인수이면 \(p\)는 \(\{\mathfrak K\}\)의 위수 \(\lambda\)의 약수이기도 하다.} (브라우어.)
+
+\emph{증명.} \(p^\sigma\)를 분해체 \(Z\)의 차수 \(n\)을 나누는 \(p\)의 최고 거듭제곱이라 하자. \(\mathfrak H\)를 \(\mathfrak G\)의 위수가 \(p^\sigma\)인 한 부분군이라 하고, \(T\)를 \(\mathfrak H\)의 불변체라 하자. 그러한 부분군은 \emph{쉴로 정리}에 의해 존재한다. (슈파이저, 제1판, §19, 42쪽, 정리 43.)
+
+그러면
+\[
+        [\Gamma:T]=p^\sigma,
+        \qquad
+        [T:\mathsf P]=\frac{n}{p^\sigma}
+\]
+이고, 뒤의 수는 \(p\)로 나누어지지 않으며 더구나 \(t\)로도 나누어지지 않는다. 따라서 \(T\)는 분해체가 아니다. \(\mathfrak K_T=\mathfrak S_m\)의 자기동형체 \(\mathfrak S\)는 \(\mathsf P\)와 다르다. 그런데 \(\mathfrak S\)는 분해체 \(\Gamma\)를 가지며, \(\mathfrak S\)의 중심 \(T\) 위에서의 그 차수가 \(p^\sigma\)이다. 그러므로 \(\mathfrak S\)의 절대성분수는 \(p\)의 거듭제곱 \(p^\beta>1\)이고, 따라서 정리 3에 의해 \(\{\mathfrak S\}\)의 위수도 \(p\)의 거듭제곱 \(p^\alpha>1\)이다. 이제
+\[
+        \{\mathfrak K\}^{\lambda}=\{\mathsf P\},
+        \qquad
+        \{\mathfrak K_T\}^{\lambda}=\{T\}
+\]
+이므로
+\[
+        \lambda\equiv0\pmod {p^\alpha}.
+\]
+증명 끝. (\(\lambda=t\)일 필요가 없음을 보이는 예들은 브라우어가 제시하였다\srcfn{1}{Brauer: Untersuchungen über die arithmetischen Eigenschaften von Gruppen linearer Substitutionen II. Math. Zeitschr. 31, S. 733 § 5, (1930).}.)
+
+\textbf{정리 5.} \emph{\(t\)의 소인수분해가}
+\[
+        t=\prod_i p_i^{\varrho_i},
+        \qquad
+        \varrho_i\geq1,
+        \qquad
+        i\ne j\Longrightarrow p_i\ne p_j
+\]
+\emph{라고 하자. 그러면}
+\[
+        \mathfrak K
+        =\mathfrak K^{(1)}\times
+         \mathfrak K^{(2)}\times\cdots,
+\]
+\emph{여기서 \(\mathfrak K^{(i)}\)는 절대성분수가 \(p_i^{\varrho_i}\)인 체이다.}
+
+\emph{증명.} 정리 3과 4에 따라 \(\{\mathfrak K\}\)의 위수 \(\lambda\)는
+\[
+        \lambda=\prod_i p_i^{\alpha_i},
+        \qquad
+        1\leq\alpha_i\leq\varrho_i
+\]
+이다. \(\{\mathfrak K\}\)가 생성하는 \(\mathscr K\)의 순환부분군 \(\mathfrak Z\)는 위수가 \(p_i^{\alpha_i}\)인 부분군 \(\mathfrak Z_i\)들의 직접곱이다. 따라서
+\[
+        \{\mathfrak K\}
+        =\prod_i\{\mathfrak K^{(i)}\}.
+\]
+이로부터 \(\mathfrak K\)의 모든 분해체 \(Z\)가 각 \(\mathfrak K^{(i)}\)의 분해체이기도 함이 따라온다. 따라서 \(\mathfrak K^{(i)}\)의 절대성분수 \(p_i^{\sigma_i}\)는 \(t\)를 나누며 \(\sigma_i\leq\varrho_i\)이다. 이제
+\[
+        \prod_i\mathfrak K^{(i)}=\mathfrak K_m
+\]
+이라 하면
+\[
+        \prod_i p_i^{\varrho_i}
+        =\prod_i p_i^{\sigma_i}\,m,
+        \qquad
+        \sigma_i\geq\varrho_i.
+\]
+따라서
+\[
+        \sigma_i=\varrho_i,
+        \qquad
+        m=1,
+        \qquad
+        \mathfrak K=\prod_i\mathfrak K^{(i)},
+\]
+증명 끝.
+
+\subsection*{§ 25. 갈루아 극대 가환부분체를 갖는 \(\mathfrak K_r\)의 정규표현\protect\footnotemark}
+\footnotetext{§27부터 더 간단한 증명이 주어진다.}
+
+\(\mathfrak K_r\)의 극대 가환부분체 \(\mathfrak Z\)가 갈루아라고 하자. \(\mathfrak Z/\mathsf P\)의 \(n\)개 자기동형 \(H_i\)는 25쪽 정리 7에 따라 \(\mathfrak K_r\)의 내부자기동형이다. 즉 원소 \(u_i\)들이 존재하여 \(\mathfrak Z\)의 모든 \(z\)에 대하여
+\[
+        H_i z=u_i^{-1}zu_i
+\]
+이다. 각 \(u_i\)는 \(\mathfrak Z\)의 \(0\)이 아닌 인자 \(y\)를 곱하는 것까지 정해진다. 실제로 \(\mathfrak Z\)의 모든 \(z\)에 대하여
+\[
+        u^{-1}zu=u'^{-1}zu'
+\]
+이면
+\[
+        (u^{-1}u')^{-1}z(u^{-1}u')=z
+\]
+이다. 따라서 \(u^{-1}u'\)를 \(\mathfrak Z\)에 첨가하면 \(\mathfrak K_r\)의 한 가환부분체를 얻는다. \(\mathfrak Z\)의 극대성 때문에 이 부분체는 \(\mathfrak Z\)와 같으므로 \(u^{-1}u'\in\mathfrak Z\)이다.
+
+이제 다음 명제를 증명한다.
+\[
+        \mathfrak K_r
+        =u_1\mathfrak Z+\cdots+u_n\mathfrak Z.
+\]
+이를 위해서는 \(u_i\)들이 \(\mathfrak Z\) 위에서 선형독립임을 보이면 충분하다. 우리는 \(u_i\)들을 직접 제시하여 증명한다. 다음 분해가 주어졌다고 하자.
+\[
+\begin{gathered}
+\mathfrak Z_Z=e_1Z+\cdots+e_nZ,\\
+\mathfrak K_{rZ}=\mathfrak l_1+\cdots+\mathfrak l_n,
+\qquad
+\mathfrak l_i=\mathfrak K_{rZ}e_i,
+\end{gathered}
+\]
+그리고 \(p_{ik}\)를 이 분해에 속하는 한 유사행렬단위계라 하자. 8쪽에서 표현가군 \(e_iZ\)가 주는 \(\mathfrak Z\)에서 \(Z\) 위로의 동형사상을 \(\Theta_i\)라 썼다. 그러면
+\[
+        S_i=\Theta_i\Theta_1^{-1}
+\]
+는 \(Z\)의 \(n\)개 자기동형이다. 다만 이는 \(Z\) 자체에 적용할 때에만 그러하며, 여기서 계속 바탕에 두는 \(\mathfrak K_{rZ}\) 전체에 대한 \(S_i\)의 작용과는 구별해야 한다. 편의를 위해 \(S_i=\Theta_i\Theta_1^{-1}\)에서 \(\Theta_i\) 대신 \(\Theta_{S_i}\)라 쓰고, \(p_{ik}\)의 첨자 \(i,k\)도 해당 자기동형 \(S\)들로 바꾸어
+\[
+        p_{ik}=p_{S_iS_k}
+\]
+라 쓰기로 한다.
+
+\(\mathfrak Z\)의 \(n\)개 자기동형은 \(E\)를 항등치환이라 할 때
+\[
+        H=\Theta_E^{-1}\Theta
+\]
+이다. 이제 \(H\)들의 번호를
+\[
+        H_S=\Theta_E^{-1}\Theta_{S^{-1}}
+\]
+로 정한다.
+
+이 조건들 아래에서
+\[
+        u_T=\sum_Sp_{S,ST}
+            =\sum_SS(p_{E,T})
+\]
+로 둘 수 있다. 실제로 다음이 성립한다.
+
+1. \(u_T^{-1}\)가 존재하며
+\[
+        u_T^{-1}
+        =\sum_Sp_{ST,S}
+         \frac{1}
+         {\alpha_{S,S}^{ST}
+          \overline\gamma_{S,ST}
+          \overline\gamma_{ST,S}}
+\]
+이다. (\(\bar\gamma\)의 뜻은 32쪽을 보라.)
+
+2. \(u_T\)는 \(\mathfrak G\)-불변이므로 \(\mathfrak K_r\)의 원소이다.
+\[
+        R(u_T)
+        =\sum_SRS(p_{E,T})
+        =\sum_{S'}S'(p_{E,T})
+        =u_T.
+\]
+
+3. \(u_T\)는 \(H_T\)를 생성한다. 즉 \(z\in\mathfrak Z\)이면
+\[
+        u_T^{-1}zu_T=H_T(z),
+        \qquad\text{또는}\qquad
+        zu_T=u_TH_T(z).
+\]
+실제로
+\[
+        z=\sum_S\Theta_S(z)e_S,
+        \qquad
+        u_T=\sum_SS(e_Ep_{E,T})
+            =\sum_Se_SS(p_{E,T})
+\]
+이므로
+\[
+\begin{aligned}
+zu_T
+ &=\sum_{S,S'}\Theta_S(z)e_Se_{S'}S(p_{E,T})\\
+ &=\sum_S\Theta_S(z)S(p_{E,T}).
+\end{aligned}
+\]
+한편
+\[
+        u_T=\sum_SS(p_{E,T}e_T)
+            =\sum_SS(p_{E,T})e_{ST}
+\]
+이고, \(\mathfrak Z\)-원소들에 적용할 때 다음 등식이 성립한다.
+\[
+\begin{aligned}
+\Theta_SH_T
+ &=\Theta_S\Theta_E^{-1}\Theta_{T^{-1}}\\
+ &=S\Theta_{T^{-1}}
+  =ST^{-1}\Theta_E
+  =\Theta_{ST^{-1}}.
+\end{aligned}
+\]
+따라서
+\[
+        H_T(z)
+        =\sum_Se_S\Theta_SH_T(z)
+        =\sum_Se_S\Theta_{ST^{-1}}(z),
+\]
+그러므로
+\[
+\begin{aligned}
+u_TH_T(z)
+ &=\sum_{S,S'}S(p_{E,T})e_{ST}\,
+   e_{S'}\Theta_{S'T^{-1}}(z)\\
+ &=\sum_SS(p_{E,T})\Theta_S(z).
+\end{aligned}
+\]
+결국
+\[
+        zu_T=u_TH_T(z).
+\]
+
+4. \(u_S\)들은 \(\mathfrak Z\) 위에서 선형독립이다. 실제로
+\[
+        \sum_Tz_Tu_T=0
+\]
+이라고 하자. \(z=\sum_S\Theta_S(z)e_S\)이므로
+\[
+\begin{aligned}
+\sum_{T,S,L}\Theta_S(z_T)e_Sp_{L,LT}
+ &=\sum_{S,T}\Theta_S(z_T)p_{S,ST}=0.
+\end{aligned}
+\]
+따라서 \(\Theta_S(z_T)=0\)이고, 결국 \(z_T=0\)이다.
+
+이제부터 \(H_S(z)\) 대신 기호적 거듭제곱 \(z^S\)를 쓴다. \(u_S\)들 사이에는 다음 꼴의 관계식이 성립해야 한다.
+\[
+        u_Ru_T=u_{RT}a_{R,T},
+        \qquad
+        0\ne a_{R,T}\in\mathfrak Z.
+\]
+실제로
+\[
+\begin{aligned}
+u_Ru_T
+ &=\sum_{S,S'}S(p_{E,R})S'(p_{E,T})\\
+ &=\sum_Sp_{S,SR}p_{SR,SRT}\\
+ &=\sum_Sp_{S,SRT}\alpha_{S,SRT}^{(SR)}\\
+ &=\sum_Sp_{S,SRT}\alpha_{S,SRT}^{(SR)}e_{SRT}
+\end{aligned}
+\]
+이고
+\[
+        a_{R,T}
+        =\sum_Se_{SRT}\Theta_{SRT}(a_{R,T}),
+\]
+따라서
+\[
+        u_{RT}a_{R,T}
+        =\sum_Sp_{S,SRT}\Theta_{SRT}(a_{R,T})
+\]
+이다. 그러므로
+\[
+\begin{aligned}
+\Theta_{SRT}(a_{R,T})
+ &=\alpha_{S,SRT}^{(SR)},\\
+a_{R,T}
+ &=\sum_Se_{SRT}\alpha_{S,SRT}^{(SR)}\\
+ &=\sum_Le_L
+   \alpha_{LT^{-1}R^{-1},L}^{(LT^{-1})}.
+\end{aligned}
+\]
+
+\(a_{R,T}\)들의 계를 \(\mathfrak K_r\)의 \emph{소인자계}라 부르기로 하고, \(\alpha_{BC}^{(A)}\)를 대인자계라 부르기로 한다. 대인자계 \(\alpha_{BC}^{(A)}\)와 소인자계 \(a_{R,T}\)는 서로를 결정한다. 두 대인자계의 곱
+\[
+        \varepsilon_{BC}^{(A)}
+        =\alpha_{BC}^{(A)}\beta_{BC}^{(A)}
+\]
+에 대응하는 소인자계는 \(\alpha_{BC}^{(A)}\), \(\beta_{BC}^{(A)}\)에 대응하는 두 소인자계 \(a_{R,T}\), \(b_{R,T}\)의 곱
+\[
+        f_{R,T}=a_{R,T}b_{R,T}
+\]
+이다. 이는 위 공식들에서 곧바로 따라온다. 대단위원자계 \(\alpha_{BC}^{(A)}=1\)에는 소단위원자계 \(a_{R,T}=1\)이 대응하고, 그 역도 성립한다.
+
+\(u_S\)를
+\[
+        u'_S=u_Sr_S,
+        \qquad
+        0\ne r_S\in\mathfrak Z
+\]
+로 바꿀 수 있다. 여기서 \(r_S\)는 임의로 고른다. \(u'_S\)에 속하는 소인자계를 \(a'_{R,T}\)라 하면
+\[
+\tag{1}
+        u'_Ru'_T=u'_{RT}a'_{R,T}.
+\]
+\(a'_{R,T}\)를 \(a_{R,T}\)와 연관된 소인자계라 부른다. 그런데
+\[
+\begin{aligned}
+u_Rr_Ru_Tr_T
+ &=u_{RT}r_{RT}a'_{R,T}\\
+ &=u_Ru_Tr_R^Tr_T\\
+ &=u_{RT}a_{R,T}r_R^Tr_T,
+\end{aligned}
+\]
+따라서
+\[
+\tag{2}
+        a'_{R,T}
+        =a_{R,T}\frac{r_R^Tr_T}{r_{RT}}.
+\]
+
+\(u'_S=u_Sr_S\)에는 다음 유사행렬단위계가 대응한다.
+\[
+        p'_{S,ST}=p_{S,ST}r_T.
+\]
+따라서 소인자계 \(a'_{R,T}\)는, \(a_{R,T}\)에 속하는 대인자계 \(\alpha_{BC}^{(A)}\)와 연관된 한 대인자계 \(\alpha_{BC}^{(A)\prime}\)에 속한다. 연관된 소인자계들은 연관된 대인자계들에 대응하고, 그 역도 성립한다. 연관된 대인자계들의 류 \(\{\alpha\}\)와 이에 대응하는 연관된 소인자계들의 류 \(\{a\}\) 사이의 대응은 군 동형사상이다.
+
+이제 \(u_S\)들을 \(\mathfrak Z\) 위의 \(n\)차 행렬들로 표현한다. 이 표현은 지금까지 고찰한 표현들과 본질적으로 다르다.
+
+\(\mathfrak K_r\)의 \(\mathfrak Z\)-기저
+\[
+\tag{I}
+        k_{S_1},\ldots,k_{S_n}
+\]
+에 오른쪽에서 \(u_S\)를 곱하면
+\[
+\tag{II}
+        k_{S_1}u_S,\ldots,k_{S_n}u_S
+\]
+를 얻는다. (I)을 (II)로 옮기는 가역행렬 \(A_S\), 곧
+\[
+\tag{III}
+        (k_{S_1}u_S,\ldots,k_{S_n}u_S)
+        =(k_{S_1},\ldots,k_{S_n})A_S
+\]
+인 \(A_S\)를 \(u_S\)를 표현하는 행렬이라 하자. 이 표현은 \(u_S\)처럼 \(\mathfrak Z/\mathsf P\)의 한 자기동형을 생성하는 모든 \(\mathfrak K_r\)-원소에 적용된다. 즉 \(\mathfrak Z\)에서 임의로 고른 \(r_S\ne0\)에 대한 모든 원소 \(u_Sr_S\)에 적용된다. 이 원소들은 하나의 군 \(\mathfrak G^*\)를 이루며, \(\mathfrak Z\)의 곱셈군 \(\mathfrak Z^*\)를 정규부분군으로 포함한다. 몫군 \(\mathfrak G^*/\mathfrak Z^*\)는 \(\mathfrak Z/\mathsf P\)의 갈루아군 \(\mathfrak G\)와 동형이다. 실제로 \(\mathfrak Z^*\)에 대한 \(\mathfrak G^*\)의 각 잉여류의 모든 원소가 그 잉여류에 대응하는 \(\mathfrak Z\)의 자기동형을 생성한다.
+
+이 군 \(\mathfrak G^*\)를 방금 설명한 방식으로
+\[
+        u_S\longmapsto A_S
+\]
+라 표현한다. 그러나 이 표현은 준동형도 아니고 반대준동형도 아니다. 곧
+\[
+        u_S\longmapsto A_S,
+        \qquad
+        u_T\longmapsto A_T
+\]
+에서 \(u_Su_T\mapsto A_SA_T\)가 따라오지 않는다. 오히려
+\[
+\begin{aligned}
+(k_{S_1},\ldots,k_{S_n})u_Su_T
+ &=(k_{S_1},\ldots,k_{S_n})A_Su_T\\
+ &=(k_{S_1},\ldots,k_{S_n})u_TA_S^T\\
+ &=(k_{S_1},\ldots,k_{S_n})A_TA_S^T,
+\end{aligned}
+\]
+따라서
+\[
+        u_Su_T\longmapsto A_TA_S^T.
+\]
+
+이 \(\mathfrak G^*\)의 표현을 \emph{교차표현}이라 부른다. \(h_{S_1},\ldots,h_{S_n}\)이 \(\mathfrak K_r\)의 \(\mathfrak Z\)에 관한 다른 한 기저이고
+\[
+\tag{IV}
+        (h_{S_1},\ldots,h_{S_n})
+        =(k_{S_1},\ldots,k_{S_n})M
+\]
+이라고 하자. 그러면 (III)과 (IV)에서
+\[
+        (h_{S_1},\ldots,h_{S_n})u_S
+        =(h_{S_1},\ldots,h_{S_n})M^{-1}A_SM^S
+\]
+를 얻는다. 즉 \(u_S\)가 \(k\)-기저에 관하여 \(A_S\)로 표현되고 \(M\)이 \(k\)-기저를 \(h\)-기저로 바꾸는 행렬이면, \(u_S\)는 \(h\)-기저에 관하여 \(M^{-1}A_SM^S\)로 표현된다.
+
+교차표현을 정의하는 공식 (III)은 교차표현이 환 \(\mathfrak K_r\)에 대하여 갖는 관계가 보통의 반대 표현이 그 표현가군에 대하여 갖는 관계와 비슷함을 보여 준다. 다만 여기서는 보통의 반대 표현을 왼쪽이 아니라 오른쪽에서 쓴다. 차이는 반대 표현가군에서의 교환관계
+\[
+        (m^*\tau^*)c=(m^*c)\tau^*
+        \qquad\text{(5쪽 참조)}
+\]
+대신 여기서는
+\[
+        (kz)u_S=(ku_S)z^S,
+        \qquad
+        k\in\mathfrak K_r,
+        \quad
+        z\in\mathfrak Z
+\]
+가 나타난다는 데서 생긴다.
+
+\(\mathfrak K_r\)의 한 우측아이디얼 \(\mathfrak r\)의 기저를 사용해서도 \(\mathfrak G^*\)의 교차표현을 만들 수 있다. \(\mathfrak K_r\)의 각 우측아이디얼은 이런 방식으로 서로 동치인 표현들의 한 류를 생성한다. 여기서 표현
+\[
+        u_S\longmapsto A_S,
+        \qquad
+        u_S\longmapsto B_S
+\]
+는 어떤 행렬 \(M\)에 대하여
+\[
+        B_S=M^{-1}A_SM^S
+\]
+이면 동치라고 한다.
+
+이제 \(\mathfrak K_r\)의 우측아이디얼들이 생성하는 \(\mathfrak G^*\)의 \(\mathfrak Z\) 안에서의 표현들에 국한하지 않고, \(\mathfrak G^*\)의 \(\mathfrak Z\) 안에서의 \(m\)차 교차표현을 일반적으로 다음과 같이 정의할 수 있다.
+\begin{enumerate}
+\item 각 \(u_S\)에 \(\mathfrak Z\) 위의 \(m\)차 행렬 \(A_S\)가 대응한다.
+\item \(u_S\mapsto A_S\), \(u_T\mapsto A_T\)이면 \(u_Su_T\mapsto A_TA_S^T\)이다.
+\end{enumerate}
+
+랭크가 \(m\)인 \(\mathfrak Z\)-우측가군
+\[
+        \mathfrak M
+        =x_1\mathfrak Z+\cdots+x_m\mathfrak Z
+\]
+을 택하고
+\[
+        (x_1u_S,\ldots,x_mu_S)
+        =(x_1,\ldots,x_m)A_S
+\]
+로 정하여 이를 교환관계
+\[
+        (mz)u_S=(mu_S)z^S
+\]
+를 갖는 \(\mathfrak G^*\)-우측가군으로 만든다. 이는 5쪽에서 주어진 표현으로부터 표현가군을 만든 것과 완전히 같다. 이제 20쪽에서와 같이
+\[
+        m\mathbin{\cdot}zu_S
+        =mz\mathbin{\cdot}u_S
+        =mu_S\mathbin{\cdot}z^S
+\]
+로 정하고, 일반적으로
+\[
+\begin{aligned}
+m\mathbin{\cdot}\sum_Sz_Su_S
+ &=\sum_Smz_S\mathbin{\cdot}u_S\\
+ &=\sum_Smu_S\mathbin{\cdot}z_S^S
+\end{aligned}
+\]
+로 정하여 \(\mathfrak M\)을 유한 \(\mathfrak K_r\)-우측가군으로 만든다. 여기서는 이 정의에 특정한 기저를 사용했으므로 20쪽의 계산에 해당하는 것은 전혀 필요하지 않다.
+
+그런데 M. Z. §18에 따라 모든 유한 단순 \(\mathfrak K_r\)-가군 \(\mathfrak M\)은 \(\mathfrak K_r\)의 한 단순 우측아이디얼과 연산자동형이다. 따라서 22쪽 정리 2와 같이 \(\mathfrak G^*\)의 \(\mathfrak Z\) 안에서의 기약 교차표현류는 \emph{오직 하나}, 곧 단순 우측아이디얼들에 속하는 류뿐임을 알 수 있다.
+
+이 기약표현의 차수는 \(\mathfrak K\)의 지수(절대 지수) \(t\)이다. 이는 간단히 랭크를 세면 알 수 있다. 실제로 그 차수는 한 단순 우측아이디얼 \(\mathfrak r\)의 \(\mathfrak Z\)-랭크 \((\mathfrak r:\mathfrak Z)\)와 같다. 22쪽에 따라
+\[
+        (\mathfrak Z:\mathsf P)=n=rt,
+        \qquad
+        (\mathfrak K_r:\mathsf P)=n^2,
+        \qquad
+        (\mathfrak r:\mathsf P)=n\,t
+\]
+이다. 마지막 등식은
+\[
+        \mathfrak K_r
+        =\mathfrak r_1+\cdots+\mathfrak r_r
+\]
+이기 때문이다. 이제
+\[
+        (\mathfrak r:\mathsf P)
+        =(\mathfrak r:\mathfrak Z)
+         (\mathfrak Z:\mathsf P),
+\]
+즉
+\[
+        nt=(\mathfrak r:\mathfrak Z)n
+\]
+이므로 \((\mathfrak r:\mathfrak Z)=t\)이다.
+
+\subsection*{§ 26. 교차표현의 곱셈}
+
+지금까지 교차표현을 언제나 \(\mathfrak G^*\)의 표현으로 이해하였다. 그러나 이를 \(\mathfrak Z/\mathsf P\)의 갈루아군 \(\mathfrak G\)의 표현으로도 생각할 수 있다. 곧 \(\mathfrak G\)의 각 원소 \(S\)에 행렬 \(A_S\)를 대응시키는데, 이 행렬은 변환
+\[
+        u_S^{-1}zu_S=z^S
+\]
+에 의해 자기동형 \(S\)를 생성하는 \(\mathfrak K_r\)의 한 원소 \(u_S\)를 표현한다.
+
+그러한 표현 \(S\mapsto A_S\)을 특징짓기 위해서는\srcfn{1}{초복소계와 독립적으로 주어진 그러한 표현
+\[
+        S\mapsto A_S,
+        \qquad
+        T\mapsto A_T,
+        \qquad
+        ST\mapsto A_TA_S^T
+        =A_{ST}a_{S,T}^{-1}
+\]
+(또는 그 전치표현)은 슈파이저가 인자계 \(a_{S,T}\)를 정의할 때의 출발점이었다(Math. Zschr. 5). 따라서 이 인자계들은 여기서 다른 바탕 위에 도입한 인자계들과 동일한 것으로 드러난다.} 그 표현을 어느 \(\mathfrak K_r\) 안에서 취했는지, 어떤 \(u_S\)들을 썼는지, 그리고 \(\mathfrak K\)의 \(\mathfrak Z\) 위의 어떤 기저 \(k_{S_1},\ldots,k_{S_n}\)을 썼는지를 말해야 한다. 기저를 바꾸면 동치인 표현이 생기고, \(u\)들을 바꾸면 연관된 인자계 \(a_{S,T}\)들이 생긴다. 따라서 본질적인 것은 표현을 취한 \(\mathfrak K_r\)들, 즉 연관된 인자계들의 류 \(\{a_{S,T}\}\)이다.
+
+이제 \(\mathfrak G\)의 그러한 두 표현이 주어졌다고 하자.
+\[
+\begin{array}{lll}
+S\mapsto u_S\mapsto A_S
+ &\text{이에 속하는 소인자계}&a_{R,T},\\
+S\mapsto v_S\mapsto B_S
+ &\text{이에 속하는 소인자계}&b_{R,T}.
+\end{array}
+\]
+
+두 행렬 \(A=(a_{ik})\), \(B=(b_{\mu\nu})\)의 크로네커곱 \(A\times B\)이란 행렬
+\[
+        A\times B=(a_{ik}b_{\mu\nu})
+\]
+을 뜻한다.
+
+\noindent\textbf{명제.} \emph{\(S\mapsto A_S\times B_S\)도 \(\mathfrak G\)의 한 교차표현이다. 더 정확히 \(A_S\)가 \(\mathfrak K_r\)에서, \(B_S\)가 \(\mathfrak S_s\)에서 생기면 이 표현은 곱 \(\mathfrak K_r\times\mathfrak S_s\)에 속한다.}
+
+\noindent\emph{증명.} \(S\mapsto A_S\times B_S\)가 교차표현임을 보이자. 다음 대응들이 주어져 있다.
+\[
+        S\mapsto A_S\times B_S,
+        \qquad
+        T\mapsto A_T\times B_T,
+\]
+그리고
+\[
+\begin{aligned}
+ST&\mapsto A_{ST}\times B_{ST}\\
+  &=(A_TA_S^T\times B_TB_S^T)
+    a_{S,T}^{-1}b_{S,T}^{-1}.
+\end{aligned}
+\]
+따라서 다음을 증명해야 한다.
+\[
+\begin{aligned}
+(A_T\times B_T)(A_S\times B_S)^T
+ a_{S,T}^{-1}b_{S,T}^{-1}
+ &=(A_TA_S^T\times B_TB_S^T)
+   a_{S,T}^{-1}b_{S,T}^{-1}.
+\end{aligned}
+\]
+이는 다음 고찰에서 따라온다.
+
+행렬 \(A\)와 \(B\)를 행렬단위 \(c_{ik}\)와 \(d_{\mu\nu}\)로 나타내자. 이 행렬단위들은 \(\mathfrak K_r\) 또는 \(\mathfrak S_s\)의 행렬단위와 아무 관계가 없다. 곧
+\[
+        A=\sum c_{ik}\alpha_{ik},
+        \qquad
+        B=\sum d_{\mu\nu}\beta_{\mu\nu}.
+\]
+그러면
+\[
+\begin{aligned}
+A\times B=B\times A
+ &=\sum c_{ik}d_{\mu\nu}
+       \alpha_{ik}\beta_{\mu\nu}.
+\end{aligned}
+\]
+즉 이는 새로운 행렬단위
+\[
+        c_{ik}d_{\mu\nu}=d_{\mu\nu}c_{ik}
+\]
+에 관한 한 행렬과 같다. 따라서 \(A\)-행렬과 \(B\)-행렬의 곱셈은 두 행렬환의 직접곱
+\[
+        \sum c_{ik}\mathfrak Z
+        \times
+        \sum d_{\mu\nu}\mathfrak Z
+\]
+안에서의 원소 곱셈과 일대일로 대응한다. 그러므로 각 \(A\)-행렬은 각 \(B\)-행렬과 교환한다. 다만 \(A\)-행렬들끼리 또는 \(B\)-행렬들끼리 교환하는 것은 아니다. 바로 이 교환가능성에서 \(a_{S,T}^{-1}b_{S,T}^{-1}\)를 곱한 뒤 증명할 관계식이 따라온다.
+
+\section*{제VI장. 교차곱 이론}
+
+\subsection*{§ 27. \(\mathfrak K_r\)의 교차곱 표현}
+
+§24에서 인자계로부터 전개한 교차곱 이론을 이제 독립적으로 다시 정초한다. 이 교차곱의 의의는 갈루아체와 그 군들을 \(\mathfrak K_r\) 안에서 \emph{함께} 기술한다는 데 있다.
+
+\noindent\textbf{정리 1.} \emph{\(\mathfrak Z\)가 \(\mathfrak K_r\)의 갈루아 분해체, 따라서 극대 가환부분체이고 \(\mathfrak G\)가 그 갈루아군이면, \(\mathfrak K_r\)는 교차곱 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)와 같다. 역으로 각 교차곱 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)는 이러한 종류의 \(\mathfrak K_r\)를 생성한다.}
+
+\noindent\textbf{증명과 정의. 정의 1.} \(\mathfrak G=\{E,S,\ldots,T\}\)를 \(\mathfrak Z\)의 갈루아군이라 하자. \(\mathfrak K_r\)가 교차곱과 같다는 것은
+\[
+        \mathfrak K_r
+        =\mathfrak Zu_E+\cdots+\mathfrak Zu_T
+\]
+이고
+\[
+        zu_S=u_Sz^S,
+        \qquad
+        u_Su_T=a_{S,T}u_{ST}
+\]
+임을 뜻한다. 여기서 \(a_{S,T}\in\mathfrak Z\)는 소인자계를 이룬다.
+
+\noindent\textbf{정의 2.} \emph{생성군} \(\mathfrak G^*\)는 변환에 의해 \(\mathfrak Z\) 전체를 자기 자신으로 옮기는 \(\mathfrak K_r\)의 모든 가역원 \(g\)의 집합으로 정의한다. 곧
+\[
+        g^{-1}\mathfrak Zg=\mathfrak Z,
+        \qquad
+        g^{-1}zg=z^S
+        \quad(S\in\mathfrak G).
+\]
+\(\mathfrak Z\)의 각 자기동형은 어떤 \(g\)에 의해 생성되므로 \(\mathfrak G\)는 \(\mathfrak G^*\)의 군준동형상이다.
+\[
+        \mathfrak G^*\longrightarrow\mathfrak G,
+        \qquad
+        \mathfrak G\cong\mathfrak G^*/\mathfrak T^*,
+        \qquad
+        \mathfrak T^*\supseteq\mathfrak Z^*.
+\]
+나중에 \(\mathfrak T^*=\mathfrak Z^*\)임을 보일 것이다. 아직 \(\mathfrak Z\)가 극대 가환부분환이라는 것은 증명하지 않았다. 이 사실은 독립적으로도 증명할 수 있다.
+
+\noindent\textbf{1.} \emph{교차곱 표현의 증명.} 자기동형 \(E,\ldots,T\)를 생성하는 \(\mathfrak K_r\)의 원소들을 \(u_E,u_S,\ldots,u_T\)라 하자. 따라서 \(zu_S=u_Sz^S\)이고, 특히 2에 의해 \(u_E=e\)이다. 합
+\[
+        \mathfrak M
+        =\{\mathfrak Zu_E,\ldots,\mathfrak Zu_T\}
+\]
+이 직접합
+\[
+        \mathfrak Zu_E+\cdots+\mathfrak Zu_T
+\]
+과 같음을 보이면 된다. 그러면 랭크가 일치하므로 이 합은 \(\mathfrak K_r\)와 같다. 이는 다음과 같이 알 수 있다(슈바르츠). \(\mathfrak M\)은 \(\mathfrak Z\)-좌측가군이자 \(\mathfrak Z\)-우측가군, 따라서 \(\mathfrak Z\)의 \(\mathfrak Z\) 안에서의 표현가군이다. \(\mathfrak M\)은 서로 다른 \(n\)개 표현을 생성한다. \(\mathfrak Z\)는 제1종 가환체이므로 \(\mathfrak M\)의 랭크는 적어도 \(n\)이다. 나머지 증명도 꼭 같다.
+
+\noindent\textbf{2.} 다음이 성립한다.
+\[
+        \mathfrak G\cong\mathfrak G^*/\mathfrak Z^*,
+        \qquad\text{즉}\qquad
+        \mathfrak T^*=\mathfrak Z^*.
+\]
+다시 말해 변환으로 \(\mathfrak Z\) 위에 항등사상을 유도하는 것은 \(\mathfrak Z\)의 원소들뿐이다.
+
+실제로 \(\mathfrak Z\)의 모든 \(z\)에 대하여 \(tz=zt\)라고 하고
+\[
+        t=z_0+z_1u_S+\cdots+z_{n-1}u_T
+\]
+로 쓰자. 그러면
+\[
+        zt=zz_0+\cdots+zz_{n-1}u_T
+\]
+이고
+\[
+\begin{aligned}
+tz
+ &=z_0z+\cdots+z_{n-1}u_Tz\\
+ &=z_0z+z^{S^{-1}}z_1u_S+
+   \cdots+z^{T^{-1}}z_{n-1}u_T.
+\end{aligned}
+\]
+합이 직접합이므로
+\[
+        (z-z^{S^{-1}})z_1u_S=0,
+        \ldots,
+        (z-z^{T^{-1}})z_{n-1}u_T=0.
+\]
+원소 \(u_S,\ldots\)가 가역이므로
+\[
+        (z-z^{S^{-1}})z_1=0,
+        \ldots,
+        (z-z^{T^{-1}})z_{n-1}=0
+        \qquad\text{모든 }z\text{에 대하여}
+\]
+이다. 이는 랭크가 \(n\)이라는 데서도 따라온다. 그런데 정의에 따라 \(E\)와 다른 각 \(S,\ldots\)에는 \(z-z^{S^{-1}}\ne0\)인 \(z\)가 적어도 하나 있고, 마찬가지로 \(\bar z-\bar z^{T^{-1}}\ne0\)인 \(\bar z\)가 있다. 따라서 \(z_i=0\) \((i=1,\ldots,n-1)\)이고 \(t=z_0\in\mathfrak Z^*\)이다. 증명 끝.
+
+\noindent\textbf{3.} \(u\)들은 곱셈법칙
+\[
+        u_Su_T=a_{S,T}u_{ST}
+\]
+을 만족하며, \(a_{S,T}\)들은 교차 결합법칙
+\[
+        a_{R,S}a_{RS,T}
+        =a_{S,T}^{R^{-1}}a_{R,ST}
+\]
+을 만족한다. 이 \(a_{S,T}\)들이 소인자계이다.
+
+실제로 2에 의해
+\[
+        \mathfrak Z^*u_S\mathfrak Z^*u_T
+        =\mathfrak Z^*u_{ST},
+\]
+따라서
+\[
+        u_Su_T=a_{S,T}u_{ST}
+\]
+이고, 여기서 \(a_{S,T}\in\mathfrak Z^*\), 즉 \(a_{S,T}\in\mathfrak Z\)이고 \(a_{S,T}\ne0\)이다. 다시
+\[
+        u_R(u_Su_T)=(u_Ru_S)u_T
+\]
+이므로
+\[
+\begin{aligned}
+u_Ra_{S,T}u_{ST}
+ &=a_{S,T}^{R^{-1}}u_Ru_{ST}\\
+ &=a_{S,T}^{R^{-1}}a_{R,ST}u_{RST}\\
+ &=a_{R,S}u_{RS}u_T\\
+ &=a_{R,S}a_{RS,T}u_{RST}.
+\end{aligned}
+\]
+이것이 앞서 적은 곱셈법칙이다.
+
+\noindent\textbf{4. 역.} 교차곱은 어떤 \(\mathfrak K_r\)와 같다. 직접합
+\[
+        \mathfrak M
+        =\mathfrak Zu_E+\cdots+\mathfrak Zu_T
+\]
+에 관계식
+\[
+        zu_S=u_Sz^S,
+        \qquad
+        u_Su_T=a_{S,T}u_{ST}
+\]
+으로 환 구조를 준다. 여기서 \(a_{S,T}\)들은 교차 결합관계들을 만족하므로 \(u_Ru_Su_T\)가 일의적으로 정의된다. 곱셈은
+\[
+\begin{array}{ll}
+1.&z_1\mathbin{\cdot}z_2u_S=z_1z_2\mathbin{\cdot}u_S,\\[2pt]
+2.&zu_S\mathbin{\cdot}u_T=z\mathbin{\cdot}u_Su_T
+\end{array}
+\]
+로 정한다. 이로써 \(\mathfrak M\)은 결합환이 된다.
+
+\noindent\textbf{역정리 2.} \emph{교차곱 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)는 중심이 \(\mathsf P\)인 양쪽단순환이다.} (R. 브라우어의 착상에 따름.) 증명은 다음 보조정리들에 바탕을 둔다.
+
+\noindent\textbf{보조정리 1.} \emph{\(\mathfrak Z\)의 모든 원소와 교환하는 원소는 \(\mathfrak Z\)에 속한다.}
+
+\noindent\emph{증명.} \(c_{\lambda_S}\in\mathfrak Z\)인
+\[
+        w=\sum_Sc_{\lambda_S}u_S
+\]
+가 \(\mathfrak Z\)의 모든 \(z\)에 대하여 \(wz=zw\)를 만족한다고 하자. 그러면
+\[
+\begin{aligned}
+\sum_Szc_{\lambda_S}u_S
+ &=\sum_Sc_{\lambda_S}u_Sz\\
+ &=\sum_Sc_{\lambda_S}z^{S^{-1}}u_S.
+\end{aligned}
+\]
+따라서 모든 \(z\)와 \(S\)에 대하여
+\[
+        zc_{\lambda_S}=c_{\lambda_S}z^{S^{-1}},
+        \qquad\text{즉}\qquad
+        c_{\lambda_S}(z-z^{S^{-1}})=0.
+\]
+여기서는 \(u\)들의 선형독립성을 썼다. \(S\ne E\)이면 \(z-z^{S^{-1}}\ne0\)인 \(z\)가 적어도 하나 있으므로 \(c_{\lambda_S}=0\)이다. 따라서 \(w\in\mathfrak Z\)이다.
+
+\noindent\textbf{보조정리 2.} \emph{\(\mathfrak Z\)를 좌우 연산자 영역으로 할 때 \(\mathfrak Zu_S=u_S\mathfrak Z\)와 양쪽동형인 각 \(\mathfrak Z\)-쌍가군 \(\mathfrak A\)는 \(\mathfrak Zu_S\)와 동일하다.}
+
+\noindent\emph{2의 증명.} \(\mathfrak A\)는 좌측가군으로서 \(\mathfrak Zu_S\)와 동형이다. 이 동형에서 \(u_S\mapsto a\in\mathfrak A\)라 하면 \(\mathfrak Zu_S\mapsto\mathfrak Za\)이고, 따라서 \(\mathfrak A=\mathfrak Za\)이다. 양쪽동형성에서
+\[
+        za=az^S
+        \tag{1}
+\]
+이 따라온다. 이는 \(u_Sz\mapsto az\)이기 때문이다. 이로부터 \(\mathfrak A=\mathfrak Zu_S\)가 따라온다. 실제로
+\[
+        a=u_Su_S^{-1}a=u_Sw
+\]
+로 두면
+\[
+        za=zu_Sw=u_Sz^Sw,
+\]
+한편 (1)에 의해
+\[
+        za=u_Swz^S.
+\]
+따라서 \(u_S\)를 곱하여 모든 \(z\in\mathfrak Z\)에 대하여 \(z^Sw=wz^S\)를 얻는다. \(z^S\)도 \(\mathfrak Z\) 전체를 달리므로 \(w\)는 \(\mathfrak Z\)의 모든 원소와 교환하고, 1에 따라 \(w\in\mathfrak Z\)이다.
+
+\noindent\textbf{보조정리 3.} \emph{\(\mathfrak Z\mathbin{\cdot}\mathfrak G\)의 각 \(\mathfrak Z\)-쌍가군은}
+\[
+        \mathfrak Zu_{S_1}+\cdots+\mathfrak Zu_{S_k}
+\]
+\emph{꼴이다. 여기서 \(u_{S_1},\ldots,u_{S_k}\)는 \(u_S,\ldots,u_T\) 가운데 서로 다른 임의의 \(k\)개이다.}
+
+\noindent\emph{증명.} 교차곱 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)는 \(\mathfrak Z\)-쌍가군으로서 완전가약이다. 각 가수 \(\mathfrak Zu_S\)의 랭크가 1이기 때문이다. 또한 모든 가수는 쌍가군으로서 서로 다른 류에 속하므로 서로 양쪽동형이 아니다. 따라서 각 \(\mathfrak Z\)-쌍가군 \(\mathfrak M\)은 완전가약성에 의해 직접가수이고 그 자체가 완전가약이다. 곧
+\[
+        \mathfrak M=\sum_i\mathfrak A_{S_i},
+\]
+여기서 \(\mathfrak A_{S_i}\)는 \(\mathfrak Zu_{S_i}\)와 동형이다. 따라서 2에 의해 \(\mathfrak A_{S_i}=\mathfrak Zu_{S_i}\)이다. 모든 \(\mathfrak A_{S_i}\)는 서로 다른 류에 속한다.
+
+\noindent\textbf{보조정리 4.} \emph{\(\mathfrak Z\mathbin{\cdot}\mathfrak G\) 안에서 \(\mathfrak Z\)를 포함하는 각 환, 특히 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\) 자체는 양쪽단순이다. \(\mathfrak Z\)를 포함하는 부분환들은 \(\mathfrak G\)의 부분군들과 일대일로 대응한다.}
+
+\noindent\emph{증명.} \(\mathfrak Z\)를 포함하는 각 환 \(\mathfrak o\)는 \(\mathfrak Z\)-쌍가군이므로 3에 따라
+\[
+        \mathfrak o=\sum_i\mathfrak Zu_{S_i}
+\]
+꼴이다. \(\mathfrak o\)가 환이므로 두 \(u_{S_i}\)의 곱도 다시 \(\mathfrak o\)에 속하고, 따라서 이에 대응하는 \(\mathfrak Z\)-가군도 \(\mathfrak o\)에 속한다. 원소가 유한개이므로 \(u_{S_i}\)들은 인자계를 무시하면 하나의 군을 이룬다. 즉
+\[
+        \mathfrak o=\mathfrak Z\mathbin{\cdot}\mathfrak H
+\]
+이고 \(\mathfrak H\)는 \(\mathfrak G\)의 부분군이다. 더 정확히는 \(\mathfrak Zu_{S_i}\)들이 곱셈계를 이룬다. 이제 \(\mathfrak o\)의 \(0\)이 아닌 임의의 양쪽아이디얼 \(\mathfrak a\)를 택하자. 이는 \(\mathfrak o\)-쌍가군, 따라서 \(\mathfrak Z\)-쌍가군이자 \(\mathfrak o\)의 부분가군이다. 그러므로 \(\mathfrak Zu_{S_i}\) 하나와 함께 군 \(\mathfrak H\) 전체를 포함하며, 따라서 \(\mathfrak a=\mathfrak o=\mathfrak Z\mathbin{\cdot}\mathfrak H\)이다.
+
+\noindent\textbf{보조정리 5.} \emph{\(\mathsf P\)는 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)의 중심이다.}
+
+\noindent\emph{증명.} \(w\)가 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)의 모든 원소와 교환하면 특히 \(\mathfrak Z\)의 모든 원소와 교환하므로 1에 따라 \(w\in\mathfrak Z\)이다. 이제 \(wu_S=u_Sw^S\)이므로, \(w\)가 교환하면 \(w=w^S\)이다. 따라서 \(w\in\mathsf P\)이다.
+
+\noindent\emph{논평 1.} 이 증명은 \(\mathfrak Z\)가 \(\mathsf P\) 위의 무한 대수적 갈루아체인 경우에도 정리가 성립함을 보여 준다. 완전가약성에 관한 정리들이 그대로 성립하기 때문이다. (크룰, Zahlringe, Math. Ann. 99.) 이때 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)는 모든 유한합
+\[
+        \sum_{S_\lambda}u_{S_\lambda}c_{S_\lambda}
+\]
+의 계이다.
+
+다만 4에서는 \(\mathfrak o=\mathfrak Z\mathbin{\cdot}\mathfrak H\)라고 가정해야 한다. 이는 전체 곱 \(\mathfrak Z\mathbin{\cdot}\mathfrak G\)에 대해서는 성립한다. 그러나 \(\mathfrak o\)가 \(\mathfrak Z\) 위에서 무한이면 \(u_{S_i}u_{S_k}\)가 속한다는 사실만으로 그 계가 군을 이룬다고 더는 결론지을 수 없기 때문이다.
+
+\noindent\emph{논평 2.} 여기서 직접 정초할 때는 §§25/26에서 전개한 교차 행렬표현 이론을 이어 붙여야 한다. 뒤의 §28 끝에서 사용하는 사실은, \(t\)가 \(\mathfrak K\)의 절대성분수(지수)일 때 기약 교차표현의 차수가 \(t\)라는 것이다. 여기에서 곱셈상수로 도입한 인자계와 문헌에서 통용되는 개념이 동일함을 이 표현론이 보여 준다는 점을 다시 지적해 둔다.
+
+\subsection*{§ 28. 인자계의 곱정리}
+
+다음이 주어졌다고 하자.
+\[
+\begin{gathered}
+\mathfrak K_r
+ =\mathfrak Z\mathbin{\cdot}\mathfrak G
+ =\mathfrak Zu_E+\cdots+\mathfrak Zu_T,
+\qquad
+u_Su_T=u_{ST}a_{S,T},\\
+\overline{\mathfrak K}_r
+ =\overline{\mathfrak Z}\mathbin{\cdot}\overline{\mathfrak G}
+ =\overline{\mathfrak Z}\bar u_E+
+  \cdots+
+  \overline{\mathfrak Z}\bar u_T,
+\qquad
+\bar u_S\bar u_T=\bar u_{ST}\bar b_{S,T}.
+\end{gathered}
+\]
+여기서 \(\mathfrak Z\)와 \(\overline{\mathfrak Z}\)는 서로 동형인 갈루아체이고, \(\mathfrak G\)와 \(\overline{\mathfrak G}\)는 각각 그 군이다. 그러면
+\[
+\begin{aligned}
+\mathfrak K_r\times\overline{\mathfrak K}_r
+ &=\widetilde{\mathfrak Z}
+   \mathbin{\cdot}\widetilde{\mathfrak G}
+   \times\mathsf P_n\\
+ &=\mathfrak A_f\times\mathsf P_n
+  =\mathfrak A_j,
+\end{aligned}
+\]
+여기서
+\[
+        \tilde u_S\tilde u_T
+        =\tilde u_{ST}\tilde c_{S,T}
+\]
+이고 \(\widetilde{\mathfrak Z}\)는 \(\mathfrak Z\) 및 \(\overline{\mathfrak Z}\)와 동형이다. 이는 랭크를 세는 것과 \(\mathfrak Z\)도 분해체라는 사실에서 따라온다.
+
+\noindent\textbf{명제.} \emph{다음이 성립한다.}
+\[
+        \tilde c_{S,T}
+        =\tilde a_{S,T}\tilde b_{S,T},
+\]
+\emph{여기서 \(\tilde a,\tilde b\)는 \(\widetilde{\mathfrak Z}\) 안에서 각각 \(a,\bar b\)와 동형인 원소이다.}
+
+증명은 \(\mathfrak A_j\)의 절대길이가 \(n\)인 임의의 좌측아이디얼의 자기동형환이 \(\mathfrak A_f=\widetilde{\mathfrak Z}\mathbin{\cdot}\widetilde{\mathfrak G}\)와 동형이라는 사실, 그리고 알맞은 \(\mathfrak A_j\)의 좌측아이디얼에 대해서는 이 자기동형환을 직접 결정할 수 있다는 사실에 바탕을 둔다. 더 일반적으로 \(n\) 대신 \(s\)를 써서, 편의상 \(\mathfrak K_r\)에 관하여 진술한 다음 정리가 성립한다.
+
+\noindent\textbf{1. 정리 1.} \emph{\(\mathfrak K_{rs}=\mathfrak K_r\times\mathsf P_s\)의 절대길이가 \(n\)인 한 좌측아이디얼 \(\mathfrak l\)의 자기동형환은 \(\mathfrak K_r\)와 동형이다.}
+
+증명은 다음 보조정리들에서 따라온다.
+
+\noindent\textbf{보조정리 1.} \emph{\(\mathfrak K_{rs}\)의 절대길이가 \(n\)인 모든 좌측아이디얼은 서로 연산자동형이다. 따라서 그 자기동형환들은 환으로서 동형이다. 특히 \(\mathfrak b\)가 \(\mathsf P_s\)의 한 단순아이디얼이면}
+\[
+        \mathfrak l=\mathfrak K_r\times\mathfrak b
+\]
+\emph{의 절대길이는 \(n\)이다.}
+
+\noindent\emph{증명.} 이 좌측아이디얼들의 절대길이가 \(n\)이라는 것, 즉 이들이 절대비분해 단순아이디얼 \(n\)개로 분해된다는 것은 \(\mathfrak K_{rs}\) 안에서의 길이도 같다는 뜻이다. 곧 \(\mathfrak K_{rs}\) 안에서 같은 수의 단순아이디얼 가수들이 나타난다. 따라서 이들은 서로 연산자동형이고 그 자기동형환들은 환으로서 동형이다. 또 \(\mathfrak K_r=\mathfrak Z\mathbin{\cdot}\mathfrak G\)의 절대길이는 \(n\), 즉 랭크가 \(n^2\)이다. 따라서 \(\mathfrak K_r\times\mathsf P_s\)의 절대길이는 \(ns\)이고, \(\mathfrak K_r\times\mathfrak b\)의 절대길이는 \(n\)이다.
+
+\noindent\textbf{보조정리 2.} \emph{\(\mathfrak o\)가 단위원을 갖는 환이고 \(\mathfrak l=\mathfrak o e_1\)이 직접가수인 좌측아이디얼, 따라서 \(e_1\)이 멱등원이면 \(\mathfrak l\)의 자기동형환은 \(e_1\mathfrak o e_1\)과 동형이다.}
+
+\noindent\emph{증명.} 원소 \(e_1re_1\)을 곱하면 \(\mathfrak l\)에서 자기 자신으로 가는 연산자준동형을 얻는다. 서로 다른 원소 \(e_1re_1\)은 \(e_1\)에 서로 다른 원소를 대응시키므로 서로 다른 준동형을 준다. 모든 준동형은 이런 식으로 생긴다. 실제로
+\[
+        e_1\longmapsto re_1,
+        \qquad
+        re_1=e_1re_1
+\]
+인데, 뒤의 등식은 \(e_1e_1=e_1\)이기 때문이다. 또한 \(e_1\mathfrak o e_1\) 안의 합과 곱은 대응하는 준동형들의 합과 곱에 대응한다.
+
+\noindent\textbf{보조정리 3.} \emph{행렬단위 \(c_{ik}\)를 써서}
+\[
+        \mathsf P_s=\sum_1^s c_{ik}\mathsf P,
+        \qquad
+        \mathfrak b=c_{11}\mathsf P+
+        \cdots+c_{s1}\mathsf P
+\]
+\emph{로 두면 \(\mathfrak K_r\times\mathfrak b\)의 자기동형환은 \(\mathfrak K_rc_{11}\)이고, 이는 \(\mathfrak K_r\)와 동형이다.}
+
+\noindent\emph{증명.} \(c_{11}\)은 \(\mathfrak K_r\)의 모든 원소와 교환하고 어떤 \(\mathfrak K_r\)-원소도 소멸시키지 않는다. 실제로 \(c_{11}\)은 \(\mathfrak K_r\times\mathsf P_s\)의 생성 멱등원이고
+\[
+\begin{aligned}
+c_{11}(\mathfrak K_r\times\mathsf P_s)c_{11}
+ &=\mathfrak K_r\times c_{11}\mathsf P_sc_{11}\\
+ &=\mathfrak K_rc_{11}.
+\end{aligned}
+\]
+이 보조정리들에서 정리 1이 곧바로 따라온다.
+
+\noindent\textbf{2. \(\mathfrak K_r\times\overline{\mathfrak K}_r\)의 결정과 절대길이가 \(n\)인 좌측아이디얼들로의 분해.} 정의에 따라
+\[
+\begin{aligned}
+\mathfrak A_f
+ &=\mathfrak K_r\times\overline{\mathfrak K}_r\\
+ &=\mathfrak Z\mathbin{\cdot}\mathfrak G
+   \times
+   \overline{\mathfrak Z}\mathbin{\cdot}\overline{\mathfrak G}.
+\end{aligned}
+\]
+여기서 막대를 붙인 원소와 붙이지 않은 원소는 원소별로 교환한다. 따라서
+\[
+\begin{aligned}
+\mathfrak A_f
+ &=(\mathfrak G\times\overline{\mathfrak G})
+   (\mathfrak Z\times\overline{\mathfrak Z})\\
+ &=\mathfrak G\times\overline{\mathfrak G}
+   (\mathfrak Ze_1+\cdots+\mathfrak Ze_n),
+\end{aligned}
+\]
+여기서
+\[
+        \mathfrak Ze_i=\overline{\mathfrak Z}e_i.
+\]
+이는 한 갈루아체에 그 자신을 곱하여 얻는 분해이다. 모든 가수는 \(\mathfrak Z\)에 관하여 같은 랭크, 따라서 같은 절대길이를 갖고, \(\mathfrak A_f\)의 절대길이는 \(n^2\)이므로 각 가수의 절대길이는 \(n\)이다. 이하에서는
+\[
+        \mathfrak l
+        =(\mathfrak G\times\overline{\mathfrak G})
+         \mathfrak Ze_1
+\]
+을 바탕에 둔다. 여기서
+\[
+        ze_1=e_1\bar z
+\]
+에 의해 \(\mathfrak Z\)와 \(\overline{\mathfrak Z}\) 사이의 한 특정한 동형사상을 고정한다.
+
+\noindent\textbf{3. \(e_1\mathfrak A_fe_1\)의 교차표현과 곱정리의 증명.} 1과 2에 따라 곱 \(\mathfrak K_r\times\overline{\mathfrak K}_r\)의 인자계들은
+\[
+        e_1\mathfrak A_fe_1=\mathfrak A
+\]
+의 한 교차표현의 인자계들과 동형이다.
+
+\noindent\textbf{정리 2.} \emph{다음이 성립한다.}
+\[
+\begin{gathered}
+\mathfrak A
+ =\widetilde{\mathfrak Z}
+  \mathbin{\cdot}\widetilde{\mathfrak G},\\
+\widetilde{\mathfrak Z}
+ =\mathfrak Ze_1
+ =\overline{\mathfrak Z}e_1,\\
+\widetilde{\mathfrak G}
+ =\{\ldots,e_1u_S\bar u_Se_1,\ldots\},
+\end{gathered}
+\]
+\emph{그리고}
+\[
+\begin{aligned}
+e_1u_S\bar u_Se_1\,
+e_1u_T\bar u_Te_1
+ &=e_1u_{ST}\bar u_{ST}e_1\,
+   a_{S,T}e_1\bar b_{S,T}e_1.
+\end{aligned}
+\]
+\emph{따라서 \(\tilde a_{S,T}=a_{S,T}e_1\), \(\tilde b_{S,T}=\bar b_{S,T}e_1\)로 두면 곱정리가 증명된다. \(\tilde a\)와 \(\tilde b\)는 같은 체 \(\widetilde{\mathfrak Z}\) 안에 있다.}
+
+\noindent\emph{증명.} \(e_1\)은 이 환의 단위원이 된다. \(\tilde z=ze_1\)의 켤레들은 \(\tilde z^Se_1\)로 주어진다. 그러므로 원소 \(u_S\bar u_Se_1\)들이 이 치환들을 유도함을 보이면 되고, 그러면 교차표현이 증명된다.
+
+\noindent\textbf{보조정리 1.} 다음이 성립한다.
+\[
+        e_1u_S\bar u_S
+        =u_S\bar u_Se_1
+        =e_1u_S\bar u_Se_1.
+\]
+
+\noindent\emph{증명.} 다음과 같이 두자.
+\[
+        u_S^{-1}e_1u_S=e^S,
+        \qquad\text{즉}\qquad
+        e_1u_S=u_Se^S.
+\]\srcfn{1}{이 정의에 따라 \(e_1=e^E\)이다.}
+그러면 \(e^S\)들은 \(e_1,e_2,\ldots,e_n\)의 켤레들을 모두 달린다. 이제 다음이 성립한다.\srcfn{2}{\(\sum a_i\bar A_i\bar u_R=\sum a_i\bar u_R\bar A_i^R=\bar u_R\sum(a_i^R)^{R^{-1}}\bar A_i^{-R}\)이기 때문이다.}
+\[
+        e_1\bar u_R=\bar u_Re^{R^{-1}}.
+        \tag{1}
+\]
+실제로 \(a_i\)가 \(\mathfrak Z\)의 임의의 기저를 달리고 \(\bar A_i\)가 이에 대한 \(\overline{\mathfrak Z}\)의 보완기저를 달리면
+\[
+        e_1=\sum_i a_i\bar A_i
+            =\sum_i a_i^R\bar A_i^R.
+\]
+따라서 \(a_i^R\)와 \(\bar A_i^R\)에 대해서도 같은 사실이 성립하고, 이로부터 \(e_1\bar u_R=\bar u_Re^{R^{-1}}\), 즉 (1)을 얻는다. (1)에서
+\[
+\begin{aligned}
+e_1u_S\bar u_S
+ &=u_Se^S\bar u_S\\
+ &=u_S\bar u_Se^{SS^{-1}}\\
+ &=u_S\bar u_Se_1
+\end{aligned}
+\]
+이 따라온다. 이로써 보조정리 1이 증명되었다.
+
+\noindent\textbf{보조정리 2.} 다음이 성립한다.
+\[
+        ze_1(e_1u_S\bar u_Se_1)
+        =e_1u_S\bar u_Se_1(z^Se_1).
+\]
+
+\noindent\emph{증명.} 실제로
+\[
+\begin{aligned}
+ze_1(e_1u_S\bar u_Se_1)
+ &=zu_S\bar u_Se_1
+      &&\text{(보조정리 1)}\\
+ &=u_Sz^S\bar u_Se_1\\
+ &=u_S\bar u_Se_1(z^Se_1)\\
+ &=b=e_1b.
+\end{aligned}
+\]
+여기서는 \(z\)가 \(\bar u\) 및 \(e_1\)과 교환함을 썼다. 이제 \(u'=u_S\bar u_Se_1\)로 두자. 보조정리 2는 \(u'\)가 \(\mathfrak Ze_1\)의 치환들을 유도한다는 뜻이므로 정리에서 적은 교차표현이 성립한다.
+
+\noindent\textbf{보조정리 3.} \emph{그 인자계는}
+\[
+        a_{S,T}e_1\,\bar b_{S,T}e_1
+\]
+\emph{과 같다.}
+
+\noindent\emph{증명.}
+\[
+\begin{aligned}
+e_1u_S\bar u_Se_1\,
+e_1u_T\bar u_Te_1
+ &=u_S\bar u_Su_T\bar u_Te_1\\
+ &=u_{ST}a_{S,T}\bar u_{ST}\bar b_{S,T}e_1\\
+ &=u_{ST}\bar u_{ST}a_{S,T}\bar b_{S,T}e_1\\
+ &=e_1u_{ST}\bar u_{ST}e_1\,
+   a_{S,T}e_1\,\bar b_{S,T}e_1.
+\end{aligned}
+\]
+이로써 2의 정리, 따라서 인자계의 곱정리가 증명되었다.
+
+\noindent\textbf{4. 연관된 인자계류들에 대한 곱정리.}
+\[
+        \{a_{S,T}\}\{b_{S,T}\}
+        =\{a_{S,T}b_{S,T}\}.
+\]
+이는 3에서 곧바로 따라온다. 실제로 새 생성원 \(v,\bar v\)로 옮겨가는 것은 \(v\bar ve_1\)으로 옮겨가는 것이기도 하다. 왜냐하면 \(u=vc\), \(\bar u=\bar v\bar d\)이면
+\[
+\begin{aligned}
+u\bar ue_1
+ &=vc\bar v\bar de_1\\
+ &=v\bar v c\bar de_1\\
+ &=v\bar ve_1 c\bar de_1
+\end{aligned}
+\]
+이기 때문이다.
+
+\noindent\textbf{5.} \(\{a\}\)가 \(\{\mathfrak K\}\)의 인자계이고 \(t\)가 \(\{\mathfrak K\}\)의 지수이면 \(\{a\}^t\)는 단위원류와 같다. 이는 \(\mathfrak G\)의 기약 교차표현의 차수가 \(t\)라는 사실에서 따라오며, §24 37쪽에서 \(p_{ik}\)의 표현 뒤에 주어진 슈어의 증명과 꼭 같다.
+
+\noindent\textbf{6.} \(\mathfrak Z\)를 분해체로 갖는 \(\{\mathfrak K\}\)들의 군 \(\mathscr K_{\mathfrak Z}\)와 연관된 인자계류 \(\{a_{S,T}\}\)들의 군은 서로 동형이다. §27의 구성에 따라 \(\{\mathfrak K\}\)와 \(\{a_{S,T}\}\) 사이에는 일대일 대응이 있고, 4에 따라 이 대응은 준동형이므로 동형이다. 특히 단위원류들은 서로 대응한다.
+
+\noindent\emph{교차곱이 \(\mathsf P\), 즉 중심 위의 행렬환과 같을 필요충분조건은 그 인자계가 단위원자계와 연관되는 것이다.}
+
+\subsection*{§ 29. 최소형 주종정리}
+
+\(\mathfrak K_r=\mathfrak Z\mathbin{\cdot}\mathfrak G\)를 교차곱이라 하고, \(\mathfrak G^*\)를 내부자기동형에 의해 \(\mathfrak Z\) 전체를 자기 자신으로 옮기는 모든 원소의 군이라 하자. 그 잉여류들을
+\[
+        \mathfrak Z^*u_E,
+        \quad
+        \mathfrak Z^*u_S,
+        \quad\ldots
+\]
+와 같이 쓴다.
+
+\noindent\textbf{정의.} \emph{최소형 주종} \(\mathscr H\)은 \(\mathfrak Z^*\) 위의 항등사상을 연장하는 \(\mathfrak G^*\)의 모든 군 자기동형으로 이루어진다. 이 명칭의 까닭은 순환체에 특수화하면 드러난다. §30을 보라.
+
+\noindent\textbf{정리.} \emph{주종의 각 자기동형은}
+\[
+        u_S\longmapsto
+        u_Sb^Sb^{-1}
+        =u_Sb^{S-1},
+        \qquad b\in\mathfrak Z
+\]
+\emph{꼴이고, 역으로 이러한 각 대응은 주종의 한 자기동형을 생성한다.}
+
+\noindent\emph{증명.} 군 자기동형이 \(\mathfrak Z\)의 모든 \(z\)에 대하여
+\[
+        u_S\longmapsto v_S,
+        \qquad
+        z\longmapsto z
+\]
+로 주어지고 곱들이 서로 대응한다고 하자. 그러면 이 자기동형은 대응
+\[
+        \sum_Su_Sc_{\lambda_S}
+        \longmapsto
+        \sum_Sv_Sc_{\lambda_S},
+        \qquad c_{\lambda_S}\in\mathfrak Z
+\]
+에 의해 \(\mathfrak K_r\)의 한 환 자기동형으로 확장된다. 그런데 그러한 모든 자기동형은 알려진 바와 같이 내부자기동형이다.
+
+\(b\)를 그 생성원이라 하자. 그러면
+\[
+        v_S=bu_Sb^{-1},
+        \qquad
+        z=bzb^{-1}.
+\]
+\(b\)는 모든 \(z\)와 교환하므로 \(\mathfrak Z\)에 속한다. 따라서
+\[
+        v_S=bu_Sb^{-1}=u_Sb^Sb^{-1}.
+\]
+역으로 \(b\in\mathfrak Z\)에 대하여 \(v_S=u_Sb^Sb^{-1}\)로 두면 \(v_S=bu_Sb^{-1}\)이다. 그러므로 이는 \(\mathfrak Z\)의 각 원소를 고정하는 \(\mathfrak K_r\)의 한 자기동형이며, 정의에 따라 \(\mathfrak G^*\) 전체도 자기 자신으로 옮긴다. 따라서 이는 주종의 자기동형이다.
+
+\subsection*{§ 30. 순환 분해체에의 특수화}
+
+특히 순환체 \(\mathfrak Z\)로 교차곱을 만들면 알려진 노름정리들을 해석할 수 있다. 먼저 다음이 성립한다.
+
+\noindent\textbf{정리 1.} \emph{\(\mathsf P\) 위의 고정된 순환 분해체 \(\mathfrak Z\)를 갖는 \(\{\mathfrak K\}\)들의 군 \(\mathscr K_{\mathfrak Z}\)는 군}
+\[
+        \mathsf P^*/N\mathfrak Z^*
+\]
+\emph{와 동형이다. 여기서 \(N\mathfrak Z^*\)는 \(\mathfrak Z\)의 모든 \(z\ne0\)의 노름 \(Nz\)들로 이루어진 군이다.}
+
+\noindent\emph{증명.} 증명은 교차표현을 정규화하고 그에 관한 몇 가지 보조정리를 쓰는 데 바탕을 둔다.
+
+\noindent\textbf{정의.} 순환 교차표현이
+\[
+        \mathfrak K_r
+        =\mathfrak Z+\mathfrak Zu+
+         \cdots+
+         \mathfrak Zu^{n-1}
+\]
+꼴이고
+\[
+        zu=uz^S,
+        \qquad
+        u^n=a
+\]
+이면 이를 \emph{정규화되었다}고 한다. 여기서 \(S\)는 \(\mathfrak G\)의 한 생성원이다. 즉 \(r=0,\ldots,n-1\)에 대하여 더 일반적인 \(u_{S^r}=b_ru^r\), \(b_r\in\mathfrak Z\) 대신 \(u_{S^r}=u^r\)로 둔다.
+
+\noindent\textbf{보조정리 1.} \emph{순환 교차표현은 언제나 정규화되었다고 가정할 수 있다. 이때 \(a\in\mathsf P\)이고, \(\mathsf P\)의 각 \(a\)는 그러한 표현을 준다.}
+
+\noindent\emph{증명.} 첫째 주장은 명백하다. 실제로 \(u^{-1}zu=z^S\)에서
+\[
+        u^{-r}zu^r=z^{S^r}
+\]
+이 따라오므로 \(u^r\)가 치환 \(z\mapsto z^{S^r}\)을 생성한다. 또 \(u^n\)은 항등사상 \(z\mapsto z^{S^n}\)을 유도하므로
+\[
+        u^n=a,
+        \qquad
+        a\in\mathfrak Z.
+\]
+그런데 \(u^n\)은 모든 \(u^r\)과 교환하므로 \(a\)도 그러하고, 따라서 \(a^{S^r}=a\)이다. 그러므로 \(a\in\mathsf P\)이다.
+
+따라서 \(a\)가 유일하게 본질적인 곱셈상수이다. 결합조건들은 아무 내용도 갖지 않게 되며, \(\mathsf P\)의 각 \(a\)는 한 결합계를, 따라서 한 \(\mathfrak K_r\)를 준다.
+
+\noindent\textbf{보조정리 2.} \emph{연관된 인자계들의 전체 류 \(\{a_{S,T}\}\) 대신 그 류에 들어 있는 정규화된 인자계들, 즉 정규화된 표현에서 생기는 인자계들만을 고찰해도 충분하다. 이 부분집합을 정규화된 류라 하자. 전체 류들의 군은 정규화된 류들의 군과 동형이다.}
+
+\noindent\emph{증명.} 보조정리 1에 따라 어느 정규화된 류도 비어 있지 않으므로 대응은 일대일이다. 연산은 임의의 대표원으로 정의되므로 이전과 같다.
+
+\noindent\textbf{보조정리 3.} \emph{정규화된 인자계들의 군은 곱셈군 \(\mathsf P^*\)와 동형이고, 정규화된 류들의 군은}
+\[
+        \mathsf P^*/N\mathfrak Z^*
+\]
+\emph{와 동형이다.}
+
+\noindent\emph{증명.} 보조정리 1에 따라 각 정규화된 인자계는
+\[
+        [1,1,\ldots,a,a,\ldots]
+\]
+꼴이다. 실제로
+\[
+        u^\nu u^\mu=u^{\nu+\mu}
+        \qquad(\nu+\mu<n),
+\]
+그리고
+\[
+        u^\nu u^\mu=au^\varrho
+        \qquad
+        (\nu+\mu=n+\varrho,
+         \ 0\leq\varrho\leq n-2).
+\]
+대응
+\[
+\begin{gathered}
+[1,\ldots,a,a,\ldots]\longmapsto a,\\
+[1,1,\ldots,b,b,\ldots]\longmapsto b,\\
+[1,\ldots,ab,\ldots]\longmapsto ab
+\end{gathered}
+\]
+은 \(\mathsf P^*\) 위로의 군 동형사상이다. 다시 보조정리 1에 따라 \(a\)가 \(\mathsf P^*\)의 모든 원소를 달리기 때문이다.
+
+서로 연관된 두 정규화된 인자계는 \(c\in\mathfrak Z\)에 대한 변환
+\[
+        v=uc
+\]
+으로 서로 옮겨간다. 그런데
+\[
+        v=uc,
+        \qquad
+        v^2=u^2c^Sc,
+\]
+그리고
+\[
+        v^r=u^r c^{S^{r-1}}c^{S^{r-2}}\cdots c,
+        \qquad
+        v^n=u^nN(c).
+\]
+따라서 \(u^n=a\)이면 \(v^n=aN(c)\)이다. 그러므로 한 정규화된 류는
+\[
+        [1,\ldots,aN(c),aN(c),\ldots]
+\]
+꼴의 인자계들로 이루어지며, 여기서 \(c\)는 \(\mathfrak Z\)의 모든 \(0\)이 아닌 원소를 달린다. 이로써 보조정리의 둘째 주장이 증명되었다.
+
+보조정리 2와 3, 그리고 그곳의 \(\{\mathfrak K\}\)와 인자계류 \(\{a_{S,T}\}\) 사이의 동형을 함께 쓰면 위 정리 1이 따라온다.
+
+\noindent\textbf{정리 2.} \emph{최소형 주종의 군은}
+\[
+        N(c)=1
+\]
+\emph{을 만족하는 \(\mathfrak Z\)-원소 \(c\)들의 군과 동형이다. 따라서 \(N(c)=1\)이면 \(\mathfrak Z\)의 한 \(b\ne0\)가 존재하여}
+\[
+        c=b^Sb^{-1}=b^{S-1}
+\]
+\emph{이다. 오른쪽은 기호적 \((S-1)\)제곱이다.}
+
+\noindent\emph{증명.} 보조정리 3의 증명에서 \(N(c)=1\)이라는 것은 변환 \(v=uc\)가 주종의 한 자기동형을 나타낸다는 것과 같은 조건임을 얻었다. 서로 다른 \(c\)들은 서로 다른 자기동형들에 대응하고 그 역도 성립하며, 곱에는 곱이 대응한다.
+
+\noindent\textbf{논평.} 정리 2는 주종이라는 명칭을 정당화한다. 그 뜻에 맞추어 몫군
+\[
+        \mathfrak Z^*/\mathscr H
+        \quad(\mathscr H=\text{주종})
+        \cong
+        \mathfrak Z^*/\mathfrak Z^{*S-1}
+\]
+을 최소형 종들의 군이라 부를 수 있다. 이 군은 \(N(\mathfrak Z^*)\)와 동형이다. 따라서 정리 1과 함께 쓰면
+\[
+\begin{aligned}
+\text{최소형 종군}
+ &=\mathfrak Z^*/\mathscr H
+  \cong\mathfrak Z^*/\mathfrak Z^{*S-1}
+  \cong N(\mathfrak Z^*)\\
+ &=\mathfrak Z\text{에 속하는 }\{\mathfrak K\}\text{들의 군}
+  =\mathscr K_{\mathfrak Z}
+  \cong\mathsf P^*/N(\mathfrak Z^*)
+\end{aligned}
+\]
+이다.
+
+\subsection*{§ 31. 순환 특수 경우의 응용}
+
+순환 교차표현은 §20에서 증명한 두 정리, 곧 모든 유한체가 가환이라는 정리와 실수체의 진정한 비가환 체 확대는 사원수체뿐이라는 정리에 대한 새 증명을 준다. 이 증명들은 최소형 유체론의 증명이라고 부를 수도 있을 것이다.
+
+\noindent\textbf{1. 유한개의 원소로 이루어진 모든 체는 가환이다.} (§20 정리 10.)
+
+증명은 가환 유한체, 즉 갈루아체에 관한 다음 두 가지 잘 알려진 사실에 바탕을 둔다.
+
+\noindent\textbf{1.} \emph{갈루아체는 그 각 부분체 위에서 순환체이다.}
+
+\noindent\textbf{2.} \emph{\(\mathfrak Z\)가 갈루아체, 따라서 \(\mathsf P\) 위의 순환체이면 \(\mathsf P\)의 각 원소는 어떤 \(\mathfrak Z\)-원소의 노름이다. 즉}
+\[
+        \mathsf P^*=N(\mathfrak Z^*).
+\]
+
+이제 \(\mathfrak K\)가 유한하고 \(\mathsf P\)가 그 중심이며 \(\mathfrak Z\)가 한 순환 분해체라고 하자. 그러면 §30 끝과 위 1에 따라 \(\mathfrak Z\)에 속하는 \(\{\mathfrak K\}\)들의 군 \(\mathscr K_{\mathfrak Z}\)는
+\[
+        \mathsf P^*/N\mathfrak Z^*
+\]
+와 동형이다. 따라서 2에 의해 이는 단위원 \(\{\mathsf P\}\)와 같다. 이는 중심이 \(\mathsf P\)이면서 \(\mathsf P\)와 다른 체는 없다는 뜻이다. 곧 \(\mathfrak K=\mathsf P\)이다.
+
+\noindent\textbf{2. 실수체 \(\mathsf P\) 위의 진정한 비가환 체 확대는 사원수체뿐이다.} (§20 정리 9.)
+
+\noindent\emph{증명.} \(\mathsf P\)는 중심이어야 한다. 실제로 \(\mathsf P\)의 가환 확대체로는 복소수체 \(\mathfrak Z\)만 있고, \(\mathfrak Z\)는 대수적으로 닫혀 있으므로 이를 중심으로 갖는 비가환 체 확대는 없다. 동시에 분해체로도 \(\mathfrak Z\)만을 생각하면 되고, \(\mathfrak Z\)는 \(\mathsf P\) 위의 순환체이다. 또한 모든 양수는 노름이므로 군
+\[
+        \mathsf P^*/N\mathfrak Z^*
+\]
+의 위수는 2이다. 따라서 \(\{\mathsf P\}\) 말고 오직 하나의 류 \(\{\mathfrak K\}\)만 있으며, 이것이 사원수체이다. 동시에 연관된 인자계의 류에서 \(-1\)을 정규화된 인자계로 택하면 정규형을 얻는다. 실제로
+\[
+        \mathfrak K=\mathfrak Z+\mathfrak Zu,
+        \qquad
+        u^2=-1.
+\]
+따라서
+\[
+        \mathfrak K
+        =\mathsf P+\mathsf Pi+(\mathsf P+\mathsf Pi)u,
+        \qquad
+        i^2=-1,
+        \qquad
+        u^2=-1.
+\]
+
+\noindent\textbf{1에 대한 논평.} 잘 알려진 사실 2도 §30 끝을 바탕으로 다음과 같이 증명할 수 있다. \(\mathsf P^*\)의 모든 원소, 그리고 그 원소들만이 주종의 항등자기동형을 생성하며 \(S-1\)을 적용하면 단위원으로 옮겨가므로
+\[
+        \mathscr H=\mathfrak Z^{*S-1}
+        \cong\mathfrak Z^*/\mathsf P^*.
+\]
+따라서 \(\mathfrak Z\)가 유한이면 \(\mathscr H\)의 원소 수는 \(\mathfrak Z^*\)에서 \(\mathsf P^*\)의 지수와 같다. 그러므로 \(\mathfrak Z^*/\mathscr H\)의 원소 수는 \(\mathsf P^*\)의 원소 수와 같고, 따라서
+\[
+        N(\mathfrak Z^*)
+        =\mathfrak Z^*/\mathscr H
+\]
+에 대해서도 마찬가지이다. 결국
+\[
+        \mathsf P^*=N(\mathfrak Z^*).
+\]
+(종의 수가 애매류의 수와 같다는 명제와 비교하라. 다만 이 수론적 표현에는 어디에서나 ``최소형''이라는 말을 덧붙여야 한다.)
+
+\noindent\textbf{3.} \emph{\(\mathsf P\)가 \(p\)-진 바탕체이고 \(\mathfrak Z\)가 \(\mathsf P\) 위의 \(n\)차 순환체이면, \(\mathfrak Z\)에 속하는 \(\{\mathfrak K\}\)들의 군 \(\mathscr K_{\mathfrak Z}\)는 \(\mathfrak Z\)의 갈루아군과 동형이다.}
+
+이는 §30 끝과
+\[
+        \mathsf P^*/N\mathfrak Z^*
+        \cong\mathfrak G
+\]
+라고 말하는 국소 유체론에서 곧바로 따라온다.
+
+\noindent\textbf{3에 대한 논평.} 이로부터 \(\mathscr K_{\mathfrak Z}\)의 원소들의 군위수, 즉 \(\{\mathfrak K\}\)의 지수가 그 인덱스와 같아짐이 따라온다. 실제로 \(\mathscr K_{\mathfrak Z}\)의 한 생성원의 지수는 \(n\)이다. 따라서 그 인덱스도 \(n\)의 약수이면서 지수의 배수이므로 \(n\)이다. 그러므로 군 \(\mathscr K_{\mathfrak Z}\)는 인덱스가 \(n\)의 약수이고 \(\mathfrak Z\)가 분해체인 류들만을 포함한다. 더 나아가 H. 하세는 Math. Ann. 104에서 \(\mathscr K_{\mathfrak Z}\)가 인덱스가 \(n\)의 약수인 모든 류 \(\{\mathfrak K\}\)로 이루어짐을 보였다. 따라서 \(p\)-진 \(\mathsf P\) 위의 \(n\)차 순환 분해체 \(\mathfrak Z\)는 어느 것이나 같은 체류군 \(\mathscr K_{\mathfrak Z}\)를 준다.
+
+다음 두 사실,
+
+\noindent\textbf{1.} \(\mathsf P\) 위의 모든 \(\{\mathfrak K\}\) 가운데 인덱스가 \(n\)의 약수인 것들의 군은 위수 \(n\)인 순환군이라는 사실,
+
+\noindent\textbf{2.} \(\mathsf P\) 위의 각 \(n\)차 순환 분해체가 \(\{\mathfrak K\}\)들의 전체 군을 생성한다는 사실은
+
+국소 유체론의 역정리의 본질적인 내용으로 볼 수 있다.
+
+\clearpage

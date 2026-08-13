@@ -1,0 +1,1167 @@
+% Korean Noether paper 19 — fresh producer translation from ED0005.
+% Initial translation source: ED0005 cumulative lines 11243--12397.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Producer state only; independent checking and certification remain external.
+
+\begin{center}
+{\Large\bfseries 환영역의 아이디얼론.}\par
+\vspace{0.7em}
+지은이\par
+\vspace{0.25em}
+괴팅겐의 에미 뇌터.\par
+\vspace{0.9em}
+\rule{4em}{0.4pt}\par
+\vspace{0.9em}
+{\large\bfseries 목차.}
+\end{center}
+\noindent 서론.\par
+\noindent\hangindent=3.0em\hangafter=1 \S~1. \textbf{환영역, 아이디얼, 유한조건.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~2. \textbf{한 아이디얼을 유한개의 기약아이디얼의 최소공배수로 나타내기.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~3. \textbf{기약아이디얼로의 서로 다른 두 분해에서 성분수의 일치.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~4. \textbf{으뜸아이디얼. 기약아이디얼로의 서로 다른 두 분해에서 대응 소아이디얼의 유일성.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~5. \textbf{한 아이디얼을 극대 으뜸아이디얼들의 최소공배수로 나타내기. 대응 소아이디얼의 유일성.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~6. \textbf{한 아이디얼을 상대소-기약 아이디얼들의 최소공배수로 유일하게 나타내기.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~7. \textbf{고립아이디얼의 유일성.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~8. \textbf{한 아이디얼을 서로소-기약 아이디얼들의 곱으로 유일하게 나타내기.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~9. \textbf{모듈로의 고찰 확장. 기약모듈로의 분해에서 성분수의 일치.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~10. \textbf{다항식영역의 특수한 경우.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~11. \textbf{수론과 미분식 이론의 예.}\par
+\noindent\hangindent=3.0em\hangafter=1 \S~12. \textbf{초등인자론의 예.}\par
+
+\begin{center}\textbf{서론.}\end{center}
+이 논문의 내용은 \emph{유리정수의 분해정리, 또는 대수적 수체에서 아이디얼의 분해정리를 임의의 정역, 더 일반적으로는 환영역의 아이디얼로 옮기는 것}이다. 이 옮김을 이해하기 위해 먼저 유리정수의 분해정리를 통상적인 정식화와 조금 다른 꼴로 적어 두자.
+
+식
+\[
+ a=p_1^{\varrho_1}p_2^{\varrho_2}\cdots p_\sigma^{\varrho_\sigma}=q_1q_2\cdots q_\sigma
+\]
+에서 소수의 거듭제곱 $q_i$들을 분해의 성분으로 보면, 이 성분들은 다음과 같은 특징을 갖는다.
+
+1. 이들은 \emph{쌍마다 서로소}이다. 그러나 어느 $q_i$도 쌍마다 서로소인 수들의 곱으로 나타낼 수 없으므로, 이 뜻에서 기약성도 성립한다. 쌍마다 서로소라는 사실에서 곱 $q_1\cdots q_\sigma$가 최소공배수 $[q_1\cdots q_\sigma]$와 같다는 것도 따른다.
+
+2. 임의의 두 성분 $q_i,q_k$는 \emph{상대소}이다. 곧 $bq_i$가 $q_k$로 나누어지면 $b$가 $q_k$로 나누어진다. 이 뜻에서도 기약성이 성립한다.
+
+3. 각 $q$는 \emph{으뜸}이다. 곧 곱 $b\cdot c$가 $q$로 나누어지지만 $b$는 나누어지지 않으면, $c$의 어떤 거듭제곱\footnote{이 거듭제곱을 언제나 첫째 거듭제곱으로 잡을 수 있으면, 잘 알려진 대로 소수를 얻는다.}이 $q$로 나누어진다. 더 나아가 서로 다른 두 $q$의 곱은 더 이상 으뜸이 아니므로, 이 표현은 \emph{극대 으뜸성분들}에 의한 표현이다. 극대 으뜸성분들로의 분해에 관해서도 $q$들은 기약이다.
+
+4. 각 $q$는 두 진약수의 최소공배수로 나타낼 수 없다는 뜻에서 \emph{기약}이다.
+
+이 으뜸수 $q$와 소수 $p$의 관계는 다음과 같다. 각 $q$마다 $q$의 약수이면서 어떤 거듭제곱이 $q$로 나누어지는 $p$가 하나, 그리고 부호를 제외하면 오직 하나 존재한다. 이것이 대응 소수이다. $p^\varrho$가 그런 거듭제곱 가운데 가장 낮은 것, 곧 $\varrho$가 $q$의 지수이면, 여기서는 특히 $p^\varrho=q$이다. 이제 \emph{유일성 정리}는 다음과 같이 말할 수 있다.
+
+\emph{한 유리정수를 기약인 극대 으뜸성분 $q$들로 나타내는 서로 다른 두 분해에서는 성분수, 대응 소수들(부호를 제외하고), 그리고 지수들이 일치한다. $p^\varrho=q$이므로 $q$들 자체도 부호를 제외하고 일치한다.}
+
+수 대신 그 수에서 유도되는 아이디얼, 곧 $a$로 나누어지는 모든 수를 고찰하면 부호에서 생기는 부정성이 사라진다는 것은 잘 알려져 있다. 그러면 같은 정식화가 (유한) 대수적 수체의 아이디얼을 소아이디얼의 거듭제곱으로 유일하게 분해하는 정리에 그대로 적용된다.
+
+이하에서는 (\S~1) 각 아이디얼이 유한 아이디얼기저를 갖는다는 \emph{유한조건}만을 만족하는 일반 환영역을 바탕으로 삼는다. 이러한 유한조건이 없으면 기약아이디얼과 소아이디얼이 존재하지 않을 수도 있다. 실제로 \emph{모든 대수적 정수}의 영역에는 \emph{소아이디얼로의 분해가 없다}.
+
+성분 $q$의 네 가지 특징에 대응하여 일반적으로는 \emph{서로 구별되는 네 분해가 존재하며, 각 분해는 앞의 분해를 더 세분하여 얻어짐}이 드러난다. 서로소-기약 아이디얼로의 분해는 곱표현이고, 나머지 세 분해는 최소공배수에 의한 축약표현(\S~2)이다. 으뜸아이디얼과 대응 소아이디얼 사이의 \emph{관계}도 유지된다. 기약아이디얼도 으뜸아이디얼이다. 각 으뜸아이디얼 $\ideal Q$에는 $\ideal Q$의 약수이고 그 어떤 거듭제곱이 $\ideal Q$로 나누어지는 대응 소아이디얼 $\ideal P$가 유일하게 정해진다. $\ideal P^\varrho$가 그러한 거듭제곱 가운데 가장 낮은 것, 곧 $\varrho$가 $\ideal Q$의 지수라고 해도 여기서는 $\ideal P^\varrho$와 $\ideal Q$가 일치할 필요가 없다. 이제 \emph{유일성 정리}는 다음과 같이 말한다.
+
+\emph{분해 1과 2는 유일하다. 분해 3 또는 4의 서로 다른 두 표현에서는 성분수와 대응 소아이디얼들이 일치한다}\footnote{아마 지수들도 일치하며, 더 일반적으로 대응 성분들이 동형이라는 사실도 성립할 것이다.}\emph{. 성분들 가운데 나타나는 고립아이디얼(\S~7)은 유일하게 정해진다.}
+
+분해정리를 증명하기 위해 먼저 유한조건에서 데데킨트가 유한 수모듈에 대하여 처음 말한 ``유한사슬 정리''를 이끌어 내고, 그로부터 각 아이디얼을 유한개의 기약아이디얼의 최소공배수로 나타내는 분해 4를 얻는다. 한 성분의 가약성 개념을 바꾸어 쓰면 \emph{기약아이디얼로의 분해 4에 관한 기본 유일성 정리}가 나온다. 이어서 매번 유한개의 성분을 묶어 나머지 분해들로 올라가며, 그 유일성 정리들은 분해 4의 유일성 정리에서 따라온다.
+
+끝으로 (\S~9) 유한개의 기약성분에 의한 표현은 더 약한 가정 아래에서도 성립함을 보인다. 환영역의 가환성은 필요하지 않고, 아이디얼 대신 그 영역에 관한 모듈을 고찰해도 충분하다. 이 더 일반적인 경우에도 서로 다른 두 분해에서 성분수는 일치한다. 반면 소와 으뜸이라는 개념은 가환성과 아이디얼 개념에 매여 있다. 그러나 비가환 영역의 아이디얼에서는 서로소라는 개념이 그대로 남는다.
+
+실제로 서로 구별되는 네 분해가 나타나는 가장 간단한 환영역은 임의의 복소수 계수를 갖는 $n$변수 다항식 전체의 영역이다. 여기서는 각 분해를 대수적 형상의 거동으로 무리적으로 해석할 수 있고, 대응 소아이디얼에 관한 유일성 정리는 대수적 형상을 기약성분들로 유일하게 분해할 수 있다는 소거이론의 기본정리에 대응한다. 더 일반적인 예는 다항식으로 이루어진 모든 유한 정역이다(\S~10). 그러나 모든 짝수의 단순한 영역, 더 일반적으로 한 고정된 수로 나누어지는 모든 수의 영역에서도 이미 일부 분리된 분해의 예를 볼 수 있다(\S~11). 비가환 영역의 아이디얼론의 한 예는 초등인자론(\S~12)이 준다. 거기서는 아이디얼 또는 클래스가 기약아이디얼 또는 기약클래스로 유일하게 분해된다. 이 기약클래스들은 초등인자의 기약성분을 완전히 특징짓고, 보통의 초등인자론이 성립하지 않는 영역에서는 그 등가물로 볼 수도 있을 것이다.
+
+기존 문헌에 관해서는 다음을 말해 둘 필요가 있다. 임의의 복소수 계수 또는 정수 계수를 갖는 다항식영역에서 극대 으뜸아이디얼로의 분해는 라스커가 제시했고, 매콜리가 몇몇 점에서 더 발전시켰다.\footnote{E. Lasker, \emph{Zur Theorie der Moduln und Ideale}. Math. Ann. 60 (1905), S. 20, Satz VII und XIII. -- F. S. Macaulay, \emph{On the Resolution of a given Modular System into Primary Systems including some Properties of Hilbert Numbers}. Math. Ann. 74 (1913), S. 66.} 두 사람은 모두 소거이론, 곧 다항식이 기약다항식들의 곱으로 유일하게 표현된다는 사실을 이용한다. 그러나 대수적 수체의 아이디얼론에서 짐작할 수 있고 이 논문이 보여 주듯, 아이디얼의 분해정리들은 실제로 이 가정과 무관하다. 라스커와 매콜리는 으뜸아이디얼도 소거이론의 개념들을 바탕으로 정의한다.
+
+기약아이디얼로의 분해와 상대소-기약 아이디얼로의 분해는 다항식영역에 대해서도 문헌에서 주목되지 않은 듯하다. 매콜리에게서 고립된 으뜸아이디얼의 유일성에 관한 한 논평만을 찾을 수 있다.
+
+다항식영역에서 서로소-기약 아이디얼로의 분해는 슈마이들러\footnote{W. Schmeidler, \emph{Über Moduln und Gruppen hyperkomplexer Größen}. Math. Zeitschr. 3 (1919), S. 29.}가 유한성 증명에 소거이론을 사용하여 제시했다. 그러나 거기서는 유일성 정리가 아이디얼 자체가 아니라 아이디얼의 클래스에 대해서만 진술된다. 아이디얼 자체에 관한 이 유일성 정리는 비가환 다항식영역의 아이디얼을 다룬 공동논문\footnote{E. Noether -- W. Schmeidler, \emph{Moduln in nichtkommutativen Bereichen, insbesondere aus Differential- und Differenzenausdrücken}. Math. Zeitschr. 8 (1920), S. 1.}에 있다. 그곳에서는 유한 아이디얼기저만을 사용하므로 정리와 방법은 일반 환영역에서도 유지되며, 이 논문에 의해 성분수의 일치라는 점에서 더 날카롭게 만들 수 있다(\S~11). 이 논문의 고찰은 두 앞선 논문의 개념구성을 크게 일반화하고 발전시킨 것이다. 두 논문의 핵심은 최소공배수에 의한 표현에서 잉여류계의 가법적 분해로 넘어가는 데 있다. 여기서는 서술을 간단히 하려고 다시 최소공배수를 사용한다. 그러면 가법적 분해에는 가약성 개념을 보충부분의 성질로 바꾸어 쓰는 것이 대응한다(\S~3). 그러나 본질적으로 그 공동논문과 같은 고찰을 거치면, 여기에 제시한 모든 정리를 잉여류계와 어떤 부분계의 가법적 분해정리로 볼 수도 있다. 이 잉여류계는 처음에 바탕으로 삼은 환과 똑같이 일반적인 환을 이룬다. 실제로 임의의 환은 환원소들 사이의 모든 항등관계 전체에 대응하는 아이디얼의 잉여류계로 볼 수 있다. 또는 나머지 관계들을 영역 안에서도 성립한다고 가정하면, 이 관계들의 한 부분계에 대응하는 아이디얼의 잉여류계로도 볼 수 있다.
+
+이 논평은 프렝켈의 연구들이 어디에 놓이는지도 보여 준다.\footnote{A. Fraenkel, \emph{Über die Teiler der Null und die Zerlegung von Ringen}. J. f. M. 145 (1914), S. 139. \emph{Über gewisse Teilbereiche und Erweiterungen von Ringen}. Habilitationsschrift, Leipzig, Teubner, 1916. \emph{Über einfache Erweiterungen zerlegbarer Ringe}. J. f. M. 151 (1920), S. 121.} 프렝켈은 네 분해가 일치하도록 제한조건(정칙원소의 존재, 그 원소들에 의한 나눗셈, 분해가능성 조건)을 부과한 환의 가법적 분해를 고찰한다. 네 분해가 일치하기 때문에, 아이디얼이 유한개의 진약수만을 가져야 한다는 그의 유한조건도 --- 그는 일부 경우 이 조건을 쓰지 않기도 한다 --- 우리의 조건보다 더 강한 제한이 아니다. 프렝켈의 출발점은 본질적으로 대수적인 다른 목표들 때문에 정해진 것이며, 그는 대수적 확대를 통해 제한조건이 더 적은 일반적인 환들에 이른다.
+
+\begin{center}
+\S~1.\\[0.25em]
+\textbf{환영역, 아이디얼, 유한조건.}
+\end{center}
+
+\textbf{1.} 바탕 영역 $\Sigma$는 추상적으로 정의된 (가환) \emph{환}이라 하자.\footnote{이 정의는 프렝켈의 교수자격논문에서 제한조건 6, I, II를 빼고 가져온 것이다. 그 대신 덧셈의 교환법칙을 포함해야 했다. 따라서 이는 곱셈의 가역성을 제외한 체의 정의법칙들이다.} 곧 $\Sigma$는 원소 $a,b,c,\ldots,f,g,h,\ldots$의 계이며, 그 안에는 통상적인 조건들을 만족하는 한 관계가 \emph{등식}으로 정의되어 있다. 또 \emph{덧셈}과 \emph{곱셈}이라는 \emph{두} 연산(결합방식)에 의해 임의의 두 환원소 $a,b$에서 각각 합 $a+b$와 곱 $a\cdot b$라는 제3의 원소가 언제나 유일하게 얻어진다. \emph{환}과, 그 밖에는 \emph{완전히} 임의적인 이 \emph{연산들}은 다음 \emph{법칙들}을 만족해야 한다.
+\begin{enumerate}
+\item \emph{덧셈의 결합법칙: $(a+b)+c=a+(b+c)$.}
+\item \emph{덧셈의 교환법칙: $a+b=b+a$.}
+\item \emph{곱셈의 결합법칙: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$.}
+\item \emph{곱셈의 교환법칙: $a\cdot b=b\cdot a$.}
+\item \emph{분배법칙: $a\cdot(b+c)=a\cdot b+a\cdot c$.}
+\item \emph{제한 없이 유일한 뺄셈의 법칙.} 방정식 $a+x=b$를 만족하는 원소 $x$가 $\Sigma$에 오직 하나 존재한다. (이를 $x=b-a$로 나타낸다.)
+\end{enumerate}
+이 성질들에서 영원의 존재가 따른다. 그러나 환에 단위원이 있을 필요는 없으며, 어느 인자도 영이 아닌데 두 원소의 곱이 영이 될 수도 있다. 곱이 영이면 언제나 한 인자가 영이고, 그뿐 아니라 단위원도 갖는 환을 \emph{진정한 정역}이라 한다. 유한합 $a+a+\cdots+a$에는 통상적인 약기호 $na$를 도입한다. 이때 \emph{정수 $n$은 환원소가 아니라 단지 약기호로 보아야 하며}, $a=1\cdot a$, $na+a=(n+1)a$로 재귀적으로 정의된다.
+
+\textbf{2.} $\Sigma$의 한 \emph{아이디얼} $\ideal M$\footnote{아이디얼은 대문자 독일체로 나타낸다. $\ideal M$은 보통 ``모듈'' 또는 형식모듈이라 불리는 다항식 아이디얼의 예를 떠올리게 하려고 택한 기호이다. 덧붙여 \S\S~1--3에서는 아이디얼 성질이 아니라 모듈 성질만을 사용한다. 이에 관해서는 \S~9를 보라.}이란 다음 두 조건을 만족하는 $\Sigma$ 원소들의 계를 뜻한다.
+\begin{enumerate}
+\item \emph{$\ideal M$이 $f$를 포함하고 $a$가 $\Sigma$의 임의의 원소이면, $\ideal M$은 $a\cdot f$도 포함한다.}
+\item \emph{$\ideal M$이 $f,g$를 포함하면 차 $f-g$도 포함한다.} 따라서 $f$와 함께 모든 정수 $n$에 대한 $nf$도 포함한다.
+\end{enumerate}
+$f$가 $\ideal M$의 원소이면 통상처럼 $f\equiv0(\ideal M)$으로 나타내고, \emph{$f$가 $\ideal M$로 나누어진다}고 말한다. $\ideal N$의 모든 원소가 동시에 $\ideal M$의 원소, 곧 $\ideal M$로 나누어질 때 \emph{$\ideal N$이 $\ideal M$로 나누어진다}고 말하며 $\ideal N\equiv0(\ideal M)$으로 쓴다. $\ideal M$이 $\ideal N$에 없는 원소를 포함하여 역으로 $\ideal N$으로 나누어지지 않으면, $\ideal M$을 $\ideal N$의 \emph{진약수}라 한다. $\ideal N\equiv0(\ideal M)$과 $\ideal M\equiv0(\ideal N)$에서 $\ideal N=\ideal M$이 따른다.
+
+그 밖의 익숙한 개념들도 문자 그대로 유지된다. 두 아이디얼 $\ideal A,\ideal B$의 \emph{최대공약아이디얼} $\ideal D=(\ideal A,\ideal B)$는 $a$가 $\ideal A$의 모든 원소를, $b$가 $\ideal B$의 모든 원소를 돌 때 $a+b$ 꼴로 나타나는 원소 전체를 뜻한다. $\ideal D$는 다시 아이디얼이다. 무한히 많은 아이디얼의 최대공약아이디얼 $\ideal D=(\ideal A_1,\ideal A_2,\ldots,\ideal A_\nu,\ldots)$도 매번 유한개의 아이디얼에서 택한 원소들의 합 $d=a_{i_1}+a_{i_2}+\cdots+a_{i_n}$으로 나타나는 모든 원소 $d$의 전체로 정의된다. 여기서도 $\ideal D$는 다시 아이디얼이다.
+
+특히 아이디얼 $\ideal M$이 유한개의 원소 $f_1,f_2,\ldots,f_\varrho$를 포함하고
+\[
+ \ideal M=(f_1\ldots f_\varrho);\qquad \text{곧}\qquad
+ f=a_1f_1+\cdots+a_\varrho f_\varrho+n_1f_1+\cdots+n_\varrho f_\varrho
+\]
+가 모든 $f\equiv0(\ideal M)$에 대하여 성립한다고 하자. 여기서 $a_i$들은 \emph{환영역}의 원소이고 $n_i$들은 정수이다. 그러면 $\ideal M$을 \emph{유한아이디얼}, $f_1,\ldots,f_\varrho$를 한 \emph{아이디얼기저}라 한다.
+
+\emph{이하에서는 다음 유한조건을 만족하는 환 $\Sigma$만을 바탕으로 삼는다. $\Sigma$의 각 아이디얼은 유한아이디얼, 곧 아이디얼기저를 갖는 아이디얼이다.}
+
+\textbf{3.} 유한조건에서 이후의 모든 고찰의 바탕이 되는 다음 정리가 바로 따른다.
+
+\textbf{정리 I (유한사슬 정리).}\footnote{데데킨트가 수모듈에 대하여 처음 진술하였다. \emph{Zahlentheorie}, Suppl. XI, \S~172, Satz VIII (4판). 우리의 증명과 ``사슬''이라는 명칭은 그곳에서 가져왔다. 다항식 아이디얼에 대해서는 라스커, 앞의 글 56쪽(보조정리)에 있다. 그러나 두 경우 모두 이 정리는 산발적으로만 쓰였다. 우리의 적용은 모두 선택공리에 바탕을 둔다.} \emph{$\ideal M,\ideal M_1,\ideal M_2,\ldots,\ideal M_\nu,\ldots$가 $\Sigma$의 가산무한 아이디얼계이고 각 아이디얼이 바로 다음 아이디얼로 나누어진다면, 어떤 유한한 지수 $n$부터 모든 아이디얼은 동일하다: $\ideal M_n=\ideal M_{n+1}=\cdots$. 달리 말하면 $\ideal M,\ideal M_1,\ideal M_2,\ldots,\ideal M_s,\ldots$가 각 아이디얼이 바로 앞 아이디얼의 진약수인 단순순서 아이디얼사슬을 이루면, 이 사슬은 유한 단계에서 끝난다.}
+
+실제로 $\ideal D=(\ideal M_1,\ideal M_2,\ldots,\ideal M_\nu,\ldots)$를 이 계의 최대공약아이디얼이라 하고, 유한조건에 의해 언제나 존재하는 $\ideal D$의 기저를 $f_1,\ldots,f_k$라 하자. 나눗셈 가정에 따라 $\ideal D$의 각 원소는 동시에 사슬의 한 아이디얼에 속한다. 실제로
+\[
+ f=g+h,\qquad g\equiv0(\ideal M_r),\qquad h\equiv0(\ideal M_s),\qquad (r\le s)
+\]
+이면 $g\equiv0(\ideal M_s)$이고, 따라서 $f\equiv0(\ideal M_s)$이다. $f$가 더 많은 성분의 합일 때도 마찬가지이다. 그러므로 어떤 유한한 지수 $n$이 존재하여
+\[
+ f_1\equiv0(\ideal M_n);\quad\ldots;\quad f_k\equiv0(\ideal M_n);\quad
+ \ideal D=(f_1\ldots f_k)\equiv0(\ideal M_n)
+\]
+이 된다. 역으로 $\ideal M_n\equiv0(\ideal D)$이므로 $\ideal M_n=\ideal D$이다. 더 나아가
+\[
+ \ideal M_{n+i}\equiv0(\ideal D);\qquad
+ \ideal D=\ideal M_n\equiv0(\ideal M_{n+i})
+\]
+이므로 모든 $i$에 대하여 $\ideal M_{n+i}=\ideal D=\ideal M_n$이다. 이로써 정리가 증명되었다.
+
+역으로 이 정리에서 다시 아이디얼기저의 존재가 따라온다는 점도 주목하자. 따라서 유한조건을 이렇게 기저를 쓰지 않는 꼴로 진술할 수도 있었다.
+
+\begin{center}
+\S~2.\\[0.25em]
+\textbf{한 아이디얼을 유한개의 기약아이디얼의 최소공배수로 나타내기.}
+\end{center}
+
+아이디얼 $\ideal B_1,\ideal B_2,\ldots,\ideal B_k$의 최소공배수 $[\ideal B_1,\ideal B_2,\ldots,\ideal B_k]$를 통상처럼 $\ideal B_1$로도, $\ideal B_2$로도, \ldots, $\ideal B_k$로도 나누어지는 모든 원소의 전체로 정의하자. 기호로 쓰면
+\[
+ \text{$f\equiv0(\ideal B_i)$,}\quad (i=1,2,\ldots,k)
+ \quad\text{이면}\quad
+ f\equiv0([\ideal B_1,\ideal B_2,\ldots,\ideal B_k])
+\]
+이고, 그 역도 성립한다. 최소공배수는 다시 아이디얼이다. 아이디얼 $\ideal B_i$들을 이 분해의 성분이라고도 한다.
+
+\textbf{정의 I.} \emph{표현 $\ideal M=[\ideal B_1\cdots\ideal B_k]$에서 어느 $\ideal B_i$도 나머지 아이디얼들의 최소공배수 $\ideal A_i$의 약수가 아니고, 어느 $\ideal B_i$도 진약수로 바꿀 수 없으면 이 표현을 축약표현이라 한다.\footnote{축약되지 않은 표현의 한 예는 모든 지수 $\lambda\ge2$에 대한 $(x^2,xy)=[(x),(x^2,xy,y^\lambda)]$이다. $\lambda=1$에 대응하는 표현 $[(x),(x^2,y)]$은 그에 대응하는 축약표현이다. (전쟁에서 전사한 K. 헨첼트가 으뜸아이디얼로의 분해가 유일하지 않음을 보여 주는 가장 간단한 예로 이 표현을 알려 주었다.)} 두 조건이 아이디얼 $\ideal B_i$에 대해서만 만족되면 이 표현을 $\ideal B_i$에 관하여 축약되었다고 한다. 최소공배수 $\ideal A_i=[\ideal B_1,\ldots,\ideal B_{i-1},\ideal B_{i+1},\ldots,\ideal B_k]$를 $\ideal B_i$의 보충부분이라 한다. 첫째 조건만을 만족하는 표현을 최단표현이라 한다.}
+
+이제 한 아이디얼을 최소공배수로 나타낼 때에는 다음 정리에 따라 축약표현만 고찰하면 충분하다.
+
+\textbf{보조정리 I.} \emph{한 아이디얼을 유한개의 아이디얼의 최소공배수로 나타낸 모든 표현은 적어도 한 가지 방식으로 축약표현으로 바꿀 수 있다. 특히 연속적인 분해로 그러한 표현을 얻을 수 있다.}
+
+실제로 $\ideal M=[\ideal B_1^*\cdots\ideal B_l^*]$가 $\ideal M$의 임의의 표현이라고 하자. 남겨 둔 아이디얼들의 최소공배수로 나누어지는 $\ideal B_i^*$들을 차례로 버린다. 나머지 아이디얼들도 여전히 $\ideal M$을 주므로, 이렇게 생긴 표현
+\[
+ \ideal M=[\ideal B_1\cdots\ideal B_k]=[\ideal A_i,\ideal B_i]
+\]
+에서는 첫째 조건이 만족되고, 따라서 이 표현은 최단표현이다. 어느 $\ideal B_i$를 진약수로 바꾸어도 이 조건은 유지된다. 둘째 조건은 유한사슬 정리(정리 I)에 따라 언제나 만족시킬 수 있다. 실제로
+\[
+ \ideal M=[\ideal A_i,\ideal B_i]=[\ideal A_i,\ideal B_i^{(1)}]
+ =\cdots=[\ideal A_i,\ideal B_i^{(\nu)}]=\cdots
+\]
+라고 하자. 여기서 각 $\ideal B_i^{(\nu)}$는 바로 앞 아이디얼의 진약수이다. 그러면 이 정리에 따라 사슬 $\ideal B_i,\ideal B_i^{(1)},\ldots,\ideal B_i^{(\nu)},\ldots$는 유한 단계에서 끝나야 한다. 따라서 표현 $\ideal M=[\ideal A_i,\ideal B_i^{(n)}]$에서는 $\ideal B_i^{(n)}$을 그 진약수로 바꿀 수 없다. $\ideal A_i$를 진약수로 바꾸면 이 사실은 더욱 분명히 유지된다. 그러므로 이미 축약된 $\ideal B$들을 포함하여 매번 보충부분을 만들면서 이 절차를 각 $\ideal B_i$에 차례로 적용하면 축약표현을 얻는다.\footnote{앞의 예는 주어진 표현이 그러한 축약표현을 유일하게 정하지 않음을 보여 준다. $\lambda\ge2$일 때 $(x^2,xy)=[(x),(x^2,xy,y^\lambda)]$에는 $[(x),(x^2,y)]$뿐 아니라 임의의 $\mu$에 대한 $[(x),(x^2,\mu x+y)]$도 대응하는 축약표현이다.}
+
+그러한 표현을 연속적으로 얻으려면, 각각 축약된 표현들
+\[
+ \ideal M=[\ideal B_1,\ideal C_1];\quad
+ \ideal C_1=[\ideal B_2,\ideal C_2];\quad\ldots;\quad
+ \ideal C_{l-1}=[\ideal B_l,\ideal C_l]
+\]
+에서 생기는 표현 $\ideal M=[\ideal B_1\cdots\ideal B_l\ideal C_l]$도 축약되었음을 보이면 된다. 이를 위해서는 축약표현
+\[
+ \ideal M=[\ideal B_1\cdots\ideal B_l\ideal C];\qquad
+ \ideal C=[\ideal C_1,\ideal C_2]
+\]
+에서 $\ideal M=[\ideal B_1\cdots\ideal B_l\ideal C_1\ideal C_2]$도 축약되었음을 보이면 충분하다. 실제로 가정에 따라 어느 $\ideal B$도 그 보충부분의 약수가 아니다. 어느 $\ideal C_i$가 그 보충부분의 약수라면, 둘째 표현이 축약되어 $\ideal C_1,\ideal C_2$가 $\ideal C$의 진약수라는 사실 때문에 첫째 표현에서 $\ideal C$를 진약수로 바꿀 수 있게 되어 가정에 어긋난다. 따라서 이 표현은 최단이다. 더 나아가 가정에 따라 어느 $\ideal B$도 진약수로 바꿀 수 없다. 어느 $\ideal C_i$를 진약수로 바꿀 수 있다면, $\ideal C$의 표현이 축약되어 있으므로 이는 $\ideal C$를 진약수로 바꾸는 것에 대응하여 다시 가정에 어긋난다. 이로써 보조정리가 증명되었다.
+
+\textbf{정의 II.} \emph{한 아이디얼 $\ideal M$을 두 진약수의 최소공배수로 나타낼 수 있으면 $\ideal M$을 가약이라 하고, 그렇지 않으면 $\ideal M$을 기약이라 한다.}
+
+이제 축약표현을 이용하여 유한사슬 정리인 정리 I로 다음을 증명한다.
+
+\textbf{정리 II.} \emph{각 아이디얼은 유한개의 기약아이디얼의 최소공배수로 나타낼 수 있다.}\footnote{그러한 표현이 일반적으로 유일하지 않다는 것은 임의의 $\mu$에 대한 앞의 예 $(x^2,xy)=[(x),(x^2,\mu x+y)]$가 보여 준다. 두 성분은 임의의 $\mu$에 대하여 기약이다. 실제로 $(x)$의 모든 약수는 $(x,g(y))$ 꼴이며, 여기서 $g(y)$는 $y$의 다항식이다. 따라서 그러한 두 약수의 최소공배수도 이 꼴이고 $(x)$의 진약수가 된다. $(x^2,\mu x+y)$는 유일한 약수 $(x,y)$만을 가지므로 반드시 역시 기약이다.}
+
+실제로 임의의 아이디얼 $\ideal M$은 기약이거나 가약이다. 기약이면 $\ideal M=[\ideal M]$가 정리 II가 요구하는 표현이다. 가약이면 $\ideal M=[\ideal B_1,\ideal C_1]$이고, 여기서 $\ideal B_1,\ideal C_1$은 $\ideal M$의 진약수이며 보조정리 I에 따라 이 표현을 축약되었다고 가정할 수 있다. $\ideal C_1$에도 같은 양자택일이 성립한다. 곧 $\ideal C_1$이 기약이거나, 축약표현 $\ideal C_1=[\ideal B_2,\ideal C_2]$가 존재한다.
+
+계속하면 축약표현들의 열
+\srcnumdisplay[3.1em]{(1)}{\begin{aligned}
+ \ideal M&=[\ideal B_1,\ideal C_1];\qquad
+ \ideal C_1=[\ideal B_2,\ideal C_2];\quad\ldots;\\
+ \ideal C_{\nu-1}&=[\ideal B_\nu,\ideal C_\nu];\quad\ldots
+\end{aligned}}
+을 얻는다. 사슬 $\ideal C_1,\ideal C_2,\ldots,\ideal C_n,\ldots$에서 각 $\ideal C_n$은 바로 앞 아이디얼의 진약수이므로 사슬은 유한 단계에서 끝난다. 따라서 $\ideal C_n$이 기약인 지수 $n$이 존재한다. 보조정리 I에 따라 표현 $\ideal M=[\ideal B_1\cdots\ideal B_n\ideal C_n]=[\ideal A_n,\ideal C_n]$도 축약되어 있다. 따라서 $\ideal C_n$은 보충부분 $\ideal A_n$의 약수가 될 수 없고, 표현 $\ideal M=[\ideal A_n,\ideal C_n]$에서 $\ideal A_n$을 진약수로 바꿀 수 없다. 필요하면 $\ideal A_n$을 진약수로 바꾸어\footnote{실제로 이 표현은 $\ideal A_n$에 관해서도 축약되어 있다. 이는 \S~3의 보조정리 IV에서 보조정리 I의 역으로 증명한다.} 전체 표현을 축약하면, 모든 가약아이디얼이 한 기약아이디얼과 그 보충아이디얼의 최소공배수로 된 축약표현을 가짐을 알 수 있다. 그러므로 (1)에서는 일반성을 잃지 않고 모든 $\ideal B_i$를 기약이라고 가정할 수 있다. 위의 논증을 되풀이하면 기약인 $\ideal C_n$의 존재를 얻고, 이로써 정리 II가 증명된다.
+
+\begin{center}
+\S~3.\\[0.25em]
+\textbf{서로 다른 두 기약아이디얼 분해에서 성분 수의 동일성.}
+\end{center}
+
+성분 수의 동일성을 증명하려면 먼저 한 아이디얼의 가약성 또는 기약성을 그 보충부분의 성질로 나타내야 한다. 이는 다음 정리가 해 준다.
+
+\textbf{정리 III.}\footnote{정리 III은 슈마이들러와 뇌터--슈마이들러의 논문들에서 모듈로부터 잉여군으로 넘어가는 과정에 대응한다(서론 참조). $\ideal C$는 잉여군에, $\ideal N_1$과 $\ideal N_2$는 그 잉여군이 분해되는 부분군들에 대응한다.} \emph{최단표현 $\ideal M=[\ideal A,\ideal C]$가 $\ideal C$에 관하여 축약되어 있다고 하자. 이때 $\ideal C$가 가약이기 위한 필요충분조건은 $\ideal M$의 진약수인 두 아이디얼 $\ideal N_1,\ideal N_2$가 존재하여 다음을 만족하는 것이다.}
+\srcnumdisplay[3.1em]{(2)}{\ideal N_1\equiv0(\ideal A);\qquad
+ \ideal N_2\equiv0(\ideal A);\qquad
+ [\ideal N_1,\ideal N_2]=\ideal M.}
+\emph{또한 이로부터 다음이 따른다. 조건 (2)가 성립하고 $\ideal C$가 기약이면, $\ideal N_i$ 중 적어도 하나는 $\ideal M$의 진약수가 아니며 $\ideal N_i=\ideal M$이다.}
+
+$\ideal C=[\ideal C_1,\ideal C_2]$이고 $\ideal C_1,\ideal C_2$가 $\ideal C$의 진약수라고 하자. 그러면
+\[
+ \ideal M=[\ideal A,\ideal C]=[\ideal A,\ideal C_1,\ideal C_2]
+       =[[\ideal A,\ideal C_1],[\ideal A,\ideal C_2]].
+\]
+여기서 아이디얼 $[\ideal A,\ideal C_i]$는 $\ideal M$의 진약수이다. 그렇지 않으면 $[\ideal A,\ideal C]$가 $\ideal C$에 관하여 축약되어 있지 않기 때문이다. 또한 이 아이디얼들은 $\ideal A$로 나누어지므로 조건 (2)의 필요성이 증명되었다. (표현 (2)는 축약되어 있지 않다. $[\ideal A,\ideal C_i]$를 $\ideal C_i$로 바꿀 수 있기 때문이다.)
+
+이제 거꾸로 (2)가 성립한다고 하자. 아이디얼들을
+\[
+ \ideal C_1=(\ideal C,\ideal N_1),\qquad
+ \ideal C_2=(\ideal C,\ideal N_2),\qquad
+ \ideal C^*=[\ideal C_1,\ideal C_2]
+\]
+로 만든다. 그러면 $\ideal C$는 $\ideal C_1$과 $\ideal C_2$ 각각으로 나누어지고, 따라서 그 최소공배수 $\ideal C^*$로도 나누어진다. $\ideal C^*$가 $\ideal C$로 나누어짐을 보이기 위하여
+\[
+ f\equiv0(\ideal C^*);\quad f\equiv0(\ideal C_1);\quad f\equiv0(\ideal C_2),
+ \quad\text{또는}\quad f=c+n_1=\bar c+n_2
+\]
+라고 하자. 여기서 $c,\bar c,n_1,n_2$는 각각 $\ideal C,\ideal N_1,\ideal N_2$에 속하는 원소들이며, 특히 $n_i$는 $\ideal N_i$로 나누어진다. 따라서 차
+\[
+ g=c-\bar c=n_2-n_1
+\]
+는 $\ideal C$와 $\ideal A$ 양쪽으로 나누어지고, 따라서 $\ideal M$으로 나누어진다. 더 나아가 $n_1=n_2+m$이므로 $n_1$은(마찬가지로 $n_2$도) $\ideal N_1$과 $\ideal N_2$ 양쪽으로 나누어지고, 따라서 $\ideal M$으로 나누어진다. 그러므로
+\[
+ f=c+m,\qquad f\equiv0(\ideal C),\qquad \ideal C^*=\ideal C
+\]
+를 얻는다. 이때 $\ideal C_1$과 $\ideal C_2$는 $\ideal C$의 진약수이다. 실제로 $\ideal C_1=(\ideal C,\ideal N_1)=\ideal C$라면 $\ideal N_1$이 $\ideal C$로 나누어질 것이고, $\ideal A$로도 나누어지므로 가정에 어긋나게 $\ideal N_1=\ideal M$이 될 것이다. 따라서 $\ideal C=[\ideal C_1,\ideal C_2]$로부터 $\ideal C$가 가약임을 알 수 있으며, 정리 III이 증명되었다.
+
+거의 같은 논증이 다음 결과도 준다는 점을 덧붙여 둔다.
+
+\textbf{보조정리 II.} \emph{최단표현 $\ideal M=[\ideal A,\ideal C]$에서 아이디얼 $\ideal C$를 진약수로 바꿀 수 있으면 $\ideal C$는 가약이다.}
+
+실제로
+\[
+ \ideal M=[\ideal A,\ideal C]=[\ideal A,\ideal C_1]
+\]
+이라고 하고
+\[
+ \ideal C^*=[\ideal C_1,(\ideal A,\ideal C)]
+\]
+로 놓자. 그러면 다시 $\ideal C$가 $\ideal C^*$로 나누어진다. 또한 $f\equiv0(\ideal C^*)$로부터
+\[
+ f=c_1=a+c
+\]
+를 얻는다. 따라서 차 $a=c_1-c$는 $\ideal A$와 $\ideal C_1$ 양쪽으로 나누어지고, 따라서 $\ideal M$으로 나누어진다. 그러므로 $c_1=c+m$, $f\equiv0(\ideal C)$, $\ideal C^*=\ideal C$이다. 가정에 따라 $\ideal C_1$과 $(\ideal A,\ideal C)$가 모두 $\ideal C$의 진약수이므로, $\ideal C=\ideal C^*$로부터 $\ideal C$가 가약임을 알 수 있다.
+
+따라서 기약아이디얼 $\ideal C$는 진약수로 바꿀 수 없다.
+
+이제 $\ideal M$을 유한개의 기약아이디얼의 최소공배수로 나타내는 서로 다른 두 최단표현
+\[
+ \ideal M=[\ideal B_1\cdots\ideal B_k]=[\ideal D_1\cdots\ideal D_l]
+\]
+이 주어졌다고 하자. 보조정리 II 뒤의 주석에 따라 이 표현들은 동시에 축약되어 있다. 먼저 다음을 증명한다.
+
+\textbf{보조정리 III.} \emph{각 보충부분 $\ideal A_i=[\ideal B_1\cdots\ideal B_{i-1}\ideal B_{i+1}\cdots\ideal B_k]$에 대하여 $\ideal M=[\ideal A_i,\ideal D_j]$가 되게 하는 아이디얼 $\ideal D_j$가 존재한다.}
+
+실제로 $\ideal M=[\ideal D_1,\ideal C_1]$, $\ideal C_1=[\ideal D_2,\ideal C_{12}]$ 등으로 놓으면
+\[
+ \ideal M=[\ideal A_i,\ideal M]=[\ideal A_i,\ideal D_1,\ideal C_1]
+ =[[\ideal A_i,\ideal D_1],[\ideal A_i,\ideal C_1]]
+\]
+을 얻는다. 여기서 $\ideal N_1=[\ideal A_i,\ideal D_1]$, $\ideal N_2=[\ideal A_i,\ideal C_1]$에 대하여 정리 III의 조건 (2)가 성립한다. 실제로 $\ideal M=[\ideal A_i,\ideal B_i]$는 $\ideal B_i$에 관하여 축약되어 있고 최단표현이다. 그런데 $\ideal B_i$가 기약이라고 가정했으므로 반드시 $\ideal N_i$ 중 하나가 $\ideal M$과 같아야 한다.
+
+$\ideal N_1=\ideal M$이면 보조정리가 증명된다. $\ideal N_2=\ideal M$이면 그에 따라 $\ideal M=[[\ideal A_i,\ideal D_2],[\ideal A_i,\ideal C_{12}]]$가 되고, 같은 논증에 의하여 여기서도 한 성분이 $\ideal M$과 같아야 한다. 이 과정을 계속하면 $j<l$인 어떤 $j$에 대하여 $\ideal M=[\ideal A_i,\ideal D_j]$가 되거나, 아니면 $\ideal M=[\ideal A_i,\ideal C_{1\ldots l-1}]$가 된다. $\ideal C_{1\ldots l-1}=\ideal D_l$이므로 후자의 경우에도 보조정리가 증명된다.
+
+이제 이로부터 다음을 얻는다.
+
+\textbf{정리 IV.} \emph{한 아이디얼을 기약아이디얼들의 최소공배수로 나타내는 서로 다른 두 최단표현에서 성분의 수는 같다.}
+
+실제로 $i=1$에 대하여 보조정리로부터
+\[
+ \ideal M=[\ideal A_1,\ideal B_1]=[\ideal A_1,\ideal D_{j_1}]
+ = [\ideal D_{j_1},\ideal B_2,\ldots,\ideal B_k]
+\]
+를 얻는다. 이제 두 분해
+\[
+ \ideal M=[\ideal D_{j_1},\ideal B_2,\ldots,\ideal B_k]
+          =[\ideal D_1,\ideal D_2,\ldots,\ideal D_l]
+\]
+를 생각하고, $\ideal B_2$의 보충부분 $\bar{\ideal A}_2=[\ideal D_{j_1},\ideal B_3,\ldots,\ideal B_k]$에 관하여 위의 논증을 반복하면
+\[
+ \ideal M=[\bar{\ideal A}_2,\ideal B_2]=[\bar{\ideal A}_2,\ideal D_{j_2}]
+           =[\ideal D_{j_1},\ideal D_{j_2},\ideal B_3,\ldots,\ideal B_k]
+\]
+를 얻으며, 이 절차를 계속하면
+\[
+ \ideal M=[\ideal D_{j_1},\ideal D_{j_2},\ldots,\ideal D_{j_k}]
+\]
+가 된다. 가정에 따라 표현 $\ideal M=[\ideal D_1\cdots\ideal D_l]$은 최단이므로 어느 $\ideal D$도 생략할 수 없다. 따라서 $\ideal D_{j_i}$들 가운데 서로 다른 것들이 모든 $\ideal D$를 빠짐없이 포함해야 하며, 이에 따라 $k\ge l$이다. 보조정리와 이어지는 모든 논증에서 $\ideal B$와 $\ideal D$를 서로 바꾸면 마찬가지로 $l\ge k$를 얻는다. 그러므로 $k=l$이고, 이로써 성분 수의 동일성이 증명되었다. 또한 이로부터 아이디얼 $\ideal D_{j_i}$들이 모두 서로 다름을 알 수 있다. 그렇지 않으면 $\ideal D_{j_i}$들로 된 최단표현에 $k$개보다 적은 성분이 나타날 것이기 때문이다. 따라서 지표를 $\ideal D_{j_i}=\ideal D_i$가 되도록 정할 수 있다. 같은 이유로 모든 중간표현 $\ideal M=[\ideal D_{j_1}\cdots\ideal D_{j_r},\ideal B_{r+1},\ldots,\ideal B_k]$도 최단이고, 따라서 보조정리 II 뒤의 주석에 따라 축약되어 있다.
+
+성분 수의 동일성은 다음 보조정리를 통하여 보조정리 I의 역을 준다.
+
+\textbf{보조정리 IV.} \emph{축약표현의 성분들을 여러 묶음으로 모으고 각 묶음의 최소공배수를 취하면, 그 결과로 생기는 표현도 축약되어 있다. 다시 말해 축약표현}
+\[
+ \ideal M=[\ideal C_{11}\cdots\ideal C_{1\mu_1};\;\ldots;\;
+ \ideal C_{\sigma1}\cdots\ideal C_{\sigma\mu_\sigma}]
+\]
+\emph{에서 $\ideal N_i=[\ideal C_{i1}\cdots\ideal C_{i\mu_i}]$로 놓으면 $\ideal M=[\ideal N_1\cdots\ideal N_\sigma]=[\ideal N_i,\ideal L_i]$도 축약되어 있다.}
+
+먼저 $\ideal N_i$는 그 보충부분 $\ideal L_i$의 약수가 될 수 없다. 실제로 그 약수 $\ideal C_{ij}$ 가운데 어느 것도 $\ideal L_i$의 약수가 아니기 때문이다. 따라서 이 표현은 최단이다. $\ideal N_i$를 진약수로 바꿀 수 없음을 보이기 위하여 각 $\ideal C$를 그 기약아이디얼 $\ideal B$들로 분해한다.\footnote{여기서는 언제나 $\ideal B$들로 된 최단표현, 따라서 축약표현을 뜻한다.} 그러면 보조정리 I에 따라 축약된 표현들
+\[
+ \ideal M=[\ideal B_{11}\cdots\ideal B_{1\lambda_1};\;\ldots;\;
+ \ideal B_{\sigma1}\cdots\ideal B_{\sigma\lambda_\sigma}];
+ \qquad
+ \ideal N_i=[\ideal B_{i1}\cdots\ideal B_{i\lambda_i}]
+\]
+을 얻는다. 이제 $\ideal M=[\ideal N_i^*,\ideal L_i]$가 $\ideal N_i^*$에 관하여 축약되어 있고, $\ideal N_i^*$가 $\ideal N_i$의 진약수라고 하자. 보조정리 II에 따라
+\[
+ \ideal N_i=[\ideal N_i^*,(\ideal N_i,\ideal L_i)]
+\]
+이다. 이 표현은 반드시 $\ideal N_i^*$에 관하여 축약되어 있다. 그렇지 않으면 $\ideal M$에서도 $\ideal N_i^*$를 진약수로 바꿀 수 있기 때문이다. 이제 필요하면 $(\ideal N_i,\ideal L_i)$도 진약수로 바꾸어 $\ideal N_i$의 축약표현을 얻는다. $\ideal N_i$의 이 두 성분을 기약아이디얼들로 분해하면, $\ideal N_i$의 기약아이디얼 수 $\lambda_i$는 두 성분의 기약아이디얼 수의 합이 된다. 따라서 진약수 $\ideal N_i^*$에 대응하는 기약아이디얼의 수는 반드시 $\lambda_i$보다 작다. 그러면 $\ideal M=[\ideal N_i^*,\ideal L_i]$를 기약아이디얼들로 분해할 때에도 아이디얼의 수가 $\sum_i\lambda_i$보다 작아지므로, 성분 수의 동일성에 모순된다. 특수한 경우 $\sigma=2$로부터 표현 $\ideal M=[\ideal N_i,\ideal L_i]$가 보충부분 $\ideal L_i$에 관해서도 축약되어 있음이 또한 따른다.
+
+\begin{center}
+\S~4.\\[0.25em]
+\textbf{으뜸아이디얼. 서로 다른 두 기약아이디얼 분해에서 대응 소아이디얼의 유일성.}
+\end{center}
+
+이하에서는 으뜸아이디얼과 기약아이디얼 사이의 관계를 다룬다.
+
+\textbf{정의 III.} \emph{$a\cdot b\equiv0(\ideal Q)$, $a\not\equiv0(\ideal Q)$로부터 반드시 $b^\varkappa\equiv0(\ideal Q)$가 따르고 지수 $\varkappa$가 유한한 수이면, 아이디얼 $\ideal Q$를 으뜸아이디얼이라 한다.}
+
+이 정의는 다음과 같이 말할 수도 있다. 곱 $a\cdot b$가 $\ideal Q$로 나누어지면 한 인자가 $\ideal Q$로 나누어지거나, 각 인자의 어떤 거듭제곱이 $\ideal Q$로 나누어진다. \emph{특히 $\varkappa$를 언제나 1로 취할 수 있으면 그 아이디얼을 소아이디얼이라 한다.}
+
+으뜸아이디얼(또는 소아이디얼)의 정의와 기저의 존재로부터, 아이디얼의 곱만을 사용하는 다음 정의를 얻는다.\footnote{두 아이디얼의 곱 $\ideal A\cdot\ideal B$는 통상적으로 원소 $a\cdot b$ 전체와 그 유한합들로 이루어진 아이디얼을 뜻한다.}
+
+\textbf{정의 IIIa.} \emph{$\ideal A\cdot\ideal B\equiv0(\ideal Q)$, $\ideal A\not\equiv0(\ideal Q)$로부터 반드시 $\ideal B^\lambda\equiv0(\ideal Q)$가 따르면 아이디얼 $\ideal Q$를 으뜸아이디얼이라 한다. $\lambda$를 언제나 1로 취할 수 있으면 그 아이디얼을 소아이디얼이라 한다. 따라서 소아이디얼 $\ideal P$에 대해서는 $\ideal A\cdot\ideal B\equiv0(\ideal P)$, $\ideal A\not\equiv0(\ideal P)$로부터 언제나 $\ideal B\equiv0(\ideal P)$가 따른다.}
+
+IIIa에서 $\ideal A=(a)$, $\ideal B=(b)$로 놓으면 정의 III이 특수한 경우로 포함되므로, IIIa에 따라 으뜸인 모든 아이디얼은 III에 따라서도 으뜸이다. 거꾸로 $\ideal Q$가 III에 따라 으뜸이고 IIIa의 가정 $\ideal A\cdot\ideal B\equiv0(\ideal Q)$가 성립한다고 하자. 그러면 $\ideal A\equiv0(\ideal Q)$이거나, 아니면 $a\cdot\ideal B\equiv0(\ideal Q)$이면서 $a\not\equiv0(\ideal Q)$인 원소 $a\equiv0(\ideal A)$가 적어도 하나 존재한다. 이제 $b_1,\ldots,b_r$가 $\ideal B$의 아이디얼기저이면 $a\cdot b_i\equiv0(\ideal Q)$이므로 정의 III에 따라
+\[
+ b_1^{\varkappa_1}\equiv0(\ideal Q);\quad\ldots;\quad
+ b_r^{\varkappa_r}\equiv0(\ideal Q)
+\]
+를 얻는다. 또한
+\[
+ b=f_1b_1+\cdots+f_r b_r+n_1b_1+\cdots+n_r b_r
+\]
+이므로 $\lambda=\varkappa_1+\cdots+\varkappa_r$로 놓으면 $\ideal B$의 원소 $\lambda$개로 이루어진 임의의 곱이 $\ideal Q$로 나누어진다. 이로써 III에 따라 으뜸인 아이디얼이 정의 IIIa도 만족함이 증명되었다. 특히 소아이디얼 $\ideal P$의 경우에는 $a\cdot\ideal B\equiv0(\ideal P)$, 따라서 모든 $b\equiv0(\ideal B)$에 대하여 $a\cdot b\equiv0(\ideal P)$이고 $a\not\equiv0(\ideal P)$이면 $b\equiv0(\ideal P)$, 따라서 $\ideal B\equiv0(\ideal P)$가 따른다. 이로써 두 정의의 동치가 증명되었다.
+
+으뜸아이디얼과 소아이디얼의 관계는 다음 관찰로 얻어진다. 어떤 거듭제곱이 $\ideal Q$로 나누어지는 성질을 가진 모든 원소 $p$의 전체 $\ideal P$는 소아이디얼을 이룬다. 먼저 $p_1,p_2$와 함께 $a p_1$과 $p_1-p_2$도 이 성질을 가지므로 $\ideal P$가 아이디얼임은 분명하다. 또한 정의 IIIa에서 사용한 기저 논증에 따라 어떤 수 $\lambda$가 존재하여 $\ideal P^\lambda\equiv0(\ideal Q)$가 된다.
+
+이제
+\[
+ a b\equiv0(\ideal P),\qquad a\not\equiv0(\ideal P)
+\]
+라고 하자. $\ideal P$의 정의에 따라
+\[
+ a^\lambda b^\lambda\equiv0(\ideal Q),\qquad a^\lambda\not\equiv0(\ideal Q)
+\]
+이고, 따라서 $\ideal Q$의 정의에 따라
+\[
+ b^{\lambda\varkappa}\equiv0(\ideal Q),\qquad\text{따라서}\qquad b\equiv0(\ideal P)
+\]
+이다. 이로써 $\ideal P$가 소아이디얼임이 증명되었다. 또한 $\ideal P$는 어떤 거듭제곱이 $\ideal Q$로 나누어지는 성질을 가진 모든 아이디얼 $\ideal B$의 최대공약아이디얼로 정의할 수 있다. 실제로 그러한 각 $\ideal B$는 $\ideal P$로 나누어지므로, 이 $\ideal B$들의 최대공약아이디얼 $\ideal D$도 $\ideal P$로 나누어진다. 거꾸로 $\ideal P$ 자체가 그러한 아이디얼 $\ideal B$이므로 $\ideal D$로 나누어지고, 따라서 $\ideal P=\ideal D$이다. 그러므로 $\ideal P$는 $\ideal Q$의 약수이고 그 어떤 거듭제곱이 $\ideal Q$로 나누어지는 소아이디얼이며, 이 성질로 유일하게 정해진다. 실제로
+\[
+ \ideal Q\equiv0(\ideal P),\qquad \ideal P^\lambda\equiv0(\ideal Q),
+ \qquad
+ \ideal Q\equiv0(\bar{\ideal P}),\qquad \bar{\ideal P}^{\mu}\equiv0(\ideal Q)
+\]
+이면
+\[
+ \ideal P^\lambda\equiv0(\bar{\ideal P}),\qquad
+ \bar{\ideal P}^{\mu}\equiv0(\ideal P)
+\]
+이고, 소아이디얼의 성질에 따라
+\[
+ \ideal P\equiv0(\bar{\ideal P}),\qquad
+ \bar{\ideal P}\equiv0(\ideal P),\qquad
+ \ideal P=\bar{\ideal P}
+\]
+를 얻는다. 정리하면 다음과 같다.
+
+\textbf{정리 V.} \emph{각 으뜸아이디얼 $\ideal Q$에 대하여, $\ideal Q$의 약수이면서 그 어떤 거듭제곱이 $\ideal Q$로 나누어지는 소아이디얼 $\ideal P$가 유일하게 존재한다. $\ideal P$를 $\ideal Q$에 ``대응 소아이디얼''이라 한다.}\footnote{역이 성립하지 않음은 예 $\ideal M=(x^2,xy)$가 보여 준다. 소아이디얼 $(x)$는 모든 조건을 만족하지만 $\ideal M$은 으뜸아이디얼이 아니다.} \emph{$\ideal P$는 어떤 거듭제곱이 $\ideal Q$로 나누어지는 성질을 가진 모든 아이디얼 $\ideal B$의 최대공약아이디얼로 정의된다. $\ideal P^\varrho\equiv0(\ideal Q)$가 되게 하는 가장 작은 수를 $\varrho$라 하면, $\varrho$를 $\ideal Q$의 지수라 한다.}\footnote{유리정수 또는 대수적 정수의 환영역에서와 달리 일반적으로 $\ideal P^\varrho=\ideal Q$가 되지 않음은 다음 예가 보여 준다. $\ideal Q=(x^2,y)$, $\ideal P=(x,y)$, $\ideal P^2=(x^2,xy,y^2)\equiv0(\ideal Q)$이지만 $\ideal Q\not\equiv0(\ideal P^2)$이다. 따라서 $\ideal Q$는 $\ideal P^2$와 다르다.}
+
+이제 으뜸성과 기약성 사이의 관계로서 다음을 증명한다.
+
+\textbf{정리 VI.} \emph{으뜸아이디얼이 아닌 모든 아이디얼은 가약이다. 다시 말해 모든 기약아이디얼은 으뜸아이디얼이다.}\footnote{역이 성립하지 않음은 예를 들어 $\lambda\ge2$일 때 $\ideal Q=(x^2,xy,y^\lambda)=[(x^2,y),(x,y^\lambda)]$가 보여 준다. 여기서 $\ideal Q$는 으뜸이지만 가약이다. $\ideal Q$가 으뜸임은 이 아이디얼이 $x,y$의 모든 $\lambda$차 멱곱을 포함한다는 데서 따른다. 따라서 상수항이 없는 모든 다항식의 어떤 거듭제곱은 $\ideal Q$로 나누어진다. 그런데 $a\cdot b\equiv0(\ideal Q)$에서 다항식 $b$가 상수항을 포함한다면, 즉 모든 $\varkappa$에 대하여 $b^\varkappa\not\equiv0(\ideal Q)$이면, $\ideal Q$의 기저다항식들이 동차이므로 $a\cdot b$의 각 동차성분이 $\ideal Q$로 나누어진다는 사실에서 $a$가 $\ideal Q$로 나누어져야 한다.}
+
+$\ideal K$가 으뜸이 아닌 아이디얼이라고 하자. 그러면 정의 III에 따라 적어도 한 원소쌍 $a,b$가 존재하여
+\srcnumdisplay[3.1em]{(3)}{a\cdot b\equiv0(\ideal K);\qquad
+ a\not\equiv0(\ideal K);\qquad
+ b^\varkappa\not\equiv0(\ideal K)\quad\text{모든 }\varkappa\text{에 대하여}}
+를 만족한다. 이제 두 아이디얼
+\[
+ \ideal L_0=(\ideal K,a);\qquad \ideal N_0=(\ideal K,b)
+\]
+를 만든다. 이들은 (3)에 따라 $\ideal K$의 진약수이며, 또한 (3)에 따라
+\srcnumdisplay[3.1em]{(4)}{\ideal L_0\cdot\ideal N_0\equiv0(\ideal K)}
+이다. 최소공배수 $\ideal K_0=[\ideal L_0,\ideal N_0]$의 원소 $f$에 대해서는 다음 둘 중 하나가 성립한다.
+
+\emph{첫째,}
+\[
+ f\equiv0(\ideal L_0);\qquad f\equiv0(\ideal N_0),
+ \qquad\text{즉}\qquad f\equiv a_1\cdot b\;(\ideal K)
+\]
+로부터 언제나
+\[
+ f\equiv l_0\cdot b\;(\ideal K);\qquad l_0\equiv0(\ideal L_0)
+\]
+인 표현이 따른다. 그러면 (4)에 따라 $f\equiv0(\ideal K)$이고, 따라서 $\ideal K_0\equiv0(\ideal K)$이다. 또한 $\ideal K\equiv0(\ideal K_0)$이므로 $\ideal K=\ideal K_0$이다. 이로써 $\ideal K$가 가약임이 증명된다.
+
+\emph{둘째,} 그러한 $l_0$가 존재하지 않는 $f\equiv0(\ideal K_0)$가 적어도 하나 있다. 이때 이 $f$에 대응하는 $a_1$을 이용하여
+\[
+ \ideal L_1=(\ideal L_0,a_1)=(\ideal K,a,a_1);\qquad
+ \ideal N_1=(\ideal K,b^2)
+\]
+를 만든다. $a_1\cdot b\equiv0(\ideal L_0)$이므로 (4)에 따라
+\srcnumdisplay[3.1em]{(4')}{\ideal L_1\cdot\ideal N_1\equiv0(\ideal K)}
+도 성립하고, $\ideal L_1$은 $\ideal L_0$의 진약수가 된다.
+
+$\ideal K_1=[\ideal L_1,\ideal N_1]$의 원소 $f$에 대해서도 같은 양자택일이 성립한다.
+
+\emph{첫째,}
+\[
+ f\equiv0(\ideal L_1);\qquad f\equiv0(\ideal N_1),
+\]
+즉
+\[
+ f\equiv a_2\cdot b^2\;(\ideal K)
+ \quad\text{이면 언제나}\quad
+ f\equiv l_1\cdot b^2;\qquad l_1\equiv0(\ideal L_1)
+\]
+가 따른다. 그러면 (4')에 따라 $\ideal K=\ideal K_1$이다.
+
+\emph{둘째,} 적어도 한 $f$에 대하여 그러한 $l_1$이 존재하지 않는다. 이 경우 $\ideal L_2=(\ideal L_1,a_2)$, $\ideal N_2=(\ideal K,b^{2^2})$를 만들게 되며, $\ideal L_2\cdot\ideal N_2\equiv0(\ideal K)$이고 $\ideal L_2$는 $\ideal L_1$의 진약수이다. 이 과정을 계속하여 일반적으로
+\[
+ \ideal L_0=(\ideal K,a);\quad
+ \ideal L_1=(\ideal L_0,a_1);\quad\ldots;\quad
+ \ideal L_\nu=(\ideal L_{\nu-1},a_\nu);\quad\ldots,
+\]
+\[
+ \ideal N_0=(\ideal K,b);\quad
+ \ideal N_1=(\ideal K,b^2);\quad\ldots;\quad
+ \ideal N_\nu=(\ideal K,b^{2^\nu});\quad\ldots
+\]
+로 정의한다. 여기서 $a_i$들은 어떤 $f$가 존재하여
+\[
+ f\equiv0(\ideal L_{i-1});\qquad f\equiv0(\ideal N_{i-1}),
+\]
+즉
+\[
+ f\equiv a_i\cdot b^{2^{i-1}}\;(\ideal K);
+ \qquad\text{그러나}\qquad a_i\not\equiv0(\ideal L_{i-1})
+\]
+가 되도록 정해진다. 그러면 일반적으로 $\ideal L_i\cdot\ideal N_i\equiv0(\ideal K)$이고, (3)에 따라 $\ideal N_i$는 $\ideal K$의 진약수이며 $\ideal L_i$는 $\ideal L_{i-1}$의 진약수이다. 따라서 유한사슬 정리인 정리 I에 따라 $\ideal L_i$들의 사슬은 이를테면 $\ideal L_n$에서 유한하게 끝나야 한다. 그러면 모든 $f\equiv0(\ideal L_n)$, $f\equiv0(\ideal N_n)$에 대하여 $l_n\equiv0(\ideal L_n)$인 $l_n$이 존재하여 $f\equiv l_n\cdot b^{2^n}\;(\ideal K)$가 된다. 따라서 위의 논증에 따라 $\ideal K=[\ideal L_n,\ideal N_n]$이며, 이로써 $\ideal K$가 가약임이 증명되었다.
+
+방금 증명한 결과로부터 \emph{대응 소아이디얼의 유일성}을 다음과 같이 얻는다.
+
+\[
+ \ideal M=[\ideal B_1\cdots\ideal B_k]=[\ideal D_1\cdots\ideal D_k]
+\]
+가 $\ideal M$을 기약아이디얼들의 최소공배수로 나타내는 두 최단표현이라고 하자. 이들은 축약되어 있으며, 정리 IV에 따라 성분의 수도 같다. 또한 정리 IV에 따라 거기서 나타난 중간표현들은(그곳에서 언급했듯 지표를 $j_i=i$로 놓을 수 있다)
+\[
+ \ideal M=[\ideal D_1\cdots\ideal D_{i-1}\ideal B_i\ideal B_{i+1}\cdots\ideal B_k]
+       =[\ideal D_1\cdots\ideal D_{i-1}\ideal D_i\ideal B_{i+1}\cdots\ideal B_k]
+       =[\bar{\ideal U}_i,\ideal B_i]=[\bar{\ideal U}_i,\ideal D_i]
+\]
+처럼 최단표현이다. 따라서
+\[
+ \bar{\ideal U}_i\cdot\ideal B_i\equiv0(\ideal D_i),\qquad
+ \bar{\ideal U}_i\not\equiv0(\ideal D_i),
+ \qquad
+ \bar{\ideal U}_i\cdot\ideal D_i\equiv0(\ideal B_i),\qquad
+ \bar{\ideal U}_i\not\equiv0(\ideal B_i)
+\]
+이다. 이제 정리 VI에 따라 기약아이디얼 $\ideal B_i$와 $\ideal D_i$는 으뜸이므로, 두 수 $\lambda_i,\mu_i$가 존재하여
+\srcnumdisplay[3.1em]{(5)}{\ideal B_i^{\lambda_i}\equiv0(\ideal D_i);\qquad
+ \ideal D_i^{\mu_i}\equiv0(\ideal B_i)}
+가 된다. $\ideal B_i$와 $\ideal D_i$에 대응 소아이디얼을 각각 $\ideal P_i$, $\bar{\ideal P}_i$라 하자. 곧 $\ideal P_i^{\varrho_i}\equiv0(\ideal B_i)$, $\bar{\ideal P}_i^{\sigma_i}\equiv0(\ideal D_i)$라 하자. 그러면 (5)에 따라
+\[
+ \ideal P_i^{\lambda_i\varrho_i}\equiv0(\bar{\ideal P}_i),
+ \qquad
+ \bar{\ideal P}_i^{\mu_i\sigma_i}\equiv0(\ideal P_i)
+\]
+이고, 소아이디얼의 성질에 따라
+\[
+ \ideal P_i\equiv0(\bar{\ideal P}_i),
+ \qquad
+ \bar{\ideal P}_i\equiv0(\ideal P_i),
+ \qquad
+ \ideal P_i=\bar{\ideal P}_i
+\]
+를 얻는다. 이로써 다음이 증명되었다.
+
+\textbf{정리 VII.} \emph{한 아이디얼을 기약아이디얼들의 최소공배수로 나타내는 서로 다른 두 최단표현에서 대응 소아이디얼들은 서로 일치한다. 그 가운데 같은 소아이디얼이 나타날 수도 있으며, 각 분해에서 같은 횟수로 나타난다.\footnote{예를 들어 각주 19의 예 $\lambda\ge2$일 때 $(x^2,xy,y^\lambda)=[(x^2,y),(x,y^\lambda)]$가 이를 보여 준다. 두 성분에 대응 소아이디얼은 모두 $(x,y)$이다.} 따라서 두 표현의 아이디얼들은 적어도 한 가지 방식으로 쌍을 지어, 각 아이디얼 $\ideal B_i$의 어떤 거듭제곱이 짝지어진 $\ideal D_i$로 나누어지고 그 역도 성립하게 할 수 있다. 그 수는 정리 IV에 따라 같다.}\footnote{기약아이디얼들 가운데 들어 있는 ``고립'' 아이디얼의 유일성에 대해서는 \S~7을 참조하라.}
+
+\begin{center}
+\S~5.\\[0.25em]
+\textbf{한 아이디얼을 극대 으뜸아이디얼들의 최소공배수로 나타내기. 대응 소아이디얼의 유일성.}
+\end{center}
+
+\textbf{정의 IV.} \emph{최단표현 $\ideal M=[\ideal Q_1\cdots\ideal Q_\alpha]$에서 모든 $\ideal Q$가 으뜸이지만 어느 두 $\ideal Q$의 최소공배수도 더 이상 으뜸이 아니면, 이 표현을 극대 으뜸아이디얼들의 최소공배수라고 한다.}
+
+그러한 표현이 적어도 하나 언제나 존재한다는 사실은 $\ideal M$을 기약아이디얼들의 최소공배수로 나타내는 표현에서 따른다. 실제로 기약아이디얼들은 으뜸이다. 이미 극대 으뜸아이디얼들로 된 표현이거나, 아니면 어떤 두 아이디얼의 최소공배수가 다시 으뜸이다. 후자의 경우 아이디얼의 수가 하나 줄어들므로, 이 절차를 반복하면 유한 단계 뒤에 원하는 표현을 얻는다.
+
+이 표현은 보조정리 IV에 따라 축약되어 있다. 거꾸로 극대 으뜸아이디얼들로 된 모든 축약표현은 $\ideal Q$들을 기약아이디얼들로 분해해 보면 이러한 방식으로 생긴다.
+
+여기서 정리 VII로부터 그에 대응하는 유일성 정리를 얻으려면 대응 소아이디얼과의 관계를 다음과 같이 조사해야 한다.
+
+\textbf{정리 VIII.} \emph{으뜸아이디얼 $\ideal N_1,\ideal N_2,\ldots,\ideal N_\lambda$가 모두 같은 대응 소아이디얼 $\ideal P$를 가지면, 그 최소공배수 $\ideal Q=[\ideal N_1,\ideal N_2,\ldots,\ideal N_\lambda]$도 으뜸이고 $\ideal P$를 대응 소아이디얼로 가진다. 거꾸로 $\ideal Q=[\ideal N_1\cdots\ideal N_\lambda]$가 으뜸아이디얼 $\ideal Q$의 축약표현이면, 모든 $\ideal N_i$는 으뜸이고 $\ideal Q$에 대응 소아이디얼 $\ideal P$를 자신의 대응 소아이디얼로 가진다.}
+
+주장의 첫 부분을 증명하기 위해 먼저 각 $i$에 대하여 $\ideal P^{\varrho_i}\equiv0(\ideal N_i)$이면 $\ideal P^\tau\equiv0(\ideal Q)$도 성립함을 관찰하자. 여기서 $\tau$는 지수 $\varrho_i$들 가운데 가장 큰 것이다. 또한 $\ideal P$는 $\ideal Q$의 약수이므로, $\ideal Q$가 으뜸이기만 하면 $\ideal P$는 반드시 그 대응 소아이디얼이다. 이제
+\[
+ \ideal A\cdot\ideal B\equiv0(\ideal Q),\qquad
+ \ideal B^k\not\equiv0(\ideal Q)\quad\text{(모든 }k\text{에 대하여)}
+\]
+이면
+\[
+ \ideal B\not\equiv0(\ideal P);
+ \quad\text{따라서}\quad
+ \ideal B^k\not\equiv0(\ideal N_i)\quad\text{(모든 }k\text{에 대하여)}
+\]
+이다. 그러므로 $\ideal A\equiv0(\ideal N_i)$이고, 따라서 $\ideal A\equiv0(\ideal Q)$이다. 이로써 $\ideal Q$가 으뜸이고 $\ideal P$가 그 대응 소아이디얼임이 증명되었다.
+
+이제 거꾸로 먼저
+\[
+ \ideal Q=[\ideal N_1\cdots\ideal N_\lambda]=[\ideal N_i,\ideal L_i]
+\]
+가 으뜸아이디얼 $\ideal N_i$들로 된 $\ideal Q$의 최단표현이고, 각 $\ideal P_i$가 $\ideal N_i$에 대응 소아이디얼이라고 하자. 그러면
+\[
+ \ideal L_i\cdot\ideal N_i\equiv0(\ideal Q),\qquad
+ \ideal L_i\not\equiv0(\ideal Q)
+\]
+(최단표현이므로)에서
+\[
+ \ideal N_i^{\sigma_i}\equiv0(\ideal Q),\qquad
+ \text{따라서}\qquad
+ \ideal P_i^{\varrho_i\sigma_i}\equiv0(\ideal Q)
+\]
+를 얻는다. 동시에 $\ideal P_i$는 $\ideal Q$의 약수이므로, 각 $i$에 대하여 $\ideal P_i$는 $\ideal Q$에 대응 소아이디얼 $\ideal P$와 일치한다.
+
+이제 모든 축약표현 $\ideal Q=[\ideal N_1\cdots\ideal N_\lambda]$에서 $\ideal N_i$들이 으뜸임을 보이는 일만 남았다.\footnote{여기서 축약표현이라는 가정이 본질적임은 축약되지 않은 다음 표현이 보여 준다. $\lambda\ge2$일 때 $\ideal Q=[x^2,xy,y^\lambda]=[(x^2,xy,y^2,yz),(x,y^\lambda)]$이다. 여기서 $(x^2,xy,y^2,yz)=[(x^2,y),(x,y^2,z)]$는 위에서 증명한 바에 따라 으뜸이 아니다. 실제로 뒤의 표현은 으뜸아이디얼들로 된 최단표현이지만 대응 소아이디얼 $(x,y)$와 $(x,y,z)$가 서로 다르다. ($\ideal Q$가 으뜸임은 각주 19에 따른다.)} 이를 위해 $\ideal N_i$들을 그 기약아이디얼 $\ideal B$들로 분해하자. 이렇게 생긴 최단표현 $\ideal Q=[\ideal B_1\cdots\ideal B_s]$에서는 각 아이디얼이 으뜸이고, 방금 증명한 결과에 따라 $\ideal P$를 대응 소아이디얼로 가진다. 그러면 위에서 증명한 정리의 첫 부분에 따라 각 $\ideal N_i$에도 같은 사실이 성립한다. 이로써 정리 VIII이 완전히 증명되었다.
+
+\textbf{따름정리.} 이로부터 소아이디얼은 반드시 기약임이 또한 따른다. 실제로 축약표현 $\ideal P=[\ideal N,\ideal K]$에서 정리 VIII에 따라 $\ideal N\equiv0(\ideal P)$이고, $\ideal P\equiv0(\ideal N)$이기도 하므로 $\ideal P=\ideal N$이며 마찬가지로 $\ideal P=\ideal K$이다. $\ideal P$의 기약성은 직접 얻을 수도 있다. 실제로 $\ideal P=[\ideal N,\ideal K]$이면 $\ideal N\cdot\ideal K\equiv0(\ideal P)$이지만 $\ideal N\not\equiv0(\ideal P)$, $\ideal K\not\equiv0(\ideal P)$여서 소아이디얼의 정의 성질에 모순된다.
+
+이제
+\[
+ \ideal M=[\ideal Q_1\cdots\ideal Q_\alpha]
+          =[\bar{\ideal Q}_1\cdots\bar{\ideal Q}_\beta]
+\]
+가 $\ideal M$을 극대 으뜸아이디얼들의 최소공배수로 나타내는 두 축약표현이라고 하자. $\ideal Q$들을 기약아이디얼 $\ideal B$들로, $\bar{\ideal Q}$들을 그에 대응하여 기약아이디얼 $\ideal D$들로 분해하면, $\ideal M$을 기약아이디얼들의 최소공배수로 나타내는 두 축약표현을 얻는다. 정리 VII에 따라 두 표현에서는 성분의 수와 대응 소아이디얼들이 모두 일치한다. 정리 VIII에 따라 고정된 $\ideal Q_i$에서 나타나는 모든 기약아이디얼 $\ideal B$는 같은 대응 소아이디얼 $\ideal P_i$를 가진다. 한편 $\ideal Q_j$에 속하는 $\ideal P_j$는 반드시 $\ideal P_i$와 다르다. 그렇지 않으면 정리 VIII에 따라 극대 으뜸아이디얼들로 된 표현이 아니기 때문이다. 따라서 $\ideal Q$들의 수 $\alpha$는 $\ideal B$들에 결부된 서로 다른 소아이디얼 $\ideal P$들의 수와 같고, 이 서로 다른 $\ideal P$들이 $\ideal Q$들에 대응 소아이디얼들이다. $\bar{\ideal Q}$들을 $\ideal D$들로 분해한 것에 대해서도 같은 사실이 성립한다. 그러므로 정리 VII로부터 $\ideal Q$와 $\bar{\ideal Q}$의 수가 같고 그 대응 소아이디얼들이 일치함을 얻는다. 동시에 이 절의 첫머리에서 설명한, 기약아이디얼들을 극대 으뜸아이디얼들로 모으는 과정은 같은 대응 소아이디얼을 가진 것들을 모두, 그리고 오직 그것들만 한데 모으는 과정임을 알 수 있다. 더 나아가 정리 VIII은 극대 으뜸아이디얼의 기약성 성질을 보여 준다. 즉 극대 으뜸아이디얼은 극대 으뜸아이디얼들의 최소공배수로 된 축약표현을 허용하지 않는다.
+
+정리하면 다음이 증명되었다.
+
+\textbf{정리 IX.} \emph{한 아이디얼을 극대 으뜸아이디얼들의 최소공배수로 나타내는 두 축약표현에서 성분의 수와 대응 소아이디얼들이 일치하며, 이 소아이디얼들은 모두 서로 다르다. 다시 말해 각 $\ideal Q$에 $\bar{\ideal Q}$ 하나를 일대일로 대응시켜, $\ideal Q$의 어떤 거듭제곱이 $\bar{\ideal Q}$로 나누어지고 그 역도 성립하게 할 수 있다.}\footnote{서로 다른 표현의 예는 정리 II의 각주 12에 나온다. 임의의 $\mu$에 대하여 $(x^2,xy)=[(x),(x^2,\mu x+y)]$이다. 대응 소아이디얼 $\ideal P_1=(x)$, $\ideal P_2=(x,y)$가 서로 다르므로 이들은 극대 으뜸아이디얼이다. ``고립'' 극대 으뜸아이디얼의 유일성에 대해서는 \S~7을 참조하라.} \emph{또한 $\ideal Q$들과 $\bar{\ideal Q}$들은 극대 으뜸아이디얼로의 분해에 관하여 기약성 성질을 가진다.}
+
+\textbf{따름정리.} 정리 IX는 축약표현 대신 최단표현만을 가정해도 본질적으로 그대로 성립한다는 점을 덧붙여 둔다. 예를 들어
+\[
+ \ideal M=[\ideal Q_1\cdots\ideal Q_i^*\cdots\ideal Q_\alpha]
+\]
+가 $\ideal Q_i^*$에 관하여 축약되어 있고, $\ideal Q_i^*$가 $\ideal Q_i$의 진약수이며, $\ideal L_i$가 $\ideal Q_i$의 보충부분이라고 하자. 그러면 보조정리 IV에 따라
+\[
+ \ideal Q_i=[\ideal Q_i^*;(\ideal L_i,\ideal Q_i)]
+\]
+이고, 이 표현은 $\ideal Q_i^*$에 관하여 축약되어 있다. 정리 VIII을 적용할 때 필요하면 $(\ideal L_i,\ideal Q_i)$를 진약수로 바꾸어도 되므로, $\ideal Q_i^*$는 으뜸이고 $\ideal Q_i$와 같은 대응 소아이디얼 $\ideal P_i$를 가진다. 이 절차를 계속하면 그러한 각 표현에 극대 으뜸아이디얼들로 된 축약표현을 대응시킬 수 있으며, 성분의 수와 대응 소아이디얼들은 일치한다. 따라서 최단표현의 경우에도 서로 다른 두 표현에서 성분의 수와 대응 소아이디얼들이 일치한다.
+
+이렇게 유일하게 정의되는 서로 다른 대응 소아이디얼들을 줄여서 ``$\ideal M$에 대응 소아이디얼들''이라 부르기로 한다.
+
+\begin{center}
+\S~6.\\[0.25em]
+\textbf{한 아이디얼을 상대소-기약아이디얼들의 최소공배수로 유일하게 나타내기.}
+\end{center}
+
+\textbf{정의 V.} \emph{$\ideal T\cdot\ideal R\equiv0(\ideal S)$로부터 반드시 $\ideal T\equiv0(\ideal S)$가 따르면 아이디얼 $\ideal R$을 $\ideal S$에 대하여 상대소라고 한다. $\ideal R$이 $\ideal S$에 대하여 상대소이고 $\ideal S$도 $\ideal R$에 대하여 상대소이면, $\ideal R$과 $\ideal S$를 서로 상대소라고 한다.}\footnote{상대소 조건은 대칭적이지 않다. 예를 들어 $\ideal R=(x^2,y)$는 $\ideal S=(x)$에 대하여 상대소이지만, $\ideal S$는 $\ideal R$에 대하여 상대소가 아니다. 실제로 $\ideal S^2\equiv0(\ideal R)$이지만 $\ideal T=\ideal S\not\equiv0(\ideal R)$이다.}
+
+\emph{한 아이디얼을 서로 상대소인 두 진약수의 최소공배수로 나타낼 수 없으면 그 아이디얼을 상대소-기약이라 한다.}
+
+특히 $\ideal T\cdot\ideal R\equiv0(\ideal S)$인 모든 $\ideal T$의 최대공약아이디얼 $\ideal T_0$를 취하면, $\ideal T_0\cdot\ideal R\equiv0(\ideal S)$이고 $\ideal S\equiv0(\ideal T_0)$이다. 따라서 $\ideal R$이 $\ideal S$에 대하여 상대소이면 $\ideal T_0=\ideal S$이고, 상대소가 아니면 $\ideal T_0$는 $\ideal S$의 진약수이다.\footnote{이렇게 정의한 $\ideal T_0$는 라스커의 ``잔여모듈''과 일치하며, 아이디얼 대신 수모듈로 확장하면 데데킨트의 두 모듈의 ``몫''과 일치한다. Lasker, 앞의 논문, 49쪽; Dedekind, \emph{Zahlentheorie}, 504쪽.}
+
+유일성 증명의 바탕은 다음 정리이다.
+
+\textbf{정리 X.} \emph{1. $\ideal R$이 아이디얼 $\ideal S_1,\ldots,\ideal S_\lambda$ 각각에 대하여 상대소이면, $\ideal R$은 그 최소공배수 $\ideal S$에 대해서도 상대소이다.}
+
+\emph{2. 아이디얼 $\ideal S_1,\ldots,\ideal S_\lambda$가 각각 $\ideal R$에 대하여 상대소이면, 그 최소공배수 $\ideal S$도 $\ideal R$에 대하여 상대소이다.}
+
+\emph{3. $\ideal R$이 $\ideal S$에 대하여 상대소이고 $\ideal S=[\ideal S_1\cdots\ideal S_\lambda]$가 $\ideal S$의 축약표현이면, $\ideal R$은 각 $\ideal S_i$에 대해서도 상대소이다.}
+
+\emph{4. $\ideal S$가 $\ideal R$에 대하여 상대소이면, $\ideal S$의 모든 약수 $\ideal S_i$도 $\ideal R$에 대하여 상대소이다.}
+
+1. $\ideal T\cdot\ideal R\equiv0(\ideal S)$로부터 반드시 $\ideal T\cdot\ideal R\equiv0(\ideal S_i)$가 따르므로, 가정에 따라 $\ideal T\equiv0(\ideal S_i)$이고 따라서 $\ideal T\equiv0(\ideal S)$이다.
+
+2. 다음과 같이 놓자.
+\[
+ \ideal C_1=[\ideal S_2\cdots\ideal S_\lambda],\quad
+ \ideal C_{12}=[\ideal S_3\cdots\ideal S_\lambda],\quad\ldots,\quad
+ \ideal C_{12\ldots\lambda-1}=\ideal S_\lambda.
+\]
+$\ideal T\cdot\ideal S\equiv0(\ideal R)$로부터 $\ideal T\cdot\ideal S_1\cdot\ideal C_1\equiv0(\ideal R)$가 따르고, 따라서 가정에 따라 $\ideal T\cdot\ideal C_1\equiv0(\ideal R)$이다. 여기서 다시 $\ideal T\cdot\ideal S_2\cdot\ideal C_{12}\equiv0(\ideal R)$, 따라서 $\ideal T\cdot\ideal C_{12}\equiv0(\ideal R)$를 얻는다. 마침내 $\ideal T\cdot\ideal C_{12\ldots\lambda-1}=\ideal T\cdot\ideal S_\lambda\equiv0(\ideal R)$이고, 따라서 $\ideal T\equiv0(\ideal R)$이다.
+
+3. $\ideal C_i$를 $\ideal S_i$의 보충부분이라 하자. $\ideal T_0\cdot\ideal R\equiv0(\ideal S_i)$이면 $\ideal C_i\cdot\ideal R\equiv0(\ideal S_i)$이기도 하므로 $[\ideal T_0,\ideal C_i]\cdot\ideal R\equiv0(\ideal S)$이다. 만일 $\ideal T_0$가 $\ideal S_i$의 진약수라면, 축약표현 $\ideal S=[\ideal S_i,\ideal C_i]$ 때문에 $[\ideal T_0,\ideal C_i]$도 $\ideal S$의 진약수가 되어 가정에 어긋난다.
+
+4. $\ideal T$가 $\ideal R$의 진약수이고 $\ideal T\cdot\ideal S_i\equiv0(\ideal R)$이면 $\ideal T\cdot\ideal S\equiv0(\ideal R)$도 성립한다. 그런데 $\ideal S$가 $\ideal R$에 대하여 상대소이므로 $\ideal T\equiv0(\ideal R)$이어야 하고, 이는 $\ideal T$가 $\ideal R$의 진약수라는 가정과 모순된다.
+
+정의 V에 따르면 특히 모든 아이디얼은 $\Sigma$의 모든 원소로 이루어진 단위아이디얼 $\ideal D$에 대하여 상대소이다.\footnote{$\ideal D$는 나눗셈과 최소공배수에 대해서만 단위의 구실을 하고, 곱셈에 대해서는 그렇지 않다. 예를 들어 상수항이 없는 $x$의 정수계수 다항식 전체의 환영역에서는 $\ideal D=(x)$이고, 모든 짝수의 환영역에서는 $\ideal D=(2)$이다.} 그러나 다음 정리들은 $\ideal D$와 다른 아이디얼들에 대해서만 성립한다.
+
+방금 증명한 정리 X로부터 먼저 다음을 얻는다.
+
+\textbf{보조정리 V.} \emph{한 아이디얼을 $\ideal D$와 다르며 서로 상대소인 아이디얼들의 최소공배수로 나타내는 모든 표현은 축약되어 있다.}
+
+\[
+ \ideal M=[\ideal R_1\ideal R_2\cdots\ideal R_\sigma]=[\ideal R_i,\ideal L_i]
+\]
+가 그러한 표현이라고 하자. 정리 X의 2에 따라 $\ideal L_i$도 $\ideal R_i$에 대하여 상대소이다. 따라서 $\ideal R_i$는 $\ideal L_i$의 약수가 될 수 없고, 이 표현은 최단이다. 실제로 $\ideal L_i\equiv0(\ideal R_i)$이면서 $\ideal L_i$가 $\ideal R_i$에 대하여 상대소라면 $\ideal D\cdot\ideal L_i\equiv0(\ideal R_i)$로부터 $\ideal D\equiv0(\ideal R_i)$, 따라서 $\ideal R_i=\ideal D$가 따르지만 이는 가정에서 배제되었다.
+
+이제 $\ideal R_i$를 진약수 $\ideal R_i^*$로 바꿀 수 있다고 하자. 그러면 보조정리 II에 따라 $\ideal R_i$는 가약이고
+\[
+ \ideal R_i=[\ideal R_i^*;(\ideal R_i,\ideal L_i)]
+\]
+이다. 여기서 필요하면 $(\ideal R_i,\ideal L_i)$를 진약수 $(\ideal R_i,\ideal L_i)^*$로 바꾸고 $\ideal R_i^*$도 진약수로 바꾸어 $\ideal R_i$의 축약표현을 얻는다. 그러면 정리 X의 3에 따라 $\ideal L_i$는 $(\ideal R_i,\ideal L_i)^*$에 대해서도 상대소이고, 이 아이디얼은 최단표현 때문에 $\ideal D$와 다르다. 그런데 $(\ideal R_i,\ideal L_i)^*$는 $(\ideal R_i,\ideal L_i)$의 약수이고 $(\ideal R_i,\ideal L_i)$는 $\ideal L_i$의 약수이므로 모순이다.
+
+정리 X로부터 대응 소아이디얼과의 관계를 주는 다음 정리도 얻는다.
+
+\textbf{정리 XI.} \emph{$\ideal R$이 $\ideal S$에 대하여 상대소이고 $\ideal S$가 $\ideal D$와 다르면, $\ideal R$에 결부된 어느 소아이디얼도\footnote{$\ideal R$에 대응 소아이디얼의 정의는 \S~5의 끝을 보라.} $\ideal S$에 대응 소아이디얼로 나누어지지 않는다. 거꾸로 그러한 나눗셈 관계가 하나도 없으면 $\ideal R$은 $\ideal S$에 대하여 상대소이고, 물론 $\ideal S$는 $\ideal D$와 다르다.}
+
+\[
+ \ideal R=[\ideal Q_1\cdots\ideal Q_\alpha],\qquad
+ \ideal S=[\ideal Q_1^*\cdots\ideal Q_\beta^*]
+\]
+가 $\ideal R$과 $\ideal S$를 극대 으뜸아이디얼들로 나타내는 축약표현이고, $\ideal P_1,\ldots,\ideal P_\alpha$와 $\ideal P_1^*,\ldots,\ideal P_\beta^*$가 각각 대응 소아이디얼들이라고 하자. 우리는 다음과 같은 형태로 주장을 보인다. 어떤 $\ideal P$가 어떤 $\ideal P^*$로 나누어지면 $\ideal R$은 $\ideal S$에 대하여 상대소일 수 없으며, 그 역도 성립한다.
+
+실제로 $\ideal P_\mu\equiv0(\ideal P_\nu^*)$라고 하자. 그러면 $\ideal Q_\mu\equiv0(\ideal P_\nu^*)$이기도 하고, $\ideal P_\nu^*$의 정의에 따라 $\ideal Q_\mu^{\sigma_\nu}\equiv0(\ideal Q_\nu^*)$, 따라서 $\ideal R^{\sigma_\nu}\equiv0(\ideal Q_\nu^*)$이다. $\ideal R$의 거듭제곱 가운데 $\ideal Q_\nu^*$로 나누어지는 가장 낮은 것을 $\ideal R^\tau$라고 하자. $\tau=1$이면 $\ideal R$이 $\ideal Q_\nu^*$로 나누어진다. 그런데 가정에 따라 $\ideal S$가 $\ideal D$와 다르므로 $\ideal R$은 $\ideal Q_\nu^*$에 대하여 상대소가 아니다. $\tau\ge2$이면
+\[
+ \ideal R^{\tau-1}\cdot\ideal R\equiv0(\ideal Q_\nu^*),\qquad
+ \ideal R^{\tau-1}\not\equiv0(\ideal Q_\nu^*)
+\]
+이므로 역시 $\ideal R$은 $\ideal Q_\nu^*$에 대하여 상대소가 아니다.\footnote{$\Sigma$가 단위원을 포함할 필요가 없으므로 $\ideal R^0$은 정의되지 않는다. 따라서 $\tau=1$인 경우를 먼저 따로 다루어야 했다. $\Sigma$가 단위원을 포함하는 경우에도 $\tau=0$은 $\ideal S$에 관한 가정 때문에 배제된다.} 그러므로 두 경우 모두 정리 X의 3에 따라 $\ideal R$은 $\ideal S$에 대해서도 상대소가 아니다.
+
+거꾸로 $\ideal R$이 $\ideal S$에 대하여 상대소가 아니면, 정리 X의 1에 따라 $\ideal R$은 적어도 하나의 $\ideal Q_\nu^*$에 대하여 상대소가 아니다. 따라서
+\[
+ \ideal T_0\cdot\ideal R\equiv0(\ideal Q_\nu^*),\qquad
+ \ideal T_0\not\equiv0(\ideal Q_\nu^*)
+\]
+이고, $\ideal Q_\nu^*$가 으뜸이므로
+\[
+ \ideal R^\tau\equiv0(\ideal Q_\nu^*),\qquad
+ \text{따라서}\qquad
+ \ideal Q_1^\tau\cdots\ideal Q_\alpha^\tau\equiv0(\ideal Q_\nu^*)
+\]
+이다. 그러면 대응 소아이디얼들에 대하여
+\[
+ \ideal P_1^{\tau\varrho_1}\cdots\ideal P_\alpha^{\tau\varrho_\alpha}
+ \equiv0(\ideal P_\nu^*)
+\]
+를 얻는다. 소아이디얼의 성질에 따라 적어도 하나의 $\ideal P$가 $\ideal P_\nu^*$로 나누어진다. 이로써 정리 XI가 증명되었다.
+
+이제 정리 X와 XI로부터 상대소-기약아이디얼로의 분해가 존재하고\footnote{분해의 존재는 \S~2에서 유한개의 기약아이디얼로의 분해가 존재함을 증명한 것과 정확히 같은 방식으로 직접 증명할 수도 있다.} 유일함을 다음과 같이 얻는다.
+
+$\ideal M=[\ideal Q_1\cdots\ideal Q_\alpha]$가 $\ideal M$을 극대 으뜸아이디얼들로 나타내는 축약표현(또는 적어도 최단표현)이고, $\ideal P_1,\ldots,\ideal P_\alpha$가 대응 소아이디얼들이라고 하자. 어느 한 군의 아이디얼도 다른 군의 아이디얼로 나누어지지 않도록 $\ideal P$들을 군들로 묶되, 각 군 자체는 이 성질을 갖는 두 부분군으로 더 나눌 수 없게 한다.
+
+그러한 군 분할을 구성하려면, 정의상 각 군 $G$가 한 아이디얼 $\ideal P$와 함께 $\ideal P_1,\ldots,\ideal P_\alpha$ 가운데 나타나는 그 모든 약수와 배수(즉 $\ideal P$로 나누어지는 아이디얼)를 포함해야 함을 관찰하면 된다. 이를테면 $\ideal P^{(i_1)}$들을 $\ideal P$의 모든 배수, $\ideal P_{j_1}^{(i_1)}$들을 $\ideal P^{(i_1)}$의 모든 약수, $\ideal P_{j_1}^{(i_1i_2)}$들을 $\ideal P_{j_1}^{(i_1)}$의 모든 배수 등으로 정한다. 일반적으로 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$들을 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_{\lambda-1})}$의 모든 배수로, $\ideal P_{j_1\ldots j_\lambda}^{(i_1\ldots i_\lambda)}$들을 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$의 모든 약수로 정한다. 전체적으로 유한개의 아이디얼 $\ideal P$만을 다루므로 이 절차는 유한 단계 뒤에 끝나야 한다. 곧 앞서 나온 모든 아이디얼과 다른 새 아이디얼을 더 이상 내놓지 않는다. 이렇게 얻은 아이디얼 $\ideal P$들의 전체는 실제로 원하는 성질을 가진 한 군 $G$를 이룬다.
+
+실제로 정의에 따라 $G$는 각 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_{\lambda-1})}$와 함께 그 모든 배수 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$를 포함하고, 각 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$와 함께 그 모든 약수 $\ideal P_{j_1\ldots j_\lambda}^{(i_1\ldots i_\lambda)}$를 포함한다. 여기에는 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_{\lambda-1})}$의 모든 약수도 들어 있고, $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$의 배수들도 다시 같은 방식으로 들어 있다. 따라서 $G$에 들어 있지 않은 아이디얼은 $G$에 들어 있는 아이디얼의 약수도 배수도 될 수 없다.
+
+$G$는 기약성 조건도 만족한다. 실제로 $G$가 두 부분군 $G^{(1)}$, $G^{(2)}$로 나뉘고, 이를테면 $G^{(1)}$이 $\ideal P_{j_1\ldots j_\lambda}^{(i_1\ldots i_\lambda)}$(또는 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$)를 포함한다고 하자. 그러면 앞선 아이디얼들은 번갈아 그 배수와 약수(또는 약수와 배수)이므로 $G^{(1)}$은 그 모두를 포함하고, 따라서 $\ideal P$와 군 $G$ 전체를 포함한다. $G$에 들어 있지 않은 아이디얼들에 같은 절차를 적용하면 모든 $\ideal P$의 군 분할 $G_1,\ldots,G_\sigma$를 얻으며, 이 분할은 원하는 성질들을 가진다. 그러한 군 분할은 유일하다. 실제로 $G'_1,\ldots,G'_\tau$가 두 번째 분할이고 $\ideal P_{j_1\ldots j_\lambda}^{(i_1\ldots i_\lambda)}$(또는 $\ideal P_{j_1\ldots j_{\lambda-1}}^{(i_1\ldots i_\lambda)}$)가 $G'_i$의 원소이면, 위의 논증에 따라 $G'_i$는 군 $G$ 전체를 포함하고, 기약성 성질에 따라 $G$와 일치한다.
+
+$\ideal Q_{i\mu}$($\mu=1,\ldots,\lambda_i$)가 군 $G_i$에 함께 묶인 아이디얼 $\ideal Q$들을 나타낸다고 하자. $\ideal P$들이 모두 서로 다르므로 최단표현에서 이들에 대응하는 으뜸아이디얼 $\ideal Q_{i\mu}$들은 유일하게 정해진다. 이제
+\[
+ \ideal R_i=[\ideal Q_{i1}\cdots\ideal Q_{i\lambda_i}],\qquad
+ \text{그러면}\qquad
+ \ideal M=[\ideal R_1\cdots\ideal R_\sigma]
+\]
+로 놓자. 이것이 $\ideal M$의 상대소-기약아이디얼 분해임을 보이겠다. 먼저 $\ideal R_i=[\ideal Q_{i1}\cdots\ideal Q_{i\lambda_i}]$가 최단표현일 뿐이어도 정리 XI를 적용할 수 있음을 관찰하자. 정리 IX의 따름정리에 따라 대응 소아이디얼들이 이미 유일하게 정의되기 때문이다. 이제 $\ideal R_i$에 결부된 어느 소아이디얼 $\ideal P_{i\mu}$도 $\ideal R_j$에 대응 소아이디얼 $\ideal P_{j\nu}$로 나누어지지 않고, 그 역도 성립하므로 정리 XI에 따라 $\ideal R_i$와 $\ideal R_j$는 서로 상대소이다. 또한 각 $\ideal R_i$는 군 $G_i$의 기약성 성질 때문에 정리 XI에 따라 상대소-기약이다. 가약인 경우에는 언제나 $\ideal D$와 다른 아이디얼들만을 다루기 때문이다. 더 나아가 처음에 $\ideal Q$들의 최단표현만에서 출발했더라도 보조정리 V에 따라 이 표현은 축약되어 있다. 거꾸로 정리 XI에 따라 상대소-기약아이디얼로의 모든 분해는 위에서 설명한 $\ideal P_{i\mu}$들의 군 분할을 낳는다.
+
+이제
+\[
+ \ideal M=[\bar{\ideal R}_1\cdots\bar{\ideal R}_\tau]
+\]
+가 $\ideal M$을 상대소-기약아이디얼들로 나타내는 두 번째 표현이라고 하자. 이 표현은 보조정리 V에 따라 축약되어 있다. $\ideal R$들을 극대 으뜸아이디얼들로 분해해 보면 대응 소아이디얼들이 일치하므로, 위에서 유일성을 증명한 이 소아이디얼들의 군 분할도 일치한다. 따라서 $\tau=\sigma$이고, $\ideal R_i$와 $\bar{\ideal R}_i$가 같은 군에 속하도록 지표를 정할 수 있다. 이제 아이디얼과 보충부분으로 된 표현을
+\[
+ \ideal M=[\ideal R_i,\ideal L_i]
+          =[\bar{\ideal R}_i,\bar{\ideal L}_i]
+\]
+라 하자. $\bar{\ideal R}_i$가 $\ideal R_i$와 같은 군에 대응하므로 정리 XI에 따라 $\ideal L_i$는 $\bar{\ideal R}_i$에 대하여 상대소이고, $\bar{\ideal L}_i$는 $\ideal R_i$에 대하여 상대소이다. 또한
+\[
+ \ideal R_i\cdot\ideal L_i\equiv0(\bar{\ideal R}_i),
+ \qquad
+ \bar{\ideal R}_i\cdot\bar{\ideal L}_i\equiv0(\ideal R_i)
+\]
+이므로
+\[
+ \ideal R_i\equiv0(\bar{\ideal R}_i),
+ \qquad
+ \bar{\ideal R}_i\equiv0(\ideal R_i),
+ \qquad
+ \ideal R_i=\bar{\ideal R}_i
+\]
+를 얻는다. 이로써 다음이 증명되었다.
+
+\textbf{정리 XII.} \emph{각 아이디얼은 유한개의 서로 상대소인 상대소-기약아이디얼들의 최소공배수로 유일하게 나타낼 수 있다.}
+
+\begin{center}
+\S~7.\\[0.25em]
+\textbf{고립아이디얼의 유일성.}
+\end{center}
+
+\textbf{정의 VI.} \emph{최단표현 $\ideal M=[\ideal R,\ideal L]$가 $\ideal L$에 관하여 축약되어 있다고 하자. $\ideal R$에 결부된 어느 소아이디얼도 $\ideal L$에 대응 소아이디얼의 약수가 아니면, 다시 말해 $\ideal L$이 $\ideal R$에 대하여 상대소이면 $\ideal R$을 고립아이디얼이라 한다.}
+
+그러면 표현 $\ideal M=[\ideal R,\ideal L]$은 보조정리 V의 표현 $\ideal M=[\ideal R_i,\ideal L_i]$에 대한 조건을 만족하므로, 보조정리 V와 함께 다음이 증명된다.
+
+\textbf{보조정리 VI.} \emph{$\ideal R$이 $\ideal L$에 관하여 축약된 최단표현 $\ideal M=[\ideal R,\ideal L]$의 고립아이디얼이면, 이 표현은 $\ideal R$에 관해서도 축약되어 있다.}
+
+따라서 고립아이디얼의 경우에는 축약표현을 다루므로, $\ideal R$과 $\ideal L$을 기약아이디얼들로 분해할 때 나타나는 대응 소아이디얼들을 합치면 그에 대응하는 $\ideal M$의 분해에서 나타나는 유일하게 정해진 대응 소아이디얼들이 된다. 그러므로 $\ideal R$의 기약아이디얼 분해에 속하는 어느 소아이디얼도, 그에 대응하는 $\ideal M$의 분해에 속하는 나머지 소아이디얼의 약수가 아니다. 거꾸로 이 조건이 성립하고 $\ideal R$이 $\ideal R$에 관하여 축약된 표현 $\ideal M=[\ideal R,\ideal L]$에 적어도 한 번 나타나면, 따라서 어떤 축약표현 $\ideal M=[\ideal R,\ideal L^*]$에도 나타나면, 정의 VI에 따라 $\ideal R$은 고립되어 있다. 이로부터 특정 보충부분 $\ideal L$에 의존하지 않는 다음 정의를 얻는다.
+
+\textbf{정의 VIa.} \emph{$\ideal R$의 기약아이디얼 분해에 속하는 소아이디얼들이 그에 대응하는 $\ideal M$의 분해에 속하는 나머지 소아이디얼들의 약수가 아니고, $\ideal R$이 $\ideal R$에 관하여 축약된 표현 $\ideal M=[\ideal R,\ideal L]$에 적어도 한 번 나타나면 $\ideal R$을 고립아이디얼이라 한다.}\footnote{통상적인 대응 소아이디얼들(\S~5 끝)을 사용한다면, $\ideal L$에 대응 소아이디얼들이 모두 $\ideal R$에 대응 소아이디얼들과 다르다는 조건을 따로 덧붙여야 한다. 따라서 정의 VIa에서는 표현이 보충부분에 관하여 축약되어 있다고 더 이상 가정할 필요가 없다.}
+
+이제
+\[
+ \ideal M=[\ideal R,\ideal L]=[\bar{\ideal R},\bar{\ideal L}]
+\]
+가 고립아이디얼 $\ideal R,\bar{\ideal R}$와 보충부분 $\ideal L,\bar{\ideal L}$로 된 $\ideal M$의 두 표현이고, $\ideal R$과 $\bar{\ideal R}$에 대응 소아이디얼들이 일치한다고 하자. 표현들이 축약되도록 $\ideal L$과 $\bar{\ideal L}$을 각각 약수 $\ideal L^*$와 $\bar{\ideal L}^{*}$로 바꾸면, $\ideal L^*$와 $\bar{\ideal L}^{*}$에 대응 소아이디얼들도 일치한다. 따라서 정리 XI에 따라 $\ideal L^*$는 $\bar{\ideal R}$에 대하여 상대소이고 $\bar{\ideal L}^{*}$는 $\ideal R$에 대하여 상대소이다. 또한
+\[
+ \ideal R\cdot\ideal L^*\equiv0(\bar{\ideal R}),
+ \qquad
+ \bar{\ideal R}\cdot\bar{\ideal L}^{*}\equiv0(\ideal R)
+\]
+이므로
+\[
+ \ideal R\equiv0(\bar{\ideal R}),
+ \qquad
+ \bar{\ideal R}\equiv0(\ideal R),
+ \qquad
+ \ideal R=\bar{\ideal R}
+\]
+를 얻는다. 따라서 고립아이디얼들은 대응 소아이디얼들에 의해 유일하게 정해진다. 특히 이것은 기약아이디얼 또는 극대 으뜸아이디얼로의 분해에 관한 정리 VII과 IX를 강화한다. 정리 IX의 따름정리에 따라 여기서는 최단표현만을 가정해도 된다. 정리하면 다음과 같다.
+
+\textbf{정리 XIII.} \emph{한 아이디얼을 기약아이디얼들 또는 극대 으뜸아이디얼들의 최소공배수로 나타내는 모든 최단표현에서, 고립된 기약아이디얼들 또는 고립된 극대 으뜸아이디얼들은 유일하게 정해진다. 다의성은 고립되지 않은 기약아이디얼들 또는 극대 으뜸아이디얼들에만 관계한다.}\footnote{다항식의 아이디얼을 극대 으뜸아이디얼들로 분해하는 경우에 이 정리는 이미 매콜리가 증명 없이 제시하였다. 고립 및 비고립(매입된) 으뜸아이디얼에 대한 그의 정의는 아래에서 제시하는 것의 비유리적 정식화로 볼 수 있다.} \emph{일반적으로 고립아이디얼들은 대응 소아이디얼들에 의해 유일하게 정해진다.}
+
+그러한 기약아이디얼 또는 극대 으뜸아이디얼의 최단표현에서 아이디얼 $\ideal B_i$ 또는 $\ideal Q_j$가 고립되어 있지 않다고 하자. 그러면 정의에 따라 보충부분 $\ideal U_i$ 또는 $\ideal L_j$는 $\ideal P_i$ 또는 $\ideal P_j$로 나누어지고, 따라서
+\[
+ \ideal U_i^{\varrho_i}\equiv0(\ideal B_i)
+ \qquad\text{또는}\qquad
+ \ideal L_j^{\sigma_j}\equiv0(\ideal Q_j)
+\]
+이다. 거꾸로 이 관계들이 성립하면 $\ideal P_i$ 또는 $\ideal P_j$는 보충부분에 결부된 적어도 하나의 소아이디얼의 약수이다. 따라서 정리 IX의 따름정리에 따라, $\ideal L_j$의 약수로서 $\ideal L_j^*$에 관하여 축약된 표현을 주는 $\ideal L_j^*$에 대응 소아이디얼 하나의 약수이기도 하다. 그러므로 $\ideal B_i$ 또는 $\ideal Q_j$는 고립되어 있지 않다. 특히 $\ideal M$의 분해에서 대응 소아이디얼이 한 번보다 많이 나타나는 기약아이디얼 $\ideal B_i$는 언제나 고립되어 있지 않다. \emph{따라서 고립되지 않은 으뜸아이디얼은 모든 보충부분의 어떤 거듭제곱이 그 아이디얼로 나누어진다는 성질로도 특징지어지고, 고립된 으뜸아이디얼은 이 성질이 성립할 수 없다는 것으로 특징지어진다.}
+
+\begin{center}
+\S~8.\\[0.25em]
+\textbf{한 아이디얼을 서로소-기약아이디얼들의 곱으로 유일하게 나타내기.}
+\end{center}
+
+바탕 환영역 $\Sigma$가 단위원, 즉 $\Sigma$의 모든 원소 $a$에 대하여 $\varepsilon\cdot a=a$가 되는 원소 $\varepsilon$을 가진다고 하자.\footnote{곱셈이 가환이므로 $\Sigma$는 단위원을 둘 이상 가질 수 없다. 실제로 두 단위원 $\varepsilon_1,\varepsilon_2$에 대하여 $\varepsilon_1\varepsilon_2=\varepsilon_2=\varepsilon_1$이다.} 그러면 서로소 아이디얼들을 다음과 같이 정의할 수 있다.
+
+\textbf{정의 VIII.} \emph{두 아이디얼 $\ideal R,\ideal S$의 최대공약아이디얼이 $\Sigma$의 모든 원소로 이루어진 단위아이디얼 $\ideal D=(\varepsilon)$와 같으면 $\ideal R$과 $\ideal S$를 서로소라고 한다. 한 아이디얼을 쌍마다 서로소인 아이디얼들의 최소공배수로 나타낼 수 없으면 그 아이디얼을 서로소-기약이라 한다.}
+
+서로소인 두 아이디얼은 언제나 서로 상대소임을 관찰하자. 실제로 정의에 따라 $r\equiv0(\ideal R)$, $s\equiv0(\ideal S)$이고 $\varepsilon=r+s$인 두 원소 $r,s$가 존재한다. $\ideal T\cdot\ideal R\equiv0(\ideal S)$이면 $\ideal T\cdot r\equiv0(\ideal S)$이고, 따라서 $\ideal T\cdot\varepsilon=\ideal T\equiv0(\ideal S)$이다. 마찬가지로 $\bar{\ideal T}\cdot\ideal S\equiv0(\ideal R)$이면 $\bar{\ideal T}\equiv0(\ideal R)$이다.\footnote{그러나 역은 성립하지 않는다. 예를 들어 아이디얼 $\ideal R=(x)$와 $\ideal S=(y)$는 서로 상대소이지만 서로소는 아니다.} 따라서 보조정리 V에 따라 쌍마다 서로소인 아이디얼들로 된 모든 표현은 동시에 축약되어 있다.
+
+유일성 증명의 바탕은 정리 X에 대응하는 다음 정리이다.
+
+\textbf{정리 XIV.} \emph{$\ideal R$이 아이디얼 $\ideal S_1,\ldots,\ideal S_\lambda$ 각각과 서로소이면, $\ideal R$은 $\ideal S=[\ideal S_1\cdots\ideal S_\lambda]$와도 서로소이다. 거꾸로 $\ideal R$과 $\ideal S$가 서로소이면 $\ideal R$은 각 $\ideal S_j$와도 서로소이다. $\ideal R=[\ideal R_1\cdots\ideal R_\mu]$이고 각 $\ideal R_i$가 각 $\ideal S_j$와 서로소이면 $\ideal R$과 $\ideal S$는 서로소이며, 여기서도 역이 성립한다.}
+
+실제로 $\ideal R$이 각 $\ideal S_j$와 서로소이면
+\[
+ s_j\equiv0(\ideal S_j),
+ \qquad
+ s_j\equiv\varepsilon(\ideal R)
+\]
+인 원소 $s_j$들이 존재한다. 따라서
+\[
+ s_1\cdot s_2\cdots s_\lambda\equiv0(\ideal S),
+ \qquad
+ s_1\cdot s_2\cdots s_\lambda\equiv\varepsilon(\ideal R),
+ \qquad
+ (\ideal R,\ideal S)=(\varepsilon)
+\]
+이다. 한편 $(\ideal R,\ideal S)$는 각 $(\ideal R,\ideal S_j)$로 나누어지므로 역도 성립한다. 이 논증을 여러 번 적용하면 주장의 둘째 부분을 얻는다. 실제로 고정된 $i$에 대하여 $\ideal R_i$가 $\ideal S_1,\ldots,\ideal S_\lambda$ 각각과 서로소이면 $\ideal R_i$는 $\ideal S$와 서로소이다. 이 사실이 모든 $i$에 대하여 성립하면 서로소 개념이 상호적이므로 $\ideal S$는 $\ideal R$과 서로소이다. 거꾸로 $\ideal R$과 $\ideal S$가 서로소이면 $\ideal S$는 각 $\ideal R_i$와 서로소이고, 따라서 $\ideal R_i$는 $\ideal S$와 서로소이다.
+
+서로소-기약아이디얼로의 분해가 존재하고 유일함을 보이는 증명은\footnote{분해의 존재는 다시 \S~2와 비슷하게 직접 증명할 수 있고, 유일성도 직접 증명할 수 있다(서론에서 슈마이들러와 뇌터--슈마이들러에 관하여 말한 내용을 참조하라). 여기서 제시하는 증명은 서로소-기약아이디얼의 구조도 함께 밝혀 준다.} 상대소아이디얼의 경우에 대응하는 증명처럼 유일한 군 분할로 귀착된다. 그러나 $\ideal M$의 상대소-기약아이디얼 $\ideal R_1,\ldots,\ideal R_\sigma$는 정리 XII에 따라 유일하게 정해져 있으므로, 여기서는 대응 소아이디얼들로 거슬러 올라갈 필요가 없다.
+
+$\ideal M$의 유일하게 정해진 상대소-기약아이디얼 $\ideal R_1,\ldots,\ideal R_\sigma$를 다음과 같이 군들로 묶는다. \emph{한 군의 각 아이디얼이 다른 군의 각 아이디얼과 서로소가 되게 하되, 각 군 자체는 한 부분군의 각 아이디얼이 다른 부분군의 각 아이디얼과 서로소가 되도록 두 부분군으로 나눌 수 없게 한다.} 그러한 군 분할은 다음과 같이 얻는다. 정의상 각 군 $G$는 한 아이디얼 $\ideal R$과 함께 $\ideal R$과 서로소가 아닌 모든 아이디얼도 포함해야 한다. 이들을 $\ideal R_{i_1}$이라 하자. 다시 이들과 서로소가 아닌 아이디얼들을 $\ideal R_{i_1i_2}$라 하고, 일반적으로 $\ideal R_{i_1\ldots i_\lambda}$가 $\ideal R_{i_1\ldots i_{\lambda-1}}$과 서로소가 아니라고 하자. 전체적으로 유한개의 아이디얼만을 다루므로 이 절차는 유한 단계 뒤에 끝나야 한다. 곧 앞서 나온 모든 아이디얼과 다른 새 아이디얼을 더 이상 내놓지 않는다. 이렇게 얻은 아이디얼들의 전체는 원하는 성질을 가진 한 군 $G$를 이룬다. 실제로 $G$에 들어 있지 않은 모든 아이디얼은 구성에 따라 $G$에 들어 있는 모든 아이디얼과 서로소이다. 더 나아가 $G$가 두 부분군 $G^{(1)}$, $G^{(2)}$로 나뉘고 이를테면 $\ideal R_{i_1\ldots i_\lambda}$가 $G^{(1)}$의 원소라고 하자. 서로소성은 상호적이므로 $G^{(1)}$은 $\ideal R_{i_1\ldots i_{\lambda-1}},\ldots,\ideal R_{i_1}$과 $\ideal R$, 따라서 군 $G$ 전체도 포함해야 한다. 이로써 기약성이 증명되었다. $G$에 들어 있지 않은 아이디얼들에 같은 절차를 적용하면 모든 $\ideal R$의 군 분할 $G_1,\ldots,G_\tau$를 얻는다.
+
+이 군 분할은 유일하다. 실제로 $G'_1,\ldots,G'_\tau$가 두 번째 분할이고 $\ideal R_{i_1\ldots i_\lambda}$가 $G'_i$의 원소라고 하자. 그러면 $G'_i$는 $\ideal R$과 따라서 $G_1$도 포함하며, 기약성 조건 때문에 $G_1$과 다른 원소를 포함할 수 없다. 그러므로 $G'_i=G_1$이다.
+
+이제 $\ideal T_i$를 군 $G_i$에 모인 아이디얼 $\ideal R$들의 최소공배수라 하자. 그러면
+\[
+ \ideal M=[\ideal T_1\cdots\ideal T_\tau]
+\]
+가 $\ideal M$을 서로소-기약아이디얼들로 나타내는 표현임을 보이겠다. 먼저 $\ideal T$들을 $\ideal R$들로 분해해 보면 $[\ideal T_1\cdots\ideal T_\tau]$가 실제로 $\ideal M$을 나타냄을 알 수 있다. 또한 정리 XIV에 따라 $\ideal T$들은 쌍마다 서로소이고, 각 $\ideal T$는 서로소-기약이다. 이로써 그러한 표현의 존재가 증명되었다.
+
+유일성을 증명하기 위하여 $\ideal M=[\bar{\ideal T}_1\cdots\bar{\ideal T}_\tau]$가 그러한 두 번째 표현이라고 하자. $\bar{\ideal T}$들을 상대소-기약아이디얼 $\ideal R$들로 분해하면 서로 다른 $\bar{\ideal T}$에서 나타나는 $\ideal R$들은 정리 XIV에 따라 서로소이고, 따라서 서로 상대소이기도 하다. 그러므로 이들은 $\ideal M$의 유일하게 정해진 상대소-기약아이디얼 $\ideal R$들과 일치한다. 또한 정리 XIV에 따라 $\bar{\ideal T}_i$들은 앞서 말한 성질을 가진 $\ideal R$들의 군 분할 $G'_i$를 만든다. 그런데 이 군 분할은 유일하고 각 $\bar{\ideal T}_i$는 군 $G'_i=G_i$에 의해 유일하게 정해지므로 $\bar{\ideal T}_i=\ideal T_i$이다. 이로써 유일성이 증명되었다.
+
+쌍마다 서로소인 아이디얼들에서는 최소공배수가 곱과 같다. 실제로 정리 XIV에 따라 $\ideal M=[\ideal T_1\cdots\ideal T_\tau]$에서 보충부분 $\ideal L_i$도 $\ideal T_i$와 서로소이다. 따라서
+\[
+ t_i\equiv0(\ideal T_i),
+ \qquad
+ l_i\equiv0(\ideal L_i),
+ \qquad
+ \varepsilon=t_i+l_i
+\]
+인 원소들이 존재한다. $f\equiv0(\ideal T_i)$, $f\equiv0(\ideal L_i)$이면
+\[
+ f=f\varepsilon=ft_i+fl_i
+ \quad\text{이므로}\quad
+ f\equiv0(\ideal L_i\cdot\ideal T_i)
+\]
+이다. 거꾸로 $\ideal L_i\cdot\ideal T_i$는 $[\ideal L_i,\ideal T_i]$로 나누어지므로 $[\ideal L_i,\ideal T_i]=\ideal L_i\cdot\ideal T_i$이다. 이 절차를 $\ideal L_i$에 계속 적용하면 마침내
+\[
+ \ideal M=[\ideal T_1\cdots\ideal T_\tau]
+       =\ideal T_1\cdot\ideal T_2\cdots\ideal T_\tau
+\]
+를 얻는다. 이로써 다음이 증명되었다.
+
+\textbf{정리 XV.} \emph{각 아이디얼은 유한개의 쌍마다 서로소인 서로소-기약아이디얼들의 곱으로 유일하게 나타낼 수 있다.}
+
+\begin{center}
+\S~9.\\[0.25em]
+\textbf{모듈로의 논의 확장. 기약모듈 분해에서 성분 수의 동일성.}
+\end{center}
+
+이제 으뜸아이디얼이나 소아이디얼이 아니라 \emph{기약아이디얼}에 관한 앞의 세 절의 내용이 더 약한 가정 아래에서도 성립함을 보이겠다. 실제로 그 절들은 곱셈의 가환법칙을 사용하지 않고 아이디얼이 모듈이라는 성질만을 사용한다. 따라서 이제 정의할 비가환 환영역에 관한 모듈에도 그대로 성립한다. 모듈을 정의하려면 다음 성질들을 가진 \emph{이중환영역 $(\Sigma,T)$}를 바탕으로 삼아야 한다.
+
+\emph{$\Sigma$는 추상적으로 정의된 비가환환이다.} 즉 $\Sigma$는 원소 $a,b,c,\ldots$의 체계이고, 이 원소들에는 환의 덧셈 $(\#)$과 환의 곱셈 $(\times)$이라는 두 연산이 정의되어 있다. 이 연산들은 \S~1에서 세운 법칙들 가운데 환의 곱셈에 관한 가환법칙 4를 제외한 모든 법칙을 만족한다.
+
+$T$는 원소 $\alpha,\beta,\gamma,\ldots$의 체계이며, $\Sigma$와 결합하여 여기에도 두 연산이 정의되어 있다. \emph{덧셈}은 두 원소 $\alpha,\beta$에서 세 번째 원소 $\alpha+\beta$를 유일하게 만들고, \emph{$T$의 원소 $\alpha$와 $\Sigma$의 원소 $c$의 곱셈}은 $T$의 원소 $c\cdot\alpha$를 유일하게 만든다.\footnote{따라서 여기서는 ``우측'' 곱셈, ``우측'' 환영역 $T$, 그리고 그에 따라 ``우측'' 모듈과 아이디얼을 다룬다. $T$에 좌측 곱셈 $\alpha\cdot c$를 바탕으로 삼으면 좌측모듈과 좌측아이디얼의 대응하는 이론을 얻는다. 즉 $M$은 $\alpha$와 함께 $\alpha\cdot c$도 포함한다. 이때 결합법칙은 $(\gamma\cdot b)\cdot a=\gamma\cdot(b\times a)$ 꼴이다.}
+
+이 연산들에는 다음 법칙들이 성립한다.
+\begin{enumerate}
+\item 덧셈의 결합법칙: $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$.
+\item 덧셈의 가환법칙: $\alpha+\beta=\beta+\alpha$.
+\item 제한 없고 유일한 뺄셈의 법칙: 방정식 $\alpha+\xi=\beta$를 만족하는 원소 $\xi$가 $T$에 유일하게 존재한다($\xi=\beta-\alpha$로 쓴다).
+\item 곱셈의 결합법칙: $a\cdot(b\cdot\gamma)=(a\times b)\cdot\gamma$.
+\item 분배법칙:
+\[
+ (a\# b)\cdot\gamma=a\cdot\gamma+b\cdot\gamma,
+ \qquad c\cdot(\alpha+\beta)=c\cdot\alpha+c\cdot\beta.
+\]
+\end{enumerate}
+이 조건들로부터 영원소의 존재와 뺄셈과 곱셈의 결합에 대해서도 분배법칙
+\[
+ (a-b)\cdot\gamma=a\cdot\gamma-b\cdot\gamma,
+ \qquad c\cdot(\alpha-\beta)=c\cdot\alpha-c\cdot\beta
+\]
+이 성립함은 잘 알려져 있다. 여기서 $(-)$는 $\Sigma$에서의 뺄셈이다. \emph{$\Sigma$가 단위원 $\varepsilon$을 포함하면 $T$의 모든 원소 $\alpha$에 대하여 $\varepsilon\cdot\alpha=\alpha$라고 한다.}
+
+$(\Sigma,T)$의 모듈 $M$은 다음 두 조건을 만족하는 $T$의 원소들의 체계를 뜻한다.
+\begin{enumerate}
+\item \emph{$M$은 $\alpha$와 함께 $c\cdot\alpha$도 포함한다. 여기서 $c$는 $\Sigma$의 임의의 원소이다.}
+\item \emph{$M$은 $\alpha,\beta$와 함께 차 $\alpha-\beta$도 포함한다.} 따라서 $\alpha$와 함께 모든 정수 $n$에 대한 $n\alpha$도 포함한다.\footnote{정수는 다시 환의 원소가 아니라 줄여 쓰는 기호로 이해해야 한다.}
+\end{enumerate}
+이 정의에 따라 \emph{$T$ 자체도 $(\Sigma,T)$의 모듈을 이룬다.} 특히 환영역 $T$와 거기서 정한 연산들이 환영역 $\Sigma$ 및 그 연산들과 일치하면 모듈 $M$은 $\Sigma$의 우측아이디얼 $M$이 된다. 더 나아가 $\Sigma$가 가환이라고 가정하면 통상적인 아이디얼 개념을 얻는다. 따라서 아이디얼은 모듈 개념의 특수한 경우이다.\footnote{가장 간단한 모듈의 예는 정수계수 선형형식들의 모듈이다. 여기서 $\Sigma$는 모든 유리정수로, $T$는 모든 정수계수 선형형식으로 이루어진다. $\Sigma$와 $T$에서 유리정수 대신 대수적 정수를 쓰거나, 이를테면 모든 짝수를 쓰면 조금 더 일반적인 모듈을 얻는다. 선형형식 대신 매번 계수 전체를 하나의 원소로 보면 $\Sigma$와 $T$의 연산들은 실제로 서로 다르다. 비가환 다항식 환영역의 아이디얼은 뇌터--슈마이들러의 공동논문에서 다룬다. 다른 특수한 비가환 환영역의 아이디얼은 후르비츠의 \emph{사원수의 수론 강의}(베를린, 슈프링어, 1919)와 거기서 인용한 뒤 파스키에의 논문들에서 다룬다.}
+
+모듈에 대해서도 \S~1의 모든 정의가 유지된다. 따라서 $\alpha\eqzero{M}$ 또는 $N\eqzero{M}$은 $\alpha$ 또는 $N$의 모든 원소가 $M$의 원소임을 뜻한다. 달리 말해 $\alpha$ 또는 $N$은 $M$으로 나누어진다. $M$이 $N$과 다른 원소들을 포함하면 $M$은 $N$의 진약수가 된다. $N\eqzero{M}$, $M\eqzero{N}$이면 $M=N$이다. 최대공약과 최소공배수의 정의도 글자 그대로 유지된다. 특히 모듈 $M$이 유한개의 원소 $\alpha_1,\ldots,\alpha_e$를 포함하고 $M=(\alpha_1\ldots\alpha_e)$, 즉 모든 $\alpha\eqzero{M}$에 대하여
+\[
+ \alpha=c_1\alpha_1+\cdots+c_e\alpha_e+n_1\alpha_1+\cdots+n_e\alpha_e
+\]
+가 되며, 여기서 $c_i$가 $\Sigma$의 원소이고 $n_i$가 정수이면, $M$을 \emph{유한모듈}, $\alpha_1,\ldots,\alpha_e$를 \emph{모듈기저}라고 한다.
+
+\emph{이하에서는 \S~1과 마찬가지로 다음 유한성 조건을 만족하는 환영역 $(\Sigma,T)$만을 바탕으로 삼는다. $(\Sigma,T)$의 모든 모듈은 유한모듈, 따라서 모듈기저를 가진다.}
+
+그러면 정리 I의 유한사슬 정리는 그곳의 증명이 보여 주듯 이 환영역 $(\Sigma,T)$의 모듈에도 성립하고, 따라서 \S\S~2, 3의 모든 전제가 충족된다. 최단표현과 축약표현에 관한 정의 I과 보조정리 I을 직접 옮길 수 있다. 각 모듈을 유한개의 기약모듈의 최소공배수로 나타낼 수 있다는 정리 II도 마찬가지이며, 보조정리 II는 그러한 최단표현이 모두 동시에 축약되어 있음을 보여 준다. 모듈의 가약성을 그 보충부분의 성질로 나타내는 정리 III도 유지되고, 여기서 보조정리 III과 마침내 \emph{한 모듈을 기약모듈들의 최소공배수로 나타내는 서로 다른 두 최단표현에서 성분 수가 같다}는 정리 IV가 따른다. 또한 정리 IV는 축약표현에 관한 보조정리 I의 역인 보조정리 IV를 준다.
+
+\emph{따름정리.} 같은 논증은 양쪽 환영역 $T$, 즉 우측이면서 좌측인 환영역에 대하여 모듈을 일관되게 \emph{양쪽모듈}, 곧 $\alpha$와 함께 $c\cdot\alpha$와 $\alpha\cdot c$를 모두 포함하고 $\alpha,\beta$와 함께 $\alpha-\beta$를 포함하는 모듈로 이해해도 이 모든 정리와 정의가 유지됨을 보여 준다.
+
+이 모든 정리는 \emph{나눗셈}과 \emph{최소공배수}라는 개념에만 의존하지만, 뒤의 유일성 정리들은 본질적으로 \emph{곱}의 개념에 의존하므로 직접 옮길 수 없다. 예를 들어 $T$의 두 원소의 곱이 정의되어 있지 않으므로 으뜸아이디얼과 소아이디얼의 정의를 모듈로 옮길 수 없다. 형식적으로 가능한 비가환환으로의 이식도 의미를 잃는다. 여기서는 대응 소아이디얼의 존재를 증명할 수 없고\footnote{실제로 여기서는 $p_1^{\lambda_1}\eqzero{\ideal Q}$, $p_2^{\lambda_2}\eqzero{\ideal Q}$로부터 $(p_1-p_2)^{\lambda_1+\lambda_2}\eqzero{\ideal Q}$가 따르지 않으며, $(a\cdot b)^\lambda\eqzero{\ideal Q}$로부터 $a^\lambda\cdot b^\lambda\eqzero{\ideal Q}$도 따르지 않는다. 따라서 $\ideal P$가 아이디얼임도 증명할 수 없고, 소아이디얼의 성질을 가짐도 증명할 수 없다. 양쪽아이디얼의 경우에는 $\ideal P$가 아이디얼임은 증명할 수 있지만 소아이디얼임은 증명할 수 없다.} 기약아이디얼이 으뜸임을 보이는 증명도 실패하기 때문이다. 그런데 이 두 사실이 뒤의 유일성 정리들의 토대이다. 반면 비가환환이 단위원을 가지면 서로소 및 서로소-기약아이디얼을 정의할 수 있고, 정리 II의 증명에 사용한 논증은 각 아이디얼을 \emph{유한개의} 쌍마다 서로소인 서로소-기약아이디얼들의 최소공배수로 나타낼 수 있음을 보여 준다.\footnote{특수한 ``완전가약'' 아이디얼에 대해서는 여기서도 유일성 정리를 세울 수 있다. 뇌터--슈마이들러의 공동논문을 참조하라.}
+
+끝으로 $(\Sigma,T)$가 유한성 조건을 만족하기 위한 충분조건을 하나 덧붙인다. \emph{$\Sigma$가 단위원을 가지고 유한성 조건을 만족하며, $T$ 자체가 $(\Sigma,T)$의 유한모듈이면 $(\Sigma,T)$의 모든 모듈은 유한모듈이다.}
+
+실제로 $\Sigma$에 단위원이 존재하므로
+\[
+ \ideal M=(f_1,\ldots,f_e),\qquad
+ f=\bar b_1f_1+\cdots+\bar b_e f_e+n_1f_1+\cdots+n_e f_e,
+\]
+여기서 $\bar b_i$는 $\Sigma$의 원소이고 $n_i$는 정수인 표현은
+\[
+ f=b_1f_1+\cdots+b_e f_e
+\]
+라는 표현도 준다. 여기서 $b_i$는 $\Sigma$의 원소이다. 실제로 $f_i=\varepsilon f_i$이므로 $n_if_i=n_i\varepsilon f_i$이고, $n_i\varepsilon=(\varepsilon+\cdots+\varepsilon)$는 $\Sigma$에 속하므로 $b_i=\bar b_i+n_i\varepsilon$도 $\Sigma$의 원소이다. 이제 $T$에 관한 가정은 $T$의 모든 원소 $\alpha$가
+\[
+ \alpha=\bar a_1\tau_1+\cdots+\bar a_k\tau_k
+       +n_1\tau_1+\cdots+n_k\tau_k
+\]
+꼴의 표현, 따라서
+\[
+ \alpha=a_1\tau_1+\cdots+a_k\tau_k
+\]
+꼴의 표현을 가진다는 뜻이다. 둘째 표현은 $\varepsilon\tau_i=\tau_i$이므로 앞에서와 같이 첫째 표현에서 얻어진다.
+
+이제 $\alpha$가 $(\Sigma,T)$의 한 모듈 $M$의 원소들을 두루 달리면, $\tau_k$의 계수 $a_k$들은 $\Sigma$의 한 아이디얼 $\ideal M_k$를 두루 달린다. 따라서 위의 결과에 따라 모든 $a_k\eqzero{\ideal M_k}$는
+\[
+ a_k=b_1a_k^{(1)}+\cdots+b_ea_k^{(e)}
+\]
+로 나타난다. $\alpha^{(i)}$가 $M$의 원소이고 그 $\tau_k$의 계수가 $a_k^{(i)}$라고 하자. 그러면 $\alpha-b_1\alpha^{(1)}-\cdots-b_e\alpha^{(e)}$는 $M$에 속하면서 $\tau_1,\ldots,\tau_{k-1}$에만 의존하는 원소이다. $\tau_k$를 더 이상 포함하지 않는 이 원소들 전체는 모듈 $M'$을 이루며, 여기에 같은 절차를 반복할 수 있다. 유한번 반복하면 주장이 증명된다.
+
+\begin{center}
+\S~10.\\[0.25em]
+\textbf{다항식 환영역이라는 특수한 경우.}
+\end{center}
+
+1. 바탕 환영역 $\Sigma$가 임의의 복소수 계수를 갖는 $x_1,\ldots,x_n$의 모든 다항식으로 이루어진다고 하자. 이 환영역은 힐베르트의 모듈기저 정리(\emph{Math. Ann.} 36)에 따라 유한성 조건을 만족한다. 여기서는 \emph{우리 정리들과 소거이론 및 모듈론의 알려진 정리들 사이의 관계}를 다룬다.
+
+이 관계는 잘 알려진 힐베르트 정리의 다음 특수한 경우로 얻어진다.\footnote{``완전 불변식계에 관하여'', \emph{Math. Ann.} 42 (1893), \S~3, 313쪽.}
+
+$f$가 소아이디얼 $\ideal P$의 모든 다항식의 영점인 $x_1,\ldots,x_n$의 모든 유한 값계($\ideal P$의 영점)에서 0이 되면 $f$는 $\ideal P$로 나누어진다. 다시 말해 소아이디얼 $\ideal P$는 그 영점들에서 0이 되는 다항식 \emph{전체}로 이루어진다.\footnote{라스커[\emph{Math. Ann.} 60 (1905), 607쪽]가 보였듯 이 특수한 경우는 동차형식의 경우 직접 증명할 수도 있다. 거꾸로 여기서 동차 및 비동차 경우의 힐베르트 정리가 다시 따르며, 이를 다음과 같이 말할 수 있다. 아이디얼 $\ideal R$이 $\ideal M$의 모든 영점에서 0이 되면 $\ideal R$의 어떤 거듭제곱은 $\ideal M$으로 나누어진다. 그러나 이 정리와 위의 특수한 경우는 $x$의 값영역이 \emph{대수적으로 닫혀 있을 때}에만 성립한다. 따라서 우리 정리들만으로는 따를 수 없고 근의 존재를 이용해야 한다. 이를테면 영점이 $x_1=0,\ldots,x_n=0$뿐인 아이디얼은 어떤 차수 이상인 $x$들의 모든 멱곱을 포함한다는 대목에서 그러하다. 나머지 증명은 우리 정리들을 이용하면 라스커의 증명보다 조금 단순해진다. 라스커는 한 아이디얼을 극대 으뜸아이디얼들로 분해하는 일에도 힐베르트 정리를 사용해야 했기 때문이다.}
+
+따라서 곱 $f\cdot g$가 $\ideal P$의 모든 영점에서 0이면 적어도 한 인자가 그 모든 영점에서 0이 된다. 그 영점들은 \emph{기약 대수도형}을 이룬다. 거꾸로 이것을 기약도형의 정의로 삼으면, 한 기약도형에서 0이 되는 모든 다항식은 소아이디얼을 이룬다. 따라서 소아이디얼과 기약도형은 일대일로 대응한다. 또한 $\ideal Q\eqzero{\ideal P}$, $\ideal P^e\eqzero{\ideal Q}$이므로 으뜸아이디얼의 영점들은 그에 대응 소아이디얼의 영점들과 일치한다.\footnote{으뜸아이디얼이 기약도형 하나를 가진다는 이 성질을 매콜리는 정의로 삼는다(서론 참조). 반면 라스커는 도형의 ``다양도''라는 개념만 정의에 넣고, 나머지는 \emph{추상적으로} 정의한다. $x_1=0,\ldots,x_n=0$에서만 0이 되는 으뜸아이디얼은 라스커에게 특수한 지위를 가진다.} 그러므로 한 아이디얼을 극대 으뜸아이디얼들의 최소공배수로 나타내면 그 아이디얼의 모든 영점을 기약도형들로 분해하게 되며, 라스커가 보였듯 그 역도 성립한다. \emph{따라서 대응 소아이디얼의 유일성을 증명하는 것은 여기서 대수도형을 기약도형들로 유일하게 분해할 수 있다는 소거이론의 기본정리에 대응한다.} 환영역 안의 다항식들을 기약다항식들의 곱으로 유일하게 나타낼 수 없고 따라서 소거이론도 존재하지 않는 특수한 다항식 환영역에서는, 우리의 정리를 그 소거이론 정리의 동치물로 볼 수 있다.
+
+고립된 으뜸아이디얼들에 대응하는 기약도형들은 정확히 ``최소 레졸벤트''\footnote{예를 들어 J. König, \emph{Einleitung in die allgemeine Theorie der algebraischen Größen}(라이프치히, 토이프너, 1903), 235쪽을 참조하라.}에 나타나는 것들이다. 실제로 고립되지 않은 각 극대 으뜸아이디얼의 영점들은 적어도 하나의 고립아이디얼의 영점이기도 하다. 곧 그 고립아이디얼에 대응 소아이디얼은 고립되지 않은 아이디얼에 대응 소아이디얼로 나누어진다. 따라서 고립된 으뜸아이디얼의 유일성은 그 지수들에서 새로운 불변 중복도수를 준다. 으뜸아이디얼들을 기약아이디얼들로 분해하는 데 관한 유일성 정리들도 중복도의 관점에서 소거이론을 보완하는 것으로 볼 수 있다.
+
+이 관찰들에 따라 여러 분해가 대수도형에 대하여 갖는 의미를 해석할 수 있다. 쌍마다 서로소인 아이디얼들에는 공통영점을 갖지 않는 도형들이 대응한다. 서로 상대소인 아이디얼들의 경우 한 아이디얼의 어느 기약도형도 다른 아이디얼의 공통영점도형이 아니다. 극대 으뜸아이디얼들은 모두 서로 다른 기약도형에서만 0이 된다. 기약아이디얼로 분해할 때에는 같은 기약도형이 여러 번 나타날 수도 있다.
+
+일반 다항식 환영역 대신 모든 동차형식의 환영역을 바탕으로 삼아도 된다는 점을 덧붙인다. 거기서는 같은 차수의 형식들에 대해서만 덧셈이 정의되지만, 이 연산들 아래에서도 일반 정리들이 유지됨을 쉽게 확인할 수 있다.\footnote{그러나 다의성이 있는 경우 동차분해뿐 아니라 비동차분해도 존재할 수 있음은 다음 예가 보여 준다. $(x^3,xy,y^3)=[(x^3,y);(y^3,x)]=[(xy,x^3,y^3,x+y^3);(xy,x^3,y^3,y+x^2)]$.}
+
+서로 다른 네 분해의 가장 간단한 예 하나는, 아래에 공식을 적을 것인데, 위의 논의에 따라 한 직선과 그 직선과 각각 꼬인 위치에 있으면서 서로 교차하는 두 직선으로 주어진다. 이 두 직선 가운데 하나는 두 직선의 교점과 다른 한 점을 더 높은 중복도로 포함한다. 서로소-기약아이디얼 분해에는 첫 직선과 그에 꼬인 위치에 있는 도형으로의 분해가 대응한다. 이 도형은 상대소-기약아이디얼 분해에서 두 직선으로 나뉜다. 극대 으뜸아이디얼 분해에는 더 높은 중복도의 점을 분리해 내는 일이 대응하고, 기약아이디얼 분해에는 이 점의 분해가 수반된다.
+
+이 점을 원점으로, 그 점을 지나는 직선을 $y$축으로, 이 직선과 교차하는 직선을 $x$축에 평행하게, 그에 꼬인 위치의 직선을 $z$축에 평행하게 잡으면, 그러한 배치는 다음 \emph{기약아이디얼들}로 나타낼 수 있다.\footnote{이 가운데 처음 세 아이디얼은 소아이디얼이므로 기약이다. $\ideal B_4$는 약수 $(x^2,y,z)$와 $(x,y,z)$만 가지므로 기약이고, $\ideal B_5$는 그 모든 약수가 다항식 $xy$를 포함하므로 기약이다.}
+\par\medskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal B_1=(x-1,y);\qquad
+ \ideal B_2=(y-1,z);\qquad
+ \ideal B_3=(x,z);\qquad
+ \ideal B_4=(x^3,y,z);
+\)}\par
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal B_5=(x^2,y^2,z).
+\)}\par\medskip
+\emph{대응 소아이디얼들}은 다음과 같다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal P_1=\ideal B_1;\qquad
+ \ideal P_2=\ideal B_2;\qquad
+ \ideal P_3=\ideal B_3;\qquad
+ \ideal P_4=\ideal P_5=(x,y,z).
+\)}\par\medskip
+\emph{극대 으뜸아이디얼들}은 다음과 같다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal Q_1=\ideal B_1;\qquad
+ \ideal Q_2=\ideal B_2;\qquad
+ \ideal Q_3=\ideal B_3;\qquad
+ \ideal Q_4=[\ideal B_4,\ideal B_5]=(x^3,y^2,x^2y,z).
+\)}\par\medskip
+\emph{상대소-기약아이디얼들}은 다음과 같다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal R_1=\ideal Q_1;\qquad
+ \ideal R_2=\ideal Q_2;\qquad
+ \ideal R_3=[\ideal Q_3,\ideal Q_4]=(x^3,x^2y,xy^2,z).
+\)}\par\medskip
+\emph{서로소-기약아이디얼들}은 다음과 같다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal S_1=\ideal R_1;\qquad
+ \ideal S_2=[\ideal R_2,\ideal R_3]
+ =((y-1)x^3,(y-1)x^2y,(y-1)xy^2,z).
+\)}\par\medskip
+이로부터 \emph{전체아이디얼}은
+\par\smallskip
+\noindent\(\displaystyle \ideal M=[\ideal S_1,\ideal S_2]=\ideal S_1\cdot\ideal S_2\)\par
+\noindent\(\displaystyle
+ =((x-1)(y-1)x^3,(y-1)x^2y,(y-1)xy^2,(x-1)z,y(y-1)x^3,yz),
+\)\par\smallskip
+\noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}c@{}}
+여기서 & \(\displaystyle 1=-(y-1)x^3+(y-1)(x^3-1)+y,\)
+\end{tabular*}\par
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ (y-1)(x^3-1)+y\eqzero{\ideal S_1};\qquad
+ -(y-1)x^3\eqzero{\ideal S_2}
+\)}\par
+이다. 이때 아이디얼 $\ideal B_1,\ideal B_2,\ideal B_3$은 고립되어 있으므로 기약아이디얼 및 극대 으뜸아이디얼 분해에서도 유일하게 정해진다. 아이디얼 $\ideal B_4,\ideal B_5$와 $\ideal Q_4$는 고립되어 있지 않다. 이들은 유일하게 정해지지 않으며, 예를 들어
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal D_4=(x^3,y+\lambda x^2,z);\qquad
+ \ideal D_5=(x^2+\mu xy,y^2,z)
+\)}\par
+로 바꿀 수 있다. 마찬가지로 $\ideal Q_4$는
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \overline{\ideal Q}_4=(x^3,x^2y,y^2+\lambda xy,z)
+\)}\par
+로 바꿀 수 있다.
+
+2. 일반 다항식 환영역과 정수계수 다항식 환영역뿐 아니라, 다항식으로 이루어진 모든 \emph{유한 정역}도 힐베르트의 모듈기저 정리가 보여 주듯 유한성 조건을 만족한다.\footnote{거꾸로 한 다항식 환영역이 유한성 조건을 만족하고, 각 다항식이 $x$에 관하여 더 낮은 차수의 승수를 사용하는 표현을 적어도 하나 허용하면 그 환영역은 유한 정역이다.} 이때 계수들은 임의의 체에 속하게 할 수 있다. 여기서는 \emph{모든 짝다항식의 환영역}에 대한 예를 하나 더 제시한다. 이는 $x^2\cdot y^2=(xy)^2$ 때문에 환영역의 다항식들을 환영역의 기약다항식들의 곱으로 유일하게 나타낼 수 없는 가장 간단한 환영역이다. 앞의 예와 같은 배치를 이제 다음 \emph{기약아이디얼들}로 나타낸다.
+\par\medskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal B_1=(x^2-1,xy,y^2,yz);\qquad
+ \ideal B_2=(y^2-1,xz,yz,z^2);
+\)}\par
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal B_3=(x^2,xy,xz,yz,z^2);\qquad
+ \ideal B_4=(x^4,xy,y^2,xz,yz,z^2);
+\)}\par
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal B_5=(x^2,y^2,xz,yz,z^2).
+\)}\par\medskip
+\emph{대응 소아이디얼들}은 다음과 같다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal P_1=\ideal B_1;\qquad
+ \ideal P_2=\ideal B_2;\qquad
+ \ideal P_3=\ideal B_3;\qquad
+ \ideal P_4=\ideal P_5=(x^2,xy,y^2,xz,yz,z^2).
+\)}\par\medskip
+$\ideal P_1$이 소아이디얼이라는 사실은 환영역의 각 다항식이
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ f\equiv\varphi(z^2)+xz\,\psi(z^2)\;(\ideal P_1)
+\)}\par\smallskip
+꼴이 된다는 데서 따른다. 실제로
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ f_1\equiv\varphi_1(z^2)+xz\,\psi_1(z^2);\qquad
+ f_2\equiv\varphi_2(z^2)+xz\,\psi_2(z^2)
+\)}\par\smallskip
+라고 하면 $f_1\cdot f_2\eqzero{\ideal P_1}$로부터 방정식들
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \varphi_1\varphi_2+z^2\psi_1\psi_2=0;\qquad
+ \varphi_2\psi_1+\varphi_1\psi_2=0
+\)}\par
+이 따르고, 여기서 $f_1\eqzero{\ideal P_1}$ 또는 $f_2\eqzero{\ideal P_1}$를 얻는다. 꼭 같은 방식으로 $\ideal P_2$가 소아이디얼임을 알 수 있다. 환영역의 각 다항식은 $\ideal P_3$을 법으로 $y^2$의 다항식과 합동이므로 $\ideal P_3$도 소아이디얼이다. $\ideal P_4$는 환영역의 모든 다항식으로 이루어진다. 따라서 $\ideal B_1,\ideal B_2,\ideal B_3$은 소아이디얼이므로 기약이다. 한편 $\ideal B_4$와 $\ideal B_5$는 각각 진약수 $\ideal P_4$ 하나만을 가지므로 반드시 기약이다.
+
+기약아이디얼들로부터 다음 \emph{극대 으뜸아이디얼들}을 얻는다.
+\par\medskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal Q_1=\ideal B_1;\qquad
+ \ideal Q_2=\ideal B_2;\qquad
+ \ideal Q_3=\ideal B_3;\qquad
+ \ideal Q_4=[\ideal B_4,\ideal B_5]=(x^4,x^3y,y^2,xz,yz,z^2);
+\)}\par\medskip
+다음은 \emph{상대소-기약아이디얼들}이다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal R_1=\ideal Q_1;\qquad
+ \ideal R_2=\ideal Q_2;\qquad
+ \ideal R_3=[\ideal Q_3,\ideal Q_4]
+ =(x^4,x^3y,x^2y^2,xy^3,xz,yz,z^2),
+\)}\par\medskip
+다음은 \emph{서로소-기약아이디얼들}이다.
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ \ideal S_1=\ideal R_1;\qquad
+ \ideal S_2=[\ideal R_2,\ideal R_3]
+\)}\par
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ =((y^2-1)x^4,(y^2-1)x^3y,(y^2-1)x^2y^2,(y^2-1)xy^3,xz,yz,z^2).
+\)}\par\medskip
+첫째 예에서와 마찬가지로
+\par\smallskip
+\noindent\makebox[\linewidth][c]{\(\displaystyle
+ [\ideal B_4,\ideal B_5]=[\ideal D_4,\ideal D_5]
+\)}\par
+이고, 여기서
+\noindent\(\displaystyle
+ \ideal D_4=(x^4,xy+\lambda x^2,\ldots);\qquad
+ \ideal D_5=(x^2+\mu xy,\ldots),\qquad \lambda\cdot\mu\ne1.
+\)\par
+또한
+\noindent\(\displaystyle [\ideal Q_3,\ideal Q_4]=[\ideal Q_3,\overline{\ideal Q}_4],\)\quad
+여기서 \(\displaystyle \overline{\ideal Q}_4=(x^4,x^3y,y^2+\lambda xy,\ldots).\)\par
+나머지 기약아이디얼 또는 극대 으뜸아이디얼 $\ideal B_1,\ideal B_2,\ideal B_3$은 고립아이디얼이므로 유일하게 정해진다.
+
+\begin{center}
+\S~11.\\[0.25em]
+\textbf{수론과 미분식 이론의 예.}
+\end{center}
+
+1. 바탕 환영역 $\Sigma$가 모든 \emph{짝수 유리정수}로 이루어진다고 하자. 그러면 $\Sigma$의 각 수 $2a$에 수 $a$를 대응시킴으로써 $\Sigma$를 모든 유리정수의 환영역과 일대일로 대응시킬 수 있다. 여기서 곧바로 $\Sigma$의 모든 아이디얼이 주아이디얼 $(2a)$임이 따른다. 아이디얼의 각 원소 $2c$에 대한 기저표현 $2c=n\cdot2a$에서 홀수 $n$은 유한합을 줄여 쓰는 기호일 뿐이다.
+
+이 환영역의 \emph{소아이디얼들}은 $\ideal P_0=\ideal D=(2)$와 $\ideal P=(2p)$로 주어지며, 여기서 $p$는 홀수 소수이다. 따라서 각 소아이디얼은 $\ideal P_0$로 나누어지지만 다른 어느 소아이디얼로도 나누어지지 않는다. \emph{으뜸아이디얼들}은
+\[
+ \ideal Q_{e_0}=(2\cdot2^{e_0})
+ \qquad\text{및}\qquad
+ \ideal Q_e=(2p^e)
+\]
+로 주어진다. 이들은 동시에 \emph{기약아이디얼들}이다. 소아이디얼들에 관하여 방금 말한 사실에 따라 서로 다른 홀수 소수에 속하는 어느 두 아이디얼도 서로 상대소이지만, 어느 $\ideal Q$도 어떤 $\ideal Q_{e_0}$에 대해서는 상대소가 아니다.\footnote{실제로 홀수 $p_1\ne p_2$에 대하여 $2b\cdot2p_1^{e_1}\eqzero{2p_2^{e_2}}$이면 언제나 $2b\eqzero{2p_2^{e_2}}$이다. 그러나 $2b\cdot2p^e\eqzero{2\cdot2^{e_0}}$에서는 $2b\equiv2\cdot2^{e_0-1}\,(2\cdot2^{e_0})$만이 따른다.} 따라서 $\ideal Q_{e_0}$들이 유일한 비고립 으뜸아이디얼들이다. $a$를 소수 거듭제곱들로 유일하게 분해하는 것에는 아이디얼 $(2a)$을 극대 으뜸아이디얼이면서 동시에 기약아이디얼인 것들로 나타내는 \emph{유일한} 표현
+\[
+ (2a)=[(2\cdot2^{e_0}),(2p_1)^{e_1},\ldots,(2p_\alpha)^{e_\alpha}]
+\]
+이 대응한다. 따라서 다항식 환영역의 예들과 달리 여기서는 \emph{비고립} 극대 으뜸아이디얼들도 \emph{유일하게} 정해진다. $e_0=0$이면 이 표현은 동시에 서로 상대소인 아이디얼들로 된 표현이고, $e_0>0$이면 그 아이디얼은 상대소-기약이다.
+
+그러므로 \emph{모든 정수}의 환영역에서는 서로 다른 네 분해가 일치하지만, 여기서는 한편으로 극대 으뜸아이디얼 분해와 기약아이디얼 분해만이 일치한다. 다른 한편 $e_0>0$일 때에는 서로소-기약 분해(환영역이 단위원을 갖지 않으므로 모든 아이디얼이 서로소-기약이다)와 상대소-기약 분해가 일치하지만, $e_0=0$일 때에는 서로소-기약 분해와 상대소-기약 분해가 서로 달라진다. 동시에 여기서는 한 소아이디얼이 다른 소아이디얼로 나누어지면서도 그와 같지 않을 수 있다는 예, 더 일반적으로 \emph{나눗셈으로부터 곱표현이 따르지 않는다는} 예를 이미 얻는다. 후자의 사실은 환영역에 단위원이 없다는 데서 생기며, 모든 아이디얼이 주아이디얼임에도 환영역의 수들을 환영역의 기약수들의 곱으로 유일하게 나타낼 수 없는 이유이기도 하다. 따라서 여기서는 최소공배수를 도입하는 일이 필요하다. 모든 짝수 대신 \emph{고정된 소수 또는 소수 거듭제곱으로 나누어지는 모든 수}를 바탕으로 삼아도 사정은 정확히 \emph{똑같다}는 점을 덧붙인다.
+
+반면 $\Sigma$가 \emph{합성수} $g=p_1^{\sigma_1}\cdots p_\nu^{\sigma_\nu}$로 나누어지는 모든 수로 이루어지면 \emph{기약아이디얼과 으뜸아이디얼도 서로 달라진다.} 다시 모든 아이디얼은 주아이디얼 $(g\cdot a)$이다. \emph{소아이디얼들}은 다시 $\ideal P_0=\ideal D=(g)$와 $\ideal P=(g\cdot p)$로 주어지는데, 여기서 $p$는 $g$를 나누는 소수들과 다른 소수이다. 반면 \emph{기약아이디얼들}은 $\ideal B_{\lambda_i}=(g\cdot p_i^{\lambda_i})$와 $\ideal B_e=(g\cdot p^e)$로 주어진다. \emph{으뜸아이디얼들}은 $\ideal Q_e=\ideal B_e$와, 기약아이디얼들과는 다른
+\[
+ \ideal Q_{\lambda_1\ldots\lambda_\nu}
+ =(g\cdot p_1^{\lambda_1}\cdots p_\nu^{\lambda_\nu})
+\]
+로 주어진다. 여기서 $\ideal B_{\lambda_i}$들과 $\ideal Q_{\lambda_1\ldots\lambda_\nu}$는 모두 같은 대응 소아이디얼 $\ideal P_0=(g)$를 가진다. 여기서도 기약아이디얼로의 분해는 유일하고, 따라서 극대 으뜸아이디얼로의 분해도 유일하다. 그러므로 여기서도 비고립아이디얼들까지 유일하게 정해진다.
+
+2. \emph{비가환 환영역}의 한 예는 뇌터--슈마이들러의 논문에서 다룬 비가환 다항식 환영역의 아이디얼론이다. 특히 그 논문은 ``완전가약'' 아이디얼, 즉 분해의 성분들이 쌍마다 서로소이고 진약수를 갖지 않는 아이디얼을 다룬다. 따라서 성분들은 더더욱 기약이다. 그러므로 거기서 증명한 동형성에 더하여 \S~9로부터 서로 다른 두 분해에서 \emph{성분 수가 같다}는 결과를 얻는다. 이로써 그 논문의 특수한 경우로 나오는 편미분 또는 상미분 선형미분식들의 연립계 분해에 관한 결과를 얻는데, 이 결과는 상미분 선형미분식 하나라는 잘 알려진 경우에도 지적된 적이 없는 듯하다.
+
+동시에 고정된 아이디얼 $\ideal M$의 모든 잉여류로 이루어진 체계 $T$는 비가환 다항식 환영역 $\Sigma$와 함께 이중환영역 $(\Sigma,T)$를 이루며, $T$는 $\Sigma$에 관한 모듈 성질을 가진다. 실제로 두 잉여류의 차는 다시 잉여류이고, 한 잉여류와 임의의 다항식의 곱도 잉여류이지만 두 잉여류의 곱은 존재하지 않는다(앞의 논문 \S~3). 그곳에서 ``부분군''이라고 부른 잉여류의 체계들은 따라서 바탕 환영역 $\Sigma$가 비가환인 이중환영역 $(\Sigma,T)$의 모듈 예를 이룬다.
+
+\begin{center}
+\S~12.\\[0.25em]
+\textbf{초등인자론의 예.}
+\end{center}
+
+여기서는 일반 전개에서 도출되는 초등인자론의 관점을 제시하지만, 초등인자론 자체는 \emph{알려져 있다}고 가정한다.
+
+$\Sigma$를 $n^2$개의 원소를 가진 모든 정수행렬의 환영역이라 하고, 덧셈과 곱셈은 행렬에 통상적인 뜻으로 정의하자. 그러면 $\Sigma$는 \emph{비가환 환영역}이다. 따라서 아이디얼들은 일반적으로 한쪽이고, 양쪽아이디얼들은 그 특수한 경우로만 포함된다.\footnote{이 환영역의 아이디얼론은 뒤 파스키에의 다음 논문들에서 다룬다. ``테타리온의 수론'', 취리히 학위논문, \emph{Vierteljahrsschr. d. Naturf. Ges. Zürich} 51 (1906); ``테타리온아이디얼의 이론에 관하여'', 같은 곳 52 (1907). 둘째 논문의 내용은 모든 아이디얼이 주아이디얼임을 증명하는 것이다.}
+
+먼저 \emph{모든 아이디얼이 주아이디얼임}을 보이겠다. 이를 위하여 우측아이디얼의 경우 각 행렬 $A=(a_{ik})$에 정수계수 선형형식들의 모듈
+\[
+ A=(a_{11}\xi_1+\cdots+a_{1n}\xi_n,\ldots,
+ a_{n1}\xi_1+\cdots+a_{nn}\xi_n)
+\]
+을 대응시킨다. 거꾸로 이 모듈에는 $A$의 기저를 주는 모든 행렬, 곧 $A$뿐 아니라 $U$가 유니모듈러인 $UA$도 대응한다. 더 일반적으로 곱 $PA$에는 $A$의 배수인 모듈 $B$가 대응한다. $A$의 한 선형형식은 0이 아닌 행을 하나만 가진 $P$들로 주어진다.
+
+이제 $A_1,A_2,\ldots,A_\nu,\ldots$가 아이디얼 $\ideal M$의 모든 원소이고, 같은 기호 $A_1,A_2,\ldots,A_\nu,\ldots$가 그에 대응하는 모듈들이라고 하자. 이 모듈들의 최대공약을 $A$라 하고, 이 모듈 $A$에 대응하는 가장 일반적인 행렬을 $UA$라 하자. 최대공약의 정의에 따라 $A$의 각 선형형식에는 행렬 $P_1A_{i_1}+\cdots+P_\sigma A_{i_\sigma}$가 대응하며, 위에서와 같이 각 $P$는 0이 아닌 행을 하나만 가진다. 따라서 $A$의 한 기저에 대응하는 행렬 $A$도 이제 일반적인 $P$를 사용한 그러한 표현을 가지며, 그 결과 $\ideal M$의 원소가 된다. 더 나아가 각 모듈 $A_i$는 $A$로 나누어지므로 각 행렬 $A_i$도 $A$로 나누어진다. \emph{따라서 $A$, 더 일반적으로 $UA$가 $\ideal M$의 기저를 이룬다.} 좌측아이디얼의 경우에는 그에 맞추어 각 행렬의 열들을 한 모듈의 기저로 보아야 한다. 모든 아이디얼은 주아이디얼이고, $A$와 함께 $AV$도 그 기저가 되며, 여기서 $V$는 임의의 유니모듈러 행렬이다.
+
+이제 초등인자론과 연결하기 위하여 이하에서는 \emph{양쪽아이디얼}을 바탕으로 삼는다. 따라서 특히 $A$와 함께 $PAQ$도 아이디얼에 속한다. 그러면 위의 결과에 따라 그러한 아이디얼의 가장 일반적인 기저는 $UAV$로 주어지며, 여기서 $U,V$는 유니모듈러이다. 따라서 기저원소들은 \emph{서로 동치인 행렬들의 한 류}를 모두 이룬다.\footnote{한쪽아이디얼의 기저원소들에는 각각 우측류 또는 좌측류가 대응한다.} 아이디얼과 류 사이에는 일대일 관계가 있고, 따라서 아이디얼과 그 류의 초등인자계 $(a_1\mid a_2\mid\cdots\mid a_n)$ 사이에도 일대일 관계가 있다. 여기서 $a_i$들은 잘 알려진 대로 음이 아닌 정수이며 각 수는 그 다음 수를 나눈다. 초등인자들이 정하는 표준형에 나타나는 그 류의 행렬을 따라서 아이디얼의 특별한 기저로 볼 수 있다. 아이디얼 또는 류의 나눗셈 관계에서 초등인자들의 나눗셈 관계가 따르고, 그 역도 성립한다.
+
+그런데 뒤 파스키에는 앞의 논문 \S~11에서 모든 양쪽아이디얼의 랭크가 $n$이고 모든 초등인자가 일치함을 보였다. 따라서 일반적인 초등인자를 다루려면 아이디얼이 아니라 양쪽류 자체에서 직접 출발해야 한다(이 류들도 큰 독일문자로 나타낸다). 이때 한 류 $\mathfrak A=UAV$는 $A=PBQ$가 될 때 다른 류 $\mathfrak B$로 나누어진다.
+
+일반적으로 다음이 성립한다. \emph{두 류의 최소공배수(최대공약)는 대응하는 초등인자계들의 최소공배수(최대공약)를 취하여 얻는다.}\footnote{E. 슈타이니츠는 ``모듈론에 관하여'', \emph{Math. Ann.} 52 (1899), 1쪽에서 초등인자계들의 최소공배수와 최대공약으로 류의 최소공배수와 최대공약을 정의한다. 이와 독립적으로 류의 최소공배수는 H. 브란트, ``한 기본형식에 관한 이차 이항형식의 합성'', \emph{J. f. M.} 150 (1919), 1쪽에 ``합동합성''이라는 이름으로 나타난다.} 실제로 $(a_1\mid a_2\mid\cdots\mid a_n)$, $(b_1\mid b_2\mid\cdots\mid b_n)$, $(c_1\mid c_2\mid\cdots\mid c_n)$가 각각 $\mathfrak A,\mathfrak B,\mathfrak C^*$의 초등인자계이고 $c_i=[a_i,b_i]$라고 하자. 또한 $\mathfrak C=[\mathfrak A,\mathfrak B]$라 하자. 그러면 $\mathfrak C^*$는 $\mathfrak A$와 $\mathfrak B$로, 따라서 $\mathfrak C$로 나누어진다. 거꾸로 $\mathfrak C$의 초등인자들은 $\mathfrak C^*$의 초등인자들로 나누어지므로 $\mathfrak C$는 $\mathfrak C^*$로 나누어진다. 따라서 $\mathfrak C=\mathfrak C^*$이다. 최대공약의 증명도 그에 맞추어 얻어진다.
+
+초등인자 $a_i$를 소수 거듭제곱들의 최소공배수로 유일하게 나타내는 것에는 $\mathfrak A$를 류 $\mathfrak Q$들의 최소공배수로 나타내는 표현이 대응한다. 이 $\mathfrak Q$들의 초등인자는 한 소수의 거듭제곱들로 주어지며, 기호로는
+\[
+ \mathfrak Q\sim(p^{r_1}\mid p^{r_2}\mid\cdots\mid p^{r_e}\mid0\mid\cdots\mid0);
+ \qquad r_1\leqq r_2\leqq\cdots\leqq r_e
+\]
+이다. 특히 랭크 $\varrho$가 $n$과 같으면 이는 서로소인 서로소-기약류들로의 분해이며, 비가환 환영역임에도 이 분해는 유일하다.
+
+류 $\mathfrak Q$는 다음 초등인자계들에 대응하는 류들로 더 분해할 수 있다.
+\[
+\begin{gathered}
+ \mathfrak B_1\sim(p^{r_1}\mid\cdots\mid p^{r_1});\quad
+ \mathfrak B_2\sim(1\mid p^{r_2}\mid\cdots\mid p^{r_2});\quad \ldots;\\
+ \mathfrak B_e\sim(1\mid\cdots\mid1\mid p^{r_e}\mid\cdots\mid p^{r_e});\quad
+ \mathfrak B_{e+1}\sim(1\mid\cdots\mid1\mid0\mid\cdots\mid0).
+\end{gathered}
+\]
+여기서 $\mathfrak B_\nu$에는 매번 수 $1$이 $(\nu-1)$번 나타난다. 이를테면 $r_1=r_2=\cdots=r_\mu=0$이면 $\mathfrak B_1,\ldots,\mathfrak B_\mu$는 단위류와 같아지므로 분해에서 생략해야 한다. $\varrho=n$이면 $\mathfrak B_{e+1}$에도 같은 말이 성립한다. 더 나아가 이를테면 $r_\nu=r_{\nu+1}=\cdots=r_{\nu+\lambda}$이면 $\mathfrak B_{\nu+1},\ldots,\mathfrak B_{\nu+\lambda}$는 $\mathfrak B_\nu$의 진약수가 되므로 역시 제외해야 한다. 남은 류들을 $\mathfrak B_{i_1},\ldots,\mathfrak B_{i_k}$라 하면 이들은 이제 최단표현을 주고,
+\[
+ \mathfrak Q=[\mathfrak B_{i_1}\ldots\mathfrak B_{i_k}]
+\]
+는 \emph{$\mathfrak Q$를 기약류들로 나타내는 유일한 분해}이다.
+
+실제로
+\[
+ \mathfrak B_\nu\sim(1\mid\cdots\mid1\mid p^{r_\nu}\mid\cdots\mid p^{r_\nu})
+\]
+를
+\[
+ \mathfrak C\sim(1\mid\cdots\mid1\mid p^{s_1}\mid\cdots\mid p^{s_\lambda})
+ \quad\text{및}\quad
+ \mathfrak D\sim(1\mid\cdots\mid1\mid p^{t_1}\mid\cdots\mid p^{t_\mu})
+\]
+의 최소공배수로 나타낼 수 있다고 하자. 그러면 $\mathfrak C$와 $\mathfrak D$의 초등인자계에서 처음 $(\nu-1)$자리에는 수 $1$이 놓여야 한다. $\nu$번째 자리에서는 지수 $s_1$ 또는 $t_1$, 이를테면 $s_1$이 $r_\nu$와 같아야 한다. 그런데
+\[
+ r_\nu=s_1\leqq s_2\leqq\cdots\leqq s_\lambda\leqq r_\nu
+\]
+이므로 $\mathfrak C=\mathfrak B_\nu$이다. 따라서 $\mathfrak B_\nu$는 \emph{기약}이다.\footnote{반면 $\mathfrak B$들은 한쪽류들로는 더 분해될 수 있다. 여기서는 초등인자와 류 사이의 관계가 더 이상 일대일이 아니고, 따라서 기약 한쪽류들로의 분해도 유일하지 않다. H. 브란트가 알려 준 다음 우측류 분해의 예가 이를 보여 준다. 여기서 류는 한 기저행렬 또는 그에 대응하는 모듈로 나타낸다.
+\[
+\begin{gathered}
+ \mathfrak B=[\mathfrak C_1,\mathfrak C_2]=[\mathfrak D_1,\mathfrak D_2],\quad
+ \mathfrak B\sim\begin{pmatrix}p&0\\0&p\end{pmatrix},\quad
+ \mathfrak C_1\sim\begin{pmatrix}1&0\\0&p\end{pmatrix},\quad
+ \mathfrak C_2\sim\begin{pmatrix}p&0\\0&1\end{pmatrix},\\
+ \mathfrak D_1\sim\begin{pmatrix}1&0\\0&p\end{pmatrix},
+ \quad
+ \mathfrak D_2\sim\begin{pmatrix}p&0\\(p-1)&1\end{pmatrix}.
+\end{gathered}
+\]
+실제로 모듈 $(\xi,p\eta)$, $(p\xi,\eta)$, $(p\xi,(p-1)\xi+\eta)$는 각각 진약수로 모듈 $(\xi,\eta)$만을 가지므로 기약이며, 더 나아가 서로 다르다.} $p$를 $0$으로 바꾸면 $\mathfrak B_{e+1}$에도 같은 사실이 성립한다. 그런데 이 기약류들은 각각 최소공배수를 만들 때 하나의 특정한 지수와 그 지수가 $\mathfrak Q$ 또는 $\mathfrak A$의 초등인자계에서 처음 나타나는 자리를 주며, $\mathfrak B_{e+1}$은 랭크를 준다. 이 수들은 $\mathfrak Q$ 또는 $\mathfrak A$의 초등인자계에 의해 유일하게 정해지고 초등인자와 류 사이의 관계는 일대일이므로, $\mathfrak Q$의 기약류 분해, 마찬가지로 임의의 류의 기약류 분해는 \emph{유일하다}.
+
+정리하면 다음과 같다. \emph{원소 수가 제한된 정수행렬들의 모든 양쪽류 $\mathfrak A$는 유한개의 기약 양쪽류들의 최소공배수로 유일하게 나타낼 수 있다. 각 기약류는 $\mathfrak A$의 초등인자계의 고정된 소인수 하나, 그에 딸린 지수 하나, 그리고 그 지수가 처음 나타나는 자리를 나타낸다. 인수 $0$에 대응하는 기약류는 $\mathfrak A$의 랭크를 나타낸다.}
+
+\begin{flushleft}
+에를랑겐, 1920년 10월.
+\end{flushleft}
+\begin{center}
+(1920년 10월 16일 접수.)
+\end{center}
+
+\clearpage
+\setcounter{footnote}{0}

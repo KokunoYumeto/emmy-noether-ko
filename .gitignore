@@ -1,0 +1,16 @@
+source/b/
+source/pb/
+source/__pycache__/
+source/raw.pdf
+source/reader.pdf
+source/reader.log
+source/build.json
+source/fix.json
+source/extract.txt
+source/pypdf.txt
+source/fonts.txt
+*.tmp
+*.tmp.json
+receipts/private-*
+release/*.pdf
+release/*.zip

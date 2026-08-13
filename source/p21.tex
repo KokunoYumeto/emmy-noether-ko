@@ -1,0 +1,97 @@
+% Korean Noether paper 21 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 12610--12701.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 10,002 bytes; SHA-256 C91672CA4BB8EFEB092EDD278A4F97B6E3E94AE2059144F4FFDDA524AAF7FB96.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{21. 형식적 변분법과 미분불변식}
+\begin{center}
+Encyklopädie d. math. Wiss. II, 3 (1922), 68--71쪽
+(R. Weitzenböck, \emph{Differentialinvarianten}에 수록)
+\end{center}
+
+\begingroup
+\renewcommand{\thefootnote}{\arabic{footnote})}
+\setcounter{footnote}{148}
+\subsection*{28. 형식적 변분법과 미분불변식.\footnote{이 항목은 E. 뇌터가 집필하였다.}}
+
+모든 미분불변식을 생성하고 주요 정리들을 유도하는 일은 변분법의 형식적 방법을 사용하면 가장 통일적으로 수행할 수 있다. 이 원리는 리만\textsuperscript{78)}에게서 비롯되었고, 형식론의 관점에서는 립시츠\textsuperscript{73)}가 이를 가장 본격적으로 전개하였다.
+
+동차형식 $f'(dx)$ --- 여기서
+\[
+\left|\frac{\partial^2 f}{\partial dx_i\,\partial dx_k}\right|\ne0
+\]
+이라고 하자 --- 에 딸린 변분문제
+\srcnumdisplay{(140)}{\delta\int_{t_0}^{t_1} f(x')\,dt=0,
+\qquad \left(x_i'=\frac{dx_i}{dt}\right)}
+에서 출발하면, 부분적분을 거쳐 다음 불변 방정식계에 이른다.
+\[
+ 2\psi_i=\frac{d}{dt}\frac{\partial f}{\partial x_i'}-\frac{\partial f}{\partial x_i}=0.
+\]
+라그랑주 식 $\psi_i$들은 $dx$에 반변이다. 이를 형식적으로 가장 간단히 확인하려면, 부분적분에 대응하면서 적분을 포함하지 않는 다음 형식적 항등식으로 $\psi_i$를 정의하면 된다(라그랑주의 중심방정식\footnote{특수한 $f$에 관한 이 명칭은 Heun에게서 비롯되었다. 그의 논문 IV, 1 II, 447쪽 참조.}).
+\[
+ \delta f'-df_\delta=-2\sum\psi_i(d,d)\,\delta x_i,
+ \qquad
+ \left(f_\delta=\sum\frac{\partial f}{\partial dx_i}\,\delta x_i\right).
+\]
+$f$와 $df_\delta$가 모두 불변식이므로 우변도 불변식이다. 특히 이차형식의 경우에는
+\[
+ \delta\sum g_{ik}dx_i dx_k-2d\sum g_{ik}dx_i\delta x_k
+ =-2\sum\psi_\mu(d,d)\,\delta x_\mu
+\]
+를 얻는다. 여기서 $d$를 그것과 동변인 $(d+\lambda\delta)$로 바꾸고 $\lambda$의 거듭제곱별로 계수를 비교하면, 이에 대응하는 다음 항등식계를 얻는다.
+\srcnumdisplay{(141)}{\left\{
+\begin{aligned}
+D\sum g_{ik}dx_i dx_k-2d\sum g_{ik}dx_iDx_k
+   &=-2\sum\psi_\mu(d,d)\,Dx_\mu,\\
+D\sum g_{ik}dx_i\delta x_k-\delta\sum g_{ik}dx_iDx_k
+   &\phantom{={}}{}-d\sum g_{ik}\delta x_iDx_k\\
+   &=-2\sum\psi_\mu(d,\delta)\,Dx_\mu,\\
+D\sum g_{ik}\delta x_i\delta x_k-2\delta\sum g_{ik}\delta x_iDx_k
+   &=-2\sum\psi_\mu(\delta,\delta)\,Dx_\mu.
+\end{aligned}
+\right.}
+여기서 $\psi_\mu(d,\delta)$가 반변벡터임이, 따라서 특히 $\psi_\mu(d,d)$와 $\psi_\mu(\delta,\delta)$도 반변벡터임이 따른다. (141)에서 $\psi_\mu(d,\delta)$를 계산하면
+\[
+ \psi_\mu(d,\delta)=\sum g_{i\mu}\,d\delta x_i+
+ \sum\left[\begin{smallmatrix}ik\\ \mu\end{smallmatrix}\right]dx_i\delta x_k
+\]
+이고, 여기서 다음 동변벡터를 얻는다.
+\srcnumdisplay{(142)}{p^\sigma(d,\delta)=\sum g^{\sigma\mu}\psi_\mu
+=d\delta x_\sigma+
+\sum\left\{\begin{smallmatrix}ik\\ \sigma\end{smallmatrix}\right\}dx_i\delta x_k.}
+$p^\nu(d,d)=0$으로 놓으면 측지선의 방정식이 됨은 분명하다.
+
+동변벡터 $p^\sigma(d,\delta)$를 알면 공변미분을 곧바로 얻을 수 있다(19번 참조). 이를테면 $h(d,\delta)$가 두 열 $dx$와 $\delta x$의 형식이라면,
+\srcnumdisplay{(143)}{h^{(1)}(dx,\delta x)=\delta h-
+\sum\frac{\partial h}{\partial dx_\sigma}p^\sigma(d,\delta)-
+\sum\frac{\partial h}{\partial \delta x_\sigma}p^\sigma(\delta,\delta)}
+은 불변식들의 차이이므로 그 자체도 불변식이며, 이차 미분들이 소거되도록 만들어져 있다. 따라서 $h^{(1)}(dx,\delta x)$는 일차 미분만을 포함하는 형식, 곧 $h$의 공변미분이다. $h$가 더 많은 열 $d^{(1)}x,\ldots,d^{(\lambda)}x$를 포함할 때에도 같은 사실이 성립한다.\footnote{Lipschitz, J. f. Math. 72 (1870), 17쪽.}
+
+리만과 립시츠의 곡률형식도 같은 원리에 따라 구성된다. $\delta^2f$에서 출발하여 ``제2변분의 정규형''
+\srcnumdisplay{(144)}{\Omega=\delta^2\sum g_{ik}dx_i dx_k
+-2d\delta\sum g_{ik}dx_i\delta x_k
++d^2\sum g_{ik}\delta x_i\delta x_k}
+으로 넘어간다. 이는 불변식들의 결합이므로 다시 불변식이며, 라그랑주의 중심방정식을 일반화하여 삼차 미분들이 이미 소거되어 있다. 이차 미분은 공변미분의 경우와 마찬가지로 다음 차이를 만들어 소거한다.
+\srcnumdisplay{(145)}{K=\Omega-2\sum\{p^\sigma(d,\delta)\psi_\sigma(d,\delta)
+-p^\sigma(\delta,\delta)\psi_\sigma(d,d)\}.}
+이는 다음과 같이 쓸 수도 있다.\footnote{Lipschitz, J. f. Math. 82 (1876), § 1.}
+\srcnumdisplay{(146)}{\begin{aligned}
+\frac12 K={}&d\sum\psi_\sigma(d,\delta)\delta x_\sigma
+-\delta\sum\psi_\sigma(d,d)\delta x_\sigma\\
+&-\sum\{p^\sigma(d,\delta)\psi_\sigma(d,\delta)
+-p^\sigma(\delta,\delta)\psi_\sigma(d,d)\}.
+\end{aligned}}
+$K$의 구성법은 $\Omega$에서 $p(d,\delta)$와 $p(\delta,\delta)$, 또는 (141)의 우변들을 영으로 놓아 이차 미분을 소거하는 것이라고도 표현할 수 있다. 이것이 리만의 곡률형식 정의이다(21번 참조). 다만 (146)이 특히 분명히 보여 주듯이, 미분을 수행한 \emph{뒤에야} 영으로 놓아야 한다는 점을 명시적으로 유의해야 한다. 립시츠의 형식적 구성법은 이 어려움을 피한다. 마찬가지로 공변미분 $h^{(1)}$ (143)도 $\delta h$에서 $p(d,\delta),\ldots$를 영으로 놓아 이차 미분을 소거한 것으로 정의할 수 있다.
+
+곡률형식에 공변미분을 차례로 취하면 형식열 $[\Phi_4,\Phi_5,\ldots\text{ (Christoffel)}]$을 얻는다. 크리스토펠과 리치에 따르면 여기에 $f$를 덧붙였을 때 이 형식열의 사영불변식들은 이차형식의 모든 미분불변식을 빠짐없이 주며, 별도의 적분가능성 조건 없이 선형변환에 관한 이 형식열의 동치는 두 이차 미분형식의 동치를 뜻한다(22번 참조). 이 환원정리의 내적인 근거는 변분문제 (140)에서 생기는 리만 정규좌표의 존재에 있다(20번 참조). 이 좌표는 한 점을 지나는 측지선들을 직선으로 바꾸므로, $x$를 임의로 변환할 때 선형적으로 변환된다. 따라서 모든 불변식을 구성하는 문제와 동치 문제는 $f$를 정규좌표로 전개했을 때의 각 동차 성분에 관한 대응 문제로 환원된다. 그리고 이 성분들은 $f,\Phi_4,\Phi_5,\ldots$의 선형결합으로 이루어짐을 보일 수 있다. 이차형식의 경우에는 E. 뇌터의 주\textsuperscript{93)}에 의거하여 Vermeil\textsuperscript{92)}이 이를 상세히 수행하였다. 그 주에 따르면 임의의 미분식을 바탕으로 삼아도 정리와 방법은 그대로 유지된다(22번과 23번 참조). 이로써 순수 소거론의 방법에 견주어 형식적 변분법의 방법이 갖는 효력이 드러난다.\footnote{이 설명과 더 많은 기하학적 해석에 관해서는 ``문헌'' 아래에 적힌 F. Klein의 세미나 강연들을 참조하라.}
+
+Levi-Civita\textsuperscript{134)}는 $p(d,\delta)$를 영으로 놓는 것을 ``벡터의 평행이동''이라고 기하학적으로 해석하였다(Hessenberg\textsuperscript{133)}도 참조). Weyl이 공리적으로 정식화한 이 개념은 본질적으로 이차형식에 한정되지만, 다른 방향의 일반화를 허용한다. 이차형식뿐 아니라 선형형식 하나를 함께 바탕으로 삼으면, 군을 확장하여 $g_{ik}$에 임의의 함수를 곱하더라도 이 개념은 보존된다. 이때 $p(d,\delta)$는 유일하게 정해지고, 위와 같은 방식으로 불변식을 구성하고 측지좌표를 정의할 수 있다. 그러나 이제 $p(d,d)=0$은 더 이상 변분문제에서 생기지 않는다!\footnote{H. Weyl, Reine Infinitesimalgeometrie, Math. Ztschr. 2 (1918), 384--411쪽 및 Raum, Zeit, Materie (제3판 및 제4판).} 여기서 환원정리와 동치에 관한 문제는 아직 일반적으로 다루어지지 않았다. 가장 낮은 차수의 불변식에 대해서만 R. Weitzenböck이 환원정리를 제시하였다.\footnote{Wien. Ber. 129 (1920), 683쪽 및 697쪽.}
+
+마지막으로 일반적인 ``불변 변분문제'', 곧 (단일 또는 다중) 적분 $J$가 리 군의 의미에서 어떤 군에 대하여 불변인 문제를 지적해 두자. 물리학적으로 흥미로운 특수한 경우는 Hamel\footnote{Math. Ann. 59 (1904), 416--434쪽; Ztschr. Math. Phys. 50 (1904), 1--54쪽.}, Herglotz\footnote{Ann. d. Phys. (4) 36 (1911), 511쪽, 특히 § 9.}, Lorentz\footnote{Verslag der Amsterd. Akad., 1916년 4월ㆍ9월ㆍ10월 및 1917년 5월.}, Fokker\footnote{같은 곳, 1917년 1월.}, Weyl\footnote{Ann. d. Phys. (4) 54 (1917), 117쪽, § 2.}, Klein\footnote{Gött. Nachr. 1917, 469--482쪽; 같은 곳 1918, 171--189쪽.}의 논문들에서 다루어진다. E. 뇌터의 원리적 정식화\footnote{Gött. Nachr. 1918, 235--257쪽.}에 따르면, $J$가 $\varrho$개의 본질적 매개변수를 갖는 유한군 $G_\varrho$에 대하여 불변이면 이에 $\varrho$개의 선형독립인 발산식이 대응한다. 또 $J$가 $\sigma$차 도함수까지 포함하는 $\varrho$개의 임의함수에 의존하는 무한군에 대하여 불변이면, 라그랑주 식들과 그 $\sigma$차까지의 도함수 사이에 $\varrho$개의 종속관계가 대응한다. 두 경우 모두 역도 성립한다. 라그랑주 식들이 그 군의 (상대) 불변식이 되므로, 동시에 하나의 불변식 생성과정을 얻는다.
+
+\begin{center}
+(1921년 3월 탈고.)
+\end{center}
+\endgroup

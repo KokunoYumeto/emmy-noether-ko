@@ -1,0 +1,821 @@
+% Korean Noether paper 43 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 20177--20984.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Current authority body SHA-256: 746FA01AC33CBC0BCCBF1E740413E5DC3E74CE30295B7A4794943F5198F73355.
+% LF-normalized ED0007 source span: 88,699 bytes; SHA-256 D07FBF63E1B103C0309202CDA5C8AE87FE80DD6C11D16581671D596244FA26BD.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{43. 아이디얼 미분과 디퍼런트}
+
+\begin{center}
+\emph{Journal f. d. reine u. angew. Math. 188 (1950), 1--21쪽}\\[0.75ex]
+\emph{에미 뇌터} \(\dagger\)\srcfnmark{1)}.
+\end{center}
+
+\srcfntext{1)}{E. Noether가 남긴 이 논문은 1927/28년 겨울에 집필되었으며, H. Grell이 친절하게 편집자에게 제공하였다. 이 논문은 1929년 프라하에서 열린 D. M. V. 학술대회에서 발표한 같은 제목의 강연을 상세히 서술한 것이다. Jahresbericht D. M. V. 39 (1930), 비스듬한 쪽매김 17쪽을 보라. § 6, 3부터는 원고를 더 정확히 다듬으려 했던 것으로 보인다. 그러나 전문가는 사소한 마무리만 하고 그대로 둔 이 개략적 서술을 어렵지 않게 이해할 것이다.}
+
+\subsection*{서론}
+
+대수적 수체의 분기이론의 주요 정리는 잘 알려진 대로 다음과 같다. 어떤 소아이디얼이 그 아래의 유리소수 \(p\)에서 \(\varrho\)제곱으로 나타나면, 디퍼런트(분기아이디얼)는 적어도 그 소아이디얼의 \((\varrho-1)\)제곱으로 나누어진다. 더욱이 \(\varrho\)가 \(p\)로 나누어지지 않으면 정확히 \((\varrho-1)\)제곱으로, \(\varrho\)가 \(p\)로 나누어지면 더 높은 거듭제곱으로 나누어진다.
+
+이 정리는 다항식 \(f(x)\)의 미분몫 \(f'(x)\)에 관한 다음 사실의 유사물이다. \(f(x)\)에서 어떤 일차인자가 \(\varrho\)제곱으로 나타나면 \(f'(x)\)는 적어도 그 인자의 \((\varrho-1)\)제곱으로 나누어진다. 더욱이 \(\varrho\)가 계수영역의 표수로 나누어지지 않으면 정확히 \((\varrho-1)\)제곱으로, 그 표수로 나누어지면 더 높은 거듭제곱으로 나누어진다.
+
+이하에서는 이것이 형식적인 유사 이상임을 보인다. \emph{디퍼런트는 수체 \(K\)의 정의아이디얼을, \(x_1,\ldots,x_n\)의 어떤 대응하는 정수 계수 다항식영역에서 미분한 몫으로 볼 수 있다. 이 미분몫은 \(x=\omega\), 곧 \(x_1=\omega_1,\ldots,x_n=\omega_n\)에서 취하며, 여기서 \(\omega_1,\ldots,\omega_n\)은 \(K\)의 정수환 \(\mathfrak o\)의 가군기저이다.} 이때 정의아이디얼 \(\mathfrak M\)은 \(\omega\)들 사이의 관계 전체에 대응한다. 즉 \(f(\omega)\)가 사라지는 모든 정수 계수 다항식 \(f(x)\)로 이루어진다. 한편 미분몫 \(\mathfrak M'[x\to\omega]\)은 \(x=\omega\)에서 취한 차분몫으로 정의된다.
+
+실제로 \(f(\omega)=0\)이므로 \(\mathfrak M\)을 모든 차 \(f(x)-f(\omega)\)로 이루어진 아이디얼로 본다. 이어 차분아이디얼 \(\mathfrak B=(x_1-\omega_1,\ldots,x_n-\omega_n)\)과 차분몫 \(\mathfrak A=\mathfrak M:\mathfrak B\)를 만든다. 여기서 몫은 통상적인 아이디얼 몫이며, \(K\)의 정수, 곧 \(\mathfrak o\)의 원소를 계수로 갖는 \(x\)의 다항식영역에서 취한다. 그러면 디퍼런트 \(\mathfrak D\)는
+\[
+\mathfrak D=\mathfrak A[x\to\omega]
+\]
+로 정의된다. 차분아이디얼과 차분몫 자체를 정의하려면 계수영역을 확대해야 한다. 따라서 이것은 한 부정원 \(x\)의 다항식의 미분몫
+\[
+f'(\xi)=(f(x)-f(\xi)):(x-\xi)
+\]
+을 \(x=\xi\)에서 취하는 정의의 직접적인 일반화이다. 여기서도 차들을 정의하려면 \(\xi\)를 첨가하여 다항식영역을 확대해야 한다. 실제로 \(\omega\)의 기저가 하나의 원소의 거듭제곱들로 이루어지는 순간 아이디얼 미분몫도 다항식 미분몫으로 환원된다.
+
+이처럼 여기서 주는 디퍼런트의 정의는 알려진 것에 직접 이어지지만, 아이디얼 \(\mathfrak M\)이 선택한 기저에 의존하므로 불변이 아닌 중간 대상들을 도입한다. 정수 계수 다항식영역 대신 정수환 \(\mathfrak o\)와 동형인 환 \(\mathfrak O\) --- 이는 \(\mathfrak M\)에 따른 잉여류환과 동형이 된다 --- 을 도입하고 그 계수영역을 \(\mathfrak o\)로 확대하여 \(\mathfrak O_{\mathfrak o}\)를 만들면, 이와 동등한 \emph{완전히 불변인 정의}를 얻는다.\srcfn{2)}{계수영역의 확대, 곧 직접곱 구성은 § 1에서 이 논문의 목적에 필요한 것보다 더 일반적으로 비가환환에 대해서도 다룬다. 여기에는 가환환과 유한기저로 특수화한 § 2만으로 충분하다.} 차분아이디얼 \(\mathfrak B\)는 여기서 \(\mathfrak O\)와 \(\mathfrak o\) 사이의 동형에 따라 서로 대응하는 \(x\)와 \(\xi\)의 모든 차 \(x-\xi\)에서 유도된다. 차분몫 \(\mathfrak A\)는 영아이디얼을 \(\mathfrak B\)로 나눈 몫과 같다. \(\mathfrak A\)에서 각 \(x\)를 그와 동형인 \(\xi\)로 바꾸면 디퍼런트를 얻는다.
+
+이하에서는 이 불변적 정의를 맨 앞에 둔다. 곧 계수확대의 가능성에 관한 몇 가지 조건만 만족한다는 가정 아래, 임의의 가환환이 한 부분환에 관하여 갖는 디퍼런트를 직접 정의한다. 이 조건들은 예컨대 가군기저가 존재하면, 필요할 경우 어떤 몫환들로 넘어가서 언제나 만족한다. 이에 따라 특히 수체의 임의의 오더의 디퍼런트와, 예컨대 한 소수 거듭제곱에 따른 오더의 잉여류환의 디퍼런트도 정의된다. 상대디퍼런트와 여러 부정원의 대수함수인 경우의 디퍼런트도 마찬가지이다. 디퍼런트의 미분적 정의가 통상적인 정의와 일치한다는 것은 직접합분해에 바탕을 둔 정확한 구조 연구에서 나온다. 이 구조 연구는 직접곱 구성으로 수체에 대응시킨 갈루아 확대환을 다룬다\srcfn{3)}{이는 나의 판별식 논문의 바탕이 된 고찰을 더 발전시킨 것이지만, 그 논문을 알 필요는 없다. E. Noether, \emph{Der Diskriminantensatz für die Ordnungen eines algebraischen Zahl- und Funktionenkörpers}, J. Math. 157 (1927), 82--104쪽을 보라.}. 한 부정원의 다항식에 따른 잉여류환이라는 특수한 경우에는 이 연구가 라그랑주 보간공식의 분석으로 귀착된다. 더 정확히 말하면 다음과 같다.
+
+수체 \(K\)와 동형이고 \(\mathfrak O\)를 포함하는 환 \(\mathfrak K\)를 도입하고, 그 계수영역인 유리수체를 \(K\)의 갈루아체 \(F\)로 확대한다. 이 확대계 \(\mathfrak K_F\)는 \(K\)의 \(n\)개 동형사상(켤레체들로의 이행)에 대응하는 \(n\)개의 단순성분의 직접합이 된다. 이 성분들은 차분몫 \(\mathfrak A\)와 그 켤레들의 확대이며, 동시에 \(\mathfrak K_F\)의 영아이디얼은 차분아이디얼과 그 켤레들에서 유도되는 \(n\)개 아이디얼의 교집합이 된다. 단순성분들은 \(Fe^{(i)}\) 꼴이고, 여기서 \(e^{(i)}\)는 단위원의 성분이다. \(x=\xi\)일 때 \(e^{(i)}\)가 단위원으로 가므로 차분몫은 \(\mathfrak d e^{(i)}\)와 같아진다. 여기서 \(\mathfrak d\)는 \(\mathfrak o\)의 디퍼런트이다. 디퍼런트 \(\mathfrak d\)는 체의 원소들 가운데 \(e^{(i)}\)와 곱했을 때 \(\mathfrak O_{\mathfrak o}\), 곧 오더와 자기 자신의 직접곱에 속하는 모든 원소로 이루어진다. 켤레들에도 이에 대응하는 것이 성립한다.
+
+여기서 여모듈에 의한 정의를 얻으려면 \(e^{(i)}\)가 \(\mathfrak O\), 또는 \(\mathfrak K\)의 기저 \(x_1,\ldots,x_n\) --- 이 기저는 \(\omega\)들에 대응한다 --- 에 관한 선형형식이 된다는 점에 주목해야 한다. 그런데 \(e^{(i)}\)에서 \(x\)들의 계수들은 바로 \(\mathfrak o\)와 그 켤레들의 여모듈의 기저를 이룬다. 차분몫 \(\mathfrak A\)가 \(\mathfrak o\)의 계수를 갖는다는 사실에서 디퍼런트가 \(\mathfrak o\)를 그 여모듈로 나눈 몫과 같다는 것이 곧바로 따른다. 이로써 데데킨트의 정의를 얻는다. 이 고찰들은 정수환에 국한되지 않으며, 모든 오더의 디퍼런트를 그 오더를 여모듈로 나눈 몫으로 특징짓는다.
+
+정수환의 경우, 미분적 정의가 기본방정식에 의한 정의와 일치한다는 것은 위에서 말한 사실에서 나온다. 즉 기저가 하나의 원소, 여기서는 기본형의 거듭제곱들로 이루어지면 아이디얼 미분몫이 다항식 미분몫으로 환원된다. 따라서 이 마지막 정의와 데데킨트의 정의 사이의 개념적 관계도 주어진다.
+
+정수환의 경우에 기본방정식을 바탕으로 삼으면 처음에 말한 주요 정리가 바로 따라온다는 것은 잘 알려져 있다. 지수를 정확히 결정하려면 충분히 큰 \(t\)에 대하여 \(p^t\)에 따른 정수환의 잉여류환의 디퍼런트 \(\mathfrak d[p^t]\)를 고찰한다. \(t=n\)이면 충분하며, 이차체에서는 이것이 필요하기도 하다. 이때 \(\mathfrak d\)를 \(p^t\)로 보아 얻는 것이 정확히 \(\mathfrak d[p^t]\)라는 사실이 본질적이다. 여기서 환의 직접합에 디퍼런트들의 직접합이 대응하므로, 다시 \(\mathfrak p^{t\varrho}\)에 따른 잉여류환으로 국한할 수 있다. 그런데 이 마지막 환은 \(p^t\)를 법으로 한 계수를 갖는 한 부정원 다항식에 따른 잉여류환과 동형이다. 그리고 이 다항식을 미분하면 --- 다른 길로 그런 다항식에 이른 Ö. Ore가 보였듯이\srcfn{4)}{출판 시 주: 이 인용은 원고에서 채워지지 않았다. 개략만 제시된 이 논문의 § 7에 있는 문헌 안내를 보라.} --- 보충수들을 이용하여 가능한 모든 지수를 정확히 파악할 수 있다.
+
+끝으로 구조 연구에서는 잘 알려진 정리, 곧 \(K\)의 상위체의 디퍼런트는 그 상대디퍼런트와 \(K\)의 디퍼런트의 곱과 같다는 정리도 나온다. 이는 직접합분해의 단위원들에 같은 곱셈 성질이 성립하고 따라서 여모듈들에도 성립한다는 사실의 귀결이다.
+
+위에서 말한 사실들은 어떤 몫환들로 넘어감으로써 모두 상대디퍼런트에도 성립한다. 이는 내가 판별식 논문에서 상대판별식에 대하여 전개한 것과 정확히 같다. 함수영역으로 넘어가면 표수 0인 계수체를 갖는 대수함수체에도 모든 것이 그대로 유지된다. 반면 표수 \(p\)와 정수적 대수함수의 경우에는 구조적 성질들은 유지되지만(본질적으로는 함수영역으로 넘어가지 않아도 된다), 비분리 확대체가 나타나므로 분기이론은 달라진다. 여기서는 이를 더 전개하지 않는다. 가장 중요한 결과는 위에서 개략한, 여러 부정원의 대수함수에도 성립하는 완전히 불변인 구조정리들(§ 5와 § 6)이라고 하겠다. 여모듈로 넘어가는 것은 이미 계수항등식들로 풀어 쓰는 일이며, 알려진 것을 이 틀에 넣기 위해서만 수행하였다.
+
+\subsection*{§ 1. 환의 계수영역 확대 또는 직접곱 구성. 정의아이디얼\srcfnmark{5)}}
+\srcfntext{5)}{이 절에 관한 비판적인 지적에 대하여 B. L. van der Waerden에게 감사한다.}
+
+이 절에서는 곱셈의 교환법칙을 가정하지 않는 일반적인 환을 바탕으로 삼는다. 다만 간단하게 하기 위하여 단위원의 존재를 가정하며, 반대말을 명시하지 않는 한 논문 전체에서 그렇게 한다.
+
+\paragraph{1. 직접곱의 정의.}
+환 \(\mathfrak O\times\mathfrak o\), 또는 \(\mathfrak O_{\mathfrak o}\)가 다음 조건들을 만족할 때 이를 \(\mathfrak h\)에 관한 환 \(\mathfrak O\)와 \(\mathfrak o\)의 \emph{직접곱}, 또는 \emph{\(\mathfrak O\)의 계수영역 \(\mathfrak h\)를 \(\mathfrak o\)로 확대하여 얻은 환}\srcfn{6)}{이하에서 주로 쓸 두 번째 표기는 계수영역의 확대를 나타내기 위한 것이다. 첫 번째 것은 직접곱의 통상적인 명칭이다.}이라 한다.
+
+\begin{enumerate}
+\item[(1)] \(\mathfrak O_{\mathfrak o}\)는 \(\mathfrak O\)와 \(\mathfrak o\)를 부분환으로 포함하고 이 환들의 곱과 같다. 곧 \(\mathfrak O_{\mathfrak o}\) 안에서 \(\mathfrak O\)와 \(\mathfrak o\)를 포함하는 모든 환의 교집합과 같다.
+
+\item[(2)] \(\mathfrak O\)와 \(\mathfrak o\)의 교집합은 \(\mathfrak h\)이고, \(\mathfrak h\)는 \(\mathfrak O_{\mathfrak o}\)의 단위원을 포함한다.
+
+\item[(3)] \(\mathfrak O\)와 \(\mathfrak o\)의 원소들은 서로 교환한다. 따라서 \(\mathfrak O_{\mathfrak o}\)는 모든 쌍선형 결합
+\[
+x_{i_1}y_{i_1}+\cdots+x_{i_r}y_{i_r}
+\]
+전체로 이루어진다. 여기서 \(x\)들과 \(y\)들은 각각 \(\mathfrak O\)와 \(\mathfrak o\)에서 취한 임의의 유한한 원소계들을 돈다. 또한 \(\mathfrak h\)는 \(\mathfrak O\)와 \(\mathfrak o\)의 중심, 따라서 \(\mathfrak O_{\mathfrak o}\)의 중심에 놓인다.
+
+\item[(4)] \(\mathfrak O_{\mathfrak o}\)의 두 원소가 같은 것은, \(\mathfrak O\)에서 한편으로, \(\mathfrak o\)에서 다른 한편으로 성립하는 관계들에 의해 적어도 한 방식으로 형식상 같아질 때 그리고 오직 그때이다. 이 말은 다음 뜻이다. \(\mathfrak O_{\mathfrak o}\)에서
+\[
+x_1y_1+\cdots+x_ny_n=0
+\quad\hbox{이라 하자.}
+\]
+그러면 \(\mathfrak h\)의 \(h\), \(\mathfrak O\)의 \(\gamma\), \(\mathfrak o\)의 \(\delta\)에 대하여 형식상 사라지는 결합 \((\gamma h)\delta-\gamma(h\delta)\)들의 합을 더함으로써 이 식을
+\[
+(z_1\alpha_1+\cdots+z_r\alpha_r)+(t_1\beta_1+\cdots+t_s\beta_s)
+\]
+꼴로 바꿀 수 있다. 여기서 \(z_1=0,\ldots,z_r=0\), \(\beta_1=0,\ldots,\beta_s=0\)이고, \(\alpha,\beta\)는 \(\mathfrak o\)에, \(z,t\)는 \(\mathfrak O\)에 속한다. 따라서 \(z=0\)은 \(\mathfrak O\) 안의 \(x,\gamma,h\) 사이의 관계를, \(\beta=0\)은 \(\mathfrak o\) 안의 \(y,\delta,h\) 사이의 관계를 뜻한다.\srcfn{7)}{단위원의 존재를 가정하지 않으면 (3)과 (4)에 선형인 항들을 더 넣어야 한다.}
+\end{enumerate}
+
+\(\mathfrak O_{\mathfrak o}\)의 두 원소가 같은 것은 그 차가 위 방식으로 사라질 때 그리고 오직 그때이다.
+
+따라서 직접곱이라는 요구에 의하여 등식관계와 연산관계(덧셈과 곱셈)는 인자들의 그것으로 유일하게 결정된다. 여기서 다음이 따른다. \(\mathfrak O,\mathfrak o\)와 그 교집합 \(\mathfrak h\)가 각각 \(\overline{\mathfrak O},\overline{\mathfrak o}\), \(\overline{\mathfrak h}\)와 동형이고 직접곱 \(\mathfrak O\times\mathfrak o\)가 존재하면, \(\overline{\mathfrak O}\times\overline{\mathfrak o}\)도 존재하고 \(\mathfrak O\times\mathfrak o\)와 동형이 된다.
+
+\(\mathfrak O\)와 \(\mathfrak o\)의 곱과 같고 이 두 환의 원소들이 서로 교환하는 모든 환 \(\mathfrak S\)는 \(\mathfrak O\times\mathfrak o\)의 준동형상이다. 이때 \(\mathfrak O\)에서 \(\overline{\mathfrak O}\)로, 또는 \(\mathfrak o\)에서 \(\overline{\mathfrak o}\)로 가는 사상은 동형으로 남는다. 실제로 \(\mathfrak O\times\mathfrak o\)에서의 등식은 \(\mathfrak S\)에서의 등식에 포함되고, \(\mathfrak O\) 또는 \(\mathfrak o\)에서는 각각 \(\mathfrak O\times\mathfrak o\) 안의 등식과 일치한다.\srcfn{8)}{§ 1, 4도 비교하라.}
+
+\paragraph{2. 부분환에 관한 직접곱이 존재하기 위한 필요충분조건.}
+\(\mathfrak O\)와 \(\mathfrak o\)가 환이고 그 교집합이 양쪽 중심에 놓인 환 \(\mathfrak h\)라고 하자. 그러면 \(\mathfrak h\)에 관한 직접곱이 반드시 존재하는 것은 아니다. 다음 예가 이를 보인다. \(\mathfrak h\)를 유리정수환, \(\mathfrak O=\mathfrak h[x]\)이고 \(1-2x=0\), \(\mathfrak o=\mathfrak h[y]\)이고 \(1-2y=0\)이라 하자. 여기서 \(y\)는 새 기호이다. 따라서 \(\mathfrak O\)와 \(\mathfrak o\)는 \(\mathfrak h\)에 관한 동치인 환들이고, 그 집합론적 교집합은 \(\mathfrak h\)이지만 기호 \(x\)와 \(y\) 사이에는 아무 연산관계도 주어져 있지 않다. \(\mathfrak O\)와 \(\mathfrak o\)를 포함하고 그 교집합이 \(\mathfrak h\)인 환 \(R\)은 존재하지 않는다. 실제로 그런 \(R\)에서는 \(x\)와 \(y\) 사이에도 연산이 생기므로
+\[
+0=(1-2x)y-x(1-2y)=y-x
+\]
+가 따른다. 여기서는 \(x\)와 \(y\)의 교환가능성조차 쓰지 않았다.\srcfn{9)}{한 고정된 환 안에 놓인 가환환의 몫환 --- 여기서는 \(\frac12\)의 첨가 --- 은 바로 유일하다. 이는 서로 동치이지만 서로 다른 두 갈루아체 확대를 하나의 공통 포괄체에 매장할 수 없다는 사실의 유사물이다. 다만 여기서는 직접곱 구성을 통하여 영인자를 갖는 환에 매장할 수 있다.}
+
+\emph{직접곱이 존재하기 위한 필요충분조건}은 다음과 같다.
+
+\emph{\(\mathfrak O\)와 \(\mathfrak o\)를 포함하는 환 \(R\)이 적어도 하나 존재하여, \(\mathfrak O\)와 \(\mathfrak o\)의 교집합이 \(\mathfrak h\)이고 두 환의 원소들이 서로 교환해야 한다.}
+
+직접곱이 존재하면 그 자체가 그러한 환 \(R\)이므로 이 조건은 필요하다. 역으로 직접곱을 구성하기 위해서는 \(\mathfrak O\)와 \(\mathfrak o\)의 \(\mathfrak h\)에 속하지 않는 원소들 사이에 아무 연산관계도 없다고 가정해도 된다. 이는 \(\mathfrak h\)의 동치인 확대, 곧 다른 기호들을 도입한 확대들로 넘어가면 언제나 이룰 수 있고, 이하에서는 늘 그렇게 가정한다.\srcfn{9a)}{§ 2, 1과 각주 12)를 보라.} 또 \(\mathfrak h\)는 \(\mathfrak O\)와 \(\mathfrak o\)의 단위원 \(e\)를 포함한다고 하자(다만 주 7도 보라). 이제 \(\mathfrak T\)를 모든 쌍선형 결합
+\[
+x_{i_1}y_{i_1}+\cdots+x_{i_r}y_{i_r}
+ =y_{i_1}x_{i_1}+\cdots+y_{i_r}x_{i_r}
+\]
+의 집합으로 정의한다. 여기서 \(x\)와 \(y\)들은 각각 \(\mathfrak O\)와 \(\mathfrak o\)의 임의의 유한한 원소계들을 돌며, 따라서 \(\mathfrak T\)에서 \(x\)와 \(y\)는 서로 교환한다. 그러한 두 결합은 1, (4)에서 정확히 말한 의미로 \(\mathfrak O\)와 \(\mathfrak o\) 안의 관계들에 의해 형식상 같아질 때 그리고 오직 그때 같다고 정한다. 또한 \(\alpha,\beta\) 가운데 0이 나타날 수도 있을 때
+\[
+\alpha_{i_1}x_{i_1}+\cdots+\alpha_{i_r}x_{i_r}
+\quad\hbox{와}\quad
+\beta_{i_1}x_{i_1}+\cdots+\beta_{i_r}x_{i_r}
+\]
+의 합과 곱을 각각
+\[
+(\alpha_{i_1}+\beta_{i_1})x_{i_1}+\cdots+(\alpha_{i_r}+\beta_{i_r})x_{i_r}
+\quad\hbox{와}\quad
+\sum_{\lambda,\mu}\alpha_{i_\lambda}\beta_{i_\mu}x_{i_\lambda}x_{i_\mu}
+\]
+로 정의한다. 이 정의는 위의 등식이라는 뜻에서 유일하다. 실제로 모든 영관계(1, (4)의 의미)는 \(\mathfrak o\) 또는 \(\mathfrak O\)의 원소를 오른쪽이나 왼쪽에서 곱해도 다시 그러한 영관계가 되고, 영관계들의 합과 차도 마찬가지이다. 계 \(\mathfrak T\)는 \(\mathfrak O\)와 \(\mathfrak o\)를 포함하는 환을 이루며, 등식·덧셈·곱셈에 관하여 직접곱의 조건들을 만족한다. 또한 일반적인 매장 가정의 귀결로 \(\mathfrak T\)는 교집합 조건도 만족한다. 실제로 \(\mathfrak S\)를 \(R\) 안에서의 \(\mathfrak O\)와 \(\mathfrak o\)의 곱이라 하자. 그러면 1에 따라 \(\mathfrak S\)는 \(\mathfrak T\)의 준동형상이고, \(\mathfrak O\)와 \(\mathfrak o\) 각각에 관해서는 동형이다. \(\mathfrak O\)의 \(x\)와 \(\mathfrak o\)의 \(y\)에 대하여 \(\mathfrak T\)에서 \(x=y\)이면 \(\mathfrak S\)에서도 같은 관계가 따른다. 따라서 가정상 \(\mathfrak S\)에서 두 원소 모두 \(\mathfrak h\)에 속하며, \(\mathfrak O\)와 \(\mathfrak o\) 각각에 관한 동형성 때문에 \(\mathfrak T\)에서도 마찬가지이다. 그러므로 매장 가정은 필요충분하다.
+
+\paragraph{3. 부분환에 관한 환의 정의아이디얼.}
+\(\mathfrak O\)의 원소들 \(\ldots,z,\ldots\)로 이루어진 계 \(S\)가 \(\mathfrak h\)와 \(S\)에 의해 \(\mathfrak O\) 안에서 생성되는 환이 \(\mathfrak O\)와 같을 때 --- 곧 \(\mathfrak O\) 안에서 \(\mathfrak h\)와 \(S\)를 포함하는 모든 환의 교집합과 같을 때 --- \(S\)를 \(\mathfrak h\)에 관한 \(\mathfrak O\)의 \emph{생성계}라 한다. 기호로는 \(\mathfrak O=\mathfrak h[S]\)이다. 다시 \(\mathfrak h\)가 \(\mathfrak O\)의 중심의 부분환이라고 가정한다. 그러면 \(\mathfrak O\)는 비가환 다항식영역 \(\mathfrak h[\ldots Z\ldots]\)의 준동형상이다. 여기서 \(Z\)들은 부정원이고 그 계는 \(S\)와 같은 기수를 갖는다. 비가환 다항식영역이란 모든 유한합 \(\sum h_iP_i=\sum P_i h_i\)의 계를 뜻한다. 여기서 \(P_i\)는 지수 0에 대응하는 단위원까지 포함한 거듭제곱곱
+\[
+P_i=Z_{i_1}^{\varrho_1}Z_{i_2}^{\varrho_2}\cdots Z_{i_n}^{\varrho_n}
+\]
+이고(물론 같은 첨자가 되풀이될 수 있다), 등식은 서로 다른 거듭제곱곱들에 관한 계수들의 등식으로 정의된다. 이 준동형에서 \(\mathfrak O\)는 잉여류환 \(\mathfrak h[\ldots Z\ldots]/\mathfrak M\)과 동형이 된다. 여기서 양쪽 아이디얼 \(\mathfrak M\)은 \(Z\)와 \(z\)가 준동형에 따라 대응할 때 \(\mathfrak O\)에서 \(F(z)\)가 사라지는 모든 다항식 \(F(Z)\), 곧 \(\mathfrak h[\ldots Z\ldots]\)의 원소로 이루어진다. \emph{아이디얼 \(\mathfrak M\)을 \(\mathfrak h\)에 관한 정의아이디얼, 더 정확히는 \(z\)들의 생성계에 대응하는 정의아이디얼이라 한다.} 이 정의에서 다음이 드러난다. 동형인 환들이 서로 동형으로 대응하는 부분환 \(\mathfrak h,\overline{\mathfrak h}\)와 생성계 \(S,\overline S\)를 가지면 그 정의아이디얼들도 서로 동형이다. 특히 \(\overline{\mathfrak h}\)가 \(\mathfrak h\)와 일치하면 정의아이디얼들도 같다고 잡을 수 있다.
+
+\(\mathfrak h\)가 \(\mathfrak O\)의 중심에 있다고 가정했으므로, 하나의 원소 \(z\)만으로 이루어진 생성계 \(S\)가 존재하면 \(\mathfrak O\)는 반드시 가환이다. 또 \(\mathfrak M\)이 주아이디얼이면 \(\mathfrak M\)의 기저다항식 \(G(Z)\)에 대응하는 등식 \(G(z)=0\)을 \(\mathfrak h\)에 관한 \(\mathfrak O\)의 정의방정식이라 한다.
+
+\paragraph{4. 직접곱의 정의아이디얼.}
+(3)에서와 같이 \(\mathfrak O\)가 \(\mathfrak h[\ldots Z\ldots]/\mathfrak M\)과 동형이고 \(\mathfrak M\)이 정의아이디얼이라고 하자. \(\mathfrak h[\ldots Z\ldots]\)와 함께 다항식영역 \(\mathfrak o[\ldots Z\ldots]\), 곧 모든 유한합
+\[
+\sum \gamma_iP_i=\sum P_i\gamma_i
+\qquad\hbox{(\(\gamma_i\)는 \(\mathfrak o\)의 원소)}
+\]
+의 계를 고찰하며, 등식은 계수들의 등식으로 정의한다. \(\mathfrak o[Z]\)는 \(\mathfrak h[Z]\)를 포함하고 \(\mathfrak h\)에 관한 \(\mathfrak h[\ldots Z\ldots]\)와 \(\mathfrak o\)의 직접곱이다. 달리 말하면 \(\mathfrak h[\ldots Z\ldots]\)의 계수영역을 확대하여 얻는다.\srcfn{10)}{실제로 등식조건과 연산조건이 만족되고, \(\gamma=h+h_1P_1+\cdots+h_rP_r\)이면 \(\mathfrak o[\ldots Z\ldots]\)에서의 등식에 따라 \(\gamma=h\)이다. § 2, 2도 보라. \(\mathfrak o[\ldots Z\ldots]\)가 직접곱이라는 사실은 이 항에서는 쓰지 않는다.} \(\mathfrak M_{\mathfrak o}\)를 \(\mathfrak o[\ldots Z\ldots]\)에 관한 \(\mathfrak M\)의 확대아이디얼, 곧 \(\mathfrak o[\ldots Z\ldots]\) 안에서 \(\mathfrak M\)을 포함하는 모든 양쪽 아이디얼의 교집합이라 하자. 이는 \(\mathfrak M\)의 원소들을 \(\mathfrak o\)의 계수로 선형결합한 모든 원소의 계이고, \(\mathfrak o\)가 \(Z\)들과 교환하므로 이미 양쪽 아이디얼이다. \emph{\(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재하면 \(\mathfrak O_{\mathfrak o}\)는 \(\mathfrak o[\ldots Z\ldots]/\mathfrak M_{\mathfrak o}\)와 동형이다.} 실제로 \(\mathfrak O_{\mathfrak o}\)는 \(\mathfrak o[\ldots Z\ldots]\)의 준동형상이므로, \(z\)들의 생성계에 대응하는 \(\mathfrak o\)에 관한 \(\mathfrak O_{\mathfrak o}\)의 정의아이디얼에 따른 잉여류환과 동형이다. 그런데 1, (4)의 등식 정의에 따라 \(\mathfrak O_{\mathfrak o}\)에서 \(z\)들 사이에 성립하는 관계들은 \(\mathfrak O\)에서 성립하는 관계들의 \(\mathfrak o\) 계수 선형결합으로 쓸 수 있다. 따라서 \(\mathfrak M_{\mathfrak o}\)가 정의아이디얼이다.
+
+\paragraph{주.}
+같은 고찰은 직접곱과 그 정의아이디얼에 대한 대칭적이지만 더 번거로운 표현도 준다. \(\mathfrak o\)가 \(\mathfrak h[\ldots Y\ldots]/\mathfrak N\)과 동형이라고 하자. 여기서 \(Y\)들은 \(Z\)들과 다른 기호이므로 다항식영역 \(\mathfrak h[\ldots Y\ldots Z\ldots]\)가 정의된다. 그러면 \(\mathfrak O_{\mathfrak o}\)는
+\[
+\mathfrak h[\ldots Y\ldots Z\ldots]/(\mathfrak M,\mathfrak N,\ldots,YZ-ZY,\ldots)
+\]
+와 동형이다. 오른쪽의 정의아이디얼은 \(\mathfrak M,\mathfrak N\)과 모든 결합 \(YZ-ZY\)에 의해 생성된다. 마지막 결합들은 \(\mathfrak o\)와 \(\mathfrak O\) 원소들의 교환가능성을 나타내고, 앞의 두 아이디얼은 \(\mathfrak O_{\mathfrak o}\)의 관계들이 \(\mathfrak O\)와 \(\mathfrak o\) 각각의 관계들의 귀결임을 나타낸다.
+
+\subsection*{§ 2. 독립 가군기저를 갖는 환. 직접곱의 구성}
+
+\paragraph{1. 직접곱의 구성.}
+\(\mathfrak O\)의 원소들 \(\ldots,t,\ldots\)로 이루어진 계 \(T\)에서 \(\mathfrak O\) 안에 유도되는 \(\mathfrak h\)-가군이 \(\mathfrak O\)와 같을 때 \(T\)를 \(\mathfrak O\)의 \(\mathfrak h\)-가군기저라 한다. 그러면 \(\mathfrak h\)에 단위원이 존재하므로 \(\mathfrak O\)는 모든 선형결합 \(h_{i_1}t_{i_1}+\cdots+h_{i_r}t_{i_r}\)로 이루어진다. 가군기저는
+\[
+h_{i_1}t_{i_1}+\cdots+h_{i_r}t_{i_r}=0
+\quad\hbox{이면 언제나}\quad
+h_{i_1}=0,\ldots,h_{i_r}=0
+\]
+이 따를 때 독립이라 한다. \emph{\(\mathfrak O\)가 단위원을 포함하는 독립 가군기저를 가지면, \(\mathfrak h\)의 임의의 확대환 \(\mathfrak o\)에 대하여 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재한다. 여기서 필요한 조건은 \(\mathfrak h\)가 \(\mathfrak o\)의 중심의 부분환이고 집합론적 교집합 \([\mathfrak O,\mathfrak o]\)가 \(\mathfrak h\)라는 것뿐이다.}\srcfn{11)}{대칭적으로 \(\mathfrak o\)에 기저 조건을 부과해도 된다. § 2, 2에 따라 일반성을 잃지 않고 --- E. Noether, \emph{Der Diskriminantensatz für die Ordnungen eines algebraischen Zahl- oder Funktionenkörpers}, 같은 저널 157 (1927), 82--104쪽, §§ 1, 2를 보라 --- \(\mathfrak O\)와 \(\mathfrak o\)의 \(\mathfrak h\)에 속하지 않는 원소들 사이에는 아무 연산관계도 없다고 가정한다.} § 1, 2에 따라 대응하는 매장환 \(\mathfrak R\)을 구성하면 충분하다. 여기서는 이 환 자체가 이미 직접곱임이 드러날 것이다. \(\mathfrak R\)을 모든 선형결합
+\[
+\gamma_{i_1}t_{i_1}+\cdots+\gamma_{i_r}t_{i_r}
+=t_{i_1}\gamma_{i_1}+\cdots+t_{i_r}\gamma_{i_r}
+\]
+전체로 정의한다. 여기서 \(t_{i_\nu}\)는 독립기저 \(T\)의 임의의 유한한 원소계들을 돌고 \(\gamma\)들은 이에 대응하여 \(\mathfrak o\)에서 취한다. 등식은 \(t_{i_\nu}\)들의 계수들이 같다는 뜻으로 정의하고, 합과 곱은 § 1, 2에서처럼 통상적인 계산법칙으로 정의한다. 기저의 성질 때문에 임의의 두 \(t_{i_\nu}\)의 곱은 유한개의 기저원소를 \(\mathfrak h\)의 계수로 선형결합한 것이므로 \(\mathfrak R\)은 환이다. \(\mathfrak h\)가 \(\mathfrak o\)의 부분환이므로 \(\mathfrak R\)은 \(\mathfrak O\)를 포함하고, \(T\)가 단위원을 포함하므로 \(\mathfrak o\)도 포함한다. 또 \(\gamma\)들은 \(h_{i_\nu}\) 및 \(t_{i_\nu}\)와 각각 교환하므로, \(\mathfrak R\) 안에서 \(\mathfrak O\)와 \(\mathfrak o\)의 원소들은 서로 교환한다. 끝으로 \(\mathfrak R\)에서 \(\mathfrak O\)와 \(\mathfrak o\)의 교집합은 \(\mathfrak h\)이다. 실제로 관계
+\[
+\gamma=\gamma e=h_1t_1+\cdots+h_rt_r
+\]
+에서 등식의 정의와 \(e\)가 기저원소라는 가정에 따라 하나의 \(t\)는 \(e\)와 같고 나머지 계수들은 사라지며, 따라서 \(\gamma=h\)이다. 그러므로 직접곱이 존재한다. 이는 \(\mathfrak O\)와 \(\mathfrak o\)의 곱이고 교환조건과 등식조건을 만족하는 \(\mathfrak R\)과 같다. 기저원소들이 독립이므로 이 마지막 조건은 계수들이 같다는 조건으로 환원된다. 동시에 \(\mathfrak O\)의 이 기저 \(T\)는 \(\mathfrak O_{\mathfrak o}\)의 \(\mathfrak o\)-기저가 된다.
+
+\paragraph{2. 확대가군과 수축가군.}
+\(\mathfrak B\)가 \(\mathfrak O\)의 \(\mathfrak h\)-가군이면 그 확대 \(\mathfrak B_{\mathfrak o}\)란 \(\mathfrak O_{\mathfrak o}\) 안에서 \(\mathfrak B\)를 포함하는 모든 \(\mathfrak o\)-가군의 교집합인 \(\mathfrak O_{\mathfrak o}\)의 \(\mathfrak o\)-가군을 뜻한다. \(\mathfrak C\)가 \(\mathfrak O_{\mathfrak o}\)의 \(\mathfrak o\)-가군이면 그 수축가군 \(\mathfrak C_{\mathfrak h}\)는 \(\mathfrak O\) 안에서 교집합 \([\mathfrak C,\mathfrak O]\)으로 정의된다. \(\mathfrak B\)가 동시에 \(\mathfrak O\)의 아이디얼이면 \(\mathfrak B_{\mathfrak o}\)는 \(\mathfrak O_{\mathfrak o}\)의 아이디얼이고, \(\mathfrak C\)가 \(\mathfrak O_{\mathfrak o}\)의 아이디얼이면 \([\mathfrak C,\mathfrak O]\)는 \(\mathfrak O\)의 아이디얼이다.
+
+\paragraph{정리.}
+\emph{\(\mathfrak O\)의 한 가군 \(\mathfrak B\)가 독립 \(\mathfrak h\)-가군기저를 가지며 이 기저를 \(\mathfrak O\)의 독립 \(\mathfrak h\)-가군기저로 보충할 수 있으면, \(\mathfrak B\)는 \(\mathfrak O_{\mathfrak o}\) 안에서 그 확대가군 \(\mathfrak B_{\mathfrak o}\)를 수축한 가군이다.}
+
+\paragraph{증명.}
+\(T\)가 \(\mathfrak B\)의 독립 \(\mathfrak h\)-가군기저이고, 가정에 따라 \(\mathfrak O\)의 원소 \(\overline t\)들로 이루어진 계 \(\overline T\)를 더하여 \(\mathfrak O\)의 독립 \(\mathfrak h\)-가군기저로 만들 수 있다고 하자. 그러면 \(T\)는 동시에 \(\mathfrak B_{\mathfrak o}\)의 독립 \(\mathfrak o\)-기저이고, \(T\)와 \(\overline T\)를 합한 것은 \(\mathfrak O_{\mathfrak o}\)의 그러한 기저이다.
+
+\(\mathfrak B\)는 교집합 \([\mathfrak B_{\mathfrak o},\mathfrak O]\)에 포함된다. 역으로 \(c\)가 이 수축가군의 원소라고 하자. \(\mathfrak B_{\mathfrak o}\)의 원소로서 \(c\)는 \(T\)의 원소들에 의한 표현을 가지며, 이는 동시에 \(\mathfrak O_{\mathfrak o}\)의 \(\mathfrak o\)-기저 \(T,\overline T\)에 의한 표현이다.
+\[
+c=\gamma_1t_1+\cdots+\gamma_rt_r
+\qquad\hbox{(\(\gamma\)들은 \(\mathfrak o\)의 원소).}
+\]
+\(\mathfrak O\)의 원소로서 \(c\)는 \(\mathfrak O\)의 \(\mathfrak h\)-기저 \(T,\overline T\)에 의한 표현
+\[
+c=h_{i_1}t_{i_1}+\cdots+h_{i_r}t_{i_r}
+ +h_{j_1}\overline t_{j_1}+\cdots+h_{j_s}\overline t_{j_s}
+\]
+을 갖는다. \(\mathfrak O\)가 \(\mathfrak O_{\mathfrak o}\)의 부분환이고 \(\mathfrak h\)가 \(\mathfrak o\)의 부분환이므로 이 역시 동시에 \(\mathfrak O_{\mathfrak o}\)의 \(\mathfrak o\)-기저 \(T,\overline T\)에 의한 표현이다. 따라서 두 표현은 계수별로 같아야 한다. \(\overline t\)들의 계수는 사라지고
+\[
+c=h_1t_1+\cdots+h_rt_r
+\]
+이므로 \(c\)는 \(\mathfrak B\)의 원소이다. 이로써 \(\mathfrak B\)가 수축가군임을 알았다.
+
+\paragraph{보충 주.}
+이 증명은 정리에서 말한 것보다 약간 약한 가정만 사용하고 나머지 가정을 증명한다. 따라서 다음 강화된 형태가 성립한다.
+
+\emph{\(\mathfrak O\) 안에 독립 \(\mathfrak h\)-가군기저 \(T,\overline T\)가 있고 \(T\)가 \(\mathfrak B\)에 속하며, 동시에 \(T\)가 \(\mathfrak B_{\mathfrak o}\)의 독립 \(\mathfrak o\)-가군기저이면 \(\mathfrak B\)는 그 확대 \(\mathfrak B_{\mathfrak o}\)의 수축가군이다. 그러면 \(T\)는 또한 \(\mathfrak B\)의 독립 \(\mathfrak h\)-가군기저임이 드러난다.}
+
+\paragraph{3. 직접곱이 존재하기 위한 충분조건.}
+(예컨대 상대디퍼런트의 경우처럼) 계수영역 \(\mathfrak h\)를 확대하고 나서야 독립 가군기저가 존재할 수도 있다. 이 경우에는 다음 충분조건에서 직접곱의 존재를 얻을 수 있다.
+
+\emph{\(\mathfrak h\)의 확대환 \(\mathfrak f\)가 존재하여 \(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak f}\)와 \(\mathfrak o_{\mathfrak f}\), 그리고 \(\mathfrak f\)에 관한 직접곱 \(\mathfrak O_{\mathfrak f}\times\mathfrak o_{\mathfrak f}\)가 존재하면, \(\mathfrak h\)에 관한 \(\mathfrak O\times\mathfrak o\)가 존재한다.}
+
+\(\mathfrak R=\mathfrak O_{\mathfrak f}\times\mathfrak o_{\mathfrak f}\)가 § 1, 2의 의미에서 매장환임을 보이면 된다. 실제로 \(\mathfrak O\)와 \(\mathfrak o\)는 각각 \(\mathfrak O_{\mathfrak f}\)와 \(\mathfrak o_{\mathfrak f}\)의 부분환으로서 원소별로 서로 교환한다. 또
+\[
+[\mathfrak O,\mathfrak o]\subseteq[\mathfrak O_{\mathfrak f},\mathfrak o_{\mathfrak f}]=\mathfrak f
+\]
+이고 \([\mathfrak O,\mathfrak o]\subseteq\mathfrak O\)도 성립한다. 따라서 \([\mathfrak O,\mathfrak o]\subseteq[\mathfrak O,\mathfrak f]=\mathfrak h\)이고, 결국 \([\mathfrak O,\mathfrak o]=\mathfrak h\)이다. 이로써 \(\mathfrak R\)이 매장환임을 보였다.
+
+\paragraph{주.}
+이 증명은 교집합에 관한 가정을 \(\mathfrak O_{\mathfrak f}\)에 대해서만 사용하고 \(\mathfrak o_{\mathfrak f}\)에는 사용하지 않는다. 따라서 마지막 환은 단순히 \(\mathfrak o\)와 \(\mathfrak f\)의 곱이어도 된다.
+
+\subsection*{§ 3. 부분환에 관한 환의 디퍼런트. 정의아이디얼의 미분몫}
+
+이제부터 나타나는 모든 환은 가환이라고 가정한다.\srcfn{12)}{이 가정이 없으면 오른쪽 디퍼런트와 왼쪽 디퍼런트를 정의하고, 이 둘이 어느 범위까지 서로 일치하는지, 그리고 반단순계의 오더인 경우에 알려진 구성들과 어느 범위까지 일치하는지를 연구해야 한다(§ 4의 연구를 일반화한 것이 된다).} 또한 환 \(\mathfrak O\)와 \(\mathfrak o\)는 부분환 \(\mathfrak h\)의 동형인, 더 정확히는 동치인 확대들이라고 늘 가정한다. 곧 \(\mathfrak O\)에서 \(\mathfrak o\)로 가는 사상은 \(\mathfrak h\)의 항등사상을 연장한다. 그리고 \(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재한다고 가정한다.
+
+\paragraph{1. 디퍼런트의 정의.}
+\(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재한다고 하자. \(x\)는 \(\mathfrak O\)의 모든 원소를 돌고 \(\xi\)는 매번 동형에 따라 \(\mathfrak o\)에서 대응하는 원소라 하자. 모든 차 \(x-\xi\)가 생성하는 \(\mathfrak O_{\mathfrak o}\)의 양쪽 \emph{차분아이디얼}을 \(\mathfrak B\)라 쓰자.
+\[
+\mathfrak B=\{\ldots,(x-\xi),\ldots\}.\srcfnmark{13)}
+\]
+\srcfntext{13)}{이 표기는 언제나 원소 전체에서 유도되는 아이디얼에 사용한다.}
+\emph{차분몫} \(\mathfrak A\)는 영아이디얼을 \(\mathfrak B\)로 나눈 아이디얼 몫으로 정의한다. 따라서 \(a\mathfrak B\)가 사라지는 \(\mathfrak O_{\mathfrak o}\)의 모든 원소 \(a\)로 이루어진다.
+\[
+\mathfrak A=(0):\mathfrak B.
+\]
+\(\mathfrak h\)에 관한 \(\mathfrak o\)의 \emph{디퍼런트} \(\mathfrak d\)는 \(\mathfrak A[x\to\xi]\)로 정의한다. 곧 \(\mathfrak A\)의 각 원소 \(a=\alpha_1x_1+\cdots+\alpha_rx_r\)에서 \(x\)들을 그와 동형으로 대응하는 \(\xi\)들로 바꾸어 얻는다. 이에 대응하여 \(\mathfrak h\)에 관한 \(\mathfrak O\)의 디퍼런트 \(\mathfrak D\)는 \(\mathfrak A[\xi\to x]\)로 정의한다. \(\mathfrak A\)는 \(x\)와 \(\xi\)에 관하여 대칭적으로 정의되므로, \(\mathfrak d\)와 \(\mathfrak D\)는 \(\xi\)와 \(x\)를 맞바꾸어 얻은 것으로서 \(\mathfrak o\)와 \(\mathfrak O\)의 동형에 따라 서로 대응한다. \(\mathfrak A\)가 \(\mathfrak O_{\mathfrak o}\)의 아이디얼, 따라서 특히 \(\mathfrak o\)-가군이며 \(\mathfrak O\)-가군이므로 \(\mathfrak d\)와 \(\mathfrak D\)는 각각 \(\mathfrak o\)와 \(\mathfrak O\)의 아이디얼이다.
+
+\paragraph{2. 정의아이디얼의 미분몫.}
+\(\mathfrak M\)이 (§ 1, 3) \(z\)들의 생성계에 대응하는, \(\mathfrak h\)에 관한 \(\mathfrak O\)의 정의아이디얼이라고 하자. 그러면 (§ 1, 3) \(\mathfrak M\)은 동형인 생성계 \(\xi\)들에 대응하는, \(\mathfrak h\)에 관한 \(\mathfrak o\)의 정의아이디얼이기도 하다. 또 (§ 1, 4) \(\mathfrak O_{\mathfrak o}\)는 \(\mathfrak o[\ldots Z\ldots]/\mathfrak M_{\mathfrak o}\)와 동형이다. 이제 다항식영역 \(\mathfrak o[\ldots Z\ldots]\)에서 차분아이디얼과 차분몫은
+\[
+\mathfrak Q=\{\ldots,(Z-\xi),\ldots\}
+\]
+와
+\[
+\mathfrak C=\mathfrak M_{\mathfrak o}:\mathfrak Q
+=\{\ldots(F(Z)-F(\xi)),\ldots\}:\{\ldots,(Z-\xi),\ldots\}
+\]
+로 정의된다. \emph{미분몫} \(\mathfrak M'\)은 \(\mathfrak C[\xi\to Z]\)로 정의한다. 여기서 이 정의가 \(\xi\)라는 생성원들에 의한 \(\mathfrak o\) 원소들의 \emph{표현}과 무관하게 유일하다는 데 주의해야 한다. 실제로 \(\mathfrak C\)는 아이디얼 몫이므로 \(\mathfrak M_{\mathfrak o}\)를 포함한다. \(\mathfrak o\)의 한 원소를 나타내는 두 표현의 차는 어떤 다항식 \(F(\xi)\)이고, 따라서 \(Z\)를 대입하면 \(\mathfrak M\), 그러므로 이미 \(\mathfrak C\)에 속하는 \(F(Z)\)를 얻는다. 아이디얼 \(\mathfrak M'\)은 \(\mathfrak M\)을 포함하는 \(\mathfrak h[\ldots Z\ldots]\)의 아이디얼이다. \emph{미분몫 \(\mathfrak M'\)에 \(Z\to\xi\)를 대입하면 \(\mathfrak o\)의 디퍼런트 \(\mathfrak d\)가 된다.} 준동형사상 아래에서는 아이디얼뿐 아니라 그 몫들도 서로 대응하기 때문이다. 실제로 \(\mathfrak o[\ldots Z\ldots]\)와 \(\mathfrak O_{\mathfrak o}\) 사이의 준동형, 곧 \(Z\)와 \(z\)의 대응 아래에서 \(\mathfrak A\)는 \(\mathfrak C\)의 준동형상이다. 이는 \(\mathfrak Q\)와 \(\mathfrak M_{\mathfrak o}\)에 관하여 \(\mathfrak B\)와 영아이디얼에 같은 사실이 성립하기 때문이다.\srcfn{13a)}{출판 시 주: 몫들이 대응한다고 결론내리기 위해서는 \(\mathfrak M_{\mathfrak o}\)가 \((0)\)의 원상 전체라는 사실이 중요하다.} 따라서 \(\mathfrak C\)에서 \(\xi\to Z\)를 대입하는 것에는 이 준동형 아래 \(\mathfrak A\)에서 \(\xi\to z\)를 대입하는 것이 대응한다. 그러므로 \(\mathfrak O\)의 디퍼런트 \(\mathfrak D\)는 \(Z\)와 \(z\)의 대응 아래 \(\mathfrak M'\)의 준동형상이다. 따라서
+\[
+\mathfrak M'[Z\to z]=\mathfrak D
+\qquad\hbox{이고}\qquad
+\mathfrak M'[Z\to\xi]=\mathfrak D[z\to\xi]=\mathfrak d.
+\]
+
+\paragraph{3. 정의방정식이 있는 경우의 디퍼런트.}
+\(\mathfrak O\)가 정의방정식 \(G(z)=0\)을 갖는다고 하자(§ 1, 3의 끝). 또 최고차항의 계수는 단위원이라고 \emph{가정}하자. 곧
+\[
+G(Z)=Z^n+h_1Z^{n-1}+\cdots+h_n
+\]
+이고 계수 \(h_i\)들은 \(\mathfrak h\)에 속한다. 그러면 다항식 미분몫과의 관계는 다음과 같다.
+
+\paragraph{정리.}
+\emph{\(\mathfrak h\)에 관한 \(\mathfrak o\)와 \(\mathfrak O\)의 디퍼런트는 정의되어 있고(곧 \(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재하고), 각각 기저원소 \(G'(\xi)\)와 \(G'(z)\)를 갖는 주아이디얼이다. 여기서 \(G'(Z)\)는 다항식 미분몫이다. 아이디얼 미분몫 \(\mathfrak M'\)은 \((G'(Z),G(Z))\)와 같다.}
+
+\paragraph{증명.}
+먼저 가정에서 원소 \(e,z,\ldots,z^{n-1}\)이 \(\mathfrak O\)의 독립 가군기저를 이룬다는 것이 따른다. \(G(Z)\)의 최고차계수가 단위원이므로 이 거듭제곱들은 실제로 \(\mathfrak h\)-가군기저이다. 또한 \(\mathfrak M\)은 \(n\)차보다 낮은 다항식을 포함할 수 없으므로 이 기저는 독립이다. 실제로 다항식 \(K(Z)G(Z)\)의 차수는 역시 최고차계수에 관한 가정 때문에 두 인자의 차수의 합과 같다. 따라서 가군기저의 존재에 의해 \(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_{\mathfrak o}\)가 존재하고, 디퍼런트가 정의된다. 나머지는 \(\mathfrak o[\ldots Z\ldots]\)에서 차분몫 \(\mathfrak C\)를 고찰하면 따른다(2를 보라). 이 차분몫은 다음 기저다항식을 갖는 주아이디얼이다.
+\[
+\begin{aligned}
+C(Z,\xi)={}&(Z^{n-1}+Z^{n-2}\xi+\cdots+\xi^{n-1})\\
+&+h_1(Z^{n-2}+\cdots+\xi^{n-2})+\cdots+h_{n-1}.
+\end{aligned}
+\]
+실제로 \(C\)는 \(G(Z)-G(\xi)\)를 \(Z-\xi\)로 형식적으로 나누어 얻으므로 \(\mathfrak C\)에 속한다. \(Z-\xi\)가 \(\mathfrak Q\)의 기저이기 때문이다. 임의의 다항식은 \(C\)를 법으로 하여 \(Z\)에 관하여 \(n-1\)차에 이르지 않는 다항식 \(D\)로 줄일 수 있다. 따라서 곱 \(D(Z-\xi)\)는 \(n\)차에 이르지 않고, 사라지지 않는 한 \(\mathfrak M\)에 속할 수 없다. 그런데 \(D(Z-\xi)=0\)이면 \(Z-\xi\)에서 \(Z\)의 계수가 단위원이므로 \(D=0\)이다. 따라서 \(C\)가 \(\mathfrak C\)의 기저이다. 이제 \(C\)와 그 배수들에 \(\xi\to Z\)를 대입하면(\(G(Z)=C(Z-\xi)\)와 그 배수들도 함께 대입하면)
+\[
+\mathfrak M'=(G'(Z),G(Z))
+\]
+을 얻고, 따라서
+\[
+\mathfrak d=(G'(\xi))
+\qquad\hbox{이고}\qquad
+\mathfrak D=(G'(z)).
+\]
+
+\subsection*{§ 4. 직접합의 디퍼런트}
+
+\(\mathfrak O\)에 다음 가정들을 둔다.
+
+\begin{enumerate}
+\item[(1)] \(\mathfrak O\)는 아이디얼들의 직접합
+\[
+\mathfrak O=\mathfrak R_1+\cdots+\mathfrak R_r
+=\mathfrak R_i+\mathfrak S_i
+=\mathfrak Oe_1+\cdots+\mathfrak Oe_r
+\]
+이다. 여기서 \(e_i\)들은 단위원의 성분들이다.
+
+\item[(2)] 각 \(\mathfrak R_i\)는 독립 \(\mathfrak h_i\)-가군기저 \(T_i\)를 갖는다. 여기서 \(\mathfrak h_i\)는 \(\mathfrak R_i\) 안의 \(\mathfrak h\)의 성분, 곧 \(\mathfrak h_i=\mathfrak h e_i\)이다. 이 기저 \(T_i\)는 \(\mathfrak R_i\)의 단위원 \(e_i\)를 원소로 포함한다.
+
+\item[(3)] 모든 교집합 \([\mathfrak h,\mathfrak S_i]\)는 영원소와 같다. 즉 \(\mathfrak S_i\)는 상수를 포함하지 않는다.
+\end{enumerate}
+
+동형 때문에 \(\mathfrak o\)에도 같은 가정들이 성립한다.
+
+\paragraph{정리.}
+\emph{위 가정들 아래에서 \(\mathfrak h\)에 관한 \(\mathfrak O\)의 디퍼런트는 \(\mathfrak h_i\)에 관한 \(\mathfrak R_i\)들의 디퍼런트들의 직접합이다.}
+
+증명은 여러 개별 사실을 차례로 보이는 데 바탕을 둔다.
+
+\paragraph{I.}
+먼저 \(\mathfrak O\)도 \(e\)를 포함하는 독립 \(\mathfrak h\)-가군기저를 가지며, 따라서 \(\mathfrak h\)에 관한 \(\mathfrak O\)와 \(\mathfrak o\)의 디퍼런트가 정의된다는 것이 따른다. 이 기저는 \(\mathfrak R_i\)의 기저 \(T_i\)들의 합집합 \(T\)이다. 실제로
+\[
+x=xe_1+\cdots+xe_r
+\]
+와
+\[
+xe_i=(h_1e_i)t_{1i}e_i+\cdots+(h_\lambda e_i)t_{\lambda i}e_i
+=h_1(t_{1i}e_i)+\cdots+h_\lambda(t_{\lambda i}e_i)
+\]
+에서 \(T\)가 실제로 \(\mathfrak O\)의 \(\mathfrak h\)-기저임이 나온다. 이 기저는 또한 독립이다. \(T\)의 원소들 사이의 한 관계에서는 직접합 때문에 각 \(T_i\)의 원소들 사이의 관계들이 따르고, 따라서 모든 계수에 대하여 \(he_i=0\)이다. 그런데 가정 (3)에 따라 이것은 \(h=0\)을 준다. 실제로
+\[
+h\equiv he_i\pmod{\mathfrak S_i}
+\]
+이므로 \(he_i=0\)이면 \(h\)는 \([\mathfrak h,\mathfrak S_i]\)에 속한다. 또 \(T\)는 \(\mathfrak R_i\)의 단위원 \(e_i\)들을 원소로 포함하고 그 합은 \(e\)이다. 따라서 \(T\)에서 한 \(e_i\)를 \(e\)로 바꾸면 모든 조건을 만족하는 \(\mathfrak h\)-기저 \(\overline T\)를 얻는다. 여기서 \(\mathfrak O_{\mathfrak o}\)와 \(\mathfrak h\)에 관한 \(\mathfrak O\)의 디퍼런트가 존재한다.
+
+\paragraph{II.}
+이제 교집합 조건 (3)은 더 강한 조건
+\[
+[\mathfrak o,\mathfrak S_{i(\mathfrak o)}]=0
+\]
+을 함의한다. 여기서 \(\mathfrak S_{i(\mathfrak o)}\)는 \(\mathfrak S_i\)가 \(\mathfrak O_{\mathfrak o}\) 안에서 유도하는 아이디얼이다. 다음과 같이 쓰자.
+\[
+\alpha=\alpha e=\beta_1t_1+\cdots+\beta_\lambda t_\lambda.
+\]
+여기서 \(t_1,\ldots,t_\lambda\)는 \(T\)에서 \(T_i\)를 빼서 얻는 기저의 원소들이고, \(\alpha,\beta\)는 \(\mathfrak o\)에 속한다. \(e_i\)를 \(e\)로 바꾸어 \(\overline T\)를 만들면 \(e,t_1,\ldots,t_\lambda\)는 \(\mathfrak O\)의 \(\mathfrak h\)-기저 \(\overline T\)의 서로 다른 원소들이다. 그런데 \(\mathfrak O_{\mathfrak o}\)에서의 등식은 그러한 모든 기저에서 계수들이 같다는 등식으로 환원되므로, 관계
+\[
+\alpha=\alpha e=\beta_1t_1+\cdots+\beta_\lambda t_\lambda
+\]
+에서 \(\alpha=0\)이 따른다. 이로써 \emph{강화된 교집합 성질을 증명하였다}. 특히 여기서 (위와 같이)
+\[
+\alpha\text{가 }\mathfrak o\text{의 원소이고}\quad\alpha\ne0
+\]
+이면 \(\alpha e_i\ne0\)임이 따른다.
+
+\paragraph{III.}
+이 교집합 조건의 직접적인 귀결은 다음과 같다. \(\mathfrak o\)는 \(\mathfrak O\)의 분해에 대응하는 그 \emph{성분들} \(\mathfrak o e_i\)와 \emph{환동형}이다. 이 동형은
+\[
+\mathfrak h\simeq\mathfrak h_i=\mathfrak h e_i
+\]
+라는 동형을 포함한다. 실제로 \(e_i^2=e_i\)이고 \(e_i\)가 \(\mathfrak o\)의 모든 원소와 교환하므로 \(\mathfrak o e_i\)는 \(\mathfrak o\)의 환동형상이다. 또 \(\alpha\ne0\)이면 \(\alpha e_i\ne0\)이므로 이 대응은 일대일이다. 이때 부분환 \(\mathfrak h\)에는 성분 \(\mathfrak h_i=\mathfrak h e_i\)가 대응한다.
+
+\paragraph{IV.}
+\(\mathfrak o\)의 대응하는 분해
+\[
+\mathfrak o=\mathfrak r_1+\cdots+\mathfrak r_r
+=\mathfrak r_i+\mathfrak s_i
+=\mathfrak o\varepsilon_1+\cdots+\mathfrak o\varepsilon_r
+\]
+도 이용하면 \emph{더 많은 동형}이 따른다. 곧
+\[
+\mathfrak o\simeq\mathfrak o e_i,
+\quad \mathfrak O\simeq\mathfrak O\varepsilon_i,
+\quad \mathfrak r_i\simeq\mathfrak r_i e_i,
+\quad \mathfrak R_i\simeq\mathfrak R_i\varepsilon_i;
+\quad \mathfrak h\simeq\mathfrak h e_i\simeq\mathfrak h\varepsilon_i\simeq\mathfrak h e_i\varepsilon_i.
+\]
+관계 \(\mathfrak O\simeq\mathfrak O\varepsilon_i\)는 위 고찰에서 \(\mathfrak O\) 대신 \(\mathfrak o\)에서 출발할 때 \(\mathfrak o\simeq\mathfrak o e_i\)에 정확히 대응하는 것이다. 이어지는 두 관계도 서로 대응한다. 그 첫째 것은 \(\mathfrak o\simeq\mathfrak o e_i\) 아래 부분환 \(\mathfrak r_i\)에도 \(\mathfrak r_i e_i\)가 대응한다는 데서 나온다. 마찬가지로
+\[
+\mathfrak h\simeq\mathfrak h e_i\simeq\mathfrak h\varepsilon_i
+\]
+를 얻는다. 그런데 \(\mathfrak h\varepsilon_i\)는 \(\mathfrak o\), 그리고 \(\mathfrak r_i\)의 부분환이므로 끝으로
+\[
+\mathfrak h\varepsilon_i\simeq\mathfrak h e_i\varepsilon_i
+\]
+도 얻는다.
+
+\paragraph{V.}
+\(\mathfrak O\)의 직접합 표현에서 다음이 따른다. \emph{\(\mathfrak C=(0):\mathfrak B\)가 \(\mathfrak O\) 안에서 영아이디얼을 아이디얼 \(\mathfrak B\)로 나눈 몫이면, 각 성분 \(\mathfrak C_i\)는 \(\mathfrak R_i\)의 영아이디얼을 성분 \(\mathfrak B_i\)로 나눈 몫과 같다.} 실제로
+\[
+\mathfrak B\mathfrak C=(\mathfrak B e_1)(\mathfrak C e_1)+\cdots+(\mathfrak B e_r)(\mathfrak C e_r)=0
+\]
+에서 \emph{직접합}이므로 각각
+\[
+(\mathfrak B e_i)(\mathfrak C e_i)=0
+\]
+이 따른다. 역으로 \(\mathfrak R_i\)의 원소 \(r e_i\)가 조건 \((\mathfrak B e_i)(r e_i)=0\)을 만족하면 \(i\ne k\)인 경우에도 \((\mathfrak B e_k)(r e_i)=0\)이다.
+
+따라서 \(r e_i\)는 \(\mathfrak C\)와 \(\mathfrak R_i\)의 원소이고, 그러므로 성분 \(\mathfrak C_i=\mathfrak C e_i\)에 속한다. 이로써 \(\mathfrak C_i=\mathfrak C e_i\)가 영아이디얼을 \(\mathfrak B_i\)로 나눈 몫임을 알았다. 또한
+\[
+r e_i\mathfrak B_i\equiv0\quad(\mathfrak S_i)
+\]
+이면 언제나 \(r e_i\mathfrak B_i=0\)이므로 이는 \(\mathfrak R_i\)의 영아이디얼을 \(\mathfrak B_i\)로 나눈 몫이기도 하다.\srcfn{14)}{이 정리는 2에서 쓴 정리, 곧 준동형사상 아래에서 아이디얼뿐 아니라 그 몫들도 서로 대응한다는 정리에서도 바로 따른다.} \(\mathfrak O\)뿐 아니라
+\[
+\mathfrak O_{\mathfrak o}=\mathfrak O_{\mathfrak o}e_1+\cdots+\mathfrak O_{\mathfrak o}e_r
+\]
+도 직접합이므로, \emph{이 정리는 \(\mathfrak O_{\mathfrak o}\)의 아이디얼들에도 성립한다.}
+
+\paragraph{VI. 디퍼런트의 성분분해.}
+정의에 따라(§ 3, 1을 보라) \(\mathfrak D=\mathfrak A[\xi\to x]\)였으므로
+\[
+\mathfrak D=\mathfrak D e_1+\cdots+\mathfrak D e_r
+=\mathfrak A[\xi\to x]e_1+\cdots+\mathfrak A[\xi\to x]e_r.
+\]
+그런데 \(e_i\)는 \(\mathfrak O\)에 속하므로 자기 자신에 대응하고, \(\varepsilon_i\)는 동형 아래 \(e_i\)로 가며, \(e_i\varepsilon_i=e_i\)이므로
+\[
+\mathfrak A[\xi\to x]e_i=\mathfrak A e_i[\xi\to x]
+=\mathfrak A e_i\varepsilon_i[\xi\to x].
+\]
+한편 V에 따라 \(\mathfrak A e_i\varepsilon_i\)는 몫 \((0):\mathfrak B e_i\varepsilon_i\), 그리고 \(\mathfrak R_i\mathfrak r_i\)의 영아이디얼을 \(\mathfrak B e_i\varepsilon_i\)로 나눈 몫과도 같다. 실제로 \(\mathfrak O\)와 \(\mathfrak o\)의 직접합분해를 곱하면
+\[
+\mathfrak O_{\mathfrak o}=\sum\mathfrak O_{\mathfrak o}e_i\varepsilon_k
+=\sum\mathfrak R_i\mathfrak r_k
+\]
+라는 분해를 얻는다. \(\sum e_i\varepsilon_k=e\)이고 단위원들에 직교관계가 성립하므로 이 합은 직접합이다.
+
+\paragraph{VII.}
+\emph{\(\mathfrak D e_i=\mathfrak A e_i\varepsilon_i[\xi\to x]=(0):\mathfrak B e_i\varepsilon_i\)가 \(\mathfrak h_i\)에 관한 \(\mathfrak R_i\)의 디퍼런트임을 보이자.} 이는 다음 사실들에 바탕을 둔다. \(\mathfrak R_i\mathfrak r_i\)는 \(\mathfrak h e_i\varepsilon_i\)에 관한 \(\mathfrak R_i\varepsilon_i\times\mathfrak r_i e_i\)와 같다. 그 차분아이디얼은 \(\mathfrak B e_i\varepsilon_i\), 차분몫은 \(\mathfrak A e_i\varepsilon_i\)이다. 한편 \(\mathfrak D e_i\varepsilon_i\)는 \(\mathfrak R_i\varepsilon_i\)의 디퍼런트이고, 이에 대응하여 \(\mathfrak d e_i\varepsilon_i\)는 \(\mathfrak r_i e_i\)의 디퍼런트이다. 이제 동형
+\[
+\mathfrak R_i\varepsilon_i\simeq\mathfrak R_i
+\qquad\text{와}\qquad
+\mathfrak r_i e_i\simeq\mathfrak r_i
+\]
+에서 \(\mathfrak D e_i\)는 \(\mathfrak h e_i\)에 관한 \(\mathfrak R_i\)의 디퍼런트이고, \(\mathfrak d\varepsilon_i\)는 \(\mathfrak h\varepsilon_i\)에 관한 \(\mathfrak r_i\)의 디퍼런트임이 따른다.
+
+\paragraph{VIII.}
+\emph{\(\mathfrak R_i\mathfrak r_i\)는 \(\mathfrak h e_i\varepsilon_i\)에 관한 직접곱 \(\mathfrak R_i\varepsilon_i\times\mathfrak r_i e_i\)와 같다.} \(\mathfrak R_i\)가 \(\mathfrak h_i\)-가군기저 \(T_i\)를 가지므로 동형 (IV) \(\mathfrak R_i\simeq\mathfrak R_i\varepsilon_i\)에서 \(T_i\varepsilon_i\)가 \(\mathfrak R_i\varepsilon_i\)의 \(\mathfrak h e_i\varepsilon_i\)-가군기저임이 따른다. 이제 IV에 따라 \(\mathfrak r_i e_i\)는 \(\mathfrak R_i\varepsilon_i\)와 동형이고 --- \(\mathfrak o\simeq\mathfrak O\)에 따라 \(\mathfrak r_i\simeq\mathfrak R_i\)이므로 --- \(\mathfrak h e_i\varepsilon_i\)의 확대환이다. 따라서 직접곱은 \(T_i\varepsilon_i\)의 원소들을 \(\mathfrak r_i e_i\)의 계수로 선형결합한 모든 선형형식으로 이루어지며, 등식은 계수들의 등식으로 정의된다. 그런데 \(\mathfrak O\times\mathfrak o\) 안에서 이것은 정확히 \(\mathfrak R_i\mathfrak r_i\)이다. 실제로 \(T_i=T_i e_i\), \(\mathfrak r_i=\mathfrak r_i\varepsilon_i\)이고 \(T_i\)는 \(\mathfrak O\)의 한 가군기저에 속한다.
+
+\paragraph{IX.}
+\emph{\(\mathfrak R_i\varepsilon_i\times\mathfrak r_i e_i\)의 차분아이디얼은 \(\mathfrak B e_i\varepsilon_i\)이고, 차분몫은 \(\mathfrak A e_i\varepsilon_i\)이다.} 이를 보려면 \(\mathfrak B\)를
+\[
+\mathfrak B=\{\ldots,xe_1-\xi\varepsilon_1,\ldots,xe_r-\xi\varepsilon_r,\ldots\}
+\]
+로 쓰면 된다. 그러면
+\[
+\mathfrak B e_i\varepsilon_i
+=\{\ldots,xe_i\varepsilon_i-\xi e_i\varepsilon_i,\ldots\}
+\]
+이므로 이는 실제로 \(\mathfrak R_i\varepsilon_i\times\mathfrak r_i e_i\)의 차분아이디얼과 같다. 그런데 (VI에 따라) \(\mathfrak A e_i\varepsilon_i\)는 이 환의 영아이디얼을 \(\mathfrak B e_i\varepsilon_i\)로 나눈 몫이므로 차분몫이다.
+
+\paragraph{X.}
+\emph{\(\mathfrak R_i\varepsilon_i\)의 디퍼런트는 \(\mathfrak D e_i\varepsilon_i\)와 같다.} \(\mathfrak R_i\varepsilon_i\)의 디퍼런트는 \(\mathfrak A e_i\varepsilon_i\)에서 \(\mathfrak r_i e_i\)의 각 원소를 그와 동형인 원소로 바꾸어 얻는다. 곧 매번 \((\xi\varepsilon_i)e_i\)를 \((xe_i)\varepsilon_i\)로 바꾼다. 다시 말해 \(\xi\varepsilon_i\)도 \(\mathfrak o\)의 어떤 \(\xi\)이고 이는 \(xe_i\)로 가므로, \(\mathfrak A e_i\varepsilon_i\)에서 \(\xi\to x\)를 대입하고 --- 이 대입은 \((\xi\varepsilon_i)e_i\)를 \((xe_i)e_i=xe_i\)로 보낸다 --- 이어 \(\varepsilon_i\)를 곱한다. 그런데 (VI에 따라) \(\mathfrak A e_i\varepsilon_i[\xi\to x]=\mathfrak D e_i\)였으므로, \(\mathfrak h e_i\varepsilon_i\)에 관한 \(\mathfrak R_i\varepsilon_i\)의 디퍼런트는 \(\mathfrak D e_i\varepsilon_i\)와 같다. 대칭적으로 \(\mathfrak r_i e_i\)의 디퍼런트는 \(\mathfrak d e_i\varepsilon_i\)와 같다.
+
+\paragraph{XI.}
+\emph{\(\mathfrak R_i\)의 디퍼런트는 \(\mathfrak D e_i\)와 같다.} 실제로 동형 아래 \(\mathfrak R_i\)의 디퍼런트는 \(\varepsilon_i\)를 곱하여 \(\mathfrak R_i\varepsilon_i\)의 디퍼런트로 간다. 마지막 것이 \(\mathfrak D e_i\varepsilon_i\)와 같으므로 전자는 \(\mathfrak D e_i\)와 같다. 따라서
+\[
+\mathfrak D=\mathfrak D e_1+\cdots+\mathfrak D e_r,
+\]
+\emph{그리고 \(\mathfrak D e_i\)는 \(\mathfrak R_i\)의 디퍼런트이다.} 대칭적으로
+\[
+\mathfrak d=\mathfrak d\varepsilon_1+\cdots+\mathfrak d\varepsilon_r,
+\]
+\emph{그리고 \(\mathfrak d\varepsilon_i\)는 \(\mathfrak r_i\)의 디퍼런트이다.} 이로써 정리가 증명되었다.
+
+\subsection*{§ 5. 체의 갈루아 확대환. 구조정리}
+
+\paragraph{1. 바탕이 되는 환들.}
+\(K\)가 \emph{기초체 \(P\) 위의 \(n\)차 체}이고 분리가능 확대라고 하자. \(\Gamma\)를 이에 속하는, 동형을 제외하고 유일하게 결정되는 갈루아체라 하자. 따라서 \(\Gamma\)는 \(n\)개의 켤레체 \(K^{(i)}\)를 포함하고 그 곱이며, \(K=K^{(1)}\)로 둔다. \(\mathfrak K\)는 \(K\), 따라서 모든 \(K^{(i)}\)와 \(P\)에 관하여 동형인 동치 확대이며, 교집합 \([\mathfrak K,\Gamma]\)가 \(P\)라고 하자. 곧 \(\Gamma\)와 \(\mathfrak K\)의 공통 포괄체는 없다고 하자.\srcfn{15)}{물론 \(K\)와 \(\mathfrak K\)의 \(P\)에 속하지 않는 원소들 사이에는 아무 연산관계도 없다고 가정한다. 이는 일반성을 제한하지 않는다(§ 1, 2, § 2, 1과 각주 11을 보라).} \(\mathfrak K\)는 단위원을 포함하는 유한 독립 \(P\)-가군기저를 가지므로 § 2, 1에 따라 직접곱 \(\mathfrak K_\Gamma,\mathfrak K_K,\mathfrak K_{K^{(i)}}\)가 존재한다. \(\mathfrak K_\Gamma\)는 그 \(n\)개 부분환 \(\mathfrak K_{K^{(i)}}\)의 곱이다. \(\mathfrak K_\Gamma\)를 \(\mathfrak K\)의 \emph{갈루아 확대환}이라 한다. \(\mathfrak K\)의 모든 독립 \(P\)-기저가 \(\mathfrak K_K\)의 독립 \(K\)-기저가 되고 켤레들에 대해서도 마찬가지이므로, \(\mathfrak K_\Gamma\)는 동시에 \(K\)에 관한 \(\mathfrak K_K\)와 \(\Gamma\)의 직접곱이다.\srcfn{16)}{모든 켤레에 똑같이 성립하는 정리들은 대개 첨자를 생략하고 \(\mathfrak K_K\)에 대해서만 말한다.} 이 환들의 아이디얼 사이에는 다음 관계가 성립한다.
+
+\paragraph{정리.}
+\emph{\(\mathfrak K\)의 모든 아이디얼은 \(\mathfrak K_K\) 또는 \(\mathfrak K_\Gamma\) 안의 그 확대아이디얼을 수축한 아이디얼이고, \(\mathfrak K_K\)의 모든 아이디얼은 \(\mathfrak K_\Gamma\) 안의 그 확대아이디얼을 수축한 아이디얼이다.}
+
+\paragraph{증명.}
+\(P\)와 \(K\)가 체이므로 \(\mathfrak K\)의 모든 \(P\)-가군과 \(\mathfrak K_K\)의 모든 \(K\)-가군은 각각 유한 독립 \(P\)-가군기저와 \(K\)-가군기저를 가지며, 이를 각각 \(\mathfrak K\)와 \(\mathfrak K_K\)의 그러한 기저로 보충할 수 있다. 이제 정리는 § 2, 2의 정리에서 따른다.
+
+\(\mathfrak B_{K^{(i)}}^{(i)}\)를 \(\mathfrak K_{K^{(i)}}\)의 차분아이디얼이라 쓰자. 곧
+\[
+\mathfrak B_{K^{(i)}}^{(i)}=\{\ldots,x-\xi^{(i)},\ldots\},
+\]
+특히
+\[
+\mathfrak B_K=\{\ldots,x-\xi,\ldots\}.
+\]
+\(\xi\)와 \(\xi^{(i)}\)는 각각 동형에 따라 \(x\)에 대응하는 \(K\)와 \(K^{(i)}\)의 원소이므로, 이 \(n\)개 차분아이디얼은 서로 켤레이다.
+
+\(\mathfrak A_K\)와 \(\mathfrak A_{K^{(i)}}^{(i)}\)를 각각 \(\mathfrak K_K\)에서의 차분몫 \((0):\mathfrak B_K\)와 그 켤레들이라 하자. \(\mathfrak K_\Gamma\) 안의 확대아이디얼들은 \(\mathfrak B_\Gamma\)와 \(\mathfrak A_\Gamma\)로 쓴다. 이 항의 확대아이디얼과 수축아이디얼에 관한 정리에서 특히 다음이 따른다.
+
+\emph{차분아이디얼 \(\mathfrak B_K\)와 차분몫 \(\mathfrak A_K\)는 그 확대 \(\mathfrak B_\Gamma\)와 \(\mathfrak A_\Gamma\)를 수축한 아이디얼들이다.}
+
+\paragraph{2. 갈루아 확대환의 직접합분해.}
+차분아이디얼·차분몫과 갈루아 확대환의 구조 사이의 관계는 다음 정리가 준다.
+
+\paragraph{구조정리.}
+\emph{갈루아 확대환 \(\mathfrak K_\Gamma\)의 영아이디얼은 \(n\)개 켤레 차분아이디얼들의 확대들의 교집합이고, \(\mathfrak K_\Gamma\) 자체는 \(n\)개 켤레 차분몫들의 확대들의 직접합이다. \(\mathfrak K_{K^{(i)}}\)는 그에 속하는 차분아이디얼과 차분몫의 직접합이고, 그 영아이디얼은 이 둘의 교집합이다.}
+
+\paragraph{증명.}
+각 \(\mathfrak B_\Gamma^{(i)}\)에 따른 잉여류환은 \(\Gamma\)에 관하여 랭크 1이다. 실제로 모든 원소는 \(\mathfrak B_\Gamma^{(i)}\)를 법으로 하여 \(\Gamma\)의 한 원소와 합동이지만, \(\mathfrak B_\Gamma^{(i)}\)는 \(\Gamma\)의 0 아닌 원소를 포함할 수 없다. \(x\to\xi^{(i)}\)일 때 \(\mathfrak B_\Gamma^{(i)}\)가 사라지기 때문이다. 분리가능성에 따라 \(\mathfrak B_\Gamma^{(i)}\)들은 모두 서로 다르므로 쌍마다 서로소이다. 곧 각 두 아이디얼의 합은 \(\mathfrak K_\Gamma\)와 같다. 따라서 아이디얼들
+\[
+\mathfrak B_\Gamma^{(1)},
+[\mathfrak B_\Gamma^{(1)},\mathfrak B_\Gamma^{(2)}],\ldots,
+[\mathfrak B_\Gamma^{(1)},\ldots,\mathfrak B_\Gamma^{(n)}]
+\]
+의 랭크는 매번 적어도 하나씩 감소한다. 모두의 교집합은 영아이디얼이고, 한편 쌍마다 서로소이므로 모든 켤레보다 적은 수의 교집합은 영아이디얼과 다르다. 따라서 랭크는 각 단계에서 정확히 하나씩 감소하였다. 알려진 정리들에서 이제 다음과 같은 \(\mathfrak K_\Gamma\)의 유일하게 결정되는 직접합표현이 따른다.\srcfn{17)}{예컨대 E. Noether, \emph{Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern}, Math. Ann. 96 (1927), 26--61쪽, § 4, 5를 보라.}
+\begin{align}
+\mathfrak K_\Gamma
+&=\mathfrak C_\Gamma^{(1)}+\cdots+\mathfrak C_\Gamma^{(n)}
+=\Gamma e^{(1)}+\cdots+\Gamma e^{(n)}
+=\mathfrak C_\Gamma^{(i)}+\mathfrak B_\Gamma^{(i)}, \tag{1}\\
+e&=e^{(1)}+\cdots+e^{(n)},\qquad
+\mathfrak C_\Gamma^{(i)}=
+[\mathfrak B_\Gamma^{(1)},\ldots,\mathfrak B_\Gamma^{(i-1)},
+\mathfrak B_\Gamma^{(i+1)},\ldots,\mathfrak B_\Gamma^{(n)}].\notag
+\end{align}
+\(\mathfrak C_\Gamma=\mathfrak A_\Gamma\)임을 보여야 한다. 이는 \(\mathfrak K_K\)에서 대응하는 일치를 보이면 따른다. 여기서는 분해
+\begin{equation}
+\mathfrak K_K=\mathfrak C_K+\mathfrak B_K
+=\mathfrak K_K e^{(1)}+\mathfrak K_K(e-e^{(1)}) \tag{2}
+\end{equation}
+가 성립한다. 실제로 \(e^{(1)}\)는 \(\mathfrak K_K\)에 속한다. \(\mathfrak C_\Gamma^{(1)}\)가 \(\mathfrak B_\Gamma^{(2)},\ldots,\mathfrak B_\Gamma^{(n)}\)의 모든 치환을 허용하므로, \(\mathfrak C_\Gamma^{(1)}\) 안의 단위원 성분인 \(e^{(1)}\)에도 같은 것이 성립하기 때문이다. 따라서 \(e^{(1)}\)을 \(\mathfrak K_K\)의 한 독립 \(K\)-기저로 나타내면 --- 이 기저는 동시에 \(\mathfrak K_\Gamma\)의 독립 \(\Gamma\)-기저이므로 가능하다 --- 계수들은 각각 \(K^{(2)},\ldots,K^{(n)}\)의 모든 치환을 허용하며, 따라서 \(K\)에 속한다. \((e^{(1)})^2=e^{(1)}\)이므로 합
+\[
+\mathfrak K_K=\mathfrak K_K e^{(1)}+\mathfrak K_K(e-e^{(1)})
+\]
+는 직접합이다. 이를 \(\mathfrak K_\Gamma\)로 확대해도 다시 직접합이며, (1)에 따라 \(\mathfrak K_\Gamma=\mathfrak C_\Gamma^{(1)}+\mathfrak B_\Gamma^{(1)}\)이 된다. 따라서 § 2, 2의 끝에 따라
+\[
+\mathfrak K_K e^{(1)}=[\mathfrak C_\Gamma,\mathfrak K_K]
+=[\Gamma e^{(1)},\mathfrak K_K]=Ke^{(1)}=\mathfrak C_K;
+\]
+\[
+\mathfrak K_K(e-e^{(1)})=[\mathfrak B_\Gamma,\mathfrak K_K]=\mathfrak B_K.
+\]
+이로써 (2)를 증명하였다.
+
+그런데 (2)에서 \(\mathfrak C_K=\mathfrak A_K\), 따라서 \(\mathfrak C_\Gamma=\mathfrak A_\Gamma\)가 따른다. 실제로 \(e^{(1)}(e-e^{(1)})=0\)이므로 \(\mathfrak C_K\mathfrak B_K=0\)이다. 역으로 \(b\mathfrak B_K=0\)이면 \(b(e-e^{(1)})=0\)도 되어 \(b=be=be^{(1)}\)이다. 따라서
+\[
+\mathfrak C_K=(0):\mathfrak B_K=\mathfrak A_K
+\]
+이고, 확대하면 \(\mathfrak C_\Gamma=\mathfrak A_\Gamma\)이다. 그러므로
+\begin{align}
+\mathfrak K_\Gamma
+&=\mathfrak A_\Gamma^{(1)}+\cdots+\mathfrak A_\Gamma^{(n)}
+=\Gamma e^{(1)}+\cdots+\Gamma e^{(n)};
+&0&=[\mathfrak B_\Gamma^{(1)},\ldots,\mathfrak B_\Gamma^{(n)}]; \tag{3}\\
+\mathfrak K_{K^{(i)}}
+&=\mathfrak A_{K^{(i)}}^{(i)}+\mathfrak B_{K^{(i)}}^{(i)}
+=K^{(i)}e^{(i)}+\mathfrak B_{K^{(i)}}^{(i)};
+&0&=[\mathfrak A_{K^{(i)}}^{(i)},\mathfrak B_{K^{(i)}}^{(i)}].\notag
+\end{align}
+이로써 정리의 모든 부분을 증명하였다. 끝으로 이것은 \emph{완전히 불변인 구조정리}임을 강조해 둔다. 나타나는 모든 구성 \(\mathfrak K_K,\mathfrak K_\Gamma,\mathfrak B_K,\mathfrak A_K\)가 기저 없이 정의되기 때문이다.\srcfn{18)}{여기서 가능한, 정의방정식과 대응하는 다항식의 일차인수분해를 이용한 정식화는 불변적이지 않다.}
+
+\paragraph{3. 켤레원소들에 의한 \(\mathfrak K\)의 성분표현.}
+켤레 차분아이디얼들과 차분몫들에는 \(\mathfrak K\)의 원소들을 켤레성분들로 나타내는 표현이 대응한다.
+
+\paragraph{정리.}
+\emph{
+\[
+x=\xi^{(1)}e^{(1)}+\cdots+\xi^{(n)}e^{(n)}
+\]
+가 \(\mathfrak K\)의 원소 \(x\)의 \(\mathfrak K\)-성분표현이면, 이 \(n\)개 성분은 서로 켤레이다. 특히 \(\xi^{(1)},\ldots,\xi^{(n)}\)은 \(\mathfrak K\)에서 \(K^{(1)},\ldots,K^{(n)}\)으로 가는 동형들에 따라 \(x\)에 대응하는 \(n\)개 켤레값이다.}
+
+\(e^{(1)},\ldots,e^{(n)}\)이 서로 켤레라는 것은 2의 관계 (3)에서 알 수 있다. 실제로 \(\mathfrak B_K\)를 \(\mathfrak B_{K^{(i)}}^{(i)}\)로 보내는 \(\Gamma\)의 자기동형사상들은 동시에 \(e^{(1)}\)을 \(e^{(i)}\)로 보낸다. 마지막 것은 실제로 \(\mathfrak K_{K^{(i)}}\)의 원소이다. 같은 관계들은 \(\mathfrak B_{K^{(i)}}^{(i)}e^{(i)}=0\)이므로 \(xe^{(i)}=\xi^{(i)}e^{(i)}\), 따라서
+\[
+(x-\xi^{(i)})e^{(i)}=0
+\]
+도 준다. 또는 \(\mathfrak K\)는 체로서 그 성분과 동형이고, 그 성분은 \(x\)와 \(\xi^{(i)}e^{(i)}\)가 동형으로 대응하는 \(K^{(i)}e^{(i)}\)이므로 같은 사실이 따른다.
+
+정리에서 다음이 나온다.
+
+\paragraph{따름정리.}
+\emph{\(\mathfrak B\)가 \(\mathfrak K\)의 절대가군(곧 임의의 두 원소와 함께 그 차도 포함하는 가군)이고 \(\mathfrak B^{(1)},\ldots,\mathfrak B^{(n)}\)이 \(\mathfrak K_\Gamma\) 안의 그 성분들이면, \(\mathfrak B\)는 교집합 \([\mathfrak K,\mathfrak B^{(1)}+\cdots+\mathfrak B^{(n)}]\)과 같다.}
+
+\(\mathfrak B\)는 이 교집합에 포함된다. 역으로 \(\mathfrak B^{(1)}+\cdots+\mathfrak B^{(n)}\)의 한 원소가 \(\mathfrak K\)에 속하려면 정리에 따라 켤레성분들의 합이어야 하며, 따라서 \(\mathfrak B\)의 원소이다.
+
+\paragraph{4. \(\mathfrak K\)의 여차기저들과 단위원 성분들의 관계.}
+불변인 구조에서 기저표현으로 넘어가면, 이 구조는 기저들을 여차기저의 쌍들로 묶어 준다.
+
+\paragraph{정리.}
+\emph{\(\mathfrak K\)의 모든 \(P\)-기저 \(t_1,\ldots,t_n\)에는 여차기저 \(T_1,\ldots,T_n\)이 대응하고, 그 여차기저는 다시 원래의 \(t\)들의 기저이다. 여차기저 \(T_1,\ldots,T_n\)과 동형인 \(K^{(i)}\)의 기저 \(A_1^{(i)},\ldots,A_n^{(i)}\)는 \(t\)들에 의한 기저표현
+\[
+e^{(i)}=A_1^{(i)}t_1+\cdots+A_n^{(i)}t_n
+\]
+에서 단위원 성분 \(e^{(i)}\)의 계수들로 정의된다. \(\alpha_1^{(i)},\ldots,\alpha_n^{(i)}\)가 \(t_i\)들에 대응하는 기저들이면 \(\alpha\)와 \(A\)의 행렬들은 서로 역행렬이다. \(\mathfrak K\)의 두 기저 \((s)\)와 \((t)\)가 변환
+\[
+(s)=(t)P
+\]
+로 이어지면, 그 여차기저들 사이에는 반변관계
+\[
+(S)=P^{-1}(T)
+\]
+가 성립한다.}
+
+\paragraph{증명.}
+\(\mathfrak K\)의 한 \(P\)-기저 \(t_1,\ldots,t_n\)을 바탕으로 단위원의 \(n\)개 성분의 기저표현을 \(e^{(i)}=A_1^{(i)}t_1+\cdots+A_n^{(i)}t_n\)이라 하자. 이 기저는 \(\mathfrak K_\Gamma\)의 \(\Gamma\)-기저이기도 하다. 2와 3에 따라 \(A_1^{(i)},\ldots,A_n^{(i)}\)는 \(K^{(i)}\)에 속하고, 서로 다른 \(e^{(i)}\)들에는 켤레인 계수계 \(A\)들이 대응한다. \(\alpha_1^{(i)},\ldots,\alpha_n^{(i)}\)가 \(K^{(i)}\)에서 \(t_1,\ldots,t_n\)에 동형으로 대응하는 기저이면 다음 관계들도 성립한다.
+\begin{equation}
+e^{(i)}[t\to\alpha^{(i)}]=e;
+\qquad e^{(i)}[t\to\alpha^{(j)}]=0\quad\text{(\(i\ne j\)).} \tag{1}
+\end{equation}
+실제로 \(\mathfrak B_{K^{(i)}}^{(i)}\)는 원소 \(t_1-\alpha_1^{(i)},\ldots,t_n-\alpha_n^{(i)}\) --- 이들은 \(\mathfrak B_{K^{(i)}}^{(i)}\)의 종속 \(P\)-가군기저를 이룬다 --- 를 포함하므로 \(t=\alpha^{(i)}\)를 대입하면 사라진다. 따라서
+\[
+e\equiv e^{(i)}\pmod{\mathfrak B_{K^{(i)}}^{(i)}}
+\]
+에서 (1)의 첫 관계가 나오며, 둘째 관계는 \(i\ne j\)일 때 \(e^{(i)}\)가 모든 \(\mathfrak B_{K^{(j)}}^{(j)}\)의 원소라는 데서 나온다. 관계 (1)을 계수별로 풀면 행렬식으로 다음과 같이 쓸 수 있다.
+\begin{equation}
+\begin{pmatrix}
+\alpha_1^{(1)}&\cdots&\alpha_n^{(1)}\\
+\vdots&&\vdots\\
+\alpha_1^{(n)}&\cdots&\alpha_n^{(n)}
+\end{pmatrix}
+\begin{pmatrix}
+A_1^{(1)}&\cdots&A_1^{(n)}\\
+\vdots&&\vdots\\
+A_n^{(1)}&\cdots&A_n^{(n)}
+\end{pmatrix}=E_n. \tag{2}
+\end{equation}
+여기서 \(E_n\)은 단위행렬이다. 따라서 \(A\)들은 이미 \(\alpha\)들에 의해 유일하게 결정된다. 관계 (2)는 두 행렬의 행렬식이 사라지지 않음을 보인다. 더 나아가 \(A_1^{(i)},\ldots,A_n^{(i)}\)는 \(P\)에 관하여 선형독립이다. 어떤 선형종속관계가 있으면 켤레계들에도 성립하여 \(A\)-행렬의 랭크를 줄이는데, 이는 \(E_n\)의 랭크가 \(n\)인 것과 모순이다. 따라서 매번 \(A_1^{(i)},\ldots,A_n^{(i)}\)는 \(K^{(i)}\)의 기저이다. 이 기저들은 서로 켤레이므로 모두 \(\mathfrak K\)의 같은 기저 \(T_1,\ldots,T_n\)과 동형이며, 3에 따라 \(T_\lambda\)는
+\[
+T_\lambda=A_\lambda^{(1)}e^{(1)}+\cdots+A_\lambda^{(n)}e^{(n)}
+\]
+로 결정된다. 기저 \(T_1,\ldots,T_n\)을 \(t_1,\ldots,t_n\)의 여차기저라 하고, 이에 대응하여 \(A_1^{(i)},\ldots,A_n^{(i)}\)를 \(\alpha_1^{(i)},\ldots,\alpha_n^{(i)}\)의 여차기저라 한다. \(A\)들은 (2)에 따라 이미 유일하게 결정되고, 이 관계는 전치행렬로 넘어가면 \(T\), 곧 \(A\)의 기저에서 \(\alpha\)들을 결정하므로 원래의 \(t\)들의 기저는 \(T\)의 여차기저이다. 따라서 단위원 성분들이 주는 대응 아래 모든 기저는 여차기저들의 쌍들로 나뉜다. \(s,S\)가 여차기저들의 또 다른 쌍이고
+\[
+e^{(i)}=B_1^{(i)}s_1+\cdots+B_n^{(i)}s_n
+\qquad\text{이며}\qquad (s)=(t)P
+\]
+라고 하자. 그러면
+\[
+A_1t_1+\cdots+A_nt_n=B_1s_1+\cdots+B_ns_n
+\]
+에 \((s)=(t)P\)를 대입하여 \(t\)에 관한 항등식으로 보면 \(B,A\)가 \(s,t\)에 반변적으로 변환함이 따른다. 따라서 동형에 의하여 \(S,T\)에도 같은 사실이 성립한다. 이로써 정리의 모든 부분을 증명하였다.
+
+\paragraph{주.}
+\(c=C_1t_1+\cdots+C_nt_n\)이 한 \(P\)-기저에 의한 \(\mathfrak K\) 원소의 표현이고 \(c=c_1T_1+\cdots+c_nT_n\)이 여차기저에 의한 같은 원소의 표현이면
+\[
+C_\lambda=\operatorname{Sp}(cT_\lambda),
+\qquad c_\lambda=\operatorname{Sp}(ct_\lambda)
+\]
+이다. 여기서 통상적으로 \(\operatorname{Sp}(x)\)는 켤레들의 합
+\[
+\operatorname{Sp}(x)=\xi^{(1)}+\xi^{(2)}+\cdots+\xi^{(n)}
+\]
+을 뜻하며 \(x\)는 \(\mathfrak K\)의 임의의 원소이다. 실제로
+\[
+c=\gamma^{(1)}e^{(1)}+\cdots+\gamma^{(n)}e^{(n)}
+=\sum_\lambda\gamma^{(1)}A_\lambda^{(1)}t_\lambda+
+\cdots+\sum_\lambda\gamma^{(n)}A_\lambda^{(n)}t_\lambda
+\]
+이므로 계수들을 비교하면 \(C_\lambda=\operatorname{Sp}(cT_\lambda)\)를 얻는다. 둘째 관계는 \(t\)와 \(T\)를 맞바꾸면 마찬가지로 따른다.\srcfn{19)}{이 항의 고찰은 불변인 구조정리들이 불변이 아닌 기저정리들보다 본질적으로 더 단순함을 보인다. 마지막 정리들은 알려진 것과의 관계를 잇기 위해서만 필요했다. 실제로 갈루아 확대환의 분해와 단위원 성분들의 도입은 여차기저들(다음 절의 여모듈)이 하는 모든 일을 해낸다. 그곳에서도 디퍼런트와 여모듈의 관계는 분류를 위해서만 제시한다. 5의 라그랑주 보간공식에 관한 고찰도 마찬가지이다.}
+
+\paragraph{5. 정의방정식을 바탕으로 하는 경우. 라그랑주 보간공식.}
+[출판 시 주: 이 항은 원고에서 채워지지 않은 채로 남았다.]
+
+\subsection*{§ 6. 오더의 디퍼런트}
+
+지금까지 체와 그 갈루아 확대환에만 관한 구조정리들을 이제 정수성의 뜻에서 강화한다. 이를 위해 \(P\)의 어떤 부분환들과, 그에 관하여 \(\mathfrak K\)와 \(K\)에서 정수적인 원소들로 이루어진 오더들을 지정한다. § 5의 모든 표기를 그대로 쓴다.\srcfn{20)}{한 환에 관하여 정수적인 것과 정수적으로 닫힌 것의 개념은 각주 17에서 인용한 논문의 § 1을 보라.}
+
+\paragraph{1. 바탕이 되는 환들.}
+\(\mathfrak h\)가 \(P\)의 부분환이고 \(P\)가 \(\mathfrak h\)의 몫체라고 하자. 또 \(\mathfrak h\)는 \emph{\(P\)에서 정수적으로 닫혀 있다}고 하자. 곧 \(P\)의 원소 가운데 \(\mathfrak h\)에 관하여 정수적인 것은 모두 \(\mathfrak h\)에 속한다. \(\mathfrak O\)를 \(\mathfrak K\)의 한 \(\mathfrak h\)-오더라 하자. 즉 \(\mathfrak h\)를 포함하는 \(\mathfrak K\)의 부분환이고 그 몫체는 \(\mathfrak K\)이며, 반드시 독립일 필요는 없는 유한 \(\mathfrak h\)-가군기저를 갖는다. 그러면 \(\mathfrak O\)의 모든 원소는 \(\mathfrak h\)에 관하여 정수적이고, 그 \(\mathfrak h\)-가군기저는 동시에 \(\mathfrak K\)의, 일반적으로는 종속인 \(P\)-가군기저이다. \(\mathfrak o\)를 \(K\) 안에서 \(\mathfrak O\)와 동형인 오더, \(\mathfrak o^{(i)}\)를 \(K^{(i)}\) 안의 그 켤레들이라 하자. \emph{\(n\)개의 켤레 오더가 \(\Gamma\) 안에서 생성하는 환을 \(\mathfrak g\)라 하자.} 그러면 \(\mathfrak g\)도 오더이다. 실제로 \(\mathfrak g\)는 \(\mathfrak h\)를 포함한다. \(\mathfrak o^{(i)}\)들의 \(\mathfrak h\)-기저 원소들을 모두 곱하여 얻는 원소들은 \(\mathfrak g\)의 \(\mathfrak h\)-기저이자 \(\Gamma\)의 \(P\)-기저이다.
+
+\emph{직접곱 \(\mathfrak O_{\mathfrak o}\)와 \(\mathfrak O_{\mathfrak g}\)가 존재한다.} 이는 § 2, 3의 충분조건에서 나온다. 거기의 환 \(\mathfrak f\)를 \(P\)로 바꾸면 된다. 우선 \(\mathfrak K_\Gamma\) 안에서 \(\mathfrak h\)에 관한 직접곱 \(\mathfrak O_P=\mathfrak K\)가 존재한다. 실제로 \(\mathfrak h\)는 교집합 \([\mathfrak O,P]\)에 들어 있다. 역으로 그 교집합의 모든 원소는 \(\mathfrak O\)의 원소로서 정수적이고, 동시에 \(P\)의 원소이므로 정수적으로 닫혔다는 가정에 따라 \(\mathfrak h\)에 속한다. 이제 \(\mathfrak O\)에서 취한 임의의 \(n\)개 선형독립 원소를 \(P\)의 계수로 선형결합하면 직접곱으로서 \(\mathfrak K\)를 얻는다. 마찬가지로
+\[
+\mathfrak o_P=K
+\qquad\text{이고}\qquad
+\mathfrak g_P=\Gamma.
+\]
+\(\mathfrak h\)에 관한 직접곱 \(\mathfrak K_\Gamma=\mathfrak O_P\times\mathfrak o_P\)에서 § 2, 3의 조건에 따라 \(\mathfrak h\)에 관한 \(\mathfrak O_{\mathfrak o}\)의 존재가 따른다. 마찬가지로 \(\mathfrak K_\Gamma=\mathfrak O_P\times\mathfrak g_P\)에서 \(\mathfrak O_{\mathfrak g}\)의 존재가 따른다. \(\mathfrak O_{\mathfrak o}\)와 함께 켤레환 \(\mathfrak O_{\mathfrak o^{(i)}}\)들도 존재한다. \(\mathfrak O_{\mathfrak g}\)를 \emph{오더 \(\mathfrak O\)의 갈루아 확대환}이라 한다.
+
+따라서 \(\mathfrak h\)에 관한 \(\mathfrak O\)와 \(\mathfrak o\)의 디퍼런트가 정의되고, 켤레 디퍼런트들도 마찬가지이다. 
+\[
+\mathfrak B=\{\ldots,y-\eta,\ldots\}
+\]
+를 \(\mathfrak O_{\mathfrak o}\)의 차분아이디얼,
+\[
+\mathfrak B^{(i)}=\{\ldots,y-\eta^{(i)},\ldots\}
+\]
+를 \(\mathfrak O_{\mathfrak o^{(i)}}\)의 그 켤레들이라 하자. 또
+\[
+\mathfrak A^{(i)}=(0):\mathfrak B^{(i)}
+\quad\text{--- 몫은 \(\mathfrak O_{\mathfrak o^{(i)}}\)에서 취한다 ---}
+\]
+를 켤레 \emph{차분몫}들이라 하고, 특히
+\[
+\mathfrak A=(0):\mathfrak B\quad(\mathfrak O_{\mathfrak o}\text{ 안에서})
+\]
+라 하자. 나아가
+\[
+\mathfrak D=\mathfrak A[\eta\to y]
+\]
+를 \(\mathfrak O\)의 디퍼런트,
+\[
+\mathfrak d^{(i)}=\mathfrak A^{(i)}[y\to\eta^{(i)}]
+\]
+를 \(n\)개의 켤레 오더 \(\mathfrak o^{(i)}\)의 디퍼런트들이라 하고, 특히
+\[
+\mathfrak d=\mathfrak A[y\to\eta]
+\]
+를 \(\mathfrak o\)의 디퍼런트라 하자.\srcfn{21)}{\(P\)에서 정수적으로 닫힌 \(\mathfrak h\)라는 가정은 예컨대 \(\mathfrak h\)가 한 수체의 정수환인 경우, 특히 \(\mathfrak h\)가 유리정수들의 계인 경우에 만족한다. 따라서 상대체에서도 임의의 오더들의 디퍼런트와 상대디퍼런트가 정의된다. 또 \(\mathfrak h\)는 \(n\)개 부정원의 다항식영역일 수도 있으며, 이는 \(n\)개 부정원의 대수함수체에서 디퍼런트를 준다.}
+
+\paragraph{2. 구조정리들.}
+체의 갈루아 확대환에 관한 구조정리(§ 5, 2)에는 다음이 대응한다.
+
+\paragraph{오더의 갈루아 확대환에 관한 구조정리.}
+\emph{오더와 체에 관한 차분아이디얼과 차분몫은 다음 관계에 있다. \(\mathfrak B_K\)는 \(\mathfrak O_{\mathfrak o}\)의 차분아이디얼 \(\mathfrak B\)의 확대이고, 마찬가지로 \(\mathfrak A_K\)는 \(\mathfrak O_{\mathfrak o}\)의 차분몫 \(\mathfrak A\)의 확대이며 \(\mathfrak A\)는 \(\mathfrak A_K\)의 수축이다. 차분몫, 디퍼런트, 단위원 성분 사이에는}
+\[
+\mathfrak A=\mathfrak d e^{(1)},
+\qquad
+\mathfrak A^{(i)}=\mathfrak d^{(i)}e^{(i)}
+\]
+\emph{라는 관계가 있고, 따라서}
+\[
+\mathfrak d=[\mathfrak o,\mathfrak A^{(1)}+\cdots+\mathfrak A^{(n)}].
+\]
+\emph{그러므로 \(\mathfrak o\)의 디퍼런트 \(\mathfrak d\)는 \(xe^{(1)}\)이 \(\mathfrak O_{\mathfrak o}\)에 속하도록 하는 \(K\)의 모든 원소 \(x\)로 이루어지며, 영아이디얼과 다르다.}
+
+\(\mathfrak B_K\)가 \(\mathfrak B\)의 확대라는 것은 \(\mathfrak K=\mathfrak O_P\), \(K=\mathfrak o_P\)인 데서 따른다. 따라서 \(\mathfrak B_K\)의 모든 \(x-\xi\)는 \(\mathfrak B\)의 \(y-\eta\)들을 \(K\)의 계수로 선형결합하여 나타낼 수 있다. 여기서 더 나아가 \(\mathfrak A_K=(0):\mathfrak B_K\)는 \(\mathfrak K_K\)에서 취한 몫 \((0):\mathfrak B\)로도 정의된다. 그러므로 \(\mathfrak O_{\mathfrak o}\) 안의 \(\mathfrak A=(0):\mathfrak B\)는 \(\mathfrak A_K\)에 속하는 \(\mathfrak O_{\mathfrak o}\)의 모든 원소로 이루어진다. 곧 \(\mathfrak A=[\mathfrak O_{\mathfrak o},\mathfrak A_K]\)이고 \(\mathfrak A_K\)의 수축이다. \(\mathfrak A_K=Ke^{(1)}\)이므로 \(\mathfrak A=\mathfrak z e^{(1)}\)이고, \(\mathfrak A\)가 \(\mathfrak o\)-가군이므로 \(\mathfrak z\)는 \(K\) 안의 \(\mathfrak o\)-가군이다. 그런데 디퍼런트의 정의에 따라
+\[
+\mathfrak d=\mathfrak A[x\to\xi]
+=(\mathfrak z e^{(1)})[x\to\xi]
+=\mathfrak z\bigl(e^{(1)}[x\to\xi]\bigr)=\mathfrak z e=\mathfrak z
+\]
+이다(§ 5, 4, (1)을 보라). 따라서 \(\mathfrak z=\mathfrak d\)이다. 차분몫 \(\mathfrak A\)는 \(\mathfrak o\)의 디퍼런트 \(\mathfrak d\)의 \(K\)-성분이고, 켤레들에 대해서도 마찬가지이다. 여기서 § 5, 3의 따름정리에 따라 위의 \(\mathfrak d\)에 관한 관계가 나온다. 그리고
+\[
+\mathfrak A=\mathfrak d e^{(1)}=[Ke^{(1)},\mathfrak O_{\mathfrak o}]
+\]
+는 \(\mathfrak d\)가 \(xe^{(1)}\)이 \(\mathfrak O_{\mathfrak o}\)에 속하도록 하는 \(K\)의 모든 원소 \(x\)로 이루어짐을 보인다. 따라서 \(\mathfrak d\)는 영아이디얼과 다르다. 실제로 \(\mathfrak K_K=\mathfrak O_P\times\mathfrak o_P\)의 원소 \(e^{(1)}\)은 \(\mathfrak O\)의 유한개 원소들을 \(K\)의 계수로 선형결합한 것이고, 따라서 \(\mathfrak O_{\mathfrak o}\)의 한 원소를 \(\mathfrak o\), 더 나아가 \(\mathfrak h\)의 한 원소로 나눈 몫이다. 이 분모는 \(\mathfrak d\)의 0 아닌 원소를 준다. 따라서 \(\mathfrak d\)는 \(P\)에 관하여 랭크 \(n\), 곧 \(\mathfrak d_P=K\)이고, 그러므로 \(\mathfrak A_K\)는 \(\mathfrak A\)의 확대이다.
+
+\begin{center}
+\textbf{여기부터는 개요이다.}
+\end{center}
+
+\paragraph{3. 독립기저가 있는 경우 여모듈과의 관계.}
+\(t_1,\ldots,t_n\)이 \(\mathfrak O\)의 독립 \(\mathfrak h\)-기저이면 \(\mathfrak K\)의 모든 기저 \((s)=(t)P\)도 \(P\)가 \(\mathfrak h\)에 속하고 단일모듈러이면 그러하다. 그런데 \((S)=P^{-1}(T)\)는 \(T\)뿐 아니라 \(S\)도 같은 하나의 \(\mathfrak h\)-가군의 기저임을 보인다. 이 가군을 \(\mathfrak O\)의 여모듈이라 한다.
+
+이제 2의 구조정리 마지막 부분은 \(\mathfrak d\)가 \(K\) 안의 몫
+\[
+\mathfrak o:\mathfrak c
+\]
+과 같다고 말한다. 여기서 \(\mathfrak c\)는 여모듈이다. 실제로
+\[
+e^{(1)}=A_1t_1+\cdots+A_nt_n
+\]
+이고 \(A_i\)들이 \(\mathfrak c\)의 한 기저라고 하자. 그러면 \(\mathfrak d\)는 \(\delta e^{(1)}\)이 \(\mathfrak O_{\mathfrak o}\)에 속하도록 하는 모든 원소 \(\delta\), 곧 \(\delta A_i\)가 \(\mathfrak o\)에 속하도록 하는 모든 \(\delta\)로 이루어진다. 따라서 \(\mathfrak d=\mathfrak o:\mathfrak c\)이다.
+
+\paragraph{특수한 경우.}
+\(e,z,\ldots,z^{n-1}\)을 가군기저로 갖는 정칙 오더:
+\[
+\mathfrak d=\{f'(z)\}.
+\]
+
+\paragraph{주.}
+§ 5, 4의 주에서 \(\mathfrak O\)의 여모듈 \(\mathfrak C\)에 대한 또 하나의 알려진 정의가 나온다. \emph{\(\mathfrak C\)는 \(\mathfrak O\)의 임의의 \(o\)에 대하여 대각합 \(\operatorname{Sp}(co)\), 또는 같은 뜻으로 대각합 \(\operatorname{Sp}(ct)\)가 정수적, 곧 \(\mathfrak h\)에 속하도록 하는 \(\mathfrak K\)의 모든 원소 \(c\)로 이루어진다.} \(\mathfrak o\)와 \(K\)에 관한 \(\mathfrak c\)에도 이에 대응하는 것이 성립한다.
+
+실제로 \(c=c_1T_1+\cdots+c_nT_n\)이고 \(c_i\)들이 \(\mathfrak h\)에 속하는 것이, \(t\)의 여차기저로 \(\mathfrak C\)의 한 원소 \(c\)를 나타낸 표현이라 하자. 그러면 \(c_i=\operatorname{Sp}(ct_i)\)이므로 \(\mathfrak h\)에 속한다. 역으로 \(\operatorname{Sp}(ct_i)\)가 \(\mathfrak h\)에 속하면 \(c_i\)가 \(\mathfrak h\)에 속하고, 따라서 \(c\)가 \(\mathfrak C\)에 속한다.
+
+\paragraph{보충.}
+\emph{오더 안에 독립 \(\mathfrak h\)-가군기저가 존재하면, 차분몫 \(\mathfrak A^{(i)}\)는 \(\mathfrak B^{(i)}\)와 다른 모든 차분아이디얼의 교집합이다. 더 정확히는}
+\[
+\mathfrak A^{(i)}=
+[\mathfrak O_{\mathfrak o^{(i)}},
+\mathfrak B_{\mathfrak g}^{(1)},\ldots,
+\mathfrak B_{\mathfrak g}^{(i-1)},
+\mathfrak B_{\mathfrak g}^{(i+1)},\ldots,
+\mathfrak B_{\mathfrak g}^{(n)}].
+\]
+실제로 § 2, 2의 강화된 형태에 따라 이때 \(\mathfrak B\)도 \(\mathfrak B_K\)의 수축아이디얼이다. \(e,t_2,\ldots,t_n\)이 \(\mathfrak O\), 따라서 \(\mathfrak O_{\mathfrak o}\)의 가군기저이면
+\[
+e,t_2-\alpha_2,\ldots,t_n-\alpha_n
+\]
+도 그러하다. 그런데 \(t_2-\alpha_2,\ldots,t_n-\alpha_n\)은 동시에 \(\mathfrak B_K\)의 \(K\)-가군기저이다. 따라서 § 2, 2의 보충에 있는 가정들이 만족된다. 한편
+\[
+\mathfrak A_\Gamma=[\mathfrak B_\Gamma^{(2)},\ldots,\mathfrak B_\Gamma^{(n)}];
+\qquad
+\mathfrak A_\mathfrak g=[\mathfrak A_\Gamma,\mathfrak O_\mathfrak g]
+=[\ldots,[\mathfrak B_\Gamma^{(i)},\mathfrak O_\mathfrak g],\ldots]
+=[\mathfrak B_\mathfrak g^{(2)},\ldots,\mathfrak B_\mathfrak g^{(n)}]
+\]
+였다. 그런데 \(\mathfrak A=[\mathfrak A_\mathfrak g,\mathfrak O_{\mathfrak o}]\)이므로
+\[
+\mathfrak A=[\mathfrak O_{\mathfrak o},\mathfrak B_\mathfrak g^{(2)},\ldots,\mathfrak B_\mathfrak g^{(n)}].
+\]
+
+\paragraph{4. 기본방정식이 존재하는 경우 그 미분몫과의 관계.}
+오더 \(\mathfrak O\)에 \(n\)개 부정원 \(u_1,\ldots,u_n\)을 첨가하여 확대한다. 곧 \(U\)가 다항식영역 \(\mathfrak h[u_1,\ldots,u_n]\)을 뜻할 때 직접곱 \(\mathfrak O_U=\mathfrak O[u_1,\ldots,u_n]\)을 만든다. 그러면 \(\mathfrak O\)의 모든 아이디얼 \(\mathfrak C\)의 확대 \(\mathfrak C_U\)는 \(\mathfrak C\)의 계수들을 갖는 \(u\)의 모든 다항식으로 이루어지고, 역으로 \(\mathfrak C\)는 \(\mathfrak C_U\)의 모든 계수의 계로 특징지어진다.
+
+이제 기본방정식이 존재한다고 하자. 즉 \(\mathfrak h[u]\)의 하나 이상의 원시다항식 \(H(u)\)들에 따른 몫환으로 넘어갈 때 \(e,U,\ldots,U^{n-1}\)이 \(\mathfrak h\)-가군기저를 이룬다고 하자. 그러면 아이디얼 \(\mathfrak C_U\)들은 \(\mathfrak C_U\)에 단위원들, 곧 \(H(u)\)와 그 음·양의 거듭제곱들을 곱하여 얻는 계들로 넘어간다. 따라서 \(\mathfrak C\)를 되찾으려면 먼저 이 단위원들을 곱하여 \(u\)에 관하여 정수적인 \(\mathfrak C_U\)에 이른 다음 그 계수들에서 \(\mathfrak C\)로 갈 수 있다. 특히 \(\mathfrak O\)의 디퍼런트 \(\mathfrak D\)가 \(\mathfrak D_U\), 곧 \(\mathfrak O_U\)의 디퍼런트로 간다고 하자. 그런데 \(\mathfrak O_U\)에는 원시다항식 \(H(u)\)들로 몫을 취함으로써 정의방정식 \(G(U)=0\)이 존재한다. 따라서 \(G'(U)\)는 디퍼런트의 기저다항식이고, 곧 디퍼런트는 \(G'(U)\)의 계수들에서 유도된다. (\((G'(U))\)가 실제로 \(\mathfrak D_U\)만을 포함하고 더 큰 것을 포함하지 않음을 더 정확히 보여야 한다. 아마도 \(\mathfrak o\)가 \(K\)에서 정수적으로 닫힌 경우에만 성립할 것이다. 실제로 \(H(u)\)의 인자들을 곱하면 \(\mathfrak D_U\)에 놓인 더 많은 원소들이 \(\mathfrak D_U\)로 생길 수 있다. 정수적으로 닫힌 경우(다섯 공리)에는 계수아이디얼들, 곧 내용들이 서로 곱해진다는 정리에서 이 사실이 따른다. 이에 따라 \(p\)를 법으로 한 기본방정식을 고찰하여 분기이론을 세울 수 있다.)
+
+\subsection*{§ 7. \(p^t\)를 법으로 한 정수환의 분기이론}
+
+한 수체를 바탕으로 삼고 \(\mathfrak h\)를 그 정수환이라 하자. 또는 정수환을 한 소아이디얼로 나눈 몫환에 관한 상대체를 바탕으로 삼아도 된다. 이때 \(p\)는 이 몫환의 소아이디얼의 기저원소를 뜻한다. 부정원 \(u_1,\ldots,u_n\)을 첨가했다고 하자. 그러면 정수환과 \(p^t\)에 따른 잉여류환은 모두 \(\mathfrak h\)-가군기저 \(e,U,\ldots,U^{n-1}\)을 갖는다. 따라서 두 경우 모두 \(G'(u)\)가 디퍼런트를 준다. \emph{정수환의 디퍼런트는 \(p^t\)를 법으로 하면 \(p^t\)에 따른 잉여류환의 디퍼런트로 간다.} (임의의 오더에도 이것이 성립하는가?) 이제
+\[
+p=\mathfrak p_1^{\varrho_1}\cdots\mathfrak p_r^{\varrho_r}
+\]
+이면 \(p^t\)에 따른 잉여류환 \(\mathfrak R\)은 직접합이고, 그 성분들은 각각 \(\mathfrak p_i^{t\varrho_i}\)에 따른 잉여류환과 동형이다. 곧
+\[
+\mathfrak R=\mathfrak R e_1+\cdots+\mathfrak R e_r.
+\]
+이때 \(i\ne k\)이면 \(e_k\)는 \(\mathfrak p_i^{t\varrho_i}\)로 나누어진다. 따라서
+\[
+\mathfrak d[p^t]=\mathfrak d[p^t]e_1+\cdots+\mathfrak d[p^t]e_r
+=\mathfrak d_1+\cdots+\mathfrak d_r
+\]
+이고 \(t\)가 충분히 크면, \(\mathfrak p_i\)는 \(\mathfrak d_i\)에서 \(\mathfrak d[p^t]\), 따라서 \(\mathfrak d\)에서와 같은 거듭제곱으로 나타난다. 그런데 § 4에 따라 \(\mathfrak d_i\)는 \(\mathfrak R_i\)의 디퍼런트이다. 그러므로 \(\mathfrak p^{\varrho t}\)에 따른 잉여류환의 디퍼런트만 고찰하면 충분하다. \(\xi\)를 (Zahlbericht, 정리 29와 30) 정수이도록 택하여
+\[
+\varphi(\xi)\equiv0(p),
+\qquad \not\equiv0(p^2)
+\]
+이라 하자. 여기서 \(\varphi(x)\)는 \(p\)를 법으로 한 차수 \(f\)의 소다항식이다. \(t\ge2\)일 때 이 \(\xi\)를 \(\xi^*=\xi e_1\)로 바꾸자. 여기서 \(e_1\)은 \(p^t\)를 법으로 한 잉여류환 \(\mathfrak R\)의 분해에 나타나는 첫 번째 멱등원이다. 그러면 \(\varphi(\xi^*)\equiv0(p)\), \(\not\equiv0(p^2)\)일 뿐 아니라 \(\mathfrak p_1=(p,\varphi(\xi^*))\)이다. \(p^t\)를 법으로 한 정수들에 관한 한 기저는 \(\mu=0,1,\ldots,f-1\), \(\nu=0,1,\ldots,t-1\)인 \(\xi^\mu\varphi(\xi)^\nu\)들로 이루어진다. 독립 \(\mathfrak h\)-기저(\(p^t\)에 따른 잉여류들)는
+\begin{equation}
+\xi^{\mu_0}\varphi(\xi)^{\nu_0}
+\quad\text{이며}\quad
+\mu_0=0,1,\ldots,f-1;
+\quad \nu_0=0,1,\ldots,\varrho-1. \tag{1}
+\end{equation}
+\((\varphi(\xi),p^{\varrho t})=\mathfrak p\)이기 때문이다. 따라서 잉여류환에서 \((p)=\mathfrak p^\varrho\)이므로 주아이디얼에서 원소로 넘어가면 \(\varphi(\xi)=pM(\xi)\)이고, 여기서 \(M(\xi)\)는 잉여류환의 단위원, 곧 \(M(\xi)\not\equiv0(p)\)이다. 그러므로 \(p^t=0\)을 이용하여 \(\xi^{\varrho t}\)을 차례로 더 낮은 거듭제곱들로 나타낼 수 있다. 먼저 \(M(\xi)\)에서, 이어 잉여류환에서 그렇게 할 수 있으므로 (1)은 실제로 기저이다. 이 기저에 관한 정의방정식은
+\[
+F(x)=\varphi(x)^\varrho+pM(x)
+\]
+이다. 여기서 \(M(x)\)는 \(p\)를 법으로 하여 \(\varphi(x)\)로 나누어지지 않는다(Ö. Ore, Math. Ann. 96, 348쪽). 따라서
+\[
+M(\xi)\not\equiv0(p).
+\]
+이 기저는 또한 독립이다. 실제로
+\[
+a_0(\xi)+a_1(\xi)\varphi(\xi)+\cdots+a_{\varrho-1}(\xi)\varphi(\xi)^{\varrho-1}
+\equiv0(p^{t\varrho})
+\]
+이면 먼저 \(\equiv0(p)\)이고, 따라서 \(a_0(\xi)\equiv0(p)\), 곧
+\[
+a_0(x)\equiv0(p)
+\]
+이다. \(p\)를 차례로 약분하면
+\[
+a_0(x)\equiv0(p),\ldots,a_{\varrho-1}(x)\equiv0(p)
+\]
+을 얻고, 다시 \(p\)를 약분하면
+\[
+a_0(x)\equiv0(p^2),\ldots,a_{\varrho-1}(x)\equiv0(p^2)
+\]
+를 얻으며, 같은 과정을 계속하여 마침내
+\[
+a_0(x)\equiv0(p^t),\ldots,a_{\varrho-1}(x)\equiv0(p^t)
+\]
+를 얻는다. 따라서 잉여류환의 디퍼런트는 다항식 미분몫 \(F'(\xi)\)로 주어진다. 모든 것이 Ore, 345쪽, § 3으로 환원되었다. Ore의 정리 10(Dedekind--Hensel도 비교하라)에서 모든 \(\mathfrak p\)에 \(p^t=p^n\)이면 충분하다는 것이 따르고, 더 나아가 Ore의 결과들에서 보충수들이 나온다.
+
+몫환으로 넘어가면 이 모든 것은 상대디퍼런트에도 동시에 성립한다. 이에 따라 Ore, Math. Ann. 97, 594쪽, § 4는 Ore, Math. Ann. 96에서 곧바로 나온다. 상위체의 디퍼런트를 하위체의 디퍼런트와 상대디퍼런트의 곱으로 나타낼 수 있다는 보충만 더해진다(이 논문의 서론을 보라).
+
+\begin{center}
+1949년 10월 25일 접수.
+\end{center}
+
+% ED0007 lines 20985--21004 form the distinct structural POST-A-WRAP scope.
+% They intentionally emit no active Korean content in this P43 target.

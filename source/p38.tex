@@ -1,0 +1,250 @@
+% Korean Noether paper 38 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 18831--19051.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 26,928 bytes; SHA-256 ECEC3909998D3E1BD891597D2494C5A13E7E719F1B2A6CAF802515F8EEB492AC.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{38. R. Brauer, H. Hasse와 공동: 대수론의 한 주정리의 증명}
+
+\begin{center}
+\emph{Journal f. d. reine u. angew. Math. 167 (1932), 399--404쪽}
+\end{center}
+
+\begin{center}
+\textbf{대수론의 한 주정리의 증명.}\\[0.5em]
+쾨니히스베르크의 \emph{R. Brauer}, 마르부르크의 \emph{H. Hasse},
+괴팅겐의 \emph{E. Noether}\footnote{이 글의 집필은 H. Hasse가 맡았다.}.
+\end{center}
+
+마침내 우리의 공동 노력으로 다음 정리가 옳음을 증명할 수 있었다. 이 정리는 대수적 수체 위의 대수에 대한 구조론뿐 아니라 그 너머에도 근본적인 의의를 갖는다.
+
+\paragraph{주정리.}
+\emph{대수적 수체 위의 모든 정규 나눗셈대수는 순환대수이다. 달리 말하면 Dickson형이다.}
+
+이 성과는 본질적으로 \(p\)-진 방법에 힘입은 것이므로, 이 방법의 창시자인 Kurt Hensel 선생의 70번째 생일에 바칠 수 있어 특히 기쁘다.
+
+우리의 증명은 세 환원으로 이루어지며 우리 셋이 각각 하나씩 기여하였다.\footnote{이하에서는 이 환원들을 생겨난 순서대로 제시하는데, 이는 체계적인 순서와 반대이다.}
+
+\paragraph{1.}
+첫 번째 환원은 H. Hasse가 최근 전개한 대수적 수체 위의 순환대수 이론을 바탕으로 제시하였다.\footnote{H. Hasse, \emph{Theorie der zyklischen Algebren über einem algebraischen Zahlkörper}, Gött. Nachr. 1931. 특히 E. Noether가 한 강의에서 전개한 분해체와 교차곱의 이론 --- 그 논문과 여기에서 모두 근본적이다 --- 을 포함하여 증명을 상세히 서술한 논문이 \emph{Theory of cyclic algebras over an algebraic number field}라는 제목으로 곧 Trans. Amer. Math. Soc.에 실릴 예정이다. 이하에서는 이 논문을 H로 인용한다. H, 1--6은 용어의 차이만 제외하면 앞의 짧은 글과 같다.}
+
+\paragraph{환원 1.}
+다음 명제를 증명하면 주정리가 증명된다.
+\[
+\text{I. \(\Omega\) 위에서 모든 곳에서 분할되는 대수는 모두 \( \sim\Omega\)이다.}
+\]
+이하에서 표현을 줄이기 위하여 \glqq{}\(\Omega\) 위의 대수 \(A\)\grqq{}는 언제나 \glqq{}대수적 수체 \(\Omega\) 위의 정규 단순대수 \(A\)\grqq{}, 곧 중심이 \(\Omega\)인 단순 초복소계를 뜻한다. 또 \(A\sim\Omega\)는 \(A\)가 \(\Omega\) 위의 완전행렬대수라는 뜻이다. 다시 말해 상사성, 곧 \(\Omega\) 위에서 대응하는 나눗셈대수들이 같다는 의미에서 \(A\)가 \(\Omega\) 자체를 \(\Omega\) 위의 나눗셈대수로 하여 정해지는 특별한 류에 속한다는 뜻이다[H, 5]. 마지막으로 \(\Omega\) 위에서 모든 곳에서 분할되는 대수란, \(\Omega\)의 각 소 \(\mathfrak p\)에서 그 \(\mathfrak p\)-진 확대, 곧 계수체 \(\Omega\)를 대응하는 \(\mathfrak p\)-진 체 \(\Omega_{\mathfrak p}\)로 확대하여 얻는 대수가 분할되는 대수를 뜻한다.
+\[
+A_{\mathfrak p}\sim\Omega_{\mathfrak p}.
+\]
+
+\paragraph{증명.}
+\(D\)를 \(\Omega\) 위의 나눗셈대수라 하자. \(Z\)가 \(\Omega\) 위의 순환체이고, \(\Omega\)의 각 소 \(\mathfrak p\)에서 \(Z\)의 \(\mathfrak p\)-차수가 \(D\)의 \(\mathfrak p\)-인덱스의 배수라고 하자[H, 17 Bb의 주 참조]. 그러면 \(Z\)에서 대응하는 소인자 \(\mathfrak P\)마다 \(\mathfrak P\)-진 체 \(Z_{\mathfrak P}\)가 \(D_{\mathfrak p}\)의 분해체이다[H, 18.1]. 따라서 \(D\)의 계수체를 \(Z\)로 확대하여 얻는 \(Z\) 위의 대수 \(D_Z\)는 모든 곳에서 분할된다. 이제 모든 \(\Omega\)에 대하여 I이 이미 성립한다고 하면 \(D_Z\sim Z\)이다. 이는 \(D\)가 순환 분해체 \(Z\)를 가지므로 순환적으로 표시될 수 있음을 뜻한다[H, 5]. 그러면 \(D\)는 그 차수가 \(D\) 자신의 차수와 같은 순환 분해체도 가진다. 곧 \(D\)는 순환대수이다[H, 6, 정리 6]. 따라서 I을 가정하면 주정리가 증명된다.
+
+\paragraph{2.}
+두 번째 환원에는 R. Brauer가 결정적인 계기를 주었다. 그는 나눗셈대수의 지수(Exponent)의 정확한 값에 관한 관련 문제 --- 주정리로 이 문제도 함께 해결된다 --- 를 Sylow 군정리를 이용하여 가해 분해체의 경우로 환원하는 방법을 H. Hasse에게 편지로 알려 주었다. 이 생각은 순환성 문제를 한 단계 더 환원하는 데에도 쓸 수 있었다.
+
+\paragraph{환원 2.}
+다음 명제를 증명하면 명제 I이 증명된다.
+\[
+\text{II. \(\Omega\) 위에서 가해 분해체를 가지며 모든 곳에서 분할되는 대수는 모두 \(\sim\Omega\)이다.}
+\]
+
+\paragraph{증명.}
+\(A\)가 \(\Omega\) 위에서 모든 곳에서 분할되는 대수라고 하자. \(K\)는 \(A\)의 갈루아 분해체, \(p\)는 임의의 소수, \(\Sigma\)는 \(K/\Omega\)의 \(p\)에 관한 Sylow체 가운데 하나라고 하자. 즉 \(\Sigma\)는 갈루아군의 \(p\)-Sylow부분군의 불변체이다. 그러면 \(A_\Sigma\)도 \(\Sigma\) 위에서 모든 곳에서 분할되는 대수이며 가해 분해체 \(K\)를 갖는다. 모든 \(\Omega\)에 대하여 II가 이미 성립한다고 하면 \(A_\Sigma\sim\Sigma\)이다. 이는 \(A\)가 \(p\)와 서로소인 차수의 분해체 \(\Sigma\)를 갖는다는 뜻이다. 따라서 \(A\)의 인덱스는 이 차수의 약수이므로 \(p\)와 서로소이다. 이것이 모든 소수 \(p\)에 대하여 성립하므로 인덱스는 1이고 \(A\sim\Omega\)이다. 따라서 II를 가정하면 I이 증명된다.\footnote{Sylow 군정리를 이용하여 가해 분해체로 환원하는 생각은 R. Brauer가 앞서도 사용한 바 있다. 곧 인덱스의 모든 소인자가 지수에도 나타남을 보이는 데 사용하였다(\emph{Über den Zusammenhang von arithmetischen und invariantentheoretischen Eigenschaften von Gruppen linearer Substitutionen}, Berl. Akad.-Ber. 1926). 최근 A. A. Albert는 이 생각뿐 아니라 R. Brauer와 E. Noether의 이론에 속하는 여러 일반정리에 대하여 표현론에 의존하지 않는 간단한 증명들을 전개하였다. 1. \emph{On direct products, cyclic division algebras, and pure Riemann matrices}; 2. \emph{On direct products}; 둘 다 Trans. Amer. Math. Soc. 33 (1931). 여기서 말하는 환원은 특히 둘째 논문의 정리 23을 보라.
+
+\emph{인쇄 중 추가.} A. A. Albert는 H. Hasse에게서 아벨대수에 대한 주정리를 증명했다는 편지 내용을 전해 듣고(아래 본문 참조), 우리와 독립적으로 즉시 다음을 이끌어 냈다.
+
+a) 차수가 \(2^e\)인 경우의 주정리,
+
+b) 아래의 정리 1(지수 = 인덱스),
+
+c) 환원 2의 기본사상뿐 아니라 이어지는 환원 3의 사상. 물론 환원 1과의 관계는 없었으므로 결과는 다음과 같았다. \(\Omega\) 위에서 소수 거듭제곱 차수 \(p^e\)를 가진 나눗셈대수 \(D\)에는, \(\Omega\) 위에서 \(p\)와 서로소인 차수를 가진 확대체 \(\Omega'\)가 있어서 \(D_{\Omega'}\)가 순환대수가 된다.
+
+이 세 결과는 모두 그동안 완성된 우리의 주정리 증명으로 포괄되었다. 그러나 이들은 A. A. Albert도 주정리의 증명에 독립적인 몫을 가졌음을 보여 준다. 마지막으로 A. A. Albert는 우리의 주정리 증명을 안 뒤, 우리의 중심명제 I이 출판 중인 그의 논문(Bull. Amer. Math. Soc. 37 (1931))의 정리 13, 10, 9에서 몇 줄 만에 따라온다는 사실도 지적하였다. 그 정리들의 증명은 본질적으로 우리의 환원 2와 3과 같은 추론에 바탕을 둔다.}
+
+\paragraph{3.}
+세 번째 환원은 H. Hasse의 통지에서 계기를 얻은 E. Noether가 제시하였다. Hasse의 통지는 아벨 분해체라는 특수 경우에 주정리를 증명한 것이었으며, 일반적인 환원 1과 대응하는 인자계의 공식적 환원을 이용하였다. E. Noether는 그 핵심을 분리하여 바로 세 번째 환원을 얻었다. R. Brauer도 E. Noether와 독립적으로 이 세 번째 환원을 이미 생각해 두었다. 처음 두 환원을 알고 있던 H. Hasse는 이 환원이 최종 증명으로 이어짐을 알아보았다.
+
+\paragraph{환원 3.}
+다음 명제를 증명하면 명제 II가 증명된다.
+\[
+\begin{gathered}
+\text{III. \(\Omega\) 위에서 소수차수의 순환 분해체를 가지며}\\
+\text{모든 곳에서 분할되는 대수는 모두 \(\sim\Omega\)이다.}
+\end{gathered}
+\]
+
+\paragraph{증명.}
+\(A\)가 \(\Omega\) 위에서 모든 곳에서 분할되고 가해 분해체 \(K\)를 갖는 대수라고 하자.
+\[
+K=\Lambda_0>\Lambda_1>\cdots>\Lambda_r=\Omega
+\]
+를 \(K\)와 \(\Omega\) 사이의 체들의 사슬로 택하되, \(\Lambda_i/\Lambda_{i+1}\)가 언제나 소수차수의 순환확대가 되게 하자. 그러면 \(A_{\Lambda_1}\)도 \(\Lambda_1\) 위에서 모든 곳에서 분할되며 소수차수의 순환 분해체 \(K=\Lambda_0\)를 갖는다. 모든 \(\Omega\)에 대하여 III이 이미 성립한다고 하면 \(A_{\Lambda_1}\sim\Lambda_1\)이다. 이는 \(\Lambda_1\)이 \(A\)의 분해체라는 뜻이다. 이제 \(\Lambda_0\) 대신 \(\Lambda_1\)에서 시작하여 같은 방식으로 \(A_{\Lambda_2}\sim\Lambda_2\)를 증명하고, 이를 계속하면 마침내 \(A_{\Lambda_r}\sim\Lambda_r\), 곧 \(A\sim\Omega\)를 얻는다. 따라서 III을 가정하면 II가 증명된다.
+
+\paragraph{4.}
+그런데 III은 H. Hasse의 결과[H, 24]로 이미 확립되어 있다. 따라서 환원 3, 2, 1을 거꾸로 적용하면 주정리가 옳음이 따라온다.
+
+E. Noether는 이와 함께 다음을 지적한다. III의 타당성은, 더 일반적으로 임의 차수의 순환 분해체에 대해서도, Hasse의 노름정리\footnote{\label{fn:p38-hasse-normensatz}H, 3.11에 인용되어 있으며 H. Hasse, \emph{Beweis eines Satzes und Widerlegung einer Vermutung über das allgemeine Normenrestsymbol}, Gött. Nachr. 1931에서 증명되었다.}로 귀착된다. 그러나 환원 3에는 소수차수라는 특수 경우, 곧 본래의 Hilbert--Furtwängler 노름정리\footnote{H. Hasse, \emph{Bericht über neuere Untersuchungen und Probleme in der Theorie der algebraischen Zahlkörper II}, Jahresber. der D. M.-V., Erg.-Bd. 6 (1930), § 8 및 그곳의 문헌을 보라.}만 필요하다. 그러므로 환원 III은 Hasse 노름정리의 새롭고 간단한 증명을 준다. 그 증명은 다음과 같다.
+
+\(Z\)가 \(\Omega\) 위의 순환체이고 \(\alpha\in\Omega\)가 \(\Omega\)의 모든 소 \(\mathfrak p\)에 대하여 노름잉여기호
+\[
+\left(\frac{\alpha,Z}{\mathfrak p}\right)=1
+\]
+을 만족한다고 하자. 그러면 순환대수
+\[
+A=(\alpha,Z)
+\]
+\footnote{\label{fn:p38-hasse-notation}H, 1의 표기. \(\alpha\)와 결부된 \(Z\)의 자기동형사상 \(S\)는 여기에서 중요하지 않아 생략하였다.}
+는 모든 곳에서 분할된다[H, 17.7]. 환원 3에 따라 --- Hilbert--Furtwängler 노름정리만을 사용하여 --- \(A\sim\Omega\)이다. 따라서 \(\alpha\)는 \(Z\)의 한 원소의 노름이다[H, 15.4].
+
+노름정리와 관련하여, 명제 I은 그 정리를 고차의 경우, 비아벨의 경우까지 올바르게 일반화한 것으로 보아야 한다. 반면 H. Hasse가 보였듯이\textsuperscript{\ref{fn:p38-hasse-normensatz}} 글자 그대로의 일반화는 일반적으로 옳지 않다.
+
+\begin{center}
+\textbf{귀결들(H. Hasse)}
+\end{center}
+
+\paragraph{5.}
+주정리의 가장 가까운 귀결로, H. Hasse가 전개한 대수적 수체 위의 순환대수 이론이 이제 대수적 수체 위의 정규 단순대수, 특히 정규 나눗셈대수에 대한 일반적인 구조론과 불변식론이 되었다는 점을 들 수 있다. 특히 이제 다음 명제가 일반적으로 증명되었다.
+
+\paragraph{정리 1.}
+대수적 수체 위의 정규 단순대수의 지수(Exponent)는 그 인덱스(Index)와 같다.
+
+또 명제 I에서 다음 주목할 사실이 따라온다.
+
+\paragraph{정리 2.}
+\(\Omega\) 위의 진정한 정규 나눗셈대수의 기초아이디얼은 \(\Omega\)의 적어도 한 소, 사실 적어도 두 소로 나누어진다.
+
+여기서 기초아이디얼은 예를 들어 축약 디퍼런트의 축약 노름으로 정의한다.\footnote{유리 사원수대수라는 특수 경우에는 H. Brandt가 도입한 \glqq{}기초수\grqq{} 개념으로 귀착된다(\emph{Idealtheorie in Quaternionenalgebren}, Math. Ann. 99 (1928)). 여기서는 수가 아니라 아이디얼을 다루므로 \glqq{}기초아이디얼\grqq{}이라 해야 했다. 이를 Dedekind가 디퍼런트와 판별식에 사용한 기초아이디얼 및 기초수라는 명칭과 혼동해서는 안 된다. 그 명칭은 바로 이 이유 때문에 상대체에는 쓸 수 없다. 축약 디퍼런트의 정의는 다음 각주를 보라. E. Noether는 아이디얼의 축약 노름도 \glqq{}소별로\grqq{} 정의한다. 각 소에서 모든 아이디얼이 주아이디얼이라는 사실에 맞추어, 각 소에서 주아이디얼 기저원소의 축약 수노름을 취하면 된다.} 또 무한소는 그곳에서 대수가 실수체나 복소수체가 아니라 사원수대수로 환원될 때 그리고 그때에만 기초아이디얼에 포함한다.
+
+\paragraph{증명.}
+H. Hasse의 결과\footnote{\label{fn:p38-hasse-padisch}H. Hasse, \emph{Über \(p\)-adische Schiefkörper und ihre Bedeutung für die Arithmetik hyperkomplexer Zahlsysteme}, Math. Ann. 104 (1931), 정리 42, 59.}에 따라 \(\Omega\)의 소 \(\mathfrak p\)가 기초아이디얼을 나누는 것은 \(\mathfrak p\)-인덱스가 1과 다를 때 그리고 그때뿐이다. 모든 \(\mathfrak p\)-인덱스가 1이라면 대수는 모든 곳에서 분할되며, 명제 I에 따라 진정한 나눗셈대수가 아니다. 한 \(\mathfrak p\)-인덱스만 1과 다를 수도 없다는 사실은, 그 위수가 \(\mathfrak p\)-인덱스인 노름잉여기호들[H, 17.7]에 곱정리, 곧 상호법칙[H, 3.8]이 성립한다는 데서 따라온다.
+
+\paragraph{6.}
+더 나아가 명제 I을 이용하면 \(\Omega\) 위의 한 대수 \(A\)에 속하는 모든 분해체 \(K\)를 결정하고 산술적으로 특징지을 수 있다. 순환적인 \(A,K\)의 특수 경우에 H. Hasse가 이미 확립한 사실[H, 6, 정리 2]의 정확한 일반화로 다음을 얻는다.
+
+\paragraph{정리 3.}
+\(\Omega\) 위의 대수 \(A\)에 대하여, \(\Omega\) 위의 대수적 수체 \(K\)가 분해체인 것은 \(\Omega\)의 모든 소 \(\mathfrak p\)와 \(K\)에서 그 모든 소인자 \(\mathfrak P_i\)에 대하여 \(K\)의 \(\mathfrak P_i\)-차수 \(n_{\mathfrak P_i}\)가 \(A\)의 \(\mathfrak p\)-인덱스 \(m_{\mathfrak p}\)의 배수일 때 그리고 그때뿐이다.
+
+\(K\)의 \(\mathfrak P_i\)-차수는 \(\mathfrak P_i\)-진 체 \(K_{\mathfrak P_i}\)의 \(\mathfrak p\)-진 체 \(\Omega_{\mathfrak p}\) 위 차수이다. 즉
+\[
+\mathfrak p=\prod_i\mathfrak P_i^{e_{\mathfrak P_i}},
+\qquad
+N_{K\Omega}(\mathfrak P_i)=\mathfrak p^{f_{\mathfrak P_i}}
+\]
+가 \(K\)에서 \(\mathfrak p\)의 분해라면, 이는 잉여차수 \(f_{\mathfrak P_i}\)와 \(\mathfrak p\)에 대한 \(\mathfrak P_i\)의 분기지수 \(e_{\mathfrak P_i}\)의 곱
+\[
+n_{\mathfrak P_i}=f_{\mathfrak P_i}e_{\mathfrak P_i}
+\]
+이다[H, 4]. 또 \(A\)의 \(\mathfrak p\)-인덱스는 \(\mathfrak p\)-진 확대 \(A_{\mathfrak p}\)의 인덱스 \(m_{\mathfrak p}\)이다[H, 6].
+
+\paragraph{증명.}
+\(K\)가 \(A\)의 분해체, 곧 \(A_K\sim K\)라는 것은 명제 I에 따라 모든 \(\mathfrak P_i\)에 대하여 \(A_{K_{\mathfrak P_i}}\sim K_{\mathfrak P_i}\)라는 것과 동치이다.
+
+\(\mathfrak p\)가 유한소일 때
+\[
+A_{\mathfrak p}\sim(\pi,W_{\mathfrak p})
+\]
+\textsuperscript{\ref{fn:p38-hasse-notation}}
+를 \(A_{\mathfrak p}\)의 산술적으로 뛰어난 순환표현이라 하자[H, 16 및 앞서 인용한 논문\textsuperscript{\ref{fn:p38-hasse-padisch}}, 정리 38]. 여기서 \(W_{\mathfrak p}\)는 \(\Omega_{\mathfrak p}\) 위의 차수 \(m_{\mathfrak p}\)인 비분기체이고, \(\pi\)는 \(\Omega_{\mathfrak p}\)에서 정확히 \(\mathfrak p^1\)로 나누어지는 수이다. 또 \(K_{\mathfrak P_i}W_{\mathfrak p}\)를 합성체라 하고
+\[
+\Delta_{\mathfrak P_i}=K_{\mathfrak P_i}\cap W_{\mathfrak p}
+\]
+를 \(W_{\mathfrak p}\)와 \(K_{\mathfrak P_i}\)의 교집합이라 하자. \(K_{\mathfrak P_i}\) 안의 가장 큰 비분기 부분체는 \(\Omega_{\mathfrak p}\) 위에서 차수 \(f_{\mathfrak P_i}\)이고, \(\Omega_{\mathfrak p}\) 위에는 각 차수의 비분기체가 하나뿐이므로 \(\Delta_{\mathfrak P_i}\)는
+\[
+\Omega_{\mathfrak p}\text{ 위에서 차수 }
+d_{\mathfrak P_i}=(m_{\mathfrak p},f_{\mathfrak P_i})
+\]
+이다. 따라서 \(K_{\mathfrak P_i}W_{\mathfrak p}\)는 \(K_{\mathfrak P_i}\) 위에서 차수 \(m_{\mathfrak p}/d_{\mathfrak P_i}\)이고 비분기이다.
+
+이제
+\[
+A_{K_{\mathfrak P_i}}
+=(A_{\mathfrak p})_{K_{\mathfrak P_i}}
+\sim(\pi,K_{\mathfrak P_i}W_{\mathfrak p})
+\]
+이다[H, 15.5]. 따라서 \(A_{K_{\mathfrak P_i}}\sim K_{\mathfrak P_i}\)인 것은 \(\pi\)가 \(K_{\mathfrak P_i}W_{\mathfrak p}\)에서 \(K_{\mathfrak P_i}\)로의 노름일 때 그리고 그때뿐이다. \(K_{\mathfrak P_i}W_{\mathfrak p}/K_{\mathfrak P_i}\)가 비분기이므로, 이는 \(\mathfrak P_i\)에서 \(\pi\)의 위수 \(e_{\mathfrak P_i}\)가 이 확대의 차수 \(m_{\mathfrak p}/d_{\mathfrak P_i}\)의 배수일 때 그리고 그때뿐이다. 그런데
+\[
+\left(
+\frac{m_{\mathfrak p}}{d_{\mathfrak P_i}},
+\frac{f_{\mathfrak P_i}}{d_{\mathfrak P_i}}
+\right)=1
+\]
+이므로 이는
+\[
+\frac{f_{\mathfrak P_i}}{d_{\mathfrak P_i}}e_{\mathfrak P_i}
+=\frac{n_{\mathfrak P_i}}{d_{\mathfrak P_i}}
+\]
+가 \(m_{\mathfrak p}/d_{\mathfrak P_i}\)의 배수라는 것, 곧 \(n_{\mathfrak P_i}\)가 \(m_{\mathfrak p}\)의 배수라는 것과 같다.
+
+\(\mathfrak p\)가 무한소이고 자명한 경우 \(m_{\mathfrak p}=1\)이 아니라면 \(m_{\mathfrak p}=2\)이고 \(A_{\mathfrak p}\)는 실수체 \(\Omega_{\mathfrak p}\) 위의 사원수대수이다. 이때
+\[
+A_{K_{\mathfrak P_i}}
+=(A_{\mathfrak p})_{K_{\mathfrak P_i}}\sim K_{\mathfrak P_i}
+\]
+인 것은 \(K_{\mathfrak P_i}\)가 복소수체인 것, 곧
+\[
+n_{\mathfrak P_i}=f_{\mathfrak P_i}=2=m_{\mathfrak p}
+\]
+인 것과 동치이다. 여기에는 \(e_{\mathfrak P_i}\)가 나타나지 않는다. 따라서 이 경우에도 명제가 얻어진다. \(n_{\mathfrak P_i}\)와 \(m_{\mathfrak p}\)는 여기서 1 또는 2만을 값으로 가질 수 있다.
+
+\paragraph{7.}
+정리 3에서 답한 문제를 뒤집으면 중요한 결과들을 얻는다. 곧 고정된 대수 \(A\)의 모든 분해체 \(K\)를 찾는 대신, \(\Omega\) 위의 대수적 수체 \(K\)를 고정하고 \(K\)가 분할하는 \(\Omega\) 위의 모든 대수 \(A\)를 생각한다. 이 대수들은 \(K\)가 정하는 부분군 \(\mathfrak K\)를 이루며, 이는 \(\Omega\) 위의 모든 대수, 더 정확히는 서로 상사인 대수류 전체로 이루어진 R. Brauer 군 \(\mathfrak A\)의 부분군이다.\footnote{R. Brauer, \emph{Über Systeme hyperkomplexer Größen}, Jahresber. d. D. M.-V. 38 (1929), 47/48쪽. H, 13.1도 보라.} \(K/\Omega\)가 갈루아라고 가정하면, 상대 아벨 수체에 관한 이론인 유체론의 주정리들을 일반 상대 갈루아 수체로 확장한 것으로 볼 수 있는 다음 정리들에 이른다.
+
+\paragraph{정리 4.}
+\emph{(분해정리.)} \(\Omega\)의 소아이디얼 \(\mathfrak p\)가 \(K\)의 상대판별식을 나누지 않을 때, \(K\)에서 \(\mathfrak p\)의 소인자들이 갖는 상대차수 \(f\)는 \(K\)에 대응하는 군 \(\mathfrak K\)의 모든 대수 \(A\)에 대하여
+\[
+A_{\mathfrak p}^{\,f}\sim\Omega_{\mathfrak p}
+\]
+가 되게 하는 가장 작은 양의 지수이다.
+
+\paragraph{증명.}
+\(f\)는 \(K\)에서 \(\mathfrak p\)의 모든 소인자에 공통인 \(\mathfrak p\)-차수이다. 한편 \(A\)의 \(\mathfrak p\)-인덱스는 \(A_{\mathfrak p}\)의 인덱스이고, 정리 1에 따라 그 지수와 같다. 그러므로 정리 3에 따라 \(f\)는 위 최소지수의 배수이다. 이제 \(\mathfrak K\) 안에 정확한 \(\mathfrak p\)-인덱스 \(f\)를 가진 대수 \(A\)가 존재함만 보이면 된다.
+
+Frobenius 밀도정리에 따라 \(K\)의 상대판별식을 나누지 않으면서 그 소인자들이 상대차수 \(f\)를 갖는 다른 소아이디얼 \(\mathfrak p'\)가 \(\Omega\)에 존재한다. \(Z\)를 \(\Omega\) 위의 순환체로 택하되 \(\mathfrak p\)-차수와 \(\mathfrak p'\)-차수가 모두 \(f\)가 되게 하자. 또 \(\alpha\in\Omega\)를 택하여 노름잉여기호
+\[
+\left(\frac{\alpha,Z}{\mathfrak p}\right)
+\quad\text{와}\quad
+\left(\frac{\alpha,Z}{\mathfrak p'}\right)
+\]
+가 위수 \(f\)인 서로 역인 값을 갖게 하고, \(Z\)의 도체를 나누는 나머지 모든 \(\mathfrak q\)에 대하여
+\[
+\left(\frac{\alpha,Z}{\mathfrak q}\right)=1
+\]
+이 되게 하자. 일반화된 산술진행 정리에 따라, \(\alpha\)가 \(\mathfrak p,\mathfrak p'\), \(\mathfrak q\)들을 제외하면 많아야 하나의 소아이디얼 \(\mathfrak r\)만을 정확히 일차로 포함하도록 택할 수도 있다. 그러면 노름잉여기호의 곱정리, 곧 상호법칙에 따라
+\[
+\left(\frac{\alpha,Z}{\mathfrak r}\right)=1
+\]
+도 성립한다[H, 3.8--10]. 따라서 대수
+\[
+(\alpha,Z)=A
+\]
+는 \(\mathfrak p\)-인덱스와 \(\mathfrak p'\)-인덱스가 \(f\)이고, \(\Omega\)의 다른 모든 소에서는 인덱스가 1이다[H, 17.7]. \(\mathfrak p\)에 대한 가정과 \(\mathfrak p'\)의 선택을 고려하면 정리 3에서 \(K\)가 \(A\)의 분해체임이 따라온다. 이로써 실제로 군 \(\mathfrak K\) 안에 \(\mathfrak p\)-인덱스 \(f\)인 대수 \(A\)가 존재함을 보였다.
+
+\paragraph{정리 5.}
+\emph{(유일성 및 순서정리.)} \(K\leqq K'\)이면 \(\mathfrak K\leqq\mathfrak K'\)이고, 역도 성립한다.
+
+특히 갈루아체 \(K\)와 그 대수군 \(\mathfrak K\)의 대응은 일대일이며 역으로도 유일하다.
+
+\paragraph{증명.}
+a) \(K\leqq K'\)이면 자명하게 \(\mathfrak K\leqq\mathfrak K'\)이다. \(K\)가 분할하는 모든 대수 \(A\)는 당연히 \(K'\)도 분할하기 때문이다.
+
+b) 역으로 \(\mathfrak K\leqq\mathfrak K'\)라 하자. 분해정리에 따라 상대판별식을 나누지 않는 각 \(\mathfrak p\)에 대하여 \(f_{\mathfrak p}\mid f'_{\mathfrak p}\)이다. 따라서 특히 \(f'_{\mathfrak p}=1\)인 거의 모든 \(\mathfrak p\)에 대하여 \(f_{\mathfrak p}=1\)이다. 알려진 해석적 추론\footnote{예를 들어 H. Hasse[앞에서 인용한 주 6의 논문], § 25, III을 보라.}에 따라 여기서 \(K\leqq K'\)가 따라온다.
+
+\paragraph{8.}
+마지막으로 주정리가 I. Schur가 다룬 문제, 곧 유한군의 절대기약표현이 가능한 수체들을 찾는 문제\footnote{I. Schur, \emph{Arithmetische Untersuchungen über endliche Gruppen linearer Substitutionen}, Berl. Akad.-Ber. 1906.}에 본질적인 진전을 가져옴을 설명하겠다.
+
+\paragraph{정리 6.}
+유한군 \(\mathfrak G\)의 모든 절대기약표현은 원분체에서 가능하다. 예를 들어 \(\mathfrak G\)의 위수가 \(n\)이면, 충분히 큰 \(h\)에 대하여 \(n^h\)차 단위근체에서는 언제나 가능하다.
+
+\paragraph{증명.}
+\(\mathfrak G\)의 유리수계수 군환 \(G\)로 넘어가면, \(\mathfrak G\)의 절대기약표현 \(\Gamma_i\)들은 반단순대수 \(G\)의 단순 성분 \(G_i\)들의 절대기약표현이 된다. 그 중심은 각각 대응하는 지표체 \(\Omega_i\)이다.\footnote{a) R. Brauer와 E. Noether, \emph{Über minimale Zerfällungskörper irreduzibler Darstellungen}, Berl. Akad.-Ber. 1927, § 1. b) R. Brauer, \emph{Über Systeme hyperkomplexer Zahlen}, Math. Zeitschr. 30 (1929), 정리 3. c) E. Noether, \emph{Hyperkomplexe Größen und Darstellungstheorie}, Math. Zeitschr. 30 (1929), §§ 21, 24, 26.} \(\mathfrak G\)가 유한하므로 이 중심들은 원분체이고, 특히 \(n\)차 단위근체의 부분체이다.
+
+정리 3에 따라 \(\Omega_i\) 위의 순환체 \(Z_i\)가 \(G_i\)의 분해체인 것은, \(\Omega_i\)의 모든 소 \(\mathfrak p\)에서 그 \(\mathfrak p\)-차수 \(n_{i\mathfrak p}\)가 \(G_i\)의 \(\mathfrak p\)-인덱스 \(m_{i\mathfrak p}\)의 배수일 때이다. \(m_{i\mathfrak p}\)가 1과 다른 것은 \(G_i/\Omega_i\)의 기초아이디얼을 나누는 \(\mathfrak p\)들뿐이고, 따라서 \(G_i\)의 절대판별식을 나누는 \(\mathfrak p\)들뿐이다. 이 판별식은 \(n^n\)을 나눈다. 실제로 \(n^n\)은 \(G\)의 한 비극대 오더의 판별식이다.\footnote{E. Noether[앞의 주 7c], § 26을 보라.} 따라서 문제의 \(\mathfrak p\)들은 많아야 \(n\)을 나누는 소인자들이다. 이 \(\mathfrak p\)들에 대하여 \(n_{i\mathfrak p}\)를 \(m_{i\mathfrak p}\)의 배수로 만들기 위해서는, 각 \(\mathfrak p\)가 \(Z_i\)에서 \(m_{i\mathfrak p}\)로 나누어지는 분기지수를 갖도록 요구하면 충분하다. 충분히 큰 \(h\)에 대한 \(n^h\)차 단위근체가 이를 만족함은 쉽게 알 수 있다.
+
+인용한 논문의 마지막 정리에서 I. Schur는 지금까지 알려진 모든 경우에 이미 \(n\)차 단위근체만으로 충분하다고 밝혔다. 이것이 언제나 성립하는지, 또 여기서 전개한 방법들로 이 문제를 결정할 수 있는지는 앞으로의 연구에 맡긴다.
+
+\begin{center}
+1931년 11월 11일 접수.
+\end{center}

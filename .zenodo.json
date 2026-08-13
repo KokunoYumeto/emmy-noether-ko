@@ -1,0 +1,42 @@
+{
+  "title": "에미 뇌터 저작집 — 완전한 한국어판 / Emmy Noether — Complete Korean Edition",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "creators": [
+    {"name": "Noether, Emmy"}
+  ],
+  "contributors": [
+    {"name": "Manuscript Typesetting Project", "type": "Editor"},
+    {"name": "OpenAI Codex", "type": "Other"}
+  ],
+  "description": "<p><strong><a href=\"https://zenodo.org/records/21921524/files/00_NOETHER_ko_COMPLETE_LINKED_READER.pdf\">완전한 링크형 한국어 누적 리더를 미리보기</a></strong> / <a href=\"https://zenodo.org/records/21921524/files/00_NOETHER_ko_COMPLETE_LINKED_READER.pdf?download=1\">PDF 직접 다운로드</a>.</p><p>번호 논문 43편, 번호 뒤 별도 저작 A·B, 참고문헌·판본 부록을 포함하는 에미 뇌터 유지 대상 저작 전체의 독립 한국어판이다. 활성 독일어 권위 ED0011/v047의 논리행 1–24,146을 48개 연속 범위로 완전히 대응한다. 알려진 미번역 범위나 미해결 한국어 내용 결함은 없다. 편집 가능한 TeX, 용어와 변경 결정, 독립 점검 반환, 결정적 빌드, 이중 추출, 519쪽 전체 렌더 검사, 원시 작업 기록은 소스 및 증거 ZIP에 보존된다.</p><p>This is the standalone complete Korean edition of the maintained Emmy Noether corpus: 43 numbered papers, two separately identified post-numbered works/scopes, and terminal bibliography/editorial apparatus. It covers every logical line 1–24,146 of active German authority ED0011/v047. DataCite intent: the Korean edition <em>IsTranslationOf</em> the same-scope source corpus represented by 10.5281/zenodo.20412587 and <em>IsPartOf</em> that multilingual hub. The complete linked reader is file 00.</p>",
+  "version": "1.0.0",
+  "publication_date": "2026-08-13",
+  "access_right": "open",
+  "license": "cc-zero",
+  "language": "kor",
+  "keywords": [
+    "Emmy Noether",
+    "에미 뇌터",
+    "Korean",
+    "한국어",
+    "translation",
+    "complete corpus edition",
+    "mathematics",
+    "algebra",
+    "invariant theory",
+    "ideal theory"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20412587",
+      "relation": "isPartOf",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://github.com/KokunoYumeto/emmy-noether-ko",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ]
+}

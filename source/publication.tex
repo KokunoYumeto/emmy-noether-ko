@@ -1,0 +1,167 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathrsfs,mathtools,array,booktabs,pdflscape,adjustbox,diagbox}
+\usepackage[unicode,hidelinks]{hyperref}
+\setmainfont{Malgun Gothic}[
+  ItalicFont={Malgun Gothic},
+  ItalicFeatures={FakeSlant=0.2},
+  BoldItalicFont={Malgun Gothic Bold},
+  BoldItalicFeatures={FakeSlant=0.2}
+]
+\setsansfont{Malgun Gothic}
+\newfontfamily\latinfont{Times New Roman}
+\XeTeXlinebreaklocale "ko"
+\XeTeXlinebreakskip=0pt plus 1pt
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+\providecommand{\srcspaced}[1]{\textbf{#1}}
+\providecommand{\srcfn}[2]{\begingroup\renewcommand{\thefootnote}{#1}\footnote{#2}\addtocounter{footnote}{-1}\endgroup}
+\providecommand{\srcfnmark}[1]{\begingroup\renewcommand{\thefootnote}{#1}\footnotemark\addtocounter{footnote}{-1}\endgroup}
+\providecommand{\srcfntext}[2]{\begingroup\renewcommand{\thefootnote}{#1}\footnotetext{#2}\endgroup}
+\providecommand{\srcnumdisplay}[3][3.4em]{\par\smallskip\noindent\begin{minipage}[t]{#1}\vspace*{0pt}#2\end{minipage}\begin{minipage}[t]{\dimexpr\linewidth-#1\relax}\vspace*{0pt}\centering\(\displaystyle #3\)\end{minipage}\par\smallskip}
+\providecommand{\srcdisplay}[2]{\par\smallskip\noindent\makebox[3.2em][l]{#1}\makebox[\dimexpr\linewidth-3.2em\relax][c]{$\displaystyle #2$}\par\smallskip}
+\providecommand{\NoetherSrcNote}[2]{\textsuperscript{#1}\begingroup\renewcommand{\thefootnote}{}\footnotetext{\textsuperscript{#1}~#2}\endgroup}
+\providecommand{\pair}[2]{(#1\,|\,#2)}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\Hgrp}{\mathfrak H}
+\providecommand{\Gg}{\mathfrak G}
+\providecommand{\Hh}{\mathfrak H}
+\providecommand{\oo}{\mathfrak o}
+\providecommand{\Sp}{\operatorname{Sp}}
+\providecommand{\glqq}{“}
+\providecommand{\grqq}{”}
+\providecommand{\mat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\providecommand{\mA}{\mathfrak A}
+\providecommand{\mB}{\mathfrak B}
+\providecommand{\mK}{\mathfrak K}
+\providecommand{\mL}{\mathfrak L}
+\providecommand{\mR}{\mathfrak R}
+\providecommand{\mS}{\mathfrak S}
+\providecommand{\mT}{\mathfrak T}
+\providecommand{\ma}{\mathfrak a}
+\providecommand{\mb}{\mathfrak b}
+\providecommand{\mo}{\mathfrak o}
+\providecommand{\mJ}{\mathfrak J}
+\providecommand{\D}{\Delta}
+\providecommand{\A}{\Delta}
+\providecommand{\R}{\varrho}
+\providecommand{\mcell}[1]{\ensuremath{\begin{gathered}#1\end{gathered}}}
+\providecommand{\bdelta}{\bar{\delta}}
+\providecommand{\frakO}{\mathfrak O}
+\providecommand{\frako}{\mathfrak o}
+\providecommand{\frakp}{\mathfrak p}
+\providecommand{\Afield}{\mathfrak A}
+\providecommand{\Bfield}{\mathfrak B}
+\providecommand{\Cfield}{\mathfrak C}
+\providecommand{\Jdom}{\mathfrak J}
+\providecommand{\Kfield}{\mathfrak K}
+\providecommand{\Lsys}{\mathfrak L}
+\providecommand{\Gdom}{\mathfrak G}
+\providecommand{\Ssys}{\mathfrak S}
+\providecommand{\Mfield}{\mathfrak M}
+\providecommand{\Rfield}{\mathfrak R}
+\providecommand{\Xreal}{\mathfrak X}
+\providecommand{\Yreal}{\mathfrak Y}
+\providecommand{\rcdots}{\,\cdots\,}
+\providecommand{\qtext}[1]{\glqq #1\grqq{}}
+\providecommand{\p}{\partial}
+\providecommand{\dd}{\mathop{}\!\mathrm{d}}
+\providecommand{\modu}[1]{\;\operatorname{mod} #1}
+\providecommand{\ideal}[1]{\mathfrak{#1}}
+\providecommand{\eqzero}[1]{\equiv 0\,(#1)}
+\newcommand{\NoetherEntry}[2]{%
+  \clearpage
+  \setcounter{footnote}{0}%
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}%
+  \input{#2}%
+}
+
+\hypersetup{
+  pdftitle={에미 뇌터 저작집 — 완전한 한국어판},
+  pdfauthor={Emmy Noether; Manuscript Typesetting Project},
+  pdfsubject={Complete Korean edition of the maintained Emmy Noether corpus},
+  pdfkeywords={Emmy Noether, 에미 뇌터, Korean, 한국어, mathematics, algebra, translation}
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 에미 뇌터 저작집}\par
+\vspace{0.35em}
+{\Large\bfseries 완전한 한국어판}\par
+\vspace{0.6em}
+{\large Emmy Noether — Complete Korean Edition}\par
+\vspace{1.2em}
+{\large 논문 1--43, 번호 뒤 저작 2편, 참고문헌 및 판본 부록}\par
+\vspace{1.2em}
+\begin{tabular}{@{}r@{\hspace{0.7em}}p{0.68\linewidth}@{}}
+언어 & 한국어 (BCP 47: \texttt{ko}; Zenodo: \texttt{kor})\\[0.35em]
+판본 & 1.0.0 (2026-08-13)\\[0.35em]
+원문 권위 & German ED0011 / NOETH-DE-AUTH-v047-20260808\\[0.35em]
+원문 범위 & 누적 독일어 권위의 논리행 1--24,146 전체\\[0.35em]
+한국어 판본 DOI & \href{https://doi.org/10.5281/zenodo.21921523}{10.5281/zenodo.21921523}\\[0.35em]
+이 판본 DOI & \href{https://doi.org/10.5281/zenodo.21921524}{10.5281/zenodo.21921524}\\[0.35em]
+글로벌 디렉터리 & \href{https://doi.org/10.5281/zenodo.20412587}{10.5281/zenodo.20412587}\\[0.35em]
+저장소 & \href{https://github.com/KokunoYumeto/emmy-noether-ko}{github.com/KokunoYumeto/emmy-noether-ko}
+\end{tabular}
+\vfill
+{\small 번역·편집·조판: Manuscript Typesetting Project\par}
+\vspace{0.35em}
+{\small 전 범위 해시, 재현 빌드, 이중 텍스트 추출, 전 페이지 렌더 검사와 번역 결정 기록은 공개 증거 아카이브에 보존된다.}
+\end{center}
+
+\clearpage
+\pdfbookmark[0]{목차}{contents}
+\tableofcontents
+
+\NoetherEntry{1. 삼원 4차 형식의 형식계 구성에 관하여}{p01.tex}
+\NoetherEntry{2. 삼원 4차 형식의 형식계 구성에 관하여}{p02.tex}
+\NoetherEntry{3. n변수 형식의 불변식론에 관하여}{p03.tex}
+\NoetherEntry{4. n개 변수의 형식에 관한 불변식론}{p04.tex}
+\NoetherEntry{5. 유리 함수체}{p05.tex}
+\NoetherEntry{6. 유리 함수의 체와 계}{p06.tex}
+\NoetherEntry{7. 유한군 불변식의 유한성 정리}{p07.tex}
+\NoetherEntry{8. 임의로 많은 기본형식들의 계의 불변식에 대한 다항식적 표현}{p08.tex}
+\NoetherEntry{9. 정수적 초월수로 이루어진 가장 일반적인 영역}{p09.tex}
+\NoetherEntry{10. 동형사상의 함수방정식}{p10.tex}
+\NoetherEntry{11. 지정된 군을 갖는 방정식}{p11.tex}
+\NoetherEntry{12. 임의의 미분식의 불변식}{p12.tex}
+\NoetherEntry{13. 불변 변분문제}{p13.tex}
+\NoetherEntry{14. 한 변수 대수함수의 산술이론}{p14.tex}
+\NoetherEntry{15. 이원형식의 정수 계수 불변식계의 유한성}{p15.tex}
+\NoetherEntry{16. 형식론의 급수전개에 관하여}{p16.tex}
+\NoetherEntry{17. 비가환 영역의 모듈}{p17.tex}
+\NoetherEntry{18. K. 헨첼트의 소거론 논문에 관하여}{p18.tex}
+\NoetherEntry{19. 환영역의 아이디얼론}{p19.tex}
+\NoetherEntry{20. 절대기약성의 한 대수적 판정기준}{p20.tex}
+\NoetherEntry{21. 형식적 변분법과 미분불변식}{p21.tex}
+\NoetherEntry{22. 다항식 아이디얼과 종결식 이론}{p22.tex}
+\NoetherEntry{23. 대수불변식과 미분불변식}{p23.tex}
+\NoetherEntry{24. 소거이론과 일반 아이디얼 이론}{p24.tex}
+\NoetherEntry{25. 소거이론과 아이디얼 이론}{p25.tex}
+\NoetherEntry{26. 대수적 수체에서의 아이디얼 이론의 추상적 구성}{p26.tex}
+\NoetherEntry{27. 아이디얼 이론의 힐베르트 수}{p27.tex}
+\NoetherEntry{28. 군 지표와 아이디얼 이론}{p28.tex}
+\NoetherEntry{29. 표수 p인 유한 선형군 불변식의 유한성 정리}{p29.tex}
+\NoetherEntry{30. 대수적 수체와 함수체에서 아이디얼론의 추상적 구성}{p30.tex}
+\NoetherEntry{31. 대수적 수체 또는 함수체의 오더에 대한 판별식 정리}{p31.tex}
+\NoetherEntry{32. 기약표현의 최소 분해체에 관하여}{p32.tex}
+\NoetherEntry{33. 산술적 관점에서 본 초복소수와 표현론}{p33.tex}
+\NoetherEntry{34. 초복소량과 표현론}{p34.tex}
+\NoetherEntry{35. 정수적 함수로 이루어진 극대영역에 관하여}{p35.tex}
+\NoetherEntry{36. 아이디얼 미분과 디퍼런트}{p36.tex}
+\NoetherEntry{37. 고차 분기가 없는 체의 정규기저}{p37.tex}
+\NoetherEntry{38. 대수론의 한 주정리의 증명}{p38.tex}
+\NoetherEntry{39. 초복소계와 가환대수 및 수론의 관계}{p39.tex}
+\NoetherEntry{40. 비가환 대수}{p40.tex}
+\NoetherEntry{41. 상대 갈루아 수체에 대한 주종정리}{p41.tex}
+\NoetherEntry{42. 분할 교차곱과 그 극대 오더}{p42.tex}
+\NoetherEntry{43. 아이디얼 미분과 디퍼런트}{p43.tex}
+\NoetherEntry{번호 뒤 저작 A. 초복소량의 대수학}{post_a.tex}
+\NoetherEntry{번호 뒤 저작 B. 카프페러 논문과 E. 뇌터 공동 부록}{post_b.tex}
+\NoetherEntry{참고문헌 및 판본 부록}{back.tex}
+
+\end{document}

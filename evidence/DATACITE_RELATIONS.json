@@ -1,0 +1,26 @@
+{
+  "schema_version": "DataCite-4.7-intent",
+  "resource_scope": "complete maintained Emmy Noether corpus in Korean",
+  "language": "ko",
+  "global_concept_doi": "10.5281/zenodo.20412587",
+  "language_concept_doi": "10.5281/zenodo.21921523",
+  "exact_version_doi": "10.5281/zenodo.21921524",
+  "original_or_source_doi": "10.5281/zenodo.20412587",
+  "scope_note": "The global record serves both as multilingual directory and as durable source-corpus record for this same declared scope.",
+  "relations": [
+    {"from": "language_concept", "relationType": "IsTranslationOf", "to": "original_or_source"},
+    {"from": "language_concept", "relationType": "IsPartOf", "to": "global_collection"},
+    {"from": "exact_version", "relationType": "IsVersionOf", "to": "language_concept"}
+  ],
+  "reciprocal_relations_required": [
+    {"from": "original_or_source", "relationType": "HasTranslation", "to": "language_concept"},
+    {"from": "global_collection", "relationType": "HasPart", "to": "language_concept"},
+    {"from": "language_concept", "relationType": "HasVersion", "to": "exact_version"}
+  ],
+  "zenodo_compatibility_2026_08_13": {
+    "translation_relation_values_exposed": false,
+    "translator_contributor_role_exposed": false,
+    "temporary_machine_readable_collection_relation": "IsPartOf/HasPart",
+    "translation_relation_preserved_in_description_and_evidence": true
+  }
+}

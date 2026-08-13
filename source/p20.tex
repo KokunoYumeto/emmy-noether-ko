@@ -1,0 +1,265 @@
+% Korean Noether paper 20 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 12398--12609.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 21,164 bytes; SHA-256 CBC9E9CF34E6475F4256C935A58378FCDBF85A09ACC0E592FC64F3FCFDF8744D.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{20. 절대기약성의 한 대수적 판정기준}
+\begin{center}
+에미 뇌터, 괴팅겐.\\[0.6em]
+Math. Ann. 85 (1922), 26--33쪽
+\end{center}
+
+임의의 추상적으로 정의된 체에 계수를 둔 다항식은, 그 계수영역을 확대하여 얻을 수 있는 대수적으로 닫힌 체에서도 기약으로 남을 때 \emph{절대기약}이라고 한다\srcfnmark{1)}.
+\srcfntext{1)}{모든 체는 본질적으로 유일한 방식으로 대수적으로 닫힌 체, 곧 한 변수의 모든 다항식이 일차인자들로 분해되는 체로 확대될 수 있음을 E. Steinitz가 \emph{Algebraische Theorie der Körper}(J. f. M. 137 (1910), 167쪽)에서 보였다. 이로써 그는 대수학의 기본정리에 대한 유리적 등가물을 제시하였다.}
+\addtocounter{footnote}{1}
+이하에서는 주어진 체에 대한 기약성과 달리 절대기약성은 \emph{대수적으로} 포착할 수 있음을 보이겠다. 더 정확히는 다음 정리가 성립한다.
+
+\emph{부정계수를 가진 \(n\ge2\)개 변수의 각 다항식에는 그 계수들과 추가 부정원들의 정수계수 다항함수 하나, 곧 가약성형식을 대응시킬 수 있다. 같은 차수의 각 특수 다항식이 절대기약이기 위한 필요충분조건은 그 가약성형식이 사라지지 않는 것이다.} 다시 말해, \emph{가약성형식이 부정원들에 관하여 항등적으로 사라지고 차수저하를 일으키지 않는 계수의 각 특수 값의 계에 대하여 특수 다항식은 가약이며, 역도 성립한다.}
+
+다항식 대신 변수를 하나 더 가진 동차형식을 생각하면, 차수조건은 계수계가 항등적으로 사라지지 않는다는 더 간단한 조건으로 바뀐다.
+
+이 정리에서는 A. Ostrowski가 처음 세운 다음 명제도 직접 따라 나온다.\footnote{\emph{Zur arithmetischen Theorie der algebraischen Größen}, Gött. Nachr. 1919, 279쪽(296쪽의 보조정리). 통상적인 수로 이루어진 체의 경우에는 Ostrowski도 위의 주정리에 도달한 것으로 알고 있으며, 그 연구를 곧 출판할 예정이다. 나의 증명 배열에서 주정리가 임의의 추상적으로 정의된 체에 대하여 성립하는 것은 부정원들에 대하여 만든 가약성형식이 \emph{특별히 바탕에 둔 체와 무관한 수계수}를 갖기 때문이다.}
+
+\emph{대수적 수들을 계수로 가진 모든 절대기약 다항식은, 계수영역을 포함하는 유한 대수적 수체 \(\Omega\)의 소아이디얼들 가운데 많아야 유한개를 제외하면 각 소아이디얼을 법으로 하여 기약으로 남는다. 특히 \(\Omega\)를 유리수체로 택할 수도 있다.}
+
+상대적으로 정수적인 함수의 이론에 대한 더 많은 응용\footnote{D. Hilbert, \emph{Mathematische Probleme}, Gött. Nachr. 1900, 253쪽, 문제 14.}은 다른 곳에서 다룰 예정이다.
+
+\textbf{1.} 우선 \emph{부정계수를 가진 \(n\ge2\)개 변수의 모든 다항식은 절대기약}임을 보이자. 다음과 같이 두자.
+\srcnumdisplay{(1)}{%
+\begin{aligned}
+F(x)&=\sum A_{i_1\ldots i_n}x_1^{i_1}\cdots x_n^{i_n}
+&&(i_1+\cdots+i_n\le l),\\
+G(x)&=\sum B_{j_1\ldots j_n}x_1^{j_1}\cdots x_n^{j_n}
+&&(j_1+\cdots+j_n\le m),\\
+H(x)&=F(x)G(x)=\sum C_{k_1\ldots k_n}(A,B)x_1^{k_1}\cdots x_n^{k_n}
+&&(k_1+\cdots+k_n\le l+m).
+\end{aligned}
+}
+여기서 \(A\)와 \(B\)는 부정원이고 \(C(A,B)\)는 \(A,B\)의 정수계수 쌍선형 결합이다. 따라서 몫
+\[
+D=C(A,B)/C_{0\ldots0}(A,B)
+\]
+들은 몫 \(A/A_{0\ldots0}\)와 \(B/B_{0\ldots0}\)의 유리함수이다. 그런데 이 함수들의 개수는 인수들의 개수보다 크다. 각각
+\[
+\binom{l+m+n}{n}-1,\qquad
+\binom{l+n}{n}-1,\qquad
+\binom{m+n}{n}-1
+\]
+개이며
+\[
+\binom{l+m+n}{n}+1>
+\binom{l+n}{n}+\binom{m+n}{n}
+\quad(n\ge2,\ l>0,\ m>0)
+\]
+이기 때문이다. 그러므로 \(D(A,B)\)들 사이에는 적어도 \emph{하나의} 대수적 관계가 있고, 따라서 \(C(A,B)\)들 사이에도 그러한 관계가 있다.
+\srcnumdisplay{(2)}{%
+\Phi(Z)\ne0\quad[Z_{k_1\ldots k_n}\text{에 관하여 항등적으로}],\qquad
+\Phi(C(A,B))=0\quad[A,B\text{에 관하여 항등적으로}],
+}
+여기서 \(\Phi\)는 정수계수 다항식이다.
+
+따라서 \emph{부정원 \(Z\)}를 계수로 가진 다항식
+\srcnumdisplay{(3)}{%
+E(x)=\sum Z_{k_1\ldots k_n}x_1^{k_1}\cdots x_n^{k_n}
+\qquad(k_1+\cdots+k_n\le l+m)
+}
+은 \(n\ge2\)일 때 반드시 \emph{절대기약}이다\srcfnmark{4)}.
+\srcfntext{4)}{2절의 표현을 쓰면, 부정원 \(Z\)가 \(\mathfrak P\)의 영점이 아니기 때문이다.}
+\addtocounter{footnote}{1}
+
+\textbf{2.} \(Z=C(A,B)\)를 대입했을 때 \(A,B\)에 관하여 항등적으로 사라지는 이 모든 다항식 \(\Phi(Z)\)의 전체는 \emph{다항식 아이디얼}\srcfnmark{5)}을 이루며, 더 정확히는 \emph{소아이디얼 \(\mathfrak P\)}을 이룬다.
+\srcfntext{5)}{이러한 전체는 보통 가군이라 부른다. 그러나 이를 특징짓는 성질은 \(\Phi_1,\Phi_2\)와 함께 \(\Phi_1-\Phi_2\)도 포함하고, \(\Phi\)와 함께 \(\Psi\Phi\)도 포함한다는 것이다. 여기서 \(\Psi\)는 \(Z\)의 임의의 정수계수 다항식이다. 이는 바로 아이디얼의 성질이다.}
+\addtocounter{footnote}{1}
+실제로 대입에 따라 곱 \(\Phi_1\Phi_2\)가 사라지면 적어도 한 인자가 사라진다. (2)는 \(A,B\)에 관하여 항등적으로 성립하므로, \(A,B\), 따라서 \(\Gamma=C(A,B)\)가 임의의 체의 원소가 되는 각 특수 값의 계에서도 그대로 성립한다. \emph{그러므로 어떤 확대체에서 가약인 모든 다항식의 계수 \(\Gamma\)는 조건 \(\Phi(\Gamma)=0\)을 만족하여 \(\mathfrak P\)의 영점이 되며, 따라서 \(\mathfrak P\)의 유한개 기저다항식의 영점이 된다.} 이제 \emph{역을 증명}해야 한다.
+
+\(y\)라는 새 변수를 도입하여 (1)의 다항식들을 차수 \(l,m,l+m\)의 동차형식 \(F(x,y),G(x,y),H(x,y)\)로 바꾸어도 \(A,B,C\) 사이의 모든 관계는 보존된다. 따라서 예를 들어 \(\bar F(x,y)\)\footnote{\(F,G,\ldots,f,g,\ldots\)의 부정원들을 특수한 값의 계로 바꾸어 얻는 다항식과 형식은 이하에서 언제나 \(\bar F,\bar G,\ldots,\bar f,\bar g,\ldots\)처럼 윗줄을 그어 표시한다.}가 \(y\)의 한 거듭제곱이 되는 계수 \(\Gamma\)도 \(\mathfrak P\)의 영점이다. 이때 비동차 다항식으로 넘어가면 \(\bar H(x)\)의 차수저하만 생기고 인수분해는 생기지 않는다. 이 차수저하를 제외하면 역은 언제나 성립함을 보이겠다. 특히 \emph{동차형식에 대해서는 모든 \(\Gamma\)가 사라지는 경우만 제외하면 역이 예외 없이 성립한다. 다시 말해 \(\mathfrak P\)의 각 영점은 어떤 확대체의 원소 \(A,B\)를 써서 매개표현 \(\Gamma=C(A,B)\)으로 주어진다}\srcfnmark{7)}.
+\srcfntext{7)}{\(\mathfrak P\)가 기약 대수다양체를 정의하는 소아이디얼이라는 성질에서, \(\mathfrak P\)의 영점들이 \glqq{}일반적으로\grqq{} 매개표현으로 주어진다는 사실은 따라온다. 그러나 이로부터 매개표현이 어느 특수 값의 계에서도 실패하지 않는다는 사실은 따라오지 않는다. 나는 처음에 이 점을 놓쳤고 A. Ostrowski가 오래전에 이를 지적해 주었다. 여기서 제시하는 증명은 더 초등적인 개념들에 바탕을 둔다.}
+\addtocounter{footnote}{1}
+
+이를 증명하기 위하여 유한개의 함수 \(\Phi(Z)\)를 직접 구성한다. 즉 Kronecker 치환
+\[
+x_\lambda=\xi^{d^{\,n-\lambda}}\srcfnmark{8)}
+\]
+을 이용하여 (1)의 다항식들을 \emph{한} 변수의 다항식들에 대응시킨다. 그 지수들에 결락이 생김을 보이고, 대응하는 계수의 노름을 만들어 함수 \(\Phi(Z)\)와 찾는 판정기준을 얻는다.
+\srcfntext{8)}{Festschrift, 11쪽.}
+\addtocounter{footnote}{1}
+
+\textbf{3.} 다음과 같이 두자.
+\srcnumdisplay{(4)}{%
+\begin{aligned}
+d&=l+m+1; &\qquad i&=i_1d^{n-1}+i_2d^{n-2}+\cdots+i_n;\\
+j&=j_1d^{n-1}+\cdots+j_n; &\qquad k&=k_1d^{n-1}+\cdots+k_n.
+\end{aligned}
+}
+Kronecker 치환에 따라 (1)의 \(F,G,H\)에는 각각 다음 다항식들이 대응한다.
+\srcnumdisplay{(5)}{%
+\begin{aligned}
+f(\xi)&=\sum A_{i_1\ldots i_n}\xi^i
+&&(i_1+\cdots+i_n\le l),\\
+g(\xi)&=\sum B_{j_1\ldots j_n}\xi^j
+&&(j_1+\cdots+j_n\le m),\\
+h(\xi)&=\sum C_{k_1\ldots k_n}(A,B)\xi^k
+&&(k_1+\cdots+k_n\le l+m).
+\end{aligned}
+}
+이 대응은 잘 알려져 있듯이 \emph{일대일}이다. (5)에 나타나는 모든 \emph{유도지수}에 대하여 \(k=0\)이면 \(k_1=0,\ldots,k_n=0\)이기 때문이다. 따라서 \(i+j=i'+j'\)이면
+\[
+i_1+j_1=i'_1+j'_1;\ldots;i_n+j_n=i'_n+j'_n
+\]
+이다. 그러므로 서로 다른 곱 \(\xi^i\xi^j\)가 같은 지수 \(\xi^k\)를 주는 것은, 대응하는
+\[
+x_1^{i_1}\cdots x_n^{i_n}x_1^{j_1}\cdots x_n^{j_n}
+\]
+도 같은 지수를 줄 때뿐이다. 따라서
+\srcnumdisplay{(6)}{%
+h(\xi)=f(\xi)g(\xi)
+}
+를 얻으며, \(f(\xi)\)와 \(g(\xi)\)에 유도지수 이외의 지수가 나타나지 않는 관계 (6)가 성립하면 거꾸로
+\srcnumdisplay{(7)}{%
+H(x)=F(x)G(x)
+}
+를 얻는다. 이때 \emph{\(f(\xi)\)와 \(g(\xi)\)의 유도지수에는 실제로 결락이 생긴다.} \(f(\xi)\)의 최고지수는 \(ld^{n-1}\), 그다음 지수는 \((l-1)d^{n-1}+d^{n-2}\)이고, 그 차는
+\[
+d^{n-2}(d-1)>1
+\]
+이다. 실제로 \(d=l+m+1\ge3\), \(n\ge2\)이다. \(g(\xi)\)에 대해서도 같다.
+
+부정원 \(A,B\)에 대하여 성립하는 관계 (6)과 (7)은 각 특수 값의 계에서도 보존된다. 이때 차수가 보존되도록 변수 \(\eta\)와 \(y\)를 써서 (6)과 (7)을 동차화한다. \emph{따라서 동차형식 \(H(x,y)\)가 한 대수적 확대체에서 인수분해되는 것은, 그 체에서 대응하는 이원형식 \(h(\xi,\eta)\)가 두 인자로 분해되고 그 인자들에 유도지수 이외의 지수가 나타나지 않을 때 그리고 그때뿐이다.}
+
+\textbf{4.} 2절 끝에서 말한 노름의 구성을 수행하기 위하여
+\[
+a_1,b_1;\ldots;a_p,b_p;\quad
+a_{p+1},b_{p+1};\ldots;a_{p+q},b_{p+q}
+\]
+를 새 부정원들이라 하자. 다음과 같이 둔다.
+\srcnumdisplay{(8)}{%
+\begin{aligned}
+\varphi(\xi,\eta)&=(a_1\xi+b_1\eta)\cdots(a_p\xi+b_p\eta)
+ =r_p\xi^p+r_{p-1}\xi^{p-1}\eta+\cdots+r_0\eta^p,\\
+\psi(\xi,\eta)&=(a_{p+1}\xi+b_{p+1}\eta)\cdots(a_{p+q}\xi+b_{p+q}\eta)
+ =s_q\xi^q+s_{q-1}\xi^{q-1}\eta+\cdots+s_0\eta^q,\\
+\chi(\xi,\eta)&=\varphi(\xi,\eta)\psi(\xi,\eta)
+ =t_{p+q}\xi^{p+q}+t_{p+q-1}\xi^{p+q-1}\eta+\cdots+t_0\eta^{p+q}.
+\end{aligned}
+}
+여기서 \(r,s,t\)는 각각 동차화한 기본대칭함수이다. 즉 각 열에 관하여 선형인 \(a,b\) 열들의 대칭함수로서, 각 열에 관하여 따로 같은 차수로 동차인 모든 정수계수 다항 대칭함수는 이들로 정수계수 다항식으로, 그리고 오직 한 가지 방식으로 나타난다.
+
+이제 추가 부정원 \(u_{\mu\nu}\)를 써서 선형형식
+\srcnumdisplay{(9)}{%
+\zeta(u,a,b)=\sum u_{\mu\nu}r_\mu s_\nu
+}
+를 만들되, 합은 미리 정한 지표 \(\mu,\nu\)에 걸쳐 취한다. \(\zeta(u)\)와 \(a,b\) 열의 치환으로 생기는, \(\zeta(u)\) 및 서로와 다른 모든 켤레들의 곱을 생각하자. 이는 \(\zeta(u)\)를 \(r_\mu(a,b),s_\nu(a,b)\)의 체의 함수로 볼 때 \(t(a,b)\)의 체에 대한 \(\zeta(u)\)의 노름 \(N(\zeta(u))\)이다. 이 곱은 모든 \(a,b\) 열의 정수계수 다항 대칭함수이며 각 열에 관하여 같은 차수로 동차이다. 그러므로 위에서 본 바에 따라 \(t(a,b)\)와 \(u_{\mu\nu}\)의 유일하게 정해지는 정수계수 다항함수가 된다.
+\srcnumdisplay{(10)}{%
+N(\zeta(u,a,b))=T(t(a,b),u)
+\qquad[a,b,u\text{에 관하여 항등적으로}].
+}
+같은 추론으로
+\[
+N(z-\zeta(u))=
+z^\delta+T_{\delta-1}(t,u)z^{\delta-1}+\cdots+T(t,u)
+\qquad[a,b,u,z\text{에 관하여 항등적으로}]
+\]
+도 성립하며, 여기서 모든 \(T\)는 \(t,u\)의 정수계수 다항함수이다. 이 항등식의 양변은 \(z=\zeta(u)\)일 때 사라진다. 기본대칭함수 \(r(a,b),s(a,b)\)가 대수적으로 독립이므로, \(t(a,b)\)를 (8)에 따라 \(r,s\)의 정수계수 쌍선형 결합 \(w(r,s)\)로 두고 \(\zeta(u)\)를 \(r,s\)의 함수로 보면 이 소거는 \(r,s\)에 관하여도 항등적이다. 따라서
+\srcnumdisplay{(11)}{%
+\zeta(u)^\delta+
+T_{\delta-1}(w(r,s),u)\zeta(u)^{\delta-1}
++\cdots+T(w(r,s),u)=0
+\quad[r,s,u\text{에 관하여 항등적으로}].\,\text{\textsuperscript{9)}}
+}
+\srcfntext{9)}{(9)의 합을 모든 지표에 걸쳐 취하면 (11)은 가우스 정리에 대한 Kronecker의 확장이 되며, 증명의 배열도 본질적으로 Kronecker의 것이다. \emph{Zur Theorie der Formen höherer Stufen}, Berliner Ber. 1883, Werke 2, 417쪽.}
+\addtocounter{footnote}{1}
+
+항등식 (10)과 (11)은 \(a,b\)의 모든 특수 값의 계 \(\alpha,\beta\), 또는 \(r,s\)의 특수 값의 계 \(\varrho,\sigma\)에서도 유지된다. 특히 (9)에 나타나는 지표 \(\mu,\nu\)에 대하여 모든 곱 \(\varrho_\mu\sigma_\nu\)가 사라지도록 \(\varrho,\sigma\)를 택하면, 대입에 따라 \(\zeta(u)\)가 사라진다. \(w(\varrho,\sigma)=\tau\)로 두면 (11)에서
+\srcnumdisplay{(12)}{%
+T(\tau,u)=0\qquad[u\text{에 관하여 항등적으로}]
+}
+를 얻는다.
+
+역으로 \(\tau_0,\ldots,\tau_{p+q}\)가 모두 사라지지는 않으면서 (12)를 만족하는 \emph{값의 계}라고 하자. 한 대수적 확대체에서는
+\srcnumdisplay{(12)}{%
+\bar\chi(\xi,\eta)=
+\tau_{p+q}\xi^{p+q}+\cdots+\tau_0\eta^{p+q}
+=(\alpha_1\xi+\beta_1\eta)\cdots
+(\alpha_{p+q}\xi+\beta_{p+q}\eta)
+}
+라는 분해가 존재한다. 각 인자에서 \(\alpha\)와 \(\beta\)가 동시에 사라지지는 않지만\srcfnmark{10)}, 몇몇 \(\alpha\) 또는 \(\beta\)는 사라질 수 있다.
+\srcfntext{10)}{이 유리적 \glqq{}대수학의 기본정리\grqq{}가 2절 끝에서 말한 역이 예외 없이 성립한다는 사실의 바탕이 되는 존재정리이다.}
+\addtocounter{footnote}{1}
+따라서 \(\tau=t(\alpha,\beta)\)이다. 이 값들을 (10)에 넣으면 (12)에 따라 \(\zeta(u,\alpha,\beta)\) 또는 그 켤레인자 하나가 \(u\)에 관하여 항등적으로 사라진다. \(\alpha,\beta\)의 번호를 알맞게 매긴 뒤 \(r(\alpha,\beta)=\varrho\), \(s(\alpha,\beta)=\sigma\)로 두면, 이는 \(\bar\chi(\xi,\eta)\)가 \emph{적어도 하나의 다음 분해를 허용한다}는 뜻이다.
+\srcnumdisplay{(13)}{%
+\bar\chi(\xi,\eta)=\bar\varphi(\xi,\eta)\bar\psi(\xi,\eta)
+=\sum \varrho_\kappa\xi^\kappa\eta^{p-\kappa}
+\cdot\sum \sigma_\lambda\xi^\lambda\eta^{q-\lambda},
+}
+\emph{여기서 \(\zeta(u)\)에 나타나는 모든 곱 \(\varrho_\mu\sigma_\nu\)는 사라지지만, \(\varrho\) 전체나 \(\sigma\) 전체가 사라지지는 않는다.}
+
+\textbf{5.} 이제 (8)의 차수 \(p,q\)를 각각 \(ld^{n-1}\), \(md^{n-1}\), 곧 (5)의 \(f(\xi),g(\xi)\)의 차수와 같게 둔다. 지표 \(\mu,\nu\)를 \(\mu^{(1)},\nu^{(1)},\mu^{(2)},\nu^{(2)}\)로 나눈다. 이때 \(\mu^{(1)}\)은 \(f(\xi)\)에서 빠진 모든 지수를, \(\nu^{(1)}\)은 \(\psi(\xi,\eta)\)에서 \(\xi\)의 모든 지수를 돈다. 대응하게 \(\nu^{(2)}\)는 \(g(\xi)\)에서 빠진 모든 지수를, \(\mu^{(2)}\)는 \(\varphi(\xi,\eta)\)에서 \(\xi\)의 모든 지수를 돈다. 또
+\[
+e(\xi)=\sum Z_{k_1\ldots k_n}\xi^k
+\qquad(k_1+\cdots+k_n\le l+m)
+\]
+를 다항식 (3)에 대응하는 한 변수 다항식이라 하자. \(S(Z,u)\)는 \(T(t,u)\)에서 다음과 같이 얻는 \(Z,u\)의 정수계수 다항식이라 하자. 여기서 \(T(t,u)\)는 (10)의 유일하게 정해지는 우변이고, (9)의 합은 지정한 지표 \(\mu^{(1)},\nu^{(1)},\mu^{(2)},\nu^{(2)}\)에 걸쳐 취한다. 이제 \(t\)들을 \(e(\xi)\)의 계수 \(Z\)와 대응하는 0들로 바꾼다.
+
+\(r,s\)를 \(f(\xi),g(\xi)\)의 계수 \(A,B\)와 대응하는 0들로 바꾸면, 위에서 지정한 합에서는 \(\zeta(u)\)가 \emph{사라진다}. 또 \(t=w(r,s)\)는 \(h(\xi)\)의 계수 \(C(A,B)\)와 대응하는 0들로 바뀌므로, \(T(t,u)\)는 \(S(C(A,B),u)\)로 바뀐다. 따라서 항등식 (11)에서
+\srcnumdisplay{(14)}{%
+S(C(A,B),u)=0
+\qquad[A,B,u\text{에 관하여 항등적으로}]
+}
+을 얻는다. (14)는 각 특수 값의 계에서도 유지된다. 그러므로 한 \emph{확대체에서 두 인자로 분해되는} 특수 \(\bar H(x)\), 또는 일반적인 \(\bar H(x,y)\)의 계수 \(\Gamma=C(A,B)\)는 조건
+\srcnumdisplay{(15)}{%
+S(\Gamma,u)=0\qquad[u\text{에 관하여 항등적으로}]
+}
+을 만족한다.
+
+역으로 모두 사라지지는 않는 다항식 \(\bar H(x)\), 또는 형식 \(\bar H(x,y)\)의 계수 \(\Gamma\)가 조건 (15)를 만족한다고 하자. 위에서 본 바에 따라 이는 \(T(\tau,u)=0\)과 동치이며, 여기서 \(\tau\)는 \(\bar h(\xi,\eta)\)의 모든 계수를 뜻한다. (13)에 따라 \(\Gamma\)의 한 확대체에는
+\[
+\bar h(\xi,\eta)=\bar f(\xi,\eta)\cdot\bar g(\xi,\eta)
+\]
+라는 분해가 존재한다. 지정한 합 때문에 \(\bar f,\bar g\)에는 유도지수 이외의 지수가 나타나지 않는다. 따라서
+\[
+\bar H(x,y)=\bar F(x,y)\cdot\bar G(x,y)
+\]
+라는 관계가 성립한다. \(y=1\)일 때 어느 인자도 0차가 되지 않으면, 특히 \(\Gamma\)가 \(\bar H(x)\)의 차수저하를 일으키지 않으면
+\[
+\bar H(x)=\bar F(x)\cdot\bar G(x)
+\]
+도 성립한다.
+
+\emph{그러므로 조건 (15)는 \(\bar H(x,y)\)가 한 확대체에서 두 인자로 분해되기 위한 필요충분조건이며, 차수저하를 제외하면 \(\bar H(x)\)에 대해서도 필요충분조건이다.}
+
+1절에서 \(n\ge2\)일 때 부정원들을 계수로 가진 다항식, 따라서 변수 하나를 더 둔 대응하는 동차형식이 절대기약임을 보였다. 그러므로 \(S(Z,u)\)는 \(Z,u\)에 관하여 항등적으로 사라질 수 없다. \(U\)가 \(u\)들의 거듭제곱곱들을 뜻하면
+\[
+S(Z,u)=\sum \Phi_\lambda(Z)U_\lambda
+\]
+이고, (14)에 따라 \(\Phi_\lambda(Z)\)들은 \(\mathfrak P\)의 다항식이 된다. \emph{이로써 \(\mathfrak P\)에는 \(A,B\)가 \(\Gamma\)의 한 대수적 확대체에 속하는 매개표현 \(\Gamma=C(A,B)\)으로 주어진 것 이외의 영점이 없음을 보였다.} 따라서 2절 끝에서 말한 역이 증명되었다.
+
+\textbf{6.} 이제 \emph{절대기약성의 조건을 직접 정식화할 수 있다.} (3)의 \(E(x)\)의 차수를 가능한 모든 방식으로 두 양의 정수의 합 \(l+m\)으로 나누고, 각 분해에 대하여 형식 \(S(Z,u)\)를 만들면 된다. 이 형식들을 모두 곱한
+\srcnumdisplay{(16)}{%
+R(Z,u)=\prod S(Z,u)
+}
+이 \(E(x)\)의 \emph{가약성형식}이다. 실제로 위에서 본 바에 따라 \(\bar E(x)\), 또는 \(\bar E(x,y)\)가 \emph{분해}될 때마다 (16)의 한 인자가 사라지고, 역도 성립한다. 이로써 \emph{서론에서 세운 주정리가 증명되었고}, 동시에 가약성형식을 유한 단계로 실제 구성하는 방법도 보였다.
+
+\textbf{7.} 가약성형식 (16)의 \emph{존재}에서 서론에서 말한 \emph{Ostrowski 정리}가 곧바로 따라 나온다. 대수적 정수 \(\Gamma\)를 계수로 가진 절대기약 다항식을
+\[
+\bar E(x)=\sum \Gamma_{k_1\ldots k_n}x_1^{k_1}\cdots x_n^{k_n}
+\qquad(k_1+\cdots+k_n\le v)
+\]
+라 하자. \(\mathfrak K\)는 모든 \(\Gamma\)를 포함하는 유한 대수적 수체이고, \(\mathfrak p\)는 \(\mathfrak K\)의 소아이디얼이라 하자.
+
+\(\bar E(x)\)의 정확한 차수에 맞추어 만든 가약성형식 \(R(Z,u)\)는 \(Z=\Gamma\)를 대입해도 \emph{0이 아니며},
+\[
+R(\Gamma,u)=\sum P_\lambda U_\lambda\ne0
+\qquad[u\text{에 관하여 항등적으로}]
+\]
+가 된다. 따라서 아이디얼 \(\mathfrak r=(P_1,P_2,\ldots)\)은 \(\mathfrak K\)의 소아이디얼들 가운데 \emph{유한개}로만 나누어진다. 그러므로 \(\mathfrak p\)가 이 유한개와 다르면 \(R(\Gamma,u)\)는 \(\mathfrak p\)를 법으로 하여 항등적으로 사라지지 않는다. \(\mathfrak p\)를 법으로 한 잉여류들이 다시 체를 이루므로, \(\bar E(x)\)는 \emph{\(\mathfrak p\)를 법으로 하여 기약}, 더 정확히는 절대기약이다. \(\bar E(x,y)\)도 마찬가지이므로 \(\mathfrak p\)를 법으로 한 차수저하도 일어나지 않는다.
+
+\(\bar E(x)\)의 계수들이 대수적 분수라면, 공통분모 \(\Delta\)를 나누는 유한개의 소아이디얼도 \(\mathfrak p\)에서 제외해야 한다. 나머지 모든 소아이디얼을 법으로 할 때에는 \(\bar E(x)\)를 \(\Delta\bar E(x)\)로 바꿀 수 있으므로 위 가정들이 성립한다. 이로써 정리가 증명되었다.
+
+\begin{flushleft}
+에를랑겐, 1921년 8월.
+\end{flushleft}
+\begin{center}
+(1921년 8월 28일 접수.)
+\end{center}

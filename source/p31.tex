@@ -1,0 +1,578 @@
+% Korean Noether paper 31 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 15600--16091.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 81,102 bytes; SHA-256 99FB216DEAA8FB940A43C5802E5F4BC089606B6257D165042A7AD113BDE68155.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\providecommand{\mH}{\mathfrak H}
+\providecommand{\mRprime}{\mathfrak R'}
+\providecommand{\bP}{\overline P}
+\providecommand{\bR}{\overline{\mathfrak R}}
+\providecommand{\bp}{\overline{\mathfrak p}}
+\providecommand{\mc}{\mathfrak c}
+\providecommand{\mt}{\mathfrak t}
+\providecommand{\mq}{\mathfrak q}
+\providecommand{\mpideal}{\mathfrak p}
+\providecommand{\mP}{\mathfrak P}
+
+\section*{31. 대수적 수체 또는 함수체의 오더에 대한 판별식 정리}
+\begin{center}
+\emph{Journal f. d. reine u. angew. Math. 157 (1927), 82--104쪽}
+
+에미 뇌터 (괴팅겐)\\[0.4em]
+\rule{9em}{0.4pt}
+\end{center}
+
+잘 알려진 \emph{데데킨트 판별식 정리}는 다음과 같이 말한다. 한 소수는 적어도 한 소아이디얼의 제곱으로 나누어질 때 그리고 오직 그때 체의 판별식을 나눈다.
+
+이 글에서는 이 정리가 한 (유한) 대수적 수체의 모든 유한 오더, 곧 유리정수환을 포함하는 모든 \emph{대수적 정수로 이루어진 환}에 대하여 다음 꼴로 유지됨을 보이겠다. \emph{한 소수 \(p\)가 한 오더의 판별식을 나누는 것은, 그 오더에서 성립하는 주아이디얼 \((p)\)의 극대 으뜸성분 분해에 적어도 하나의 진으뜸아이디얼, 곧 소아이디얼이 아닌 으뜸아이디얼이 나타날 때 그리고 오직 그때이다.}\srcfn{1)}{이에 대해서는 E. Noether, \emph{Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern}, Math. Ann. 96 (1926), 26--61쪽을 보라. 모든 정의는 이하 “아이디얼 이론”이라 부를 이 논문을 참조한다. 이하 “오더”는 언제나 “유한 오더”를, “환”은 가환환을 뜻한다.}
+
+정수환, 곧 그 체의 모든 대수적 정수로 이루어진 계에서는 소아이디얼의 거듭제곱 이외의 으뜸아이디얼이 없으므로, 특수화하면 \emph{데데킨트 정리}가 나온다.
+
+증명에서는 \((p)\)를 법으로 한 오더의 잉여류환으로 옮겨, 환 안에 포함된 한 체에 관하여 유한 랭크인 환, 즉 바로 그 체의 계수를 가지며 단위원을 갖는 가환 초복소량계의 분해이론으로 문제를 환원한다. 여기서 계수체로는 특히 유리정수의 \(p\)를 법으로 한 잉여류체가 나타나고, \((p)\)의 분해에는 잉여류환에서 영아이디얼의 분해가 대응한다.
+
+그러므로 그러한 유한 랭크 환에서 영아이디얼을 유한개의 소아이디얼의 최소공배수로 나타낼 수 있을 때 그 환을 \emph{완전가약}이라 부르면, 문제는 완전가약성의 판정조건을 구하는 것이 된다. 우선 \emph{계수영역이 완전체}이면, 그 환이 완전가약인 것은 대수적으로 닫힌 계수영역을 붙여 얻는 확대환이 완전가약일 때 그리고 오직 그때임을 얻는다. 그런데 이 확대환에서는 판별식이 0이 아니라는 것이 완전가약성의 필요충분조건임을 아주 간단히 알 수 있다\srcfn{1)}{한 특수한 경우에는 Hilbert도 비슷하게 논증하였다. \emph{Zur Theorie der aus \(n\) Haupteinheiten gebildeten komplexen Größen}, Gött. Nachr. 1896.}. 오더의 판별식은 각 소수를 법으로 하여 잉여류환의 판별식으로 옮겨가므로, 이로써 판별식 정리가 증명된다\srcfn{2)}{이와 관련된 연구는 비가환인 경우에도 있으나 \emph{정수환}(극대영역)에 한정되고 유리정수 계수를 전제한다. 막 출판된 A. Speiser, \emph{Allgemeine Zahlentheorie}, Naturf. Gesellschaft Zürich 71 (1926), 8--48쪽 및 거기 적힌 미국 문헌을 보라.}.
+
+수체 대신 함수체를 고찰하면, 이제 오더는 모든 정수 유리함수의 기초영역을, 또는 여러 부정원의 대수함수나 정수 계수 대수함수의 경우에는 정수 계수 다항식 계수를 갖는 모든 정수 함수식의 기초영역을 포함해야 한다. 이때 잉여류환에서 \emph{불완전체인 계수영역}이 나타날 수도 있다. 예컨대 정수 계수 함수식 영역에서 한 소수를 법으로 한 잉여류환을 고찰할 때 그러하다. 계수영역이 불완전체이면 소아이디얼을 제1종과 제2종으로 구분해야 한다. 이는 그 소아이디얼에 따른 잉여류체가 제1종 확대체인지 제2종 확대체인지에 따른다\srcfn{3)}{잘 알려진 Steinitz의 정식화는 J. f. M. 137에 있다. 이 논문의 § 2, 4에 붙인 주도 보라.}. 이에 따라 제1종과 제2종 완전가약성을 구분해야 한다. 위의 판정조건들은 모두 완전체의 경우에 유일하게 나타나는 제1종 완전가약성에 관한 것이다. 따라서 가장 일반적인 경우의 \emph{판별식 정리}는 다음을 말한다. \emph{기초영역의 한 소원소가 한 오더의 판별식을 나누는 것은, \((p)\)의 아이디얼 분해에 적어도 하나의 진으뜸성분 또는 제2종 소아이디얼이 나타날 때 그리고 오직 그때이다.}
+
+이 사실은 정수환에 대하여 \emph{크로네커}가 처음 예들에서 알아차렸다. 그보다 앞선 기념논문에는 수체의 정수환에만 성립하는 정식이 아직 잘못 적혀 있었고, 그나마 완전한 증명은 없었다. 정수환에 대해서는 \emph{오스트롭스키}\srcfn{4)}{A. Ostrowski, \emph{Zur arithmetischen Theorie der algebraischen Größen}, Nachr. Gött. Ges. d. Wissensch. 1919.}가 위 판별식 정리의 증명과 그에 이어지는 더 세밀한 분기정리들을 제시했으며, 상세한 문헌목록도 함께 주었다. 끝으로 각 기초영역의 소아이디얼에 관한 몫환으로 이행하면 \emph{상대체의 모든 오더에 대한 판별식 정리}가 직접 따라온다. 이 이행의 착상은 특수한 경우에는 알려져 있었으나, 그 원리적 중요성은 \emph{W. 크룰}\srcfn{5)}{그의 단치히 강연, Jhrbr. d. D. Math. Ver. 34, 121쪽을 보라.}이 강조하였다. 더 일반적인 연구의 틀에서 몫환의 체계적 이론은 \emph{H. 그렐}\srcfn{6)}{\emph{Beziehungen zwischen den Idealen verschiedener Ringe} (Math. Annalen에 출판 예정).}이 제시한다.
+
+모든 오더와 완전·불완전 계수영역을 한결같이 다루는 이 방법은 아이디얼 이론에 더하여, 유한 랭크 환의 이론과 그에 따른 유한 확대의 일반개념을 처음부터 기초로 삼고 원시원소로 생성되는 확대의 개념을 기초로 삼지 않는 데 있다. 따라서 오더의 모듈기저와 그 원소들 사이의 관계가 체의 원시원소의 거듭제곱과 정의방정식을 대신하며\srcfn{1)}{이 관점은 고차 복소수에 관한 Dedekind의 관점과 가깝다. \emph{Zur Theorie der aus \(n\) Haupteinheiten gebildeten komplexen Größen}, Gött. Nachr. 1885.}, 또는 기본형식의 거듭제곱과 기본방정식을 대신한다.
+
+그러한 모듈기저는 기초영역의 각 소원소를 법으로 하여 잉여류환의 기저로 옮겨간다. 반면 원시원소의 거듭제곱으로 이루어진 기저는 정수환에서조차 그렇게 되지 않을 수 있고, 기본형식의 거듭제곱으로 이루어진 기저도 여러 부정원의 정수 계수 대수함수를 다룰 때에는 그렇다\srcfn{2)}{Ostrowski, 앞의 글, “제1종 비정칙성”을 보라.}. 달리 말하면, 한 부정원 다항식영역의 임의의 정의방정식 또는 기본방정식에 따른 잉여류환은 \(p\)를 법으로 했을 때 정수환의 \((p)\)에 따른 잉여류환과 동형일 필요가 없다. 바로 이 동형의 소멸에 통상적인 표현법의 주된 어려움이 있다. 여기서는 이 보조 다항식영역이 나타나지 않으므로 그런 어려움을 저절로 피한다. 동시에 잉여류환의 덧셈적 분해이론은 방정식의 곱셈적 분해와 동등한 것으로 볼 수 있다. 방정식을 서로소인 인자들로 분해하면 다항식 잉여류환에서도 덧셈적 분해가 이에 대응한다.
+
+판별식 정리는 오더의 일반 분기이론에서 첫 정리에 지나지 않을 수 있음을 덧붙여 둔다. 정수환에서도 판별식 정리 옆에는 분기아이디얼의 더 세밀한 이론이 있어 지수를 더 정확히 결정할 수 있다. 이 지수결정은 방정식의 으뜸인자들의 거듭제곱표현에 바탕을 두며, \(p\)에서 \(q=p^e\)까지의 합성열 길이를 정하는 것으로 해석할 수 있다. 일반 분기이론에서도 이 꼴로 나타날 것으로 예상한다.
+
+\begin{center}
+\textbf{§ 1. 체의 확대환}
+\end{center}
+
+\textbf{1.} 먼저 임의의 환에 관한 몇 가지 말을 해 둔다. \(\mT\)가 환이고 \(S\)가 \(\mT\)의 원소계일 때, “\(\mT\)에서 \(S\)로부터 유도된 환”이란 \(S\)를 포함하는 \(\mT\)의 모든 환의 교집합을 뜻한다. “\(\mT\)에서 \(S\)로부터 유도된 아이디얼”도 이에 따라 정의하고, \(P\)가 \(\mT\)의 부분환이면 “\(\mT\)에서 \(S\)로부터 유도된 \(P\)-모듈”도 마찬가지로 정의한다\srcfn{3)}{이에 대해서는 \emph{아이디얼 이론} § 1을 보라.}.
+
+\(\mR\)이 \(\mT\)의 부분환이고 \(S\)가 \(\mT\)의 원소계이면, \(\mT\)에서 \(\mR\)과 \(S\)로부터 유도된 환을 \(S\)를 \(\mR\)에 환으로 첨가하여 생긴 환 \(\mR[S]\)라 한다. 이 환은 \(S\)의 원소들에 관한, \(\mR\)의 계수를 갖는 모든 다항식으로 이루어지며, 등식관계와 연산관계는 \(\mT\)에서의 등식관계와 연산관계로 정해진다. 이들이 이미 정해져 있으므로 특수한 경우에는 모든 다항식 중 일부 계만, 예컨대 \(\mR\)의 계수를 갖는 \(S\)의 모든 선형형식만 만들면 충분하다. 예를 들어 \(\mR\)이 단위원을 갖는 환이고 \(S\)가 같은 단위원을 갖는 체이면 그러하다(2를 보라). \(c_i\in S\), \(\gamma_i\in\mR\)인 모든 선형결합 \(\sum c_i\gamma_i\)가 환 \(\mR[S]\)를 이룬다.
+
+한편 \(\mR\)만 주어지고, \(\mR\)에 속하지 않으면서 등식관계 또는 서로의 연산관계를 갖는 원소계 \(S\)가 주어졌을 때에도 \(S\)를 \(\mR\)에 첨가한 확대환 \(\mR[S]\)를 구성할 수 있다. 이를 위해 \(\mR\)과 \(S\)를 포함하는 환이 언제나 존재함을, 곧 통상적인 연산법칙을 정하고 \(S\)의 모든 다항식을 \(\mR\)의 계수로 형식적으로 구성한 환이 존재함을 보이면 된다. 등식의 정의에는 연산법칙 외에도 \(\mR\)과 \(S\)에서 성립하는 등식의 정의를 포함해야 한다는 제한만 있을 뿐 완전한 자유가 남아 있다. 따라서 \(\mR\)과 \(S\)에서 같은 원소들로부터 같은 방식으로, 그 등식과 연산에 의해 생기는 다항식들만 반드시 서로 같다고 두면 된다. 이렇게 구성한 \(\mR\)과 \(S\)를 포함하는 환 \(\mT\)는 \(\mT\)에서 \(\mR\)과 \(S\)로부터 유도된 환과 동일하다\srcfn{1)}{Steinitz의 몫체 구성과 비교하라.}.
+
+\textbf{2. 체의 확대환.} 이제부터 단위원을 가지며 한 체 \(P\)를 부분환으로 포함하는, 곧 체의 상환인 환 \(\mathfrak R\)을 가정한다. 그러면 \(\mathfrak R\)의 단위원 \(e\)는 동시에 \(P\)의 단위원이고, 이 환은 \(P\)-모듈이 된다.
+
+\(\overline P\)가 \(P\)의 확대체일 때, \(\overline P\)를 \(\mathfrak R\)에 환으로 첨가하여 생기는 확대환 \(\overline{\mathfrak R}=\mathfrak R[\overline P]\)을 다음과 같이 정의한다.
+
+먼저 \(\mathfrak R\)과 \(\overline P\)의 집합론적 교집합 \([\mathfrak R,\overline P]\)가 \(P\)이고, \(\mathfrak R\)과 \(\overline P\)에서 \(P\)에 속하지 않는 원소들 사이에는 연산관계가 없다고 가정한다. \(\overline P\)를 \(P\)의 동치인 확대체로 바꾸거나 \(\mathfrak R\)을 동치인 확대환으로 바꾸면 이 가정은 언제나 달성할 수 있다\srcfn{2)}{Steinitz에 따르면 \(P\)의 두 확대체가 \(P\)를 원소별로 자기 자신에 대응시키는 동형사상을 가질 때 “동치”라 한다. \(P\)의 동치인 확대환도 이에 맞추어 정의한다. 새 기호를 도입하면 언제나 동치인 확대를 만들 수 있다. 동치인 확대를 자유롭게 쓰는 것은 이하에서 본질적이다.}.
+
+\(\overline{\mathfrak R}\)의 원소는 형식적으로 만든 모든 선형결합
+\[
+   \bar c_{i_1}\gamma_{i_1}+\cdots+\bar c_{i_\sigma}\gamma_{i_\sigma}
+\]
+으로 정의한다. 여기서 \(\bar c_{i_\lambda}\)는 \(\overline P\)의 모든 원소를, \(\gamma_{i_\lambda}\)는 \(\mathfrak R\)의 모든 원소를 두루 돈다\srcfn{1)}{일반적으로 \(\mathfrak R\) 또는 \(\overline{\mathfrak R}\)의 원소는 그리스 문자로, \(P\) 또는 \(\overline P\)의 원소는 라틴 문자로 나타낸다.}. 이 정의는 일의적이어야 한다. 곧 \(\gamma\)들을 \(\mathfrak R\)에서 그들과 같은 원소들로, \(\bar c\)들을 \(\overline P\)에서 그들과 같은 원소들로 바꾸어도 \(\overline{\mathfrak R}\)의 원소 역시 같다고 정의한다.
+
+합은 다음과 같이 일의적으로, 즉 한 항을 앞으로 정할 등식의 정의에서 그와 같은 것으로 바꾸어도 결과가 같도록 정의한다.
+\[
+   \sum \bar c_i\gamma_i+\sum \bar d_i\gamma_i
+   =\sum(\bar c_i+\bar d_i)\gamma_i .
+\]
+(\(\bar c\)와 \(\bar d\) 가운데 0이 나타날 수 있으므로 형식적으로 같은 \(\gamma_i\)들이 나타난다.)
+
+곱도 같은 뜻에서 일의적으로 정의한다.
+\[
+   \sum \bar c_i\gamma_i\cdot \sum \bar d_k\gamma_k
+   =\sum \bar c_i\bar d_k\gamma_i\gamma_k .
+\]
+등식은 다음과 같이 정의한다. \(\gamma_{i_1},\ldots,\gamma_{i_\sigma}\)가 \(P\)에 관하여 선형독립이면 두 원소
+\[
+   \bar c_{i_1}\gamma_{i_1}+\cdots+\bar c_{i_\sigma}\gamma_{i_\sigma}
+   \quad\hbox{와}\quad
+   \bar d_{i_1}\gamma_{i_1}+\cdots+\bar d_{i_\sigma}\gamma_{i_\sigma}
+\]
+는 \(\overline P\)에서 각 \(\bar c_{i_\lambda}\)와 \(\bar d_{i_\lambda}\)가 같을 때 그리고 언제나 그때만 같다고 한다. 달리 말하면, \(\mathfrak R\)에서 \(P\)에 관하여 선형독립인 원소들을 \(\overline P\)에 관해서도 선형독립이라고 정의한다.
+
+합과 곱의 정의로부터 \(\overline{\mathfrak R}\)의 모든 원소에 대한 등식의 정의가 정해진다. 실제로 모든 원소를 \(\mathfrak R\)의 선형독립인 원소들로 표현할 수 있기 때문이다. 관계
+\[
+   \mu=c_1\gamma_1+\cdots+c_s\gamma_s\quad\hbox{가 }\mathfrak R\hbox{에서 성립하면}
+\]
+\(\bar b=\bar b e\)를 곱하여 곱의 정의에 따라
+\[
+   \bar b\mu=\bar b e\cdot(c_1\gamma_1+\cdots+c_s\gamma_s)
+      =\bar b c_1\gamma_1+\cdots+\bar b c_s\gamma_s
+\]
+를 얻고, 합의 정의에 따라 모든 원소를 \(\mathfrak R\)의 선형독립인 원소들로 나타낼 수 있다.
+
+따라서 모든 원소를 \(\mathfrak R\)의 선형독립인 원소들로 나타내면 등식은 \(\overline P\)에서의 계수 일치가 된다. 그러므로 \(\mathfrak R\)과 \(\overline{\mathfrak R}\)에 동시에 속하거나 \(\overline P\)와 \(\overline{\mathfrak R}\)에 동시에 속하는 원소들에 대해서는 그곳에서 유효한 등식과 일치한다. 반면 \(\mathfrak R\)과 \(\overline P\)에서 성립하는 등식은 교집합 가정과 그 부가조건 때문에 \(\overline{\mathfrak R}\)의 나머지 원소들에 대해서는 정의 때 요구한 일의성 이외의 아무것도 말하지 않는다\srcfn{2)}{이 가정이 없으면 \(\overline P\)의 \(P\)에 속하지 않는 원소 \(\bar c\) 가운데 적어도 하나에 대하여 \(\bar c=\bar c e=\gamma\)가 성립한다. 그러면 \(\mathfrak R\)의 등식 정의에 따라 \(e\)와 \(\gamma\)는 \(P\)에 관해서는 선형독립이지만 \(\overline P\)에 관해서는 종속이다. \(\overline P\)와 \(\mathfrak R\)의 원소 사이의 관계 때문에 위의 등식 정의는 불가능해진다. 예를 들어 기초체를 중간체로 바꿀 때 유한 확대체의 차수가 낮아지는 경우를 생각하면 된다. 반면 위의 확대는 새로운 영인자가 나타날 수 있다는 점으로 특징지어진다. 예컨대 유리계수 다항식영역 \(P\)의 \(x^2+1\)에 따른 잉여류환은 영인자가 없는 환으로서 체 \(P(\sqrt{-1})\)와 동형이지만, 계수를 \(P(\sqrt{-1})\)로 확대하면 \((x+i)(x-i)=x^2+1\)이고 어느 인자도 \(x^2+1\)로 나누어지지 않는 데 대응하여 영인자가 나타난다. 모든 유한 수체에서도 이에 대응하는 것이 성립한다. 이것이 고차 복소수에 대하여 Dedekind가 처음 제시한 관점이다. § 6, 4의 끝도 보라.}. 같은 이유로 합과 곱의 일의성을 요구해도 새로운 관계가 생기지 않는다. 같은 원소들을 계수가 같은 것으로 가정할 수 있으므로 형식적으로 같은 합과 곱의 식이 나오기 때문이다.
+
+이제 환 연산의 모든 공리가 충족됨을 곧바로 확인할 수 있다. 따라서 환 첨가로 생성되는 확대환 \(\mathfrak R[\overline P]\)은 언제나 존재한다.
+
+\textbf{3. \(\mathfrak R\)과 \(\overline{\mathfrak R}\)의 아이디얼.} \(\mathfrak a\)가 \(\mathfrak R\)의 아이디얼이면 모듈곱 \(\overline{\mathfrak R}\mathfrak a\)는 \(\overline{\mathfrak R}\)의 아이디얼 \(\overline{\mathfrak a}\)가 되며, 이를 \(\mathfrak a\)의 확대아이디얼이라 한다. 동시에 \(\overline{\mathfrak a}\)는 \(\overline{\mathfrak R}\)에서 \(\mathfrak a\)로부터 유도된 아이디얼이다. 이는 모든 유한합 \(\sum\bar c_i a_i\)로 이루어지며, \(a_i\)는 \(\mathfrak a\)의 모든 원소를, \(\bar c_i\)는 \(\overline P\)의 모든 원소를 두루 돈다.
+
+\(\overline{\mathfrak b}\)가 \(\overline{\mathfrak R}\)의 아이디얼이면 교집합 \([\overline{\mathfrak b},\mathfrak R]\)은 \(\mathfrak R\)의 아이디얼 \(\mathfrak b\)가 되며, 이를 \(\overline{\mathfrak b}\)의 수축아이디얼이라 한다\srcfn{1)}{H. Grell의 명칭이다(주 6에 인용한 논문, 83쪽).}. \(\mathfrak R\)의 각 아이디얼 \(\mathfrak a\)는 어떤 아이디얼의 수축아이디얼이며, 바로 그 확대아이디얼 \(\overline{\mathfrak a}\)의 수축아이디얼이다. 실제로 \([\mathfrak R,\overline{\mathfrak a}]\)의 각 원소 \(a\)는 \(\sum\bar c_i a_i\) 꼴이고, 여기서 \(a_i\)들은 \(P\) 또는 \(\overline P\)에 관하여 선형독립이라고 가정할 수 있다. 그러면 \(a,a_i\)는 \(\overline{\mathfrak R}\)에서 선형종속이고, 등식의 정의에 따라 \(\mathfrak R\)에서도 선형종속이다. 따라서 \(a\in\mathfrak a\)이다. 역포함도 성립하므로 \(\mathfrak a=[\mathfrak R,\overline{\mathfrak a}]\)이다.
+
+\(\overline{\mathfrak p}\)가 \(\overline{\mathfrak R}\)의 소아이디얼이면 \(\mathfrak p=[\mathfrak R,\overline{\mathfrak p}]\)는 \(\mathfrak R\)의 소아이디얼이다. 실제로 제2동형정리\srcfn{2)}{\emph{아이디얼 이론} § 4, 3. 거기서는 같은 환의 아이디얼에 대해서만 정리를 말했지만, 같은 논증으로 \(\overline{\mathfrak R}\)의 임의의 아이디얼 \(\overline{\mathfrak a}\)에 대해서도 위 꼴로 성립한다. 환 준동형 \(\overline{\mathfrak R}\sim\overline{\mathfrak R}/\overline{\mathfrak a}\)는 부분환 \(\mathfrak R\)에 대하여 환 준동형 \(\mathfrak R\sim(\mathfrak R,\overline{\mathfrak a})/\overline{\mathfrak a}\)를 유도한다. 이 준동형에서는 \([\mathfrak R,\overline{\mathfrak a}]\)의 모든 원소와 오직 그 원소들만 영원소에 대응하므로 \((\mathfrak R,\overline{\mathfrak a})/\overline{\mathfrak a}\simeq\mathfrak R/[\mathfrak R,\overline{\mathfrak a}]\)이다. 양쪽의 류들은 \(\mathfrak R\)의 같은 원소들로 대표할 수 있다. 증명의 각 단계에서 원소를 그 원소가 대표하는 류에 대응시키기 때문이다.}에 따라 잉여류환 \(\mathfrak R/\mathfrak p\)는 \(\overline{\mathfrak R}/\overline{\mathfrak p}\)의 부분환과 동형이고, 따라서 영인자가 없는 환이다. 곧 다음 환 동형이 성립한다.
+\[
+   (\mathfrak R,\overline{\mathfrak p})/\overline{\mathfrak p}
+     \simeq \mathfrak R/[\mathfrak R,\overline{\mathfrak p}],
+\]
+여기서 \((\mathfrak R,\overline{\mathfrak p})\)는 두 모듈 \(\mathfrak R\)과 \(\overline{\mathfrak p}\)의 합, 곧 최대공약수를 뜻한다.
+
+\begin{center}
+\textbf{§ 2. 유한 랭크 환. 직합표현}
+\end{center}
+
+\textbf{1. 유한 랭크 환.} \(\mathfrak R\)이 유한 \(P\)-모듈이면 \(\mathfrak R\)은 \(P\)에 관하여 어떤 유한 랭크 \(k\)를 갖는다. 곧 \(\mathfrak R\)에는 \(P\)에 관하여 선형독립인 원소가 정확히 \(k\)개까지 있고, 그러한 \(k\)개 원소로 이루어진 모든 계는 \(\mathfrak R\)의 모듈기저가 된다. 유한 랭크인 한 \(P\)-모듈 \(\mathfrak B\)가 같은 유한 랭크인 다른 모듈 \(\mathfrak A\)로 나누어지면, \(\mathfrak B\equiv0\,(\mathfrak A)\), 두 모듈은 동일하다.
+
+이제부터 \(\mathfrak R\)은 \(P\)에 관하여 유한 랭크 \(n\)이라고 가정한다. 그러면 \(\mathfrak R\)의 각 \(P\)-모듈도 유한 랭크이다. 따라서 \(\mathfrak R\)의 \(P\)-모듈들의 진약수사슬 또는 진배수사슬에서는 각 모듈의 랭크가 바로 앞 모듈보다 각각 크거나 작아야 하므로, 사슬은 유한하게 끝난다. 특히 \(\mathfrak R\)의 모든 아이디얼계에 대해 “이중사슬정리”가 성립한다.
+
+이로부터\srcfn{1)}{\emph{아이디얼 이론} § 7, 2.} \(\mathfrak R\)의 한 소아이디얼 \(\mathfrak p\)는 단위아이디얼과 다른 진약수를 갖지 않으며, 따라서 단위아이디얼과 다른 소아이디얼에 따른 잉여류환 \(\mathfrak R\,|\,\mathfrak p\)는 체가 된다. \(\mathfrak q\)가 \(\mathfrak p\)에 속하는 으뜸아이디얼, 곧 \(\mathfrak q\equiv0\,(\mathfrak p)\)이고 \(\mathfrak p^\rho\equiv0\,(\mathfrak q)\)이면, 잉여류환 \(\mathfrak R\,|\,\mathfrak q\)는 으뜸환이 된다. 즉 이 환에서는 각 영인자의 어떤 거듭제곱, 여기서는 늦어도 \(\rho\)제곱이 0이고, \(\mathfrak R\,|\,\mathfrak q\)에는 영인자와 단위만 있다. 마지막 명제는 \(\mathfrak p\)로 나누어지지 않는 각 아이디얼이 \(\mathfrak p\), 따라서 \(\mathfrak q\)와 서로소가 된다는 데서 곧바로 나온다.
+
+이중사슬정리와 단위원의 존재로부터 다시\srcfn{2)}{\emph{아이디얼 이론} § 7, 3, 정리 V.} \(\mathfrak R\)의 각 아이디얼 \(\mathfrak a\)를 유한개의 쌍마다 서로소인 으뜸아이디얼의 곱으로 유일하게 나타낼 수 있다. 서로소성이 있으므로 이 곱은 최소공배수와 같고, 잉여류환 \(\mathfrak R\,|\,\mathfrak a\)를 으뜸환들의 직합으로 나타내는 것에 대응한다\srcfn{3)}{\emph{아이디얼 이론} § 4, 5. 현재의 정리에서 덧붙인 내용은 문헌의 여러 곳에 흩어져 있다.}. 곧 \(\mathfrak R\,|\,\mathfrak a\)는 이 환들의 최대공약수이고, \(\mathfrak R\,|\,\mathfrak a\)의 각 원소의 합표현은 유일하다.
+
+\textbf{2. 유한 랭크 환을 으뜸환들의 직합으로 나타내기.} \(\mathfrak R\)의 영아이디얼 분해가
+\[
+   (0)=\mathfrak q_1\cdot\mathfrak q_2\cdots\mathfrak q_r
+      =[\mathfrak q_1,\mathfrak q_2,\ldots,\mathfrak q_r]
+\]
+로 주어지고, 이에 대응하는 직합표현이
+\[
+   \mathfrak R=\mathfrak R_1+\mathfrak R_2+\cdots+\mathfrak R_r,
+   \qquad
+   \mathfrak R_i\mathfrak R_k=(0)\quad\hbox{for } i\ne k,
+   \qquad
+   \mathfrak R_i^2=\mathfrak R_i,
+   \qquad
+   \mathfrak R\mathfrak R_i=\mathfrak R_i
+\]
+라 하자. 이때 \(\mathfrak R_i\)는 \(\mathfrak R\)의 아이디얼이고,
+\[
+   \mathfrak R_i
+   =\mathfrak q_1\cdots\mathfrak q_{i-1}\mathfrak q_{i+1}\cdots\mathfrak q_r
+   =[\mathfrak q_1,\ldots,\mathfrak q_{i-1},\mathfrak q_{i+1},\ldots,\mathfrak q_r],
+\]
+\[
+   \mathfrak q_i=\mathfrak R_1+\cdots+\mathfrak R_{i-1}+\mathfrak R_{i+1}+\cdots+\mathfrak R_r
+\]
+이며, \(\mathfrak R_i\)는 잉여류환 \(\mathfrak R\,|\,\mathfrak q_i\)와 동형이다. 구체적으로 \(\mathfrak R_i\)의 각 원소 \(\gamma_i\)에는 \(\mathfrak R\,|\,\mathfrak q_i\)에서 \(\gamma_i\)가 대표하는 류가 대응한다\srcfn{4)}{\emph{아이디얼 이론} § 4, 5.}. \(\mathfrak a\)가 \(\mathfrak R\)의 임의의 아이디얼이면 분배법칙에 따라
+\[
+   \mathfrak a=\mathfrak R\mathfrak a
+   =\mathfrak R_1\mathfrak a+\cdots+\mathfrak R_r\mathfrak a
+   =\mathfrak a_1+\cdots+\mathfrak a_r.
+\]
+\(\mathfrak a_i=\mathfrak R_i\mathfrak a=\mathfrak R\mathfrak a_i\)이므로 각 성분 \(\mathfrak a_i\)는 \(\mathfrak R_i\)와 \(\mathfrak R\) 양쪽 모두의 아이디얼이다. \(\mathfrak a_i\)는 \(\mathfrak R_i\)와 마찬가지로 유한 \(P\)-모듈이고, 직합이므로 그 랭크들의 합은 각각 \(\mathfrak a\)와 \(\mathfrak R\)의 랭크이다.
+
+단위원의 합표현이
+\[
+   e=\varepsilon_1+\cdots+\varepsilon_r,
+   \qquad
+   \varepsilon_i\varepsilon_k=0\quad\hbox{for } i\ne k,
+   \qquad
+   \varepsilon_i^2=\varepsilon_i,
+   \qquad
+   \varepsilon_i\equiv e\,(\mathfrak q_i)
+\]
+로 주어지면, \(\mathfrak R\)의 임의의 원소 \(\gamma\)는 유일하게
+\[
+   \gamma=\gamma e=\gamma\varepsilon_1+\cdots+\gamma\varepsilon_r
+      =\gamma_1+\cdots+\gamma_r
+\]
+로 나타난다. 여기서 성분 \(\gamma_i=\gamma_i\varepsilon_i\)는 \(\mathfrak R_i\)의 원소이고, 동시에 \(\mathfrak R_i=\mathfrak R\varepsilon_i\)이다. “직교관계”로부터
+\[
+   \gamma\delta=(\gamma_1\varepsilon_1+\cdots+\gamma_r\varepsilon_r)
+      (\delta_1\varepsilon_1+\cdots+\delta_r\varepsilon_r)
+   =\gamma_1\delta_1\varepsilon_1+\cdots+\gamma_r\delta_r\varepsilon_r
+\]
+가 나온다. 따라서 \(\gamma_i\delta_i\)는 곱의 \(i\)번째 성분이고, \(\gamma_i+\delta_i\)는 합의 \(i\)번째 성분이다. 이는 \(\mathfrak R\)에서 \(\mathfrak R_i\)로 가는 준동형에서도 따라온다.
+
+환 \(\mathfrak R_i\)는 \(P\)와 동형인 부분체 \(P_i=P\varepsilon_i\)를 포함하고 \(P_i\)에 관하여 유한 랭크이다. 이 랭크는 \(\mathfrak R_i\)가 \(P\)-모듈로서 갖는 랭크와 같다. 실제로 \(c\in P\)이면 \(c\varepsilon_i\equiv ce\equiv c\,(\mathfrak q_i)\)이므로 \(c\ne0\)일 때 \(c\varepsilon_i\ne0\)이다. 따라서 \(P\)와 \(P_i\) 사이의 준동형은 동형이 된다. 또한 \(\mathfrak R_i\)의 원소들 사이의 \(P\)에 관한 모든 선형종속관계는 \(\varepsilon_i\)를 곱하면 \(P_i\)에 관한 관계로 옮겨가고, 역으로 \(P_i=P\varepsilon_i\)이므로 \(P_i\)에 관한 모든 관계는 동시에 \(P\)에 관한 관계이다. 따라서 두 랭크가 일치한다.
+
+\textbf{3. 확대환의 직합표현.}
+\[
+   \mathfrak R=\mathfrak R_1+\cdots+\mathfrak R_r
+\]
+이면 \(\overline{\mathfrak R}\)에는
+\[
+   \overline{\mathfrak R}=\overline{\mathfrak R}_1+\cdots+\overline{\mathfrak R}_r
+\]
+라는 표현이 성립한다. 여기서 \(\overline{\mathfrak R}_i\)는 \(\overline{\mathfrak R}\)에서 \(\mathfrak R_i\)의 확대아이디얼이며, 동시에 \(\overline{\mathfrak R}\)에서 \(\mathfrak R_i\)로부터 유도된 환이다. 실제로 \((0)=\mathfrak q_1\cdots\mathfrak q_r\)에 \(\overline{\mathfrak R}\)을 곱하면 곱표현 \((\overline 0)=\overline{\mathfrak q}_1\cdots\overline{\mathfrak q}_r\)를 얻고, \(\overline{\mathfrak q}_i\)들은 다시 쌍마다 서로소이다. 따라서 \(\overline{\mathfrak R}\)의 직합표현이 나오며, 그 \(i\)번째 성분은
+\[
+   \overline{\mathfrak q}_1\cdots\overline{\mathfrak q}_{i-1}\,
+   \overline{\mathfrak q}_{i+1}\cdots\overline{\mathfrak q}_r
+\]
+이므로 \(\mathfrak R_i\)의 확대아이디얼과 같다. 그런데 § 1, 3에 따라 이 확대아이디얼은 \(\overline P_i=\overline P\varepsilon_i\)에 관하여 \(\mathfrak R_i\)에서 만든 확대환 \(\mathfrak R_i[\overline P_i]\)와 동일하다. 따라서 확대할 때에는 각 성분을 확대하는 것으로 충분하다. 다만 \(\overline{\mathfrak R}_i\)는 일반적으로 더 이상 으뜸환이 아니다.
+
+\textbf{4. 제1종과 제2종 소아이디얼.} 1에 따라 단위아이디얼과 다른 각 소아이디얼 \(\mathfrak p\)에 따른 잉여류환 \(\mathfrak R\,|\,\mathfrak p\)는 체이다. 이 체에는 \(P\)와 동형인 부분체
+\[
+(P)=(P,\mathfrak p)\,|\,\mathfrak p\simeq P\,|\,[P,\mathfrak p]\simeq P
+\]
+가 있다. \(\mathfrak p\)는 \(P\)의 0 아닌 원소를 포함할 수 없기 때문이다. 따라서 \((P)\)는 \(P\)의 원소로 대표할 수 있는 모든 류와 오직 그 류들로 이루어진다\srcfn{1)}{제2동형정리에 관한 § 1, 3의 주를 보라.}. \(\mathfrak R\,|\,\mathfrak p\)는 \((P)\)에 관하여 유한 랭크이고, 따라서 유한 대수적 확대체이다. 이 확대가 제1종인지 제2종인지에 따라\srcfn{2)}{잘 알려진 Steinitz의 용어로, 대수적 확대는 각 원소가 어떤 확대체에서 서로 다른 일차인자들로 분해되는 소다항식의 영점이면 제1종이고, 그렇지 않으면 제2종이다.} \(\mathfrak p\)를 제1종 또는 제2종 소아이디얼이라 한다.
+
+\begin{center}
+\textbf{§ 3. 완전가약환}
+\end{center}
+
+\textbf{1.} 환 \(\mR\)은 그 영아이디얼의 곱표현(§ 2, 2)에서 모든 으뜸성분이 소아이디얼이 될 때 \emph{완전가약}이라 한다. § 2, 1과 2에 따라 이는 \(\mR\)을 유한개의 체의 직합으로 나타낼 수 있다는 것과 같다. 모든 소아이디얼이 제1종이면 완전가약환을 제1종 완전가약이라 하고(§ 2, 4), 그렇지 않으면 제2종 완전가약이라 한다.
+
+\(P\)가 완전체이면 제1종 완전가약성만 존재한다. 특히 \(P\)가 대수적으로 닫힌 체이면 언제나 그러하다. 이하에서 \(\bP\)는 특히 \(P\)로부터 얻은 대수적으로 닫힌 체를 뜻하고, \(\bR=\mR[\bP]\)라 둔다.
+
+\textbf{2. 정리.} \emph{환 \(\mR\)이 제1종 완전가약인 것은, 대수적으로 닫힌 \(\bP\)를 갖는 확대환 \(\bR=\mR[\bP]\)이 (제1종) 완전가약일 때 그리고 오직 그때이다.}
+
+증명은 세 단계로 이루어진다.
+
+\textbf{2a.} \(\bR\), 더 일반적으로 어떤 확대환이 완전가약이면 \(\mR\)도 제1종 또는 제2종 완전가약이다. 실제로 가정에 따라 \(\bR\)의 영아이디얼은 소아이디얼들의 최소공배수로
+\[
+        (\overline{0})=[\bp_1,\ldots,\bp_s]
+\]
+와 같이 나타난다. \(\mR\)과의 교집합을 취하면 영아이디얼의 표현
+\[
+        (0)=[[\mR,\bp_1],\ldots,[\mR,\bp_s]]
+\]
+을 얻고, § 1, 3에 따라 \([\mR,\bp_i]\)들은 소아이디얼이다.
+
+\textbf{2b.} \(\mR\)이 제1종 완전가약이면 \(\bR\), 더 일반적으로 \(\mR\)과 \(\bR\) 사이의 모든 중간환도 제1종 완전가약이다.
+
+§ 2, 3에 따라 \(\mR\)의 직합표현에는 \(\bR\)의 직합표현이 대응하고, 각 성분 \(\bR_i\)는 확대환 \(\mR_i[\bP_i]\)가 된다. 여기서 \(\bP_i\)는 성분 \(\mR_i\)의 \(P\)와 동형인 부분체 \(P_i\)의 확대체이고 \(\bP\)와 동형이다. 따라서 각 성분 \(\mR_i\)만 고찰하면 충분하다. 일반성을 잃지 않고 \(\mR\)이 체이고, 그 부분체 \(P\)의 유한 제1종 확대체라고 가정할 수 있다. 그러면 \(\mR\)은 제1종 원시원소 하나를 \(P\)에 첨가하여 생성된다. 달리 말하면 \(\mR\)은 한 부정원 \(x\)의 다항식환 \(P[x]\)에서 제1종 소다항식 \(f(x)\)에 따른 잉여류환 \(P[x]\,|\,f(x)\)와 동형이다. \(\Omega\)가 \(P\)의 확대체이면 \(\Omega[x]\,|\,f(x)\)는 \(\mR[\Omega]\)와 동형이다. 실제로 \(P[x]\)에서 \(\Omega[x]\)로 옮겨도 잉여류환의 랭크는 \(f(x)\)의 차수와 같게 유지되므로, 이것은 정확히 § 1, 2에서 준 확대환의 구성이다. \(\Omega[x]\)에서 \(f(x)\)는 쌍마다 서로소인 제1종 소다항식들로 분해되고, 각각은 \(\Omega[x]\)에서 소아이디얼을 생성한다. 이는 \(\Omega[x]\,|\,f(x)\), 따라서 동형에 의해 \(\mR[\Omega]\)가 제1종 완전가약임을 뜻한다. 모든 확대체 \(\Omega\), 특히 대수적으로 닫힌 체 \(\bP\)에 대해 이것이 성립하므로 2b가 증명된다.
+
+\textbf{2c.} \(\mR\)이 제2종 완전가약이면 \(\bR\)은 완전가약이 아니다.
+
+2b에서와 마찬가지로 \(\mR\)을 체, 더 정확히는 \(P\)의 유한 제2종 확대체라고 가정하면 충분하다. \(\bR\)을 으뜸환들의 직합으로 나타낼 때 적어도 하나의 진으뜸성분이 나타남을 보여야 한다. 이를 위해서는 \(\bR\)의 어떤 0 아닌 원소의 한 거듭제곱이 0임을 보이면 충분하다. 실제로 \(\bar\beta\ne0\)이면 적어도 한 성분 \(\bar\beta_\lambda\ne0\)이고, \(\bar\beta^\sigma=0\)이면 \(\bar\beta_\lambda^\sigma=0\)이다(§ 2, 2, \(\bR\)에서 \(\bR_\lambda\)로 가는 준동형). 따라서 \(\bR_\lambda\)는 체가 아니다.
+
+\(\gamma\)를 \(\mR\)의 지수 \(f\ge1\)인 제2종 원소라 하고,
+\[
+        F(\gamma)=\gamma^{kp^f}+c_1\gamma^{(k-1)p^f}+\cdots+c_k=0
+\]
+을 \(\gamma\)가 \(P\)에 관하여 만족하는 최소차수 방정식이라 하자. 여기서 \(p\)는 \(P\)의 표수이다. \(\mR\)의 원소들
+\[
+        e,\gamma,\gamma^2,\ldots,\gamma^{kp^f-1}
+\]
+은 \(P\)에 관하여 선형독립이고, 따라서 등식의 정의에 의해 \(\bR\)에서도 \(\bP\)에 관하여 선형독립이다. 이제
+\[
+        G(\gamma)=\gamma^{kp^{f-1}}+\sqrt[p]{c_1}\,\gamma^{(k-1)p^{f-1}}+\cdots+\sqrt[p]{c_k}
+\]
+로 두면 \(G(\gamma)\)는 \(\bR\)의 0 아닌 원소이다. 실제로 \(p>1\), \(f\ge1\)이므로 \(kp^{f-1}<kp^f\)이고, 따라서 \(G(\gamma)\)에 나타나는 \(\gamma\)의 거듭제곱들 사이에는 종속관계가 있을 수 없다. 그러나 \((G(\gamma))^p=F(\gamma)=0\)이다. 이로써 2c가 증명된다.
+
+2a와 2c에서 \(\bR\)의 제1종 완전가약성이 \(\mR\)의 제1종 완전가약성을 함의하고, 2b에서 그 역이 나온다. 이로써 2의 정리가 증명되었다.
+
+\textbf{3. 따름정리.} \emph{\(\mR\)이 제1종 완전가약이면 \(\bR\)은 랭크 1인 환들, 곧 \(\bP\)와 동형인 체들의 직합이 된다. 랭크 1인 환들로의 이러한 분해는 이미 어떤 환 \(\mR[\Omega]\)에서 존재하며, 여기서 \(\Omega\)는 \(P\)의 유한 확대체이다.}
+
+실제로 2b에 따라 \(\bR\)은 체들의 직합이 되고, 이 체들은 \(\bP\)와 동형인 부분체들의 유한 확대이므로(§ 2, 2), \(\bP\)가 대수적으로 닫혀 있다는 데서 그 부분체들과 동일하다. 따라서
+\[
+        \bR=\bP\bar e_1+\cdots+\bP\bar e_n,
+        \qquad e=\bar e_1+\cdots+\bar e_n
+\]
+을 얻는다. \(e\)의 성분 \(\bar e_\lambda\)들은 동시에 \(\bR\)의 선형독립인 모듈기저를 이룬다.
+
+§ 1, 2에 따라 \(\bar e_\lambda\)들을 \(\mR\)의 원소 \(\gamma\)들의 \(\bP\)-계수 선형결합으로 나타내면, 나타나는 모든 계수의 계는 \(P\)의 어떤 유한 확대체 \(\Omega\)를 정한다. 따라서 \(\bar e_\lambda\in\mR[\Omega]\)이고 모듈기저의 성질로부터
+\[
+        \mR[\Omega]=\Omega\bar e_1+\cdots+\Omega\bar e_n
+\]
+을 얻는다. 그러므로 이미 \(\mR[\Omega]\)에서 랭크 1인 환들로의 분해가 성립하고, \(\mR[\Omega]\)와 \(\bR\) 사이의 각 중간환에서는 분해 불가능한 성분들이 \(\Omega\bar e_i\)의 확대환으로 생긴다\srcfn{1)}{그러한 최소 확대체 \(\Omega\)는 \(\mR\)의 성분 \(\mR_i=\mR e_i\)가 정하는 갈루아체들의 합성체로 특징지을 수 있다. 실제로 2b의 \(f_i(x)\)를 \(P[x]\,|\,f_i(x)\)가 각각 성분 \(\mR_i\)와 동형이 되도록 택하자. \(\Omega^{(i)}\)를 \(f_i(x)\)를 일차인자들로 분해하기에 꼭 충분한, \(\bP\) 안의 갈루아 확대체라 하고, \(\Omega\)를 모든 \(\Omega^{(i)}\)의 합성체라 하자. \(f_i(x)\)가 일차인자들로 분해되는 데에는 \(\Omega^{(i)}[x]\,|\,f_i(x)\)를 랭크 1인 체들의 직합으로 나타내는 것이 대응하고, \(\Omega^{(i)}\)는 이것이 가능한 최소 확대체이다. 따라서 동형에 의해 \(\mR_i[\Omega^{(i)}e_i]\), 나아가 \(\mR[\Omega]\)에도 같은 사실이 성립한다.}.
+
+\begin{center}
+\textbf{§ 4. 행렬표현,}\\
+\textbf{유한 랭크 환의 대각합과 판별식}
+\end{center}
+
+수체와 함수체의 오더도 포함하기 위하여 이 절과 다음 절에서는 기초환에 대한 가정을 지금까지보다 조금 일반적으로 둔다. 본질적으로 알려진 사실들을 일반적이고 통일된 꼴로 정식화하려는 것이다.
+
+\emph{가정:} \(\mR\)은 영인자가 없는 환 \(\Sigma\)의 확대환이고, \(\mR\)의 단위원은 이미 \(\Sigma\)에 속한다고 하자. \(\mR\)의 각 \(\Sigma\)-모듈, 특히 \(\mR\) 자체에는 \(\Sigma\)에 관하여 선형독립인 원소들로 이루어진 유한 모듈기저가 적어도 하나 존재한다고 하자. 그러면 \(\beta_1,\ldots,\beta_s\)가 \(a_1,\ldots,a_s\)와 같은 \(\Sigma\)-모듈의 선형독립인 모듈기저인 것은 그 사이의 변환행렬식이 \(\Sigma\)의 단위일 때 그리고 오직 그때이다.
+
+이 가정은 지금까지 고찰한 유한 랭크 환에서 분명히 충족되며, 이때 \(\Sigma\)는 체 \(P\)이다. 수체와 함수체의 오더에서도 충족되며, 이때 \(\Sigma\)는 각각 유리정수환 또는 함수식영역이다\srcfn{2)}{\emph{아이디얼 이론} § 3을 보라.}.
+
+\textbf{1. \(\mR\)과 준동형인 행렬환.} \(a_1,\ldots,a_s\)가 아이디얼 \(\ma\)의 선형독립인 \(\Sigma\)-모듈기저이고 \(\gamma\)가 \(\mR\)의 임의의 원소라 하자. 그러면 \(\gamma a_i\)도 \(\ma\)에 속하므로 \(\Sigma\)의 계수\srcfn{3)}{\(\Sigma\)의 원소는 라틴 문자로 나타낸다.}를 갖는 등식
+\[
+\gamma a_i=c_{1i}a_1+\cdots+c_{si}a_s,
+\qquad (i=1,\ldots,s)
+\]
+들이 성립한다. \((\tau_1,\ldots,\tau_s)\)가 이 원소들로 이루어진 한 행짜리 행렬을 뜻한다고 하면 행렬꼴로는
+\[
+(\gamma a_1,\ldots,\gamma a_s)
+=(a_1,\ldots,a_s)
+\begin{pmatrix}
+ c_{11}&\cdots&c_{1s}\\
+ \vdots&&\vdots\\
+ c_{s1}&\cdots&c_{ss}
+\end{pmatrix}
+=(a_1,\ldots,a_s)C
+\]
+이다.
+
+\emph{\(\gamma\)가 \(\mR\)의 모든 원소를 두루 돌면 기저 \(a_i\)에 따라 대응하는 행렬 \(C\)들의 전체는 준동형 행렬환 \(R_\ma\)를 이룬다. \(R_\ma\)는 잉여류환 \(\mR\,|\,((0):\ma)\)와 동형이며, 여기서 \((0):\ma\)는 영아이디얼을 \(\ma\)로 나눈 아이디얼 몫이다.} 실제로 차 \(\beta-\gamma\)에는 분명히 \(B-C\)가 대응한다. 곱에 대해서도 같다. 곧
+\[
+(\beta\gamma a_1,\ldots,\beta\gamma a_s)
+=(\beta a_1,\ldots,\beta a_s)C
+=(a_1,\ldots,a_s)BC.\srcfnmark{1)}
+\]
+\srcfntext{1)}{표기법은 \(\Sigma\)가 모든 원소와 교환한다고 가정한 비가환환 \(\mR\)에서도 그대로 유지되도록 배열하였다.}
+특히 \(\Sigma\)의 원소 \(c\)에는 대각행렬 \(cE\)가 대응한다. 여기서 \(E\)는 단위원 \(e\)에 대응하는 행렬 \((\begin{smallmatrix}e&&\\&\ddots&\\&&e\end{smallmatrix})\)이다. 또한 \(\gamma\ma\)가 영아이디얼인 원소 \(\gamma\)들과 오직 그 원소들에 영행렬이 대응하므로 위의 동형을 얻는다.
+
+\emph{\(\ma\)의 다른 기저 \(\bar a\)는 \(R_\ma\)와 동형이고 더 정확히 동치인 행렬환 \(R_{\bar\ma}=P^{-1}R_\ma P\)를 생성한다.} \(\bar a_1,\ldots,\bar a_s\)가 또 하나의 선형독립인 \(\Sigma\)-모듈기저이면
+\[
+(\bar a_1,\ldots,\bar a_s)=(a_1,\ldots,a_s)P
+\]
+이고, 행렬 \(P\)의 행렬식은 \(\Sigma\)의 단위이다. 따라서
+\[
+(\gamma\bar a_1,\ldots,\gamma\bar a_s)
+=(a_1,\ldots,a_s)CP
+=(\bar a_1,\ldots,\bar a_s)P^{-1}CP\srcfnmark{1)},
+\]
+곧 \(R_{\bar\ma}=P^{-1}R_\ma P\)이다.
+
+\textbf{2. 아이디얼류와 표현류.} \(\mR\)의 두 아이디얼 \(\ma,\mb\)를 \(\mR\)-모듈로 보아 동형일 때 같은 아이디얼류에 속한다고 한다. 곧 두 아이디얼의 원소들을 일대일 대응시켜 차와 같은 \(\mR\) 원소에 의한 곱셈이 보존되며, \(a\simeq\beta\)이면 임의의 \(\gamma\in\mR\)에 대해 언제나 \(\gamma a\simeq\gamma\beta\)인 경우이다.
+
+1의 행렬표현으로 생성한 두 환 \(R_\ma,R_{\bar\ma}\)가 동치일 때, 곧 어떤 유니모듈러 행렬 \(P\)가 있어 \(R_{\bar\ma}=P^{-1}R_\ma P\)일 때 같은 표현류에 속한다고 한다\srcfn{2)}{특수한 경우에 해결된 다음 문제는 여기서 다루지 않는다. \(\mR\)과 준동형인 모든 행렬환을 1에 따라 \(\mR\)의 한 아이디얼로 생성할 수 있는가, 필요하다면 선형종속인 기저를 허용하면 가능한가? 표현류는 정의상 1에 따라 \(\mR\)의 아이디얼이 생성하는 행렬환들로만 이루어진다.}.
+
+\emph{아이디얼류와 표현류는 일대일로 대응한다.} 1에서 같은 아이디얼의 서로 다른 모듈기저들이 같은 표현류의 환 \(R_\ma,R_{\bar\ma}\)를 생성함을 보였다. 더 나아가 같은 아이디얼류의 서로 다른 아이디얼 \(\ma,\mb\)도 같은 표현류의 환을 생성한다. 실제로 \(\beta_1,\ldots,\beta_s\)를 동형에 따라 \(\ma\)의 기저 \(a_1,\ldots,a_s\)에 대응하는 \(\mb\)의 기저라 하자. 그러면 \(\gamma a_i\)와 \(\gamma\beta_i\)가 대응하고, \(c_{1i}a_1+\cdots+c_{si}a_s\)와 \(c_{1i}\beta_1+\cdots+c_{si}\beta_s\)도 대응하므로 환 \(R_\ma\)와 \(R_\beta\)는 동일하다.
+
+역으로 \(R_\ma\)와 \(R_{\bar\beta}\)가 같은 표현류에 속하여 \(R_{\bar\beta}=P^{-1}R_\ma P\)라 하자. 여기서 \(a_i\)는 \(\ma\)의 기저이고 \(\bar\beta_i\)는 \(\mb\)의 기저이다. 그러면
+\[
+(\beta_1,\ldots,\beta_s)=(\bar\beta_1,\ldots,\bar\beta_s)P^{-1}
+\]
+도 \(\mb\)의 기저이고 \(R_\beta=PR_{\bar\beta}P^{-1}=R_\ma\)이다. 이제 \(\ma\)의 각 원소 \(a=c_1a_1+\cdots+c_sa_s\)에 \(\mb\)의 원소 \(\beta=c_1\beta_1+\cdots+c_s\beta_s\)를 대응시키면, 이 대응은 일대일이고 합과 차를 보존한다. \(R_\ma=R_\beta\)에서 \(\gamma a_i\)와 \(\gamma\beta_i\)도 대응한다. 이들은 각각 \(a_i\)와 \(\beta_i\)의 같은 선형형식으로 표현되기 때문이다. 따라서 일반적으로 \(\gamma a\)와 \(\gamma\beta\)가 대응하고, \(\ma,\mb\)는 같은 아이디얼류에 속한다. 단위아이디얼의 류를 \emph{주류}라 한다. 따라서 \(\mR\)의 모든 기저는 주류를 표현류로 낳는다.
+
+\textbf{3. 한 류에 관한 원소의 대각합.} \(C\)가 \(R_\ma\)에서 \(\mR\)의 원소 \(\gamma\)에 대응하는 행렬이라 하자. \(R_\ma\)에서 \(R_{\bar\ma}\)로 옮겨가는 것을 보면 행렬식 \(|C|\), 더 일반적으로 \(t\)가 부정원일 때 \(|tE-C|\)는 표현류의 불변량이다. 2에 따라 이는 동시에 아이디얼류의 불변량, 줄여서 \emph{류불변량}이다. 따라서 \(|tE-C|\)의 \(t\)의 각 계수는 류불변량이다. 특히 \((-t^{s-1})\)의 계수를 \emph{류에 관한 \(\gamma\)의 대각합}이라 하고
+\[
+S_{(\ma)}(\gamma)=c_{11}+c_{22}+\cdots+c_{ss}
+\]
+로 쓴다. \(t\)가 없는 계수 \(\pm|C|\)는 \emph{류에 관한 \(\gamma\)의 노름}이라 한다.
+
+\emph{고정한 류 \((\ma)\)에 관한 대각합 \(S_{(\ma)}(\gamma)\)들은 \(\Sigma\)-모듈을 이루며, \(\Sigma\)-모듈로 본 \(\mR\)은 이 모듈에 준동형이다.} 실제로 1에서 증명한 \(\mR\)에서 \(R_\ma\)로의 환 준동형에 따라 \((\beta-\gamma)\sim(B-C)\), \(c\beta\sim cEB=cB\)이다. 따라서 대각합에 대해서는
+\[
+S_{(\ma)}(\beta-\gamma)=S_{(\ma)}(\beta)-S_{(\ma)}(\gamma),
+\qquad S_{(\ma)}(c\beta)=cS_{(\ma)}(\beta)
+\]
+이고, 모듈 성질과 준동형성이 나온다.
+
+\emph{주의: \(\mR\)이 영인자가 없는 환이면 원소의 대각합은 류와 무관하게 정의된다. 따라서 단순히 대각합이라고 할 수 있으며, 노름도 마찬가지이다.} 실제로 영인자가 없는 환에서는 영아이디얼이 아닌 모든 아이디얼의 랭크가 환의 랭크와 같다. 따라서 한 아이디얼의 각 기저는 몫체에서 동시에 단위아이디얼의 기저이다. 모든 대각합과 노름은 몫체에서 동시에 단위아이디얼로 생성되므로 \(\mR\)에서 류와 무관하다.
+
+\textbf{4. 한 류에 관한 아이디얼의 판별식.} 판별식 자체가 아니라 그 판별식이 \(\Sigma\)에서 생성하는 주아이디얼이 아이디얼과 류의 불변량이 된다.
+
+\(\varrho_1,\ldots,\varrho_s\)와 \(\bar\varrho_1,\ldots,\bar\varrho_s\)가 \(\mR\)의 한 아이디얼 \(\mathfrak r\)의 두 선형독립인 \(\Sigma\)-모듈기저라 하자. \emph{행렬식 \(|S_{(\ma)}(\varrho_i\varrho_k)|\)와 \(|S_{(\ma)}(\bar\varrho_i\bar\varrho_k)|\)는 \(\Sigma\)의 한 단위의 제곱을 인자로 한 차이만 가진다.} 실제로 이는 두 행렬식 \(|(\varrho_i\varrho_k)|\)와 \(|(\bar\varrho_i\bar\varrho_k)|\)에 대해 성립하며, 두 행렬식은 \(\varrho\)와 \(\bar\varrho\) 사이의 변환행렬식의 제곱만큼 다르다. 3에서 증명한 모듈 준동형성 때문에 \(S_{(\ma)}(\varrho_i\varrho_k)\)와 \(S_{(\ma)}(\bar\varrho_i\bar\varrho_k)\) 사이에는 \(\varrho_i\varrho_k\)와 \(\bar\varrho_i\bar\varrho_k\) 사이와 같은 선형관계가 성립한다. 따라서 동변변환에 의해 행렬식은 같은 인자를 얻는다.
+
+\(\Sigma\)의 단위의 제곱까지 정해지는 각 행렬식 \(|S_{(\ma)}(\varrho_i\varrho_k)|\)을 \emph{류 \((\ma)\)에 관한 \(\mathfrak r\)의 판별식}이라 하고, 그것이 \(\Sigma\)에서 생성하는 주아이디얼을 \emph{판별식아이디얼}이라 한다.
+
+\emph{주의: \(\mR\)이 영인자가 없는 환이면 아이디얼의 판별식은 바탕으로 삼은 류와 무관하다.} 이는 3에 따라 행렬식의 각 원소에 대해 무관성이 성립하기 때문이다.
+
+\begin{center}
+\textbf{§ 5. 류의 직합}
+\end{center}
+
+\textbf{1. 아이디얼류 또는 표현류의 직합.} 아이디얼 \(\ma\)가 직합 \(\ma=\mb+\mc\)이면 동형성에 따라 그 류의 모든 아이디얼 \(\bar\ma\)도 직합 \(\bar\ma=\bar\mb+\bar\mc\)이 된다. 이때 \(\mR\)-모듈로 본 \(\bar\mb,\bar\mc\)는 각각 \(\mb,\mc\)와 동형이다. 따라서 \emph{아이디얼류의 직합}과 \emph{성분류}를 말할 수 있다.
+
+한 표현류의 어떤 환 \(R_\ma\)가 \(R_\ma\)의 아이디얼이기도 한 부분환들의 직합이면, 동형에 의해 그 표현류의 모든 환 \(R_{\bar\ma}\)에 대해서도 같고, 성분들은 동치인 환들이 된다. 따라서 \emph{표현류의 직합}과 \emph{성분류}를 말할 수 있다.
+
+\emph{아이디얼류의 직합에는 표현류의 직합이 대응한다. 이 뜻에서 류의 직합이라 하겠다.}\srcfn{1)}{표현류의 모든 직합을 아이디얼류의 직합으로 생성할 수 있는지가 어느 정도까지 성립하는지는 다시 다루지 않는다.} \(\beta_1,\ldots,\beta_l\)가 \(\mb\)의 기저이고 \(\gamma_1,\ldots,\gamma_m\)이 \(\mc\)의 기저라 하자. 직합이므로 \(\beta\)들과 \(\gamma\)들을 합친 것은 \(\ma\)의 선형독립인 기저 \(a\)가 된다. 이 기저가 생성하는 행렬환을 \(R_\ma\)라 하면, \(\mR\)의 임의의 원소 \(\delta\)에 대응하는 \(R_\ma\)의 행렬은
+\[
+\begin{pmatrix}D^{(\beta)}&0\\0&D^{(\gamma)}\end{pmatrix}
+\]
+꼴이다. \(R^{(\beta)}\)를 모든 행렬 \((\begin{smallmatrix}D^{(\beta)}&0\\0&0\end{smallmatrix})\)의 계로 정의하고 \(R^{(\gamma)}\)도 대응하게 정의하자. 그러면 \(R^{(\beta)},R^{(\gamma)}\)가 \(R_\ma\)의 부분환이고 \(R_\ma\)가 그들의 직합임을 보여야 한다. 동시에 \(R^{(\beta)},R^{(\gamma)}\)는 각각 \(\mb,\mc\)가 생성하는 환 \(R_\beta,R_\gamma\)와 동형이다.
+
+실제로 준동형에 따라 \(R^{(\beta)}\)에는 \(\delta\mc=0\)인 \(\mR\)의 모든 원소 \(\delta\), 곧 아이디얼 몫 \((0):\mc\)의 원소들이 대응한다. 따라서 \(R^{(\beta)}\)는 준동형에 의해 \(R_\ma\)의 아이디얼이고, \(R^{(\gamma)}\)도 마찬가지이다. \(R_\ma\)는 이 아이디얼들의 합이며, 두 환의 곱 \(R^{(\beta)}R^{(\gamma)}\)가 0이므로 직합이다. 끝으로 행렬 \(D^{(\beta)}\)를 \(D^{(\beta)}\)와 영블록을 포함하는 \(R^{(\beta)}\)의 행렬에 대응시키면 \(R^{(\beta)}\)와 \(R_\beta\) 사이의 동형을 얻는다. 이 뜻에서 \(\ma\)의 아이디얼류의 성분류 \((\mb),(\mc)\)에는 \(R_\ma\)의 성분류가 대응한다.
+
+\textbf{2. 류의 직합에서 대각합과 판별식의 거동.} \(\ma=\mb+\mc\)이고 대각합 \(S_{(\ma)}(\delta)\)를 정할 때 행렬 \((\begin{smallmatrix}D^{(\beta)}&0\\0&D^{(\gamma)}\end{smallmatrix})\)을 바탕으로 삼으면, 1을 고려하여 다음을 읽어낼 수 있다.
+
+\emph{한 류에 관하여 취한 원소의 대각합은 각 성분류에 관하여 취한 대각합들의 합이다.}
+
+곱 \(\mb\mc\)가 0이므로 또한 다음을 읽어낼 수 있다.
+
+\emph{\(\beta\in\mb\)이면 \(S_{(\ma)}(\beta)=S_{(\mb)}(\beta)\)이다. 곧 류 \((\ma)\)에 관하여 취한 \(\beta\)의 대각합은 류 \((\mb)\)에 관하여 취한 대각합과 같다.}
+
+§ 4, 4를 함께 고려하면 다음이 따라온다.
+
+\emph{류 \((\ma)\)에 관하여 취한 성분아이디얼 \(\mb\)의 판별식아이디얼은 성분류 \((\mb)\)에 관하여 취한 \(\mb\)의 판별식아이디얼과 같다.}
+
+끝으로 다음을 얻는다.
+
+\emph{류 \((\ma)\)에 관하여 취한 \(\ma\)의 판별식아이디얼은 각 성분류에 관하여 취한 성분들의 판별식아이디얼의 곱과 같다.} 실제로 판별식과 대각합을 만들 때 모두 직합에 대응하는 \(\beta,\gamma\)의 기저를 바탕으로 삼으면, \((\ma)\)에 관한 \(\ma\)의 판별식아이디얼의 한 기저는
+\[
+\left|
+\begin{array}{cc}
+S_{(\ma)}(\beta_i\beta_k)&0\\
+0&S_{(\ma)}(\gamma_\mu\gamma_\nu)
+\end{array}
+\right|
+=
+\left|
+\begin{array}{cc}
+S_{(\mb)}(\beta_i\beta_k)&0\\
+0&S_{(\mc)}(\gamma_\mu\gamma_\nu)
+\end{array}
+\right|
+\quad
+\left(
+\begin{matrix}
+ i,k=1,\ldots,l,\\
+\mu,\nu=1,\ldots,m
+\end{matrix}
+\right)
+\]
+이다.
+
+\textbf{3. 확대환으로 이행.} \(\overline{\Sigma}\)가 \(\Sigma\)의 영인자 없는 확대환이고 \(\mR\)과 \(\overline{\Sigma}\)의 교집합이 \(\Sigma\)라고 하자. \(\overline{\Sigma}\)를 첨가하여 얻는 확대환 \(\bR=\mR[\overline{\Sigma}]\)는 § 1, 2와 같이 같은 랭크의 환으로 정의한다.
+
+\(\ma,\mathfrak r\)가 \(\mR\)의 아이디얼이고 \(\bar\ma,\bar{\mathfrak r}\)가 \(\bR\)에서 그 확대아이디얼이면, \((\bar\ma)\)에 관하여 취한 \(\bar{\mathfrak r}\)의 판별식아이디얼도 \((\ma)\)에 관하여 취한 \(\mathfrak r\)의 판별식아이디얼을 \(\overline{\Sigma}\)로 확대한 아이디얼이다. 실제로 \(\ma\) 또는 \(\mathfrak r\)의 모든 기저는 \(\bar\ma\) 또는 \(\bar{\mathfrak r}\)의 \(\overline{\Sigma}\)-모듈기저이기도 하므로, \((\bar\ma)\)에 관한 \(\bar{\mathfrak r}\)의 판별식을 만들 때 \(\ma,\mathfrak r\)의 기저를 바탕으로 삼을 수 있다. 특히 주류 \((\bR)\)에 관한 \(\bR\)의 판별식아이디얼은 주류 \((\mR)\)에 관한 \(\mR\)의 판별식아이디얼의 확대아이디얼이다. 이렇게 정의한 \(\Sigma\), 각각 \(\overline{\Sigma}\)의 아이디얼을 줄여서 \emph{환의 판별식아이디얼}이라 하겠다.
+
+\begin{center}
+\textbf{§ 6. 제1종 완전가약성의 판별식 판정조건}
+\end{center}
+
+이제부터 다시 \(\mR\)을 체 \(P\)의 확대환이라 하고 \(\bP\)를 \(P\)의 확대체라 하자. 제1종 완전가약성의 필요충분조건으로 판별식이 0이 아님을 얻을 것이다. § 5, 3에 따라 \(\mR\)의 판별식아이디얼은 확대환 \(\bR=\mR[\bP]\)으로 정할 수 있다. § 5, 2에 따라서는 \(\bR\)을 덧셈적으로 이루는 으뜸환들만 고찰하면 충분하다. 따라서 먼저 으뜸환의 판별식아이디얼을 고찰한다.
+
+\textbf{1. 특수한 \(P\)-모듈기저.} \(\ma,\mt\)가 \(\mR\)의 아이디얼이고 \(\ma\)가 \(\mt\)로 나누어지면, \(\ma\)의 임의의 기저 \(a_1,\ldots,a_s\)에 원소 \(\tau_{s+1},\ldots,\tau_t\)를 덧붙여 \(\mt\)의 선형독립인 모듈기저로 보충할 수 있다\srcfn{1)}{이 기저가 매개하는 임의의 원소 \(\gamma\)의 행렬표현은 \((\begin{smallmatrix}C_{\ma}&0\\C_1&C_2\end{smallmatrix})\) 꼴이고, 역으로 \(\mt\)가 매개하는 그러한 행렬표현에서는 \(\mt\)의 배수 \(\ma\)가 존재한다. 완전가약인 경우에는 분해 불가능한 성분들이 영아이디얼과 단위아이디얼 이외의 아이디얼을 갖지 않으므로, 이 성분아이디얼의 표현류에는 그러한 표현이 나타날 수 없다. § 5, 1에서 준 류의 직합 사이의 관계를 함께 고려하면 문헌에서 통상 쓰는 완전가약성의 정의에 이른다.}. 이는 \(P\)에 관한 유한 랭크라는 가정의 직접적인 결과이다.
+
+이제 \(\mR\)을 \emph{으뜸환}이라 하자. \(\mpideal\)을 영아이디얼에 속하는 소아이디얼, \(\varrho\)를 그 지수라 하자. 곧 \(\mpideal^\varrho=(0)\), \(\mpideal^{\varrho-1}\ne(0)\)이다. \(\mpideal^{\varrho-1}\)의 기저를 \(\mpideal^{\varrho-2}\)의 기저로 보충하고, 일반적으로 \(\mpideal^\lambda\)의 기저를 \(\mpideal^{\lambda-1}\)의 기저로 차례로 보충하면 \(\mR\)의 특수한 \(P\)-모듈기저를 얻는다. 여기서 \(\mR\)은 \(\mpideal^0\)으로 센다. 이 기저로 다음을 보일 수 있다.
+
+\emph{\(\mR\)이 으뜸환이면, 그에 속하는 소아이디얼 \(\mpideal\)로 나누어지는 모든 원소의 주류(§ 4, 2)에 관한 대각합은 0이다.} 그러한 특수한 \(P\)-모듈기저를
+\[
+\pi_{0,1},\ldots,\pi_{0,i_0};\quad
+\pi_{1,1},\ldots,\pi_{1,i_1};\quad\ldots;\quad
+\pi_{\varrho-1,1},\ldots,\pi_{\varrho-1,i_{\varrho-1}}
+\]
+이라 하자. 여기서
+\[
+\pi_{\lambda,j}\equiv0\;(\mpideal^\lambda),
+\qquad \pi_{\lambda,j}\not\equiv0\;(\mpideal^{\lambda+1}).
+\]
+\(\pi\equiv0\;(\mpideal)\)이면 \(\pi\pi_{\lambda,j}\equiv0\;(\mpideal^{\lambda+1})\)이다. 따라서 이 기저에 따라 \(\pi\)에 대응하는 행렬의 대각선 성분은 모두 0이고, \(\pi\)의 대각합은 0이다.
+
+\textbf{2. 대수적으로 닫힌 부분체 \(P\)를 갖는 으뜸환의 판별식아이디얼.} \(\mR\)의 영아이디얼이 소아이디얼이고 \(P\)가 대수적으로 닫혀 있으면 \(\mR\)은 랭크 1이고, 따라서 \(P\)와 동일하다(§ 3, 3). 단위원 \(e\)를 모듈기저로 택할 수 있고
+\[
+S_{(\mR)}(e^2)=S_{(\mR)}(e)=e
+\]
+이므로 판별식아이디얼은 단위아이디얼과 같다.
+
+대수적으로 닫힌 부분체 \(P\)를 갖는 진으뜸환의 판별식아이디얼은 영아이디얼과 같음도 보일 수 있다. \(\mR\)에 1에서 준 특수한 모듈기저를 택하거나, 단지 \(\mpideal\)의 임의의 기저를 \(\mR\)의 기저로 보충하자. 잉여류환 \(\mR\,|\,\mpideal\)은 랭크 1인 환이므로 \(i_0=1\)이고, \(\pi_{0,1}\)로 단위원 \(e\)를 택할 수 있다. 그러면 \(e^2\) 이외의 모든 기저원소의 곱은 \(\mpideal\)로 나누어지고, 주류에 관한 그 대각합은 0이다. 따라서 판별식도 적어도 2행인 행렬식으로서 0이다. \(\mR\)이 진으뜸이라고 가정했으므로 \(e\)와 다른 기저원소가 적어도 하나 있어야 하고, 행렬식에서는 \(S_{(\mR)}(e^2)\) 이외의 모든 성분이 0이다.
+
+\textbf{3. 정리.} \emph{부분체 \(P\)에 관하여 유한 랭크인 환 \(\mR\)이 제1종 완전가약인 것은 그 판별식아이디얼이 \(P\)의 단위아이디얼일 때 그리고 오직 그때이다. 달리 말하면, 단위의 제곱까지 정해지는 판별식이 0이 아닐 때 그리고 오직 그때이다.}
+
+§ 3, 2의 정리에 따라 제1종 완전가약성은 확대환 \(\bR=\mR[\bP]\)이 완전가약이라는 것, 곧 그 분해 불가능한 성분들이 \(\bP\)와 동형인 체라는 것과 같다. § 5, 3에 따라 \(\mR\)과 \(\bR\)의 판별식아이디얼은 동시에 영아이디얼이거나 동시에 단위아이디얼이다. § 5, 2에 따라 \(\bR\)의 판별식아이디얼은 각 성분에 관하여 취한 성분들의 판별식아이디얼의 곱이다. 이 개별 판별식아이디얼은 2에서 고찰한 것, 곧 성분들을 \(\bR\)의 아이디얼이 아니라 독립된 환으로 본 것에서, 매번 \(\bP\)와 동형인 체 \(\bar P_i=\bP\bar\varepsilon_i\)를 \(\bP\) 자체로 바꾸어 얻는다. 그러므로 \(\bR\)이 완전가약이면 그 판별식아이디얼은 단위아이디얼들의 곱으로서 단위아이디얼이다. \(\bR\)이 완전가약이 아니면 적어도 한 성분의 판별식아이디얼이 영아이디얼이므로 \(\bR\)의 판별식아이디얼도 영아이디얼이다. 이로써 정리가 증명되었다.
+
+\textbf{4. 제1종 완전가약인 경우 켤레원소에 의한 대각합·노름·판별식의 표현.} § 3, 3에 따라 제1종 완전가약일 때
+\[
+\mR[\Omega]=\Omega\bar\varepsilon_1+\cdots+\Omega\bar\varepsilon_n
+\]
+을 랭크 1인 환들, 곧 \(\Omega\)와 동형인 체들의 직합표현이라 하고, \(\Omega\)를 그러한 표현이 가능한 최소 확대체라 하자. 그러면 \(\mR\)의 \(n\)개 성분은 \(K_i\bar\varepsilon_i\)이고, 각 \(K_i\)는 \(\Omega\)의 부분체이며 \(\mR\)은 \(K_i\)에 준동형이다. 주류에 관한 대각합·노름·판별식을 \(K_i\)의 원소들로 표현하고자 한다.
+
+\(\bar\varepsilon_1,\ldots,\bar\varepsilon_n\)을 모듈기저로 택하면 원소
+\[
+\gamma=c_1\bar\varepsilon_1+\cdots+c_n\bar\varepsilon_n
+\]
+에는 대각행렬 \(\operatorname{diag}(c_1,\ldots,c_n)\)이 대응한다. \(\gamma\in\mR\)이면 \(c_i\in K_i\)이다. 따라서 주류에 관한 대각합과 노름을 각각 \(S(\gamma),N(\gamma)\)로 쓰면
+\[
+S(\gamma)=c_1+\cdots+c_n,\qquad N(\gamma)=c_1\cdots c_n
+\]
+이다.
+
+또 \(a_1,\ldots,a_n\)이 \(\mR\)의 원소들로 이루어진 모듈기저이면 판별식 \(|S(a_i a_k)|\)은 모든 \(K_i\)의 원소들로 표현할 수 있다. 
+\[
+a_i=a_i^{(1)}\bar\varepsilon_1+\cdots+a_i^{(n)}\bar\varepsilon_n
+\]
+이라 하자. 그러면
+\[
+a_i a_k=a_i^{(1)}a_k^{(1)}\bar\varepsilon_1+\cdots+a_i^{(n)}a_k^{(n)}\bar\varepsilon_n
+\]
+이고 \(S(a_i a_k)=a_i^{(1)}a_k^{(1)}+\cdots+a_i^{(n)}a_k^{(n)}\)이므로
+\[
+\left|S(a_i a_k)\right|
+=
+\left|\sum_{\lambda}a_i^{(\lambda)}a_k^{(\lambda)}\right|
+=
+\left|
+\begin{matrix}
+ a_1^{(1)}&\cdots&a_n^{(1)}\\
+ \vdots&&\vdots\\
+ a_1^{(n)}&\cdots&a_n^{(n)}
+\end{matrix}
+\right|^2.
+\]
+
+특히 \(\mR\) 자체가 체, 곧 부분체 \(P\)의 제1종 확대체이면 \(\mR\)에서 \(K_i\)로 가는 준동형은 \(P\)의 원소를 자기 자신에 대응시키는 동형이 된다. 실제로 \(P\)의 성분은 \(P\bar\varepsilon_i\)이다. 따라서 모든 \(K_i\)가 공통 포괄체 \(\Omega\) 안에 있으므로, 이들은 \(P\)에 관하여 서로 켤레인 체이다. 또한 0 아닌 판별식 \(|S(a_i a_k)|\)의 위 행렬식 표현에서 보듯 \(n\)개의 동형은 서로 모두 다르다.
+
+\emph{\(\mR\)이 체이면, \(K_1,\ldots,K_n\)으로의 직합표현은 갈루아 확대체 안에 있고 \(\mR\)과 동형이며 \(P\) 위 \(n\)차인 \(n\)개의 켤레 확대체를 준다. 대각합·노름·판별식의 표현은 켤레원소에 의한 잘 알려진 표현으로 옮겨간다.} 여기서 \(\mR\) 자체는 \(K_i\)들과 동치일 뿐 갈루아 확대체 \(\Omega\) 안에 있는 체라고 가정한 것이 아님을 다시 강조한다\srcfn{1)}{§ 1, 2의 마지막 주를 보라.}.
+
+\begin{center}
+\textbf{§ 7. 대수적 수체 또는 함수체의 오더에 대한}\\
+\textbf{판별식 정리}
+\end{center}
+
+\textbf{1.} 여기서 고찰하는 수체와 함수체는 모두, 정수적 원소를 지정한 다음과 같은 체 유형에 들어간다. 여러 부정원의 대수함수와 정수 계수 대수함수의 경우에는 함수식영역의 확대를 다룬다\srcfn{2)}{\emph{아이디얼 이론} § 3, 3과 4.}.
+
+\(\mH\)를 \emph{영인자가 없고 단위원을 갖는 주아이디얼환}(유리정수환, 한 체의 계수를 갖는 한 부정원 다항식영역, 함수식영역)이라 하고, \(\mRprime\)를 그 \emph{몫체}라 하자. \(\mL\)을 \(\mRprime\)의 \emph{유한 제1종 확대체}, \(\mS\)를 \(\mL\)에서 \emph{\(\mH\)에 관하여 정수적인 모든 원소의 환}이라 하자\srcfn{3)}{한 환에 관하여 정수적인 원소의 정의는 \emph{아이디얼 이론} § 1, 3을 보라.}. \emph{\(\mS\)의 부분환 가운데 \(\mH\)를 포함하는 것은 모두 오더라 하고, \(\mS\) 자체는 정수환이라 한다.}
+
+\(\mS\)의 모든 \(\mH\)-모듈, 특히 한 오더의 모든 아이디얼과 오더 자체는 \(\mH\)에 관한 \emph{선형독립인 모듈기저}를 갖는다\srcfn{4)}{\emph{아이디얼 이론} § 3, 1.}. \(\mL\)이 \(\mRprime\)에 관하여 차수 \(n\)이면 \(\mH\)에 관하여 랭크 \(n\)인 오더들만 고찰하면 충분하다. 더 낮은 랭크의 각 오더는 몫을 취하면 \(\mRprime\)과 \(\mL\) 사이에 그 랭크와 같은 차수의 중간체를 생성하며, 그 체에서도 모든 가정이 유지되기 때문이다.
+
+\emph{따라서 각 오더 \(\mT\)는 § 4와 § 5의 더 일반적인 가정을 만족하는 환이며 영인자가 없는 환이다. 그러므로 오더의 판별식 \(D_\mT\)는 \(\mH\)의 한 단위의 제곱을 인자로 한 차이까지 유일하게 정의된다.} 이 판별식은 \(\mRprime\)의 한 단위를 인자로 한 차이까지, \(\mRprime\)-모듈로 본 체 \(\mL\)의 판별식과도 동일하다. 따라서 \(\mL\)을 제1종 확대라고 가정했으므로 \emph{0이 아니다}(§ 6, 3). 동시에 이 판별식은 § 6, 4에서 준 켤레기저원소들의 행렬식 제곱으로 표현된다.
+
+\(\mT\)의 아이디얼 이론은 다음 정리로 주어진다\srcfn{5)}{\emph{아이디얼 이론} § 7, 3.}. \emph{\(\mT\)에서 영아이디얼이 아닌 모든 아이디얼은 유한개의 쌍마다 서로소인 으뜸아이디얼의 곱으로 유일하게 나타난다. 이 으뜸아이디얼에 속하는 소아이디얼은 단위아이디얼과 다른 진약수를 갖지 않는다.}
+
+\textbf{2. 오더에서 한 체에 관하여 유한 랭크인 환으로 이행.} \(p\)가 \(\mH\)의 소원소라 하자. 곧 \(\mH\)에서 \(p\)로부터 유도된 주아이디얼 \(\mH p\)는 영아이디얼도 단위아이디얼도 아닌 \(\mH\)의 소아이디얼이다. 이에 따라 \(\mT p\)는 \(\mT\)에서 \(p\)로부터 유도된 주아이디얼을 뜻하게 하자\srcfn{1)}{이제부터 주아이디얼을 어느 환에서 고찰하는지를 동시에 나타내기 위해 이 표기법을 쓴다.}. \emph{잉여류환 \(\mR=\mT/\mT p\)는 체 \(\mH/\mH p\)와 동형인 한 부분체 \(P\)에 관하여 랭크 \(n\)인 환이 되고, \(\mT\)는 \(\mT/\mT p\)에 준동형이다.}
+
+\(\mT\sim\mT/\mT p\)라는 준동형은 모든 잉여류환에 대해 일반적으로 성립한다. \(\mR\)이 \(\mH/\mH p\)와 동형인 부분체 \(P\)를 포함한다는 것은 제2동형정리에서 나온다\srcfn{2)}{§ 1의 마지막 주를 보라.}. 실제로 부분환 \((\mH,\mT p)/\mT p\)는
+\[
+\mH/[\mH,\mT p]=\mH/\mH p
+\]
+와 동형이다.
+
+끝으로 \(\mR\)은 \(P\)에 관해서도 랭크 \(n\)이다. \(a_1,\ldots,a_n\)을 \(\mH\)에 관한 \(\mT\)의 선형독립인 모듈기저라 하고, \((a_1),\ldots,(a_n)\)을 \(\mT p\)에 따라 \(a_i\)들이 정하는 잉여류라 하자. 그러면 \((a_i)\)들 사이의 \(P\)에 관한 선형종속은 준동형을 거슬러 합동식
+\[
+c_1a_1+\cdots+c_na_n\equiv0\;(\mT p)
+\]
+에서 생기며, 이는 \(\gamma\in\mT\)에 대한 관계
+\[
+c_1a_1+\cdots+c_na_n=p\gamma
+\]
+에서 생긴다. \(\gamma\)를 \(a_i\)의 기저로 나타낼 수 있고 그 표현이 유일하므로 각 \(c_i\)는 \(p\)로 나누어지고, 따라서 \(P\)의 원소 \((c_i)\)는 0이다. 이로써 \(P\)에 관한 \((a_i)\)의 선형독립성이 증명된다.
+
+\emph{이 준동형에 따라 \(\mT\)의 판별식 \(D_\mT\)는 \(\mR\)의 판별식으로 옮겨가고, \(\mT p\)의 아이디얼 분해는 \(\mR\)의 영아이디얼 분해로 옮겨간다.} 방금 증명한 \((a_i)\)의 선형독립성 때문에 \(\mR\)의 판별식은 이 기저에 의해 \(|S((a_i)(a_k))|\)로 만들 수 있다. 따라서 준동형에 의해 \(a_i\)의 기저로 만든 \(\mT\)의 판별식 \(|S(a_i a_k)|\)에서 생긴다. 여기서 대각합의 정의에는 행렬표현을 바탕으로 삼았고, \(\mT\)에는 성립하지만 \(\mR\)에는 반드시 성립하지는 않는 켤레원소에 의한 표현을 바탕으로 삼지 않았다. 그러므로 대각합과 판별식은 환의 원소들로부터 환 연산만으로 생긴다.
+
+\[
+\mT p=\mq_1\cdots\mq_r=[\mq_1,\ldots,\mq_r]
+\]
+가 \(\mT\)에서 \(\mT p\)의 표현이면, 준동형에 따라 \(\mR\)에서는
+\[
+(0)=[(\mq_1),\ldots,(\mq_r)]
+\]
+로 옮겨간다. 제1동형정리\srcfn{3)}{\emph{아이디얼 이론} § 4, 3과 § 6(정리 II 다음)을 보라.}에 따라 \(\mR/(\mq_i)\)는 \(\mT/\mq_i\)와 동형이다. 따라서 \(\mq_i\)와 \((\mq_i)\)는 동시에 진으뜸아이디얼이거나 동시에 소아이디얼이다. 또한 준동형 때문에 \((\mq_i)\)들은 쌍마다 서로소이다.
+
+\textbf{3. 판별식 정리.} \emph{\(\mH\)의 한 소원소 \(p\)가 한 오더 \(\mT\)의 판별식 \(D_\mT\)를 나누는 것은, \(\mT\)에서 주아이디얼 \(\mT p\)를 쌍마다 서로소인 으뜸성분들로 분해할 때 적어도 하나의 진으뜸성분 또는 적어도 하나의 제2종 소아이디얼이 나타날 때 그리고 오직 그때이다.}\srcfn{4)}{제2종 소아이디얼이 나타나는 예는 다음과 같다. \(\mH\)를 \(x\)의 모든 유리정수 계수 다항식으로부터 유도된 함수식영역, \(\mRprime\)를 그 몫체, \(\mL\)을 \(\sqrt{x}\)를 첨가한 확대체라 하자. \(\mH\)에 관한 모듈기저 \(1,\sqrt{x}\)를 갖는 오더 \(\mT\)를 고찰한다. 치환 \(x=y^2\)에서 보듯 이는 정수환이다. 판별식은 \(\left|\begin{smallmatrix}1&\sqrt{x}\\1&-\sqrt{x}\end{smallmatrix}\right|^2=2^2x\)이다. 주아이디얼 \(\mT2\)는 \(\mT\)에서 소아이디얼로 남지만 제2종이다. 실제로 모듈기저 \(1,\sqrt{x}\) 때문에 오더 \(\mT\)는 새 부정원 \(t\)에 대하여 잉여류환 \(\mH[t]/(t^2-x)\)와 동형이다. 따라서 \(\mT/\mT2=\mR\)은 \(P[t]/(t^2-x)\)와 동형이며, 여기서 \(P\)는 \(x\)와 함수식영역에 나타나는 부정원 \(u\)의 모든 유리함수 중 계수를 2로 줄인 것들의 체이다. \(t^2-x\)는 \(P[t]\)의 소다항식이고 제2종 소다항식이므로 \(\mR\)은 체이며 \(P\)의 제2종 확대체이다. 따라서 \(\mT2\)는 제2종 소아이디얼이다. 반면 \(\mT x=(\mT\sqrt{x})^2\)는 진으뜸이다. 일반적으로 \(\mR\)이 원소 하나를 \(P\)에 첨가하여 생성된다는 것은 성립하지 않는다. 부정원 하나 \(x\)를 \(x,y\)로 바꾸기만 하면, \(1,\sqrt{x},\sqrt{y},\sqrt{xy}\)에서 유도된 오더, 다시 정수환인 이 오더에서 주아이디얼 \(\mT2\)는 제2종 소아이디얼이고 \(\mR\)은 원소 둘을 \(P\)에 첨가해야 생성됨을 알 수 있다. 이 예들에 대해서는 Ostrowski의 앞의 글을 보라.}
+
+\emph{잉여류체 \(\mH/\mH p\)가 완전체이면, \(D_\mT\)를 나누는 각 소원소 \(p\), 그리고 오직 그런 \(p\)는 적어도 하나의 진으뜸성분을 갖는다. \(\mH/\mH p\)가 완전체이고 \(\mT\)로 정수환 \(\mS\)를 택하면, \(p\)가 판별식을 나누는 것은 적어도 한 소아이디얼의 제곱으로 나누어질 때 그리고 오직 그때이다.}
+
+실제로 \(\mT\)에서 주아이디얼 \(\mT p\)의 아이디얼 분해와 \(\mR=\mT/\mT p\)에서 영아이디얼의 분해가 대응하므로(2를 보라), \(\mT p\)에 진으뜸성분 또는 제2종 소아이디얼이 나타난다는 것은 \(\mR\)이 제1종 완전가약이 \emph{아니라}는 뜻이다. § 6, 3의 정리에 따라 이는 \(\mR\)의 판별식이 0일 때 그리고 오직 그때이며, 2의 준동형에 따라 이는 \(p\)가 \(D_\mT\)를 나눈다는 뜻이다.
+
+\begin{center}
+\textbf{§ 8. 상대체의 오더에 대한 판별식 정리}
+\end{center}
+
+출발환으로 주아이디얼환 \(\mH\) 대신 이미 한 수체나 함수체의 정수환, 더 일반적으로 \emph{곱셈환}\srcfn{1)}{“곱셈환”이라는 짧은 명칭은 W. Krull, \emph{Über Multiplikationsringe}, Heidelberger Berichte 1925, 제5논문 3호에서 빌렸다. 다만 Krull은 여기 나타나는 영인자 없는 환을 “정칙 곱셈환”이라 부른다.}, 곧 정수환의 아이디얼 이론이 성립하는 환을 택하면, 판별식 \(D_\mT\) 대신 \(\mH\)에 관한 \(\mT\)의 판별식아이디얼이 나타난다\srcfn{2)}{문헌에서 “상대수체”의 경우에는 정수환의 판별식아이디얼, 곧 “상대판별식”만 나타난다. Hilbert, \emph{Zahlbericht}, § 14와 Hecke, \emph{Theorie der algebraischen Zahlen}, § 38을 보라.}. 다음 고찰에 의해 판별식 정리는 완전히 옮겨간다.
+
+\textbf{1.} \(\mH\)를 \emph{곱셈환}, 곧 영인자가 없고 단위원을 가지며, 영아이디얼도 단위아이디얼도 아닌 모든 아이디얼을 소아이디얼들의 거듭제곱의 곱으로 유일하게 나타낼 수 있고 그 소아이디얼들이 단위아이디얼과 다른 진약수를 갖지 않는 환이라 하자\srcfn{3)}{곱셈환의 공리계에 대해서는 \emph{아이디얼 이론}, 예컨대 서론을 보라.}. 또 \(\mRprime,\mL,\mS,\mT\)를 § 7, 1과 같이 정의하자. 그러면 \(\mT\)에는 § 7, 1에서 말한 아이디얼 이론이 성립한다\srcfn{4)}{\emph{아이디얼 이론} § 3, 2와 § 7, 3.}.
+
+특히 한 곱셈환 \(\mH\)가 영아이디얼과 단위아이디얼 이외에 소아이디얼을 단 하나만 가지면 \(\mH\)는 주아이디얼환이다. 실제로 \(\mpideal\)이 그 소아이디얼이라 하고
+\[
+p\equiv0\;(\mpideal),\qquad p\not\equiv0\;(\mpideal^2)
+\]
+인 \(p\)를 택하자. 가정에 따라 영아이디얼도 단위아이디얼도 아닌 모든 아이디얼은 \(\mpideal\)의 거듭제곱이므로, 주아이디얼 \(\mH p\)도 그러하다. \(p\not\equiv0\;(\mpideal^2)\)이므로 \(\mH p=\mpideal\)이어야 한다. 따라서 \(\mpideal\)의 모든 거듭제곱도 주아이디얼이고, 영아이디얼과 단위아이디얼 역시 주아이디얼이다.
+
+\textbf{2. 대각합과 판별식아이디얼.} \(\mT\)의 각 원소 \(\gamma\)의 대각합은 \emph{\(\mRprime\)-모듈로 본 \(\mL\)의 원소 \(\gamma\)의 대각합}으로 정의한다. 따라서 \(\mL\)에서 \(\mRprime\)에 관하여 선형독립인 \(n\)개 원소의 모든 계를 대각합을 정의하는 행렬표현을 생성하는 기저로 택할 수 있다. \(a_1,\ldots,a_n\)이 그러한 계이면 \(\mL\)을 제1종 확대라고 가정했으므로 \(|S(a_i a_k)|\)는 \(\mRprime\)의 0 아닌 원소이며, 더 정확히는 켤레기저원소들의 행렬식 제곱이다(§ 6, 4). \(\mH\)가 \(\mRprime\)에서 정수적으로 닫혀 있다는 데서\srcfn{1)}{\emph{아이디얼 이론} § 9, 7.}, 모든 \(a_i\)가 \(\mS\)에 속하면 \(|S(a_i a_k)|\)는 \(\mH\)의 원소임이 따라온다.
+
+\emph{판별식아이디얼:} \(\tau_1,\ldots,\tau_n\)이 \(\mT\)의 원소 \(n\)개로 이루어진 모든 계를 두루 돌게 하자. 각 계에 대해 행렬식 \(|S(\tau_i\tau_k)|\)을 만든다. 이는 \(\mH\)의 원소이고, \(\tau_i\)들이 선형독립이면 0이 아니다. \emph{이 모든 행렬식이 \(\mH\)에서 유도하는 아이디얼을 \(\mH\)에 관한 오더 \(\mT\)의 판별식아이디얼이라 한다.} 따라서 이는 영아이디얼이 아니다.
+
+또 \(\beta_1,\ldots,\beta_m\), \(m\ge n\), 이 \(\mT\)의 언제나 존재하는 \(\mH\)-모듈기저라 하자\srcfn{2)}{\emph{아이디얼 이론} § 9와 § 3, 1.}. 그러면 \(\beta\)들 가운데 각각 \(n\)개에 대응하는 유한개의 행렬식이 판별식아이디얼의 아이디얼 기저를 이룬다. 이는 \(\mT\)에서 그 대각합들의 계로 가는 모듈 준동형에서 나온다(§ 4, 3). 실제로 곱 \(\tau_i\tau_k\)들로 만든 행렬식 \(|(\tau_i\tau_k)|\)은 각각 \(n\)개의 \(\beta\)에 대응하는 유한개의 행렬식 \(|(\beta_i\beta_k)|\)의 \(\mH\)-계수 선형결합으로 나타난다. 따라서 \(|S(\tau_i\tau_k)|\)과 \(|S(\beta_i\beta_k)|\)에도 같은 사실이 성립한다. 특히 오더가 선형독립인 모듈기저 \(a_1,\ldots,a_n\)을 가지면, 행렬식 \(|S(a_i a_k)|\)을 판별식아이디얼의 기저로 택할 수 있다. 이 정의는 § 7, 1의 정의와 일치한다.
+
+\textbf{3. 몫환으로 이행.}\srcfn{3)}{이 항에서 인용하는 모든 정리의 증명은 주 6에서 83쪽을 인용한 H. Grell의 논문을 보라.} \(\ma\)가 \(\mT\)의 임의의 아이디얼이면, 몫환 \(\mT_\ma\)는 \(\mT\)의 몫체 \(\mL\)의 원소들 가운데 분모가 \(\mT\)에서 \(\ma\)와 서로소인 원소인 것들의 전체로 정의한다\srcfn{4)}{\(\mT\)의 소아이디얼들은 단위아이디얼과 다른 진약수를 갖지 않으므로, 여기서는 원소가 \(\ma\)에 대해 소라는 것과 아이디얼의 뜻에서 서로소라는 것이 같다.}. 환 \(\mT_\ma\)에서 영아이디얼과 단위아이디얼 이외의 소아이디얼은 \(\ma\)에 속하는 소아이디얼들의 확대아이디얼뿐이다. \(\mT_\ma\)의 영아이디얼·단위아이디얼이 아닌 모든 아이디얼과, 그에 속하는 소아이디얼들이 \(\ma\)에 속하는 소아이디얼들 가운데 포함되는 \(\mT\)의 아이디얼들 사이에는 일대일 대응이 있고 잉여류환들이 동형이다. 영아이디얼과 단위아이디얼도 각각 서로 일대일로 대응한다.
+
+같은 고찰이 곱셈환 \(\mH\)에도 성립한다. 특히 \(\mpideal\)이 소아이디얼이면 \(\mH_\mpideal\)은 영아이디얼과 단위아이디얼 이외에 소아이디얼을 하나만 가진다. 잉여류환의 동형 때문에 \(\mH_\mpideal\)도 \(\mH\)와 마찬가지로 곱셈환이고, 1에 따라 주아이디얼환이다. \(\mpideal\)에서 유도된 소아이디얼의 기저는 \(\mH_\mpideal\)의 한 소원소 \(p\)가 된다. \(\mH\)의 임의의 아이디얼 \(\mc\)의 확대아이디얼은 \(\mc\)의 \(\mpideal\)에 속하는 으뜸성분이 생성한다. 따라서 \(\mpideal\)이 \(\mc\)를 \(e\)제곱으로 나누는지 전혀 나누지 않는지에 따라 확대아이디얼은 \((p)^e\) 또는 단위아이디얼과 같다. 이로부터 다시 다음이 나온다. \(\mH\)의 두 아이디얼 \(\mb,\mc\)의 확대가 \emph{모든} 몫환 \(\mH_\mpideal\)에서 일치하면 \(\mb,\mc\)는 동일하다. 실제로 두 아이디얼은 같은 소아이디얼 \(\mpideal\)들로 같은 거듭제곱만큼 나누어진다.
+
+\textbf{4. 몫환으로 이행할 때의 판별식아이디얼.} \(\mpideal\)이 \(\mH\)의 소아이디얼이고 \(\mP=\mT\mpideal\)이 \(\mT\)에서 그 확대아이디얼이라 하자. \emph{몫환 \(\mT_\mP\)는 주아이디얼환 \(\mH_\mpideal\)에 관하여 선형독립인 원소들로 이루어진 모듈기저를 갖는다. 동시에 \(\mT_\mP\)는 \(\mH_\mpideal\)의 몫체 \(\mRprime\)의 확대체 \(\mL\) 안의 유한 \(\mH_\mpideal\)-오더이다.}\srcfn{1)}{증명은 H. Grell을 보라.} \emph{따라서 \(\mT_\mP\)에서는 \(\mH_\mpideal\)에 관하여 판별식 정리(§ 7, 3)가 성립한다.}
+
+이때 판별식 \(D_{\mT_\mP}\)는 \(\mH\)에 관한 \(\mT\)의 판별식아이디얼을 \(\mH_\mpideal\)로 확대한 아이디얼의 기저를 이룬다. 실제로 언제나 가능하듯 \(\mT_\mP\)의 \(\mH_\mpideal\)-모듈기저로 \(\mT\)의 원소 \(a_1,\ldots,a_n\)을 택하자. 그러면 \(|S(a_i a_k)|\)는 판별식아이디얼에 속하고, 1에 따라 모든 행렬식 \(|S(\tau_i\tau_k)|\)은 \(\mH_\mpideal\)에서 \(|S(a_i a_k)|\)로 나누어진다\srcfn{2)}{여기서 \(\mH\)가 한 대수적 수체의 정수환이면 Hilbert가 정의한 상대판별식과 일치함을 얻는다. 이는 Hecke가 정의한 것과 일치한다고 알려져 있다. 상대체의 정수환의 \(\mH\)-모듈기저를 \(\omega_1,\ldots,\omega_m\)이라 하자. Hilbert는 특히 유리정수환에 관한 모듈기저를 택한다. Hilbert를 따라 각 \(n\)개 기저원소와 그 켤레원소들로 모든 행렬식을 만들자. “상대판별식”은 이 행렬식들 가운데 같은 것이든 다른 것이든 매번 둘을 곱한 것들이 \(\mH\)에서 생성하는 아이디얼이다. 따라서 상대판별식은 \(\mH_\mpideal\)에서 기저 \(a_1,\ldots,a_n\)과 그 켤레원소들의 행렬식 제곱, 곧 \(|S(a_i a_k)|\)으로 옮겨간다. 그러므로 상대판별식과 (상대 정수환의) 판별식아이디얼의 확대는 모든 몫환 \(\mH_\mpideal\)에서 일치하고, 3의 끝에 따라 두 아이디얼은 동일하다.}.
+
+\textbf{5. 일반 판별식 정리.} \emph{한 곱셈환 \(\mH\)의 소아이디얼 \(\mpideal\)이 \(\mH\)에 관한 한 오더의 판별식아이디얼을 나누는 것은, \(\mT\)에서 \(\mT\mpideal\)을 쌍마다 서로소인 으뜸성분들로 분해할 때 적어도 하나의 진으뜸성분 또는 적어도 하나의 제2종 소아이디얼이 나타날 때 그리고 오직 그때이다.}
+
+3과 4에 따라 \(\mH\)의 소아이디얼 \(\mpideal\)이 \(\mT\)의 판별식아이디얼을 나누는 것은 \(\mH_\mpideal\)의 소원소 \(p\)가 판별식 \(D_{\mT_\mP}\)를 나눌 때 그리고 오직 그때이다. 이는 잉여류환 \(\mT_\mP\,|\,\mT_\mP p\)가 제1종 완전가약이 아니라는 것과 같다. 3에 따라 이 잉여류환은 \(\mT\,|\,\mT\mpideal\)과 동형이므로, 이로써 일반 판별식 정리가 증명된다.
+
+수체의 상대판별식으로 특수화하면 다음을 얻는다.
+
+\emph{한 수체의 정수환의 소아이디얼 \(\mpideal\)이 한 확대체의 상대판별식을 나누는 것은, 확대체의 정수환에서 \(\mpideal\)이 한 소아이디얼의 제곱으로 나누어질 때 그리고 오직 그때이다.}
+
+괴팅겐, 1926년 3월 30일.
+
+\begin{center}
+\rule{9em}{0.4pt}
+\end{center}

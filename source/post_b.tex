@@ -1,0 +1,273 @@
+% Korean Noether post-numbered scope B — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 23742--23983.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 23,400 bytes; SHA-256 9566FF16288FA5316FA94A08A8F3DAEB1CE7430E59ACBC0F26B61B9C26E7F5C4.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{대수함수에 관한 뇌터 기본정리의 필요충분 중복도 조건: H. 카프페러}
+
+\begin{center}
+(E. 뇌터와 공동 집필한 부록 포함)
+
+\emph{Math. Ann. 97 (1927), 559--567쪽}
+\end{center}
+
+다음 내용은 뇌터 기본정리를 필요충분 중복도 조건의 형태로 강화한 것이다\srcfn{1)}{상세한 서술은 같은 제목으로 쓴 필자의 논문을 보라. 이 논문은 A. 뢰비(프라이부르크)가 기획한 하이델베르크 학술원 보고 1927년 특별호 \glqq{}대수학 기여\grqq{}에 여러 저자의 글과 함께 실렸다.}. 여기와 이하에서는 아이디얼론의 개념이나 정리를 사용하지 않지만, 이 정리의 아이디얼론적 이해\srcfn{2)}{예컨대 B. L. van der Waerden, \emph{Zur Nullstellentheorie der Polynomideale}, Math. Annalen 96 (1926), 203쪽을 보라.}에 기대어 뇌터 기본정리가 포괄하는 사실들을 다음의 서로 분리된 두 명제로 묶는다\srcfn{3)}{인용한 논문의 § 1에서는 두 명제를 각각 직접, 곧 아이디얼론의 개념 없이 증명하였다.}.
+
+\textbf{정리 Ia.} \(x,y\)에 관한 서로소인 두 다항식 \(\varphi,\psi\) --- 계수는 임의의 복소수여도 된다 --- 의 각 공통영점 \(x=\alpha,\ y=\beta\)에 대하여 다음 성질을 지닌 최소의 양의 정수 \(\varrho\)가 존재한다. \(p=(x-\alpha,y-\beta)\)이고 \(\sigma\)가 \(\varrho\)보다 큰 임의의 정수일 때, 모듈 \((\varphi,\psi,p^\varrho)\)이 나타내는 다항식 전체는 모듈 \((\varphi,\psi,p^\sigma)\)이 나타내는 다항식 전체와 정확히 같다\srcfn{4)}{문자 \(p\)와 \(q\)는 여기서 나타내는 것들이 최근 문헌에서 쓰이는 소아이디얼 \(p\) 및 으뜸아이디얼 \(q\)의 개념과 내용상 일치함을 상기시키려고 택하였다.}.
+
+\textbf{정리 Ib.} 이렇게 개념상 유일하게 정해지는 다항식 전체를 \(q\)라 쓰고, 서로 다른 \(s\)개의 영점 가운데 \(i\)번째 영점 \(x=\alpha_i,\ y=\beta_i\)에 관한 경우에는 \(q_i\)라 쓰면 다음이 성립한다.
+
+\(x,y\)에 관한 주어진 다항식 \(K\)가 가분성 \(K\equiv0(\varphi,\psi)\)을 갖기 위한 필요충분조건은 다음 \(s\)개 합동식이 동시에 성립하는 것이다.
+\[
+K\equiv0(q_1),\quad K\equiv0(q_2),\quad\ldots,\quad K\equiv0(q_s).
+\]
+
+역사적으로 보면 --- 이 문제에 관한 막스 뇌터의 기초 논문 서론을 참조하라\srcfn{5)}{Max Noether, \emph{Über einen Satz aus der Theorie der algebraischen Funktionen}, Math. Annalen 6 (1872).} --- 기본정리는 다음의 근본 문제를 풀려는 노력에서 나왔다. \emph{\(x,y\)에 관한 주어진 각 다항식 \(K\)가 \((\varphi,\psi)\)로 나누어지는지 아닌지를 판정할 수 있어야 한다.} 즉 \(x,y\)에 관한 두 다항식 \(\lambda,\mu\)가 더 존재하여
+\[
+K=\lambda\cdot\varphi+\mu\cdot\psi
+\]
+가 \(x,y\)에 관한 항등식이 되는지도 판정해야 한다.
+
+이 문제는 뇌터의 정리만으로 해결되지 않는다. 그 정리는 제기된 문제를 더 간단한 문제, 곧 개별 합동식 \(K\equiv0(q)\)이 성립하기 위한 필요충분조건을 묻는 문제로 \emph{환원}하는, 물론 근본적인 환원으로 보아야 한다\srcfn{6)}{이 환원은 초등정수론에서 잘 알려진 다음 환원과 대략 비교할 수 있다. 자연수 \(A\)가 자연수 \(B\)로 나누어진다는 성질은 \(A\)가 각각 \(p_1^{a_1},p_2^{a_2},\ldots,p_s^{a_s}\)로 나누어진다는 성질과 동치이다. 여기서 \(p_1,p_2,\ldots,p_s\)는 \(B=p_1^{a_1}p_2^{a_2}\cdots p_s^{a_s}\)의 서로 다른 소인수이다. 이제 소수 거듭제곱에 대응하는 것으로 바로 본문에서 \(q\)로 나타낸 \glqq{}으뜸아이디얼\grqq{}의 개념을 이해해야 한다. E. Noether, \emph{Idealtheorie in Ringbereichen}, Math. Annalen 83 (1921), 서론을 보라.}. 그렇다면 언제 \(K\equiv0(q)\)인가? 이 마지막 물음에 답해야 비로소 M. 뇌터가 처음 제기한 문제도 해결된다. 이것이 이 논문의 목표이며, 실제로 다음과 같이 달성된다. \(K\equiv0(q)\)이 성립하기 위한 필요충분조건인 유한개의 중복도 조건을 제시하며, 이 조건들은 실제로도 어렵지 않게 확인할 수 있다. \(K\equiv0(q)\)의 충분조건이지만 필요조건은 아닌 다음 조건은 잘 알려져 있고 문헌에서 흔히 사용되고 인용된다.
+
+합동식 \(K\equiv0(\varphi,\psi)\)이 성립하려면, \(\varphi=0,\ \psi=0\)의 각 교점이 다항식 \(K\)에서 \glqq{}충분히\grqq{} 높은 중복도로 나타나는 것으로 \emph{충분하다}.
+
+이 명제는 정리 I에 특수한 경우로 포함된다. 실제로 \(K\)에서 중복도가 \(\varrho\)인 점은 \(K\equiv0(p^\varrho)\)과 같은 뜻이고, 그러면 더욱이 \(K\equiv0(\varphi,\psi,p^\varrho)\), 곧 \(K\equiv0(q)\)이다. 그러나 그 역은 성립하지 않는다.
+
+예고한 문제의 해법은 간단히 다음과 같이 특징지을 수 있다. 각 \(q\)에는 \(t\)개의 \emph{양의} 정수 \((g_1),(g_2),\ldots,(g_t)\)의 계를 대응시킬 수 있고, 모듈 \((K,q)\)에는 같은 수의 \emph{양수 또는 음수인} 정수 \((K_1),(K_2),\ldots,(K_t)\)를 대응시킬 수 있어서 다음 \emph{주정리}가 성립한다.
+
+\textbf{정리 II.} \emph{\(K\equiv0(q)\)이 성립하기 위한 필요충분조건은 다음 \(t\)개 조건이 동시에 성립하는 것이다.}
+\[
+(K_1)\geq(g_1),\quad (K_2)\geq(g_2),\quad \ldots,\quad (K_t)\geq(g_t).
+\]
+\emph{이때}
+\[
+(g_1)+(g_2)+\cdots+(g_t)=\mu
+\]
+\emph{이며, \(\mu\)는 \(q\)에 대응하고 종결식으로 정의되는 교점중복도를 뜻한다.}
+
+증명을 위하여 일반성을 잃지 않고 \(x=0,\ y=0\)을 \((\varphi,\psi)\)에서 \(q\)에 대응하는 영점이라 하자. 또 일반적으로 \(A(x,y)\)가 \(x,y\)에 관한 임의의 다항식일 때\srcfn{7)}{\(A(x,y)\)로 분수유리함수 \(C(x,y):D(x,y)\)도 허용하면 \((A)=(C)-(D)\)가 된다. 따라서 이 경우에는 \((A)\)가 음의 값을 가질 수도 있다.}, 기호 \((A)\)는 \(A(0,y)\)에서 \(y\)가 인수로 나타나는 횟수를 뜻한다고 하자. 다만 \(A(0,y)\)가 항등적으로 사라지면 \((A)=\infty\)로 둔다. \(q\)에 대응하는 수 \((g_1),(g_2),\ldots,(g_t)\)는 다음 방정식계로 정의되며, 이 방정식계가 절차의 방법론적 기초이다.
+
+\begin{equation}
+\tag{1}
+\begin{aligned}
+f_1\cdot g_1(0,y):y^{(g_1)} - g_1\cdot f_1(0,y):y^{(g_1)} &= x\cdot h_1,\\
+f_2\cdot g_2(0,y):y^{(g_2)} - g_2\cdot f_2(0,y):y^{(g_2)} &= x\cdot h_2,\\
+&\vdots \qquad\qquad\vdots\qquad\qquad\vdots\\
+f_r\cdot g_r(0,y):y^{(g_r)} - g_r\cdot f_r(0,y):y^{(g_r)} &= x\cdot h_r.
+\end{aligned}
+\end{equation}
+
+이 계는 오직 주어진 다항식쌍 \(\varphi,\psi\)만으로 구성된다. 실제로 다항식 \(f_1,g_1\)은 순서를 바꿀 수 있다는 점을 제외하면 각각 \(\varphi,\psi\)와 같다고 정의한다. 그 순서는 \((f_1)\geq(g_1)\)이 되도록 정한다. 이렇게 정할 때, 그리고 그때에만 \(h_1\)이 다항식이 된다.
+
+다항식 \(f_2,g_2\)는 부조건 \((f_2)\geq(g_2)\) 아래 각각 \(h_1,g_1\)과 같다고 정의한다. 일반적으로 다항식쌍 \(f_r,g_r\)은 부조건 \((f_r)\geq(g_r)\) 아래 각각 \(h_{r-1},g_{r-1}\)과 같다고 정의한다.
+
+방정식계 (1)은 설명한 방식으로 끝없이 계속할 수 있다. 그러나 주정리에서는 처음 \(t\)개의 방정식만 만들면 되며, \(t\)는 다음 사실로 정해진다.
+
+\textbf{보조정리 I.} 자연수 \(t\)가 존재하여 [더구나 \(t\leqq\mu\)이며, 여기서 \(\mu\)는 점 \(x=0,\ y=0\)이 \(\varphi=0,\ \psi=0\)에 나타나는 교점중복도이다], (1)로 정의되는 처음 \(t\)개의 수 \((g_1),(g_2),\ldots,(g_t)\)는 모두 \emph{0보다 크고}, 동시에 \((g_{t+1})\)과 그 뒤의 모든 수는 \emph{0과 같다}.
+
+실제로 종결식의 곱정리를 고려하면, 점 \(x=0,\ y=0\)에서 \(f_r=0,\ g_r=0\)의 교점중복도는
+\[
+\mu-(g_1)-(g_2)-\cdots-(g_r)
+\]
+와 같다. 여기서 \emph{늦어도 \(\mu\)단계 뒤에는 중단됨}이 따라온다. 동시에
+\begin{equation}
+\tag{2}
+\mu=(g_1)+(g_2)+\cdots+(g_t)
+\end{equation}
+도 얻는다. 문제의 영점이 알려져 있기만 하면 교점중복도를 정하는 유리적이고 실제로도 쉽게 실행할 수 있는 일반 방법을 주기 때문에 이 공식은 주목할 만하다.
+
+이렇게 수 \((g_i)\)를 알게 된 뒤에는 수 \((K_i)\)를 (1)에 대응하는 다음 방정식계로 정한다.
+\begin{equation}
+\tag{3}
+\begin{aligned}
+K_1\cdot g_1(0,y):y^{(g_1)} - g_1\cdot K_1(0,y):y^{(g_1)} &= x\cdot K_2,\\
+K_2\cdot g_2(0,y):y^{(g_2)} - g_2\cdot K_2(0,y):y^{(g_2)} &= x\cdot K_3,\\
+&\vdots \qquad\qquad\vdots\qquad\qquad\vdots\\
+K_r\cdot g_r(0,y):y^{(g_r)} - g_r\cdot K_r(0,y):y^{(g_r)} &= x\cdot K_{r+1}.
+\end{aligned}
+\end{equation}
+
+\(K_1\)은 \(K\)와 같다고 정의한다. \(K_2\)는 명백히 \((K_1)\geq(g_1)\)일 때 그리고 그때에만 다항식이다. 이 조건이 충족되면 계속하여 \(K_3\)은 \((K_2)\geq(g_2)\)일 때 그리고 그때에만 다항식이다. 일반적으로 \(K_r\)이 이미 다항식이면 \(K_{r+1}\)은 \((K_r)\geq(g_r)\)일 때 그리고 그때에만 다항식이다.
+
+이제 주정리(정리 II)의 증명은 다음 보조정리에 근거한다.
+
+\textbf{보조정리 II.} \((f_i,g_i,p^e)=q^{(i)}\)로 두면, 무한 정수열 \(1,2,\ldots\)의 각 \(i\)에 대하여 다음이 성립한다.
+
+합동식
+\[
+K_i\equiv0(q^{(i)})
+\]
+이 성립하기 위한 \emph{필요충분조건은 다음 두 조건이 동시에 성립하는 것이다.}
+\[
+(K_i)\geq(g_i)\quad\text{및}\quad K_{i+1}\equiv0(q^{(i+1)}).
+\]
+
+이 보조정리의 증명\srcfn{8)}{\glqq{}부록\grqq{}의 주해 I에 있는 증명도 보라.}은 방정식계 (1)과 (3)을 결합하면 얻어진다. 보조정리 I에 따라 \(g_{t+1}\)은 더 이상 원점에서 사라지지 않는다는 것, 따라서 모듈 \(q^{(t+1)}\)은 \emph{모든} 다항식으로 이루어져 단위아이디얼이 되고 결국 \(K_{t+1}\equiv0(q^{(t+1)})\)이 자명해진다는 것을 고려하면, 보조정리 II를 \(t\)번 적용하여 주정리의 증명을 얻는다.
+
+\begin{center}
+\rule{4cm}{0.4pt}
+\end{center}
+
+증명은 위에서 인용한 필자의 논문에 있으므로 생략하고, 주정리에 두 가지 추가 명제만 덧붙인다.
+
+\textbf{추가 I.} 주정리의 수 \(t\)는
+\[
+x^\nu\equiv0(q)
+\]
+가 되게 하는 최소의\srcfn{9)}{따라서 여기서는 정확한 지수가 얻어진다. 훨씬 일반적인 문제를 다룬 대신 상계만 제시한 그레테 헤르만의 추정과 대비된다. Frl. Grete Hermann, \emph{Die Frage der endlich vielen Schritte in der Theorie der Polynomideale} (K. Hentzelt가 남긴 정리들을 사용), Math. Annalen 95 (1926).} 양의 수 \(\nu\)와 같다.
+
+\textbf{추가 II.} 방정식계 (1), (3)과 거기에서 \(x,y\)를 서로 바꾸어 얻는 방정식계들을 적절히 결합하면, \(q\)에 \glqq{}속하는\grqq{} 지수 \(\varrho\), 곧 정리 Ia의 최소지수 \(\varrho\)의 정확한 수치를 정하는 유리적 방법을 얻는다.
+
+E. 베르티니\srcfn{10)}{E. Bertini, Math. Annalen 34 (1889).}는 \(\varrho\)의 일반공식을 제시하였다. 그러나 그 공식이 언제나 \(\varrho\)의 최솟값을 주는 것은 아님이 \(\varphi=x^3+y^4,\ \psi=x^2+y^3\)이라는 예를 통하여 인용한 논문에서 밝혀진다. 끝으로 베르티니의 공식 자체도 우리의 주정리로 새롭게 근거 지을 수 있음을 덧붙인다.
+
+\begin{center}
+\rule{4cm}{0.4pt}
+\end{center}
+
+해당 \(q=(\varphi,\psi,p^e)\)의 영점이 두 곡선 \(\varphi=0,\ \psi=0\) 가운데 적어도 하나에서 \emph{단순점}이라는 제한을 두면, 주정리의 흥미로운 \emph{특수화}가 따라온다. 예컨대 그 영점이 \(\psi\)에서 단순점이면, 주정리의 수 \(t\)가 \emph{정확히} \(\mu\)이고 주정리의 \(t\)개 부등식을 \emph{하나의} 중복도 조건으로 바꿀 수 있음을 보일 수 있다. 이로부터 다음 일반정리를 얻는다.
+
+\textbf{정리 III.} \(\varphi=0,\ \psi=0\)의 \emph{모든} 교점이 \(\psi\)에서 \emph{단순점}이라고 하자. \(K\)가 \(\psi\)와 서로소라는 조건 아래, 합동식 \(K\equiv0(\varphi,\psi)\)이 성립하기 위한 \emph{필요충분조건}은 \(K\)가 이 모든 점에서 사라지되, 각 점에서 곡선쌍 \(K=0,\ \psi=0\)의 교점중복도가 곡선쌍 \(\varphi=0,\ \psi=0\)의 교점중복도보다 \emph{적어도} 큰 것이다.
+
+정리 III는 또 다른 특별한 이유로 주목할 만하다. 거기서 요구되는 중복도 조건의 충족 여부는 (1)에 근거한 공식 (2)과 무관하게 유한번의 \emph{미분}으로 판정할 수 있다. 이는 필자가 1923년에 제시한 다음 \glqq{}정리\grqq{}를 인용하면 즉시 분명해진다\srcfn{11)}{H. Kapferer, \emph{Über die Multiplizität der Schnittpunkte von zwei algebraischen Kurven}, Jahresber. der D. M.-V. 32 (1923).}.
+
+\(A,B\)가 \(x,y\)에 관한 임의의 서로소 다항식이고 \(P\)가 두 다항식의 공통점으로서 \emph{\(B\)의 단순점}이라 하자. 이 점이 교점으로서 갖는 중복도가 수 \(\mu\)와 같기 위한 필요충분조건은, 같은 점이 곡선쌍 \(A'=0,\ B=0\)에서 갖는 중복도가 \emph{정확히} \(\mu-1\)인 것이다. 여기서
+\[
+A'=\frac{\partial A}{\partial x}\cdot\frac{\partial B}{\partial y}
+   -\frac{\partial A}{\partial y}\cdot\frac{\partial B}{\partial x}.
+\]
+
+\begin{center}
+\rule{4cm}{0.4pt}
+\end{center}
+
+끝으로 주정리(정리 II)는 조금만 고치면 세 변수 \(x,y,z\)에 관한 동차다항식에도 옮길 수 있다. 위의 특수한 경우에는 이 확장이 특히 우아하다. 실제로 다음을 보일 수 있다.
+
+\textbf{정리 III의 추가 명제.} \(\varphi,\psi,K\)를 \emph{세} 변수에 관한 \emph{동차}다항식으로 이해해도, 정리 III는 문구까지 포함하여 전혀 바뀌지 않고 성립한다\srcfn{12)}{세 변수의 동차 합동식 \(K(x,y,z)\equiv0(\varphi(x,y,z),\psi(x,y,z))\)이 성립하기 위한 조건을 묻는 문제는, 강하게 특수화된 가정 아래이기는 하지만 A. Ostrowski의 \emph{Über die Maxwellsche Erzeugung der Kugelfunktionen}, Jahresb. der D. M.-V. 33 (1925)의 핵심 문제이기도 하다. 그 글에서는 \(\varphi\)가 모두 일차인수로 분해되고, \(\varphi\)와 \(K\)가 같은 차수이며, \(\psi=x^2+y^2+z^2\)라고 가정한다. 따라서 여기서 \(\psi\)에는 특이점이 전혀 없으므로, 오스트롭스키 논문의 주정리는 우리의 정리 III의 특수한 경우로 볼 수 있다.}.
+
+\section*{E. 뇌터와 공동 집필한 부록\srcfn{13)}{아이디얼론적 해석은 E. 뇌터에게서, (5)와 (6)의 바탕이 되는 증명은 H. 카프페러에게서 나왔다.}}
+
+방정식계 (1)은 동시에 \emph{\(q\)에 대한 완전잉여계}를 정하는 유리적 방법을 준다. 여기서 완전잉여계란 계수영역 \(P\)에 관하여 \(q\)를 법으로 하는 \emph{유한개의 선형독립 잉여류}에 대한 완전대표계를 뜻한다. 이로써 주정리 증명의 각 단계가 매우 투명해진다. 동시에 \emph{종결식중복도 \(\mu\)가 아이디얼 \(q\)의 길이와 일치한다}는 사실이 부수적 결과로 얻어진다.
+
+즉 이는 잉여류환의 랭크, 다시 말해 \(P\)에 관하여 선형독립인 잉여류의 수와 같다\srcfn{14)}{일반성을 잃지 않고 체 \(P\)가 대수적으로 닫혀 있다고 가정한다. 미분 조건을 제외하면 앞의 모든 정리는 실제로 이 범위에서 성립한다. \(q\)의 길이는 \(p\)에서 \(q\)로 이어지는 아이디얼들의 합성열의 길이로도 정의된다. E. Noether, Jahresber. d. d. Math.-Ver. 34 (1925), 101쪽(사선 쪽매김)을 보라. 더 자세한 것은 H. Grell, Math. Annalen 97 (1927), 529쪽을 보라. 두 중복도 수가 일치함을 \(n\)변수에서 보이는 기존 문헌의 증명들은 매우 복잡하다. 가장 간단한 것은 아직 출판되지 않은 헨첼트의 유고 증명이다.}.
+
+(1)과 보조정리 II의 기호를 쓰면, 완전잉여계는 다음 정리로 특징지어진다.
+
+\textbf{정리 IV.} \emph{\(q\)에 대한 한 완전잉여계는 다음 다항식들로 주어진다.}
+\[
+h_t,\ h_ty,\ldots,h_ty^{(g_t)-1};\ \ldots;\ h_i,\ h_iy,\ldots,h_iy^{(g_i)-1};\ \ldots;\ h_1,\ h_1y,\ldots,h_1y^{(g_1)-1}.
+\]
+\emph{이때 \(h_i,h_iy,\ldots,h_iy^{(g_i)-1}\)는 각각 \(q^{(i)}\)에 대한 \(q^{(i+1)}\)의 완전잉여계를 이룬다.}
+
+정의에서 곧바로 \(q^{(i+1)}=(q^{(i)},h_i)\), 따라서 \(q^{(i)}\equiv0(q^{(i+1)})\)을 얻는다. 그러므로 다음을 보이면 정리 IV가 증명된다.
+\begin{equation}
+\tag{4}
+h_i x\equiv0(q^{(i)});\qquad h_i y^{(g_i)}\equiv0(q^{(i)})
+\end{equation}
+그리고
+\begin{equation}
+\tag{5}
+\text{\(h_iF(y)\equiv0(q^{(i)})\)이면 \(F(y)\equiv0(y^{(g_i)})\)이다.}
+\end{equation}
+
+실제로 관계 (4)는 \(h_i,h_iy,\ldots,h_iy^{(g_i)-1}\)의 선형결합들이 \(q^{(i)}\)에 대한 \(q^{(i+1)}\)의 잉여류를 모두 준다는 뜻이고, (5)는 선형독립성을 나타낸다. \(q\)의 길이가 유한하므로 이제 \(q^{(t+1)}\)은 단위아이디얼과 같아진다. 따라서 여기서 정리 IV의 증명과 함께 \(q\)의 길이가 \((g_1)+\cdots+(g_t)\)와 같고, (2)에 따라 종결식중복도와 일치한다는 사실도 얻는다.
+
+(4)의 첫째 관계는 (1)에서 바로 읽을 수 있다. 둘째 관계는 다음과 같이 얻는다.
+
+\(h_ig_i\equiv0(q^{(i)})\)이고, 따라서 (4)의 첫째 관계에 따라 \(h_ig_i(0,y)\equiv0(q^{(i)})\)이다. 다시 말하면
+\[
+h_iy^{(g_i)}\cdot(g_i(0,y):y^{(g_i)})\equiv0(q^{(i)}).
+\]
+\(g_i(0,y):y^{(g_i)}\not\equiv0(y)\)이므로 여기서 \(h_iy^{(g_i)}\equiv0(q^{(i)})\)이 따라온다.
+
+(5)의 증명에 앞서 (1)에서 바로 읽을 수 있는 다음 \emph{주해}를 둔다. \(f_i,g_i\)의 공약수는 \(y\)로 나누어지지 않는 \(y\)의 다항식 \(d_i(y)\)뿐일 수 있다.
+\[
+f_i=d_i(y)\bar f_i,\qquad g_i=d_i(y)\bar g_i,
+\]
+그리고 \(\bar f_i,\bar g_i\)는 서로소이다. \(d_i(y)\not\equiv0(p)\)이므로 \(q^{(i)}=(\bar f_i,\bar g_i,p^e)\)이기도 하다. 이것은 모든 \(\sigma\geq\varrho\)에 대하여 \((\bar f_i,\bar g_i,p^\sigma)\)와 같고, 그러한 각 \(\sigma\)에 대하여 \(q\)의 약수이다. 따라서 \(q^{(i)}\)는 \((\bar f_i,\bar g_i)\)에서 원점에 속하는 으뜸성분이다.
+
+\(\gamma_1,\delta_1;\ldots;\gamma_r,\delta_r\)를 \(x=0,\ y=0\)과 다른 \((\bar f_i,\bar g_i)\)의 영점들이라 하고, \(\tau_1,\ldots,\tau_r\)를 그에 대응하는 \((\bar f_i,\bar g_i)\)의 으뜸성분들의 지수라 하자. 곱
+\[
+P=((x-\gamma_1)+u(y-\delta_1))^{\tau_1}\cdots
+((x-\gamma_r)+u(y-\delta_r))^{\tau_r}
+\]
+에서 부정원 \(u\)를 \(P\)의 한 원소로 특수화하되 \(P\not\equiv0(p)\)이 유지되게 하자. 특수화한 \(P\)와 \(d(y)\)의 곱을 \(G(x,y)\)라 두면
+\[
+G(x,y)\not\equiv0(p),\qquad q^{(i)}\cdot G(x,y)\equiv0(f_i,g_i)
+\]
+가 된다.
+
+가정 \(h_iF(y)\equiv0(q^{(i)})\)에서
+\[
+h_iF(y)G(x,y)\equiv0(f_i,g_i)
+\]
+가 따라온다. 이것을 (1)과 함께 항등식의 형태로 쓰면
+\[
+h_iF(y)G=A f_i+B g_i;\qquad
+h_ix=(g_i(0,y):y^{(g_i)})\cdot f_i-(f(0,y):y^{(g_i)})g_i
+\]
+이다. 따라서
+\[
+\bar f_i(xA-F(y)H)\equiv0(\bar g_i);\qquad
+H=G(x,y)\cdot g_i(0,y):y^{(g_i)}\not\equiv0(p)
+\]
+를 얻는다.
+
+\(\bar f_i,\bar g_i\)가 서로소이므로 계속하여
+\[
+xA-F(y)H\equiv0(\bar g_i)
+\]
+이다. 따라서
+\[
+F(y)H\equiv0(\bar g_i,x)\equiv0(\bar g_i,x,p^\sigma)=(y^{(g_i)},x),
+\]
+결국 \(F(y)\equiv0(y^{(g_i)})\)이다. 이로써 (5), 따라서 정리 IV가 증명되었다.
+
+\textbf{주해 I.} 관계 (4), (5)는 보조정리 II와 함께 아이디얼 몫 사이의 서로 역인 다음 관계들로 쓸 수 있으며\srcfn{15)}{몫 \(\mathfrak a:\mathfrak b\)는 \(\mathfrak b c\equiv0(\mathfrak a)\)이 되게 하는 다항식 \(c(x,y)\) 전체를 뜻한다.}, 둘째 관계의 증명은 동시에 보조정리 II의 증명이 된다.
+\begin{equation}
+\tag{6}
+q^{(i)}:q^{(i+1)}=(q^{(i)},x)=(y^{(g_i)},x);\qquad
+q^{(i)}:(q^{(i)},x)=q^{(i+1)}.\srcfnmark{16)}
+\end{equation}
+\srcfntext{16)}{이 서로 역인 두 관계 가운데 하나는 기약아이디얼의 일반론에 따라 다른 하나를 함의한다. Macaulay, \emph{Modular Systems}, 72, 73번, Cambridge Tracts 19 (1916)을 보라.}
+
+첫째 관계는 (4), (5)를 한데 묶은 것이다. 둘째 관계에 관해서는 다음을 덧붙인다. (4)에서 \(x\cdot q^{(i+1)}\equiv0(q^{(i)})\)을 증명하였다. 그 역은 (5)와 비슷하게 얻어진다. \(xM\equiv0(q^{(i)})\)에서 위와 같이
+\[
+xMG\equiv0(f_i,g_i),\quad\text{따라서}\quad
+xMG\cdot g_i(0,y):y^{(g_i)}\equiv0(xh_i,g_i)
+\]
+를 얻는다.
+
+정의상 \(g_i\not\equiv0(x)\)이다. 실제로 \((f_i)\geq(g_i)\)이다. 따라서
+\[
+M\cdot(G\cdot g_i(0,y):y^{(g_i)})\equiv0(h_i,g_i)\equiv0(q^{(i+1)}),
+\quad\text{따라서}\quad M\equiv0(q^{(i+1)})
+\]
+을 얻는다.
+
+이제 보조정리 II의 조건이 필요함은 다음과 같이 따라온다. \(K_i\equiv0(q_i)\)에서 \(K_i(0,y)\equiv0(y^{(g_i)},x)\)를 얻으므로 \((K_i)\geq(g_i)\)이다. 따라서 (3)에 의하여
+\[
+xK_{i+1}\equiv0(q^{(i)}),\quad
+\text{따라서 --- (6)의 둘째 관계에 의하여 ---}\quad
+K_{i+1}\equiv0(q^{(i+1)}).
+\]
+
+조건이 충분함은 즉시 읽어 낼 수 있다. 보조정리 II를 유한번 적용하면 주정리를 얻는다. 마찬가지로 (6)의 둘째 관계를 반복하면 추가 I, 곧 \(q:x^t=q^{(t+1)}\)이 단위아이디얼과 같음을 얻는다. 더구나 \(q:x^{t-1}=q^{(t)}\)이므로 \(t\)는 그러한 거듭제곱 가운데 가장 낮은 것이다.
+
+\textbf{주해 II.} \(q\)로 나누어지지 않는 다항식 \(K\)에 대해서는 다음도 말할 수 있다. \(K\equiv0(q^{(i+1)})\)이지만 \(K\not\equiv0(q^{(i)})\)이면
+\[
+(K,q^{(i)})=(h_iy^{(K)},q^{(i)}).
+\]
+실제로 정리 IV에 따라 \(c(y)\not\equiv0(y)\)인 \(c(y)\)에 대하여 \(K\equiv h_iy^\lambda c(y)\pmod{q^{(i)}}\)이므로
+\[
+(K,q^{(i)})=(h_iy^\lambda,q^{(i)})
+\]
+이다.
+
+이때 \(y^{(g_i)-\lambda}K\equiv0(q^{(i)})\)이고, (5)에 따라 이것은 그러한 거듭제곱 가운데 가장 낮은 것이다. 한편 보조정리 II에 따르면 \((g_i)-(K)\)가 이 가장 낮은 거듭제곱이다. 따라서 \(\lambda=(K)\)이다.
+
+\begin{center}
+(1926년 10월 24일 접수.)
+\end{center}

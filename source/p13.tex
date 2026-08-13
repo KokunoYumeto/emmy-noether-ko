@@ -1,0 +1,729 @@
+% Korean Noether paper 13 — fresh producer translation, unchecked.
+% Initial translation authority: ED0005 lines 8489--9104.
+% Current scope-rebase authority: ED0011 / NOETH-DE-AUTH-v047-20260808.
+% Authority SHA-256: 1A44F967B29972E8F99E5C323A479162AD82A23FC457395915A4BB9DDF51AD41.
+% Normalized source span: 57,812 bytes; SHA-256 F785988F9923D89D4F352A95EC40070FC0938A8416B5A8C32835CAA63CC04C3F.
+% Translation only; independent source, Korean-language, render, and certification checks remain external.
+
+\section*{13. 불변 변분문제}
+
+\begin{center}
+(F. 클라인의 박사학위 50주년에)\\[0.6em]
+에미 뇌터 (괴팅겐)\\[1em]
+\emph{Nachr. v. d. Ges. d. Wiss. zu Göttingen 1918, 235--257쪽}\\[2em]
+F. 클라인이 1918년 7월 26일 회의에 제출함\srcfn{1)}{원고의 최종본은 9월 말에야 제출되었다.}.
+\end{center}
+
+여기서는 리의 의미에서 연속군을 허용하는 변분문제를 다룬다. 이에 대응하는 미분방정식들에 대한 귀결은 § 1에서 정식화하고 뒤의 절들에서 증명하는 정리들에 가장 일반적으로 표현되어 있다. 변분문제에서 생기는 이 미분방정식들에 대해서는 군을 허용하는 임의의 미분방정식, 곧 리가 연구한 방정식들보다 훨씬 더 정밀한 명제를 세울 수 있다. 따라서 이하의 논의는 형식적 변분법의 방법과 리 군론의 방법을 결합한다. 특수한 군과 변분문제에 대해서 이 방법들의 결합은 새롭지 않다. 특수한 유한매개변수군에 대해서는 하멜과 헤르글로츠를, 특수한 무한군에 대해서는 로런츠와 그의 제자들(예컨대 포커), 바일과 클라인을 들 수 있다\srcfn{2)}{Hamel, \emph{Math. Ann.} 59 및 \emph{Zeitschrift f. Math. u. Phys.} 50. Herglotz, \emph{Ann. d. Phys.} (4) 36, 특히 § 9, 511쪽. Fokker, Verslag d. Amsterdamer Akad., 1917년 1월 27일. 다른 문헌은 클라인의 둘째 글, Göttinger Nachrichten, 1918년 7월 19일을 보라. 막 출판된 Kneser의 논문 \emph{Math. Zeitschrift} 2에서는 비슷한 방법으로 불변식을 세운다.}. 특히 클라인의 둘째 글과 이 논의는 서로 영향을 주고받았으며, 이에 관해서는 클라인 논문의 맺음말을 참조할 수 있다.
+
+\section*{§ 1. 예비사항과 정리의 정식화}
+
+이하에 나타나는 모든 함수는 해석적이거나 적어도 연속이고 필요한 유한차수만큼 연속미분가능하며, 생각하는 영역에서 단일값이라고 가정한다.
+
+잘 알려져 있듯이 \glqq{}변환군\grqq{}이란 각 변환의 역변환도 그 계에 들어 있고, 그 계의 임의의 두 변환을 합성한 것도 다시 그 계에 들어 있는 변환계를 뜻한다. 변환들이 본질적인 매개변수 \(\varepsilon\) \(\rho\)개에 해석적으로 의존하는 가장 일반적인 변환 안에 포함될 때, 다시 말해 이 \(\rho\)개 매개변수를 더 적은 매개변수들의 \(\rho\)개 함수로 나타낼 수 없을 때 그 군을 유한매개변수 연속군 \(\mathfrak G_\rho\)라 한다. 이에 대응하여 무한 연속군 \(\mathfrak G_{\infty\rho}\)란 가장 일반적인 변환이 본질적인 임의함수 \(p(x)\) \(\rho\)개와 그 도함수들에 해석적으로, 또는 적어도 연속이며 필요한 유한차수만큼 연속미분가능하게 의존하는 군이다. 그 중간에는 임의함수에는 의존하지 않지만 무한히 많은 매개변수에 의존하는 군이 있다. 끝으로 임의함수와 매개변수 모두에 의존하는 군을 혼합군이라 한다\srcfn{1)}{리는 \emph{Grundlagen für die Theorie der unendlichen kontinuierlichen Transformationsgruppen}, Ber. d. K. Sächs. Ges. der Wissensch. 1891 [이하 \glqq{}Grundlagen\grqq{}]에서 무한 연속군을, 변환들이 편미분방정식계의 가장 일반적인 해로 주어지며 그 해들이 유한개의 매개변수에만 의존하지 않는 변환군으로 정의한다. 이 정의로 위에서 말한 유한군과 다른 유형들 가운데 하나를 얻는다. 반대로 무한히 많은 매개변수라는 극한적인 경우가 반드시 미분방정식계를 만족해야 하는 것은 아니다.}.
+
+\(x_1,\ldots,x_n\)을 독립변수라 하고 \(u_1(x),\ldots,u_\mu(x)\)를 그에 종속하는 함수들이라 하자. \(x,u\)에 한 군의 변환들을 적용하면 변환의 가역성 때문에 변환된 양들 가운데 다시 정확히 \(n\)개의 독립변수 \(y_1,\ldots,y_n\)이 들어 있어야 한다. 그에 종속하는 나머지 함수들을 \(v_1(y),\ldots,v_\mu(y)\)라 하자. 변환에는 \(u\)의 \(x\)에 대한 도함수
+\[
+\frac{\partial u}{\partial x},\quad
+\frac{\partial^2u}{\partial x^2},\ldots
+\]
+도 나타날 수 있다\srcfn{1)}{가능한 곳에서는 합을 쓸 때도 지표를 생략한다. 예를 들어 \(\partial^2u/\partial x^2\)는 \(\partial^2u_\alpha/\partial x_\beta\partial x_\gamma\) 등을 뜻한다.}. 관계
+\[
+P\!\left(x,u,\frac{\partial u}{\partial x},
+\frac{\partial^2u}{\partial x^2},\ldots\right)
+=
+P\!\left(y,v,\frac{\partial v}{\partial y},
+\frac{\partial^2v}{\partial y^2},\ldots\right)
+\]
+가 성립하면 그 함수를 군의 불변식이라 한다.
+
+특히 적분 \(I\)에 대하여
+\begin{equation}
+\tag{1}
+\begin{aligned}
+I&=\int\!\cdots\!\int
+f\!\left(x,u,\frac{\partial u}{\partial x},
+\frac{\partial^2u}{\partial x^2},\ldots\right)\dd x\\
+&=\int\!\cdots\!\int
+f\!\left(y,v,\frac{\partial v}{\partial y},
+\frac{\partial^2v}{\partial y^2},\ldots\right)\dd y
+\end{aligned}
+\end{equation}
+가 성립하면 \(I\)는 군의 불변식이다\srcfn{2)}{\(\dd x,\dd y\)는 각각 \(\dd x_1\cdots\dd x_n,\dd y_1\cdots\dd y_n\)의 줄임표기이다.}. 적분은 임의의 실수 \(x\)-영역과 그에 대응하는 \(y\)-영역에서 한다\srcfn{3)}{변환에 나타나는 모든 인수 \(x,u,\varepsilon,p(x)\)는 실수라고 가정하되 계수는 복소수여도 된다. 그러나 최종결과들은 \(x,u\), 매개변수, 임의함수에 관한 항등식이므로 모든 함수가 해석적이면 복소수 값에 대해서도 성립한다. 결과의 큰 부분은 적분 없이도 근거 지을 수 있으므로 그 부분의 증명에는 실수로의 제한도 필요 없다. 반면 § 2 끝과 § 5 시작의 고찰은 적분 없이 수행하기 어려워 보인다.}.
+
+한편 불변일 필요가 없는 임의의 적분 \(I\)에 대하여 제1변분 \(\delta I\)를 만들고, 변분법의 규칙에 따라 부분적분으로 바꾼다. \(\delta u\)와 나타나는 모든 도함수가 경계에서 사라지고 그 밖에서는 임의라고 가정하면 잘 알려진 바와 같이
+\begin{equation}
+\tag{2}
+\delta I=\int\!\cdots\!\int\delta f\,\dd x
+=\int\!\cdots\!\int
+\left(\sum_i\psi_i\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)
+\delta u_i\right)\dd x
+\end{equation}
+를 얻는다. 여기서 \(\psi_i\)들은 라그랑주 식, 곧 대응 변분문제 \(\delta I=0\)의 라그랑주 방정식의 좌변이다. 경계항들도 함께 쓰면 이 적분관계에는 \(\delta u\)와 그 도함수에 관한 적분 없는 항등식이 대응한다. 부분적분이 보여 주듯 이 경계항들은 발산식의 적분, 곧
+\[
+\operatorname{Div}A=
+\frac{\partial A_1}{\partial x_1}+\cdots+
+\frac{\partial A_n}{\partial x_n}
+\]
+꼴의 식의 적분이다. 여기서 \(A\)는 \(\delta u\)와 그 도함수에 관하여 선형이다. 따라서
+\begin{equation}
+\tag{3}
+\sum_i\psi_i\,\delta u_i=\delta f+\operatorname{Div}A
+\end{equation}
+를 얻는다.
+
+특히 \(f\)가 \(u\)의 일차도함수만 포함하면, 단일적분의 경우 항등식 (3)은 호인이 \glqq{}라그랑주 중심방정식\grqq{}이라 부른 식과 같다.
+\begin{equation}
+\tag{4}
+\sum_i\psi_i\,\delta u_i
+=\delta f-\frac{\dd}{\dd x}
+\left(\sum_i\frac{\partial f}{\partial u_i'}\delta u_i\right),
+\qquad u_i'=\frac{\dd u_i}{\dd x}.
+\end{equation}
+\(n\)중적분의 경우 (3)은
+\begin{equation}
+\tag{5}
+\begin{aligned}
+\sum_i\psi_i\,\delta u_i
+={}&\delta f
+-\frac{\partial}{\partial x_1}
+\left(\sum_i\frac{\partial f}
+{\partial\left(\frac{\partial u_i}{\partial x_1}\right)}
+\delta u_i\right)\\
+&-\cdots-
+\frac{\partial}{\partial x_n}
+\left(\sum_i\frac{\partial f}
+{\partial\left(\frac{\partial u_i}{\partial x_n}\right)}
+\delta u_i\right)
+\end{aligned}
+\end{equation}
+이 된다.
+
+단일적분이고 \(u\)의 도함수가 \(\varkappa\)차까지 나타나는 경우 (3)은
+\begin{equation}
+\tag{6}
+\begin{aligned}
+\sum_i\psi_i\,\delta u_i
+={}&\delta f\\
+&-\frac{\dd}{\dd x}\left\{\sum_i\left[
+\binom11\frac{\partial f}{\partial u_i^{(1)}}\delta u_i+
+\binom21\frac{\partial f}{\partial u_i^{(2)}}\delta u_i^{(1)}
++\cdots+
+\binom{\varkappa}{1}\frac{\partial f}{\partial u_i^{(\varkappa)}}
+\delta u_i^{(\varkappa-1)}\right]\right\}\\
+&+\frac{\dd^2}{\dd x^2}\left\{\sum_i\left[
+\binom22\frac{\partial f}{\partial u_i^{(2)}}\delta u_i+
+\binom32\frac{\partial f}{\partial u_i^{(3)}}\delta u_i^{(1)}
++\cdots+
+\binom{\varkappa}{2}\frac{\partial f}{\partial u_i^{(\varkappa)}}
+\delta u_i^{(\varkappa-2)}\right]\right\}\\
+&+\cdots+
+(-1)^\varkappa\frac{\dd^\varkappa}{\dd x^\varkappa}
+\left\{\sum_i\binom{\varkappa}{\varkappa}
+\frac{\partial f}{\partial u_i^{(\varkappa)}}\delta u_i\right\}.
+\end{aligned}
+\end{equation}
+\(n\)중적분에도 이에 대응하는 항등식이 성립한다. 특히 \(A\)에는 \(\delta u\)의 \((\varkappa-1)\)차 도함수까지 들어 있다. (4), (5), (6)이 실제로 라그랑주 식 \(\psi_i\)들을 정의한다는 사실은, 우변의 결합에서 \(\delta u\)의 모든 고차도함수가 소거되는 반면 부분적분이 유일하게 이끄는 관계 (2)는 충족된다는 데서 따라온다.
+
+이하에서 다룰 두 정리는 다음과 같다.
+
+\textbf{I.} 적분 \(I\)가 \(\mathfrak G_\rho\)에 관하여 불변이면 라그랑주 식들의 선형독립인 결합 \(\rho\)개가 발산식이 된다. 역으로 그러한 관계들에서 \(I\)의 \(\mathfrak G_\rho\)-불변성이 따라온다. 이 정리는 매개변수가 무한히 많은 극한적인 경우에도 성립한다.
+
+\textbf{II.} 적분 \(I\)가 임의함수들이 \(\sigma\)차 도함수까지 나타나는 \(\mathfrak G_{\infty\rho}\)에 관하여 불변이면, 라그랑주 식들과 그 \(\sigma\)차까지의 도함수들 사이에 \(\rho\)개의 항등관계가 성립한다. 여기서도 역이 성립한다\srcfn{1)}{몇 가지 자명한 예외는 § 2, 2의 주를 보라.}.
+
+혼합군에 대해서는 두 정리의 명제가 모두 성립한다. 따라서 종속관계와, 그와 독립인 발산관계가 함께 나타난다.
+
+이 항등식들에서 대응 변분문제로 넘어가 \(\psi=0\)으로 두면\srcfn{2)}{조금 더 일반적으로는 \(\psi_i=T_i\)로 둘 수도 있다. § 3의 첫째 주를 보라.}, 정리 I은 일차원의 경우 발산식이 전미분이 되므로 \(\rho\)개의 제1적분이 존재함을 말한다. 다만 이 제1적분들 사이에는 비선형 종속관계가 있을 수 있다\srcfn{3)}{§ 3의 끝을 보라.}. 다차원의 경우에는 최근 흔히 \glqq{}보존법칙\grqq{}이라 부르는 발산방정식을 얻는다. 정리 II는 라그랑주 방정식 가운데 \(\rho\)개가 나머지 방정식들의 귀결임을 말한다.
+
+역을 제외한 정리 II의 가장 간단한 예는 바이어슈트라스의 매개변수표시이다. 잘 알려져 있듯 일차동차성 아래에서는 독립변수 \(x\)를 \(u\)는 바꾸지 않는 \(x\)의 임의함수로 바꾸어도 적분이 불변이다.
+\[
+y=p(x),\qquad v_i(y)=u_i(x).
+\]
+따라서 도함수 없이 임의함수 하나가 나타나며, 이에 대응하여 라그랑주 식들 자체 사이에 잘 알려진 선형관계
+\[
+\sum_i\psi_i\,\frac{\dd u_i}{\dd x}=0
+\]
+가 성립한다.
+
+또 다른 예는 물리학자들의 \glqq{}일반상대성이론\grqq{}이다. 여기서는 모든 \(x\)-변환의 군
+\[
+y_i=p_i(x)
+\]
+을 다루고, \(u\), 곧 \(g_{\mu\nu}\)와 \(q\)라 표시되는 양들은 이 변환이 이차 및 일차 미분형식의 계수에 유도하는 변환을 받는다. 이 변환들에는 임의함수 \(p(x)\)의 일차도함수가 들어 있다. 이에 대응하여 라그랑주 식들과 그 일차도함수들 사이에 잘 알려진 \(n\)개의 종속관계가 성립한다\srcfn{4)}{예컨대 클라인의 서술을 보라.}.
+
+특히 변환에서 \(u(x)\)의 도함수를 허용하지 않고, 변환된 독립변수들은 \(u\)가 아니라 \(x\)에만 의존하게 하여 군을 특수화하면 다음이 성립한다. § 5에서 보이듯 \(I\)의 불변성에서 \(\sum_i\psi_i\delta u_i\)의 상대불변성이 따라오고\srcfn{1)}{즉 \(\sum_i\psi_i\delta u_i\)는 변환할 때 한 인자를 얻는다.}, 매개변수에 적절한 변환을 가하면 정리 I에 나타나는 발산식들도 상대불변이다. 여기서 앞에서 말한 제1적분들도 그 군을 허용함이 따라온다. 정리 II에서도 임의함수들로 묶은 종속관계의 좌변들이 상대불변이다. 또 여기서 발산이 항등적으로 사라지면서 군을 허용하는 함수가 하나 생기는데, 물리학자들의 상대성이론에서는 이것이 종속관계와 에너지법칙의 연관을 매개한다\srcfn{2)}{클라인의 둘째 글을 보라.}. 끝으로 정리 II는 \glqq{}일반상대성\grqq{}에서 고유한 에너지법칙이 실패한다는 힐베르트의 관련 주장을 군론적으로 증명한다. 이러한 부가 설명까지 포함하면 정리 I은 역학 등에서 알려진 제1적분에 관한 모든 정리를 포함하고, 정리 II는 \glqq{}일반상대성이론\grqq{}의 가능한 가장 넓은 군론적 일반화라고 할 수 있다.
+
+\bigskip
+\section*{§ 2. 발산관계와 종속관계}
+
+\(\mathfrak G\)를 유한 또는 무한 연속군이라 하자. 그러면 항등변환에 매개변수 \(\varepsilon\), 또는 임의함수 \(p(x)\)의 값 0이 대응하게 언제나 만들 수 있다\srcfn{3)}{예컨대 Lie, \emph{Grundlagen}, 331쪽을 보라. 임의함수를 다루는 경우에는 매개변수의 특수값 \(a^\sigma\)를 고정함수 \(p^\sigma,\partial p^\sigma/\partial x,\ldots\)로 바꾸고, 이에 따라 \(a^\sigma+\varepsilon\)을 \(p^\sigma+p(x),\partial p^\sigma/\partial x+\partial p/\partial x,\ldots\)로 바꾸어야 한다.}. 따라서 가장 일반적인 변환은
+\[
+\begin{aligned}
+y_i&=A_i\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)
+=x_i+\Delta x_i+\cdots,\\
+v_i(y)&=B_i\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)
+=u_i+\Delta u_i+\cdots
+\end{aligned}
+\]
+꼴이다. 여기서 \(\Delta x_i,\Delta u_i\)는 \(\varepsilon\), 또는 \(p(x)\)와 그 도함수들에 관한 최저차항이다. 이 항들은 그 양들에 관하여 선형이라고 가정한다. 뒤에서 보이듯 이는 일반성을 제한하지 않는다.
+
+이제 적분 \(I\)가 \(\mathfrak G\)에 관하여 불변이어서 관계 (1)을 만족한다고 하자. 그러면 특히 \(I\)는 \(\mathfrak G\)에 들어 있는 무한소변환
+\[
+y_i=x_i+\Delta x_i,\qquad v_i(y)=u_i+\Delta u_i
+\]
+에 관하여도 불변이다. 이 변환에 대하여 (1)은
+\begin{equation}
+\tag{7}
+\begin{aligned}
+0=\Delta I
+&=\int\!\cdots\!\int
+f\!\left(y,v(y),\frac{\partial v}{\partial y},\ldots\right)\dd y\\
+&\quad-\int\!\cdots\!\int
+f\!\left(x,u(x),\frac{\partial u}{\partial x},\ldots\right)\dd x
+\end{aligned}
+\end{equation}
+가 된다. 첫 적분은 \(x\)-영역에 대응하는 \(x+\Delta x\)-영역에서 해야 한다. 그러나 무한소 \(\Delta x\)에 성립하는 변형
+\begin{equation}
+\tag{8}
+\begin{aligned}
+\int\!\cdots\!\int
+f\!\left(y,v(y),\frac{\partial v}{\partial y},\ldots\right)\dd y
+&=\int\!\cdots\!\int
+f\!\left(x,v(x),\frac{\partial v}{\partial x},\ldots\right)\dd x\\
+&\quad+\int\!\cdots\!\int
+\operatorname{Div}(f\cdot\Delta x)\,\dd x
+\end{aligned}
+\end{equation}
+을 사용하면 이를 \(x\)-영역에서의 적분으로 바꿀 수 있다.
+
+따라서 무한소변환 \(\Delta u\) 대신 변분
+\begin{equation}
+\tag{9}
+\bar\delta u_i=v_i(x)-u_i(x)
+=\Delta u_i-\sum_\lambda
+\frac{\partial u_i}{\partial x_\lambda}\Delta x_\lambda
+\end{equation}
+를 도입하면 (7), (8)은
+\begin{equation}
+\tag{10}
+0=\int\!\cdots\!\int
+\left\{\bar\delta f+\operatorname{Div}(f\cdot\Delta x)\right\}\dd x
+\end{equation}
+가 된다. 관계 (10)은 모든 임의의 영역에서 적분할 때 성립하므로 피적분함수는 항등적으로 사라져야 한다. 따라서 \(I\)의 불변성을 나타내는 리의 미분방정식은 관계
+\begin{equation}
+\tag{11}
+\bar\delta f+\operatorname{Div}(f\cdot\Delta x)=0
+\end{equation}
+이 된다. (3)에 따라 \(\bar\delta f\)를 라그랑주 식으로 나타내면
+\begin{equation}
+\tag{12}
+\sum_i\psi_i\bar\delta u_i=\operatorname{Div}B,
+\qquad B=A-f\cdot\Delta x
+\end{equation}
+를 얻는다. 이 관계는 각 불변적분 \(I\)에 대하여 나타나는 모든 인수에 관한 항등식이고, 바로 \(I\)에 대한 리의 미분방정식의 구하는 형태이다\footnote{자명한 경우에는 (12)가 \(0=0\)이 된다. 이는 \(\Delta x,\Delta u\)가 \(u\)의 도함수에도 의존할 때에만 일어날 수 있으며, \(\operatorname{Div}(f\cdot\Delta x)=0,\ \bar\delta u=0\)인 경우이다. 이러한 무한소변환들은 언제나 군에서 분리하고, 정리를 정식화할 때에는 나머지 매개변수 또는 임의함수만 세어야 한다. 나머지 무한소변환들이 언제나 다시 군을 이루는지는 여기서 결정하지 않는다.}.
+
+먼저 \(\mathfrak G\)가 유한매개변수 연속군 \(\mathfrak G_\rho\)라고 하자. 가정에 따라 \(\Delta u,\Delta x\)가 매개변수 \(\varepsilon_1,\ldots,\varepsilon_\rho\)에 관하여 선형이므로, (9)에 따라 \(\bar\delta u\)와 그 도함수들도 그러하다. 따라서 \(A,B\)도 \(\varepsilon\)에 관하여 선형이다. 그러므로
+\[
+B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
+\bar\delta u=\bar\delta u^{(1)}\varepsilon_1+\cdots+
+\bar\delta u^{(\rho)}\varepsilon_\rho
+\]
+로 두자. 여기서 \(\bar\delta u^{(1)},\ldots\)는 \(x,u,\partial u/\partial x,\ldots\)의 함수들이다. 그러면 (12)에서 구하는 발산관계
+\begin{equation}
+\tag{13}
+\sum_i\psi_i\bar\delta u_i^{(1)}=\operatorname{Div}B^{(1)},
+\quad\ldots,\quad
+\sum_i\psi_i\bar\delta u_i^{(\rho)}=\operatorname{Div}B^{(\rho)}
+\end{equation}
+가 따라온다.
+
+따라서 라그랑주 식들의 선형독립인 결합 \(\rho\)개가 발산식이 된다. 선형독립성은 다음에서 따라온다. (9)에 따라 \(\bar\delta u=0,\ \Delta x=0\)이면 \(\Delta u=0,\ \Delta x=0\)이 되어 무한소변환들 사이에 종속관계가 생긴다. 그러나 어떠한 매개변수값에도 그러한 종속관계가 성립할 수 없다. 그렇지 않으면 이 무한소변환들을 적분하여 다시 얻는 \(\mathfrak G_\rho\)가 \(\rho\)보다 적은 본질매개변수에 의존할 것이기 때문이다. 다른 가능성인 \(\bar\delta u=0,\ \operatorname{Div}(f\Delta x)=0\)은 이미 제외하였다. 이 추론은 매개변수가 무한히 많은 극한적인 경우에도 성립한다.
+
+이제 \(\mathfrak G\)가 무한 연속군 \(\mathfrak G_{\infty\rho}\)라고 하자. 그러면 \(\bar\delta u\)와 그 도함수들, 따라서 \(B\)도 임의함수 \(p(x)\)와 그 도함수들에 관하여 다시 선형이 된다\footnote{\(p\)가 \(u,\partial u/\partial x,\ldots\)와 무관하다고 가정해도 일반성을 잃지 않는다는 사실은 역정리가 보여 준다.}. (12)와는 아직 무관하게 \(\bar\delta u\)의 값을 대입하여
+\[
+\sum_i\psi_i\bar\delta u_i
+=\sum_{\lambda,i}\psi_i\left\{
+a^{(\lambda)}(x,u,\ldots)p^{(\lambda)}(x)
++b^{(\lambda)}(x,u,\ldots)
+\frac{\partial p^{(\lambda)}}{\partial x}
++\cdots+c^{(\lambda)}(x,u,\ldots)
+\frac{\partial^\sigma p^{(\lambda)}}{\partial x^\sigma}
+\right\}
+\]
+라고 하자. 이제 부분적분 공식과 유사하게 항등식
+\[
+\varphi(x,u,\ldots)\frac{\partial^\tau p(x)}{\partial x^\tau}
+=(-1)^\tau\frac{\partial^\tau\varphi}{\partial x^\tau}\,p(x)
+\quad\bmod\text{ 발산식}
+\]
+에 따라 \(p\)의 도함수들을 \(p\) 자체와, \(p\) 및 그 도함수들에 관하여 선형인 발산식들로 바꿀 수 있다. 따라서
+\begin{equation}
+\tag{14}
+\begin{aligned}
+\sum_i\psi_i\bar\delta u_i
+={}&\sum_\lambda\left\{
+a_i^{(\lambda)}\psi_i
+-\frac{\partial}{\partial x}\bigl(b_i^{(\lambda)}\psi_i\bigr)
++\cdots+(-1)^\sigma
+\frac{\partial^\sigma}{\partial x^\sigma}
+\bigl(c_i^{(\lambda)}\psi_i\bigr)
+\right\}p^{(\lambda)}+\operatorname{Div}\Gamma
+\end{aligned}
+\end{equation}
+를 얻고, 이를 (12)와 결합하면
+\begin{equation}
+\tag{15}
+\sum_\lambda\left\{
+a_i^{(\lambda)}\psi_i
+-\frac{\partial}{\partial x}\bigl(b_i^{(\lambda)}\psi_i\bigr)
++\cdots+(-1)^\sigma
+\frac{\partial^\sigma}{\partial x^\sigma}
+\bigl(c_i^{(\lambda)}\psi_i\bigr)
+\right\}p^{(\lambda)}
+=\operatorname{Div}(B-\Gamma)
+\end{equation}
+을 얻는다. 이제 임의의 영역에 걸쳐 (15)의 \(n\)중적분을 취하고, \(B-\Gamma\)에 나타나는 모든 도함수와 함께 \(p(x)\)가 경계에서 사라지도록 \(p(x)\)를 택한다. 발산식의 적분은 경계적분으로 환원되므로, (15)의 왼쪽 적분도 경계에서 충분히 많은 도함수와 함께 사라지는 임의의 \(p(x)\)에 대하여 영이다. 잘 알려진 추론에 따라 그 피적분함수는 모든 \(p(x)\)에 대하여 사라져야 하므로 다음 \(\rho\)개의 관계를 얻는다.
+\begin{equation}
+\tag{16}
+\sum_i\left\{
+a_i^{(\lambda)}\psi_i
+-\frac{\partial}{\partial x}\bigl(b_i^{(\lambda)}\psi_i\bigr)
++\cdots+(-1)^\sigma
+\frac{\partial^\sigma}{\partial x^\sigma}
+\bigl(c_i^{(\lambda)}\psi_i\bigr)
+\right\}=0,
+\qquad(\lambda=1,2,\ldots,\rho).
+\end{equation}
+이것들이 \(I\)가 \(\mathfrak G_{\infty\rho}\)에 대하여 불변일 때 라그랑주 식들과 그 도함수들 사이에 성립하는 구하는 종속관계들이다. 선형독립성은 위와 마찬가지로 드러난다. 역방향의 논증이 (12)로 되돌아가기 때문이며, 또한 제4절에서 더 자세히 설명하듯 무한소변환들로부터 다시 유한변환들을 추론할 수 있기 때문이다. 따라서 \(\mathfrak G_{\infty\rho}\)에서는 이미 무한소변환들 속에 언제나 \(\rho\)개의 임의함수가 나타난다. (15)와 (16)에서는 또한 \(\operatorname{Div}(B-\Gamma)=0\)이 따라온다.
+
+``혼합군''에 맞추어 \(\Delta x\)와 \(\Delta u\)를 \(\varepsilon\)들과 \(p(x)\)들에 관하여 선형으로 놓으면, 한 번은 \(p(x)\)들을 영으로, 다른 한 번은 \(\varepsilon\)들을 영으로 둠으로써 발산관계 (13)과 종속관계 (16)이 모두 성립함을 알 수 있다.
+
+\bigskip
+\section*{\S{}3. 유한군의 경우 역정리}
+
+역을 보이려면 우선 앞의 고찰을 본질적으로 역순으로 밟아야 한다. (13)이 성립하면 이를 \(\varepsilon\)들로 곱하고 더하여 (12)를 얻고, 항등식 (3)에 따라 여기서
+\[
+\bar\delta f+\operatorname{Div}(A-B)=0
+\]
+이라는 관계를 얻는다. 따라서
+\[
+\Delta x=\frac1f\,(A-B)
+\]
+로 두면 (11)에 도달한다. 이를 적분하면 마침내 (7), 즉 \(\Delta I=0\)을 얻으므로, \(I\)는 \(\Delta x,\Delta u\)로 정해지는 무한소변환에 대하여 불변이다. 여기서 \(\Delta u\)는 (9)에 따라 \(\Delta x\)와 \(\bar\delta u\)로부터 정해지고, \(\Delta x\)와 \(\Delta u\)는 매개변수들에 관하여 선형이 된다. 잘 알려진 바와 같이 \(\Delta I=0\)이면 다음 연립계를 적분하여 생기는 유한변환들에 대해서도 \(I\)가 불변이다.
+\begin{equation}
+\tag{17}
+\frac{\dd x_i}{\dd t}=\Delta x_i,\qquad
+\frac{\dd u_i}{\dd t}=\Delta u_i,\qquad
+\left\{\begin{array}{l}
+x_i=y_i,\\
+u_i=v_i
+\end{array}\right\}
+\quad\text{단, }t=0.
+\end{equation}
+이 유한변환들은 \(\rho\)개의 매개변수 \(a_1,\ldots,a_\rho\), 즉 \(t\varepsilon_1,\ldots,t\varepsilon_\rho\)라는 결합들을 포함한다. 선형독립인 발산관계 (13)이 정확히 \(\rho\)개뿐이라는 가정으로부터, 유한변환들이 도함수 \(\partial u/\partial x\)를 포함하지 않는 한 언제나 군을 이룬다는 것도 따라온다. 그렇지 않다면 리 괄호과정으로 생기는 무한소변환들 가운데 적어도 하나는 나머지 \(\rho\)개의 선형결합이 아닐 것이다. \(I\)는 이 변환도 허용하므로 선형독립인 발산관계가 \(\rho\)개보다 많아질 것이다. 아니면 이 무한소변환은 \(\bar\delta u=0,\ \operatorname{Div}(f\Delta x)=0\)인 특수한 형태일 것이다. 그러나 그러면 가정에 어긋나게 \(\Delta x\) 또는 \(\Delta u\)가 도함수에 의존할 것이다. \(\Delta x\)나 \(\Delta u\)에 도함수가 나타날 때 이 경우가 실제로 생길 수 있는지는 여기서 미결로 남겨야 한다. 이때 군의 성질을 다시 얻으려면 위에서 정한 \(\Delta x\)에 \(\operatorname{Div}(f\Delta x)=0\)을 만족하는 모든 함수 \(\Delta x\)를 더해야 한다. 그러나 약속에 따라 이로써 추가되는 매개변수들은 세지 않는다. 이로써 역정리가 증명되었다.
+
+이 역정리로부터 실제로 \(\Delta x\)와 \(\Delta u\)를 매개변수들에 관하여 선형이라고 가정할 수 있다는 것도 따라온다. 만일 \(\Delta u\)와 \(\Delta x\)가 \(\varepsilon\)에 관하여 더 높은 차수의 형식들이라면, \(\varepsilon\)의 거듭제곱곱들이 선형독립이므로 전적으로 같은 종류의 관계 (13)이 단지 더 많이 생긴다. 역정리에 따라 이 관계들로부터, 무한소변환들이 매개변수를 선형으로 포함하는 한 군에 대한 \(I\)의 불변성이 따라온다. 이 군이 정확히 \(\rho\)개의 매개변수를 포함해야 한다면, 원래 \(\varepsilon\)의 고차항들로부터 얻은 발산관계들 사이에 선형 종속관계가 있어야 한다.
+
+\(\Delta x\)와 \(\Delta u\)가 \(u\)의 도함수들도 포함하는 경우, 유한변환들은 \(u\)의 무한히 많은 도함수에 의존할 수 있다는 점도 덧붙여 두자. 실제로 이 경우 (17)을 적분하면서
+\[
+\frac{\dd^2x_i}{\dd t^2},\qquad
+\frac{\dd^2u_i}{\dd t^2}
+\]
+를 정하려 하면
+\[
+\Delta\!\left(\frac{\partial u}{\partial x_\varkappa}\right)
+=\frac{\partial\,\Delta u}{\partial x_\varkappa}
+-\sum_\lambda\frac{\partial u}{\partial x_\lambda}
+\frac{\partial\,\Delta x_\lambda}{\partial x_\varkappa}
+\]
+가 나타나므로, 일반적으로 각 단계에서 \(u\)의 도함수 차수가 증가한다. 한 예는 다음과 같다.
+\[
+f=\frac12u'^2,\qquad
+\psi=-u'',\qquad
+\psi\cdot x=\frac{\dd}{\dd x}\{u-u'x\},\qquad
+\bar\delta u=x\varepsilon,
+\]
+\[
+\Delta x=-\frac{2u}{u'^2}\,\varepsilon,\qquad
+\Delta u=\left(x-\frac{2u}{u'}\right)\varepsilon.
+\]
+발산식의 라그랑주 식들은 항등적으로 사라지므로, 역정리는 끝으로 다음 사실도 보여 준다. \(I\)가 한 \(\mathfrak G_\rho\)를 허용한다면, \(I\)와 경계적분, 즉 발산식의 적분만큼만 다른 모든 적분도 같은 \(\bar\delta u\)를 갖는 한 \(\mathfrak G_\rho\)를 허용한다. 그 무한소변환들은 일반적으로 \(u\)의 도함수들을 포함한다. 이를테면 위의 예에 따라
+\[
+f^*=\frac12\left\{u'^2-\frac{\dd}{\dd x}\left(\frac{u^2}{x}\right)\right\}
+\]
+는 무한소변환 \(\Delta u=x\varepsilon,\ \Delta x=0\)을 허용하지만, \(f\)에 대응하는 무한소변환들에는 \(u\)의 도함수들이 나타난다.
+
+변분문제로 넘어가, 즉 \(\psi_i=0\)으로 두면\footnote{물리학에서는 \(\psi_i=0\), 또는 좀 더 일반적으로 새로 추가되는 함수들을 \(T_i\)라 할 때 \(\psi_i=T_i\)를 ``장방정식''이라 부른다. \(\psi_i=T_i\)인 경우 항등식 (13)은 방정식 \(\operatorname{Div}B^{(\lambda)}=\sum_iT_i\bar\delta u_i^{(\lambda)}\)로 바뀌며, 물리학에서는 이것들도 보존법칙이라 부른다.}, (13)은 방정식
+\[
+\operatorname{Div}B^{(1)}=0,\ldots,\qquad
+\operatorname{Div}B^{(\rho)}=0
+\]
+으로 바뀌는데, 이들은 흔히 ``보존법칙''이라 불린다. 일차원인 경우에는
+\[
+B^{(1)}=\mathrm{const.},\ldots,\qquad
+B^{(\rho)}=\mathrm{const.}
+\]
+가 따라온다. \(\Delta u\)와 \(\Delta x\)가 \(f\)에 나타나는 \(\varkappa\)차 도함수보다 더 높은 도함수를 포함하지 않는 한, (6)에 따라 여기서 \(B\)들은 기껏해야 \(u\)의 \((2\varkappa-1)\)차 도함수를 포함한다. 일반적으로 \(\psi\)에는 \(2\varkappa\)차 도함수가 나타나므로\footnote{\(f\)가 \(\varkappa\)차 도함수들에 관하여 비선형인 한 그러하다.}, 이로써 \(\rho\)개의 제1적분이 존재한다. 이들 사이에 비선형 종속관계가 있을 수 있다는 사실은 위의 \(f\)가 다시 보여 준다. 선형독립인 \(\Delta u=\varepsilon_1,\ \Delta x=\varepsilon_2\)에는 선형독립인 관계
+\[
+u''=\frac{\dd}{\dd x}u',\qquad
+u''u'=\frac12\frac{\dd}{\dd x}(u')^2
+\]
+가 대응하지만, 제1적분 \(u'=\mathrm{const.},\ u'^2=\mathrm{const.}\) 사이에는 비선형 종속관계가 있다. 여기서는 \(\Delta u,\Delta x\)가 \(u\)의 도함수를 포함하지 않는 초등적인 경우를 다룬다\footnote{그렇지 않으면 모든 \(\lambda\)에 대하여 \(u'^\lambda=\mathrm{const.}\)도 얻는다. 이는
+\[
+u''(u')^{\lambda-1}=\frac1\lambda\frac{\dd}{\dd x}(u')^\lambda
+\]
+에 대응한다.}.
+
+\bigskip
+\section*{\S{}4. 무한군의 경우 역정리}
+
+먼저 \(\Delta x\)와 \(\Delta u\)의 선형성을 가정해도 제한이 없음을 보이자. 여기서는 역정리를 쓰지 않고도, \(\mathfrak G_{\infty\rho}\)가 형식적으로 정확히 \(\rho\)개의 임의함수에 의존한다는 사실에서 이를 얻는다. 실제로 비선형인 경우에는 변환들을 합성할 때 최저차항들이 서로 더해지므로 임의함수의 수가 늘어남을 알 수 있다. 이를테면
+\[
+\begin{aligned}
+y&=A\!\left(x,u,\frac{\partial u}{\partial x},\ldots;p\right)\\
+&=x+\sum a(x,u,\ldots)p^\nu
++b(x,u,\ldots)p^{\nu-1}\frac{\partial p}{\partial x}
++c\,p^{\nu-2}\left(\frac{\partial p}{\partial x}\right)^2+\cdots
++d\left(\frac{\partial p}{\partial x}\right)^\nu+\cdots,
+\end{aligned}
+\]
+\[
+p^\nu=(p^{(1)})^{\nu_1}\cdots(p^{(\rho)})^{\nu_\rho},
+\]
+이고 이에 대응하여
+\[
+v=B\!\left(x,u,\frac{\partial u}{\partial x},\ldots;p\right)
+\]
+라고 하자. 이를
+\[
+z=A\!\left(y,v,\frac{\partial v}{\partial y},\ldots;q\right)
+\]
+와 합성하면 최저차항에 대하여
+\[
+\begin{aligned}
+z={}&x+\sum a(p^\nu+q^\nu)
++b\left\{p^{\nu-1}\frac{\partial p}{\partial x}
++q^{\nu-1}\frac{\partial q}{\partial x}\right\}\\
+&+c\left\{p^{\nu-2}\left(\frac{\partial p}{\partial x}\right)^2
++q^{\nu-2}\left(\frac{\partial q}{\partial x}\right)^2\right\}+\cdots
+\end{aligned}
+\]
+를 얻는다. 여기서 \(a,b\)와 다른 어떤 계수가 영이 아니어서 \(\sigma>1\)인 항
+\[
+p^{\nu-\sigma}\left(\frac{\partial p}{\partial x}\right)^\sigma
++q^{\nu-\sigma}\left(\frac{\partial q}{\partial x}\right)^\sigma
+\]
+이 실제로 나타난다면, 이를 한 함수의 미분계수나 그러한 미분계수의 거듭제곱곱으로 쓸 수 없다. 따라서 가정에 어긋나게 임의함수의 수가 늘어난다. \(a,b\)와 다른 모든 계수가 영이라면, 지수 \(\nu_1,\ldots,\nu_\rho\)의 값에 따라 둘째 항이 첫째 항의 미분계수가 되어 실제로 선형성이 생기거나(예를 들어 \(\mathfrak G_{\infty1}\)에서는 언제나 그러하다), 이 경우에도 임의함수의 수가 늘어난다. 그러므로 무한소변환들은 \(p(x)\)의 선형성 때문에 선형 편미분방정식계를 만족한다. 또한 군의 성질이 성립하므로, 이들은 리의 정의에 따른 ``무한 무한소변환군''을 이룬다(\emph{Grundlagen}, \S{}10).
+
+이제 역정리는 유한군의 경우와 비슷하게 얻어진다. 종속관계 (16)이 성립하면 이를 \(p^{(\lambda)}(x)\)로 곱하고 더한 뒤 항등변형 (14)를 적용하여
+\[
+\sum_i\psi_i\bar\delta u_i=\operatorname{Div}\Gamma
+\]
+를 얻는다. 여기서 제3절과 마찬가지로 \(\Delta x,\Delta u\)가 정해지고, 이 무한소변환들에 대한 \(I\)의 불변성이 따라온다. 이 변환들은 실제로 \(\rho\)개의 임의함수와 그 \(\sigma\)차까지의 도함수들에 선형으로 의존한다. 이 무한소변환들이 \(\partial u/\partial x,\ldots\)를 포함하지 않을 때 반드시 군을 이룬다는 사실도 제3절에서와 같이 따라온다. 그렇지 않다면 합성에 의해 더 많은 임의함수가 나타날 것이지만, 가정에 따르면 종속관계 (16)은 \(\rho\)개뿐이기 때문이다. 따라서 이들은 ``무한 무한소변환군''을 이룬다. 그러나 그러한 군은(\emph{Grundlagen}, 정리 VII, 391쪽) 이로써 정의되는, 리의 의미에서의 어떤 ``유한변환들의 무한군 \(\mathfrak G\)''의 가장 일반적인 무한소변환들로 이루어진다. 각 유한변환은 무한소변환들로부터 생성되며(\emph{Grundlagen}, \S{}7)\footnote{특히 이로부터 \(\mathfrak G_{\infty\rho}\)의 무한소변환 \(\Delta x,\Delta u\)로부터 생성된 군 \(\mathfrak G\)가 다시 \(\mathfrak G_{\infty\rho}\)로 돌아온다는 것이 따라온다. 실제로 \(\mathfrak G_{\infty\rho}\)는 임의함수에 의존하면서 \(\Delta x,\Delta u\)와 다른 무한소변환들을 포함하지 않는다. 또한 매개변수에 의존하면서 이들과 독립인 변환들도 포함할 수 없다. 그렇다면 혼합군이 될 것이기 때문이다. 한편 위에서 본 바와 같이 무한소변환들이 유한변환들을 정한다.}, 따라서 다음 연립계를 적분하여 생긴다.
+\[
+\frac{\dd x_i}{\dd t}=\Delta x_i,\qquad
+\frac{\dd u_i}{\dd t}=\Delta u_i,\qquad
+\left\{\begin{array}{l}
+x_i=y_i,\\
+u_i=v
+\end{array}\right\}
+\quad\text{단, }t=0.
+\]
+다만 여기서는 임의의 \(p(x)\)가 \(t\)에도 의존한다고 가정해야 할 수 있다. 따라서 \(\mathfrak G\)는 실제로 \(\rho\)개의 임의함수에 의존한다. 특히 \(p(x)\)를 \(t\)와 무관하다고 해도 충분하다면, 이 의존성은 임의함수 \(q(x)=t\,p(x)\)에 관하여 해석적이다\footnote{언제나 이 후자의 경우가 성립하는가라는 문제는 리가 다른 형식으로 제기하였다(\emph{Grundlagen}, \S{}7 및 \S{}13 끝).}. \(\partial u/\partial x,\ldots\)가 나타나는 경우에는 같은 결론을 내리기 전에 \(\bar\delta u=0,\ \operatorname{Div}(f\Delta x)=0\)인 무한소변환들을 더해야 할 수도 있다.
+
+리의 한 예(\emph{Grundlagen}, \S{}7)에 이어, 명시적 공식들까지 나아갈 수 있는 꽤 일반적인 경우를 하나 더 들자. 이 공식들은 동시에 임의함수들의 도함수가 정확히 \(\sigma\)차까지 나타난다는 것을 보여 주므로 이 경우 역정리는 완전하다. 이는 모든 \(x\)의 변환과, 그로써 ``유도된'' \(u\)의 변환으로 이루어진 군에 대응하는 무한소변환군이다. 다시 말해 \(\Delta u\), 따라서 \(u\)가 \(\Delta x\)에 나타나는 임의함수들에만 의존하는 \(u\)의 변환이다. 또한 \(\Delta u\)에는 도함수 \(\partial u/\partial x,\ldots\)가 나타나지 않는다고 가정한다. 그러면
+\[
+\Delta x_i=p^{(i)}(x),\qquad
+\Delta u_i=
+\sum_{\lambda=1}^{n}\left\{
+a^{(\lambda)}(x,u)p^{(\lambda)}
++b^{(\lambda)}\frac{\partial p^{(\lambda)}}{\partial x}
++\cdots+c^{(\lambda)}
+\frac{\partial^\sigma p^{(\lambda)}}{\partial x^\sigma}
+\right\}
+\]
+이다. 무한소변환 \(\Delta x=p(x)\)는 임의의 \(g(y)\)를 갖는 모든 변환 \(x=y+g(y)\)를 생성한다. 특히 \(p(x)\)의 \(t\) 의존성을 정하여 일항군
+\begin{equation}
+\tag{18}
+x_i=y_i+t\,g_i(y)
+\end{equation}
+을 생성할 수 있다. 이 군은 \(t=0\)일 때 항등변환이고 \(t=1\)일 때 구하는 \(x=y+g(y)\)가 된다. 실제로 (18)을 미분하면
+\begin{equation}
+\tag{19}
+\frac{\dd x_i}{\dd t}=g_i(y)=p^{(i)}(x,t)
+\end{equation}
+를 얻는다. 여기서 \(p(x,t)\)는 (18)을 역으로 풀어 \(g(y)\)로부터 정해진다. 거꾸로 (19)에 보조조건 \(t=0\)일 때 \(x_i=y_i\)를 붙여 적분을 유일하게 정하면 (18)을 얻는다. (18)에 따라 \(\Delta u\) 안의 \(x\)들을 적분상수 \(y\)와 \(t\)로 바꿀 수 있다. 이때 \(g(y)\)는 정확히 \(\sigma\)차 도함수까지 나타난다. 즉
+\[
+\frac{\partial p}{\partial x}
+=\sum\frac{\partial g}{\partial y_\varkappa}
+\frac{\partial y_\varkappa}{\partial x}
+\]
+에서 \(\partial y/\partial x\)를 \(\partial x/\partial y\)로 나타내고, 일반적으로 \(\partial^\sigma p/\partial x^\sigma\)를
+\[
+\frac{\partial g}{\partial y},\ldots,
+\frac{\partial x}{\partial y},\ldots,
+\frac{\partial^\sigma x}{\partial y^\sigma}
+\]
+로 나타낸 값으로 바꾼다. 따라서 \(u\)를 정하기 위한 방정식계는
+\[
+\frac{\dd u_i}{\dd t}
+=F_i\!\left(g(y),\frac{\partial g}{\partial y},\ldots,
+\frac{\partial^\sigma g}{\partial y^\sigma},u,t\right),
+\qquad(u_i=v_i\ \text{단, }t=0)
+\]
+가 된다. 여기서는 \(t,u\)만 변수이고 \(g(y),\ldots\)는 계수체에 속한다. 따라서 적분하면
+\[
+u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\ldots,
+\frac{\partial^\sigma g}{\partial y^\sigma},t\right)_{t=1}
+\]
+을 얻는다. 즉 임의함수들의 도함수에 정확히 \(\sigma\)차까지 의존하는 변환들이다. (18)에 따라 \(g(y)=0\)이면 그 안에 항등변환이 포함된다. 또한 주어진 절차는 모든 변환 \(x=y+g(y)\)를 낳고, 이로부터 유도된 \(u\)의 변환이 유일하게 정해지므로, 이 절차가 군 \(\mathfrak G\)를 모두 소진한다. 따라서 군의 성질도 따라온다.
+
+역정리로부터, 임의함수들이 \(u,\partial u/\partial x,\ldots\)가 아니라 \(x\)에만 의존한다고 가정해도 제한이 없다는 사실도 부수적으로 따라온다. 후자의 경우라면 항등변형 (14), 따라서 (15)에는 \(p^{(\lambda)}\)들 외에도 \(\partial p^{(\lambda)}/\partial u,\ \partial p^{(\lambda)}/\partial(\partial u/\partial x),\ldots\)가 나타날 것이다. 이제 \(p^{(\lambda)}\)들을 차례로 \(u,\partial u/\partial x,\ldots\)의 0차, 1차, \(\ldots\) 형식으로 잡고 그 계수들을 \(x\)의 임의함수로 두면, 다시 종속관계 (16)을 단지 더 많이 얻는다. 그러나 위의 역정리에 따라 이들을 \(x\)에만 의존하는 임의함수들과 함께 묶으면 앞의 경우로 돌아간다. 마찬가지로 종속관계와, 이들과 독립인 발산관계가 동시에 나타나면 혼합군이 대응함을 보일 수 있다\footnote{제3절에서와 마찬가지로, 역정리로부터 \(I\)뿐 아니라 발산식의 적분만큼 다른 모든 적분 \(I^*\)도 같은 \(\bar\delta u\)를 갖는 무한군을 허용한다는 것이 여기서도 따라온다. 다만 \(\Delta x\)와 \(\Delta u\)에는 일반적으로 \(u\)의 도함수들이 나타난다. 아인슈타인은 일반상대성이론에서 에너지 정리들을 더 간단히 쓰기 위해 그러한 적분 \(I^*\)를 도입하였다. 둘째 클라인 논문의 표기를 그대로 따라 이 \(I^*\)가 허용하는 무한소변환들을 제시하겠다. 적분 \(I=\int\!\cdots\!\int K\,\dd\omega=\int\!\cdots\!\int\mathfrak R\,\dd S\)는 모든 \(w\)의 변환과, 그로써 유도되는 \(g_{\mu\nu}\)의 변환으로 이루어진 군을 허용한다. 이에 종속관계(클라인의 (30))
+\[
+\sum\mathfrak R_{\mu\nu}g_\tau^{\mu\nu}
++2\sum\frac{\partial(g^{\mu\nu}\mathfrak R_{\mu\tau})}{\partial w^\sigma}=0
+\]
+가 대응한다. 이제 \(I^*=\int\!\cdots\!\int\mathfrak R^*\,\dd S\)이며, 여기서 \(\mathfrak R^*=\mathfrak R+\operatorname{Div}\)이다. 따라서 \(\mathfrak R_{\mu\nu}^*=\mathfrak R_{\mu\nu}\)이다. 여기서 \(\mathfrak R_{\mu\nu}^*,\mathfrak R_{\mu\nu}\)는 각각 라그랑주 식을 뜻한다. 그러므로 위의 종속관계들은 \(\mathfrak R_{\mu\nu}^*\)에 대해서도 성립한다. 이를 \(p^\tau\)로 곱하고 더한 뒤 곱의 미분법칙을 역으로 적용하면
+\[
+\sum\mathfrak R_{\mu\nu}p^{\mu\nu}
++2\operatorname{Div}\!\left(\sum g^{\mu\sigma}\mathfrak R_{\mu\tau}p^\tau\right)=0,
+\]
+\[
+\delta\mathfrak R^*+\operatorname{Div}\!\left(
+\sum2g^{\mu\sigma}\mathfrak R_{\mu\tau}p^\tau
+-\frac{\partial\mathfrak R^*}{\partial g^{\mu\nu}_\sigma}p^{\mu\nu}
+\right)=0
+\]
+을 얻는다. 이를 리의 미분방정식 \(\delta\mathfrak R^*+\operatorname{Div}(\mathfrak R^*\Delta w)=0\)과 비교하면
+\[
+\Delta w^\sigma=\frac1{\mathfrak R^*}\left(
+\sum2g^{\mu\sigma}\mathfrak R_{\mu\tau}p^\tau
+-\frac{\partial\mathfrak R^*}{\partial g^{\mu\nu}_\sigma}p^{\mu\nu}
+\right),
+\qquad
+\Delta g^{\mu\nu}=p^{\mu\nu}+\sum g^{\mu\nu}_\sigma\Delta w^\sigma
+\]
+를 \(I^*\)가 허용하는 무한소변환들로 얻는다. 따라서 이 무한소변환들은 \(g^{\mu\nu}\)의 1차와 2차 도함수에 의존하며, 임의의 \(p\)를 1차 도함수까지 포함한다.}.
+
+\bigskip
+\section*{\S{}5. 관계를 이루는 각 성분의 불변성}
+
+변환들에 \(u\)의 도함수가 나타나지 않고 변환된 독립변수들이 \(u\)가 아니라 \(x\)에만 의존한다고 함으로써 군 \(\mathfrak G\)를 통상 고찰하는 가장 단순한 경우로 특수화하면, 공식들을 이루는 각 성분의 불변성을 추론할 수 있다. 먼저 잘 알려진 추론에 따라
+\[
+\int\!\cdots\!\int\left(\sum_i\psi_i\delta u_i\right)\dd x
+\]
+가 불변이고, 따라서 \(\delta\)가 임의의 변분을 뜻할 때 \(\sum_i\psi_i\delta u_i\)가 상대불변임을 얻는다\footnote{즉 \(\sum_i\psi_i\delta u_i\)는 변환할 때 한 인자를 얻는데, 대수적 불변식론에서는 이것을 언제나 상대불변성이라 불러 왔다.}. 실제로 한편으로는
+\[
+\begin{aligned}
+\delta I
+&=\int\!\cdots\!\int
+\delta f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x\\
+&=\int\!\cdots\!\int
+\delta f\!\left(y,v,\frac{\partial v}{\partial y},\ldots\right)\dd y
+\end{aligned}
+\]
+이고, 다른 한편으로 경계에서 사라지는 \(\delta u,\delta(\partial u/\partial x),\ldots\)에 대하여 다음이 성립한다. \(\delta u,\delta(\partial u/\partial x),\ldots\)의 변환이 선형이고 동차이므로 이에 대응하는 \(\delta v,\delta(\partial v/\partial y),\ldots\)도 경계에서 사라진다.
+\[
+\int\!\cdots\!\int
+\delta f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x
+=\int\!\cdots\!\int
+\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)\dd x,
+\]
+\[
+\int\!\cdots\!\int
+\delta f\!\left(y,v,\frac{\partial v}{\partial y},\ldots\right)\dd y
+=\int\!\cdots\!\int
+\left(\sum_i\psi_i(v,\ldots)\delta v_i\right)\dd y.
+\]
+따라서 경계에서 사라지는 \(\delta u,\delta(\partial u/\partial x),\ldots\)에 대하여
+\[
+\int\!\cdots\!\int
+\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)\dd x
+=\int\!\cdots\!\int
+\left(\sum_i\psi_i(v,\ldots)\delta v_i\right)\dd y
+\]
+\[
+=\int\!\cdots\!\int
+\left(\sum_i\psi_i(v,\ldots)\delta v_i\right)
+\left|\frac{\partial y_i}{\partial x_\varkappa}\right|\dd x
+\]
+이다. 셋째 적분에서 \(y,v,\delta v\)를 \(x,u,\delta u\)로 나타내고 이를 첫째 적분과 같게 두면, 경계에서는 사라지지만 그 밖에서는 임의인 \(\delta u\)에 대하여
+\[
+\int\!\cdots\!\int
+\left(\sum_i\chi_i(u,\ldots)\delta u_i\right)\dd x=0
+\]
+이라는 관계를 얻는다. 잘 알려진 바와 같이 여기서 임의의 \(\delta u\)에 대하여 피적분함수가 사라짐이 따라온다. 따라서 \(\delta u\)에 관한 다음 항등관계가 성립한다.
+\[
+\sum_i\psi_i(u,\ldots)\delta u_i
+=\left|\frac{\partial y_i}{\partial x_\varkappa}\right|
+\left(\sum_i\psi_i(v,\ldots)\delta v_i\right).
+\]
+이 관계는 \(\sum_i\psi_i\delta u_i\)의 상대불변성, 따라서
+\[
+\int\!\cdots\!\int
+\left(\sum_i\psi_i\delta u_i\right)\dd x
+\]
+의 불변성을 말한다\footnote{\(y\)도 \(u\)에 의존하면 이 추론은 성립하지 않는다. 그때에는 \(\delta f(y,v,\partial v/\partial y,\ldots)\)가 \(\sum(\partial f/\partial y)\delta y\)라는 항들도 포함하여, 발산변형이 라그랑주 식들로 이어지지 않기 때문이다. \(u\)의 도함수들을 허용할 때도 마찬가지이다. 그러면 \(\delta v\)는 \(\delta u,\delta(\partial u/\partial x),\ldots\)의 선형결합이 되므로, 한 번 더 발산변형을 거친 뒤에야 항등식 \(\int\!\cdots\!\int(\sum\chi_i(u,\ldots)\delta u_i)\dd x=0\)을 얻고, 따라서 오른쪽에는 다시 라그랑주 식들이 나타나지 않는다. \(\int\!\cdots\!\int(\sum\psi_i\delta u_i)\dd x\)의 불변성만으로 발산관계의 존재를 추론할 수 있는가라는 문제는, 역정리에 따르면 동일한 \(\Delta u,\Delta x\)를 줄 필요는 없지만 동일한 \(\bar\delta u\)를 주는 어떤 군에 대하여 \(I\)가 불변임을 그로부터 추론할 수 있는가라는 문제와 동치이다. 단일적분이고 \(f\)에 1차 도함수만 나타나는 특수한 경우에는 유한군에 관하여 라그랑주 식들의 불변성에서 제1적분의 존재를 추론할 수 있다(예: Engel, \emph{Gött. Nachr.} 1916, 270쪽 참조).}.
+
+이것을 유도된 발산관계와 종속관계에 적용하려면, 먼저 \(\Delta u,\Delta x\)로부터 유도된 \(\bar\delta u\)가 실제로 변분 \(\delta u\)의 변환법칙을 만족함을 보여야 한다. 다만 \(\bar\delta v\)에 나타나는 매개변수 또는 임의함수는 \(y,v\)에서의 닮은 무한소변환군에 맞게 정해야 한다. \(\mathfrak T_q\)가 \(x,u\)를 \(y,v\)로 옮기는 변환이고 \(\mathfrak T_p\)가 \(x,u\)에서의 무한소변환이라 하자. 그러면 \(y,v\)에서 이에 닮은 변환은 \(\mathfrak T=\mathfrak T_q\mathfrak T_p\mathfrak T_q^{-1}\)로 주어지며, 그 매개변수 또는 임의함수 \(r\)는 \(p,q\)로부터 정해진다. 공식으로 쓰면
+\[
+\mathfrak T_p:\quad
+\xi=x+\Delta x(x,p),\qquad
+u^*=u+\Delta u(x,u,p);
+\]
+\[
+\mathfrak T_q:\quad
+y=A(x,q),\qquad v=B(x,u,q);
+\]
+\[
+\mathfrak T_q\mathfrak T_p:\quad
+\eta=A(x+\Delta x(x,p),q),\qquad
+v^*=B(x+\Delta x(p),u+\Delta u(p),q).
+\]
+여기서 \(\mathfrak T_r=\mathfrak T_q\mathfrak T_p\mathfrak T_q^{-1}\), 즉
+\[
+\eta=y+\Delta y(r),\qquad v^*=v+\Delta v(r)
+\]
+를 얻는다. 이때 \(\mathfrak T_q\)의 역변환에 따라 \(x\)를 \(y\)의 함수로 보고 무한소항들만 고려한다. 따라서 다음 항등식이 성립한다.
+\begin{equation}
+\tag{20}
+\begin{gathered}
+\eta=y+\Delta y(r)
+=y+\sum\frac{\partial A(x,q)}{\partial x}\Delta x(p),\\[0.55em]
+v^*=v+\Delta v(r)
+=v+\sum\frac{\partial B(x,u,q)}{\partial x}\Delta x(p)
++\sum\frac{\partial B(x,u,q)}{\partial u}\Delta u(p).
+\end{gathered}
+\end{equation}
+여기서 \(\xi=x+\Delta x\)를 \(\xi-\Delta\xi\)로 바꾸면 \(\xi\)는 다시 \(x\)가 되고 \(\Delta x\)는 사라진다. 따라서 (20)의 첫째 공식에 따라 \(\eta\)도 다시 \(y=\eta-\Delta\eta\)가 된다. 이 치환으로 \(\Delta u(p)\)가 \(\bar\delta u(p)\)로 바뀌므로 \(\Delta v(r)\)도 \(\bar\delta v(r)\)로 바뀌고, (20)의 둘째 공식은
+\[
+v+\bar\delta v(y,v,\ldots,r)
+=v+\sum\frac{\partial B(x,u,q)}{\partial u}\,\bar\delta u(p),
+\]
+\[
+\bar\delta v(y,v,\ldots,r)
+=\sum\frac{\partial B}{\partial u_\varkappa}
+\,\bar\delta u_\varkappa(x,u,p)
+\]
+를 준다. 따라서 \(\bar\delta v\)가 매개변수 또는 임의함수 \(r\)에 의존한다고 가정하기만 하면 실제로 변분의 변환공식들이 성립한다\footnote{이 추론이 성립하려면 \(y\)가 \(u\)와 무관해야 한다는 것 등이 다시 드러난다. 한 예로 클라인이 제시한 \(\delta g^{\mu\nu}\)와 \(\delta q_\sigma\)를 들 수 있다. \(p\)에 벡터변환을 가하면 이들은 변분의 변환법칙을 만족한다.}.
+
+특히 \(\sum_i\psi_i\bar\delta u_i\)가 상대불변임이 따라온다. 따라서 발산관계들이 \(y,v\)에서도 성립하므로 (12)에 따라 \(\operatorname{Div}\bar B\)도 상대불변이다. 나아가 (14)와 (13)에 따라 \(\operatorname{Div}\Gamma\)와, 종속관계들의 왼쪽을 \(p^{(\lambda)}\)들과 묶은 식도 상대불변이다. 변환된 공식들에서는 언제나 임의의 \(p(x)\), 또는 매개변수들을 \(r\)로 바꾸어야 한다. 여기서 \(\operatorname{Div}(B-\Gamma)\)의 상대불변성도 따라온다. 이는 항등적으로 사라지지 않는 함수계 \(B-\Gamma\)의 발산식이지만, 그 발산 자체는 항등적으로 사라진다.
+
+일차원이고 유한군인 경우에는 \(\operatorname{Div}B\)의 상대불변성으로부터 제1적분의 불변성도 추론할 수 있다. (20)에 따라 무한소변환에 대응하는 매개변수변환은 선형이고 동차이다. 또한 모든 변환이 가역이므로 \(\varepsilon\)들도 변환된 매개변수 \(\varepsilon^*\)의 선형 동차함수이다. (20)에는 \(u\)의 도함수가 나타나지 않으므로 \(\psi=0\)으로 두어도 이 가역성은 확실히 유지된다. 식
+\[
+\operatorname{Div}B(x,u,\ldots,\varepsilon)
+=\frac{\dd y}{\dd x}\,
+\operatorname{Div}B(y,v,\ldots,\varepsilon^*)
+\]
+에서 \(\varepsilon^*\)의 계수들을 비교하면, \(\frac{\dd}{\dd y}B^{(\lambda)}(y,v,\ldots)\)들도 \(\frac{\dd}{\dd x}B^{(\lambda)}(x,u,\ldots)\)들의 선형 동차함수가 된다. 따라서
+\[
+\frac{\dd}{\dd x}B^{(\lambda)}(x,u,\ldots)=0
+\quad\text{또는}\quad
+B^{(\lambda)}(x,u)=\mathrm{const.}
+\]
+이면
+\[
+\frac{\dd}{\dd y}B^{(\lambda)}(y,v,\ldots)=0
+\quad\text{또는}\quad
+B^{(\lambda)}(y,v)=\mathrm{const.}
+\]
+도 따라온다. 따라서 \(\mathfrak G_\rho\)에 대응하는 \(\rho\)개의 제1적분은 각각 이 군을 허용하므로, 이어지는 적분도 단순해진다. 이에 대한 가장 단순한 예는 \(f\)가 \(x\), 또는 한 \(u\)와 무관한 경우이며, 이는 각각 무한소변환 \(\Delta x=\varepsilon,\Delta u=0\)과 \(\Delta x=0,\Delta u=\varepsilon\)에 대응한다. 그러면 \(\bar\delta u\)는 각각 \(-\varepsilon\,\dd u/\dd x\)와 \(\varepsilon\)가 된다. \(B\)는 \(f\)와 \(\bar\delta u\)로부터 미분과 유리결합을 거쳐 유도되므로, \(B\)도 각각 \(x\)와 \(u\)에 무관하고 따라서 대응하는 군들을 허용한다\footnote{\(\int(\sum\psi_i\delta u_i)\dd x\)의 불변성만으로 이미 제1적분들의 존재가 따라오는 경우, 이 제1적분들은 완전한 군 \(\mathfrak G_\rho\)를 허용하지 않는다. 예를 들어 \(\int(u''\delta u)\dd x\)는 무한소변환 \(\Delta x=\varepsilon_2,\Delta u=\varepsilon_1+x\varepsilon_3\)을 허용한다. 그러나 \(\Delta x=0,\Delta u=x\varepsilon_3\)에 대응하는 제1적분 \(u-u'x=\mathrm{const.}\)는 \(u\)와 \(x\)를 모두 명시적으로 포함하므로 다른 두 무한소변환을 허용하지 않는다. 이 제1적분에 대응하는 \(f\)의 무한소변환들이 도함수들을 포함하는 것이다. 따라서 \(\int\!\cdots\!\int(\sum\psi_i\delta u_i)\dd x\)의 불변성이 \(I\)의 불변성보다 아무튼 더 적은 것을 준다는 사실을 알 수 있다. 이는 앞의 주석에서 제기한 문제와 관련하여 덧붙일 점이다.}.
+
+\bigskip
+\section*{\S{}6. 힐베르트의 한 주장}
+
+앞의 결과들로부터 끝으로 ``일반상대성''과 고유한 에너지법칙의 실패 사이의 연관에 관한 힐베르트의 주장(첫째 클라인 논문, \emph{Göttinger Nachr.} 1917, 답변 제1문단)을 일반화된 군론적 형태로 증명할 수 있다.
+
+적분 \(I\)가 \(\mathfrak G_{\infty\rho}\)를 허용하고, \(\mathfrak G_\sigma\)는 임의함수들을 특수화하여 생기는 임의의 유한군, 즉 \(\mathfrak G_{\infty\rho}\)의 부분군이라고 하자. 그러면 무한군 \(\mathfrak G_{\infty\rho}\)에는 종속관계 (16)이, 유한군 \(\mathfrak G_\sigma\)에는 발산관계 (13)이 대응한다. 거꾸로 어떤 발산관계들이 성립하면 한 유한군에 대한 \(I\)의 불변성이 따라오며, 그 군은 \(\bar\delta u\)들이 \(\mathfrak G_\sigma\)로부터 생기는 것들의 선형결합일 때 그리고 그때에만 \(\mathfrak G_\sigma\)와 같다. 따라서 \(\mathfrak G_\sigma\)에 대한 불변성은 (13)과 다른 발산관계들을 낳을 수 없다. 한편 (16)이 성립하면 임의의 \(p(x)\)에 대하여 \(\mathfrak G_{\infty\rho}\)의 무한소변환 \(\Delta u,\Delta x\)에 대한 \(I\)의 불변성이 따라온다. 특히 그로부터 특수화하여 얻는 \(\mathfrak G_\sigma\)의 무한소변환들, 따라서 \(\mathfrak G_\sigma\)에 대한 불변성도 이미 따라온다. 그러므로 발산관계
+\[
+\sum_i\psi_i\bar\delta u_i^{(\lambda)}
+=\operatorname{Div}B^{(\lambda)}
+\]
+는 종속관계 (16)의 귀결이어야 한다. 후자는 다음과 같이 쓸 수도 있다.
+\[
+\sum_i\psi_i a_i^{(\lambda)}
+=\operatorname{Div}\chi^{(\lambda)},
+\]
+여기서 \(\chi^{(\lambda)}\)는 라그랑주 식들과 그 도함수들의 선형결합이다. \(\psi\)는 (13)과 (16) 양쪽에서 선형으로 들어가므로, 발산관계들은 특히 종속관계 (16)의 선형결합이어야 한다. 따라서
+\[
+\operatorname{Div}B^{(\lambda)}
+=\operatorname{Div}\left(\sum\alpha\,\chi^{(\varkappa)}\right)
+\]
+가 된다. 그러므로 \(B^{(\lambda)}\) 자체는 \(\chi\), 즉 라그랑주 식들과 그 도함수들의 선형결합, 그리고 발산이 항등적으로 사라지는 함수들로 이루어진다. 후자의 예로 제2절 끝의 \(B-\Gamma\)가 있는데, 여기서는 \(\operatorname{Div}(B-\Gamma)=0\)이고 그 발산은 동시에 불변식의 성질을 갖는다. \(B^{(\lambda)}\)들을 말한 방식으로 라그랑주 식들과 그 도함수들로 구성할 수 있는 발산관계를 ``비고유'', 나머지를 모두 ``고유''라고 부르겠다.
+
+거꾸로 발산관계들이 종속관계 (16)의 선형결합, 즉 ``비고유''라면 \(\mathfrak G_\sigma\)에 대한 불변성은 \(\mathfrak G_{\infty\rho}\)에 대한 불변성에서 따라온다. 따라서 \(\mathfrak G_\sigma\)는 \(\mathfrak G_{\infty\rho}\)의 부분군이 된다. 그러므로 유한군 \(\mathfrak G_\sigma\)에 대응하는 발산관계들은 \(\mathfrak G_\sigma\)가 \(I\)를 불변으로 두는 어떤 무한군의 부분군일 때 그리고 그때에만 비고유이다.
+
+군들을 특수화하면 여기서 힐베르트의 원래 주장을 얻는다. ``평행이동군''은 다음 유한군을 뜻한다고 하자.
+\[
+y_i=x_i+\varepsilon_i,\qquad v_i(y)=u_i(x),
+\]
+따라서
+\[
+\Delta x_i=\varepsilon_i,\qquad
+\Delta u_i=0,\qquad
+\bar\delta u_i=-\sum_\lambda
+\frac{\partial u_i}{\partial x_\lambda}\varepsilon_\lambda.
+\]
+잘 알려진 바와 같이 평행이동군에 대한 불변성은
+\[
+I=\int\!\cdots\!\int
+f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x
+\]
+에서 \(f\)에 \(x\)가 명시적으로 나타나지 않음을 뜻한다. 이에 대응하는 \(n\)개의 발산관계
+\[
+\sum_i\psi_i\frac{\partial u_i}{\partial x_\lambda}
+=\operatorname{Div}B^{(\lambda)},
+\qquad(\lambda=1,2,\ldots,n)
+\]
+를 ``에너지 관계''라고 부르자. 변분문제에 대응하는 ``보존법칙'' \(\operatorname{Div}B^{(\lambda)}=0\)은 ``에너지법칙''에, \(B^{(\lambda)}\)는 ``에너지 성분''에 대응하기 때문이다. 그러면 다음이 성립한다. \(I\)가 평행이동군을 허용할 때, 에너지 관계들은 \(I\)가 평행이동군을 부분군으로 포함하는 한 무한군에 대하여 불변일 때 그리고 그때에만 비고유이다\footnote{고전역학의 에너지법칙과 옛 ``상대성이론''의 에너지법칙(여기서는 \(\sum\dd x^2\)가 자기 자신으로 옮겨진다)은 무한군이 나타나지 않으므로 ``고유''이다.}.
+
+그러한 무한군의 한 예는 모든 \(x\)의 변환과 그로써 유도되는 \(u(x)\)의 변환으로 이루어진 군이다. 이때 유도된 변환에는 임의함수 \(p(x)\)의 도함수들만 나타나며, \(p^{(i)}(x)=\varepsilon_i\)로 특수화하면 평행이동군을 얻는다. 그러나 이것들과, \(I\)를 경계적분만큼 바꾸어 생기는 군들로 이미 가장 일반적인 모든 군을 얻는지는 미결로 남겨야 한다. 말한 종류의 유도된 변환들은, 예컨대 \(u\)에 ``전미분형식''의 계수변환을 가하면 생긴다. 여기서 전미분형식이란
+\[
+\sum a\,\dd^\lambda x_i
++\sum b\,\dd^{\lambda-1}x_i\,\dd x_\varkappa+\cdots
+\]
+처럼 \(\dd x\) 외에 고차 미분들도 포함하는 형식이다. \(p(x)\)가 1차 도함수로만 나타나는 더 특수한 유도변환들은 보통의 미분형식 \(\sum c\,\dd x_{i_1}\cdots\dd x_{i_\lambda}\)의 계수변환들로 주어지며, 보통은 이것들만 고찰해 왔다.
+
+말한 종류의 또 다른 군으로 다음을 들 수 있다. 로그항이 나타나므로 이것은 계수변환일 수 없다.
+\[
+y=x+p(x),\qquad
+v_i=u_i+\lg(1+p'(x))
+=u_i+\lg\frac{\dd y}{\dd x},
+\]
+\[
+\Delta x=p(x),\qquad
+\Delta u_i=p'(x)\footnote{이 무한소변환들로부터 유한변환들을 역으로 계산하는 데에는 제4절 끝에서 제시한 방법을 쓴다.},\qquad
+\bar\delta u_i=p'(x)-u_i'p(x).
+\]
+여기서 종속관계 (16)은
+\[
+\sum_i\left(\psi_i u_i'+\frac{\dd\psi_i}{\dd x}\right)=0
+\]
+이 되고, 비고유 에너지 관계는
+\[
+\sum_i\left(\psi_i u_i'
++\frac{\dd(\psi_i+\mathrm{const.})}{\dd x}\right)=0
+\]
+이 된다. 이 군의 가장 단순한 불변적분 하나는
+\[
+I=\int\frac{e^{-2u_1}}{u_1'-u_2'}\,\dd x
+\]
+이다. 가장 일반적인 \(I\)는 리의 미분방정식 (11)
+\[
+\bar\delta f+\frac{\dd}{\dd x}(f\Delta x)=0
+\]
+을 적분하여 정해진다. \(f\)가 \(u\)의 1차 도함수들에만 의존한다고 가정하고 \(\Delta x\)와 \(\bar\delta u\)의 값을 대입하면 이 방정식은
+\[
+\frac{\partial f}{\partial x}p(x)
++\left\{\sum_i\frac{\partial f}{\partial u_i}
+-\frac{\partial f}{\partial u_i'}u_i'+f\right\}p'(x)
++\left\{\sum_i\frac{\partial f}{\partial u_i'}\right\}p''(x)=0
+\]
+으로 바뀐다. 이는 \(p(x),p'(x),p''(x)\)에 관한 항등식이다. 이 방정식계는 두 함수 \(u(x)\)만으로도 도함수를 실제로 포함하는 해
+\[
+f=(u_1'-u_2')\,
+\Phi\!\left(u_1-u_2,\frac{e^{-u_1}}{u_1'-u_2'}\right)
+\]
+를 갖는다. 여기서 \(\Phi\)는 표시된 변수들의 임의함수이다.
+
+힐베르트는 고유한 에너지법칙의 실패가 ``일반상대성이론''의 특징이라는 형태로 자신의 주장을 진술한다. 이 주장이 문자 그대로 성립하려면 ``일반상대성''이라는 명칭을 통상적인 것보다 넓게 이해하여, 앞에서 다룬 \(n\)개의 임의함수에 의존하는 군들까지 포함해야 한다\footnote{이로써 물리학에서 통용되는 ``상대성''이라는 명칭을 ``한 군에 관한 불변성''으로 바꾸어야 한다는 클라인의 논평이 옳다는 사실도 다시 확인된다. F. Klein, ``Über die geometrischen Grundlagen der Lorentzgruppe'', \emph{Jhrber. d. d. Math. Vereinig.} 19 (1910), 287쪽; \emph{Physikalische Zeitschrift}에도 재수록.}.
