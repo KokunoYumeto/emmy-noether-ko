@@ -1,27 +1,12 @@
 cff-version: 1.2.0
-message: "이 한국어판을 인용할 때 preferred-citation을 사용하십시오."
-title: "에미 뇌터 저작집 — 완전한 한국어판의 소스와 증거"
-type: software
+message: "에미 뇌터 — 수학 저작집 한국어판"
+title: "에미 뇌터 — 수학 저작집 한국어판"
+type: book
 authors:
-  - name: "Manuscript Typesetting Project"
+  - family-names: Noether
+    given-names: Emmy
+version: "2026-10-24-sources"
 repository-code: "https://github.com/KokunoYumeto/emmy-noether-ko"
-version: "1.0.0"
-date-released: "2026-08-13"
-license: "CC0-1.0"
-preferred-citation:
-  type: book
-  title: "에미 뇌터 저작집 — 완전한 한국어판 / Emmy Noether — Complete Korean Edition"
-  authors:
-    - family-names: "Noether"
-      given-names: "Emmy"
-  translators:
-    - name: "Manuscript Typesetting Project / OpenAI Codex"
-  languages:
-    - "kor"
-  doi: "10.5281/zenodo.21921524"
-  version: "1.0.0"
-  year: "2026"
-  url: "https://doi.org/10.5281/zenodo.21921524"
-  collection-title: "Emmy Noether multilingual corpus"
-  collection-doi: "10.5281/zenodo.20412587"
-  abstract: "Complete Korean cumulative edition: 43 numbered papers, two post-numbered works/scopes, and terminal bibliography/editorial apparatus."
+url: "https://github.com/KokunoYumeto/emmy-noether-ko"
+languages:
+  - kor
