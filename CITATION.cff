@@ -1,12 +1,18 @@
 cff-version: 1.2.0
-message: "에미 뇌터 — 수학 저작집 한국어판"
+message: "이 한국어판은 GitHub 공개 URL로 인용하십시오. 출처의 DOI는 이전 판본을 식별합니다."
 title: "에미 뇌터 — 수학 저작집 한국어판"
-type: book
+type: dataset
+version: "2026-10-24"
+date-released: 2026-10-24
 authors:
   - family-names: Noether
     given-names: Emmy
-version: "2026-10-24-sources"
-repository-code: "https://github.com/KokunoYumeto/emmy-noether-ko"
-url: "https://github.com/KokunoYumeto/emmy-noether-ko"
-languages:
-  - kor
+url: "https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/noether-ko-2026-10-24"
+abstract: "논문1–43, M. Deuring이 기록한1929/30년 강의, Kapferer와Noether의 논문 및 보충문, 참고문헌과 권말 목록. 기본 본문519쪽과 교정 본문525쪽, 전체LaTeX와 조판 소스. AI가 번역한 한국어 본문이며 초기의 정확한 모델은 미확정. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정. 권리는 각 권리자에게 있다."
+references:
+  - type: dataset
+    title: "한국어판 v1.0.0 (2026-08-13) — Manuscript Typesetting Project / OpenAI Codex"
+    doi: 10.5281/zenodo.21921524
+  - type: dataset
+    title: "이전 다국어 모음"
+    doi: 10.5281/zenodo.20412587
