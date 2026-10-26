@@ -7,18 +7,18 @@
 ### 기본 본문 — 519쪽
 
 1. [PDF 읽기](reader-edition/01-noether-ko-base.pdf)
-2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r2/02-noether-ko-base.tex)
-3. [전체 조판 소스 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r2/03-noether-ko-base-sources.zip)
+2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r3/02-noether-ko-base.tex)
+3. [전체 조판 소스 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r3/03-noether-ko-base-sources.zip)
 
 ### 교정 본문과 편집 주석 — 525쪽
 
 1. [PDF 읽기](reader-edition/04-noether-ko-emendations.pdf)
-2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r2/05-noether-ko-emendations.tex)
-3. [전체 조판 소스 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r2/06-noether-ko-emendations-sources.zip)
+2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r3/05-noether-ko-emendations.tex)
+3. [전체 조판 소스 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r3/06-noether-ko-emendations-sources.zip)
 
 두 판본 모두 위에 명시한 수록 범위를 포함하며, 목차에서 각 저작으로 이동할 수 있다. 기본 본문은 편집 주석에서 논의하는 원문의 읽기를 유지한다. 교정 본문은 해당 교정의 근거를 별도의 편집 주석으로 설명한다. 이 주석들은 전체 저작에 대한 망라적 비평판을 뜻하지 않는다.
 
-직접 내려받을 수 있는 각 LaTeX 파일에는 해당 판본의 본문 전체가 들어 있다. 각 ZIP은 같은 전체 본문 파일, 원래의 분할 구조, 필요한 조판 절차와 스크립트를 포함한다. XeLaTeX 및 소스에 지정된 글꼴과 패키지가 필요하며, 글꼴 파일은 동봉하지 않는다. [SHA-256 목록](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r2/07-SHA256SUMS.txt)
+직접 내려받을 수 있는 각 LaTeX 파일에는 해당 판본의 본문 전체가 들어 있다. 각 ZIP은 같은 전체 본문 파일, 원래의 분할 구조, 필요한 조판 절차와 스크립트를 포함한다. XeLaTeX 및 소스에 지정된 글꼴과 패키지가 필요하며, 글꼴 파일은 동봉하지 않는다. [SHA-256 목록](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-10-26-r3/07-SHA256SUMS.txt)
 
 ## 저자·번역·출처
 
