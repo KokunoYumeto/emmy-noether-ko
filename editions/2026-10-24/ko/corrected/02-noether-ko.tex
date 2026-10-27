@@ -8657,10 +8657,10 @@ F. 클라인이 1918년 7월 26일 회의에 제출함\srcfn{1)}{원고의 최�
 도 나타날 수 있다\srcfn{1)}{가능한 곳에서는 합을 쓸 때도 지표를 생략한다. 예를 들어 \(\partial^2u/\partial x^2\)는 \(\partial^2u_\alpha/\partial x_\beta\partial x_\gamma\) 등을 뜻한다.}. 관계
 \[
 P\!\left(x,u,\frac{\partial u}{\partial x},
-\frac{\partial^2u}{\partial x^2},\ldots\right)
+\frac{\partial^2u}{\partial x^2},\cdots\right)
 =
 P\!\left(y,v,\frac{\partial v}{\partial y},
-\frac{\partial^2v}{\partial y^2},\ldots\right)
+\frac{\partial^2v}{\partial y^2},\cdots\right)
 \]
 가 성립하면 그 함수를 군의 불변식이라 한다.
 
@@ -8670,10 +8670,10 @@ P\!\left(y,v,\frac{\partial v}{\partial y},
 \begin{aligned}
 I&=\int\!\cdots\!\int
 f\!\left(x,u,\frac{\partial u}{\partial x},
-\frac{\partial^2u}{\partial x^2},\ldots\right)\dd x\\
+\frac{\partial^2u}{\partial x^2},\cdots\right)d x\\
 &=\int\!\cdots\!\int
 f\!\left(y,v,\frac{\partial v}{\partial y},
-\frac{\partial^2v}{\partial y^2},\ldots\right)\dd y
+\frac{\partial^2v}{\partial y^2},\cdots\right)d y
 \end{aligned}
 \end{equation}
 가 성립하면 \(I\)는 군의 불변식이다\srcfn{2)}{\(d x,d y\)는 각각 \(d x_1\ldots d x_n,d y_1\ldots d y_n\)의 줄임표기이다.}. 적분은 임의의 실수 \(x\)-영역과 그에 대응하는 \(y\)-영역에서 한다\srcfn{3)}{변환에 나타나는 모든 인수 \(x,u,\varepsilon,p(x)\)는 실수라고 가정하되 계수는 복소수여도 된다. 그러나 최종결과들은 \(x,u\), 매개변수, 임의함수에 관한 항등식이므로 모든 함수가 해석적이면 복소수 값에 대해서도 성립한다. 결과의 큰 부분은 적분 없이도 근거 지을 수 있으므로 그 부분의 증명에는 실수로의 제한도 필요 없다. 반면 § 2 끝과 § 5 시작의 고찰은 적분 없이 수행하기 어려워 보인다.}.
@@ -8738,7 +8738,7 @@ f\!\left(y,v,\frac{\partial v}{\partial y},
 +\cdots+
 \binom{\varkappa}{1}\frac{\partial f}{\partial u_i^{(\varkappa)}}
 \delta u_i^{(\varkappa-1)}\right]\right\}\\
-&+\frac{d^2}{d x^2}\left\{\sum_i\left[
+&+\frac{d^2}{d x^2}\left\{\sum_i\left(
 \binom22\frac{\partial f}{\partial u_i^{(2)}}\delta u_i+
 \binom32\frac{\partial f}{\partial u_i^{(3)}}\delta u_i^{(1)}
 +\cdots+
@@ -8796,7 +8796,7 @@ v_i(y)&=B_i\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)
 
 이제 적분 \(I\)가 \(\mathfrak G\)에 관하여 불변이어서 관계 (1)을 만족한다고 하자. 그러면 특히 \(I\)는 \(\mathfrak G\)에 들어 있는 무한소변환
 \[
-y_i=x_i+\varDelta x_i,\qquad v_i(y)=u_i+\varDelta u_i
+y_i=x_i+\varDelta x_i;\qquad v_i(y)=u_i+\varDelta u_i
 \]
 에 관하여도 불변이다. 이 변환에 대하여 (1)은
 \begin{equation}
@@ -8814,9 +8814,9 @@ f\!\left(x,u(x),\frac{\partial u}{\partial x},\cdots\right)d x
 \tag{8}
 \begin{aligned}
 \int\!\cdots\!\int
-f\!\left(y,v(y),\frac{\partial v}{\partial y},\ldots\right)\dd y
+f\!\left(y,v(y),\frac{\partial v}{\partial y},\cdots\right)d y
 &=\int\!\cdots\!\int
-f\!\left(x,v(x),\frac{\partial v}{\partial x},\ldots\right)\dd x\\
+f\!\left(x,v(x),\frac{\partial v}{\partial x},\cdots\right)d x\\
 &\quad+\int\!\cdots\!\int
 \operatorname{Div}(f\cdot\varDelta x)\,\dd x
 \end{aligned}
@@ -8860,7 +8860,7 @@ B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
 \tag{13}
 \sum\psi_i\bar\delta u_i^{(1)}=\operatorname{Div}B^{(1)}
 \quad\ldots,\quad
-\sum_i\psi_i\bar\delta u_i^{(\varrho)}=\operatorname{Div}B^{(\varrho)}
+\sum\psi_i\bar\delta u_i^{(\varrho)}=\operatorname{Div}B^{(\varrho)}
 \end{equation}
 가 따라온다.
 
@@ -8871,7 +8871,7 @@ B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
 \sum\psi_i\bar\delta u_i
 =\sum_{\lambda,i}\psi_i\left\{
 a_i^{(\lambda)}(x,u,\ldots)p^{(\lambda)}(x)
-+b^{(\lambda)}(x,u,\ldots)
++b_i^{(\lambda)}(x,u,\ldots)
 \frac{\partial p^{(\lambda)}}{\partial x}
 +\cdots+c_i^{(\lambda)}(x,u,\ldots)
 \frac{\partial^\sigma p^{(\lambda)}}{\partial x^\sigma}
@@ -8889,7 +8889,7 @@ a_i^{(\lambda)}(x,u,\ldots)p^{(\lambda)}(x)
 \begin{aligned}
 \sum_i\psi_i\bar\delta u_i
 ={}&\sum_\lambda\left\{
-a_i^{(\lambda)}\psi_i
+(a_i^{(\lambda)}\psi_i)
 -\frac{\partial}{\partial x}\bigl(b_i^{(\lambda)}\psi_i\bigr)
 +\cdots+(-1)^\sigma
 \frac{\partial^\sigma}{\partial x^\sigma}
@@ -8947,7 +8947,7 @@ u_i=v_i
 \end{array}\right\}
 \quad\text{단, }t=0.
 \end{equation}
-이 유한변환들은 \(\rho\)개의 매개변수 \(a_1,\ldots,a_\rho\), 즉 \(t\varepsilon_1,\ldots,t\varepsilon_\rho\)라는 결합들을 포함한다. 선형독립인 발산관계 (13)이 정확히 \(\rho\)개뿐이라는 가정으로부터, 유한변환들이 도함수 \(\partial u/\partial x\)를 포함하지 않는 한 언제나 군을 이룬다는 것도 따라온다. 그렇지 않다면 리 괄호과정으로 생기는 무한소변환들 가운데 적어도 하나는 나머지 \(\rho\)개의 선형결합이 아닐 것이다. \(I\)는 이 변환도 허용하므로 선형독립인 발산관계가 \(\rho\)개보다 많아질 것이다. 아니면 이 무한소변환은 \(\bar\delta u=0,\ \operatorname{Div}(f\Delta x)=0\)인 특수한 형태일 것이다. 그러나 그러면 가정에 어긋나게 \(\Delta x\) 또는 \(\Delta u\)가 도함수에 의존할 것이다. \(\Delta x\)나 \(\Delta u\)에 도함수가 나타날 때 이 경우가 실제로 생길 수 있는지는 여기서 미결로 남겨야 한다. 이때 군의 성질을 다시 얻으려면 위에서 정한 \(\Delta x\)에 \(\operatorname{Div}(f\Delta x)=0\)을 만족하는 모든 함수 \(\Delta x\)를 더해야 한다. 그러나 약속에 따라 이로써 추가되는 매개변수들은 세지 않는다. 이로써 역정리가 증명되었다.
+이 유한변환들은 \(\varrho\)개의 매개변수 \(a_1\ldots a_\varrho\), 즉 \(t\varepsilon_1,\ldots,t\varepsilon_\varrho\)라는 결합들을 포함한다. 선형독립인 발산관계 (13)이 정확히 \(\varrho\)개뿐이라는 가정으로부터, 유한변환들이 도함수 \(\frac{\partial u}{\partial x}\)를 포함하지 않는 한 언제나 군을 이룬다는 것도 따라온다. 그렇지 않다면 리 괄호과정으로 생기는 무한소변환들 가운데 적어도 하나는 나머지 \(\varrho\)개의 선형결합이 아닐 것이다. \(I\)는 이 변환도 허용하므로 선형독립인 발산관계가 \(\varrho\)개보다 많아질 것이다. 아니면 이 무한소변환은 \(\bar\delta u=0,\ \operatorname{Div}(f\cdot\varDelta x)=0\)인 특수한 형태일 것이다. 그러나 그러면 가정에 어긋나게 \(\varDelta x\) 또는 \(\varDelta u\)가 도함수에 의존할 것이다. \(\varDelta x\)나 \(\varDelta u\)에 도함수가 나타날 때 이 경우가 실제로 생길 수 있는지는 여기서 미결로 남겨야 한다. 이때 군의 성질을 다시 얻으려면 위에서 정한 \(\varDelta x\)에 \(\operatorname{Div}(f\varDelta x)=0\)을 만족하는 모든 함수 \(\varDelta x\)를 더해야 한다. 그러나 약속에 따라 이로써 추가되는 매개변수들은 세지 않는다. 이로써 역정리가 증명되었다.
 
 이 역정리로부터 실제로 \(\varDelta x\)와 \(\varDelta u\)를 매개변수들에 관하여 선형이라고 가정할 수 있다는 것도 따라온다. 만일 \(\varDelta u\)와 \(\varDelta x\)가 \(\varepsilon\)에 관하여 더 높은 차수의 형식들이라면, \(\varepsilon\)의 거듭제곱곱들이 선형독립이므로 전적으로 같은 종류의 관계 (13)이 단지 더 많이 생긴다. 역정리에 따라 이 관계들로부터, 무한소변환들이 매개변수를 선형으로 포함하는 한 군에 대한 \(I\)의 불변성이 따라온다. 이 군이 정확히 \(\varrho\)개의 매개변수를 포함해야 한다면, 원래 \(\varepsilon\)의 고차항들로부터 얻은 발산관계들 사이에 선형 종속관계가 있어야 한다.
 
@@ -9100,7 +9100,7 @@ x_i=y_i+t\cdot g_i(y)
 \]
 가 된다. 여기서는 \(t,u\)만 변수이고 \(g(y),\ldots\)는 계수체에 속한다. 따라서 적분하면
 \[
-u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\ldots,
+u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\cdots
 \frac{\partial^\sigma g}{\partial y^\sigma},t\right)_{t=1}
 \]
 을 얻는다. 즉 임의함수들의 도함수에 정확히 \(\sigma\)차까지 의존하는 변환들이다. (18)에 따라 \(g(y)=0\)이면 그 안에 항등변환이 포함된다. 또한 주어진 절차는 모든 변환 \(x=y+g(y)\)를 낳고, 이로부터 유도된 \(u\)의 변환이 유일하게 정해지므로, 이 절차가 군 \(\mathfrak G\)를 모두 소진한다. 따라서 군의 성질도 따라온다.
@@ -9144,7 +9144,7 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\ldots,
 \begin{aligned}
 \delta I
 &=\int\!\cdots\!\int
-\delta f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x\\
+\delta f\!\left(x,u,\frac{\partial u}{\partial x},\cdots\right)d x\\
 &=\int\!\cdots\!\int
 \delta f\!\left(y,v,\frac{\partial v}{\partial y},\ldots\right)\dd y
 \end{aligned}
@@ -9152,13 +9152,13 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\ldots,
 이고, 다른 한편으로 경계에서 사라지는 \(\delta u,\delta(\partial u/\partial x),\ldots\)에 대하여 다음이 성립한다. \(\delta u,\delta(\partial u/\partial x),\ldots\)의 변환이 선형이고 동차이므로 이에 대응하는 \(\delta v,\delta(\partial v/\partial y),\ldots\)도 경계에서 사라진다.
 \[
 \int\!\cdots\!\int
-\delta f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x
+\delta f\!\left(x,u,\frac{\partial u}{\partial x},\cdots\right)d x
 =\int\!\cdots\!\int
-\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)\dd x,
+\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)d x,
 \]
 \[
 \int\!\cdots\!\int
-\delta f\!\left(y,v,\frac{\partial v}{\partial y},\ldots\right)\dd y
+\delta f\!\left(y,v,\frac{\partial v}{\partial y},\cdots\right)d y
 =\int\!\cdots\!\int
 \left(\sum_i\psi_i(v,\ldots)\delta v_i\right)\dd y.
 \]
@@ -9209,7 +9209,7 @@ v^*=B(x+\varDelta x(p),u+\varDelta u(p),q).
 \]
 여기서 \(\mathfrak T_r=\mathfrak T_q\mathfrak T_p\mathfrak T_q^{-1}\), 즉
 \[
-\eta=y+\varDelta y(r),\qquad v^*=v+\varDelta v(r)
+\eta=y+\varDelta y(r);\qquad v^*=v+\varDelta v(r)
 \]
 를 얻는다. 이때 \(\mathfrak T_q\)의 역변환에 따라 \(x\)를 \(y\)의 함수로 보고 무한소항들만 고려한다. 따라서 다음 항등식이 성립한다.
 \begin{equation}
@@ -9254,7 +9254,7 @@ B^{(\lambda)}(x,u)=\mathrm{const.}
 \quad\text{또는}\quad
 B^{(\lambda)}(y,v)=\mathrm{const.}
 \]
-도 따라온다. 따라서 \(\mathfrak G_\rho\)에 대응하는 \(\rho\)개의 제1적분은 각각 이 군을 허용하므로, 이어지는 적분도 단순해진다. 이에 대한 가장 단순한 예는 \(f\)가 \(x\), 또는 한 \(u\)와 무관한 경우이며, 이는 각각 무한소변환 \(\Delta x=\varepsilon,\Delta u=0\)과 \(\Delta x=0,\Delta u=\varepsilon\)에 대응한다. 그러면 \(\bar\delta u\)는 각각 \(-\varepsilon\,\dd u/\dd x\)와 \(\varepsilon\)가 된다. \(B\)는 \(f\)와 \(\bar\delta u\)로부터 미분과 유리결합을 거쳐 유도되므로, \(B\)도 각각 \(x\)와 \(u\)에 무관하고 따라서 대응하는 군들을 허용한다\footnote{\(\int(\sum\psi_i\delta u_i)\dd x\)의 불변성만으로 이미 제1적분들의 존재가 따라오는 경우, 이 제1적분들은 완전한 군 \(\mathfrak G_\rho\)를 허용하지 않는다. 예를 들어 \(\int(u''\delta u)\dd x\)는 무한소변환 \(\Delta x=\varepsilon_2,\Delta u=\varepsilon_1+x\varepsilon_3\)을 허용한다. 그러나 \(\Delta x=0,\Delta u=x\varepsilon_3\)에 대응하는 제1적분 \(u-u'x=\mathrm{const.}\)는 \(u\)와 \(x\)를 모두 명시적으로 포함하므로 다른 두 무한소변환을 허용하지 않는다. 이 제1적분에 대응하는 \(f\)의 무한소변환들이 도함수들을 포함하는 것이다. 따라서 \(\int\!\cdots\!\int(\sum\psi_i\delta u_i)\dd x\)의 불변성이 \(I\)의 불변성보다 아무튼 더 적은 것을 준다는 사실을 알 수 있다. 이는 앞의 주석에서 제기한 문제와 관련하여 덧붙일 점이다.}.
+도 따라온다. 따라서 \(\mathfrak G_\varrho\)에 대응하는 \(\varrho\)개의 제1적분은 각각 이 군을 허용하므로, 이어지는 적분도 단순해진다. 이에 대한 가장 단순한 예는 \(f\)가 \(x\), 또는 한 \(u\)와 무관한 경우이며, 이는 각각 무한소변환 \(\varDelta x=\varepsilon,\varDelta u=0\)과 \(\varDelta x=0,\varDelta u=\varepsilon\)에 대응한다. 그러면 \(\bar\delta u\)는 각각 \(-\varepsilon\,\frac{d u}{d x}\)와 \(\varepsilon\)가 된다. \(B\)는 \(f\)와 \(\bar\delta u\)로부터 미분과 유리결합을 거쳐 유도되므로, \(B\)도 각각 \(x\)와 \(u\)에 무관하고 따라서 대응하는 군들을 허용한다\footnote{\(\int(\sum\psi_i\delta u_i)d x\)의 불변성만으로 이미 제1적분들의 존재가 따라오는 경우, 이 제1적분들은 완전한 군 \(\mathfrak G_\varrho\)를 허용하지 않는다. 예를 들어 \(\int(u''\delta u)d x\)는 무한소변환 \(\varDelta x=\varepsilon_2;\ \varDelta u=\varepsilon_1+x\varepsilon_3\)을 허용한다. 그러나 \(\varDelta x=0,\varDelta u=x\varepsilon_3\)에 대응하는 제1적분 \(u-u'x=\mathrm{const.}\)는 \(u\)와 \(x\)를 모두 명시적으로 포함하므로 다른 두 무한소변환을 허용하지 않는다. 이 제1적분에 대응하는 \(f\)의 무한소변환들이 도함수들을 포함하는 것이다. 따라서 \(\int\!\ldots\!\int(\sum\psi_i\delta u_i)d x\)의 불변성이 \(I\)의 불변성보다 아무튼 더 적은 것을 준다는 사실을 알 수 있다. 이는 앞의 주석에서 제기한 문제와 관련하여 덧붙일 점이다.}.
 
 \bigskip
 \section*{\S{}6. 힐베르트의 한 주장}
@@ -10062,7 +10062,7 @@ F_0(\xi_{ik})=G(\xi_{ik})+\xi_{34}\cdot F_1(\xi_{ik})
 로 두자. 여기서 \(G\)는 \(\xi_{34}\)로 나누어지는 거듭제곱곱을 하나도 포함하지 않는다. 또
 \begin{equation}
 \tag{7}
-\left[G\right]_{\xi_{14}=\xi_{13},\,\xi_{24}=\xi_{23}}
+\left[G\right]_{(\xi_{i4}=\xi_{i3})}
 =K(\xi_{12},\xi_{13},\xi_{23})
 \end{equation}
 로 둔다.
@@ -10189,7 +10189,7 @@ F(\xi_{ik})\equiv F_0(\xi_{ik})\pmod{\mathfrak N}
 \[
 \begin{aligned}
 F(\xi_{ik})
-&=\sum \xi_{i_1n}\cdots\xi_{i_\sigma n\cdot}P^{(\nu)}\\
+&=\sum \xi_{i_1n}\cdots\xi_{i_\sigma n\cdot}\cdot P^{(\nu)}\\
 &\equiv
 \sum \xi_{j_1n}\cdots\xi_{j_\sigma n}\cdot S_0^{(\nu)}
 =F_0(\xi_{ik})\pmod{\mathfrak N}
@@ -11211,7 +11211,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \begin{equation}
 \left\{
 \begin{aligned}
- a_r t_{1\varkappa}a_\varkappa&=0
+ \mathfrak{a}_r \mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa&=0
  &&(\varkappa=1,\ldots,\alpha,\ r\ne1)\\
  \text{그리고 \(s>1\)이면}\qquad
  \mathfrak{a}_r \mathfrak{t}_{s1}\mathfrak{a}_1&=0 &&(r\ne s),\\
@@ -11239,8 +11239,8 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \end{equation}
 를 얻는다. 여기서 \(\mathfrak{t}_{i1}\mathfrak{t}_{1\varkappa}=\mathfrak{t}_{i\varkappa}\)로 두었다. (33), (34)에서 더 나아가
 \[
- t_{i\varkappa}t_{\varkappa l}a_l
- =t_{i1}t_{1\varkappa}t_{\varkappa1}t_{1l}a_l
+ \mathfrak{t}_{i\varkappa}\mathfrak{t}_{\varkappa l}\mathfrak{a}_l
+ =\mathfrak{t}_{i1}\mathfrak{t}_{1\varkappa}\mathfrak{t}_{\varkappa1}\mathfrak{t}_{1l}\mathfrak{a}_l
  =\mathfrak{t}_{i1}\mathfrak{t}_{1l}\mathfrak{a}_l=\mathfrak{t}_{il}\mathfrak{a}_l
 \]
 이다. 이로써 \(\mathfrak A_1\)을 특별히 택한 것은 다시 사라진다. 정의에 \(\mathfrak A_1\) 대신 어느 군 \(\mathfrak A_l\)를 써도 \(\mathfrak A_i,\mathfrak A_\varkappa\) 사이의 동형관계는 같다. 따라서 \(\mathfrak{t}_{i\varkappa}\)들은 한데 다음 관계들을 만족하는 류들이다.
@@ -11272,9 +11272,9 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \end{equation}
 이다. 이제
 \begin{equation}
- b_\rho=\sum_{i,\varkappa}
+ \mathfrak{b}_\rho=\sum_{i,\varkappa}
  \lambda_{\rho i}\lambda^{\rho\varkappa}
- t_{i\varkappa}a_\varkappa
+ \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa
  \qquad(\rho=1,\ldots,\alpha)
 \tag{37}
 \end{equation}
@@ -11283,9 +11283,9 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  \sum_{\rho=1}^{\alpha}\mathfrak{b}_\rho
  =\sum_{i,\varkappa,\rho}
   \lambda_{\rho i}\lambda^{\rho\varkappa}
-  t_{i\varkappa}a_\varkappa
+  \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa
  =\sum_{i,\varkappa}\delta_{i\varkappa}
-  t_{i\varkappa}a_\varkappa
+  \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa
  =\sum_i \mathfrak{t}_{ii}\mathfrak{a}_i=\sum_i \mathfrak{a}_i=\mathfrak{e}
 \tag{38}
 \end{equation}
@@ -11320,23 +11320,23 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 
 그런데 군 \(\mathfrak B_\rho\)들은 서로 동형이고 군 \(\mathfrak A_\sigma\)들과도 동형이다. 이를 위해 먼저 \(\mathfrak A_\sigma,\mathfrak B_\rho\)의 동형을 매개하는 류 \(\mathfrak{r}_{\rho\sigma}\mathfrak{a}_\sigma\), \(\mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho\)의 존재를 보이자 (\(\rho,\sigma=1,\ldots,\alpha\)). 곧 류
 \[
- r_{\rho\sigma}a_\sigma
- =\sum_i\lambda_{\rho i}t_{i\sigma}a_\sigma,\qquad
- r^{\sigma\rho}
+ \mathfrak{r}_{\rho\sigma}\mathfrak{a}_\sigma
+ =\sum_i\lambda_{\rho i}\mathfrak{t}_{i\sigma}\mathfrak{a}_\sigma,\qquad
+ \mathfrak{r}^{\sigma\rho}
  =\sum_\varkappa\lambda^{\rho\varkappa}
-  t_{\sigma\varkappa}a_\varkappa
+  \mathfrak{t}_{\sigma\varkappa}\mathfrak{a}_\varkappa
  =\mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho\text{\footnotemark[21]}
 \]
 \footnotetext[21]{(37)에 따라 \(\mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho=\sum_{\varkappa,i,\mu}\lambda^{\rho\varkappa}\mathfrak{t}_{\sigma\varkappa}\mathfrak{a}_\varkappa\lambda_{\rho i}\lambda^{\rho\mu}\mathfrak{t}_{i\mu}\mathfrak{a}_\mu=\sum_{\varkappa,\mu}\lambda^{\rho\varkappa}\lambda_{\rho\varkappa}\lambda^{\rho\mu}\mathfrak{t}_{\sigma\mu}\mathfrak{a}_\mu=\sum_\mu\lambda^{\rho\mu}\mathfrak{t}_{\sigma\mu}\mathfrak{a}_\mu=\mathfrak{r}^{\sigma\rho}\)이다.}
 가 모듈
 \[
- (\mathfrak M,b_1+\cdots+b_{\rho-1}
-              +b_{\rho+1}+\cdots+b_\alpha)
+ (\mathfrak M,\mathfrak{b}_1+\cdots+\mathfrak{b}_{\rho-1}
+              +\mathfrak{b}_{\rho+1}+\cdots+\mathfrak{b}_\alpha)
 \]
 과
 \[
- (\mathfrak M,a_1+\cdots+a_{\sigma-1}
-              +a_{\sigma+1}+\cdots+a_\alpha)
+ (\mathfrak M,\mathfrak{a}_1+\cdots+\mathfrak{a}_{\sigma-1}
+              +\mathfrak{a}_{\sigma+1}+\cdots+\mathfrak{a}_\alpha)
 \]
 사이의 ‘같은 종류’ 관계
 \begin{equation}
@@ -11372,7 +11372,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
   t_{\mu\nu}a_\nu\cdot\lambda_{\rho i}t_{i\sigma}a_\sigma\\
  &=\sum_{\mu,i}
   \lambda_{\varkappa\mu}\lambda^{\varkappa i}
-  \lambda_{\rho i}t_{\mu\sigma}a_\sigma
+  \lambda_{\rho i}\mathfrak{t}_{\mu\sigma}\mathfrak{a}_\sigma
  =\delta_{\varkappa\rho}\sum_\mu
   \lambda_{\varkappa\mu}t_{\mu\sigma}a_\sigma\\
  &=\delta_{\varkappa\rho}r_{\varkappa\sigma}a_\sigma
@@ -11384,32 +11384,32 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  \mathfrak{r}^{\sigma\rho}\mathfrak{r}_{\rho\sigma}\mathfrak{a}_\sigma
  =\sum_{\varkappa,i}\lambda^{\rho\nu}t_{\sigma\nu}a_\nu
   \lambda_{\rho i}t_{i\sigma}a_\sigma
- =\sum_i\lambda^{\rho i}\lambda_{\rho i}a_\sigma
- =a_\sigma.
+ =\sum_i\lambda^{\rho i}\lambda_{\rho i}\mathfrak{t}_{\sigma\sigma}\mathfrak{a}_\sigma
+ =\mathfrak{a}_\sigma.
 \]
 역으로 마찬가지로
 \[
  \mathfrak{a}_\varkappa \mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho
- =a_\varkappa\sum_\mu
-  \lambda^{\rho\mu}t_{\sigma\mu}a_\mu
+ =\mathfrak{a}_\varkappa\sum_\mu
+  \lambda^{\rho\mu}\mathfrak{t}_{\sigma\mu}\mathfrak{a}_\mu
  =0\quad(\varkappa\ne\sigma)
 \]
 이고
 \[
  \mathfrak{r}_{\rho\sigma}\mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho
- =\sum_{i,\mu}\lambda_{\rho i}t_{i\sigma}a_\sigma
-  \lambda^{\rho\mu}t_{\sigma\mu}a_\mu
+ =\sum_{i,\mu}\lambda_{\rho i}\mathfrak{t}_{i\sigma}\mathfrak{a}_\sigma
+  \lambda^{\rho\mu}\mathfrak{t}_{\sigma\mu}\mathfrak{a}_\mu
  =\sum_{i,\mu}\lambda_{\rho i}\lambda^{\rho\mu}
-  t_{i\mu}a_\mu=b_\rho
+  \mathfrak{t}_{i\mu}\mathfrak{a}_\mu=\mathfrak{b}_\rho
 \]
 이다. 이제 증명한 같은 종류 관계에서 (다시 유한성정리를 쓰지 않고) \(\mathfrak A_\sigma,\mathfrak B_\rho\)의 동형이 따른다.
 
 \(\mathfrak B_\rho,\mathfrak B_\tau\) 사이의 동형은 이를 합성하여 얻으며, 그 공식을 적어 두자. 다음과 같이 둔다.
 \[
- \ell_{\rho\tau}b_\tau
- =r_{\rho\varkappa}r^{\varkappa\tau}b_\tau
- =\sum_{i,j}\lambda_{\rho i}t_{i\varkappa}a_\varkappa
-  \lambda^{\tau j}t_{\varkappa j}a_j
+ \mathfrak{s}_{\rho\tau}\mathfrak{b}_\tau
+ =\mathfrak{r}_{\rho\varkappa}\mathfrak{r}^{\varkappa\tau}\mathfrak{b}_\tau
+ =\sum_{i,j}\lambda_{\rho i}\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa\cdot
+  \lambda^{\tau j}\mathfrak{t}_{\varkappa j}\mathfrak{a}_j
  =\sum_{i,j}\lambda_{\rho i}\lambda^{\tau j}\mathfrak{t}_{ij}\mathfrak{a}_j.
 \]
 그러면 대응은 \(\mathfrak{b}_\rho\sim\mathfrak{s}_{\rho\tau}\mathfrak{b}_\tau\)이다. 여기에서도 같은 종류 관계를 형식적으로 다시 확인할 수 있다. \(\mathfrak{s}_{\rho\tau}\)들을 \(\mathfrak{t}_{i\varkappa}\) 대신 넣으면 관계 (35)를 만족한다. 실제로
@@ -11603,10 +11603,10 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \begin{equation}
 \left\{
 \begin{aligned}
- a_1&=\frac{y_1}{z_1}\alpha_{11}b_1
-     +\frac{y_1}{z_2}\alpha_{12}b_2,\\
- a_2&=\frac{y_2}{z_1}\alpha_{21}b_1
-     +\frac{y_2}{z_2}\alpha_{22}b_2
+ \mathfrak{a}_1&=\frac{y_1}{z_1}\alpha_{11}\mathfrak{b}_1
+     +\frac{y_1}{z_2}\alpha_{12}\mathfrak{b}_2,\\
+ \mathfrak{a}_2&=\frac{y_2}{z_1}\alpha_{21}\mathfrak{b}_1
+     +\frac{y_2}{z_2}\alpha_{22}\mathfrak{b}_2
 \end{aligned}\right.
 \tag{44}
 \end{equation}
@@ -11625,7 +11625,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  \frac{y_1}{z_\sigma}\alpha_{1\sigma}\mathfrak{b}_\sigma
  \sim
  \frac{y_1}{z_\sigma}\alpha_{1\sigma}
- \frac{z_\sigma}{y_2}\alpha^{\sigma2}a_2
+ \frac{z_\sigma}{y_2}\alpha^{\sigma2}\mathfrak{a}_2
  =\frac{y_1}{y_2}\alpha_{1\sigma}\alpha^{\sigma2}\mathfrak{a}_2.
 \]
 그러므로
@@ -11642,8 +11642,8 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \[
  \mathfrak{t}_{12}=\alpha_{1\sigma}\alpha^{\sigma2}\frac{y_1}{y_2}\mathfrak{a}_2,
  \qquad
- t_{21}=\frac{1}{\alpha_{1\sigma}\alpha^{\sigma2}}
- \frac{y_2}{y_1}a_1
+ \mathfrak{t}_{21}=\frac{1}{\alpha_{1\sigma}\alpha^{\sigma2}}
+ \frac{y_2}{y_1}\mathfrak{a}_1
 \]
 로 두면, 직접 계산하여 확인할 수 있듯 관계 (35)가 충족된다.
 
@@ -12639,7 +12639,7 @@ $T$는 원소 $\alpha,\beta,\gamma,\ldots$의 체계이며, $\Sigma$와 결합�
 \item 곱셈의 결합법칙: $a\cdot(b\cdot\gamma)=(a\times b)\cdot\gamma$.
 \item 분배법칙:
 \[
- (a\# b)\cdot\gamma=a\cdot\gamma+b\cdot\gamma,
+ (a\# b)\cdot\gamma=a\cdot\gamma+b\cdot\gamma;
  \qquad c\cdot(\alpha+\beta)=c\cdot\alpha+c\cdot\beta.
 \]
 \end{enumerate}
@@ -14286,9 +14286,9 @@ f(t),tf(t),\ldots,t^{k-p-1}f(t)
 
 이 절차를 영아이디얼에 이르거나 \(\aideal_{n+1}\)이 단위원아이디얼이 될 때까지 계속한다. \(\aideal_{n+1}\)은 \(x\)와 무관하므로 영아이디얼 또는 단위원아이디얼일 수밖에 없다. 아이디얼 \(\aideal_1,\aideal_2,\ldots\)은 기초로 택한 다항식 \(A^{(\lambda)}(x)\)과 무관하게 \(\aideal\)만으로 유일하게 정해진다. \(\aideal_1=\aideal\)에 대해서는 분명하므로 \(\aideal_1,\ldots,\aideal_i\)까지 성립한다고 가정하자. \(\aideal_i\)가 \(A^{(i)}(x)\)을 법으로 하여 선형형식 모듈 \(\mathfrak A_i\)로 옮겨진다면, \(\mathfrak A_i\)는 \(x_i\)의 차수가 \(k_i\)에 미치지 않는 \(\aideal_i\)의 모든 다항식으로도 특징지을 수 있다. 따라서 \(\mathfrak A_i\)는 \(A^{(i)}(x)\)의 차수 \(k_i\)에만 의존한다. 이제 \(\bar A^{(i)}(x)\)가 \(\aideal_i\)에 속하면서 \(x_i\)에 관하여 정칙인 \(\bar k_i>k_i\)차 다항식이고, \(\overline{\mathfrak A}_i\)가 대응하는 선형형식 모듈, \(\bar\aideal_{i+1}\)이 \(\overline{\mathfrak A}_i\)의 \(\bar k_i\)차 행렬식들이 생성하는 아이디얼이라고 하자. 그러면 모듈등식
 \[
-\overline{\mathfrak A}_i=
-(\mathfrak A_i,A^{(i)},x_iA^{(i)},\ldots,
-x_i^{\bar k_i-k_i-1}A^{(i)})
+\overline{\mathfrak A}_\lambda=
+(\mathfrak A_\lambda,A^{(\lambda)},x_\lambda A^{(\lambda)},\ldots,
+x_\lambda^{\bar k_\lambda-k_\lambda-1}A^{(\lambda)})
 \]
 이 성립한다. \(A^{(i)}(x)\)이 \(x_i\)에 관하여 정칙이므로 \(A^{(i)},x_iA^{(i)},\ldots\)를 선형형식의 새 부정원들로 도입할 수 있다. 따라서 \(\mathfrak A_i\)의 \(k_i\)차 행렬식들과 \(\overline{\mathfrak A}_i\)의 \(\bar k_i\)차 행렬식들이 일치하고, \(\bar\aideal_{i+1}=\aideal_{i+1}\)이다\srcfn{17)}{이는 원리상 \(\Gmod^*_{i-1}\mid\Mmod^*_{i-1}\)과 \(\Gmod_{i-1}\mid\Mmod_{i-1}\)의 동형이 바탕을 둔 것과 같은 추론이다.}.
 
@@ -17453,8 +17453,8 @@ a(r+s)&=ar+as
 
 6. \emph{아벨군의 자기동형환.}\footnote{A. Châtelet, \emph{Les Groupes Abéliens finis}, Paris, Gauthier-Villars, 1925, 99쪽을 보라.} 덧셈으로 쓴 아벨군에서 자기 자신으로 가는 준동형들에는
 \[
-        (H+\Theta)a=Ha+\Theta a,\qquad
-        (H\Theta)a=H(\Theta a)
+        (\mathsf{H}+\Theta)a=\mathsf{H}a+\Theta a,\qquad
+        (\mathsf{H}\Theta)a=\mathsf{H}(\Theta a)
 \]
 로 덧셈과 곱셈을 정의할 수 있다. 이렇게 정의한 연산들도 분명 다시 준동형이고, 따라서 그 계에 속한다. 이 계는 환을 이루며, 4에 따라 그 아벨군을 이 환에 관한 가군으로 볼 수 있다.
 
@@ -17680,7 +17680,7 @@ a(r+s)&=ar+as
 모든 부분가군 \(\mH\)는 직접가수이다.
 \[
         \mG=\mH+\mR
-        =(h_1K+\ldots+h_sK)+(r_1K+\ldots+r_{n-s}K).
+        =(h_1\mathsf{K}+\ldots+h_s\mathsf{K})+(r_1\mathsf{K}+\ldots+r_{n-s}\mathsf{K}).
 \]
 달리 말해, \emph{\(\mH\)의 모든 선형독립기저를 \(\mG\)의 선형독립기저로 보충할 수 있다.} \(r_i\)들은 원래의 기저원소 \(a_i\)들 가운데서 택할 수도 있다.
 
@@ -18364,7 +18364,7 @@ a(r+s)&=ar+as
 
 끝으로 같은 식들에서
 \[
-        c_{ik}K=c_{ik}\mA_{kk}
+        c_{ik}\mathsf{K}=c_{ik}\mA_{kk}
         =c_{ik}\mr_k\ml_k=\mr_i\ml_k=\mA_{ik}
 \]
 가 따르며, 따라서
@@ -18539,8 +18539,8 @@ a(r+s)&=ar+as
 \srcnumdisplay[3.2em]{(1)}{%
 \begin{gathered}
         cx_k=\sum x_i\gamma_{ik},\\
-        c\biggl(\sum_k x_k\alpha_k\biggr)
-        =\sum_i\sum_k x_i\gamma_{ik}\alpha_k
+        c\biggl(\sum x_k\alpha_k\biggr)
+        =\sum\sum x_i\gamma_{ik}\alpha_k
 \end{gathered}}
 로 정의하자. 준동형관계
 \[
@@ -20573,7 +20573,7 @@ x_i\equiv x_{l+1}\alpha_{i,l+1}+\ldots+x_n\alpha_{i,n}
 \[
 \frN=\frM_A=y_1A+\ldots+y_nA.
 \]
-역으로 각 \(\mathsf{P}\)-가군 \(\frM=y_1\mathsf{P}+\ldots+y_n\mathsf{P}\)에는 가군 동형까지 유일한 확대가군 \(\frM_{\mathsf{A}}\)가 존재한다. 실제로 가군 \(\bar y_1A+\ldots+\bar y_nA\)는 \(\frM\)과 동형인 부분가군 \(\overline{\frM}\)을 포함하며, 이를 \(\frM\)과 동일시할 수 있다.
+역으로 각 \(\mathsf{P}\)-가군 \(\frM=y_1\mathsf{P}+\ldots+y_n\mathsf{P}\)에는 가군 동형까지 유일한 확대가군 \(\frM_{\mathsf{A}}\)가 존재한다. 실제로 가군 \(\bar y_1\mathsf{A}+\ldots+\bar y_n\mathsf{A}\)는 \(\frM\)과 동형인 부분가군 \(\overline{\frM}\)을 포함하며, 이를 \(\frM\)과 동일시할 수 있다.
 
 \noindent\textbf{귀결 a).} \(z_1,\ldots,z_t\)가 \(\frM\)의 \(P\)에 관하여 선형독립인 원소들이면, \(\frN=\frM_{\mathsf{A}}\)에서도 \(A\)에 관하여 선형독립이다. 실제로 이들을 \(\frM\), 따라서 \(\frN\)의 기저로 보충할 수 있다. 그러므로 \(\frM\)의 각 \(P\)-가군 \(\frT=z_1\mathsf{P}+\ldots+z_t\mathsf{P}\)는 \(\frM_{\mathsf{A}}\) 안에서 확대가군 \(\frT_{\mathsf{A}}=z_1\mathsf{A}+\ldots+z_t\mathsf{A}\)를 생성한다.
 
@@ -20971,7 +20971,7 @@ e^Sz=e^S\zeta^S,
 \end{pmatrix}
 =E
 \]
-을 얻는다. 대각합을 통한 정의로 옮기는 것은 다음에서 나온다. \(a_i=\sum_S e^S\alpha_i^S\), \(b_i=\sum_S e^S\beta_i^S\)에 대하여 행렬관계의 두 행렬을 바꾸면
+을 얻는다. 대각합을 통한 정의로 옮기는 것은 다음에서 나온다. \(a_i=\sum\limits_S e^S\alpha_i^S\), \(b_i=\sum\limits_S e^S\beta_i^S\)에 대하여 행렬관계의 두 행렬을 바꾸면
 \[
 \Sp(a_i b_i)=1,\qquad
 \Sp(a_i b_k)=0\quad(i\ne k)\srcfnmark{21)}
@@ -21405,7 +21405,7 @@ $\mathfrak O_{\mathfrak a}$가 극대임을(따라서 $o$를 포함함을) 보�
 \mathfrak L=\widetilde oE_\Gg\mathfrak L
  =(\widetilde oE_\Gg l_1,\ldots,\widetilde oE_\Gg l_t)
 \]
-이며, 여기서 예를 들어 $l_1,\ldots,l_t$는 $\mathfrak L$의 한 $o$-기저이다. $l_\mu=\sum_i u_{s_i}z_{\mu,i}$로 놓고 $z_{\mu,i}$를 $k$의 원소라 하면\srcfn{(10)}{비갈루아 $k$의 경우에는 $z$를 $\bar z\mathrm{E}_{\mathfrak h}$로, 따라서 $a$를 $\bar a\mathrm{E}_{\mathfrak h}$로 바꾸어야 한다. 그러면
+이며, 여기서 예를 들어 $l_1,\ldots,l_t$는 $\mathfrak L$의 한 $o$-기저이다. $l_\mu=\sum\limits_i u_{s_i}z_{\mu,i}$로 놓고 $z_{\mu,i}$를 $k$의 원소라 하면\srcfn{(10)}{비갈루아 $k$의 경우에는 $z$를 $\bar z\mathrm{E}_{\mathfrak h}$로, 따라서 $a$를 $\bar a\mathrm{E}_{\mathfrak h}$로 바꾸어야 한다. 그러면
 \[
 \mathrm{E}_{\mathfrak g}l=\mathrm{E}_{\mathfrak g}\bar a\mathrm{E}_{\mathfrak h}=\mathrm{E}_{\mathfrak g}a
 \]
@@ -22092,8 +22092,8 @@ C_\lambda=\operatorname{Sp}(cT_\lambda),
 을 뜻하며 \(x\)는 \(\mathfrak K\)의 임의의 원소이다. 실제로
 \[
 c=\gamma^{(1)}e^{(1)}+\cdots+\gamma^{(n)}e^{(n)}
-=\sum_\lambda\gamma^{(1)}A_\lambda^{(1)}t_\lambda+
-\cdots+\sum_\lambda\gamma^{(n)}A_\lambda^{(n)}t_\lambda
+=\sum\limits_\lambda\gamma^{(1)}\mathsf{A}_\lambda^{(1)}t_\lambda+
+\cdots+\sum\limits_\lambda\gamma^{(n)}\mathsf{A}_\lambda^{(n)}t_\lambda
 \]
 이므로 계수들을 비교하면 \(C_\lambda=\operatorname{Sp}(cT_\lambda)\)를 얻는다. 둘째 관계는 \(t\)와 \(T\)를 맞바꾸면 마찬가지로 따른다.\srcfn{19)}{이 항의 고찰은 불변인 구조정리들이 불변이 아닌 기저정리들보다 본질적으로 더 단순함을 보인다. 마지막 정리들은 알려진 것과의 관계를 잇기 위해서만 필요했다. 실제로 갈루아 확대환의 분해와 단위원 성분들의 도입은 여차기저들(다음 절의 여모듈)이 하는 모든 일을 해낸다. 그곳에서도 디퍼런트와 여모듈의 관계는 분류를 위해서만 제시한다. 5의 라그랑주 보간공식에 관한 고찰도 마찬가지이다.}
 
@@ -23458,7 +23458,7 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 
 \(\mathfrak M\)을 \(\mathfrak S_{\mathsf K}\)-좌측가군으로도 볼 수 있음을 증명하자. 먼저 \(\mathfrak S_{\mathsf K}\)의 원소와 \(\mathfrak M\)의 원소의 곱을 정의해야 한다. \(s\in\mathfrak S\), \(x\in\mathsf K\), \(m\in\mathfrak M\)일 때
 \[
-        sx\cdot m=s\cdot(xm)
+        s\varkappa\cdot m=s\cdot(\varkappa m)
 \]
 로 놓고, 이에 따라 일반 원소 \(\sum s_ix_i\in\mathfrak S_{\mathsf K}\)에 대해
 \[
@@ -23513,7 +23513,7 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 \]
 은 명백하다. 결합법칙 \(S(S'm)=SS'\cdot m\)만 더 살펴보면 된다. 분배법칙이 있으므로
 \[
-        sx\cdot(s'x'm)=sxs'x'\cdot m
+        s\varkappa\cdot(s'\varkappa'm)=s\varkappa s'\varkappa'\cdot m
 \]
 인 경우에 국한할 수 있다. 정의에 따라 한편
 \[
@@ -23534,15 +23534,15 @@ sxs'x'\cdot m
 \]
 마지막 등식에는 두 교환관계
 \[
-        xs'=s'x,
+        \varkappa s'=s'\varkappa,
         \qquad
-        s'(xm)=x(s'm)
+        s'(\varkappa m)=\varkappa(s'm)
 \]
 을 썼다.
 
 따라서 \(\mathfrak M\)은 실제로 유한 \(\mathfrak S_{\mathsf K}\)-좌측가군이다. 역으로 모든 유한 \(\mathfrak S_{\mathsf K}\)-좌측가군은 \(\mathfrak S\)의 \(\mathsf K\) 안에서의 반대 표현가군이다. 유한 \(\mathsf K\)-가군임은 명백하고,
 \[
-        s(xm)=sx\cdot m=xs\cdot m=x(sm)
+        s(\varkappa m)=s\varkappa\cdot m=\varkappa s\cdot m=\varkappa(sm)
 \]
 이므로 교환조건도 만족하기 때문이다(§ 24의 더 간단한 증명도 비교하라).
 
@@ -23577,12 +23577,12 @@ M. Z. § 18에 따라 모든 유한 \(\mathfrak S_{\mathsf K}\)-가군은 \(\mat
 
 \(\mathsf{Z}=\xi_1\mathsf P+\cdots+\xi_n\mathsf P\)가 \(\mathsf P\) 위의 초복소계를 뜻하면 두 확대계 \(\mathfrak K_{\mathsf{Z}}\)와 \(\mathsf{Z}_{\mathfrak K}\)는 같다. 실제로
 \[
-        \mathfrak K_Z
+        \mathfrak K_{\mathsf{Z}}
         =y_1\xi_1\mathsf P+\cdots+y_m\xi_n\mathsf P
 \]
 로 쓸 수 있고
 \[
-        Z_{\mathfrak K}
+        \mathsf{Z}_{\mathfrak K}
         =\xi_1y_1\mathsf P+\cdots+\xi_ny_m\mathsf P
 \]
 로 쓸 수 있는데, \(y_i\xi_j=\xi_jy_i\)이므로 두 표현은 같다.
@@ -23657,7 +23657,7 @@ M. Z. § 18에 따라 모든 유한 \(\mathfrak S_{\mathsf K}\)-가군은 \(\mat
 
 \textbf{2.} \(\mathsf P\)의 가환확대체 \(\mathsf{Z}\)의 \(\mathfrak K\) 안에서의 \(r\)차 기약표현 \(\mathfrak Z\)가 \(\mathfrak K_r\)의 극대 가환부분체라고 하자. \(\mathfrak K_{\mathsf{Z}}\)의 단순아이디얼들의 자기동형체를 \(\mathfrak T\)라 하면
 \[
-        \mathfrak K_Z
+        \mathfrak K_{\mathsf{Z}}
         =\sum_{1}^{t'}\mathfrak T c_{ik}.
 \]
 \(\mathfrak T\)는 \(\mathsf{Z}\)를 포함한다. \(\mathfrak T=\mathsf{Z}\)임을 보여야 한다. \(\mathfrak K_r\)의 한 단순 우측아이디얼 \(\mathfrak r\)은 \(\mathsf{Z}\)의 \(\mathfrak K\) 안에서의 표현가군일 뿐 아니라 \(\mathfrak T\)의 표현가군이기도 하다. 실제로
@@ -23813,8 +23813,8 @@ j^{*-2}ij^*j^{*2}&=ij^*
 \[
         [\mathfrak T_{\mathsf{K}} E_\nu:\mathsf{K}]=s,
         \qquad
-        \mathfrak T_K E_\nu
-        =K e_1^{(\nu)}+\cdots+K e_s^{(\nu)}.
+        \mathfrak T_{\mathsf{K}} E_\nu
+        =\mathsf K e_1^{(\nu)}+\cdots+\mathsf K e_s^{(\nu)}.
 \]
 
 \(\mathsf K e_i^{(\nu)}\)가 주는 \(\mathfrak T\)의 표현은 \(\mathsf K E_\nu\)가 주는 \(\mathfrak S\)의 표현을 연장한다. 실제로 \(\alpha\in\mathfrak S\)이면
@@ -24151,7 +24151,7 @@ p_{ij}p_{jk}&=\alpha_{ik}^{(j)}p_{ik},
 \]
 이다.
 
-유사행렬단위계 \(p_{ik}^*\)는 모두, 처음의 \(p_{1k}\)들에 \(\{Z_1,Z_k\}\)의 임의의 \(\delta_{1k}\ne0\)를 곱하여
+유사행렬단위계 \(p_{ik}^*\)는 모두, 처음의 \(p_{1k}\)들에 \(\{\mathsf{Z}_1,\mathsf{Z}_k\}\)의 임의의 \(\delta_{1k}\ne0\)를 곱하여
 \[
         p_{1k}^*=p_{1k}\delta_{1k}
 \]
@@ -24257,7 +24257,7 @@ S(\tau^{-1}\mathfrak l_i\tau\cdot\,\mathfrak z'_1)
 이므로
 \[
 \tag{1}
-        A_\Gamma
+        \mathsf{A}_\Gamma
         =\mathfrak l'_1\mathfrak z'_1+
          \cdots+
          \mathfrak l'_n\mathfrak z'_1
@@ -24553,14 +24553,14 @@ ts=e_1^*+\cdots+e_n^*=\xi^*
 
 \(\mathfrak K_{r\Gamma}\)-아이디얼
 \[
-        \Omega
+        \mathfrak L
         =\mathfrak l_1(p_{11}+\cdots+p_{1n})
 \]
 은 \(0\)이 아니다. 실제로 \(e_1\sum_i p_{1i}\ne0\)이다. 따라서 \(\Omega\)는 단순하며 랭크가 \(n\)이다. 또한 \(\Omega\)는 \(\mathfrak G\)-불변이다. 곧
 \[
 \begin{aligned}
 S\mathfrak L
- &=\mathfrak l_1\sum_\nu S p_{1\nu}\\
+ &=S\mathfrak l_1\sum_\nu S p_{1\nu}\\
  &=\mathfrak l_i\sum_\mu p_{i\mu}\\
  &=\mathfrak l_i\sum_\mu p_{i1}p_{1\mu},
 \end{aligned}
@@ -24954,8 +24954,8 @@ zu_T
 \]
 따라서
 \[
-        H_T(z)
-        =\sum_Se_S\Theta_SH_T(z)
+        \mathsf{H}_T(z)
+        =\sum_Se_S\Theta_S\mathsf{H}_T(z)
         =\sum_Se_S\Theta_{ST^{-1}}(z),
 \]
 그러므로
@@ -25611,7 +25611,7 @@ u_Su_T=u_{ST}a_{S,T},\\
 \[
 \begin{aligned}
 c_{11}(\mathfrak K_r\times\mathsf P_s)c_{11}
- &=\mathfrak K_r\times c_{11}\mathsf P_sc_{11}\\
+ &=\mathfrak K_r\times c_{11}\mathsf Pc_{11}\\
  &=\mathfrak K_rc_{11}.
 \end{aligned}
 \]
@@ -25733,7 +25733,7 @@ ze_1(e_1u_S\bar u_Se_1)
       &&\text{(보조정리 1)}\\
  &=u_Sz^S\bar u_Se_1\\
  &=u_S\bar u_Se_1(z^Se_1)\\
- &=b=e_1b.
+ &\equiv b=e_1b.
 \end{aligned}
 \]
 여기서는 \(z\)가 \(\bar u\) 및 \(e_1\)과 교환함을 썼다. 이제 \(u'=u_S\bar u_Se_1\)로 두자. 보조정리 2는 \(u'\)가 \(\mathfrak Ze_1\)의 치환들을 유도한다는 뜻이므로 정리에서 적은 교차표현이 성립한다.
@@ -26144,7 +26144,7 @@ K_r\cdot g_r(0,y):y^{(g_r)} - g_r\cdot K_r(0,y):y^{(g_r)} &= x\cdot K_{r+1}
 
 이제 주정리(정리 II)의 증명은 다음 보조정리에 근거한다.
 
-\textbf{보조정리 II.} \((f_i,g_i,p^\varrho)=q^{(i)}\)로 두면, 무한 정수열 \(1,2,\ldots\)의 각 \(i\)에 대하여 다음이 성립한다.
+\textbf{보조정리 II.} \((f_i,g_i,\mathfrak{p}^\varrho)=q^{(i)}\)로 두면, 무한 정수열 \(1,2,\ldots\)의 각 \(i\)에 대하여 다음이 성립한다.
 
 합동식
 \[
@@ -26236,7 +26236,7 @@ h_iy^{(g_i)}\cdot(g_i(0,y):y^{(g_i)})\equiv0(q^{(i)}).
 \[
 f_i=d_i(y)\bar f_i,\qquad g_i=d_i(y)\bar g_i,
 \]
-그리고 \(\bar f_i,\bar g_i\)는 서로소이다. \(d(y)\not\equiv0(\mathfrak{p})\)이므로 \(q^{(i)}=(\bar f_i,\bar g_i,p^\varrho)\)이기도 하다. 이것은 모든 \(\sigma\geqq\varrho\)에 대하여 \((\bar f_i,\bar g_i,\mathfrak{p}^\sigma)\)와 같고, 그러한 각 \(\sigma\)에 대하여 \(\mathfrak{q}\)의 약수이다. 따라서 \(\mathfrak{q}^{(i)}\)는 \((\bar f_i,\bar g_i)\)에서 원점에 속하는 으뜸성분이다.
+그리고 \(\bar f_i,\bar g_i\)는 서로소이다. \(d(y)\not\equiv0(\mathfrak{p})\)이므로 \(q^{(i)}=(\bar f_i,\bar g_i,\mathfrak{p}^\varrho)\)이기도 하다. 이것은 모든 \(\sigma\geqq\varrho\)에 대하여 \((\bar f_i,\bar g_i,\mathfrak{p}^\sigma)\)와 같고, 그러한 각 \(\sigma\)에 대하여 \(\mathfrak{q}\)의 약수이다. 따라서 \(\mathfrak{q}^{(i)}\)는 \((\bar f_i,\bar g_i)\)에서 원점에 속하는 으뜸성분이다.
 
 \(\gamma_1,\delta_1;\ldots;\gamma_r,\delta_r\)를 \(x=0,\ y=0\)과 다른 \((\bar f_i,\bar g_i)\)의 영점들이라 하고, \(\tau_1,\ldots,\tau_r\)를 그에 대응하는 \((\bar f_i,\bar g_i)\)의 으뜸성분들의 지수라 하자. 곱
 \[
