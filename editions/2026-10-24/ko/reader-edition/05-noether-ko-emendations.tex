@@ -7945,10 +7945,10 @@ a_0^{\nu\varkappa}\cdot A(\eta)\equiv0\;\mathrm{mod.}\;\mathfrak M_{\nu\varkappa
 
 이를테면 $\sigma>\tau$라고 하자. 부정원 $\xi$에는 $\mathfrak G_\sigma$의 양 $f(\eta)$가 대응했다. $\mathfrak G_\tau$의 모든 양은 $\mathfrak M_\tau$를 법으로 하여 $\xi$의 다항식으로 나타낼 수 있고, $\mathfrak M_\tau$와 $\mathfrak M_\sigma$가 서로 대응하므로 $\mathfrak G_\sigma$의 모든 양은 $\mathfrak M_\sigma$를 법으로 하여 $f(\eta)$의 다항식으로 나타난다. $\sigma>\tau\geqq1$이므로 부정원 $\eta$는 분명 $\mathfrak M_\sigma$에 속하지 않는다. 따라서 $\eta$를 $\mathfrak M_\sigma$를 법으로 하여 $f(\eta)$의 다항식으로 나타낼 수 있으려면, 선형항이 사라지지 않는 $f(\eta)$가 있어야 한다. 그러한 대응을
 \[
- \zeta:f(\eta)\equiv a_0+a_1(\eta)\;\mathrm{mod}\;\mathfrak M_2\quad[a_1(\eta)\ne0],
+ \zeta:f(\eta)\equiv a_0+a_1(\eta)\;\mathrm{mod}\;\mathfrak M_2\quad[a_1(\eta)\ne0];
 \]
 \[
- \xi^\tau:[f(\eta)]^\tau\equiv a_0^\tau\pmod{\mathfrak M_1}\quad\text{$a_0\ne0$일 때},
+ \zeta^\tau:[f(\eta)]^\tau\equiv a_0^\tau\;\mathrm{mod.}\;\mathfrak M_1\quad\text{$a_0\ne0$일 때};
 \]
 \[
  \hphantom{\zeta^\tau:[f(\eta)]^\tau}\equiv [a_1(\eta)]^\tau
@@ -8804,7 +8804,7 @@ y=p(x),\qquad v_i(y)=u_i(x).
 \]
 따라서 도함수 없이 임의함수 하나가 나타나며, 이에 대응하여 라그랑주 식들 자체 사이에 잘 알려진 선형관계
 \[
-\sum_i\psi_i\,\frac{\dd u_i}{\dd x}=0
+\sum\psi_i\,\frac{d u_i}{d x}=0
 \]
 가 성립한다.
 
@@ -8870,7 +8870,7 @@ f\!\left(x,v(x),\frac{\partial v}{\partial x},\cdots\right)d x\\
 \begin{equation}
 \tag{10}
 0=\int\!\cdots\!\int
-\left\{\bar\delta f+\operatorname{Div}(f\cdot\varDelta x)\right\}\dd x
+\left\{\bar\delta f+\operatorname{Div}(f\cdot\varDelta x)\right\}d x
 \end{equation}
 가 된다. 관계 (10)은 모든 임의의 영역에서 적분할 때 성립하므로 피적분함수는 항등적으로 사라져야 한다. 따라서 \(I\)의 불변성을 나타내는 리의 미분방정식은 관계
 \begin{equation}
@@ -8885,7 +8885,7 @@ f\!\left(x,v(x),\frac{\partial v}{\partial x},\cdots\right)d x\\
 \end{equation}
 를 얻는다. 이 관계는 각 불변적분 \(I\)에 대하여 나타나는 모든 인수에 관한 항등식이고, 바로 \(I\)에 대한 리의 미분방정식의 구하는 형태이다\footnote{자명한 경우에는 (12)가 \(0=0\)이 된다. 이는 \(\varDelta x,\varDelta u\)가 \(u\)의 도함수에도 의존할 때에만 일어날 수 있으며, \(\operatorname{Div}(f\cdot\varDelta x)=0,\ \bar\delta u=0\)인 경우이다. 이러한 무한소변환들은 언제나 군에서 분리하고, 정리를 정식화할 때에는 나머지 매개변수 또는 임의함수만 세어야 한다. 나머지 무한소변환들이 언제나 다시 군을 이루는지는 여기서 결정하지 않는다.}.
 
-먼저 \(\mathfrak G\)가 유한매개변수 연속군 \(\mathfrak G_\rho\)라고 하자. 가정에 따라 \(\Delta u,\Delta x\)가 매개변수 \(\varepsilon_1,\ldots,\varepsilon_\rho\)에 관하여 선형이므로, (9)에 따라 \(\bar\delta u\)와 그 도함수들도 그러하다. 따라서 \(A,B\)도 \(\varepsilon\)에 관하여 선형이다. 그러므로
+먼저 \(\mathfrak G\)가 유한매개변수 연속군 \(\mathfrak G_\varrho\)라고 하자. 가정에 따라 \(\varDelta u,\varDelta x\)가 매개변수 \(\varepsilon_1,\ldots,\varepsilon_\varrho\)에 관하여 선형이므로, (9)에 따라 \(\bar\delta u\)와 그 도함수들도 그러하다. 따라서 \(A,B\)도 \(\varepsilon\)에 관하여 선형이다. 그러므로
 \[
 B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
 \bar\delta u=\bar\delta u^{(1)}\varepsilon_1+\cdots+
@@ -8989,8 +8989,8 @@ u_i=v_i
 
 \(\varDelta x\)와 \(\varDelta u\)가 \(u\)의 도함수들도 포함하는 경우, 유한변환들은 \(u\)의 무한히 많은 도함수에 의존할 수 있다는 점도 덧붙여 두자. 실제로 이 경우 (17)을 적분하면서
 \[
-\frac{\dd^2x_i}{\dd t^2},\qquad
-\frac{\dd^2u_i}{\dd t^2}
+\frac{d^2x_i}{d t^2},\qquad
+\frac{d^2u_i}{d t^2}
 \]
 를 정하려 하면
 \[
@@ -9012,7 +9012,7 @@ f=\frac12u'^2;\qquad
 \]
 발산식의 라그랑주 식들은 항등적으로 사라지므로, 역정리는 끝으로 다음 사실도 보여 준다. \(I\)가 한 \(\mathfrak G_\varrho\)를 허용한다면, \(I\)와 경계적분, 즉 발산식의 적분만큼만 다른 모든 적분도 같은 \(\bar\delta u\)를 갖는 한 \(\mathfrak G_\varrho\)를 허용한다. 그 무한소변환들은 일반적으로 \(u\)의 도함수들을 포함한다. 이를테면 위의 예에 따라
 \[
-f^*=\frac12\left\{u'^2-\frac{\dd}{\dd x}\left(\frac{u^2}{x}\right)\right\}
+f^*=\frac12\left\{u'^2-\frac{d}{d x}\left(\frac{u^2}{x}\right)\right\}
 \]
 는 무한소변환 \(\Delta u=x\varepsilon,\ \Delta x=0\)을 허용하지만, \(f\)에 대응하는 무한소변환들에는 \(u\)의 도함수들이 나타난다.
 
@@ -9028,8 +9028,8 @@ B^{(\varrho)}=\mathrm{const.}
 \]
 가 따라온다. \(\Delta u\)와 \(\Delta x\)가 \(f\)에 나타나는 \(\varkappa\)차 도함수보다 더 높은 도함수를 포함하지 않는 한, (6)에 따라 여기서 \(B\)들은 기껏해야 \(u\)의 \((2\varkappa-1)\)차 도함수를 포함한다. 일반적으로 \(\psi\)에는 \(2\varkappa\)차 도함수가 나타나므로\footnote{\(f\)가 \(\varkappa\)차 도함수들에 관하여 비선형인 한 그러하다.}, 이로써 \(\rho\)개의 제1적분이 존재한다. 이들 사이에 비선형 종속관계가 있을 수 있다는 사실은 위의 \(f\)가 다시 보여 준다. 선형독립인 \(\Delta u=\varepsilon_1,\ \Delta x=\varepsilon_2\)에는 선형독립인 관계
 \[
-u''=\frac{\dd}{\dd x}u',\qquad
-u''u'=\frac12\frac{\dd}{\dd x}(u')^2
+u''=\frac{d}{d x}u';\qquad
+u''u'=\frac12\frac{d}{d x}(u')^2
 \]
 가 대응하지만, 제1적분 \(u'=\mathrm{const.},\ u'^2=\mathrm{const.}\) 사이에는 비선형 종속관계가 있다. 여기서는 \(\varDelta u,\varDelta x\)가 \(u\)의 도함수를 포함하지 않는 초등적인 경우를 다룬다\footnote{그렇지 않으면 모든 \(\lambda\)에 대하여 \(u'^\lambda=\mathrm{const.}\)도 얻는다. 이는
 \[
@@ -9082,7 +9082,7 @@ p^{\nu-\sigma}\left(\frac{\partial p}{\partial x}\right)^\sigma
 \[
 \sum_i\psi_i\bar\delta u_i=\operatorname{Div}\varGamma
 \]
-를 얻는다. 여기서 제3절과 마찬가지로 \(\Delta x,\Delta u\)가 정해지고, 이 무한소변환들에 대한 \(I\)의 불변성이 따라온다. 이 변환들은 실제로 \(\rho\)개의 임의함수와 그 \(\sigma\)차까지의 도함수들에 선형으로 의존한다. 이 무한소변환들이 \(\partial u/\partial x,\ldots\)를 포함하지 않을 때 반드시 군을 이룬다는 사실도 제3절에서와 같이 따라온다. 그렇지 않다면 합성에 의해 더 많은 임의함수가 나타날 것이지만, 가정에 따르면 종속관계 (16)은 \(\rho\)개뿐이기 때문이다. 따라서 이들은 ``무한 무한소변환군''을 이룬다. 그러나 그러한 군은(\emph{Grundlagen}, 정리 VII, 391쪽) 이로써 정의되는, 리의 의미에서의 어떤 ``유한변환들의 무한군 \(\mathfrak G\)''의 가장 일반적인 무한소변환들로 이루어진다. 각 유한변환은 무한소변환들로부터 생성되며(\emph{Grundlagen}, \S{}7)\footnote{특히 이로부터 \(\mathfrak G_{\infty\rho}\)의 무한소변환 \(\Delta x,\Delta u\)로부터 생성된 군 \(\mathfrak G\)가 다시 \(\mathfrak G_{\infty\rho}\)로 돌아온다는 것이 따라온다. 실제로 \(\mathfrak G_{\infty\rho}\)는 임의함수에 의존하면서 \(\Delta x,\Delta u\)와 다른 무한소변환들을 포함하지 않는다. 또한 매개변수에 의존하면서 이들과 독립인 변환들도 포함할 수 없다. 그렇다면 혼합군이 될 것이기 때문이다. 한편 위에서 본 바와 같이 무한소변환들이 유한변환들을 정한다.}, 따라서 다음 연립계를 적분하여 생긴다.
+를 얻는다. 여기서 제3절과 마찬가지로 \(\varDelta x,\varDelta u\)가 정해지고, 이 무한소변환들에 대한 \(I\)의 불변성이 따라온다. 이 변환들은 실제로 \(\varrho\)개의 임의함수와 그 \(\sigma\)차까지의 도함수들에 선형으로 의존한다. 이 무한소변환들이 \(\frac{\partial u}{\partial x},\cdots\)를 포함하지 않을 때 반드시 군을 이룬다는 사실도 제3절에서와 같이 따라온다. 그렇지 않다면 합성에 의해 더 많은 임의함수가 나타날 것이지만, 가정에 따르면 종속관계 (16)은 \(\varrho\)개뿐이기 때문이다. 따라서 이들은 ``무한 무한소변환군''을 이룬다. 그러나 그러한 군은(\emph{Grundlagen}, 정리 VII, 391쪽) 이로써 정의되는, 리의 의미에서의 어떤 ``유한변환들의 무한군 \(\mathfrak G\)''의 가장 일반적인 무한소변환들로 이루어진다. 각 유한변환은 무한소변환들로부터 생성되며(\emph{Grundlagen}, \S{}7)\footnote{특히 이로부터 \(\mathfrak G_{\infty\varrho}\)의 무한소변환 \(\varDelta x,\varDelta u\)로부터 생성된 군 \(\mathfrak G\)가 다시 \(\mathfrak G_{\infty\varrho}\)로 돌아온다는 것이 따라온다. 실제로 \(\mathfrak G_{\infty\varrho}\)는 임의함수에 의존하면서 \(\varDelta x,\varDelta u\)와 다른 무한소변환들을 포함하지 않는다. 또한 매개변수에 의존하면서 이들과 독립인 변환들도 포함할 수 없다. 그렇다면 혼합군이 될 것이기 때문이다. 한편 위에서 본 바와 같이 무한소변환들이 유한변환들을 정한다.}, 따라서 다음 연립계를 적분하여 생긴다.
 \[
 \frac{d x_i}{d t}=\varDelta x_i;\qquad
 \frac{d u_i}{d t}=\varDelta u_i\quad
@@ -9092,7 +9092,7 @@ u_i=v_i
 \end{array}\right.
 \quad\text{단, }t=0).
 \]
-다만 여기서는 임의의 \(p(x)\)가 \(t\)에도 의존한다고 가정해야 할 수 있다. 따라서 \(\mathfrak G\)는 실제로 \(\rho\)개의 임의함수에 의존한다. 특히 \(p(x)\)를 \(t\)와 무관하다고 해도 충분하다면, 이 의존성은 임의함수 \(q(x)=t\,p(x)\)에 관하여 해석적이다\footnote{언제나 이 후자의 경우가 성립하는가라는 문제는 리가 다른 형식으로 제기하였다(\emph{Grundlagen}, \S{}7 및 \S{}13 끝).}. \(\partial u/\partial x,\ldots\)가 나타나는 경우에는 같은 결론을 내리기 전에 \(\bar\delta u=0,\ \operatorname{Div}(f\Delta x)=0\)인 무한소변환들을 더해야 할 수도 있다.
+다만 여기서는 임의의 \(p(x)\)가 \(t\)에도 의존한다고 가정해야 할 수 있다. 따라서 \(\mathfrak G\)는 실제로 \(\varrho\)개의 임의함수에 의존한다. 특히 \(p(x)\)를 \(t\)와 무관하다고 해도 충분하다면, 이 의존성은 임의함수 \(q(x)=t\,p(x)\)에 관하여 해석적이다\footnote{언제나 이 후자의 경우가 성립하는가라는 문제는 리가 다른 형식으로 제기하였다(\emph{Grundlagen}, \S{}7 및 \S{}13 끝).}. \(\frac{\partial u}{\partial x},\cdots\)가 나타나는 경우에는 같은 결론을 내리기 전에 \(\bar\delta u=0,\ \operatorname{Div}(f\varDelta x)=0\)인 무한소변환들을 더해야 할 수도 있다.
 
 리의 한 예(\emph{Grundlagen}, \S{}7)에 이어, 명시적 공식들까지 나아갈 수 있는 꽤 일반적인 경우를 하나 더 들자. 이 공식들은 동시에 임의함수들의 도함수가 정확히 \(\sigma\)차까지 나타난다는 것을 보여 주므로 이 경우 역정리는 완전하다. 이는 모든 \(x\)의 변환과, 그로써 ``유도된'' \(u\)의 변환으로 이루어진 군에 대응하는 무한소변환군이다. 다시 말해 \(\Delta u\), 따라서 \(u\)가 \(\Delta x\)에 나타나는 임의함수들에만 의존하는 \(u\)의 변환이다. 또한 \(\Delta u\)에는 도함수 \(\partial u/\partial x,\ldots\)가 나타나지 않는다고 가정한다. 그러면
 \[
@@ -9159,7 +9159,7 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\cdots
 \]
 을 얻는다. 이를 리의 미분방정식 \(\delta\mathfrak R^*+\operatorname{Div}(\mathfrak R^*\varDelta w)=0\)과 비교하면
 \[
-\varDelta w^\sigma=\frac1{\mathfrak R^*\cdot}\left(
+\varDelta w^\sigma=\frac1{\mathfrak R^*}\cdot\left(
 \sum(2g^{\mu\sigma}\mathfrak R_{\mu\tau}p^\tau
 -\frac{\partial\mathfrak R^*}{\partial g^{\mu\nu}_\sigma}p^{\mu\nu}
 \right);
@@ -9173,7 +9173,7 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\cdots
 
 변환들에 \(u\)의 도함수가 나타나지 않고 변환된 독립변수들이 \(u\)가 아니라 \(x\)에만 의존한다고 함으로써 군 \(\mathfrak G\)를 통상 고찰하는 가장 단순한 경우로 특수화하면, 공식들을 이루는 각 성분의 불변성을 추론할 수 있다. 먼저 잘 알려진 추론에 따라
 \[
-\int\!\cdots\!\int\left(\sum_i\psi_i\delta u_i\right)\dd x
+\int\!\ldots\!\int\left(\sum_i\psi_i\delta u_i\right)d x
 \]
 가 불변이고, 따라서 \(\delta\)가 임의의 변분을 뜻할 때 \(\sum_i\psi_i\delta u_i\)가 상대불변임을 얻는다\footnote{즉 \(\sum_i\psi_i\delta u_i\)는 변환할 때 한 인자를 얻는데, 대수적 불변식론에서는 이것을 언제나 상대불변성이라 불러 왔다.}. 실제로 한편으로는
 \[
@@ -9201,9 +9201,9 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\cdots
 따라서 경계에서 사라지는 \(\delta u,\delta(\partial u/\partial x),\ldots\)에 대하여
 \[
 \int\!\cdots\!\int
-\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)\dd x
+\left(\sum_i\psi_i(u,\ldots)\delta u_i\right)d x
 =\int\!\cdots\!\int
-\left(\sum_i\psi_i(v,\ldots)\delta v_i\right)\dd y
+\left(\sum_i\psi_i(v,\ldots)\delta v_i\right)d y
 \]
 \[
 =\int\!\cdots\!\int
@@ -9224,7 +9224,7 @@ u_i=v_i+B_i\!\left(v,g(y),\frac{\partial g}{\partial y},\cdots
 이 관계는 \(\sum_i\psi_i\delta u_i\)의 상대불변성, 따라서
 \[
 \int\!\cdots\!\int
-\left(\sum_i\psi_i\delta u_i\right)\dd x
+\left(\sum_i\psi_i\delta u_i\right)d x
 \]
 의 불변성을 말한다\footnote{\(y\)도 \(u\)에 의존하면 이 추론은 성립하지 않는다. 그때에는 \(\delta f(y,v,\partial v/\partial y,\ldots)\)가 \(\sum(\partial f/\partial y)\delta y\)라는 항들도 포함하여, 발산변형이 라그랑주 식들로 이어지지 않기 때문이다. \(u\)의 도함수들을 허용할 때도 마찬가지이다. 그러면 \(\delta v\)는 \(\delta u,\delta(\partial u/\partial x),\ldots\)의 선형결합이 되므로, 한 번 더 발산변형을 거친 뒤에야 항등식 \(\int\!\cdots\!\int(\sum\chi_i(u,\ldots)\delta u_i)\dd x=0\)을 얻고, 따라서 오른쪽에는 다시 라그랑주 식들이 나타나지 않는다. \(\int\!\cdots\!\int(\sum\psi_i\delta u_i)\dd x\)의 불변성만으로 발산관계의 존재를 추론할 수 있는가라는 문제는, 역정리에 따르면 동일한 \(\Delta u,\Delta x\)를 줄 필요는 없지만 동일한 \(\bar\delta u\)를 주는 어떤 군에 대하여 \(I\)가 불변임을 그로부터 추론할 수 있는가라는 문제와 동치이다. 단일적분이고 \(f\)에 1차 도함수만 나타나는 특수한 경우에는 유한군에 관하여 라그랑주 식들의 불변성에서 제1적분의 존재를 추론할 수 있다(예: Engel, \emph{Gött. Nachr.} 1916, 270쪽 참조).}.
 
@@ -9274,19 +9274,19 @@ v+\bar\delta v(y,v,\ldots,r)
 
 일차원이고 유한군인 경우에는 \(\operatorname{Div}B\)의 상대불변성으로부터 제1적분의 불변성도 추론할 수 있다. (20)에 따라 무한소변환에 대응하는 매개변수변환은 선형이고 동차이다. 또한 모든 변환이 가역이므로 \(\varepsilon\)들도 변환된 매개변수 \(\varepsilon^*\)의 선형 동차함수이다. (20)에는 \(u\)의 도함수가 나타나지 않으므로 \(\psi=0\)으로 두어도 이 가역성은 확실히 유지된다. 식
 \[
-\operatorname{Div}B(x,u,\ldots,\varepsilon)
-=\frac{\dd y}{\dd x}\,
-\operatorname{Div}B(y,v,\ldots,\varepsilon^*)
+\operatorname{Div}B(x,u,\ldots\varepsilon)
+=\frac{d y}{d x}\cdot
+\operatorname{Div}B(y,v,\ldots\varepsilon^*)
 \]
 에서 \(\varepsilon^*\)의 계수들을 비교하면, \(\frac{d}{d y}B^{(\lambda)}(y,v,\ldots)\)들도 \(\frac{d}{d x}B^{(\lambda)}(x,u,\ldots)\)들의 선형 동차함수가 된다. 따라서
 \[
-\frac{\dd}{\dd x}B^{(\lambda)}(x,u,\ldots)=0
+\frac{d}{d x}B^{(\lambda)}(x,u,\ldots)=0
 \quad\text{또는}\quad
 B^{(\lambda)}(x,u)=\mathrm{const.}
 \]
 이면
 \[
-\frac{\dd}{\dd y}B^{(\lambda)}(y,v,\ldots)=0
+\frac{d}{d y}B^{(\lambda)}(y,v,\ldots)=0
 \quad\text{또는}\quad
 B^{(\lambda)}(y,v)=\mathrm{const.}
 \]
@@ -9330,7 +9330,7 @@ y_i=x_i+\varepsilon_i,\qquad v_i(y)=u_i(x),
 잘 알려진 바와 같이 평행이동군에 대한 불변성은
 \[
 I=\int\!\cdots\!\int
-f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x
+f\!\left(x,u,\frac{\partial u}{\partial x},\cdots\right)d x
 \]
 에서 \(f\)에 \(x\)가 명시적으로 나타나지 않음을 뜻한다. 이에 대응하는 \(n\)개의 발산관계
 \[
@@ -9342,8 +9342,8 @@ f\!\left(x,u,\frac{\partial u}{\partial x},\ldots\right)\dd x
 
 그러한 무한군의 한 예는 모든 \(x\)의 변환과 그로써 유도되는 \(u(x)\)의 변환으로 이루어진 군이다. 이때 유도된 변환에는 임의함수 \(p(x)\)의 도함수들만 나타나며, \(p^{(i)}(x)=\varepsilon_i\)로 특수화하면 평행이동군을 얻는다. 그러나 이것들과, \(I\)를 경계적분만큼 바꾸어 생기는 군들로 이미 가장 일반적인 모든 군을 얻는지는 미결로 남겨야 한다. 말한 종류의 유도된 변환들은, 예컨대 \(u\)에 ``전미분형식''의 계수변환을 가하면 생긴다. 여기서 전미분형식이란
 \[
-\sum a\,\dd^\lambda x_i
-+\sum b\,\dd^{\lambda-1}x_i\,\dd x_\varkappa+\cdots
+\sum a\,d^\lambda x_i
++\sum b\,d^{\lambda-1}x_i\,d x_\varkappa+\cdots
 \]
 처럼 \(d x\) 외에 고차 미분들도 포함하는 형식이다. \(p(x)\)가 1차 도함수로만 나타나는 더 특수한 유도변환들은 보통의 미분형식 \(\sum c\,d x_{i_1}\ldots d x_{i_\lambda}\)의 계수변환들로 주어지며, 보통은 이것들만 고찰해 왔다.
 
@@ -10484,7 +10484,7 @@ AF(f(\xi))=\left\{\sum z_i f_i\!\left(\frac{\p}{\p\xi}\right)\right\}^{p}F(f(\xi
 \([2]\)에서 \(F\)를 \(z\)에 대해서만 \(p\)차인 형식으로 보면 \(f_i(\xi)\)는 \(\lambda_1x_i+\lambda_2y_i\)로 특수화된다. 따라서
 \[
 \begin{gathered}
-BF=F(x,y,\lambda_1x+\lambda_2y),\\
+BF=F(x,y,\lambda_1x+\lambda_2y);\quad
 SF=\left\{\sum z_i\left(\frac{\p}{\p\lambda_1}\frac{\p}{\p x_i}+
 \frac{\p}{\p\lambda_2}\frac{\p}{\p y_i}\right)\right\}^{p}
 F(x,y,\lambda_1x+\lambda_2y)
@@ -11241,9 +11241,9 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \]
 그리고 \(i,\varkappa=1,\ldots,\alpha\), \(\alpha\geq2\)에 대하여 \(\mathfrak A_i\)가 \(\mathfrak A_\varkappa\)와 동형이라고 하자. 하나의 특정한 동형대응을 주기 위해 먼저 한 부분군, 이를테면 \(\mathfrak A_1\)을 특별히 택한다. \(\mathfrak A_1\)과 \(\mathfrak A_i\) 사이의 동형을
 \begin{equation}
- a_1\sim t_{1\varkappa}a_\varkappa;\qquad
- a_i\sim t_{i1}a_1;\qquad
- t_{11}a_1=a_1
+ \mathfrak{a}_1\sim \mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa;\qquad
+ \mathfrak{a}_i\sim \mathfrak{t}_{i1}\mathfrak{a}_1;\qquad
+ \mathfrak{t}_{11}\mathfrak{a}_1=\mathfrak{a}_1
  \quad(i,\varkappa=1,\ldots,\alpha)
 \tag{31}
 \end{equation}
@@ -11265,7 +11265,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 
 또 (31)과 대응의 유일성에서 (27), (28)의 일반화인
 \begin{equation}
- \mathfrak{t}_{1i}\mathfrak{t}_{i1}\mathfrak{a}_1=\mathfrak{a}_1
+ \mathfrak{t}_{1i}\mathfrak{t}_{i1}\mathfrak{a}_1=\mathfrak{a}_1;\qquad
  \mathfrak{t}_{\varkappa1}\mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa=\mathfrak{a}_\varkappa
 \tag{33}
 \end{equation}
@@ -11273,7 +11273,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \begin{equation}
  \mathfrak{a}_i\sim \mathfrak{t}_{i1}\mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa
       =\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa;\qquad
- \mathfrak{t}_{ii}\mathfrak{a}_i=\mathfrak{a}_i
+ \mathfrak{t}_{ii}\mathfrak{a}_i=\mathfrak{a}_i;\qquad
  \mathfrak{a}_r\mathfrak{t}_{s\varkappa}\mathfrak{a}_\varkappa=0\quad (r\ne s)
 \tag{34}
 \end{equation}
@@ -11285,15 +11285,15 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \]
 이다. 이로써 \(\mathfrak A_1\)을 특별히 택한 것은 다시 사라진다. 정의에 \(\mathfrak A_1\) 대신 어느 군 \(\mathfrak A_l\)를 써도 \(\mathfrak A_i,\mathfrak A_\varkappa\) 사이의 동형관계는 같다. 따라서 \(\mathfrak{t}_{i\varkappa}\)들은 한데 다음 관계들을 만족하는 류들이다.
 \begin{equation}
- M\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa=0
- \quad \mathfrak{a}_r\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa=0\ (r\ne i)
- \quad \mathfrak{t}_{i\varkappa}\mathfrak{t}_{\varkappa l}\mathfrak{a}_l=\mathfrak{t}_{il}\mathfrak{a}_l
- \mathfrak{t}_{\varkappa\varkappa}\mathfrak{a}_\varkappa
+ M\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa=0;
+ \quad \mathfrak{a}_r\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa=0\ (r\ne i);
+ \quad \mathfrak{t}_{i\varkappa}\mathfrak{t}_{\varkappa l}\mathfrak{a}_l=\mathfrak{t}_{il}\mathfrak{a}_l;
+ \quad \mathfrak{t}_{\varkappa\varkappa}\mathfrak{a}_\varkappa
  =\mathfrak{t}_{\varkappa i}\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa
  =\mathfrak{a}_\varkappa
 \tag{35}
 \end{equation}
-이다. 이 관계들은 \(\mathfrak A_i,\mathfrak A_\varkappa\)에 속하는 모듈 \(\mathfrak M_i,\mathfrak M_\varkappa\)가 같은 종류라는 것을 정확히 말한다(§ 9의 정의를 보라). 그곳의 \(P,Q\) 대신 여기서는 각각 류 \(t_{i\varkappa},t_{\varkappa i}\)가 오며, (35)의 첫 두 관계를 합친 것은 각각 공식 (25), (26)에 대응한다. 역으로 이 관계들에서는 정리 VI에 따라 동형이 따른다.\footnote{여기서는 유한성정리를 쓰지 않아도 된다. 공식들이 이미 사상 \(\varphi_{i\varkappa}\)와 그 역 \(\varphi_{\varkappa i}\)을 각각 나타내기 때문이다. 실제로 \(\mathfrak{x}\mathfrak{a}_i=\mathfrak{x}\mathfrak{a}_i \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa \mathfrak{t}_{\varkappa i}\mathfrak{a}_i\)이므로 \(\mathfrak{x}\mathfrak{a}_i\ne0\)에서 \(\mathfrak{x}\mathfrak{a}_i \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa\ne0\)도 따른다.}
+이다. 이 관계들은 \(\mathfrak A_i,\mathfrak A_\varkappa\)에 속하는 모듈 \(\mathfrak M_i,\mathfrak M_\varkappa\)가 같은 종류라는 것을 정확히 말한다(§ 9의 정의를 보라). 그곳의 \(P,Q\) 대신 여기서는 각각 류 \(\mathfrak{t}_{i\varkappa},\mathfrak{t}_{\varkappa i}\)가 오며, (35)의 첫 두 관계를 합친 것은 각각 공식 (25), (26)에 대응한다. 역으로 이 관계들에서는 정리 VI에 따라 동형이 따른다.\footnote{여기서는 유한성정리를 쓰지 않아도 된다. 공식들이 이미 사상 \(\varphi_{i\varkappa}\)와 그 역 \(\varphi_{\varkappa i}\)을 각각 나타내기 때문이다. 실제로 \(\mathfrak{x}\mathfrak{a}_i=\mathfrak{x}\mathfrak{a}_i \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa \mathfrak{t}_{\varkappa i}\mathfrak{a}_i\)이므로 \(\mathfrak{x}\mathfrak{a}_i\ne0\)에서 \(\mathfrak{x}\mathfrak{a}_i \mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa\ne0\)도 따른다.}
 이제 류 \(\mathfrak{t}_{i\varkappa}\mathfrak{a}_\varkappa\)들에서 다시 군 \(\mathfrak B_\rho\)의 단위원이 되는 류 \(\mathfrak{b}_\rho\)들을 합성할 수 있다. 그러면
 \[
  \mathfrak G=\mathfrak B_1+\cdots+\mathfrak B_\alpha
@@ -11346,7 +11346,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  &=\begin{cases}0&(\rho\ne\sigma),\\ \mathfrak{b}_\rho&(\rho=\sigma)\end{cases}
 \end{aligned}
 \]
-이다 (\(\rho,\sigma=1,\ldots,\alpha\)). 따라서 표현 \(\mathfrak r e=\mathfrak r b_1+\cdots+\mathfrak r b_\alpha\)는 군 \(\mathfrak G\)의 한 가법적 분해이다. \(\lambda_{i\varkappa}\)가 대각행렬만을 이루지 않으면 군 \(\mathfrak B_\rho\)들은 군 \(\mathfrak A_\sigma\)들과 다르다. 실제로 \(a_\sigma b_\rho\)를 만들면 (35)에 따라
+이다 (\(\rho,\sigma=1,\ldots,\alpha\)). 따라서 표현 \(\mathfrak x \mathfrak{e}=\mathfrak x \mathfrak{b}_1+\cdots+\mathfrak x \mathfrak{b}_\alpha\)는 군 \(\mathfrak G\)의 한 가법적 분해이다. \(\lambda_{i\varkappa}\)가 대각행렬만을 이루지 않으면 군 \(\mathfrak B_\rho\)들은 군 \(\mathfrak A_\sigma\)들과 다르다. 실제로 \(\mathfrak{a}_\sigma \mathfrak{b}_\rho\)를 만들면 (35)에 따라
 \[
  \mathfrak{a}_\sigma \mathfrak{b}_\rho
  =\sum_{i,\varkappa}\lambda_{\rho i}\lambda^{\rho\varkappa}
@@ -11382,14 +11382,14 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \begin{equation}
 \left\{
 \begin{aligned}
- b_\varkappa r_{\rho\sigma}a_\sigma&=0
+ \mathfrak{b}_\varkappa \mathfrak{r}_{\rho\sigma}\mathfrak{a}_\sigma&=0
  &&(\varkappa\ne\rho);&
  \mathfrak{r}^{\sigma\rho}\mathfrak{r}_{\rho\sigma}\mathfrak{a}_\sigma
- &=a_\sigma\text{\footnotemark[22]},\\
- a_\varkappa r^{\sigma\rho}b_\rho&=0
+ &=\mathfrak{a}_\sigma\text{\footnotemark[22]},\\
+ \mathfrak{a}_\varkappa \mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho&=0
  &&(\varkappa\ne\sigma);&
  \mathfrak{r}_{\rho\sigma}\mathfrak{r}^{\sigma\rho}\mathfrak{b}_\rho
- &=b_\rho
+ &=\mathfrak{b}_\rho
 \end{aligned}\right.
 \tag{39}
 \end{equation}
@@ -11482,7 +11482,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \[
  F\mathfrak{a}'=F\mathfrak{a}'\mathfrak{a}_1+\cdots+F\mathfrak{a}'\mathfrak{a}_k
 \]
-이다. 곱 \(\mathfrak{a}'\mathfrak{a}_i\) 가운데 적어도 두 개, 이를테면 \(a'a_1,a'a_2\)는 영과 다르다. 이를테면 \(\mathfrak{a}'\mathfrak{a}_1\) 하나만 영과 다르면 \(F\mathfrak{a}'=F\mathfrak{a}'\mathfrak{a}_1\)이고, 잉여류 \(F\mathfrak{a}'\)들은 \(\mathfrak A_1\)의 부분군을 이룬다. \(\mathfrak A_1\)은 소군이므로 이 부분군은 \(\mathfrak A_1\)과 같고, 따라서 모듈 \(\mathfrak P',\mathfrak P_1\)도 일치할 것이다. 그러므로 § 8의 논법에 따라 \(\mathfrak A'\)은 \(\mathfrak A_1,\mathfrak A_2\)와 동형이다.
+이다. 곱 \(\mathfrak{a}'\mathfrak{a}_i\) 가운데 적어도 두 개, 이를테면 \(\mathfrak{a}'\mathfrak{a}_1,\mathfrak{a}'\mathfrak{a}_2\)는 영과 다르다. 이를테면 \(\mathfrak{a}'\mathfrak{a}_1\) 하나만 영과 다르면 \(F\mathfrak{a}'=F\mathfrak{a}'\mathfrak{a}_1\)이고, 잉여류 \(F\mathfrak{a}'\)들은 \(\mathfrak A_1\)의 부분군을 이룬다. \(\mathfrak A_1\)은 소군이므로 이 부분군은 \(\mathfrak A_1\)과 같고, 따라서 모듈 \(\mathfrak P',\mathfrak P_1\)도 일치할 것이다. 그러므로 § 8의 논법에 따라 \(\mathfrak A'\)은 \(\mathfrak A_1,\mathfrak A_2\)와 동형이다.
 
 이제 \(\mathfrak M\)을 임의의 모듈이라 하자. \(\mathfrak M\)을 나누는 모든 소모듈의 최소공배수 \(\mathfrak N\)을 고찰한다.\footnote{그러한 소모듈이 무한히 많으면 정리 IV에 따라 이 표현에는 잉여군의 가법적 분해가 대응할 수 없다. § 12의 예 4도 보라.} 두 경우가 가능하다. 첫째, \(\mathfrak N\)을 유한개의 소모듈의 최소공배수로 나타낼 수 없다. 이 경우에는 \(\mathfrak N\), 따라서 \(\mathfrak M\)이 무한히 많은 소모듈을 인자로 갖는다. 둘째, \(\mathfrak N\)을 유한개의 소모듈의 최소공배수로 나타낼 수 있다. 이때 \(\mathfrak N\)을 Loewy의 대응 구성에 따라 \(\mathfrak M\)의 \emph{최대 완전가약모듈}이라고 한다. 이 유한개의 소모듈 가운데 같은 종류인 두 개가 있으면 정리 IX에 따라 \(\mathfrak N\), 따라서 \(\mathfrak M\)은 무한히 많은 소모듈로 나누어진다. 역으로 뒤의 사실이 성립하면, \(\mathfrak N\)을 최소공배수로 나타내는 그 유한개의 소모듈 모두와 다른 \(\mathfrak N\)의 소인자가 적어도 하나 있다. 보조정리에 따라 \(\mathfrak N\), 따라서 \(\mathfrak M\)은 같은 종류의 소인자 두 개를 갖는다. 이로써 다음 정리를 증명하였다.
 
@@ -11610,7 +11610,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  -\frac{z_1}{D(z)}(z_2\xi-z_2')
  =-\frac{\alpha_{11}y_1+\alpha_{12}y_2}{AD(y)}
  \bigl((\alpha_{21}y_1+\alpha_{22}y_2)\xi
-      -(\alpha_{21}y_1'+\alpha_{22}y_2')\bigr),
+      -(\alpha_{21}y_1'+\alpha_{22}y_2')\bigr)
 \]
 \[
  \frac{z_2}{D(z)}(z_1\xi-z_1')
@@ -13476,10 +13476,10 @@ e_{\varrho+i}=0
 \[
 PAQ=
 \begin{pmatrix}
-e_1&&&0\\
-&e_2&&\\
-&&\ddots&\\
-0&&&e_\varrho
+e_1&&\\
+&\ddots&\\
+&&e_\varrho
+%
 \end{pmatrix}
 \]
 에서 단모듈러변환 \(\xi=Q(\eta)\)로 새 부정원 \(\eta_1\ldots\eta_k\)를 도입하면 모듈등식
@@ -14466,7 +14466,7 @@ d^{(i+1)}D^{(i)}(x)\zero{\mideal/\gideal_{i-1}},
 
 이로써 \(\mideal\)의 영점들이 종결식형의 개별 인자들에 따라 동시에 분리되었다. \(\mathsf{P}(u)\)에 첨가된 부정원 \(x\)의 수는 대응하는 대수적 도형의 차원이라고도 부른다.
 
-\(\bar R^{(i)}(z,x)\), 또는 \(R^{(i)}(x)\)의 대응 분해에서 \(\mathsf{P}(u,x_{i+1},\ldots,x_n)\)에 관하여 켤레인 인자들을 묶자. 일반적인 \(\mathsf{P}\)에서는 이 인자들이 전부 또는 일부 동일할 수 있다. 그러면 \(R^{(i)}(x)\)을 \(P(u,x_{i+1},\ldots,x_n)\)에 관하여 기약인 다항식들의 거듭제곱으로 분해한 식
+\(\bar R^{(i)}(z,x)\), 또는 \(R^{(i)}(x)\)의 대응 분해에서 \(\mathsf{P}(u,x_{i+1},\ldots,x_n)\)에 관하여 켤레인 인자들을 묶자. 일반적인 \(\mathsf{P}\)에서는 이 인자들이 전부 또는 일부 동일할 수 있다. 그러면 \(R^{(i)}(x)\)을 \(\mathsf{P}(u,x_{i+1},\ldots,x_n)\)에 관하여 기약인 다항식들의 거듭제곱으로 분해한 식
 \[
 R^{(i)}(x)=S_1^{(i)}(x)^{\beta_1}\cdots
 S_\varkappa^{(i)}(x)^{\beta_\varkappa}
@@ -16199,7 +16199,7 @@ q_1a_2^{\varrho_2}\ldots a_r^{\varrho_r}\equiv0(\mm)
 \textbf{3. 공리 I, II(사슬정리)의 증명.} 가정들로부터 모든 비영아이디얼에 대해 \emph{나눗셈에서 곱표현이 따른다}. 즉 \(\mm\equiv0(\ma)\), \(\ma\ne\mo\)이면 \(\mm=\ma\mb\)이면서 \(\mb\not\equiv0(\mm)\)인 \(\mb\)가 존재한다. 실제로
 \[
         \mm\equiv0(\ma),\qquad
-        \mm=\mpideal_1^{\varrho_1}\ldots\mpideal_r^{\varrho_r},\qquad
+        \mm=\mpideal_1^{\varrho_1}\ldots\mpideal_r^{\varrho_r}\quad\text{및}\qquad
         \ma=\overline{\mpideal}_1^{\sigma_1}\ldots
              \overline{\mpideal}_{\bar r}^{\sigma_{\bar r}}
 \]
@@ -16786,7 +16786,7 @@ q_1a_2^{\varrho_2}\ldots a_r^{\varrho_r}\equiv0(\mm)
 
 1의 행렬표현으로 생성한 두 환 \(R_\alpha,R_{\bar\alpha}\)가 동치일 때, 곧 어떤 유니모듈러 행렬 \(P\)가 있어 \(R_{\bar\alpha}=P^{-1}R_\alpha P\)일 때 같은 표현류에 속한다고 한다\srcfn{2)}{특수한 경우에 해결된 다음 문제는 여기서 다루지 않는다. \(\mR\)과 준동형인 모든 행렬환을 1에 따라 \(\mR\)의 한 아이디얼로 생성할 수 있는가, 필요하다면 선형종속인 기저를 허용하면 가능한가? 표현류는 정의상 1에 따라 \(\mR\)의 아이디얼이 생성하는 행렬환들로만 이루어진다.}.
 
-\emph{아이디얼류와 표현류는 일대일로 대응한다.} 1에서 같은 아이디얼의 서로 다른 모듈기저들이 같은 표현류의 환 \(R_\ma,R_{\bar \alpha}\)를 생성함을 보였다. 더 나아가 같은 아이디얼류의 서로 다른 아이디얼 \(\ma,\mb\)도 같은 표현류의 환을 생성한다. 실제로 \(\beta_1,\ldots,\beta_s\)를 동형에 따라 \(\ma\)의 기저 \(\alpha_1,\ldots,\alpha_s\)에 대응하는 \(\mb\)의 기저라 하자. 그러면 \(\gamma\alpha_i\)와 \(\gamma\beta_i\)가 대응하고, \(c_{1i}\alpha_1+\cdots+c_{si}\alpha_s\)와 \(c_{1i}\beta_1+\cdots+c_{si}\beta_s\)도 대응하므로 환 \(R_\alpha\)와 \(R_\beta\)는 동일하다.
+\emph{아이디얼류와 표현류는 일대일로 대응한다.} 1에서 같은 아이디얼의 서로 다른 모듈기저들이 같은 표현류의 환 \(R_\alpha,R_{\bar\alpha}\)를 생성함을 보였다. 더 나아가 같은 아이디얼류의 서로 다른 아이디얼 \(\ma,\mb\)도 같은 표현류의 환을 생성한다. 실제로 \(\beta_1,\ldots,\beta_s\)를 동형에 따라 \(\ma\)의 기저 \(\alpha_1,\ldots,\alpha_s\)에 대응하는 \(\mb\)의 기저라 하자. 그러면 \(\gamma\alpha_i\)와 \(\gamma\beta_i\)가 대응하고, \(c_{1i}\alpha_1+\cdots+c_{si}\alpha_s\)와 \(c_{1i}\beta_1+\cdots+c_{si}\beta_s\)도 대응하므로 환 \(R_\alpha\)와 \(R_\beta\)는 동일하다.
 
 역으로 \(R_\alpha\)와 \(R_{\bar\beta}\)가 같은 표현류에 속하여 \(R_{\bar\beta}=P^{-1}R_\alpha P\)라 하자. 여기서 \(\alpha_i\)는 \(\ma\)의 기저이고 \(\bar\beta_i\)는 \(\mb\)의 기저이다. 그러면
 \[
@@ -17488,7 +17488,7 @@ ab\cdot c&=a\cdot bc
  rs\cdot a&=r\cdot sa,\\
  (r+s)a&=ra+sa
 \end{aligned}
-\right\}\qquad r,s\in\mo,\quad a,b\in\mM
+\right\}\quad\begin{array}{l}r,s\in\mo,\\ a,b\in\mM\end{array}
 \]
 를 만족한다고 하자. 그러면 \(\mM\)을 \emph{\(\mo\)-가군}이라 한다. 더 정확히는 \(\mo\)의 곱셈자들을 왼쪽에 쓰므로 \emph{\(\mo\)-좌측가군}이다. 환 \(\mo\)는 동시에 연산자영역이다. 이 영역이 절대적, 곧 서로 다른 환원소들이 서로 다른 연산을 낳으면 \(\mo\)를 가군 \(\mM\)의 \emph{절대 곱셈자영역}이라 한다.
 
@@ -18601,18 +18601,18 @@ a(r+s)&=ar+as
 \end{gathered}}
 로 정의하자. 준동형관계
 \[
-        c+d\to C+D,
-        \qquad cd\to CD
+        \begin{gathered}c+d\to C+D,\\
+        cd\to CD\end{gathered}
 \]
 에서
 \[
-        (c+d)x_i=cx_i+dx_i,
-        \qquad cdx_i=c\cdot dx_i
+        \begin{gathered}(c+d)x_i=cx_i+dx_i,\\
+        cdx_i=c\cdot dx_i\end{gathered}
 \]
 가 따르고, 합 \(\sum x_i\alpha_i\)에 대해서도 마찬가지이다. 나머지 쌍가군 성질
 \[
-        c(y+z)=cy+cz,
-        \qquad c(y\alpha)=(cy)\alpha
+        \begin{gathered}c(y+z)=cy+cz,\\
+        c(y\alpha)=(cy)\alpha\end{gathered}
 \]
 은 자명하다. 따라서 \(\mM\)은 표현가군이고, (1)에 의해 정확히 표현 \(\mo\sim\mathfrak D\)에 속한다.
 
@@ -18646,7 +18646,7 @@ a(r+s)&=ar+as
 
 특수한 경우로, \(\mM\)의 두 기저가 같은 표현을 생성하면 이들은 \(\mM\)에서 자기 자신으로 가는 한 연산자동형에 의해 서로 옮겨진다.
 
-달리 말해, 고정된 \(P\)에 대해 모든 \(C\)가 \(C=PCP^{-1}\)을 만족하면 \(y_i=\sum_kx_k\pi_{ik}\)일 때 대응 \(y_i\mapsto x_i\)는 \(\mM\)에서 자기 자신으로 가는 동형이다. 역으로 쌍가군 \(\mM\)에서 자기 자신으로 가는 모든 동형 \(y_i\mapsto x_i\)는 모든 \(C\)와 가환하는 행렬 \(P\)에 의해 주어진다.
+달리 말해, 고정된 \(P\)에 대해 모든 \(C\)가 \(C=PCP^{-1}\)을 만족하면 \(y_i=\sum x_k\pi_{ik}\)일 때 대응 \(y_i\mapsto x_i\)는 \(\mM\)에서 자기 자신으로 가는 동형이다. 역으로 쌍가군 \(\mM\)에서 자기 자신으로 가는 모든 동형 \(y_i\mapsto x_i\)는 모든 \(C\)와 가환하는 행렬 \(P\)에 의해 주어진다.
 
 표현 개념은 가환 승수영역 \(\mathsf{P}\)와 가환적으로 결합된 환들로도 확장할 수 있다(§ 8). 이 경우에는 중심에 \(\mathsf{P}\)를 포함하는 표현환 \(\mathsf{K}\)만 취하고, 표현이 환준동형 \(\mo\sim\mathfrak D\)일 뿐 아니라 연산자준동형일 것도 요구한다. 즉 \(a\mapsto A\)이면 모든 \(\varrho\in\mathsf{P}\)에 대해 \(a\varrho\mapsto A\varrho\)이어야 한다.
 표현가군에 관해서 이 요구는 계산법칙
@@ -18789,9 +18789,9 @@ T_{ik}&T_{tt}
 
 \emph{증명.} 
 \[
-        \mo=\ml_1+\ldots+\ml_n,
-        \qquad
-        \mM=(\mo m_1,\ldots,\mo m_k)
+        \begin{gathered}\mo=\ml_1+\ldots+\ml_n,\\
+        %
+        \mM=(\mo m_1,\ldots,\mo m_k)\end{gathered}
 \]
 라 하자. 그러면
 \[
@@ -18878,9 +18878,9 @@ c_{ik}\longmapsto
 \[
         \alpha\longmapsto
         \begin{pmatrix}
-        A& &0\\
-         &\ddots&\\
-        0& &A
+        A&&&0\\
+         &A&&\\ &&\ddots&\\
+        0&&&A
         \end{pmatrix}.
 \]
 따라서
@@ -19162,11 +19162,11 @@ c_{ik}\longmapsto
 
 \emph{대각합은 선형함수이다.}
 \[
-        \operatorname{Sp}(c+d)
-        =\operatorname{Sp}(c)+\operatorname{Sp}(d),
+        \mathit{Sp}(c+d)
+        =\mathit{Sp}(c)+\mathit{Sp}(d),
         \qquad
-        \operatorname{Sp}(c\alpha)
-        =\alpha\operatorname{Sp}(c).
+        \mathit{Sp}(c\alpha)
+        =\alpha\mathit{Sp}(c).
 \]
 
 \emph{동치표현들은 같은 대각합을 갖는다.}
@@ -19275,7 +19275,7 @@ c_{ik}\longmapsto
 따라서 행렬로 쓰면
 \srcnumdisplay{(1)}{%
 \bigl(\mathit{Sp}(a_i a_k)\bigr)
-=\bigl(\operatorname{Sp}(a_i b_k)\bigr)P.}
+=\bigl(\mathit{Sp}(a_i b_k)\bigr)P.}
 마찬가지로 \(\widetilde P\)가 전치행렬이면
 \[
 \begin{pmatrix}a_1\\[-1mm]\vdots\\[-1mm]a_h\end{pmatrix}
@@ -19386,21 +19386,21 @@ D=\left|\begin{array}{cccc}
 
 \textbf{증명.} 먼저 다음을 보이자. 이제부터 \(\mathit{Sp}\)는 주대각합을 뜻한다.
 \[
-        \operatorname{Sp}(e)=he,
-        \qquad
-        \operatorname{Sp}(a_i)=0\quad(a_i\ne e).
+        \begin{gathered}\mathit{Sp}(e)=he,\\
+        %
+        \mathit{Sp}(a_i)=0\quad(a_i\ne e).\end{gathered}
 \]
 정칙표현에서
 \[
-e\longmapsto
+\begin{gathered}e\longmapsto
 \begin{pmatrix}
 e&&&0\\
-0&e&\cdots&0\\
+&e&&\\
 &&\ddots&\\
 0&&&e
-\end{pmatrix},
-\qquad
-\operatorname{Sp}(e)=he
+\end{pmatrix},\\
+%
+\mathit{Sp}(e)=he\end{gathered}
 \]
 이다. \(a_i\ne e\)이면
 \[
@@ -20293,9 +20293,9 @@ b) 역으로 \(\mathfrak K\leqq\mathfrak K'\)라 하자. 분해정리에 따라 
 \paragraph{3.}
 이제 처음에 내세운 문제들, 곧 노름정리와 주종정리를 자세히 살펴보겠다. 먼저 \emph{교차곱의 정의}를 제시한다. \(K/k\)를 \(n\)차 갈루아체라 하고 그 군을 \(\Gg\)라 하자. 교차곱이란 \(K\)와 \(\Gg\)를 하나의 대수 \(A\) 안에 동시에 매장하여 \(K\)의 자기동형사상들이 내부자기동형사상이 되게 하는 것이다. \(n\)개의 군 원소에 대응하는 기호들을 \(u_{S_1},\ldots,u_{S_n}\)이라 하자. 그러면 먼저 \(A\)를 \(K\) 위에서 랭크 \(n\)인 선형형식 가군으로 둔다.
 \srcnumdisplay[2.8em]{(1)}{\begin{gathered}
-A=u_{S_1}K+\cdots+u_{S_n}K\\
+A=u_{S_1}K+\ldots+u_{S_n}K\\
 \text{\normalfont(즉 \(A\)는 \(a_i\)가 \(K\)의 임의의 원소인}\\
-\text{\normalfont 모든 선형형식 \(u_{S_1}a_1+\cdots+u_{S_n}a_n\)으로 이루어진다.)}
+\text{\normalfont 모든 선형형식 \(u_{S_1}a_1+\ldots+u_{S_n}a_n\)으로 이루어진다.)}
 \end{gathered}}
 내부자기동형사상 --- \(u_S\), 더 일반적으로는 \(u_SK^\ast\)가 생성한다\footnote{\(K^\ast\)는 \(K\)에서 0을 뺀 집합이며, 이하 이 표기를 계속 사용한다.} --- 을 요구하면 \(A\)는 환, 따라서 \(k\) 위에서 랭크 \(n^2\)인 대수가 된다. 그 요구는 모든 \(z\in K\)에 대하여 다음과 같이 표현된다.
 \srcnumdisplay[2.8em]{(2)}{u_S^{-1}zu_S=z^S\footnotemark,\qquad \text{또는}\qquad zu_S=u_Sz^S}
@@ -20308,7 +20308,7 @@ a_{ST,R}\,a_{S,T}^{\,R}=a_{S,TR}\,a_{T,R}\\
 \(A\)를 인자계 \(a_{S,T}\)에 대한 \(K\)와 \(\Gg\)의 교차곱이라 한다. \(A\)는 \(k\) 위의 단순 정규대수, 곧 대응하는 나눗셈대수 \(D\) 위의 \(r\)차 행렬환 \(D_r\)이 되고, \(K\)는 극대 가환 부분체, 따라서 분해체가 됨을 증명할 수 있다. 여기서 분해체라는 말은 계수영역 \(k\)를 \(K\)와 동형인 체로 확대하면 대수가 \emph{분할}, 곧 그 중심 위의 완전행렬환이 된다는 뜻이다. 역으로 주어진 나눗셈대수 \(D\)에 대해서도 위와 같은 방식으로 교차곱으로 생성할 수 있는 행렬환 \(D_r\)이 언제나 존재한다.
 
 \(c_S\in K^\ast\)를 택하여 \(u_S\)에서 같은 자기동형사상을 생성하는 \(v_S=u_Sc_S\)로 옮기면 \glqq{}연관된\grqq{} 인자계가 생긴다.
-\srcnumdisplay[2.8em]{(5)}{\bar a_{S,T}=a_{S,T}\frac{c_S^{\,T}c_T}{c_{ST}}}
+\srcnumdisplay[2.8em]{(5)}{\bar a_{S,T}=a_{S,T}c_S^{\,T}c_T/c_{ST}}
 연관된 인자계들은 한 류 \((a)\)로 묶는다. 마찬가지로 \(A\)와 상사인 모든 대수, 곧 \(r=1,2,\ldots\)인 모든 \(D_r\)를 한 류 \(\mathfrak A\)로 묶는다. \emph{류 \(\mathfrak A\)와 \((a)\)는 일대일로 대응한다. 분해체 \(K\)를 고정한 류들은 직접곱 구성에 관하여 아벨군을 이루며, 이는 인자계의 류들을 성분별로 곱하여 얻는 군과 동형이다. 단위원은 각각 분할대수류와 모든 변환량 \(c_S^{\,T}c_T/c_{ST}\)의 계이다.}
 이것이 R. Brauer가 발견한 대수류군이다.
 
@@ -20316,19 +20316,19 @@ a_{ST,R}\,a_{S,T}^{\,R}=a_{S,TR}\,a_{T,R}\\
 이제 \emph{순환 분해체}로 \emph{특수화}하여 \emph{노름개념}과의 관계, 따라서 처음에 말한 원리에 따른 일반화된 \emph{노름정리}의 정식화에 이르겠다. \(Z\)가 순환체이고 \(S\)가 그 군의 생성치환이면, 대응하는 대수를 순환대수라 한다. \(S\)의 거듭제곱들에 \(u\)의 거듭제곱들을 대응시켜 다음과 같이 둘 수 있다.
 \[
 \begin{aligned}
-(1')\qquad &A=Z+uZ+\cdots+u^{n-1}Z,\\
+(1')\qquad &A=Z+uZ+\ldots+u^{n-1}Z,\\
 (2')\qquad &zu=uz^S,\\
-(3')\quad &u^n=a,\\
-(4')\quad &a\text{는 기초체 }k^\ast\text{에 속한다},\\
-(5')\quad &v=uc\text{로 두면 }\bar a=a\cdot N(c).
+(3')\quad &u^n=\alpha,\\
+(4')\quad &\alpha\text{는 기초체 }k^\ast\text{에 속한다},\\
+(5')\quad &v=uc\text{로 두면 }\bar\alpha=\alpha\,.\,N(c).
 \end{aligned}
 \]
-따라서 여기서 각 인자계는 기초체에 속하는 단 하나의 원소 \(a\)로 이루어지며 --- \(A=(\alpha,Z)\)로 표기한다 --- 인자계의 단위원류는 \(Z^\ast\)에서 오는 \emph{노름}들로 주어진다. 대수류군은 몫군 \(k^\ast/N(Z^\ast)\)와 동형이다.
-그러므로 순환대수 \((\alpha,Z)\)가 분할되는 것은 \(a\)가 \(Z\)의 한 원소의 노름일 때 그리고 그때뿐이다.
+따라서 여기서 각 인자계는 기초체에 속하는 단 하나의 원소 \(\alpha\)로 이루어지며 --- \(A=(\alpha,Z)\)로 표기한다 --- 인자계의 단위원류는 \(Z^\ast\)에서 오는 \emph{노름}들로 주어진다. 대수류군은 몫군 \(k^\ast/N(Z^\ast)\)와 동형이다.
+그러므로 순환대수 \((\alpha,Z)\)가 분할되는 것은 \(\alpha\)가 \(Z\)의 한 원소의 노름일 때 그리고 그때뿐이다.
 
 노름과 분할 사이의 이 관계는 \glqq{}노름정리\grqq{}를 다음과 같이 정식화한다. \emph{분할대수에 관한 정리: 한 대수가 모든 소에서 분할되면 전역적으로도 분할된다.} 여기서 \glqq{}소\grqq{}는 수론에서 통상적인 방식으로, 기초체 \(k\)를 그 \(\mathfrak p\)-진 확대 \(k_{\mathfrak p}\)로 바꾸어 정의한다. \(\mathfrak p\)는 \(k\)의 소아이디얼이며, 유한 개의 무한소에 대해서는 \(k\)와 그 켤레체들을 실수체로 확대한다.
 
-실제로 이 명제에는 순환체의 노름정리가 들어 있다. 앞서 본 바에 따라 순환대수 \((\alpha,Z)\)에 대해서는 이 정리가 다음 명제와 동치이기 때문이다. \(a\)가 모든 유한소와 무한소에서 \(\mathfrak p\)-진 노름이면, \(a\)는 \(Z\)의 한 수의 노름이다. 또는 \(\mathfrak p\)-진 확대로 넘어가지 않고 말하면 다음과 같다. \emph{\(a\)가 \(k\)의 모든 소아이디얼 \(\mathfrak p\)에 대하여 노름잉여이고 몇 가지 부호조건도 만족하면, \(a\)는 \(Z\)의 한 수의 노름이다.} 이 마지막 형태가 바로 알려진 해석적 보조수단을 이용하여 유체론에서 증명되는 노름정리이다. 분할대수에 관한 일반정리는 이 순환적 특수 경우로부터 순전히 대수적·산술적 고찰로 증명할 수 있다.\footnote{R. Brauer, H. Hasse, E. Noether, \emph{Beweis eines Hauptsatzes in der Theorie der Algebren}, J. f. M. 167 (1932).} Hasse는 여기서 중요한 첫 귀결을 얻었다. \emph{대수적 수체 위의 모든 단순 정규대수는 순환대수이다.} 오래 추측되어 온 이 사실의 증명을 찾는 과정에서 위의 일반적 정식화가 생겨났다.
+실제로 이 명제에는 순환체의 노름정리가 들어 있다. 앞서 본 바에 따라 순환대수 \((\alpha,Z)\)에 대해서는 이 정리가 다음 명제와 동치이기 때문이다. \(\alpha\)가 모든 유한소와 무한소에서 \(\mathfrak p\)-진 노름이면, \(\alpha\)는 \(Z\)의 한 수의 노름이다. 또는 \(\mathfrak p\)-진 확대로 넘어가지 않고 말하면 다음과 같다. \emph{\(\alpha\)가 \(k\)의 모든 소아이디얼 \(\mathfrak p\)에 대하여 노름잉여이고 몇 가지 부호조건도 만족하면, \(\alpha\)는 \(Z\)의 한 수의 노름이다.} 이 마지막 형태가 바로 알려진 해석적 보조수단을 이용하여 유체론에서 증명되는 노름정리이다. 분할대수에 관한 일반정리는 이 순환적 특수 경우로부터 순전히 대수적·산술적 고찰로 증명할 수 있다.\footnote{R. Brauer, H. Hasse, E. Noether, \emph{Beweis eines Hauptsatzes in der Theorie der Algebren}, J. f. M. 167 (1932).} Hasse는 여기서 중요한 첫 귀결을 얻었다. \emph{대수적 수체 위의 모든 단순 정규대수는 순환대수이다.} 오래 추측되어 온 이 사실의 증명을 찾는 과정에서 위의 일반적 정식화가 생겨났다.
 
 \paragraph{5.}
 분할대수에 관한 정리의 두 번째 귀결은, 다시 순전히 대수적·산술적인 추론으로 얻어지는 처음의 \emph{주종정리}이다.\footnote{그 증명은 Math. Ann.에 실릴 예정이다.} 그 불변적 정식화는 교차곱을 정의하는 관계 (2)부터 (5)가 순전히 곱셈적이어서, \(K^\ast\)를 다음 조건만을 만족하는 아벨군 \(\mathfrak J\)로 바꾸어도 뜻을 유지한다는 사실에 바탕을 둔다. 즉 \(\mathfrak J\)의 자기동형군이 \(\Gg\)와 동형인 부분군 하나를 포함하면 된다. 이때 (1)은 군론에서 말하는 \glqq{}\(\mathfrak J\)에 의한 \(\Gg\)의 확장\grqq{}으로 바뀐다. \(\mathfrak J\)를 \(K\)의 모든 아이디얼로 이루어진 군으로 택하면 인자계도 아이디얼들의 계가 된다. \(\mathfrak J\)의 류분할은 인자계에 대한 류분할을 유도하는데, 일반적으로 이는 본래의 아이디얼류분할보다 더 세밀하다. \(u_S\)들의 곱셈이 절대 아이디얼류에 관하여 일의적이라는 요구는 변환량 \(c_S^{\,T}c_T/c_{ST}\), 곧 원소 인자계의 단위원류가 아이디얼 인자계의 단위원류에 속한다는 것만을 말하기 때문이다. 그러나 알려진 경우로 특수화해 보면 실제로는 이보다 조금 덜 세밀한 분할만으로 충분하다. 다음과 같이 정의한다. \emph{모든 유한 및 무한 분기소에서 분할되는 대수를 생성하는 원소 \(a_{S,T}\)들을 인자계의 단위원류에 넣는다.}
@@ -21029,15 +21029,15 @@ e^Sz=e^S\zeta^S,
 \end{pmatrix}
 \begin{pmatrix}
 \beta_1 & \ldots & \beta_1^R & \ldots\\
-\ldots&\ldots&\ldots&\ldots\\
+\ldots&\ldots&\ldots&\ldots\\ \ldots&\ldots&\ldots&\ldots\\
 \beta_n & \ldots & \beta_n^R & \ldots
 \end{pmatrix}
 =E
 \]
 을 얻는다. 대각합을 통한 정의로 옮기는 것은 다음에서 나온다. \(a_i=\sum\limits_S e^S\alpha_i^S\), \(b_i=\sum\limits_S e^S\beta_i^S\)에 대하여 행렬관계의 두 행렬을 바꾸면
 \[
-\Sp(a_i b_i)=1,\qquad
-\Sp(a_i b_k)=0\quad(i\ne k)\srcfnmark{21)}
+\mathit{Sp}(a_i b_i)=1;\qquad
+\mathit{Sp}(a_i b_k)=0\quad(i\ne k)\srcfnmark{21)}
 \]
 가 된다.
 \srcfntext{21)}{\emph{표현론} § 25를 보라.}
@@ -22120,14 +22120,14 @@ e\equiv e^{(i)}\;(\mathfrak P_{\mathsf{K}^{(i)}}^{(i)})
 에서 (1)의 첫 관계가 나오며, 둘째 관계는 \(i\ne j\)일 때 \(e^{(i)}\)가 모든 \(\mathfrak P_{\mathsf{K}^{(j)}}^{(j)}\)의 원소라는 데서 나온다. 관계 (1)을 계수별로 풀면 행렬식으로 다음과 같이 쓸 수 있다.
 \begin{equation}
 \begin{pmatrix}
-\alpha_1^{(1)}&\ldots&\alpha_n^{(1)}\\
-\vdots&&\vdots\\
-\alpha_1^{(n)}&\ldots&\alpha_n^{(n)}
+\alpha_1^{(1)}\ldots\alpha_n^{(1)}\\
+\ldots\ldots\ldots\ldots\\
+\alpha_1^{(n)}\ldots\alpha_n^{(n)}
 \end{pmatrix}
 \begin{pmatrix}
-A_1^{(1)}&\cdots&A_1^{(n)}\\
-\vdots&&\vdots\\
-A_n^{(1)}&\cdots&A_n^{(n)}
+\mathsf{A}_1^{(1)}\ldots\mathsf{A}_1^{(n)}\\
+\ldots\ldots\ldots\ldots\\
+\mathsf{A}_n^{(1)}\ldots\mathsf{A}_n^{(n)}
 \end{pmatrix}=E_n. \tag{2}
 \end{equation}
 여기서 \(E_n\)은 단위행렬이다. 따라서 \(\mathsf{A}\)들은 이미 \(\alpha\)들에 의해 유일하게 결정된다. 관계 (2)는 두 행렬의 행렬식이 사라지지 않음을 보인다. 더 나아가 \(\mathsf{A}_1^{(i)},\ldots,\mathsf{A}_n^{(i)}\)는 \(\mathsf{P}\)에 관하여 선형독립이다. 어떤 선형종속관계가 있으면 켤레계들에도 성립하여 \(\mathsf{A}\)-행렬의 랭크를 줄이는데, 이는 \(E_n\)의 랭크가 \(n\)인 것과 모순이다. 따라서 매번 \(\mathsf{A}_1^{(i)},\ldots,\mathsf{A}_n^{(i)}\)는 \(\mathsf{K}^{(i)}\)의 기저이다. 이 기저들은 서로 켤레이므로 모두 \(\mathfrak K\)의 같은 기저 \(T_1,\ldots,T_n\)과 동형이며, 3에 따라 \(T_\lambda\)는
@@ -23523,11 +23523,11 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 \]
 을 만족한다.
 
-\(\mathfrak M\)을 \(\mathfrak S_{\mathsf K}\)-좌측가군으로도 볼 수 있음을 증명하자. 먼저 \(\mathfrak S_{\mathsf K}\)의 원소와 \(\mathfrak M\)의 원소의 곱을 정의해야 한다. \(s\in\mathfrak S\), \(x\in\mathsf K\), \(m\in\mathfrak M\)일 때
+\(\mathfrak M\)을 \(\mathfrak S_{\mathsf K}\)-좌측가군으로도 볼 수 있음을 증명하자. 먼저 \(\mathfrak S_{\mathsf K}\)의 원소와 \(\mathfrak M\)의 원소의 곱을 정의해야 한다. \(s\in\mathfrak S\), \(\varkappa\in\mathsf K\), \(m\in\mathfrak M\)일 때
 \[
         s\varkappa\cdot m=s\cdot(\varkappa m)
 \]
-로 놓고, 이에 따라 일반 원소 \(\sum s_ix_i\in\mathfrak S_{\mathsf K}\)에 대해
+로 놓고, 이에 따라 일반 원소 \(\sum s_i\varkappa_i\in\mathfrak S_{\mathsf K}\)에 대해
 \[
         \sum s_i\varkappa_i\cdot m
         =\sum s_i(\varkappa_i m)
@@ -23549,7 +23549,7 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 \]
 로 \(s_1,\ldots,s_q\)에 의해 나타난다고 하자. 이 표현은 이미 \(\mathfrak S\) 안에서 가능하고 유일하므로 계수들은 \(\mathsf P\)에 속해야 한다. (1)에서
 \[
-        x_i+\sum_{j=q+1}^{p}
+        \varkappa_i+\sum_{j=q+1}^{p}
         \varrho_i^{(j)}\varkappa_j=0,
         \qquad i=1,\ldots,q
 \]
@@ -23570,7 +23570,7 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 &=0.
 \end{aligned}
 \]
-여기서는 \(s'(sm)=s's\cdot m\), \(x'(xm)=x'x\cdot m\)을 썼다.
+여기서는 \(s'(sm)=s's\cdot m\), \(\varkappa'(\varkappa m)=\varkappa'\varkappa\cdot m\)을 썼다.
 
 \(\mathfrak M\)의 \(\mathfrak S_{\mathsf K}\)-가군 성질 가운데 분배법칙
 \[
@@ -23585,18 +23585,18 @@ x_i+\sum_{j=r+1}^{n}x_j\gamma\varkappa_j^{(i)}.
 인 경우에 국한할 수 있다. 정의에 따라 한편
 \[
 \begin{aligned}
-sx\cdot(s'x'\cdot m)
-&=s\bigl(x(s'(x'm))\bigr),
+s\varkappa\cdot(s'\varkappa'\cdot m)
+&=s\bigl(\varkappa(s'(\varkappa'm))\bigr),
 \end{aligned}
 \]
 다른 한편
 \[
 \begin{aligned}
-sxs'x'\cdot m
-&=ss'xx'\cdot m
- =ss'\bigl(xx'm\bigr)\\
+s\varkappa s'\varkappa'\cdot m
+&=ss'\varkappa\varkappa'\cdot m
+ =ss'\bigl(\varkappa\varkappa'm\bigr)\\
 &=s\bigl(s'(\varkappa(\varkappa'm))\bigr)
- =s\bigl(x(s'(x'm))\bigr).
+ =s\bigl(\varkappa(s'(\varkappa'm))\bigr).
 \end{aligned}
 \]
 마지막 등식에는 두 교환관계
@@ -23793,34 +23793,34 @@ j^{*-2}ij^*j^{*2}&=ij^*
 
 \subsection*{§ 21. 비가환체의 갈루아 이론}
 
-\(\mathsf{G}\)를 그 중심 \(\mathsf P\)에 관한 \(\mathfrak K\)의 갈루아군이라 하자. 정리 8에 따라 \(G\)는
+\(\mathsf{G}\)를 그 중심 \(\mathsf P\)에 관한 \(\mathfrak K\)의 갈루아군이라 하자. 정리 8에 따라 \(\mathsf{G}\)는
 \[
-        \overline G=\mathfrak K^*/\mathsf P^*
+        \overline{\mathsf G}=\mathfrak K^*/\mathsf P^*
 \]
-와 동형이며, 이 동형을 고정해 둔다. \(G\)의 부분군 \(H\)에 동형 \(\mathsf{G}\cong\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak K^*\)의 부분군을 \(\mathfrak H^*\)라 하자. \(\mathfrak H^*\)에 \emph{0을 덧붙였을 때} 체가 되면 \(H\)를 \emph{닫힌} 부분군이라 한다.
+와 동형이며, 이 동형을 고정해 둔다. \(\mathsf{G}\)의 부분군 \(\mathsf{H}\)에 동형 \(\mathsf{G}\cong\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak K^*\)의 부분군을 \(\mathfrak H^*\)라 하자. \(\mathfrak H^*\)에 \emph{0을 덧붙였을 때} 체가 되면 \(\mathsf{H}\)를 \emph{닫힌} 부분군이라 한다.
 
-\textbf{정리 11. 갈루아 이론의 주정리.} \emph{\(G\)의 닫힌 부분군 \(H\)들과 \(\mathsf P\)와 \(\mathfrak K\) 사이의 체 \(\mathfrak S\)들을 일대일로 대응시킬 수 있다. 서로 대응하는 \(H,\mathfrak S\)에 대해 \(\mathsf{H}\)는 \(\mathfrak S\)의 불변군이고 \(\mathfrak S\)는 \(\mathsf{H}\)의 불변체이다.}
+\textbf{정리 11. 갈루아 이론의 주정리.} \emph{\(\mathsf{G}\)의 닫힌 부분군 \(\mathsf{H}\)들과 \(\mathsf P\)와 \(\mathfrak K\) 사이의 체 \(\mathfrak S\)들을 일대일로 대응시킬 수 있다. 서로 대응하는 \(\mathsf{H},\mathfrak S\)에 대해 \(\mathsf{H}\)는 \(\mathfrak S\)의 불변군이고 \(\mathfrak S\)는 \(\mathsf{H}\)의 불변체이다.}
 
 \emph{증명.} 정리를 세 부분으로 나눈다.
 
 \begin{enumerate}
-\item 체 \(\mathfrak S\)의 불변군 \(H\)는 닫혀 있다.
+\item 체 \(\mathfrak S\)의 불변군 \(\mathsf{H}\)는 닫혀 있다.
 \item \(\mathfrak S\)의 불변군이 \(\mathsf{H}\)이면 \(\mathfrak S\)는 \(\mathsf{H}\)의 불변체이다.
 \item \(\mathsf{H}\)의 불변체가 \(\mathfrak S\)이면 \(\mathsf{H}\)는 \(\mathfrak S\)의 불변군이다.
 \end{enumerate}
 
-\textbf{1.} 체 \(\mathfrak S\)의 불변군 \(H\)에 동형 \(G\simeq\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak H^*\)는 \(\mathfrak S\)의 각 원소와 가환하는 0 아닌 모든 \(\mathfrak K\)-원소의 집합이다. 여기에 0을 덧붙이면 당연히 체가 되므로 \(H\)는 닫혀 있다.
+\textbf{1.} 체 \(\mathfrak S\)의 불변군 \(\mathsf{H}\)에 동형 \(\mathsf{G}\cong\mathfrak K^*/\mathsf P^*\)로 대응하는 \(\mathfrak H^*\)는 \(\mathfrak S\)의 각 원소와 가환하는 0 아닌 모든 \(\mathfrak K\)-원소의 집합이다. 여기에 0을 덧붙이면 당연히 체가 되므로 \(\mathsf{H}\)는 닫혀 있다.
 
-\textbf{2.} 셋째 부분정리를 둘째 부분정리로 환원하자. 체 \(\mathfrak S\)에는 \(G\)의 부분군 \(S\), 곧 \(\mathfrak S^*/\mathsf P^*\)에 대응하는 \(\mathsf{G}\)의 부분군이 속한다. 마찬가지로 군 \(\mathsf{H}\)에는 \(\mathfrak K\)의 부분체 \(\mathfrak H\)가 속하여
+\textbf{2.} 셋째 부분정리를 둘째 부분정리로 환원하자. 체 \(\mathfrak S\)에는 \(\mathsf{G}\)의 부분군 \(\mathsf{S}\), 곧 \(\mathfrak S^*/\mathsf P^*\)에 대응하는 \(\mathsf{G}\)의 부분군이 속한다. 마찬가지로 군 \(\mathsf{H}\)에는 \(\mathfrak K\)의 부분체 \(\mathfrak H\)가 속하여
 \[
-        H\cong\mathfrak H^*/\mathsf P^*
+        \mathsf{H}\cong\mathfrak H^*/\mathsf P^*
 \]
 이다. \(\mathfrak S\)가 \(\mathsf{H}\)의 불변체이면 \(\mathfrak S\)는 \(\mathfrak H\)의 모든 원소와 가환하는 모든 \(\mathfrak K\)-원소로 이루어진다. 달리 말하면 \(\mathsf{S}\)는 \(\mathfrak H\)의 불변군이다. 이에 대응하여 \(\mathsf{H}\)가 \(\mathfrak S\)의 불변군이면 \(\mathfrak H\)는 \(\mathsf{S}\)의 불변체이다. 따라서 셋째 부분정리는 다음처럼 정식화할 수도 있다.
 
 \[
 \text{3'. }\quad
-\mathfrak H\text{의 불변군이 }S\text{이면 }
-\mathfrak H\text{는 }S\text{의 불변체이다.}
+\mathfrak H\text{의 불변군이 }\mathsf{S}\text{이면 }
+\mathfrak H\text{는 }\mathsf{S}\text{의 불변체이다.}
 \]
 이는 바로 아직 증명해야 할 둘째 부분정리와 같은 형식이다.
 
@@ -23837,18 +23837,18 @@ j^{*-2}ij^*j^{*2}&=ij^*
 \]
 \(\mathfrak S\)에서 \(\mathsf{K}\)의 한 부분체로 가는 모든 반대동형, 곧 \(\mathfrak S\)의 \(\mathsf{K}\) 안에서의 1차 반대 표현은 \(\mathfrak T\)의 반대동형으로 적어도 \(s=[\mathfrak T:\mathfrak S]\)가지 방식으로 연장될 수 있다고 주장한다.
 
-체 \(\mathsf P,\mathfrak S,\mathfrak T,\mathfrak K\)를 \(K\)로 확대하면
+체 \(\mathsf P,\mathfrak S,\mathfrak T,\mathfrak K\)를 \(\mathsf{K}\)로 확대하면
 \[
-        K\subseteqq\mathfrak S_K
-        \subseteqq\mathfrak T_K
-        \subseteqq\mathfrak K_K.
+        \mathsf{K}\subseteqq\mathfrak S_{\mathsf{K}}
+        \subseteqq\mathfrak T_{\mathsf{K}}
+        \subseteqq\mathfrak K_{\mathsf{K}}.
 \]
-20쪽 정리 1에 따라 각 \(\mathfrak S_{\mathsf{K}}\)는 양쪽단순이고 완전가약이며, 서로 연산자동형인 단순 좌측아이디얼들은 \(\mathfrak S\)의 \(\mathsf{K}\) 안에서의 유일한 기약 표현류의 표현가군들이다. \(\mathsf{K}\)의 구성에 의해 \(\mathsf{K}\) 안에는 \(\mathfrak S\)와 반대동형인 체가 있으므로 이 표현류는 1차이다. 따라서 단순 좌측아이디얼들은 모두 랭크 1이고, \(\mathfrak S_K\)는 \(\mathsf P\) 위에서의 차수만큼의 좌측아이디얼들의 합이다.
+20쪽 정리 1에 따라 각 \(\mathfrak S_{\mathsf{K}}\)는 양쪽단순이고 완전가약이며, 서로 연산자동형인 단순 좌측아이디얼들은 \(\mathfrak S\)의 \(\mathsf{K}\) 안에서의 유일한 기약 표현류의 표현가군들이다. \(\mathsf{K}\)의 구성에 의해 \(\mathsf{K}\) 안에는 \(\mathfrak S\)와 반대동형인 체가 있으므로 이 표현류는 1차이다. 따라서 단순 좌측아이디얼들은 모두 랭크 1이고, \(\mathfrak S_{\mathsf{K}}\)는 \(\mathsf P\) 위에서의 차수만큼의 좌측아이디얼들의 합이다.
 \[
-        \mathfrak S_K
-        =K E_1+\cdots+K E_p,
+        \mathfrak S_{\mathsf{K}}
+        =\mathsf{K} E_1+\cdots+\mathsf{K} E_p,
         \qquad
-        K E_\nu=\mathfrak S_K E_\nu.
+        \mathsf{K} E_\nu=\mathfrak S_{\mathsf{K}} E_\nu.
 \]
 
 그러면
@@ -23865,10 +23865,10 @@ j^{*-2}ij^*j^{*2}&=ij^*
 각 아이디얼 \(\mathfrak T_{\mathsf{K}}\cdot E_\nu\)는 \(s\)개의 단순아이디얼로 분해된다. 실제로
 \[
 \begin{aligned}
-[\mathfrak T_K E_\nu:K]
-&=[\mathfrak T_K E_\nu:K E_\nu]\\
-&=[\mathfrak T_K E_\nu:\mathfrak S_K E_\nu]\\
-&\leqq[\mathfrak T_K:\mathfrak S_K]
+[\mathfrak T_{\mathsf{K}} E_\nu:\mathsf{K}]
+&=[\mathfrak T_{\mathsf{K}} E_\nu:\mathsf{K} E_\nu]\\
+&=[\mathfrak T_{\mathsf{K}} E_\nu:\mathfrak S_{\mathsf{K}} E_\nu]\\
+&\leqq[\mathfrak T_{\mathsf{K}}:\mathfrak S_{\mathsf{K}}]
  =[\mathfrak T:\mathfrak S]=s
 \end{aligned}
 \]
@@ -24230,7 +24230,7 @@ p_{ij}p_{jk}&=\alpha_{ik}^{(j)}p_{ik},
 \[
         p_{\nu\mu}^*=p_{\nu\mu}\delta_{\nu\mu},
         \qquad
-        \delta_{\nu\mu}\in\{Z_\nu,Z_\mu\}
+        \delta_{\nu\mu}\in\{\mathsf{Z}_\nu,\mathsf{Z}_\mu\}
 \]
 이다. \(\delta_{\nu\mu}\)들은 서로 켤레이며,
 \[
@@ -24623,7 +24623,7 @@ ts=e_1^*+\cdots+e_n^*=\xi^*
         \mathfrak L
         =\mathfrak l_1(p_{11}+\cdots+p_{1n})
 \]
-은 \(0\)이 아니다. 실제로 \(e_1\sum_i p_{1i}\ne0\)이다. 따라서 \(\Omega\)는 단순하며 랭크가 \(n\)이다. 또한 \(\Omega\)는 \(\mathfrak G\)-불변이다. 곧
+은 \(0\)이 아니다. 실제로 \(e_1\sum_i p_{1i}\ne0\)이다. 따라서 \(\mathfrak L\)은 단순하며 랭크가 \(n\)이다. 또한 \(\mathfrak L\)은 \(\mathfrak G\)-불변이다. 곧
 \[
 \begin{aligned}
 S\mathfrak L
@@ -24643,7 +24643,7 @@ S\mathfrak L
 \]
 그러므로
 \[
-        \Omega=\mathfrak l_\Gamma,
+        \mathfrak L=\mathfrak l_\Gamma,
 \]
 \emph{여기서 \(\mathfrak l\)은 랭크가 \(n\)인 \(\mathfrak K_r\)-아이디얼이다.}
 
@@ -24892,7 +24892,7 @@ P_{ik}P_{kj}(k_\varrho e_j)
 이라 하면
 \[
         \prod p_i^{\varrho_i}
-        =\prod p_i^{\sigma_i\cdot}\,m,
+        =\prod p_i^{\sigma_i}\cdot m,
         \qquad
         \sigma_i\geqq\varrho_i.
 \]
@@ -25296,7 +25296,7 @@ m\mathbin{\cdot}\sum_Sz_Su_S
         T\mapsto A_T,
         \qquad
         ST\mapsto A_TA_S^T
-        =A_{ST\cdot}a_{S,T}^{-1}
+        =A_{ST}\cdot a_{S,T}^{-1}
 \]
 (또는 그 전치표현)은 슈파이저가 인자계 \(a_{S,T}\)를 정의할 때의 출발점이었다(Math. Zschr. 5). 따라서 이 인자계들은 여기서 다른 바탕 위에 도입한 인자계들과 동일한 것으로 드러난다.} 그 표현을 어느 \(\mathfrak K_r\) 안에서 취했는지, 어떤 \(u_S\)들을 썼는지, 그리고 \(\mathfrak K\)의 \(\mathfrak Z\) 위의 어떤 기저 \(k_{S_1},\ldots,k_{S_n}\)을 썼는지를 말해야 한다. 기저를 바꾸면 동치인 표현이 생기고, \(u\)들을 바꾸면 연관된 인자계 \(a_{S,T}\)들이 생긴다. 따라서 본질적인 것은 표현을 취한 \(\mathfrak K_r\)들, 즉 연관된 인자계들의 류 \(\{a_{S,T}\}\)이다.
 
@@ -26287,10 +26287,10 @@ h_i x\equiv0(\mathfrak{q}^{(i)});\qquad h_i y^{(g_i)}\equiv0(\mathfrak{q}^{(i)})
 그리고
 \begin{equation}
 \tag{5}
-\text{\(h_iF(y)\equiv0(q^{(i)})\)이면 \(F(y)\equiv0(y^{(g_i)})\)이다.}
+\text{\(h_iF(y)\equiv0(\mathfrak{q}^{(i)})\)이면 \(F(y)\equiv0(y^{(g_i)})\)이다.}
 \end{equation}
 
-실제로 관계 (4)는 \(h_i,h_iy,\ldots,h_iy^{(g_i)-1}\)의 선형결합들이 \(\mathfrak{q}^{(i)}\)에 대한 \(\mathfrak{q}^{(i+1)}\)의 잉여류를 모두 준다는 뜻이고, (5)는 선형독립성을 나타낸다. \(q\)의 길이가 유한하므로 이제 \(\mathfrak{q}^{(t+1)}\)은 단위아이디얼과 같아진다. 따라서 여기서 정리 IV의 증명과 함께 \(\mathfrak{q}\)의 길이가 \((g_1)+\ldots+(g_t)\)와 같고, (2)에 따라 종결식중복도와 일치한다는 사실도 얻는다.
+실제로 관계 (4)는 \(h_i,h_iy,\ldots,h_iy^{(g_i)-1}\)의 선형결합들이 \(\mathfrak{q}^{(i)}\)에 대한 \(\mathfrak{q}^{(i+1)}\)의 잉여류를 모두 준다는 뜻이고, (5)는 선형독립성을 나타낸다. \(\mathfrak{q}\)의 길이가 유한하므로 이제 \(\mathfrak{q}^{(t+1)}\)은 단위아이디얼과 같아진다. 따라서 여기서 정리 IV의 증명과 함께 \(\mathfrak{q}\)의 길이가 \((g_1)+\ldots+(g_t)\)와 같고, (2)에 따라 종결식중복도와 일치한다는 사실도 얻는다.
 
 (4)의 첫째 관계는 (1)에서 바로 읽을 수 있다. 둘째 관계는 다음과 같이 얻는다.
 
@@ -26304,7 +26304,7 @@ h_iy^{(g_i)}\cdot(g_i(0,y):y^{(g_i)})\equiv0(\mathfrak{q}^{(i)}).
 \[
 f_i=d_i(y)\bar f_i,\qquad g_i=d_i(y)\bar g_i,
 \]
-그리고 \(\bar f_i,\bar g_i\)는 서로소이다. \(d(y)\not\equiv0(\mathfrak{p})\)이므로 \(q^{(i)}=(\bar f_i,\bar g_i,\mathfrak{p}^\varrho)\)이기도 하다. 이것은 모든 \(\sigma\geqq\varrho\)에 대하여 \((\bar f_i,\bar g_i,\mathfrak{p}^\sigma)\)와 같고, 그러한 각 \(\sigma\)에 대하여 \(\mathfrak{q}\)의 약수이다. 따라서 \(\mathfrak{q}^{(i)}\)는 \((\bar f_i,\bar g_i)\)에서 원점에 속하는 으뜸성분이다.
+그리고 \(\bar f_i,\bar g_i\)는 서로소이다. \(d(y)\not\equiv0(\mathfrak{p})\)이므로 \(\mathfrak{q}^{(i)}=(\bar f_i,\bar g_i,\mathfrak{p}^\varrho)\)이기도 하다. 이것은 모든 \(\sigma\geqq\varrho\)에 대하여 \((\bar f_i,\bar g_i,\mathfrak{p}^\sigma)\)와 같고, 그러한 각 \(\sigma\)에 대하여 \(\mathfrak{q}\)의 약수이다. 따라서 \(\mathfrak{q}^{(i)}\)는 \((\bar f_i,\bar g_i)\)에서 원점에 속하는 으뜸성분이다.
 
 \(\gamma_1,\delta_1;\ldots;\gamma_r,\delta_r\)를 \(x=0,\ y=0\)과 다른 \((\bar f_i,\bar g_i)\)의 영점들이라 하고, \(\tau_1,\ldots,\tau_r\)를 그에 대응하는 \((\bar f_i,\bar g_i)\)의 으뜸성분들의 지수라 하자. 곱
 \[
@@ -26339,7 +26339,7 @@ xA-F(y)H\equiv0(\bar g_i)
 \]
 이다. 따라서
 \[
-F(y)H\equiv0(\bar g_i,x)\equiv0(\bar g_i,x,p^\sigma)=(y^{(g_i)},x),
+F(y)H\equiv0(\bar g_i,x)\equiv0(\bar g_i,x,\mathfrak{p}^\sigma)=(y^{(g_i)},x),
 \]
 결국 \(F(y)\equiv0(y^{(g_i)})\)이다. 이로써 (5), 따라서 정리 IV가 증명되었다.
 
