@@ -2955,7 +2955,7 @@ $((\vartheta \nu x),s,u)s_\nu$은 \S\ 3에 따라 야코비 행렬식에 대한 
 (\widehat{\vartheta \nu}su)s_\nu(\theta su)=s_\nu s_\vartheta(\theta su)=-\frac12(\widehat{\vartheta \nu}su)^2(\theta su),
 \]
 \[
-\theta_\nu(\widehat{\vartheta \nu su})s_\nu=\theta_\nu s_\nu s_\vartheta=-\frac12\theta_\nu(\widehat{\vartheta \nu su})^2.
+\theta_\nu(\widehat{\vartheta \nu}su)s_\nu=\theta_\nu s_\nu s_\vartheta=-\frac12\theta_\nu(\widehat{\vartheta \nu}su)^2.
 \]
 형식열 $\theta_\nu s_\nu(\theta su)$: 다음 표현들을 이중 환원하여 얻는 환원자 $a_\nu s_\nu(asu)^2$:
 \[
@@ -7329,7 +7329,7 @@ E. 체르멜로는 정렬정리를 이용하여 ``정수적 초월수''의 한 �
 $\mathfrak G_\eta$는 다음을 포함한다.
 \begin{enumerate}
 \item[1)] 모든 기저원소 $\eta$,
-\item[2)] 정수적인\srcfn{***)}{이 글에서 ``정수적''이라는 말은 언제나 계수가 모든 대수적 정수의 정역 $[K]$에 속한다는 뜻으로 이해한다. $\mathfrak G_\eta$를 정의할 때에는 1)부터 5)까지에서 유리정수 계수만을 고려해도 충분하다. 그러나 더 일반적인 영역에서는 그렇게 하면 기저 성질들이 덜 단순해진다.} 계수를 갖는 $\eta$의 모든 다항식,
+\item[2)] 정수적인\srcfn{***)}{이 글에서 ``정수적''이라는 말은 언제나 계수가 모든 대수적 정수의 정역 $[\mathsf{K}]$에 속한다는 뜻으로 이해한다. $\mathfrak G_\eta$를 정의할 때에는 1)부터 5)까지에서 유리정수 계수만을 고려해도 충분하다. 그러나 더 일반적인 영역에서는 그렇게 하면 기저 성질들이 덜 단순해진다.} 계수를 갖는 $\eta$의 모든 다항식,
 \item[3)] 정수적인 계수를 갖는 $\eta$의 모든 정수적 대수함수.
 \end{enumerate}
 $\mathfrak G_\eta$는 다음을 배제한다.
@@ -8875,9 +8875,9 @@ B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
 로 두자. 여기서 \(\bar\delta u^{(1)},\ldots\)는 \(x,u,\partial u/\partial x,\ldots\)의 함수들이다. 그러면 (12)에서 구하는 발산관계
 \begin{equation}
 \tag{13}
-\sum_i\psi_i\bar\delta u_i^{(1)}=\operatorname{Div}B^{(1)},
+\sum\psi_i\bar\delta u_i^{(1)}=\operatorname{Div}B^{(1)}
 \quad\ldots,\quad
-\sum_i\psi_i\bar\delta u_i^{(\rho)}=\operatorname{Div}B^{(\rho)}
+\sum\psi_i\bar\delta u_i^{(\varrho)}=\operatorname{Div}B^{(\varrho)}
 \end{equation}
 가 따라온다.
 
@@ -8885,7 +8885,7 @@ B=B^{(1)}\varepsilon_1+\cdots+B^{(\rho)}\varepsilon_\rho,\qquad
 
 이제 \(\mathfrak G\)가 무한 연속군 \(\mathfrak G_{\infty\rho}\)라고 하자. 그러면 \(\bar\delta u\)와 그 도함수들, 따라서 \(B\)도 임의함수 \(p(x)\)와 그 도함수들에 관하여 다시 선형이 된다\footnote{\(p\)가 \(u,\partial u/\partial x,\ldots\)와 무관하다고 가정해도 일반성을 잃지 않는다는 사실은 역정리가 보여 준다.}. (12)와는 아직 무관하게 \(\bar\delta u\)의 값을 대입하여
 \[
-\sum_i\psi_i\bar\delta u_i
+\sum\psi_i\bar\delta u_i
 =\sum_{\lambda,i}\psi_i\left\{
 a_i^{(\lambda)}(x,u,\ldots)p^{(\lambda)}(x)
 +b^{(\lambda)}(x,u,\ldots)
@@ -8985,7 +8985,7 @@ u_i=v_i
 f=\frac12u'^2,\qquad
 \psi=-u'',\qquad
 \psi\cdot x=\frac{\dd}{\dd x}\{u-u'x\},\qquad
-\bar\delta u=x\varepsilon,
+\bar\delta u=x\cdot\varepsilon;
 \]
 \[
 \Delta x=-\frac{2u}{u'^2}\,\varepsilon,\qquad
@@ -9217,7 +9217,7 @@ u^*=u+\varDelta u(x,u,p);
 \]
 \[
 \mathfrak T_q:\quad
-y=A(x,q),\qquad v=B(x,u,q);
+y=A(x,q);\qquad v=B(x,u,q);
 \]
 \[
 \mathfrak T_q\mathfrak T_p:\quad
@@ -9295,7 +9295,7 @@ B^{(\lambda)}(y,v)=\mathrm{const.}
 \]
 가 된다. 그러므로 \(B^{(\lambda)}\) 자체는 \(\chi\), 즉 라그랑주 식들과 그 도함수들의 선형결합, 그리고 발산이 항등적으로 사라지는 함수들로 이루어진다. 후자의 예로 제2절 끝의 \(B-\varGamma\)가 있는데, 여기서는 \(\operatorname{Div}(B-\varGamma)=0\)이고 그 발산은 동시에 불변식의 성질을 갖는다. \(B^{(\;)}\)들을 말한 방식으로 라그랑주 식들과 그 도함수들로 구성할 수 있는 발산관계를 ``비고유'', 나머지를 모두 ``고유''라고 부르겠다.
 
-거꾸로 발산관계들이 종속관계 (16)의 선형결합, 즉 ``비고유''라면 \(\mathfrak G_\sigma\)에 대한 불변성은 \(\mathfrak G_{\infty\rho}\)에 대한 불변성에서 따라온다. 따라서 \(\mathfrak G_\sigma\)는 \(\mathfrak G_{\infty\rho}\)의 부분군이 된다. 그러므로 유한군 \(\mathfrak G_\sigma\)에 대응하는 발산관계들은 \(\mathfrak G_\sigma\)가 \(I\)를 불변으로 두는 어떤 무한군의 부분군일 때 그리고 그때에만 비고유이다.
+거꾸로 발산관계들이 종속관계 (16)의 선형결합, 즉 ``비고유''라면 \(\mathfrak G_\sigma\)에 대한 불변성은 \(\mathfrak G_{\infty\rho}\)에 대한 불변성에서 따라온다. 따라서 \(\mathfrak G\)는 \(\mathfrak G_{\infty\rho}\)의 부분군이 된다. 그러므로 유한군 \(\mathfrak G_\sigma\)에 대응하는 발산관계들은 \(\mathfrak G_\sigma\)가 \(I\)를 불변으로 두는 어떤 무한군의 부분군일 때 그리고 그때에만 비고유이다.
 
 군들을 특수화하면 여기서 힐베르트의 원래 주장을 얻는다. ``평행이동군''은 다음 유한군을 뜻한다고 하자.
 \[
@@ -9485,7 +9485,7 @@ x_i=\frac{\delta^{n-i}}{\Delta(\delta)}
 \textbf{3. 대수적 수와 대수함수의 아이디얼론에서 나타나는 평행성과 차이}
 \end{center}
 
-모든 아이디얼이 소아이디얼들의 거듭제곱곱으로 유일하게 표현된다는 아이디얼론의 기본정리는 대수적 수와 대수함수에 대하여 함께 증명할 수 있다. 유리정수 또는 한 부정원의 다항식에서는 모든 아이디얼이 주아이디얼이라는 성질만을 쓰면 된다\srcfn{3)}{Hurwitz, \emph{Über die Theorie der Ideale}, \emph{Gött. Nachr.} 1894의 서론에 있는 논평을 참조하라. 베버의 대수학 교과서에서는 크로네커를 따라 함수적을 도입하여 두 체에 평행한 증명을 준다. 크로네커 이론과 아이디얼론 사이의 연결은 \glqq{}확장된 가우스 정리\grqq{}가 담당한다(Hurwitz, 앞의 글).}. 증명의 핵심은 아이디얼 \(\mathfrak c\)가 아이디얼 \(\mathfrak a\)로 나누어진다는 것, 즉 \(\mathfrak c\)의 모든 원소가 \(\mathfrak a\)에 들어 있다는 것으로부터 곱표현 \(\mathfrak c=\mathfrak a\mathfrak b\)가 따라옴을 보이는 데 있다\srcfn{4)}{데데킨트의 『수론』, 보유 XI, 정리 VII, \S{}177에서 특히 강조되어 있다. 554쪽의 주도 참조하라. 이 정리는 대수체를 다룬다는 사실을 쓰며, 다항식의 아이디얼(모듈)에는 더 이상 성립하지 않는다. 그 경우 곱 대신 최소공배수가 나타난다.}. 후르비츠의 증명은 \glqq{}확장된 가우스 정리\grqq{}에 바탕을 둔다. 이 정리에 따르면 두 다항식 \(\varphi,\psi\)의 곱의 모든 계수를 나누는 정수적 원소 \(\omega\)는 \(\varphi\)와 \(\psi\)의 모든 계수의 곱도 나눈다. 데데킨트의 증명은 이 정리와 동치인 모듈정리에 바탕을 둔다\srcfn{1)}{『수론』, 보유 XI, 정리 VI, \S{}173. 두 정리의 동치성은 데데킨트가 지적하였다(\emph{Über die Begründung der Idealtheorie}, \emph{Göttinger Nachr.} 1895).}.
+모든 아이디얼이 소아이디얼들의 거듭제곱곱으로 유일하게 표현된다는 아이디얼론의 기본정리는 대수적 수와 대수함수에 대하여 함께 증명할 수 있다. 유리정수 또는 한 부정원의 다항식에서는 모든 아이디얼이 주아이디얼이라는 성질만을 쓰면 된다\srcfn{3)}{Hurwitz, \emph{Über die Theorie der Ideale}, \emph{Gött. Nachr.} 1894의 서론에 있는 논평을 참조하라. 베버의 대수학 교과서에서는 크로네커를 따라 함수적을 도입하여 두 체에 평행한 증명을 준다. 크로네커 이론과 아이디얼론 사이의 연결은 \glqq{}확장된 가우스 정리\grqq{}가 담당한다(Hurwitz, 앞의 글).}. 증명의 핵심은 아이디얼 \(\mathfrak c\)가 아이디얼 \(\mathfrak a\)로 나누어진다는 것, 즉 \(\mathfrak c\)의 모든 원소가 \(\mathfrak a\)에 들어 있다는 것으로부터 곱표현 \(\mathfrak c=\mathfrak a\cdot\mathfrak b\)가 따라옴을 보이는 데 있다\srcfn{4)}{데데킨트의 『수론』, 보유 XI, 정리 VII, \S{}177에서 특히 강조되어 있다. 554쪽의 주도 참조하라. 이 정리는 대수체를 다룬다는 사실을 쓰며, 다항식의 아이디얼(모듈)에는 더 이상 성립하지 않는다. 그 경우 곱 대신 최소공배수가 나타난다.}. 후르비츠의 증명은 \glqq{}확장된 가우스 정리\grqq{}에 바탕을 둔다. 이 정리에 따르면 두 다항식 \(\varphi,\psi\)의 곱의 모든 계수를 나누는 정수적 원소 \(\omega\)는 \(\varphi\)와 \(\psi\)의 모든 계수의 곱도 나눈다. 데데킨트의 증명은 이 정리와 동치인 모듈정리에 바탕을 둔다\srcfn{1)}{『수론』, 보유 XI, 정리 VI, \S{}173. 두 정리의 동치성은 데데킨트가 지적하였다(\emph{Über die Begründung der Idealtheorie}, \emph{Göttinger Nachr.} 1895).}.
 
 더 나아가 여모듈의 개념(헨젤 12번)과 그로부터 분기아이디얼(기초아이디얼, 디퍼런트) \(\mathfrak z\)을 함께 정의할 수 있다. 그 노름은 체판별식 \(D\)가 된다. 또한 다음 기본정리가 성립한다. \emph{분기아이디얼 \(\mathfrak z\)는 모든 주아이디얼 \(F'(\delta)\)의 최대공약아이디얼이다.} 여기서 \(\delta\)는 체의 모든 정수적 원소를 돌고, \(F(\delta)=0\)은 그때마다 대응하는 기약방정식이다. 여기서 \emph{체판별식은 소아이디얼의 제곱으로 나누어지는 유리소수 또는 \(z\)의 일차인자만을, 그리고 그 모두를 포함한다}는 것이 따라온다. \(F'(\delta)\) 자체에 대해서는
 \[
@@ -9502,7 +9502,7 @@ F'(\delta)=\mathfrak f\mathfrak D,\qquad
 
 또 다른 차이는 대수적 수에서는 유리수체 \(R\)가 \emph{절대적으로 특별한} 기초체, 즉 그 체에 포함된 \emph{소체}(단위원으로 생성되는 체)인 반면, \emph{기초체 \(K(z)\)는 상대적}이라는 데서 생긴다. 상수가 아닌 임의의 함수 \(\xi\)를 독립\emph{변수}로 택할 수 있으며, 그러면 원래 체는 \(K(\xi)\) 위의 대수체가 된다. 모든 소아이디얼 \(\mathfrak p\)가 일차 아이디얼이라는 정리, 즉 모든 함수가 \(\mathfrak p\)를 법으로 한 상수와 합동이라는 정리를 임의의 함수를 독립변수로 택할 수 있다는 사실과 결합하면, 대수적 수의 경우를 넘어서는 가장 중요한 개념인 \emph{점 개념}을 순수 산술적 형태로 얻는다(헨젤 10a 참조). \emph{각 점은 함수체와 동형인 한 상수체로 표현된다}\srcfn{1)}{잘 알려져 있듯 두 체가 \glqq{}동형\grqq{}이라는 것은 합, 차, 곱, 몫도 대응하도록 일대일로 서로 대응시킬 수 있다는 뜻이다.}. 이렇게 정의한 모든 점이 \glqq{}절대 리만곡면\grqq{}을 이룬다. 이 점 정의는 체에만 의존하고 특정 변수에는 의존하지 않는다. 다만 존재증명에서는 어떤 함수 하나를 독립변수 \(z\)로 특별히 택한다. 각 함수에 \(\mathfrak p\)를 법으로 한 상수 잉여를 대응시키면 소아이디얼 \(\mathfrak p\)가 점 \(P\)를 생성한다. 특히 \(\mathfrak p\)로 나누어지는 함수들은 \(P\)에서 사라지고, 그 역도 성립한다. \(\mathfrak p\)가 \(z\)에 관한 모든 소아이디얼을 돌면 \(z\)가 유한인 모든 점을 얻는다. 나머지 점들은 독립변수 \(\zeta=\frac{1}{z}\)를 도입하여 얻으며, 주아이디얼 \((\xi)\)를 나누는 소아이디얼들에 대응한다. 당연히 점 개념에 이어지는 폴리곤, 폴리곤류, 폴리곤류의 차원 등의 개념도 대수적 수에는 유사물이 없다.
 
-독립변수를 자유롭게 택할 수 있다는 사실은 분해 \(F'(\vartheta)=\mathfrak f\mathfrak D\)에 또 다른 해석도 준다. \(\vartheta\)를 독립변수로 보면, \(\vartheta\)로 생성되는 환은 \(z,\vartheta\)에 대하여 대칭적으로 정의되었으므로 이에 대응하여
+독립변수를 자유롭게 택할 수 있다는 사실은 분해 \(F'(\vartheta)=\mathfrak f\mathfrak z\)에 또 다른 해석도 준다. \(\vartheta\)를 독립변수로 보면, \(\vartheta\)로 생성되는 환은 \(z,\vartheta\)에 대하여 대칭적으로 정의되었으므로 이에 대응하여
 \[
 \left(\frac{\partial F}{\partial z}\right)=\mathfrak f\mathfrak a
 \]
@@ -9603,7 +9603,7 @@ g_2(\eta,\tau_1,\tau_2)=0,\ldots
 \mathfrak a\mathfrak r=(\alpha),\qquad
 \mathfrak b\mathfrak r=(\beta)
 \]
-라는 관계가 성립하며, 이는 아이디얼 \(\mathfrak a,\mathfrak b\)가 동치임을 보여 준다. 거꾸로 두 아이디얼의 동치 \(\mathfrak a=\eta\mathfrak b\)로부터도, 모든 아이디얼은 다른 한 아이디얼을 곱하면 주아이디얼이 된다는 정리에 따라 언제나 이 관계가 따라온다\srcfn{1)}{데데킨트, 『수론』 \S{}181 참조. 실제로 \(\mathfrak a\mathfrak r=(\alpha)\)가 되도록 \(\mathfrak r\)을 택하면 \(\mathfrak b\mathfrak r=\eta^{-1}(\alpha)\)이다. \(\mathfrak b\mathfrak r\)은 정수적 원소들만을 포함하므로 \(\eta^{-1}(\alpha)\)도 그러하며, 따라서 이것도 주아이디얼 \((\beta)\)가 된다.}. 즉 \emph{동치인 아이디얼과 공잔여 점군은 동일한 개념이다.}
+라는 관계가 성립하며, 이는 아이디얼 \(\mathfrak a,\mathfrak b\)가 동치임을 보여 준다. 거꾸로 두 아이디얼의 동치 \(\mathfrak a=\eta\mathfrak b\)로부터도, 모든 아이디얼은 다른 한 아이디얼을 곱하면 주아이디얼이 된다는 정리에 따라 언제나 이 관계가 따라온다\srcfn{1)}{데데킨트, 『수론』 \S{}181 참조. 실제로 \(\mathfrak a\mathfrak r=(\alpha)\)가 되도록 \(\mathfrak r\)을 택하면 \(\mathfrak b\mathfrak r=\eta(\alpha)\)이다. \(\mathfrak b\mathfrak r\)은 정수적 원소들만을 포함하므로 \(\eta(\alpha)\)도 그러하며, 따라서 이것도 주아이디얼 \((\beta)\)가 된다.}. 즉 \emph{동치인 아이디얼과 공잔여 점군은 동일한 개념이다.}
 
 이제 잔여정리는 다음과 같이 말한다. \emph{\(A,B\)가 공잔여이면, 같은 잔여를 갖는 수반곡선들로 두 점군을 잘라 낼 수 있다. 단 특이점들은 제외한다.} 한 함수의 영점과 극점은 언제나 공잔여이므로, 이 정리는 동시에 체의 가장 일반적인 함수를 수반형식의 몫으로 표현할 수 있음을 증명한다. 아이디얼론의 언어로 쓰면, 잔여정리는 \(\mathfrak a,\mathfrak b\)뿐 아니라 \(\mathfrak a\mathfrak f,\mathfrak b\mathfrak f\)도 동치라는 사실에 불과하다. 여기서 \(\mathfrak f\)는 이중점 아이디얼이다. 실제로 위의 결과에 따라
 \[
@@ -9673,7 +9673,7 @@ F. 클라인이 1919년 3월 27일 회의에 제출함.
 
 이제 정수 계수 불변식만을 생각하자. 일차형식의 불변식에 관하여 \emph{이원 일차형식의 모든 정수 계수 불변식은 이 일차형식들의 행렬식에 관한 정수 계수 다항함수이다}라는 더 강한 정리를 증명하면 조건 1)은 위와 똑같이 충족된다. 이것이 실제로 옳다는 사실을 § 3에서 보인다. 그곳에서는 이 행렬식들 사이에 어떤 소수를 법으로 성립하는 모든 관계의 전체가 항등관계의 전체와 일치한다는 형태로 증명한다. 즉 이 관계들에 대응하는 모듈은 각 소수를 법으로 해도 소모듈로 남는다. 증명은 행렬식들 사이의 이차관계에 대응하는 이차형식들의 모듈에 관하여 잉여류들을 정규화하여 이루어진다. 이 이차형식들은 각 소수를 법으로 해도 모듈의 정수 계수 기저를 이룬다. 이전에는 정수성을 무시할 때에만 모듈 기저를 이룬다는 사실이 알려져 있었다.
 
-조건 2)를 충족하는 데에는 아무 수정도 필요 없다. 거듭제곱곱을 도입해도 수계수는 영향을 받지 않기 때문이다. 조건 3)은 이제 \(n_1!\cdots n_\mu!I\), 여기서 \(n_1,\ldots,n_\mu\)는 개별 기본형식들의 차수, 가 변수열들의 정수 계수 대칭함수가 된다는 뜻이고, 역으로 이 변수열들의 각 정수 계수 대칭함수는 정수 계수 불변식이 된다는 뜻이다. 그런데 쉽게 보일 수 있듯이, 변수열들의 이 정수 계수 대칭함수들은 정수 계수 기저를 가지며 여기에는 기본함수들만으로는 충분하지 않다. 힐베르트의 정수 계수 모듈 기저 정리를 적용하면 여기서 \(I\)들 자체에 대해서도 정수 계수 기저를 얻는다.
+조건 2)를 충족하는 데에는 아무 수정도 필요 없다. 거듭제곱곱을 도입해도 수계수는 영향을 받지 않기 때문이다. 조건 3)은 이제 \(n_1!\ldots n_\mu! I\), 여기서 \(n_1,\ldots n_\mu\)는 개별 기본형식들의 차수, 가 변수열들의 정수 계수 대칭함수가 된다는 뜻이고, 역으로 이 변수열들의 각 정수 계수 대칭함수는 정수 계수 불변식이 된다는 뜻이다. 그런데 쉽게 보일 수 있듯이, 변수열들의 이 정수 계수 대칭함수들은 정수 계수 기저를 가지며 여기에는 기본함수들만으로는 충분하지 않다. 힐베르트의 정수 계수 모듈 기저 정리를 적용하면 여기서 \(I\)들 자체에 대해서도 정수 계수 기저를 얻는다.
 
 § 1에서는 조건 1), 2), 3)에 각각 대응하는 특수 유한성 정리들을 모은다. § 2에서는 이 정리들로 유한성 증명을 이끌어 낸다. 조건 3)에 대응하는 특수 유한성 정리들은 동시에 \emph{정수 계수 또는 대수적 정수 계수 치환들로 이루어진 유한군의 정수 계수 불변식의 유한성}을 주며, § 4에서 이를 간단히 설명한다.
 
@@ -10333,7 +10333,7 @@ f(x)=\omega_1f_1(x)+\cdots+\omega_\varrho f_\varrho(x)
 \]
 로 나타낼 수 있고, \(f_1(x),\ldots,f_\varrho(x)\)는 유리정수 계수를 갖는다. (1)에 따라
 \[
-h\,f(x)=
+h.\,f(x)=
 \omega_1\sum_{k=1}^{h}f_1(x^{(k)})+\cdots+
 \omega_\varrho\sum_{k=1}^{h}f_\varrho(x^{(k)})
 \]
@@ -10907,7 +10907,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
 \end{equation}
 의 잉여군과 동형이다. 따라서 그 잉여류 \(\mx\bar{\mb}\)에는 (16)에 대응하는 표현
 \begin{equation}
- \mx\bar{\mb}=\mx\bar{\ma}_1+\cdots+\mx\bar{\ma}_{k-1}
+ \mx\bar{\mb}=\mx\bar{\ma}_1+\cdots+\mx\bar{\ma}_{n-1}
 \tag{18}
 \end{equation}
 도 성립한다. 이제 이미 다음이 증명되었다고 하자.
@@ -11224,9 +11224,9 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  a_r t_{1\varkappa}a_\varkappa&=0
  &&(\varkappa=1,\ldots,\alpha,\ r\ne1)\\
  \text{그리고 \(s>1\)이면}\qquad
- a_r t_{s1}a_1&=0 &&(r\ne s),\\
+ \mathfrak{a}_r \mathfrak{t}_{s1}\mathfrak{a}_1&=0 &&(r\ne s),\\
  \text{따라서}\qquad
- t_{1\varkappa}a_\varkappa&=a_1t_{1\varkappa}a_\varkappa,
+ \mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa&=\mathfrak{a}_1\mathfrak{t}_{1\varkappa}\mathfrak{a}_\varkappa;
  & \mathfrak{t}_{i1}\mathfrak{a}_1&=\mathfrak{a}_i\mathfrak{t}_{i1}\mathfrak{a}_1
 \end{aligned}\right.
 \tag{32}
@@ -11322,7 +11322,7 @@ ABF=\left(\sum t_i\frac{\p}{\p\xi_i^{(1)}}\right)^{\lambda_1}
  =\sum_{i,\varkappa}\lambda_{\rho i}\lambda^{\rho\varkappa}
   a_\sigma t_{i\varkappa}a_\varkappa
  =\lambda_{\rho\sigma}\sum_\varkappa
-  \lambda^{\rho\varkappa}t_{\sigma\varkappa}a_\varkappa
+  \lambda^{\rho\varkappa}\mathfrak{t}_{\sigma\varkappa}\mathfrak{a}_\varkappa
  \ne0
  \quad\text{\(\lambda_{\rho\sigma}\ne0\)이면}
 \]
@@ -13580,7 +13580,7 @@ d\xi_\lambda+b_{\lambda,\varrho+1}\xi_{\varrho+1}
 \[
 c_{\varrho+1}\xi_{\varrho+1}+\cdots+c_k\xi_k
 \]
-을 포함할 수 없다. 그렇다면 적어도 하나의 \((\varrho+1)\)차 행렬식 \(d\,c_\alpha\)가 영이 아닐 것이기 때문이다.
+을 포함할 수 없다. 그렇다면 적어도 하나의 \((\varrho+1)\)차 행렬식 \(d\,c_\sigma\)가 영이 아닐 것이기 때문이다.
 
 이제 몫 \(\Amod/(d)\)는 \(\Amod\)의 같은 랭크를 가진 인자이므로 \(\Gmod\)로 나누어진다. 그러나 역도 성립한다. 각 \(g(\xi)\zero{\Gmod}\)에 대하여 정의상
 \[
@@ -13803,8 +13803,8 @@ b^{(i)}G(x)\zero{\mideal},\qquad b^{(i)}\ne0
 증명은 잘 알려진 데데킨트--메르텐스 정리\srcfn{13)}{Dedekind, \emph{Über einen arithmetischen Satz von Gauß}, \emph{Mitt. d. deutsch. math. Ges. zu Prag} (1892); F. Mertens, \emph{Über einen algebraischen Satz}, \emph{Ber. d. Ak. d. Wissensch. Wien} 101 (1892), 1560--1566쪽. 크로네커가 가우스 정리를 부정계수 다항식으로 확장한 것은 이 정리의 직접적인 귀결이다.}에 바탕을 둔다. \(a,b\)가 부정원이고
 \[
 \begin{aligned}
-&\sum a_{i_1,\ldots,i_s}z_1^{i_1}\cdots z_s^{i_s}\,
-\sum b_{j_1,\ldots,j_s}z_1^{j_1}\cdots z_s^{j_s}\\
+&\sum a_{i_1\ldots i_s}z_1^{i_1}\cdots z_s^{i_s}\,
+\sum b_{j_1\ldots j_s}z_1^{j_1}\cdots z_s^{j_s}\\
 &\hspace{8em}=
 \sum c(a,b)_{k_1\ldots k_s}z_1^{k_1}\ldots z_s^{k_s},
 \end{aligned}
@@ -14169,7 +14169,7 @@ b^{(i+1)}E^{(i)}(x)G(x)\zero{\mideal}
 \end{equation}
 이 된다. 특히 \(\gideal_0\)은 단위원아이디얼과 같으므로
 \[
-b^{(2)}E^{(1)}(x)\zero{\mideal},\quad b^{(2)}\ne0,
+b^{(2)}E^{(1)}(x)\zero{\mideal};\quad b^{(2)}\ne0
 \qquad\text{따라서}\qquad
 E^{(1)}(x)\zero{\gideal_1}.
 \]
@@ -14337,7 +14337,7 @@ z_i-\bar z_i
 \]
 를 갖는다. \(x_{i+1},\ldots,x_n\)을 첨가했을 때 나타나는 \(\aideal\)의 각 영점에 그러한 인자가 대응한다.
 
-이 인자들이 \(H^{(i)}(z,x)\)의 분해를 모두 소진함을 보이자. 즉 \(z\)와 \(v\)에 관하여 일차인자들로 분해되지 않는 인자 \(H_1^{(i)}\)를 \(H^{(i)}\)에서 떼어 낼 수 없음을 보이면 된다. 그렇다고 가정하자. \(v\)에 관한 원시성 때문에 \(H^{(i)}\)은 적어도 하나의 일차인자 \(z_i-\bar{\bar z}_i\)를 가지며, \(\bar{\bar z}_i\)는 \(\mathsf{P}(u,v,x_{i+1}\ldots x_n)\)의 한 대수적 확대체에 속한다. \(\bar{\bar x}_1\ldots\bar{\bar x}_{i-1},\bar{\bar x}_i,x_{i+1}\ldots x_n\)이 이에 대응하는 \(\aideal\)의 영점이면, 이는 \(x_{i+1},\ldots,x_n\)을 첨가했을 때 나타나는 유한개의 \(\aideal\)의 영점 가운데 하나와 일치해야 하므로 \(v\)와 무관하다. 따라서 \(\bar{\bar z}_i\)는 \(v\)들을 반드시 선형으로 포함하며, 대수적으로나 유리비선형으로 포함하지 않는다. 그러면 가정에 어긋나게 \(H_1^{(i)}\)에서 \(z,v\)에 관한 또 하나의 일차인자
+이 인자들이 \(H^{(i)}(z,x)\)의 분해를 모두 소진함을 보이자. 즉 \(z\)와 \(v\)에 관하여 일차인자들로 분해되지 않는 인자 \(H_1^{(i)}\)를 \(H^{(i)}_1\)에서 떼어 낼 수 없음을 보이면 된다. 그렇다고 가정하자. \(v\)에 관한 원시성 때문에 \(H^{(i)}\)은 적어도 하나의 일차인자 \(z_i-\bar{\bar z}_i\)를 가지며, \(\bar{\bar z}_i\)는 \(\mathsf{P}(u,v,x_{i+1}\ldots x_n)\)의 한 대수적 확대체에 속한다. \(\bar{\bar x}_1\ldots\bar{\bar x}_{i-1},\bar{\bar x}_i,x_{i+1}\ldots x_n\)이 이에 대응하는 \(\aideal\)의 영점이면, 이는 \(x_{i+1},\ldots,x_n\)을 첨가했을 때 나타나는 유한개의 \(\aideal\)의 영점 가운데 하나와 일치해야 하므로 \(v\)와 무관하다. 따라서 \(\bar{\bar z}_i\)는 \(v\)들을 반드시 선형으로 포함하며, 대수적으로나 유리비선형으로 포함하지 않는다. 그러면 가정에 어긋나게 \(H_1^{(i)}\)에서 \(z,v\)에 관한 또 하나의 일차인자
 \[
 z_i-(\bar x_i+v_1\bar x_1+\cdots+v_{i-1}\bar x_{i-1})
 \]
@@ -14374,10 +14374,10 @@ H(x)=\overline H(y)=\sum_i\alpha_i(u)\overline H_i(y)
 \]
 그러므로
 \[
-\overline H_i(y)\,\overline\gideal_{i-1}
+\overline H_\lambda(y)\,\overline\gideal_{i-1}
 \zero{\overline\mideal},
 \qquad\text{따라서}\qquad
-H_i(x)\gideal_{i-1}\zero{\mideal}.
+H_\lambda(x)\gideal_{i-1}\zero{\mideal}.
 \]
 즉 \(H_\lambda(x)\)는 \(\mideal/\gideal_{i-1}\)로 나누어지고, 이 아이디얼이 변환되었음이 증명되었다. 따라서 제6절의 소거법을 적용할 수 있다.
 
@@ -14415,7 +14415,7 @@ d^{(i+1)}D^{(i)}(x)\zero{\mideal/\gideal_{i-1}},
 
 이로써 \(\mideal\)의 영점들이 종결식형의 개별 인자들에 따라 동시에 분리되었다. \(\mathsf{P}(u)\)에 첨가된 부정원 \(x\)의 수는 대응하는 대수적 도형의 차원이라고도 부른다.
 
-\(\bar R^{(i)}(z,x)\), 또는 \(R^{(i)}(x)\)의 대응 분해에서 \(P(u,x_{i+1},\ldots,x_n)\)에 관하여 켤레인 인자들을 묶자. 일반적인 \(\mathsf{P}\)에서는 이 인자들이 전부 또는 일부 동일할 수 있다. 그러면 \(R^{(i)}(x)\)을 \(P(u,x_{i+1},\ldots,x_n)\)에 관하여 기약인 다항식들의 거듭제곱으로 분해한 식
+\(\bar R^{(i)}(z,x)\), 또는 \(R^{(i)}(x)\)의 대응 분해에서 \(\mathsf{P}(u,x_{i+1},\ldots,x_n)\)에 관하여 켤레인 인자들을 묶자. 일반적인 \(\mathsf{P}\)에서는 이 인자들이 전부 또는 일부 동일할 수 있다. 그러면 \(R^{(i)}(x)\)을 \(P(u,x_{i+1},\ldots,x_n)\)에 관하여 기약인 다항식들의 거듭제곱으로 분해한 식
 \[
 R^{(i)}(x)=S_1^{(i)}(x)^{\beta_1}\cdots
 S_\nu^{(i)}(x)^{\beta_\nu}
@@ -16671,7 +16671,7 @@ q_1a_2^{\varrho_2}\ldots a_r^{\varrho_r}\equiv0(\mm)
 실제로 2b에 따라 \(\bR\)은 체들의 직합이 되고, 이 체들은 \(\overline{\mathsf{P}}\)와 동형인 부분체들의 유한 확대이므로(§ 2, 2), \(\overline{\mathsf{P}}\)가 대수적으로 닫혀 있다는 데서 그 부분체들과 동일하다. 따라서
 \[
         \bR=\overline{\mathsf{P}}\bar\varepsilon_1+\cdots+\overline{\mathsf{P}}\bar\varepsilon_n,
-        \qquad e=\bar e_1+\cdots+\bar e_n
+        \qquad e=\bar\varepsilon_1+\cdots+\bar\varepsilon_n
 \]
 을 얻는다. \(e\)의 성분 \(\bar\varepsilon_\lambda\)들은 동시에 \(\bR\)의 선형독립인 모듈기저를 이룬다.
 
@@ -17038,29 +17038,29 @@ $P$가 관련 단순지표를 하나도 포함하지 않는다면, 분해체들�
 \textbf{1. 분해체의 특성화.}
 \end{center}
 
-우선 기본개념을 간단히 정리해 둔다. $\mS$는 체 $P_0$에 관한 초복소수계라 하자. $P$에서의 $\mS$의 표현 $\Gamma$란 $P$의 원소를 성분으로 하는 행렬계로서, $\Gamma$가 $\mS$의 준동형상이 되고 $P_0$의 원소 $p_0$에는 대각행렬 $p_0E$가 대응하는 것을 말한다. 따라서 $P$는 $P_0$를 포함해야 한다. 표현 $\Gamma$는 그 모든 변환표현 $P^{-1}\Gamma P$와 함께 하나의 표현류를 이룬다.
+우선 기본개념을 간단히 정리해 둔다. $\mS$는 체 $\mathrm{P}_0$에 관한 초복소수계라 하자. $P$에서의 $\mS$의 표현 $\Gamma$란 $\mathrm{P}$의 원소를 성분으로 하는 행렬계로서, $\Gamma$가 $\mS$의 준동형상이 되고 $\mathrm{P}_0$의 원소 $\rho_0$에는 대각행렬 $\rho_0E$가 대응하는 것을 말한다. 따라서 $\mathrm{P}$는 $\mathrm{P}_0$를 포함해야 한다. 표현 $\Gamma$는 그 모든 변환표현 $\mathit{P}^{-1}\Gamma \mathit{P}$와 함께 하나의 표현류를 이룬다.
 
-이와 같이 정의한 표현에는 유한군 $G$의 표현도 포함된다. 이에 대응하는 초복소수계 $\mS$, 곧 ``군환''은 모든 ``군수'', 즉 $P_0$의 계수를 갖는 군 원소들의 모든 선형결합으로 이루어진다. 이때 본래의 군 원소들은 선형독립으로 간주하며, 곱셈은 군의 곱셈과 연산법칙으로 정의한다. ``가약'', ``기약'', ``완전가약'', ``절대기약'' 표현이라는 개념은 통상적인 방식으로 정의하며, 이 명칭들을 표현류에도 확장해 쓴다. $\mS$의 모든 표현류가 $P$에서 완전가약일 때, $\mS$를 ``$P$에서 완전가약''이라고 한다.
-
-%
-%
-이제 $\mS$가 $P_0$에서 완전가약이라고 가정하자. 또한 $P_0$를 완전체라고 가정하면, $P_0$의 모든 대수적 확대 $P$도 마찬가지로 완전체이다. 표현류들은 $P_0$의 임의의 확대 $P$에서도 계속 완전가약이다.\footnote{$P_0$가 완전체가 아닐 때에는 중심의 성분 $K$들이 $P_0$의 ``제1종 확대''가 되는 경우에, 그리고 오직 그 경우에만 완전가약성이 보존된다. 이 가정 아래에서는 본문의 이후 모든 귀결이 성립한다.}
-
-$\mS$의 중심은 유한 개 체의 직합이 된다. 그러한 체 $K$와 동형인 $P_0$의 모든 확대 $P$는 어떤 (단순) 지표의 체가 된다. $P_0$를 $K$와 동형인 $P$로 확대하면, $\mS$에서 하나의 양쪽 단순환이 분리되어 나오며 이 환에는 그 지표의 절대기약 표현류가 대응한다. 이 환은 베더번 정리에 따라 $P$ 위의 한 행렬환과, 동형을 제외하면 유일하게 정해지는 비가환체 $\mA$의 직접곱이 된다. $\mA$의 중심은 $P$이고 $P$ 위에서 차수 $m^2$이며, 여기서 $m$은 그 지표에 속하는 슈어 지수를 뜻한다.
-
-\srcspaced{$\mS$의 모든 분해체---그 지표에 속하는 표현에 관하여---는 동시에 $P$에서의 표현들에 관하여 $\mA$의 분해체이며, 그 역도 성립한다.} $\mS$의 공액 표현들은 $P_0$ 위의 대응하는 양쪽 단순환에서 출발하여 얻는다. 이에 대응하는 체 $\mA_0$는 $\mA$와 동형이 되며 $K$를 중심으로 가진다. 따라서 분해체 문제는 대응하는 비가환체 $\mA$와 그 분해 문제로 완전히 환원된다.\footnote{이는 $P$에서 $\mS$의 기약표현과 가환하는, $P$의 원소를 성분으로 하는 행렬계로 환원하는 Schur의 방법에 대응한다. 이 행렬들의 전치행렬들은 $P$에서 $\mA$의 한 표현을 이룬다.} 특히 다음 정리가 성립한다.
+이와 같이 정의한 표현에는 유한군 $\mathfrak G$의 표현도 포함된다. 이에 대응하는 초복소수계 $\mS$, 곧 ``군환''은 모든 ``군수'', 즉 $\mathrm{P}_0$의 계수를 갖는 군 원소들의 모든 선형결합으로 이루어진다. 이때 본래의 군 원소들은 선형독립으로 간주하며, 곱셈은 군의 곱셈과 연산법칙으로 정의한다. ``가약'', ``기약'', ``완전가약'', ``절대기약'' 표현이라는 개념은 통상적인 방식으로 정의하며, 이 명칭들을 표현류에도 확장해 쓴다. $\mS$의 모든 표현류가 $\mathrm{P}$에서 완전가약일 때, $\mS$를 ``$P$에서 완전가약''이라고 한다.
 
 %
 %
-\srcspaced{$\mA$의 모든 극대 가환 부분체는 $P$ 위에서 같은 차수 $m$을 가지며, 여기서 $m$은 슈어 지수를 나타낸다. 이 모든 극대 가환 부분체는 최소 차수의 분해체이고, 최소 차수의 모든 분해체는 이들 가운데 하나이다. 모든 분해체의 차수는 $m$의 배수이다. $\mA$에는 절대기약 표현류가 단 하나만 있으며, 마찬가지로 $P$에 대한 기약 표현류도 단 하나만 있다.}
+이제 $\mS$가 $\mathrm{P}_0$에서 완전가약이라고 가정하자. 또한 $\mathrm{P}_0$를 완전체라고 가정하면, $\mathrm{P}_0$의 모든 대수적 확대 $\mathrm{P}$도 마찬가지로 완전체이다. 표현류들은 $\mathrm{P}_0$의 임의의 확대 $\mathrm{P}$에서도 계속 완전가약이다.\footnote{$\mathrm{P}_0$가 완전체가 아닐 때에는 중심의 성분 $\mathfrak{K}$들이 $\mathrm{P}_0$의 ``제1종 확대''가 되는 경우에, 그리고 오직 그 경우에만 완전가약성이 보존된다. 이 가정 아래에서는 본문의 이후 모든 귀결이 성립한다.}
+
+$\mS$의 중심은 유한 개 체의 직합이 된다. 그러한 체 $\mathfrak{K}$와 동형인 $\mathrm{P}_0$의 모든 확대 $P$는 어떤 (단순) 지표의 체가 된다. $\mathrm{P}_0$를 $\mathfrak{K}$와 동형인 $\mathrm{P}$로 확대하면, $\mS$에서 하나의 양쪽 단순환이 분리되어 나오며 이 환에는 그 지표의 절대기약 표현류가 대응한다. 이 환은 베더번 정리에 따라 $\mathrm{P}$ 위의 한 행렬환과, 동형을 제외하면 유일하게 정해지는 비가환체 $\mA$의 직접곱이 된다. $\mA$의 중심은 $P$이고 $P$ 위에서 차수 $m^2$이며, 여기서 $m$은 그 지표에 속하는 슈어 지수를 뜻한다.
+
+\srcspaced{$\mS$의 모든 분해체---그 지표에 속하는 표현에 관하여---는 동시에 $P$에서의 표현들에 관하여 $\mA$의 분해체이며, 그 역도 성립한다.} $\mS$의 공액 표현들은 $\mathrm{P}_0$ 위의 대응하는 양쪽 단순환에서 출발하여 얻는다. 이에 대응하는 체 $\mA_0$는 $\mA$와 동형이 되며 $\mathfrak{K}$를 중심으로 가진다. 따라서 분해체 문제는 대응하는 비가환체 $\mA$와 그 분해 문제로 완전히 환원된다.\footnote{이는 $\mathrm{P}$에서 $\mS$의 기약표현과 가환하는, $\mathrm{P}$의 원소를 성분으로 하는 행렬계로 환원하는 Schur의 방법에 대응한다. 이 행렬들의 전치행렬들은 $P$에서 $\mA$의 한 표현을 이룬다.} 특히 다음 정리가 성립한다.
 
 %
 %
-일반적인 분해체를 특성화하기 위하여, $\mA_r$를 $\mA$와 $P$에 관한 차수 $r^2$의 행렬환, 곧 $P$의 원소를 성분으로 하는 모든 $r$차 정사각행렬의 계와의 직접곱이라 하자. 그러면 $\mA_r$는 $\mA$를 대응하는 비가환체로 갖는 양쪽 단순환이 된다. 또한 $P$에 관하여 초복소수계이고 $\mA$가 대응하는 모든 양쪽 단순환은 이와 같은 방식으로 얻어진다. $\mA_r$는 $\mA$의 원소를 성분으로 하는 모든 $r$차 정사각행렬의 계로도 특성화된다.
+\srcspaced{$\mA$의 모든 극대 가환 부분체는 $P$ 위에서 같은 차수 $m$을 가지며, 여기서 $m$은 슈어 지수를 나타낸다. 이 모든 극대 가환 부분체는 최소 차수의 분해체이고, 최소 차수의 모든 분해체는 이들 가운데 하나이다. 모든 분해체의 차수는 $m$의 배수이다. $\mA$에는 절대기약 표현류가 단 하나만 있으며, 마찬가지로 $\mathrm{P}$에 대한 기약 표현류도 단 하나만 있다.}
 
 %
 %
-\srcspaced{차수 $mr$인 $\mA$의 모든 분해체---그러한 것이 존재한다면---는 $\mA_r$의 극대 가환 부분체 하나와 동형이다. 역으로 $\mA_r$의 모든 극대 가환 부분체는 분해체이며, 각각 그 차수는 $ms$이다. 여기서 $s$는 $r$의 약수이다. 정칙인 경우에는 $\mA_r$의 모든 극대 가환 부분체의 차수가 $mr$이다. 여기서 정칙인 경우란 다음을 뜻한다. 기초체 $P$ 위의 임의의 가환체 $\Sigma$가 $P$ 위에서 유한일 때, $\Sigma$ 위에 임의의 차수를 갖는 가환 확대체가 더 존재한다는 성질을 $P$가 갖는다.}\footnote{따라서 예를 들어 $P$가 모든 실수의 체이면 정칙인 경우가 아니다.}
+일반적인 분해체를 특성화하기 위하여, $\mA_r$를 $\mA$와 $P$에 관한 차수 $r^2$의 행렬환, 곧 $\mathrm{P}$의 원소를 성분으로 하는 모든 $r$차 정사각행렬의 계와의 직접곱이라 하자. 그러면 $\mA_r$는 $\mA$를 대응하는 비가환체로 갖는 양쪽 단순환이 된다. 또한 $\mathrm{P}$에 관하여 초복소수계이고 $\mA$가 대응하는 모든 양쪽 단순환은 이와 같은 방식으로 얻어진다. $\mA_r$는 $\mA$의 원소를 성분으로 하는 모든 $r$차 정사각행렬의 계로도 특성화된다.
+
+%
+%
+\srcspaced{차수 $mr$인 $\mA$의 모든 분해체---그러한 것이 존재한다면---는 $\mA_r$의 극대 가환 부분체 하나와 동형이다. 역으로 $\mA_r$의 모든 극대 가환 부분체는 분해체이며, 각각 그 차수는 $ms$이다. 여기서 $s$는 $r$의 약수이다. 정칙인 경우에는 $\mA_r$의 모든 극대 가환 부분체의 차수가 $mr$이다. 여기서 정칙인 경우란 다음을 뜻한다. 기초체 $\mathrm{P}$ 위의 임의의 가환체 $\Sigma$가 $\mathrm{P}$ 위에서 유한일 때, $\Sigma$ 위에 임의의 차수를 갖는 가환 확대체가 더 존재한다는 성질을 $P$가 갖는다.}\footnote{따라서 예를 들어 $\mathrm{P}$가 모든 실수의 체이면 정칙인 경우가 아니다.}
 
 %
 %
@@ -17070,7 +17070,7 @@ $r>1$일 때 이 분해체들 가운데 극소 분해체도 나타나는지는 $
 \textbf{2. 극소 분해체 차수들의 비유계성.}
 \end{center}
 
-이 비유계성을 보이기 위하여 이제 사원수체를 예로 든다. 이를 유리수체 $P$에 관한 초복소수계로 보고, 단위원 $1$ 이외의 기저원소를 $i,j,k$라 하면 잘 알려진 관계식은 다음과 같다.
+이 비유계성을 보이기 위하여 이제 사원수체를 예로 든다. 이를 유리수체 $\mathrm{P}$에 관한 초복소수계로 보고, 단위원 $1$ 이외의 기저원소를 $i,j,k$라 하면 잘 알려진 관계식은 다음과 같다.
 \[
  i^2=j^2=k^2=-1;\qquad ij=k;\quad jk=i;\quad ki=j;\quad ji=-k;\quad kj=-i;\quad ik=-j.
 \]
@@ -17159,7 +17159,7 @@ $\Omega$가 생성하는 군환은 바로 초복소수계로 본 사원수체의
 \]
 처음부터 $\mathfrak{O}^*$를 역시 $\mathrm{K}$ 위에서 유리적인 표현 $R^{-1}\mathfrak{O}^*R$로 바꾸면, 일반성을 잃지 않고 $J^*=J$이라 가정할 수 있음을 알 수 있다. 이제
 \[
-        I^*=\mat{a&b\\ c&d}\qquad (a,b,c,d\text{는 }K\text{의 원소})
+        I^*=\mat{a&b\\ c&d}\qquad (a,b,c,d\text{는 }\mathrm{K}\text{의 원소})
 \]
 라 하자. $IJ=-JI$에서 $I^*J^*=-J^*I^*$가 따르고, $J^*=J$이므로
 \[
@@ -17199,7 +17199,7 @@ $\Omega$가 생성하는 군환은 바로 초복소수계로 본 사원수체의
 %
 $\varepsilon$을 원시 $p$차 단위근이라 하자. 이제 $\mathrm{P}(\varepsilon)$에서 $-1$을 두 제곱의 합
 \[
-        -1=a^2+b^2=(a+ib)(a-ib)\qquad (a,b\text{는 }P(\varepsilon)\text{의 원소})
+        -1=a^2+b^2=(a+ib)(a-ib)\qquad (a,b\text{는 }\mathrm{P}(\varepsilon)\text{의 원소})
 \]
 으로 나타낼 수 있음을 보이겠다. 이는 $4p$차 단위근들의 체 $\mathrm{P}(\varepsilon,i)=\mathrm{P}(\varepsilon\cdot i)$ 안에 $\mathrm{P}(\varepsilon)$에 대한 상대노름이 정확히 $-1$인 원소가 존재한다는 것과 동치이다.
 
@@ -19267,7 +19267,7 @@ M_1& & &0\\
 0& & &M_s
 \end{pmatrix},
 \]
-따라서 \(|M|=|M_1|\,|M_2|\cdots|M_s|\)이다.
+따라서 \(|M|=|M_1|\,|M_2|\cdot\ldots\cdot|M_s|\)이다.
 
 \textbf{증명.} \(\ma_1,\ldots,\ma_s\)의 기저들을 합쳐 \(\mo\)의 기저를 택하자. \(a\in\ma_i\)이면
 \[
@@ -22208,7 +22208,7 @@ e^{(1)}=\mathsf{A}_1t_1+\cdots+\mathsf{A}_nt_n
 \paragraph{주.}
 § 5, 4의 주에서 \(\mathfrak O\)의 여모듈 \(\mathfrak E\)에 대한 또 하나의 알려진 정의가 나온다. \emph{\(\mathfrak E\)는 \(\mathfrak O\)의 임의의 \(o\)에 대하여 대각합 \(\operatorname{Sp}(co)\), 또는 같은 뜻으로 대각합 \(\operatorname{Sp}(ct)\)가 정수적, 곧 \(\mathfrak h\)에 속하도록 하는 \(\mathfrak K\)의 모든 원소 \(c\)로 이루어진다.} \(\mathfrak o\)와 \(\mathsf{K}\)에 관한 \(\mathfrak e\)에도 이에 대응하는 것이 성립한다.
 
-실제로 \(c=c_1T_1+\cdots+c_nT_n\)이고 \(c_i\)들이 \(\mathfrak h\)에 속하는 것이, \(t\)의 여차기저로 \(\mathfrak E\)의 한 원소 \(c\)를 나타낸 표현이라 하자. 그러면 \(c_i=\operatorname{Sp}(ct_i)\)이므로 \(\mathfrak h\)에 속한다. 역으로 \(\operatorname{Sp}(ct_\lambda)\)가 \(\mathfrak h\)에 속하면 \(c_\lambda\)가 \(\mathfrak h\)에 속하고, 따라서 \(c\)가 \(\mathfrak E\)에 속한다.
+실제로 \(c=c_1T_1+\cdots+c_nT_n\)이고 \(c_i\)들이 \(\mathfrak h\)에 속하는 것이, \(t\)의 여차기저로 \(\mathfrak E\)의 한 원소 \(c\)를 나타낸 표현이라 하자. 그러면 \(c_\lambda=\operatorname{Sp}(ct_\lambda)\)이므로 \(\mathfrak h\)에 속한다. 역으로 \(\operatorname{Sp}(ct_\lambda)\)가 \(\mathfrak h\)에 속하면 \(c_\lambda\)가 \(\mathfrak h\)에 속하고, 따라서 \(c\)가 \(\mathfrak E\)에 속한다.
 
 \paragraph{보충.}
 \emph{오더 안에 독립 \(\mathfrak h\)-가군기저가 존재하면, 차분몫 \(\mathfrak A^{(i)}\)는 \(\mathfrak P^{(i)}\)와 다른 모든 차분아이디얼의 교집합이다. 더 정확히는}
@@ -22349,7 +22349,7 @@ a_0(\alpha)\equiv0(p^t),\ldots,a_{\varrho-1}(\alpha)\equiv0(p^t)
 \tocsec{6}{가환계의 기약표현}{8}
 \tocsec{7}{한 체의 동형들}{8}
 \tocsec{8}{분해체}{9}
-\tocsec{9}{\(Z_1\)에서 \(Z_i\)로 가는 동형들}{9}
+\tocsec{9}{\(\mathsf{Z}_1\)에서 \(\mathsf{Z}_i\)로 가는 동형들}{9}
 \tocsec{10}{갈루아군}{9}
 \tocsec{11}{갈루아 이론의 주정리}{9}
 \tocsec{12}{성분 \(e_i\)의 형식적 의미}{11}
@@ -22375,7 +22375,7 @@ a_0(\alpha)\equiv0(p^t),\ldots,a_{\varrho-1}(\alpha)\equiv0(p^t)
 \tocsec{26}{교차표현의 곱셈}{43}
 \medskip
 \tocline{\textbf{제VI장: 교차곱 이론}}{44}
-\tocsec{27}{\(\mathfrak R_r\)의 교차곱 표현}{44}
+\tocsec{27}{\(\mathfrak K_r\)의 교차곱 표현}{44}
 \tocsec{28}{인자계의 곱정리}{47}
 \tocsec{29}{최소에서의 주종정리}{50}
 \tocsec{30}{순환 분해체에의 특수화}{50}
@@ -22401,7 +22401,7 @@ a_0(\alpha)\equiv0(p^t),\ldots,a_{\varrho-1}(\alpha)\equiv0(p^t)
 
 \(\mathfrak{o}\)의 \(\mathsf T\) 안에서의 \(n\)차 \emph{직접 표현}이란, \(\mathsf T\)의 원소로 된 \(n\)행 정방행렬환 \(\mathsf T_n\)의 한 부분환 \(\mathfrak D\)로 \(\mathfrak{o}\)가 환준동형으로 사상되는 것을 말한다. 기호로는
 \[
-        \mathfrak{o}\longrightarrow\mathfrak D\subseteq\mathsf T_n
+        \mathfrak{o}\longrightarrow\mathfrak D\subseteqq\mathsf T_n
 \]
 이다.
 
@@ -23537,7 +23537,7 @@ sx\cdot(s'x'\cdot m)
 sxs'x'\cdot m
 &=ss'xx'\cdot m
  =ss'\bigl(xx'm\bigr)\\
-&=s\bigl(s'(x(x'm))\bigr)
+&=s\bigl(s'(\varkappa(\varkappa'm))\bigr)
  =s\bigl(x(s'(x'm))\bigr).
 \end{aligned}
 \]
@@ -23712,7 +23712,7 @@ M. Z. § 18에 따라 모든 유한 \(\mathfrak S_{\mathsf K}\)-가군은 \(\mat
 \(j^*\notin\mathfrak Z_1\)이므로 \(\mathfrak Z_1(j^*)\)가 \(\mathfrak Z_1\) 위에서 갖는 랭크는 적어도 2이다. 따라서 \(\mathfrak Z_1(j^*)\)는 \(\mathsf{R}\) 위에서 랭크 4이고 \(\mathfrak K\)와 같다. 곧
 \[
         \mathfrak K
-        =R+Ri+Rj^*+Rij^*.
+        =\mathsf R+\mathsf Ri+\mathsf Rj^*+\mathsf Rij^*.
 \]
 또
 \[
@@ -24049,7 +24049,7 @@ t^2=\operatorname{rank}_{\mathsf P}\mathfrak K^{(1)}.
         =\mathfrak K_{i\{Z_i,Z_k\}}e_i,
         \qquad
         \bar{\mathfrak l}_k
-        =\mathfrak K_{r\{Z_i,Z_k\}}e_k
+        =\mathfrak K_{r\{\mathsf{Z}_i,\mathsf{Z}_k\}}e_k
 \]
 를 분리해 내며, 이들은 단순하다. 왜냐하면
 \(
@@ -24064,7 +24064,7 @@ t^2=\operatorname{rank}_{\mathsf P}\mathfrak K^{(1)}.
    \{Z_i,Z_k\}c_{\lambda i}^{(ik)},\\
 \bar{\mathfrak l}_k
  &=\sum_{\lambda}
-   \{Z_i,Z_k\}c_{\lambda k}^{(ik)}.
+   \{\mathsf{Z}_i,\mathsf{Z}_k\}c_{\lambda k}^{(ik)}.
 \end{aligned}
 \]
 여기서 \(c_{\lambda\varrho}^{(ik)}\)는 \(\mathfrak K_{r\{\mathsf{Z}_i,\mathsf{Z}_k\}}\)의 한 행렬단위계이다.
@@ -24853,7 +24853,7 @@ P_{ik}P_{kj}(k_\varrho e_j)
 
 \(\mathfrak K_r\)의 극대 가환부분체 \(\mathfrak Z\)가 갈루아라고 하자. \(\mathfrak Z/\mathsf P\)의 \(n\)개 자기동형 \(\mathsf{H}_i\)는 25쪽 정리 7에 따라 \(\mathfrak K_r\)의 내부자기동형이다. 즉 원소 \(u_i\)들이 존재하여 \(\mathfrak Z\)의 모든 \(z\)에 대하여
 \[
-        H_i z=u_i^{-1}zu_i
+        \mathsf{H}_i z=u_i^{-1}zu_i
 \]
 이다. 각 \(u_i\)는 \(\mathfrak Z\)의 \(0\)이 아닌 인자 \(y\)를 곱하는 것까지 정해진다. 실제로 \(\mathfrak Z\)의 모든 \(z\)에 대하여
 \[
@@ -24978,7 +24978,7 @@ u_T\mathsf{H}_T(z)
 \]
 결국
 \[
-        z\cdot u_T=u_TH_T(z).
+        z\cdot u_T=u_T\mathsf{H}_T(z).
 \]
 
 4. \(u_S\)들은 \(\mathfrak Z\) 위에서 선형독립이다. 실제로
@@ -26081,7 +26081,7 @@ u\bar ue_1
 
 \(x,y\)에 관한 주어진 다항식 \(K\)가 가분성 \(K\equiv0(\varphi,\psi)\)을 갖기 위한 필요충분조건은 다음 \(s\)개 합동식이 동시에 성립하는 것이다.
 \[
-K\equiv0(q_1),\quad K\equiv0(q_2),\quad\ldots,\quad K\equiv0(q_s).
+K\equiv0(\mathfrak{q}_1),\quad K\equiv0(\mathfrak{q}_2),\quad\ldots,\quad K\equiv0(\mathfrak{q}_s).
 \]
 
 역사적으로 보면 --- 이 문제에 관한 막스 뇌터의 기초 논문 서론을 참조하라\srcfn{5)}{Max Noether, \emph{Über einen Satz aus der Theorie der algebraischen Funktionen}, Math. Annalen 6 (1872).} --- 기본정리는 다음의 근본 문제를 풀려는 노력에서 나왔다. \emph{\(x,y\)에 관한 주어진 각 다항식 \(K\)가 \((\varphi,\psi)\)로 나누어지는지 아닌지를 판정할 수 있어야 한다.} 즉 \(x,y\)에 관한 두 다항식 \(\lambda,\mu\)가 더 존재하여
@@ -26309,14 +26309,14 @@ M\cdot(G\cdot g_i(0,y):y^{(g_i)})\equiv0(h_i,g_i)\equiv0(\mathfrak{q}^{(i+1)}),
 
 이제 보조정리 II의 조건이 필요함은 다음과 같이 따라온다. \(K_i\equiv0(\mathfrak{q}_i)\)에서 \(K_i(0,y)\equiv0(y^{(g_i)},x)\)를 얻으므로 \((K_i)\geqq(g_i)\)이다. 따라서 (3)에 의하여
 \[
-xK_{i+1}\equiv0(q^{(i)}),\quad
+xK_{i+1}\equiv0(\mathfrak{q}^{(i)}),\quad
 \text{따라서 --- (6)의 둘째 관계에 의하여 ---}\quad
 K_{i+1}\equiv0(\mathfrak{q}^{(i+1)}).
 \]
 
 조건이 충분함은 즉시 읽어 낼 수 있다. 보조정리 II를 유한번 적용하면 주정리를 얻는다. 마찬가지로 (6)의 둘째 관계를 반복하면 추가 I, 곧 \(\mathfrak{q}:x^t=\mathfrak{q}^{(t+1)}\)이 단위아이디얼과 같음을 얻는다. 더구나 \(\mathfrak{q}:x^{t-1}=\mathfrak{q}^{(t)}\)이므로 \(t\)는 그러한 거듭제곱 가운데 가장 낮은 것이다.
 
-\textbf{주해 II.} \(\mathfrak{q}\)로 나누어지지 않는 다항식 \(K\)에 대해서는 다음도 말할 수 있다. \(K\equiv0(\mathfrak{q}^{(i+1)})\)이지만 \(K\not\equiv0(q^{(i)})\)이면
+\textbf{주해 II.} \(\mathfrak{q}\)로 나누어지지 않는 다항식 \(K\)에 대해서는 다음도 말할 수 있다. \(K\equiv0(\mathfrak{q}^{(i+1)})\)이지만 \(K\not\equiv0(\mathfrak{q}^{(i)})\)이면
 \[
 (K,q^{(i)})=(h_iy^{(K)},q^{(i)}).
 \]
