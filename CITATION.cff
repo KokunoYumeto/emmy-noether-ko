@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "이 한국어판은 GitHub 공개 URL로 인용하십시오. 출처의 DOI는 이전 판본을 식별합니다."
+message: "이 한국어판은 GitHub 공개 URL로 인용하십시오."
 title: "에미 뇌터 — 수학 저작집 한국어판"
 type: dataset
 version: "2026-10-24"
@@ -8,11 +8,11 @@ authors:
   - family-names: Noether
     given-names: Emmy
 url: "https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/noether-ko-2026-10-24"
-abstract: "논문1–43, M. Deuring이 기록한1929/30년 강의, Kapferer와Noether의 논문 및 보충문, 참고문헌과 권말 목록. 기본 본문519쪽과 교정 본문525쪽, 전체LaTeX와 조판 소스. AI가 번역한 한국어 본문이며 초기의 정확한 모델은 미확정. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정. 권리는 각 권리자에게 있다."
+abstract: "논문1–43, M. Deuring이 기록한1929/30년 강의, Kapferer와Noether의 논문 및 보충문, 참고문헌과 권말 목록. 기본 본문519쪽과 교정 본문525쪽, 전체LaTeX와 조판 소스. AI가 번역한 한국어 본문이며 초기의 정확한 모델은 미확정. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정. Emmy Noether의 저작은 퍼블릭 도메인에 속하며, 발행자가 AI가 제작한 번역·수정·조판에 대하여 권리를 가지는 범위에서 그 권리는 CC0 1.0에 따라 퍼블릭 도메인에 기증된다."
 references:
   - type: dataset
     title: "한국어판 v1.0.0 (2026-08-13) — Manuscript Typesetting Project / OpenAI Codex"
-    doi: 10.5281/zenodo.21921524
-  - type: dataset
-    title: "이전 다국어 모음"
-    doi: 10.5281/zenodo.20412587
+    authors:
+      - family-names: Noether
+        given-names: Emmy
+    url: "https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/v1.0.0"
