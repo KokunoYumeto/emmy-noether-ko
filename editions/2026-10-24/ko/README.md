@@ -5,7 +5,7 @@
 ## How this was made: AI's failure modes, and what we do about them
 
 Everything here was produced by AI. The translation was made in a first pass mostly by GPT-5.6 Sol (OpenAI Codex,
-reasoning effort ultra), by the user's account (July and August 2026). Its formulas were then brought into line with the German text, which Claude Opus 5.5 at
+reasoning effort ultra) (July and August 2026). Its formulas were then brought into line with the German text, which Claude Opus 5.5 at
 effort max compared page by page with Noether's printed originals (785 page checks, 26 October 2026), in automatic and
 hand rounds by Claude Opus 5.5 at effort max (26-27 October; 2,570 lines in the last hand round), against the known
 failures of AI translation of mathematics: renamed letters, formulas changed or dropped, statements narrowed, passages
@@ -34,7 +34,7 @@ translation. What was done in each round, the measured figures and what is still
 
 ## 저자·번역·출처
 
-원저자는 Emmy Noether 및 각 저작에 명시된 공동 저자이다. 1929/30년 강의는 M. Deuring이 기록하였다. 한국어 본문은 AI가 번역하였다. 초기 한국어판의 제작 주체는 Manuscript Typesetting Project / OpenAI Codex이며, 사용자의 설명에 따르면 당시 주로 GPT-5.6 Sol(OpenAI Codex, 추론 설정 ultra)이 번역했다. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정; Claude Opus 5.5(Anthropic, 추론 설정 max), 2026년 10월 26–27일(수식은 Noether의 인쇄면에서 읽은 독일어 본문과 대조). 발행자가 직접 번역하거나 독립적인 학술 심사를 수행했다는 뜻은 아니다.
+원저자는 Emmy Noether 및 각 저작에 명시된 공동 저자이다. 1929/30년 강의는 M. Deuring이 기록하였다. 한국어 본문은 AI가 번역하였다. 초기 한국어판의 제작 주체는 Manuscript Typesetting Project / OpenAI Codex이며, 당시 주로 GPT-5.6 Sol(OpenAI Codex, 추론 설정 ultra)이 번역했다. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정; Claude Opus 5.5(Anthropic, 추론 설정 max), 2026년 10월 26–27일(수식은 Noether의 인쇄면에서 읽은 독일어 본문과 대조). 발행자가 직접 번역하거나 독립적인 학술 심사를 수행했다는 뜻은 아니다.
 
 한국어 저본은 [v1.0.0 (2026-08-13)](https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/v1.0.0)이다. 그 판본의 독일어 저본은 ED0011/v047 (2026-08-08)이다. 각 저작의 원래 출판 정보, 저자 표시 및 인용은 본문에 있다.
 

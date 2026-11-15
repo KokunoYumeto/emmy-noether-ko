@@ -7,7 +7,7 @@
 ## How this was made: AI's failure modes, and what we do about them
 
 Everything here was produced by AI. The translation was made in a first pass mostly by GPT-5.6 Sol (OpenAI Codex,
-reasoning effort ultra), by the user's account (July and August 2026). Its formulas were then brought into line with the German text, which Claude Opus 5.5 at
+reasoning effort ultra) (July and August 2026). Its formulas were then brought into line with the German text, which Claude Opus 5.5 at
 effort max compared page by page with Noether's printed originals (785 page checks, 26 October 2026), in automatic and
 hand rounds by Claude Opus 5.5 at effort max (26-27 October; 2,570 lines in the last hand round), against the known
 failures of AI translation of mathematics: renamed letters, formulas changed or dropped, statements narrowed, passages
@@ -18,7 +18,7 @@ translation. What was done in each round, the measured figures and what is still
 
 ## 제작 방식
 
-한국어 본문은 AI가 번역하였다. 번역은 OpenAI Codex 모델이 하였으며, 사용자의 설명에 따르면 주로 GPT-5.6 Sol(추론 설정 ultra)이 번역했다. 이 판의 본문은 2026년 8월 13일의 한국어판 v1.0.0을 저본으로 하며, v1.0.0은 AI가 원래 인쇄본에서 전사한 독일어 본문 ED0011/v047(2026년 8월 8일)을 번역한 것이다. 이 판의 수정과 조판은 OpenAI Codex — GPT-6 Astra(Ultra 추론 설정)와 Claude Opus 5.5(Anthropic, 추론 설정 max, 2026년 10월 26–27일)가 제작하였다. Claude Opus 5.5는 수식을 Noether의 인쇄면에서 읽은 독일어 본문과 대조하여 맞추었다.
+한국어 본문은 AI가 번역하였다. 번역은 OpenAI Codex 모델이 하였으며, 주로 GPT-5.6 Sol(추론 설정 ultra)이 번역했다. 이 판의 본문은 2026년 8월 13일의 한국어판 v1.0.0을 저본으로 하며, v1.0.0은 AI가 원래 인쇄본에서 전사한 독일어 본문 ED0011/v047(2026년 8월 8일)을 번역한 것이다. 이 판의 수정과 조판은 OpenAI Codex — GPT-6 Astra(Ultra 추론 설정)와 Claude Opus 5.5(Anthropic, 추론 설정 max, 2026년 10월 26–27일)가 제작하였다. Claude Opus 5.5는 수식을 Noether의 인쇄면에서 읽은 독일어 본문과 대조하여 맞추었다.
 
 ## 현황
 
