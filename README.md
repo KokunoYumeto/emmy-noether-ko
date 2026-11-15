@@ -2,7 +2,19 @@
 
 에미 뇌터(Emmy Noether, 1882–1935)의 수학 저작집 한국어 번역본이다. 논문 1–43, M. Deuring이 기록한 1929/30년 겨울학기 강의 「초복소량의 대수학」, H. Kapferer의 논문과 E. Noether가 공동 집필한 보충문, 그리고 참고문헌과 단신·서평·공동 편집서 목록을 수록한다. 불변식, 아이디얼, 체, 대수와 표현론을 다룬다. PDF와 편집 가능한 LaTeX로 제공한다.
 
-[**기본 본문 PDF 읽기 (519쪽)**](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/01-noether-ko-base.pdf) · [교정 본문 PDF (525쪽)](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/04-noether-ko-emendations.pdf) · [2026년 11월 15일 판의 모든 파일](https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/noether-ko-2026-11-15)
+[**기본 본문 PDF 읽기 (519쪽)**](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/01-noether-ko-base.pdf) · [교정 본문 PDF (525쪽)](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/04-noether-ko-emendations.pdf) · [2026년 11월 15일 판(r2)의 모든 파일](https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/noether-ko-2026-11-15-r2)
+
+## How this was made: AI's failure modes, and what we do about them
+
+Everything here was produced by AI. The translation was made in a first pass mostly by GPT-5.6 Sol (OpenAI Codex,
+reasoning effort ultra), by the user's account (July and August 2026). Its formulas were then brought into line with the German text, which Claude Opus 5.5 at
+effort max compared page by page with Noether's printed originals (785 page checks, 26 October 2026), in automatic and
+hand rounds by Claude Opus 5.5 at effort max (26-27 October; 2,570 lines in the last hand round), against the known
+failures of AI translation of mathematics: renamed letters, formulas changed or dropped, statements narrowed, passages
+reworked or garbled, sentences and displays dropped, broken layout. Every change passes a release filter, and every PDF
+is checked for lines running into the margin (Claude Opus 5.5 at effort high, 15 November). No person has reviewed the
+translation. What was done in each round, the measured figures and what is still open:
+[How this was made](https://github.com/KokunoYumeto/emmy-noether#how-this-was-made-ais-failure-modes-and-what-we-do-about-them).
 
 ## 제작 방식
 
@@ -18,10 +30,10 @@
 
 | 본문 | PDF | LaTeX | 소스 |
 |---|---|---|---|
-| 기본 본문: 원래 인쇄본의 읽기를 유지하고, 해당 읽기를 편집 주석에서 논의한다 | [PDF, 519쪽](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/01-noether-ko-base.pdf) | [LaTeX](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/02-noether-ko-base.tex) | [ZIP](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/03-noether-ko-base-sources.zip) |
-| 교정 본문: 편집상의 교정을 적용하고, 각 교정의 근거를 편집 주석으로 설명한다 | [PDF, 525쪽](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/04-noether-ko-emendations.pdf) | [LaTeX](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/05-noether-ko-emendations.tex) | [ZIP](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/06-noether-ko-emendations-sources.zip) |
+| 기본 본문: 원래 인쇄본의 읽기를 유지하고, 해당 읽기를 편집 주석에서 논의한다 | [PDF, 519쪽](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/01-noether-ko-base.pdf) | [LaTeX](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/02-noether-ko-base.tex) | [ZIP](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/03-noether-ko-base-sources.zip) |
+| 교정 본문: 편집상의 교정을 적용하고, 각 교정의 근거를 편집 주석으로 설명한다 | [PDF, 525쪽](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/04-noether-ko-emendations.pdf) | [LaTeX](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/05-noether-ko-emendations.tex) | [ZIP](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/06-noether-ko-emendations-sources.zip) |
 
-[SHA-256 목록](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15/07-SHA256SUMS.txt). 같은 파일이 [`editions/2026-10-24/ko/reader-edition/`](editions/2026-10-24/ko/reader-edition/)에도 있다.
+[SHA-256 목록](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/07-SHA256SUMS.txt). 같은 파일이 [`editions/2026-10-24/ko/reader-edition/`](editions/2026-10-24/ko/reader-edition/)에도 있다.
 
 각 LaTeX 파일에는 해당 본문 전체가 들어 있다. 각 ZIP에는 같은 전체 본문 파일, 원래의 분할 구조, 필요한 조판 절차와 스크립트가 들어 있다. 조판에는 XeLaTeX와 소스에 지정된 글꼴 및 패키지가 필요하며, 글꼴 파일은 동봉하지 않는다.
 
@@ -35,4 +47,4 @@
 
 ## 권리
 
-Emmy Noether의 저작은 퍼블릭 도메인에 속한다. 발행자가 AI가 제작한 번역·수정·조판에 대하여 권리를 가지는 범위에서, 그 권리는 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.ko)에 따라 퍼블릭 도메인에 기증된다. M. Deuring이 기록한 강의, H. Kapferer의 논문과 명시된 공동 저자의 기여는 각자의 법적 지위를 유지한다.
+에미 뇌터는 1935년에 사망하였으므로, 그의 저작은 유럽연합과 보호기간이 저작자 사후 70년에 끝나는 모든 곳에서 퍼블릭 도메인에 속한다. 미국에서는 1931년 이후 처음 발표된 논문이 발표 후 95년까지 보호된다(1931년의 논문은 2027년 1월 1일에 자유로워진다). 발행자가 AI가 제작한 번역·수정·조판에 대하여 권리를 가지는 범위에서, 그 권리는 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.ko)에 따라 퍼블릭 도메인에 기증된다. M. Deuring이 기록한 강의, H. Kapferer의 논문과 명시된 공동 저자의 기여는 이 표시의 대상이 아니며, 그 권리는 저작자 또는 그 상속인에게 남는다.
