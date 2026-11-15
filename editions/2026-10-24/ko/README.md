@@ -16,13 +16,13 @@ translation. What was done in each round, the measured figures and what is still
 
 ## 읽기와 편집 가능한 소스
 
-### 기본 본문 — 519쪽
+### 기본 본문 — 518쪽
 
 1. [PDF 읽기](reader-edition/01-noether-ko-base.pdf)
 2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/02-noether-ko-base.tex)
 3. [전체 조판 소스 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/03-noether-ko-base-sources.zip)
 
-### 교정 본문과 편집 주석 — 525쪽
+### 교정 본문과 편집 주석 — 524쪽
 
 1. [PDF 읽기](reader-edition/04-noether-ko-emendations.pdf)
 2. [전체 본문 LaTeX 받기](https://github.com/KokunoYumeto/emmy-noether-ko/releases/download/noether-ko-2026-11-15-r2/05-noether-ko-emendations.tex)
@@ -34,7 +34,7 @@ translation. What was done in each round, the measured figures and what is still
 
 ## 저자·번역·출처
 
-원저자는 Emmy Noether 및 각 저작에 명시된 공동 저자이다. 1929/30년 강의는 M. Deuring이 기록하였다. 한국어 본문은 AI가 번역하였다. 초기 한국어판의 제작 주체는 Manuscript Typesetting Project / OpenAI Codex이며, 당시의 정확한 모델은 현재 남아 있는 출처 자료로 확정되지 않는다. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정; Claude Opus 5.5(Anthropic), 2026년 10월 26–27일(수식은 Noether의 인쇄면에서 읽은 독일어 본문과 대조). 발행자가 직접 번역하거나 독립적인 학술 심사를 수행했다는 뜻은 아니다.
+원저자는 Emmy Noether 및 각 저작에 명시된 공동 저자이다. 1929/30년 강의는 M. Deuring이 기록하였다. 한국어 본문은 AI가 번역하였다. 초기 한국어판의 제작 주체는 Manuscript Typesetting Project / OpenAI Codex이며, 사용자의 설명에 따르면 당시 주로 GPT-5.6 Sol(OpenAI Codex, 추론 설정 ultra)이 번역했다. 이 판본의 AI 제작 수정과 조판: OpenAI Codex — GPT-6 Astra, Ultra 추론 설정; Claude Opus 5.5(Anthropic, 추론 설정 max), 2026년 10월 26–27일(수식은 Noether의 인쇄면에서 읽은 독일어 본문과 대조). 발행자가 직접 번역하거나 독립적인 학술 심사를 수행했다는 뜻은 아니다.
 
 한국어 저본은 [v1.0.0 (2026-08-13)](https://github.com/KokunoYumeto/emmy-noether-ko/releases/tag/v1.0.0)이다. 그 판본의 독일어 저본은 ED0011/v047 (2026-08-08)이다. 각 저작의 원래 출판 정보, 저자 표시 및 인용은 본문에 있다.
 
